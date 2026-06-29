@@ -1029,3 +1029,71 @@ Decisión aprobada como respaldo documental controlado.
 El usuario mantiene control total.
 
 Robert no ejecuta acciones importantes sin permiso.
+
+
+---
+
+# DECISIÓN #009 — Checkpoint documental GitHub completado
+
+Fecha: 29/06/2026  
+Estado: Aprobada  
+Tipo de cambio: Respaldo documental  
+Nivel de riesgo: Nivel 2 — Medio  
+
+---
+
+## Decisión
+
+Se registra que el repositorio privado de GitHub:
+
+ROBERT_MASTER_SYSTEM
+
+ya contiene la estructura documental principal del Proyecto Robert.
+
+---
+
+## Estado del respaldo
+
+Se respaldaron manualmente los documentos principales de Robert en GitHub.
+
+La estructura base incluye:
+
+- 00_HOME
+- 01_CONTEXT
+- 02_COMMANDS
+- 03_DECISIONS
+- 04_SECURITY
+- 05_PHASES
+- 06_MODULES
+- 07_VISUAL
+- 08_PROMPTS
+- 09_ARCHITECTURE
+- 10_MVP
+- 15_SANDBOX
+- README.md
+
+---
+
+## Alcance
+
+Este checkpoint confirma únicamente el respaldo documental manual.
+
+No autoriza programación, conexiones externas, automatizaciones ni ejecución real.
+
+---
+
+## Regla activa
+
+GitHub queda como respaldo documental privado y control de versiones manual.
+
+Cualquier automatización futura con GitHub requiere nueva aprobación formal.
+
+---
+
+## Cierre
+
+Checkpoint documental completado.
+
+Robert mantiene el estado de MVP técnico básico en preparación.
+
+El usuario mantiene control total.
