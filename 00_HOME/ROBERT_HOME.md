@@ -1119,3 +1119,146 @@ Pendiente de aprobación.
 Próximo paso sugerido:
 
 Revisar este documento y confirmar si queda aprobado como base actualizada.
+
+
+---
+
+# ACTUALIZACIÓN — CHECKPOINT GITHUB COMPLETADO
+
+Fecha: 29/06/2026
+Estado: Respaldo documental completado
+Decisión relacionada: DECISIÓN #009 — Checkpoint documental GitHub completado
+
+---
+
+## Estado actual de GitHub
+
+Robert ya cuenta con un repositorio privado en GitHub llamado:
+
+**ROBERT_MASTER_SYSTEM**
+
+Este repositorio funciona como respaldo documental manual, control de versiones y base organizada para una futura fase técnica.
+
+---
+
+## Estructura respaldada
+
+La estructura principal del proyecto ya fue respaldada manualmente en GitHub:
+
+```text
+00_HOME
+01_CONTEXT
+02_COMMANDS
+03_DECISIONS
+04_SECURITY
+05_PHASES
+06_MODULES
+07_VISUAL
+08_PROMPTS
+09_ARCHITECTURE
+10_MVP
+15_SANDBOX
+README.md
+```
+
+---
+
+## Documentos principales respaldados
+
+Se respaldaron documentos clave como:
+
+* ROBERT_HOME
+* ROBERT_CONTEXT_MASTER
+* ROBERT_COMMANDS
+* ROBERT_DECISIONS_LOG
+* ROBERT_SECURITY_RULES
+* ROBERT_CONTROL_DE_CAMBIOS
+* ROBERT_PHASES
+* ROBERT_MODULES
+* ROBERT_VISUAL
+* ROBERT_PROMPTS
+* ROBERT_SYSTEM_ARCHITECTURE
+* ROBERT_MVP_PLAN
+* ROBERT_TECHNICAL_MVP_PLAN
+* ROBERT_TECHNICAL_MVP_WIREFRAME
+* ROBERT_TECHNICAL_MVP_WIREFRAME_v0.3_PROPUESTA
+* ROBERT_SANDBOX
+* SANDBOX_RULES
+* SANDBOX_TESTS
+* SANDBOX_RESULTS
+
+---
+
+## Alcance autorizado
+
+GitHub queda autorizado únicamente como:
+
+* Respaldo documental privado
+* Control de versiones manual
+* Historial de cambios
+* Base ordenada para una futura fase técnica
+
+---
+
+## Alcance no autorizado
+
+Este checkpoint no autoriza:
+
+* Programar la app
+* Conectar APIs
+* Automatizar GitHub
+* Sincronizar Obsidian automáticamente
+* Dar permisos a agentes externos
+* Conectar Robert directamente con GitHub
+* Ejecutar acciones reales
+* Subir datos sensibles
+* Subir contraseñas o API keys
+
+---
+
+## Estado de Robert después del checkpoint
+
+Robert se mantiene en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Estado operativo:
+
+* MVP manual validado
+* Sandbox manual validado
+* GitHub configurado como respaldo documental privado
+* MVP técnico documentado
+* Wireframe técnico v0.2 aprobado
+* Wireframe técnico v0.3 en propuesta pendiente
+* Sin programación autorizada todavía
+* Sin conexiones reales
+* Sin automatizaciones reales
+
+---
+
+## Regla activa
+
+El usuario mantiene control total.
+
+Robert no ejecuta acciones importantes sin permiso.
+
+GitHub es respaldo documental manual, no una automatización activa.
+
+---
+
+## Próximo punto pendiente
+
+El siguiente punto pendiente de decisión es:
+
+**ROBERT_TECHNICAL_MVP_WIREFRAME_v0.3_PROPUESTA**
+
+Opciones disponibles:
+
+* Revisar
+* Corregir
+* Aprobar formalmente
+* Pausar
+* Archivar
+
+---
+
