@@ -2,8 +2,8 @@
 
 Proyecto: Robert  
 Tipo de documento: Wireframe funcional del MVP técnico básico  
-Versión: 0.2  
-Estado: Aprobado como base visual funcional del MVP técnico básico
+Versión: 0.3
+Estado: Aprobado como wireframe oficial del MVP técnico básico
 Fecha: 29/06/2026
 
 ---
@@ -21,6 +21,242 @@ Robert Command Center Lite
 Este documento no autoriza programación todavía.
 
 Solo define el diseño funcional mínimo antes de construir.
+
+---
+---
+
+# ACTUALIZACIÓN v0.3 — MEJORAS APROBADAS
+
+Fecha: 29/06/2026
+Estado: Aprobada
+Decisión relacionada: DECISIÓN #010 — Aprobación de ROBERT_TECHNICAL_MVP_WIREFRAME v0.3
+Documento anterior: ROBERT_TECHNICAL_MVP_WIREFRAME v0.2
+Documento base de propuesta: ROBERT_TECHNICAL_MVP_WIREFRAME_v0.3_PROPUESTA
+
+---
+
+## Resumen de actualización
+
+Esta versión actualiza el wireframe técnico oficial de Robert de v0.2 a v0.3.
+
+La actualización integra tres mejoras visuales y funcionales aprobadas:
+
+1. RiskBadge con motivo visible
+2. Vista “Pendiente de mi decisión”
+3. Mapa visual de documentos por fase y estado
+
+Estas mejoras hacen que el MVP técnico básico sea más claro, más seguro y más fácil de controlar por el usuario.
+
+---
+
+# NUEVO COMPONENTE — RISKBADGE CON MOTIVO VISIBLE
+
+## Descripción
+
+Cada acción, documento, comando o cambio dentro del MVP técnico deberá mostrar un indicador visible de riesgo.
+
+Este indicador no solo mostrará el nivel de riesgo, también debe mostrar el motivo.
+
+---
+
+## Estructura obligatoria
+
+Todo RiskBadge debe incluir:
+
+* Nivel de riesgo
+* Nombre del riesgo
+* Motivo del riesgo
+* Estado de aprobación
+* Acción recomendada
+
+---
+
+## Escala oficial permitida
+
+Robert solo usará esta escala:
+
+* Nivel 1 — Bajo
+* Nivel 2 — Medio
+* Nivel 3 — Alto
+* Nivel 4 — Crítico
+
+No existe Nivel 5.
+
+“No permitido” no es un nivel de riesgo.
+
+“No permitido” es un estado de resultado.
+
+---
+
+## Ejemplo visual
+
+```text
+Acción: Actualizar ROBERT_SECURITY_RULES
+Riesgo: Nivel 4 — Crítico
+Motivo: Cambia reglas centrales de seguridad y autorización.
+Estado: Aprobación obligatoria del usuario.
+Acción recomendada: Revisar, corregir y aprobar formalmente antes de actualizar.
+```
+
+---
+
+# NUEVA VISTA — PENDIENTE DE MI DECISIÓN
+
+## Nombre técnico
+
+DecisionInbox
+
+## Nombre visible para el usuario
+
+Pendiente de mi decisión
+
+---
+
+## Objetivo
+
+Agrupar en una sola vista todo lo que requiere decisión directa del usuario.
+
+Esta vista evita que decisiones importantes queden perdidas dentro de conversaciones largas, documentos, pruebas o cambios pendientes.
+
+---
+
+## Elementos que deben aparecer
+
+La vista “Pendiente de mi decisión” debe mostrar elementos con estados como:
+
+* Aprobación requerida
+* Pendiente de revisión
+* Parcial
+* Parcial avanzada
+* Inconclusa
+* En conflicto
+* Bloqueado por dependencia
+* Borrador pendiente de aprobación
+* Cambio pendiente
+* Riesgo alto pendiente
+* Riesgo crítico pendiente
+
+---
+
+## Acciones permitidas para el usuario
+
+Desde esta vista, el usuario podrá elegir:
+
+* Aprobar
+* Rechazar
+* Pausar
+* Corregir
+* Pedir resumen
+* Pedir comparación
+* Bloquear
+* Mandar a archivo
+
+---
+
+## Regla de seguridad
+
+Robert no podrá aprobar automáticamente elementos dentro de esta vista.
+
+Solo el usuario puede cerrar una decisión importante.
+
+---
+
+# NUEVA VISTA — MAPA DE DOCUMENTOS
+
+## Nombre técnico
+
+DocumentStatusMap
+
+## Nombre visible para el usuario
+
+Mapa de documentos
+
+---
+
+## Objetivo
+
+Mostrar visualmente el estado de los documentos principales de Robert.
+
+Esta vista permite saber rápidamente:
+
+* Qué documentos existen
+* Qué documentos están aprobados
+* Qué documentos están pendientes
+* Qué documentos están en borrador
+* Qué documentos están bloqueados
+* Qué documentos pertenecen a cada fase
+
+---
+
+## Estados visuales permitidos
+
+```text
+✓ Aprobado
+⏳ Pendiente
+📝 Borrador
+⚠️ En revisión
+⛔ Bloqueado
+🔁 Reemplazado
+📦 Archivado
+🧪 En prueba
+🔒 Protegido
+```
+
+---
+
+## Mapa documental inicial
+
+```text
+ROBERT DOCUMENT STATUS MAP
+
+✓ 00_HOME / ROBERT_HOME
+✓ 01_CONTEXT / ROBERT_CONTEXT_MASTER
+✓ 02_COMMANDS / ROBERT_COMMANDS
+✓ 03_DECISIONS / ROBERT_DECISIONS_LOG
+✓ 04_SECURITY / ROBERT_SECURITY_RULES
+✓ 04_SECURITY / ROBERT_CONTROL_DE_CAMBIOS
+✓ 05_PHASES / ROBERT_PHASES
+✓ 06_MODULES / ROBERT_MODULES
+⚠️ 07_VISUAL / ROBERT_VISUAL
+✓ 08_PROMPTS / ROBERT_PROMPTS
+✓ 09_ARCHITECTURE / ROBERT_SYSTEM_ARCHITECTURE
+✓ 10_MVP / ROBERT_MVP_PLAN
+✓ 10_MVP / ROBERT_TECHNICAL_MVP_PLAN
+✓ 10_MVP / ROBERT_TECHNICAL_MVP_WIREFRAME
+✓ 10_MVP / ROBERT_TECHNICAL_MVP_WIREFRAME_v0.3_PROPUESTA
+✓ 15_SANDBOX / ROBERT_SANDBOX
+✓ 15_SANDBOX / SANDBOX_RULES
+✓ 15_SANDBOX / SANDBOX_TESTS
+✓ 15_SANDBOX / SANDBOX_RESULTS
+```
+
+---
+
+# ALCANCE DE LA ACTUALIZACIÓN v0.3
+
+Esta actualización autoriza únicamente cambios documentales y visuales del wireframe.
+
+No autoriza:
+
+* Programar la app
+* Conectar APIs reales
+* Conectar GitHub automáticamente
+* Conectar Gmail
+* Conectar Google Calendar
+* Automatizar acciones
+* Ejecutar agentes autónomos
+* Modificar archivos automáticamente
+* Tomar decisiones por el usuario
+
+---
+
+# ESTADO FINAL DEL WIREFRAME
+
+ROBERT_TECHNICAL_MVP_WIREFRAME v0.3 queda aprobado como wireframe oficial actualizado para el MVP técnico básico de Robert.
+
+La versión v0.3 reemplaza funcionalmente a la v0.2 como referencia principal del wireframe.
+
+La propuesta v0.3 queda conservada como documento histórico de origen.
 
 ---
 
