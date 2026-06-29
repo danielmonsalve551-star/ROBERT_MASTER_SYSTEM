@@ -1097,3 +1097,101 @@ Checkpoint documental completado.
 Robert mantiene el estado de MVP técnico básico en preparación.
 
 El usuario mantiene control total.
+
+
+---
+
+# DECISIÓN #010 — Aprobación de ROBERT_TECHNICAL_MVP_WIREFRAME v0.3
+
+Fecha: 29/06/2026
+Estado: Aprobada
+Tipo de cambio: Tipo 3 — Cambio visual / UX
+Nivel de riesgo inicial: Nivel 2 — Medio
+Nivel de riesgo final: Nivel 2 — Medio
+
+---
+
+## Decisión
+
+Se aprueba la actualización de:
+
+**ROBERT_TECHNICAL_MVP_WIREFRAME v0.2**
+
+a:
+
+**ROBERT_TECHNICAL_MVP_WIREFRAME v0.3**
+
+tomando como base la propuesta:
+
+**ROBERT_TECHNICAL_MVP_WIREFRAME_v0.3_PROPUESTA**
+
+---
+
+## Cambios aprobados
+
+Se aprueban las siguientes mejoras para integrarse al wireframe oficial del MVP técnico básico:
+
+1. RiskBadge con motivo visible
+2. Vista “Pendiente de mi decisión”
+3. Mapa visual de documentos por fase y estado
+
+---
+
+## Motivo
+
+La actualización mejora la claridad, seguridad y control visual del MVP técnico básico de Robert.
+
+Permite que el usuario vea con mayor facilidad:
+
+* El nivel de riesgo de una acción
+* El motivo del riesgo
+* Las decisiones pendientes
+* Los documentos aprobados, pendientes o en revisión
+* El estado general del sistema
+
+---
+
+## Alcance autorizado
+
+Esta decisión autoriza únicamente la actualización documental del wireframe oficial.
+
+Se autoriza actualizar:
+
+* ROBERT_TECHNICAL_MVP_WIREFRAME
+* ROBERT_HOME si cambia el estado general
+* ROBERT_CONTROL_DE_CAMBIOS si aplica
+
+---
+
+## Alcance no autorizado
+
+Esta decisión no autoriza:
+
+* Programar la app
+* Conectar APIs reales
+* Conectar GitHub automáticamente
+* Conectar Gmail
+* Conectar Google Calendar
+* Automatizar acciones
+* Ejecutar agentes autónomos
+* Modificar archivos automáticamente sin aprobación
+* Tomar decisiones por el usuario
+
+---
+
+## Regla activa
+
+El usuario mantiene control total.
+
+Robert no ejecuta acciones importantes sin permiso.
+
+---
+
+## Cierre
+
+Queda aprobada la actualización del wireframe técnico oficial a versión v0.3.
+
+La propuesta v0.3 deja de ser solo propuesta y pasa a ser base aprobada para actualizar el documento oficial:
+
+**ROBERT_TECHNICAL_MVP_WIREFRAME.md**
+
