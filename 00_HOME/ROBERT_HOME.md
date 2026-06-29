@@ -1229,7 +1229,7 @@ Estado operativo:
 * GitHub configurado como respaldo documental privado
 * MVP técnico documentado
 * Wireframe técnico v0.2 aprobado
-* Wireframe técnico v0.3 en propuesta pendiente
+* Wireframe técnico v0.3 aprobado como wireframe oficial actualizado
 * Sin programación autorizada todavía
 * Sin conexiones reales
 * Sin automatizaciones reales
@@ -1259,6 +1259,95 @@ Opciones disponibles:
 * Aprobar formalmente
 * Pausar
 * Archivar
+
+---
+
+
+---
+
+# ACTUALIZACIÓN — WIREFRAME TÉCNICO v0.3 APROBADO
+
+Fecha: 29/06/2026
+Estado: Aprobado
+Decisión relacionada: DECISIÓN #010 — Aprobación de ROBERT_TECHNICAL_MVP_WIREFRAME v0.3
+
+---
+
+## Estado actualizado
+
+Robert ya cuenta con el wireframe técnico oficial actualizado a:
+
+**ROBERT_TECHNICAL_MVP_WIREFRAME v0.3**
+
+Esta versión reemplaza funcionalmente a la versión v0.2 como referencia principal del wireframe del MVP técnico básico.
+
+---
+
+## Mejoras aprobadas
+
+La versión v0.3 integra tres mejoras principales:
+
+1. RiskBadge con motivo visible
+2. Vista “Pendiente de mi decisión”
+3. Mapa visual de documentos por fase y estado
+
+---
+
+## Impacto en el sistema
+
+Estas mejoras permiten que Robert sea más claro, más seguro y más fácil de controlar.
+
+El usuario podrá visualizar mejor:
+
+* El nivel de riesgo de una acción
+* El motivo del riesgo
+* Las decisiones pendientes
+* Los documentos aprobados, pendientes o en revisión
+* El estado general del sistema
+
+---
+
+## Estado actual de Robert
+
+Robert se mantiene en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Estado operativo:
+
+* MVP manual validado
+* Sandbox manual validado
+* GitHub configurado como respaldo documental privado
+* MVP técnico documentado
+* ROBERT_TECHNICAL_MVP_PLAN aprobado
+* ROBERT_TECHNICAL_MVP_WIREFRAME v0.3 aprobado
+* Sin programación autorizada todavía
+* Sin conexiones reales
+* Sin automatizaciones reales
+
+---
+
+## Alcance
+
+Esta actualización es únicamente documental y visual.
+
+No autoriza:
+
+* Programar la app
+* Conectar APIs reales
+* Conectar GitHub automáticamente
+* Conectar Gmail
+* Conectar Google Calendar
+* Automatizar acciones reales
+* Ejecutar agentes autónomos
+
+---
+
+## Regla activa
+
+El usuario mantiene control total.
+
+Robert no ejecuta acciones importantes sin permiso.
 
 ---
 
