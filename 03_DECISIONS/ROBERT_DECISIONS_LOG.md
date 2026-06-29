@@ -942,3 +942,90 @@ Sí. El usuario dijo: “apruebo”.
 
 Notas:  
 Esta decisión aprueba únicamente el documento de control de cambios. No autoriza programación, conexiones externas, automatizaciones ni agentes autónomos.
+
+
+---
+
+# DECISIÓN #008 — Repositorio GitHub como respaldo documental
+
+Fecha: 29/06/2026  
+Estado: Aprobada  
+Tipo de cambio: Tipo 6 — Cambio de conexión externa  
+Nivel de riesgo inicial: Nivel 3 — Alto  
+Nivel de riesgo final: Nivel 2 — Medio  
+
+---
+
+## Decisión
+
+Se aprueba el uso de un repositorio privado de GitHub llamado:
+
+ROBERT_MASTER_SYSTEM
+
+como respaldo documental manual del Proyecto Robert.
+
+---
+
+## Alcance autorizado
+
+GitHub se usará únicamente para:
+
+- Guardar archivos `.md` de Robert
+- Respaldar documentos maestros
+- Mantener historial de versiones
+- Preparar una base ordenada para una futura fase técnica
+- Subir cambios manualmente por el usuario
+
+---
+
+## Alcance NO autorizado
+
+Esta decisión no autoriza:
+
+- Programar la app
+- Conectar APIs
+- Automatizar cambios
+- Sincronizar Obsidian automáticamente
+- Dar permisos a agentes externos
+- Conectar GitHub con Robert de forma automática
+- Subir contraseñas
+- Subir API keys
+- Subir datos fiscales, legales o privados sensibles
+- Subir información real delicada de empresas
+
+---
+
+## Motivo del riesgo
+
+GitHub es una herramienta externa real. Aunque el repositorio sea privado, existe riesgo de exposición de información si se suben datos sensibles, si se cambian permisos o si se automatiza sin control.
+
+---
+
+## Reducción de riesgo
+
+El riesgo baja de Nivel 3 — Alto a Nivel 2 — Medio porque:
+
+- El repositorio es privado
+- El usuario sube los archivos manualmente
+- No hay APIs conectadas
+- No hay automatización activa
+- No hay agentes modificando archivos
+- No se autoriza ejecución real
+
+---
+
+## Regla activa
+
+GitHub queda autorizado solo como respaldo documental manual.
+
+Cualquier conexión automática futura con GitHub requerirá una nueva decisión formal.
+
+---
+
+## Cierre
+
+Decisión aprobada como respaldo documental controlado.
+
+El usuario mantiene control total.
+
+Robert no ejecuta acciones importantes sin permiso.
