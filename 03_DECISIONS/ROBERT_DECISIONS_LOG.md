@@ -1195,3 +1195,120 @@ La propuesta v0.3 deja de ser solo propuesta y pasa a ser base aprobada para act
 
 **ROBERT_TECHNICAL_MVP_WIREFRAME.md**
 
+
+---
+
+# DECISIÓN #011 — Aprobación de ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2
+
+Fecha: 30/06/2026
+Estado: Aprobada
+Tipo de decisión: Aprobación de especificación técnica documental
+Nivel de riesgo inicial: Nivel 3 — Alto
+Nivel de riesgo final: Nivel 2 — Medio
+Nivel de autonomía: Nivel 0 — Sin autonomía ejecutiva
+
+---
+
+## Decisión
+
+Se aprueba formalmente:
+
+**ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2**
+
+como especificación técnica documental inicial del MVP técnico básico de Robert.
+
+---
+
+## Documento aprobado
+
+Documento aprobado:
+
+**ROBERT_TECHNICAL_COMPONENTS_SPEC_v0.2_PROPUESTA**
+
+Ubicación:
+
+**10_MVP**
+
+Esta propuesta pasa a ser base aprobada para actualizar el documento oficial:
+
+**ROBERT_TECHNICAL_COMPONENTS_SPEC.md**
+
+---
+
+## Motivo de aprobación
+
+La versión v0.2 corrige los problemas detectados en la versión v0.1 y queda alineada con:
+
+* ROBERT_CONTEXT_MASTER v0.5
+* ROBERT_PHASES v0.5
+* ROBERT_SECURITY_RULES
+* ROBERT_CONTROL_DE_CAMBIOS
+* ROBERT_DECISIONS_LOG
+* ROBERT_TECHNICAL_MVP_PLAN
+* ROBERT_TECHNICAL_MVP_WIREFRAME v0.3
+
+---
+
+## Cambios aprobados
+
+Se aprueba que COMPONENTS_SPEC v0.2:
+
+* Use ROBERT_CONTEXT_MASTER v0.5 como fuente de verdad actual.
+* Respete la jerarquía canónica de documentos.
+* Separe riesgo, autonomía, tipo de cambio y estado documental.
+* Limite el alcance a 10 componentes prioritarios.
+* Mapee componentes a capas.
+* Mantenga componentes secundarios para versiones futuras.
+* Mantenga la estructura técnica futura como anexo no ejecutable.
+* No autorice programación ni conexiones reales.
+
+---
+
+## Alcance autorizado
+
+Esta decisión autoriza únicamente:
+
+* Aprobar la especificación técnica documental v0.2.
+* Actualizar el documento oficial ROBERT_TECHNICAL_COMPONENTS_SPEC.
+* Registrar el cambio en ROBERT_CONTROL_DE_CAMBIOS.
+* Actualizar ROBERT_HOME.
+* Actualizar README si aplica.
+* Usar COMPONENTS_SPEC v0.2 como base para futuras especificaciones documentales.
+
+---
+
+## Alcance no autorizado
+
+Esta decisión no autoriza:
+
+* Programar la app.
+* Crear código.
+* Conectar APIs reales.
+* Conectar GitHub automáticamente.
+* Conectar Gmail.
+* Conectar Google Calendar.
+* Automatizar acciones.
+* Activar agentes autónomos.
+* Ejecutar acciones reales.
+* Avanzar automáticamente a Fase 11.
+
+---
+
+## Regla activa
+
+Robert sigue en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+La aprobación de COMPONENTS_SPEC v0.2 no autoriza ejecución técnica real.
+
+---
+
+## Cierre
+
+ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2 queda aprobado como especificación técnica documental inicial del MVP técnico básico.
+
+El usuario mantiene control total.
+
+Robert no ejecuta acciones importantes sin permiso.
+
