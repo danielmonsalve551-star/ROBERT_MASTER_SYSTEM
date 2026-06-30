@@ -2723,3 +2723,89 @@ No autoriza automatizaciones.
 No autoriza agentes autónomos.
 
 Autoriza únicamente usar este documento como regla para manejar cambios futuros de Robert.
+
+
+---
+
+# CAMBIO #010 — Actualización del wireframe técnico a v0.3
+
+Fecha: 29/06/2026
+Estado: Aprobado
+Decisión relacionada: DECISIÓN #010 — Aprobación de ROBERT_TECHNICAL_MVP_WIREFRAME v0.3
+Documento afectado: ROBERT_TECHNICAL_MVP_WIREFRAME.md
+Tipo de cambio: Tipo 3 — Cambio visual / UX
+Nivel de riesgo inicial: Nivel 2 — Medio
+Nivel de riesgo final: Nivel 2 — Medio
+
+---
+
+## Cambio realizado
+
+Se actualizó el documento oficial:
+
+**ROBERT_TECHNICAL_MVP_WIREFRAME.md**
+
+de versión v0.2 a versión v0.3.
+
+---
+
+## Mejoras integradas
+
+La versión v0.3 integra:
+
+1. RiskBadge con motivo visible
+2. Vista “Pendiente de mi decisión”
+3. Mapa visual de documentos por fase y estado
+
+---
+
+## Motivo del cambio
+
+El cambio mejora la claridad, seguridad y control visual del MVP técnico básico de Robert.
+
+Permite que el usuario vea mejor:
+
+* Riesgos
+* Motivos de riesgo
+* Decisiones pendientes
+* Estados documentales
+* Avance general del sistema
+
+---
+
+## Documentos relacionados
+
+* ROBERT_TECHNICAL_MVP_WIREFRAME.md
+* ROBERT_TECHNICAL_MVP_WIREFRAME_v0.3_PROPUESTA.md
+* ROBERT_HOME.md
+* ROBERT_DECISIONS_LOG.md
+* ROBERT_CONTROL_DE_CAMBIOS.md
+
+---
+
+## Alcance autorizado
+
+Este cambio autoriza únicamente actualización documental y visual.
+
+---
+
+## Alcance no autorizado
+
+Este cambio no autoriza:
+
+* Programar la app
+* Conectar APIs reales
+* Conectar GitHub automáticamente
+* Conectar Gmail
+* Conectar Google Calendar
+* Automatizar acciones reales
+* Ejecutar agentes autónomos
+* Tomar decisiones por el usuario
+
+---
+
+## Estado final
+
+Cambio aprobado e integrado documentalmente.
+
+ROBERT_TECHNICAL_MVP_WIREFRAME v0.3 queda como wireframe oficial actualizado del MVP técnico básico.
