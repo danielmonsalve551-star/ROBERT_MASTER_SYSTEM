@@ -1549,3 +1549,72 @@ Estado operativo:
 
 ---
 
+---
+
+# ACTUALIZACIÓN — CONTEXT_MASTER v0.5 REANCLADO
+
+Fecha: 30/06/2026
+Estado: Fuente de verdad reanclada
+Cambio relacionado: CAMBIO #013 — Reanclaje de ROBERT_CONTEXT_MASTER v0.5
+
+---
+
+## Estado actualizado
+
+ROBERT_CONTEXT_MASTER fue actualizado a versión v0.5 para reflejar el estado real actual del Proyecto Robert.
+
+Esta versión queda como fuente central de verdad del estado general del sistema.
+
+---
+
+## Motivo
+
+Se detectaron secciones desactualizadas que todavía mencionaban estados anteriores del proyecto.
+
+La versión v0.5 corrige y reancla el contexto maestro al estado actual.
+
+---
+
+## Estado actual reconocido
+
+Robert se encuentra en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Estado operativo:
+
+* MVP manual validado
+* Sandbox manual validado
+* GitHub configurado como respaldo documental privado
+* ROBERT_TECHNICAL_MVP_PLAN aprobado
+* ROBERT_TECHNICAL_MVP_WIREFRAME v0.3 aprobado
+* ROBERT_TECHNICAL_COMPONENTS_SPEC v0.1 creado como borrador
+* ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2_PROPUESTA en revisión
+* Convención visual de Obsidian validada
+* Sin programación autorizada todavía
+* Sin conexiones reales
+* Sin automatizaciones reales
+* Sin agentes autónomos activos
+
+---
+
+## Regla activa
+
+Ningún documento técnico puede declarar un estado del proyecto que contradiga a ROBERT_CONTEXT_MASTER.
+
+Si existe contradicción entre un documento técnico y ROBERT_CONTEXT_MASTER, prevalece ROBERT_CONTEXT_MASTER.
+
+---
+
+## Próximo punto pendiente
+
+Corregir:
+
+**ROBERT_TECHNICAL_COMPONENTS_SPEC_v0.2_PROPUESTA**
+
+tomando como base:
+
+**ROBERT_CONTEXT_MASTER v0.5**
+
+---
+
