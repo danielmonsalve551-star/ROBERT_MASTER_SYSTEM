@@ -3130,6 +3130,124 @@ Este cambio no autoriza:
 
 ---
 
+
+---
+
+# CAMBIO #014 — Reconciliación de ROBERT_PHASES v0.5
+
+Fecha: 30/06/2026
+Estado: Actualizado — pendiente de aprobación formal
+Documento afectado: ROBERT_PHASES
+Tipo de cambio: Cambio documental maestro / fases
+Nivel de riesgo inicial: Alto
+Nivel de riesgo final: Medio
+
+---
+
+## Cambio realizado
+
+Se actualizó **ROBERT_PHASES** a versión v0.5 para corregir contradicciones internas en el mapa de fases del Proyecto Robert.
+
+---
+
+## Motivo del cambio
+
+Se detectó que ROBERT_PHASES tenía dos numeraciones de fases conviviendo dentro del mismo documento.
+
+La contradicción principal era:
+
+* En una parte, Fase 10 significaba MVP técnico básico.
+* En otra parte, Fase 10 significaba conexión segura con herramientas.
+* Una sección seguía diciendo que Robert estaba en Fase 1.
+* Otra sección ya marcaba fases posteriores como completadas.
+* El documento todavía mencionaba MVP_PLAN como pendiente.
+* El cierre seguía hablando de aprobar ROBERT_PHASES v0.3.
+
+---
+
+## Corrección aplicada
+
+ROBERT_PHASES v0.5 deja una sola numeración oficial:
+
+* Fase 1 — Identidad y visión
+* Fase 2 — Documentos maestros
+* Fase 3 — Fuente central de verdad
+* Fase 4 — Comandos
+* Fase 5 — Módulos
+* Fase 6 — Arquitectura conceptual
+* Fase 7 — Diseño visual / UX
+* Fase 8 — MVP manual
+* Fase 9 — Sandbox manual
+* Fase 10 — MVP técnico básico
+* Fase 11 — Conexión segura con herramientas
+* Fase 12 — Automatizaciones controladas
+* Fase 13 — Voz / multimodal
+* Fase 14 — Agentes especializados
+* Fase 15 — Business Builder avanzado
+* Fase 16 — Seguridad avanzada / pruebas
+* Fase 17 — Iteraciones y expansión
+
+---
+
+## Estado oficial reanclado
+
+Robert queda reconocido en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+---
+
+## Separación corregida
+
+ROBERT_PHASES v0.5 separa claramente:
+
+* Riesgo
+* Autonomía
+* Tipo de cambio
+* Estado de fase
+
+También aclara que:
+
+* Nivel 5 no existe como riesgo.
+* Nivel 5 solo puede existir como autonomía si SECURITY_RULES lo define así.
+* Tipo de cambio no es nivel de riesgo.
+
+---
+
+## Alcance autorizado
+
+Este cambio autoriza únicamente:
+
+* Corregir el mapa de fases
+* Unificar numeración
+* Reanclar el estado actual
+* Eliminar contradicciones internas
+* Usar ROBERT_PHASES v0.5 como base pendiente de aprobación formal
+
+---
+
+## Alcance no autorizado
+
+Este cambio no autoriza:
+
+* Programar la app
+* Avanzar a Fase 11
+* Conectar herramientas externas
+* Automatizar GitHub
+* Crear agentes autónomos
+* Ejecutar acciones reales
+* Aprobar automáticamente COMPONENTS_SPEC v0.2
+
+---
+
+## Estado final
+
+ROBERT_PHASES v0.5 queda actualizado como:
+
+**Mapa de fases reconciliado — pendiente de aprobación formal**
+
+El siguiente paso recomendado es actualizar ROBERT_HOME y después revisar la escala de riesgo en SECURITY_RULES y CONTROL_DE_CAMBIOS.
+
 ## Estado final
 
 ROBERT_CONTEXT_MASTER v0.5 queda como fuente de verdad actualizada del estado general del Proyecto Robert.
