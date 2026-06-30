@@ -2804,6 +2804,126 @@ Este cambio no autoriza:
 
 ---
 
+---
+
+# CAMBIO #011 — Creación de ROBERT_TECHNICAL_COMPONENTS_SPEC v0.1
+
+Fecha: 29/06/2026
+Estado: Borrador técnico creado — pendiente de revisión
+Documento creado: ROBERT_TECHNICAL_COMPONENTS_SPEC.md
+Ubicación: 10_MVP
+Tipo de cambio: Tipo 5 — Cambio técnico
+Nivel de riesgo inicial: Nivel 3 — Alto
+Nivel de riesgo final: Nivel 2 — Medio
+
+---
+
+## Cambio realizado
+
+Se creó el documento:
+
+**ROBERT_TECHNICAL_COMPONENTS_SPEC v0.1**
+
+como borrador técnico inicial para convertir el wireframe aprobado de Robert en una especificación de componentes técnicos.
+
+---
+
+## Documento base relacionado
+
+Este documento toma como base:
+
+**ROBERT_TECHNICAL_MVP_WIREFRAME v0.3**
+
+---
+
+## Motivo del cambio
+
+Robert ya cuenta con un wireframe técnico aprobado.
+
+El siguiente paso lógico es definir los componentes técnicos que tendría el MVP básico antes de programar.
+
+---
+
+## Contenido principal del documento
+
+El documento define de forma inicial:
+
+* Componentes principales del MVP
+* Modos operativos
+* Estados del sistema
+* RiskBadge
+* ApprovalGate
+* DecisionInbox
+* DocumentStatusMap
+* CurrentStatePanel
+* HistoryLog
+* SandboxPanel
+* Modelos de datos conceptuales
+* Flujos principales del MVP
+* Estructura visual propuesta
+* Estructura futura de archivos
+* Criterios de aceptación
+* Criterios de seguridad
+
+---
+
+## Motivo del riesgo
+
+El cambio inicia una transición desde documentación visual hacia especificación técnica.
+
+Aunque no se programó nada, el documento acerca a Robert a una futura fase de desarrollo.
+
+---
+
+## Reducción de riesgo
+
+El riesgo baja de Nivel 3 — Alto a Nivel 2 — Medio porque:
+
+* El documento es solo borrador
+* No programa la app
+* No conecta APIs
+* No automatiza acciones
+* No modifica archivos automáticamente
+* No ejecuta acciones reales
+* Requiere revisión y aprobación formal antes de quedar oficial
+
+---
+
+## Alcance autorizado
+
+Este cambio autoriza únicamente:
+
+* Crear el borrador técnico
+* Revisarlo
+* Corregirlo
+* Usarlo como base para discusión técnica
+
+---
+
+## Alcance no autorizado
+
+Este cambio no autoriza:
+
+* Programar la app
+* Conectar GitHub automáticamente
+* Conectar Gmail
+* Conectar Google Calendar
+* Conectar APIs reales
+* Automatizar acciones
+* Activar agentes autónomos
+* Ejecutar decisiones reales
+
+---
+
+## Estado final
+
+ROBERT_TECHNICAL_COMPONENTS_SPEC v0.1 queda creado como:
+
+**Borrador técnico inicial pendiente de revisión**
+
+No queda aprobado todavía.
+
+
 ## Estado final
 
 Cambio aprobado e integrado documentalmente.
