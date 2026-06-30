@@ -3246,7 +3246,7 @@ ROBERT_PHASES v0.5 queda actualizado como:
 
 **Mapa de fases reconciliado — pendiente de aprobación formal**
 
-El siguiente paso recomendado es actualizar ROBERT_HOME y después revisar la escala de riesgo en SECURITY_RULES y CONTROL_DE_CAMBIOS.
+El siguiente paso recomendado es actualizar ROBERT_HOME y después revisar la escala de riesgo en SECURITY_RULES y CONTROL_DE_CAMBIOS. 
 
 ## Estado final
 
