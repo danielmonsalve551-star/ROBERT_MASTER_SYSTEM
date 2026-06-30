@@ -3254,3 +3254,141 @@ ROBERT_CONTEXT_MASTER v0.5 queda como fuente de verdad actualizada del estado ge
 
 El siguiente paso recomendado es corregir ROBERT_TECHNICAL_COMPONENTS_SPEC_v0.2_PROPUESTA tomando como base el nuevo CONTEXT_MASTER v0.5.
 
+
+---
+
+# ACTUALIZACIÓN — ESCALA DE RIESGO, AUTONOMÍA Y TIPO DE CAMBIO
+
+Fecha: 30/06/2026
+Estado: Escala alineada con ROBERT_SECURITY_RULES
+Documento relacionado: ROBERT_SECURITY_RULES
+Motivo: Evitar confusión entre riesgo, autonomía y tipo de cambio
+
+---
+
+## Cambio realizado
+
+Se actualiza ROBERT_CONTROL_DE_CAMBIOS para alinearse con la escala oficial aclarada en ROBERT_SECURITY_RULES.
+
+---
+
+## Regla principal
+
+Robert debe separar claramente:
+
+1. Nivel de riesgo
+2. Nivel de autonomía
+3. Tipo de cambio
+4. Estado documental
+
+Estos conceptos no deben mezclarse.
+
+---
+
+## Escala oficial de riesgo
+
+La escala oficial de riesgo queda así:
+
+```text
+Nivel 0 — Informativo
+Nivel 1 — Bajo
+Nivel 2 — Medio
+Nivel 3 — Alto
+Nivel 4 — Crítico
+```
+
+---
+
+## Regla sobre Nivel 5
+
+No existe Nivel 5 como riesgo.
+
+Nivel 5 solo puede existir dentro de la escala de autonomía, si ROBERT_SECURITY_RULES lo define así.
+
+---
+
+## Escala de autonomía
+
+La autonomía es independiente del riesgo.
+
+La autonomía describe qué tanto puede actuar Robert por sí mismo dentro de un alcance autorizado.
+
+Actualmente Robert no tiene autonomía ejecutiva activa.
+
+---
+
+## Tipo de cambio
+
+El tipo de cambio clasifica la naturaleza de una modificación.
+
+Ejemplos:
+
+* Cambio documental
+* Cambio visual / UX
+* Cambio técnico documental
+* Cambio de seguridad
+* Cambio de conexión externa
+* Cambio de automatización
+
+Tipo de cambio no es nivel de riesgo.
+
+---
+
+## Estado documental
+
+El estado documental describe la situación de un documento, cambio o decisión.
+
+Ejemplos:
+
+* Borrador
+* En revisión
+* Pendiente de aprobación
+* Aprobado
+* Rechazado
+* Pausado
+* Archivado
+* Reemplazado
+
+---
+
+## Formato obligatorio para cambios futuros
+
+Cada cambio importante debe separar:
+
+```text
+Tipo de cambio:
+Nivel de riesgo:
+Nivel de autonomía:
+Estado documental:
+```
+
+Ejemplo correcto:
+
+```text
+Tipo de cambio: Cambio técnico documental
+Nivel de riesgo: Nivel 3 — Alto
+Nivel de autonomía: Nivel 0 — Sin autonomía ejecutiva
+Estado documental: En revisión
+```
+
+---
+
+## Alcance
+
+Esta actualización solo aclara clasificación y control documental.
+
+No autoriza:
+
+* Programación
+* Conexiones reales
+* Automatizaciones
+* Agentes autónomos
+* Ejecución externa
+* Avance a Fase 11
+
+---
+
+## Estado final
+
+ROBERT_CONTROL_DE_CAMBIOS queda alineado con ROBERT_SECURITY_RULES en la separación entre riesgo, autonomía, tipo de cambio y estado documental.
+
