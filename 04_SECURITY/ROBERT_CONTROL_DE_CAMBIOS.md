@@ -2924,6 +2924,121 @@ ROBERT_TECHNICAL_COMPONENTS_SPEC v0.1 queda creado como:
 No queda aprobado todavía.
 
 
+---
+
+# CAMBIO #012 — Convención visual del grafo en Obsidian
+
+Fecha: 30/06/2026
+Estado: Validado en Obsidian
+Documento afectado: ROBERT_VISUAL
+Tipo de cambio: Visual / UX documental
+Nivel de riesgo inicial: Nivel 2 — Medio
+Nivel de riesgo final: Nivel 2 — Medio
+
+---
+
+## Cambio realizado
+
+Se actualizó **ROBERT_VISUAL** para integrar la convención visual del grafo de Obsidian.
+
+Esta convención define cómo representar visualmente los documentos de Robert usando:
+
+* Órbitas
+* Capas
+* Colores
+* Wikilinks
+* Etiquetas
+* Grupos visuales en Graph View
+
+---
+
+## Motivo del cambio
+
+La vista gráfica de Obsidian se veía gris, simple y poco jerárquica porque los documentos no tenían suficientes enlaces ni etiquetas semánticas.
+
+Se validó que el grafo mejora cuando cada documento usa:
+
+* Enlaces intencionales
+* Tags por órbita
+* Tags por función
+* Colores por grupo
+* Filtros limpios
+
+---
+
+## Regla visual aprobada
+
+Robert usará dos ejes visuales:
+
+**Órbita = posición / cercanía al núcleo**
+**Capa o función = color visual**
+
+---
+
+## Centro visual
+
+El centro visual del grafo será:
+
+**ROBERT_HOME**
+
+---
+
+## Centro conceptual
+
+El centro conceptual del sistema seguirá siendo:
+
+**ROBERT_CONTEXT_MASTER**
+
+---
+
+## ROBERT_CORE
+
+No se crea todavía un archivo llamado ROBERT_CORE.
+
+Robert Core se mantiene como idea abstracta del sistema, no como documento activo.
+
+Solo se creará si la identidad del sistema crece demasiado y ya no cabe de forma limpia en ROBERT_CONTEXT_MASTER.
+
+---
+
+## Alcance autorizado
+
+Este cambio autoriza únicamente:
+
+* Organización visual en Obsidian
+* Uso de wikilinks
+* Uso de etiquetas
+* Uso de grupos de color
+* Limpieza de nodos grises
+* Separación entre documentos oficiales y temporales
+
+---
+
+## Alcance no autorizado
+
+Este cambio no autoriza:
+
+* Programar la interfaz visual real
+* Crear el HUD final de Robert
+* Conectar Obsidian automáticamente con GitHub
+* Automatizar cambios documentales
+* Crear agentes visuales
+* Activar apps externas
+* Ejecutar acciones reales
+
+---
+
+## Estado final
+
+La convención visual del grafo de Obsidian queda validada como apoyo estructural del Proyecto Robert.
+
+No reemplaza el wireframe técnico v0.3.
+
+No reemplaza el futuro Command Center visual.
+
+Funciona como una capa de navegación documental dentro de Obsidian.
+
+
 ## Estado final
 
 Cambio aprobado e integrado documentalmente.
