@@ -120,3 +120,26 @@ Convención visual validada y registrada en:
 * ROBERT_VISUAL
 * ROBERT_CONTROL_DE_CAMBIOS
 * ROBERT_HOME
+
+
+---
+
+## Escala oficial de riesgo y autonomía
+
+Robert separa oficialmente cuatro conceptos:
+
+1. Riesgo
+2. Autonomía
+3. Tipo de cambio
+4. Estado documental
+
+Estos conceptos no deben mezclarse.
+
+### Escala oficial de riesgo
+
+```text
+Nivel 0 — Informativo
+Nivel 1 — Bajo
+Nivel 2 — Medio
+Nivel 3 — Alto
+Nivel 4 — Crítico
