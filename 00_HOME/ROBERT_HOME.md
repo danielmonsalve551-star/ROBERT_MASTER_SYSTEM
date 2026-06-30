@@ -1618,3 +1618,120 @@ tomando como base:
 
 ---
 
+---
+
+# ACTUALIZACIÓN — ROBERT_PHASES v0.5 RECONCILIADO
+
+Fecha: 30/06/2026
+Estado: Mapa de fases reconciliado — pendiente de aprobación formal
+Cambio relacionado: CAMBIO #014 — Reconciliación de ROBERT_PHASES v0.5
+
+---
+
+## Estado actualizado
+
+ROBERT_PHASES fue actualizado a versión v0.5 para corregir contradicciones internas en el mapa de fases del Proyecto Robert.
+
+Esta versión deja una sola numeración oficial de fases.
+
+---
+
+## Motivo
+
+Se detectó que ROBERT_PHASES tenía versiones mezcladas dentro del mismo documento.
+
+El documento contenía contradicciones como:
+
+* Fase 10 con dos significados distintos
+* Una parte marcaba Fase 10 como MVP técnico básico
+* Otra parte marcaba Fase 10 como conexión segura con herramientas
+* Una sección todavía decía que Robert estaba en Fase 1
+* Otra sección ya reconocía MVP manual y sandbox manual como validados
+* MVP_PLAN aparecía como pendiente aunque ya existe
+* El cierre todavía mencionaba aprobación de ROBERT_PHASES v0.3
+
+---
+
+## Corrección aplicada
+
+ROBERT_PHASES v0.5 establece una sola numeración oficial:
+
+1. Fase 1 — Identidad y visión
+2. Fase 2 — Documentos maestros
+3. Fase 3 — Fuente central de verdad
+4. Fase 4 — Comandos
+5. Fase 5 — Módulos
+6. Fase 6 — Arquitectura conceptual
+7. Fase 7 — Diseño visual / UX
+8. Fase 8 — MVP manual
+9. Fase 9 — Sandbox manual
+10. Fase 10 — MVP técnico básico
+11. Fase 11 — Conexión segura con herramientas
+12. Fase 12 — Automatizaciones controladas
+13. Fase 13 — Voz / multimodal
+14. Fase 14 — Agentes especializados
+15. Fase 15 — Business Builder avanzado
+16. Fase 16 — Seguridad avanzada / pruebas
+17. Fase 17 — Iteraciones y expansión
+
+---
+
+## Estado actual oficial
+
+Robert se encuentra actualmente en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+---
+
+## Estado operativo actual
+
+* MVP manual validado
+* Sandbox manual validado
+* GitHub configurado como respaldo documental privado
+* ROBERT_CONTEXT_MASTER v0.5 reanclado
+* ROBERT_PHASES v0.5 reconciliado
+* ROBERT_TECHNICAL_MVP_PLAN aprobado
+* ROBERT_TECHNICAL_MVP_WIREFRAME v0.3 aprobado
+* ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2_PROPUESTA en revisión
+* Convención visual de Obsidian validada
+* Sin programación autorizada todavía
+* Sin conexiones reales
+* Sin automatizaciones reales
+* Sin agentes autónomos activos
+
+---
+
+## Regla activa
+
+Robert no debe avanzar a Fase 11 hasta que la Fase 10 tenga base técnica documental clara, revisada y aprobada.
+
+Antes de aprobar COMPONENTS_SPEC v0.2, deben quedar alineados:
+
+* ROBERT_CONTEXT_MASTER
+* ROBERT_PHASES
+* ROBERT_SECURITY_RULES
+* ROBERT_CONTROL_DE_CAMBIOS
+* ROBERT_DECISIONS_LOG
+* ROBERT_TECHNICAL_MVP_PLAN
+* ROBERT_TECHNICAL_MVP_WIREFRAME
+* ROBERT_TECHNICAL_COMPONENTS_SPEC
+
+---
+
+## Próximo punto pendiente
+
+Revisar y unificar la escala de riesgo entre:
+
+* ROBERT_SECURITY_RULES
+* ROBERT_CONTROL_DE_CAMBIOS
+
+Regla recomendada:
+
+**Riesgo = Nivel 0 a Nivel 4**
+**Autonomía = Nivel 0 a Nivel 5**
+**Tipo de cambio = categoría separada**
+
+---
+
+
