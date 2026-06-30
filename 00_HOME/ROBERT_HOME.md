@@ -1457,4 +1457,95 @@ Opciones disponibles:
 
 ---
 
+---
+
+# ACTUALIZACIÓN — CONVENCIÓN VISUAL DE OBSIDIAN VALIDADA
+
+Fecha: 30/06/2026  
+Estado: Validada  
+Cambio relacionado: CAMBIO #012 — Convención visual del grafo en Obsidian  
+
+---
+
+## Estado actualizado
+
+Robert ya cuenta con una convención visual validada para representar su estructura documental dentro de Obsidian Graph View.
+
+Esta convención usa:
+
+- Órbitas
+- Capas
+- Colores semánticos
+- Wikilinks
+- Etiquetas
+- Grupos visuales
+
+---
+
+## Regla visual aprobada
+
+Robert usará dos ejes visuales:
+
+**Órbita = posición / cercanía al núcleo**  
+**Capa o función = color visual**
+
+---
+
+## Centro visual
+
+El centro visual del grafo será:
+
+**ROBERT_HOME**
+
+---
+
+## Centro conceptual
+
+El centro conceptual seguirá siendo:
+
+**ROBERT_CONTEXT_MASTER**
+
+---
+
+## Estado de ROBERT_CORE
+
+No se crea todavía un archivo ROBERT_CORE.
+
+Robert Core se mantiene como idea abstracta del sistema, no como documento activo.
+
+---
+
+## Alcance
+
+Esta actualización solo aplica a la navegación visual documental en Obsidian.
+
+No autoriza:
+
+- Programar el HUD final
+- Conectar Obsidian automáticamente con GitHub
+- Automatizar documentos
+- Crear agentes visuales
+- Ejecutar acciones reales
+
+---
+
+## Estado actual de Robert
+
+Robert se mantiene en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Estado operativo:
+
+- MVP manual validado
+- Sandbox manual validado
+- GitHub configurado como respaldo documental privado
+- Wireframe técnico v0.3 aprobado
+- Components Spec v0.1 creado como borrador
+- Convención visual de Obsidian validada
+- Sin programación autorizada todavía
+- Sin conexiones reales
+- Sin automatizaciones reales
+
+---
 
