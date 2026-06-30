@@ -1,1940 +1,849 @@
-ROBERT_PHASES — FASES DE CONSTRUCCIÓN DE ROBERT
+# ROBERT_PHASES
 
-Versión: 0.4  
-Estado: Fases actualizadas post-sandbox manual  
-Última actualización: 26/06/2026
+Versión: 0.5
+Estado: Mapa de fases reconciliado — pendiente de revisión y aprobación formal
+Fecha: 30/06/2026
+Ubicación: 05_PHASES
+Documento relacionado: ROBERT_CONTEXT_MASTER v0.5
+
+Tags: #robert/orbita-1 #capa/3 #tipo/maestro
+
 ---
 
 # OBJETIVO
 
-Definir el orden oficial de construcción de Robert.
+Este documento define el mapa oficial de fases del Proyecto Robert.
 
-Este documento existe para evitar:
+Su función es mantener claro:
 
-- construir demasiado rápido;
-    
-- perder contexto;
-    
-- automatizar antes de tiempo;
-    
-- conectar herramientas sin seguridad;
-    
-- mezclar decisiones con ideas;
-    
-- crear arquitectura sin base documental;
-    
-- activar autonomía sin gobierno;
-    
-- ejecutar acciones sin alcance autorizado;
-    
-- programar antes de validar el sistema manualmente.
-    
+* En qué fase está Robert.
+* Qué fases ya fueron completadas.
+* Qué fases están en preparación.
+* Qué fases siguen pendientes.
+* Qué no debe adelantarse.
+* Qué documentos se relacionan con cada fase.
+* Qué condiciones deben cumplirse antes de avanzar.
 
-Robert debe crecer por fases.
-
-Cada fase debe tener:
-
-- objetivo claro;
-    
-- documentos relacionados;
-    
-- resultado esperado;
-    
-- criterios de cierre;
-    
-- riesgos;
-    
-- dependencias;
-    
-- estado.
-    
-# ACTUALIZACIÓN POST-SANDBOX MANUAL
-
-Fecha: 26/06/2026
-
-Estado general:
-
-Robert completó y validó documentalmente el MVP manual y el sandbox manual.
-
-Decisión relacionada:
-
-DECISIÓN #004 — Sandbox manual validado.
+Esta versión v0.5 corrige contradicciones detectadas en versiones anteriores de ROBERT_PHASES.
 
 ---
 
-# FASES YA COMPLETADAS
+# ESTADO DE ESTA VERSIÓN
 
-Las siguientes fases quedan marcadas como completadas documentalmente:
+Esta versión deja una sola numeración oficial de fases.
 
-## Fase 1 — Identidad y visión
+Elimina contradicciones anteriores donde:
 
-Estado:
-
-Completada.
-
-Resultado:
-
-Robert quedó definido como sistema operativo personal de inteligencia artificial tipo AI Command Center.
+* Fase 10 aparecía con significados diferentes.
+* Fase 1 aparecía como activa aunque el proyecto ya estaba en Fase 10.
+* MVP_PLAN aparecía como pendiente aunque ya fue creado.
+* Se mezclaban fases antiguas con fases nuevas.
+* El cierre seguía mencionando aprobación de ROBERT_PHASES v0.3.
 
 ---
 
-## Fase 2 — Documentos maestros
+# REGLA CENTRAL
 
-Estado:
+El usuario manda.
 
-Completada.
+Robert no avanza de fase sin autorización clara del usuario.
 
-Resultado:
+Robert no debe saltar fases.
 
-Robert cuenta con documentos centrales para contexto, comandos, seguridad, decisiones, fases, módulos, home, arquitectura, visual, MVP, prompts y sandbox.
-
----
-
-## Fase 3 — Fuente central de verdad
-
-Estado:
-
-Completada.
-
-Resultado:
-
-Obsidian funciona como base documental principal de Robert.
+Robert no debe convertir una fase documental en ejecución real sin aprobación formal.
 
 ---
 
-## Fase 4 — Comandos
+# FUENTE DE VERDAD RELACIONADA
 
-Estado:
+Este documento debe mantenerse alineado con:
 
-Completada en versión documental inicial.
+* ROBERT_SECURITY_RULES
+* ROBERT_CONTEXT_MASTER
+* ROBERT_COMMANDS
+* ROBERT_DECISIONS_LOG
+* ROBERT_HOME
+* ROBERT_CONTROL_DE_CAMBIOS
+* ROBERT_MVP_PLAN
+* ROBERT_TECHNICAL_MVP_PLAN
+* ROBERT_TECHNICAL_MVP_WIREFRAME
+* ROBERT_TECHNICAL_COMPONENTS_SPEC
 
-Resultado:
-
-Robert cuenta con comandos para resumen, conclusión, clasificación, decisiones, actualización, aprobación, pausa, sandbox, supervisión e informes.
-
----
-
-## Fase 5 — Módulos
-
-Estado:
-
-Completada en estructura inicial.
-
-Resultado:
-
-Robert cuenta con módulos base, incluyendo Business Builder, Security, Documents, Automation, Apps Connector, Voice, Finance, Accounting, Tax, Marketing, Design, Sales y Operations.
+Si ROBERT_PHASES contradice a ROBERT_CONTEXT_MASTER sobre el estado general, debe corregirse ROBERT_PHASES.
 
 ---
 
-## Fase 6 — Arquitectura conceptual
+# PRINCIPIO DE FASES
 
-Estado:
+Robert se construye en orden.
 
-Completada en versión documental.
+El orden correcto es:
 
-Resultado:
+**Identidad → Documentos → Control → Seguridad → MVP manual → Sandbox → MVP técnico → Conexiones → Automatización → Agentes → Expansión**
 
-Robert tiene arquitectura por capas:
-
-- identidad;
-    
-- memoria;
-    
-- control;
-    
-- capacidades;
-    
-- gobierno;
-    
-- presentación.
-    
-
----
-
-## Fase 7 — Diseño visual / UX conceptual
-
-Estado:
-
-En desarrollo.
-
-Resultado:
-
-Robert tiene referencias visuales iniciales, pero todavía no tiene diseño final aprobado ni interfaz técnica.
-
----
-
-## Fase 8 — MVP manual
-
-Estado:
-
-Completada y validada documentalmente.
-
-Resultado:
-
-Robert demostró que puede operar manualmente como sistema de clasificación, decisión, documentación, seguridad e informes.
-
----
-
-## Fase 9 — Sandbox manual
-
-Estado:
-
-Completada y validada documentalmente.
-
-Resultado:
-
-Robert demostró que puede simular acciones sin ejecutarlas.
-
-El sandbox manual validó:
-
-- control;
-    
-- seguridad;
-    
-- información insuficiente;
-    
-- escalamiento de riesgo;
-    
-- interrupciones;
-    
-- campañas simuladas;
-    
-- eventos simulados;
-    
-- automatizaciones simuladas;
-    
-- informes consolidados;
-    
-- continuidad de caso;
-    
-- límites de ejecución.
-    
-
----
-
-# FASE ACTUAL
-
-La fase actual de Robert es:
-
-## Fase 10 — Preparación del MVP técnico básico
-
-Estado:
-
-Pendiente de iniciar.
-
-Objetivo:
-
-Diseñar la primera versión técnica básica de Robert sin conectar herramientas reales todavía.
-
-Esta fase debe traducir el sistema documental/manual a una interfaz técnica mínima.
-
----
-
-# QUÉ DEBE INCLUIR EL MVP TÉCNICO BÁSICO
-
-El MVP técnico básico debe permitir probar:
-
-- entrada de comandos;
-    
-- selección de modo activo;
-    
-- clasificación de intención;
-    
-- nivel de riesgo;
-    
-- documento relacionado;
-    
-- módulo relacionado;
-    
-- respuesta generada;
-    
-- informe de acciones;
-    
-- registro manual;
-    
-- historial básico de pruebas;
-    
-- modo sandbox visual;
-    
-- bloqueo de ejecución real.
-    
-
----
-
-# QUÉ NO DEBE INCLUIR TODAVÍA
-
-El MVP técnico básico no debe incluir todavía:
-
-- conexión real a Gmail;
-    
-- conexión real a Calendar;
-    
-- conexión real a WhatsApp;
-    
-- conexión real a CRM;
-    
-- conexión real a Google Drive;
-    
-- conexión real a Sheets;
-    
-- Zapier;
-    
-- Make;
-    
-- n8n;
-    
-- agentes autónomos;
-    
-- automatizaciones reales;
-    
-- envío de correos;
-    
-- publicación de campañas;
-    
-- contacto con clientes;
-    
-- uso de datos personales reales.
-    
-
----
-
-# ORDEN ACTUALIZADO DE FASES
-
-## Fase 1 — Identidad y visión
-
-Estado:
-
-Completada.
-
-## Fase 2 — Documentos maestros
-
-Estado:
-
-Completada.
-
-## Fase 3 — Fuente central de verdad
-
-Estado:
-
-Completada.
-
-## Fase 4 — Comandos
-
-Estado:
-
-Completada en base documental.
-
-## Fase 5 — Módulos
-
-Estado:
-
-Completada en base inicial.
-
-## Fase 6 — Arquitectura conceptual
-
-Estado:
-
-Completada.
-
-## Fase 7 — Diseño visual / UX
-
-Estado:
-
-En desarrollo.
-
-## Fase 8 — MVP manual
-
-Estado:
-
-Completada y validada documentalmente.
-
-## Fase 9 — Sandbox manual
-
-Estado:
-
-Completada y validada documentalmente.
-
-## Fase 10 — MVP técnico básico
-
-Estado:
-
-Siguiente fase pendiente.
-
-## Fase 11 — Interfaz visual inicial
-
-Estado:
-
-Futura.
-
-## Fase 12 — Conexiones controladas
-
-Estado:
-
-Futura.
-
-## Fase 13 — Automatizaciones seguras
-
-Estado:
-
-Futura.
-
-## Fase 14 — Voz e interacción multimodal
-
-Estado:
-
-Futura.
-
-## Fase 15 — Agentes especializados
-
-Estado:
-
-Futura.
-
-## Fase 16 — Business Builder avanzado
-
-Estado:
-
-Futura.
-
-## Fase 17 — Seguridad avanzada y auditoría
-
-Estado:
-
-Futura.
-
-## Fase 18 — Robert v1.0
-
-Estado:
-
-Futura.
-
-## Fase 19 — Evolución continua
-
-Estado:
-
-Futura.
-
----
-
-# REGLA POST-SANDBOX
-
-La validación del sandbox manual no autoriza pasar directamente a ejecución real.
-
-Antes de conectar herramientas reales, Robert debe pasar por:
-
-1. ROBERT_TECHNICAL_MVP_PLAN.
-    
-2. Diseño de MVP técnico básico.
-    
-3. Prototipo sin conexiones reales.
-    
-4. Pruebas locales.
-    
-5. Revisión de seguridad técnica.
-    
-6. Autorización explícita del usuario.
-    
-7. Solo después, conexiones controladas.
-    
-
----
-
-# SIGUIENTE DOCUMENTO NECESARIO
-
-Documento siguiente:
-
-ROBERT_TECHNICAL_MVP_PLAN
-
-Objetivo:
-
-Definir cómo se construirá la primera versión técnica básica de Robert.
-
-Este documento debe aclarar:
-
-- qué se va a construir;
-    
-- qué no se va a construir;
-    
-- herramientas posibles;
-    
-- pantallas mínimas;
-    
-- flujo principal;
-    
-- reglas de seguridad;
-    
-- límites;
-    
-- criterios de éxito;
-    
-- criterios para no avanzar.
-    
-
----
-
-# PRINCIPIO ACTUAL
-
-Primero orden.
-
-Después poder.
-
-Robert ya completó orden documental y sandbox manual.
-
-La siguiente etapa debe convertir ese orden en una base técnica mínima sin romper seguridad.
----
-
-# PRINCIPIO CENTRAL
+Regla guía:
 
 **Primero orden. Después poder.**
 
-Orden oficial actualizado:
-
-1. Identidad
-    
-2. Documentos maestros
-    
-3. Fuente central
-    
-4. Comandos
-    
-5. Módulos
-    
-6. Arquitectura
-    
-7. Diseño visual
-    
-8. MVP manual
-    
-9. Autonomía Controlada / Sandbox
-    
-10. MVP técnico
-    
-11. Conexiones seguras
-    
-12. Automatizaciones controladas
-    
-13. Voz e interacción multimodal
-    
-14. Agentes especializados
-    
-15. Business Builder avanzado
-    
-16. Seguridad avanzada
-    
-17. Robert v1.0
-    
-18. Evolución continua
-    
-
-Regla principal:
-
-Robert no debe avanzar a una fase superior si la fase anterior no tiene base clara, documentos conectados, riesgos entendidos y validación del usuario.
-
 ---
 
-# ESTADO GENERAL
+# NUMERACIÓN OFICIAL DE FASES
 
-Fase 0 → Completada provisionalmente  
-Fase 1 → En progreso avanzado  
-Fase 2 → Pendiente  
-Fase 3 → Base actualizada pendiente de aprobación  
-Fase 4 → Base aprobada  
-Fase 5 → Base actualizada pendiente de aprobación  
-Fase 6 → Visual en revisión / UX pendiente  
-Fase 7 → Pendiente  
-Fase 8 → Nueva fase agregada / pendiente  
-Fase 9–17 → Futuro  
-Fase 18 → Permanente
+A partir de esta versión, la numeración oficial queda así:
 
----
-
-# FASE 0 — IDENTIDAD Y VISIÓN
-
-Objetivo:
-
-Definir qué es Robert.
-
-Resultado esperado:
-
-✓ Nombre oficial  
-✓ Visión aprobada  
-✓ Propósito definido  
-✓ Dirección general establecida  
-✓ Diferencia clara entre Robert, ChatGPT, Claude y Obsidian  
-✓ Propósito raíz sin acciones ejecutadas dentro del kernel
-
-Propósito raíz actual:
-
-Robert existe para transformar información dispersa en decisiones y estructuras controladas, sin perder contexto y sin quitarle control al usuario.
-
-Aclaración:
-
-La acción ejecutada no pertenece al propósito raíz.
-
-La acción ejecutada pertenece a Capa 3 — Capacidades como evolución futura y condicionada.
-
-Estado:
-
-Completada provisionalmente.
-
-Criterio de cierre:
-
-La identidad queda estable cuando ROBERT_CONTEXT_MASTER y ROBERT_SYSTEM_ARCHITECTURE estén aprobados con el mismo propósito raíz.
-
----
-
-# FASE 1 — DOCUMENTOS MAESTROS
-
-Objetivo:
-
-Construir el núcleo documental de Robert.
-
-Documentos principales:
-
-- ROBERT_HOME
-    
-- ROBERT_CONTEXT_MASTER
-    
-- ROBERT_COMMANDS
-    
-- ROBERT_DECISIONS_LOG
-    
-- ROBERT_SECURITY_RULES
-    
-- ROBERT_PHASES
-    
-- ROBERT_MODULES
-    
-- ROBERT_VISUAL_REFERENCE
-    
-- ROBERT_SYSTEM_ARCHITECTURE
-    
-- ROBERT_MVP_PLAN
-    
-- ROBERT_PROMPTS
-    
-
-Estado actual de documentos:
-
-ROBERT_HOME  
-Estado: Aprobado oficialmente
-
-ROBERT_CONTEXT_MASTER  
-Versión actual: v0.3  
-Estado: Base actualizada pendiente de aprobación
-
-ROBERT_COMMANDS  
-Versión actual: v0.3  
-Estado: Base actualizada pendiente de aprobación
-
-ROBERT_DECISIONS_LOG  
-Estado: Aprobado oficialmente
-
-ROBERT_SECURITY_RULES  
-Versión actual: v0.3  
-Estado: Base actualizada pendiente de aprobación
-
-ROBERT_PHASES  
-Versión actual: v0.3  
-Estado: Base actualizada pendiente de aprobación
-
-ROBERT_MODULES  
-Estado: Base aprobada
-
-ROBERT_VISUAL_REFERENCE  
-Estado: En revisión visual / pendiente de consolidación
-
-ROBERT_SYSTEM_ARCHITECTURE  
-Versión actual: v0.2  
-Estado: Base actualizada pendiente de aprobación
-
-ROBERT_MVP_PLAN  
-Estado: Pendiente
-
-ROBERT_PROMPTS  
-Estado: Pendiente
-
-Cierre:
-
-Todos los documentos maestros deben estar organizados, conectados y con estado claro.
-
-Estado:
-
-En progreso avanzado.
-
----
-
-# FASE 2 — FUENTE CENTRAL
-
-Objetivo:
-
-Crear una sola fuente de verdad para Robert.
-
-La fuente central debe permitir que ChatGPT, Claude, Obsidian y futuras herramientas trabajen con el mismo contexto.
-
-Estructura recomendada:
-
-```plaintext
-ROBERT_MASTER_SYSTEM/
-
-00_HOME
-01_CONTEXT
-02_COMMANDS
-03_DECISIONS
-04_SECURITY
-05_PHASES
-06_MODULES
-07_VISUAL
-08_PROMPTS
-09_ARCHITECTURE
-10_MVP
-11_REFERENCES
-12_TOOLS
-13_AGENTS
-14_AUTOMATIONS
-15_SANDBOX
+```text
+Fase 1 — Identidad y visión
+Fase 2 — Documentos maestros
+Fase 3 — Fuente central de verdad
+Fase 4 — Comandos
+Fase 5 — Módulos
+Fase 6 — Arquitectura conceptual
+Fase 7 — Diseño visual / UX
+Fase 8 — MVP manual
+Fase 9 — Sandbox manual
+Fase 10 — MVP técnico básico
+Fase 11 — Conexión segura con herramientas
+Fase 12 — Automatizaciones controladas
+Fase 13 — Voz / multimodal
+Fase 14 — Agentes especializados
+Fase 15 — Business Builder avanzado
+Fase 16 — Seguridad avanzada / pruebas
+Fase 17 — Iteraciones y expansión
 ```
 
-Reglas:
+No debe usarse otra numeración dentro de Robert sin actualizar formalmente este documento.
 
-- No duplicar documentos maestros sin razón.
-    
-- Versionar cambios.
-    
-- Registrar decisiones importantes.
-    
-- Separar borradores de documentos aprobados.
-    
-- Mantener nombres consistentes.
-    
-- Hacer la estructura exportable entre herramientas.
-    
-- Evitar dependencia total de una sola app.
-    
-- Mantener compatibilidad con Obsidian, Notion, Tana, Capacities, NotebookLM, Anytype, Drive o carpetas locales.
-    
+---
 
-Estado:
+# ESTADO ACTUAL OFICIAL
+
+Robert se encuentra actualmente en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+---
+
+# RESUMEN DE ESTADO POR FASE
+
+```text
+Fase 1 — Identidad y visión: Completada
+Fase 2 — Documentos maestros: Completada como base inicial
+Fase 3 — Fuente central de verdad: Completada / reanclada en CONTEXT_MASTER v0.5
+Fase 4 — Comandos: Completada como base inicial
+Fase 5 — Módulos: Completada como estructura inicial
+Fase 6 — Arquitectura conceptual: Completada como base conceptual
+Fase 7 — Diseño visual / UX: En desarrollo documental / convención Obsidian validada
+Fase 8 — MVP manual: Completada y validada
+Fase 9 — Sandbox manual: Completada y validada
+Fase 10 — MVP técnico básico: En preparación
+Fase 11 — Conexión segura con herramientas: Pendiente
+Fase 12 — Automatizaciones controladas: Pendiente
+Fase 13 — Voz / multimodal: Pendiente
+Fase 14 — Agentes especializados: Pendiente
+Fase 15 — Business Builder avanzado: Pendiente
+Fase 16 — Seguridad avanzada / pruebas: Pendiente
+Fase 17 — Iteraciones y expansión: Pendiente
+```
+
+---
+
+# FASE 1 — IDENTIDAD Y VISIÓN
+
+## Estado
+
+Completada.
+
+## Objetivo
+
+Definir qué es Robert, qué problema resuelve y hacia dónde debe evolucionar.
+
+## Resultado
+
+Robert quedó definido como un sistema operativo personal de inteligencia artificial tipo AI Command Center.
+
+## Documentos relacionados
+
+* ROBERT_CONTEXT_MASTER
+* ROBERT_HOME
+
+## Criterio de cierre
+
+La identidad base de Robert fue definida y registrada.
+
+---
+
+# FASE 2 — DOCUMENTOS MAESTROS
+
+## Estado
+
+Completada como base inicial.
+
+## Objetivo
+
+Crear los documentos principales que sostienen el sistema.
+
+## Documentos principales
+
+* ROBERT_HOME
+* ROBERT_CONTEXT_MASTER
+* ROBERT_COMMANDS
+* ROBERT_DECISIONS_LOG
+* ROBERT_SECURITY_RULES
+* ROBERT_PHASES
+* ROBERT_MODULES
+* ROBERT_VISUAL
+* ROBERT_PROMPTS
+* ROBERT_SYSTEM_ARCHITECTURE
+* ROBERT_MVP_PLAN
+
+## Criterio de cierre
+
+Existe una base documental suficiente para continuar el proyecto sin depender únicamente de conversaciones sueltas.
+
+---
+
+# FASE 3 — FUENTE CENTRAL DE VERDAD
+
+## Estado
+
+Completada / reanclada.
+
+## Objetivo
+
+Definir dónde vive la verdad actual del proyecto.
+
+## Fuente principal actual
+
+**ROBERT_CONTEXT_MASTER v0.5**
+
+## Apoyos
+
+* ROBERT_HOME
+* ROBERT_DECISIONS_LOG
+* ROBERT_CONTROL_DE_CAMBIOS
+* GitHub como respaldo documental manual
+
+## Criterio de cierre
+
+Robert cuenta con una fuente central de contexto actualizada y respaldada.
+
+---
+
+# FASE 4 — COMANDOS
+
+## Estado
+
+Completada como base inicial.
+
+## Objetivo
+
+Definir comandos que permitan operar Robert de forma controlada.
+
+## Comandos base
+
+* RESUMEN
+* CONCLUSION / CONCLUCION
+* IDEA PRINCIPAL
+* DETENTE
+* PAUSA
+* NO_AVANCES
+* SOLO_BORRADOR
+* MODO_SUPERVISADO
+* MODO_SANDBOX
+* APRUEBO / APROBADO
+* ACTUALIZA
+* DECISION
+* INFORME_ACCIONES
+
+## Documento relacionado
+
+* ROBERT_COMMANDS
+
+## Criterio de cierre
+
+Los comandos base están definidos y se han usado durante el MVP manual y el sandbox manual.
+
+---
+
+# FASE 5 — MÓDULOS
+
+## Estado
+
+Completada como estructura inicial.
+
+## Objetivo
+
+Definir las áreas funcionales de Robert.
+
+## Documento relacionado
+
+* ROBERT_MODULES
+
+## Resultado
+
+Robert cuenta con una estructura modular inicial para organizar capacidades futuras.
+
+## Criterio de cierre
+
+Los módulos principales existen como mapa inicial, aunque no todos estén activos técnicamente.
+
+---
+
+# FASE 6 — ARQUITECTURA CONCEPTUAL
+
+## Estado
+
+Completada como base conceptual.
+
+## Objetivo
+
+Definir las capas conceptuales de Robert.
+
+## Capas principales
+
+```text
+Capa 0 — Identidad / Kernel
+Capa 1 — Memoria
+Capa 2 — Control
+Capa 3 — Capacidades
+Capa 4 — Gobierno
+Capa 5 — Presentación
+```
+
+## Documento relacionado
+
+* ROBERT_SYSTEM_ARCHITECTURE
+
+## Criterio de cierre
+
+Robert cuenta con una arquitectura conceptual suficiente para guiar documentos técnicos y visuales.
+
+---
+
+# FASE 7 — DISEÑO VISUAL / UX
+
+## Estado
+
+En desarrollo documental.
+
+## Objetivo
+
+Definir cómo debe verse y sentirse Robert.
+
+## Avance actual
+
+La convención visual de Obsidian fue validada como navegación documental.
+
+## Regla visual validada
+
+**Órbita = posición / cercanía al núcleo**
+**Capa o función = color visual**
+
+## Centro visual
+
+**ROBERT_HOME**
+
+## Centro conceptual
+
+**ROBERT_CONTEXT_MASTER**
+
+## Documentos relacionados
+
+* ROBERT_VISUAL
+* ROBERT_TECHNICAL_MVP_WIREFRAME
+* ROBERT_HOME
+
+## Importante
+
+Obsidian Graph View no reemplaza el futuro Command Center visual.
+
+Obsidian solo funciona como mapa documental inicial.
+
+## Criterio de cierre
+
+La fase visual documental está avanzada, pero el HUD final y la interfaz visual real pertenecen al MVP técnico futuro.
+
+---
+
+# FASE 8 — MVP MANUAL
+
+## Estado
+
+Completada y validada.
+
+## Objetivo
+
+Probar Robert manualmente usando ChatGPT, Claude, Obsidian, documentos, comandos y decisiones.
+
+## Resultado
+
+Robert demostró que puede:
+
+* ordenar ideas;
+* clasificar solicitudes;
+* detectar riesgos;
+* preparar borradores;
+* registrar decisiones;
+* proponer actualizaciones;
+* trabajar sin ejecutar acciones reales.
+
+## Documento relacionado
+
+* ROBERT_MVP_PLAN
+
+## Criterio de cierre
+
+El MVP manual fue validado documentalmente.
+
+---
+
+# FASE 9 — SANDBOX MANUAL
+
+## Estado
+
+Completada y validada.
+
+## Objetivo
+
+Probar Robert en simulaciones seguras sin afectar el mundo real.
+
+## Resultado
+
+Robert pudo simular procesos sin ejecutar acciones externas.
+
+## Caso de prueba relevante
+
+**Agrocribas**
+
+## Documentos relacionados
+
+* ROBERT_SANDBOX
+* SANDBOX_RULES
+* SANDBOX_TESTS
+* SANDBOX_RESULTS
+* ROBERT_DECISIONS_LOG
+
+## Criterio de cierre
+
+El sandbox manual fue validado documentalmente y no autorizó ejecución real.
+
+---
+
+# FASE 10 — MVP TÉCNICO BÁSICO
+
+## Estado
+
+En preparación.
+
+## Objetivo
+
+Convertir Robert de sistema documental/manual a una primera especificación técnica e interfaz básica, sin conexiones reales.
+
+## Documentos actuales relacionados
+
+* ROBERT_TECHNICAL_MVP_PLAN
+* ROBERT_TECHNICAL_MVP_WIREFRAME v0.3
+* ROBERT_TECHNICAL_COMPONENTS_SPEC v0.1
+* ROBERT_TECHNICAL_COMPONENTS_SPEC_v0.2_PROPUESTA
+
+## Estado actual dentro de la fase
+
+* ROBERT_TECHNICAL_MVP_PLAN aprobado
+* ROBERT_TECHNICAL_MVP_WIREFRAME v0.3 aprobado
+* ROBERT_TECHNICAL_COMPONENTS_SPEC v0.1 creado como borrador
+* ROBERT_TECHNICAL_COMPONENTS_SPEC_v0.2_PROPUESTA en revisión
+* ROBERT_CONTEXT_MASTER v0.5 reanclado
+* ROBERT_PHASES v0.5 en revisión
+* Sin programación autorizada todavía
+
+## Criterio para avanzar dentro de la fase
+
+Antes de crear modelos de datos o programar, deben quedar alineados:
+
+* ROBERT_CONTEXT_MASTER
+* ROBERT_PHASES
+* ROBERT_SECURITY_RULES
+* ROBERT_CONTROL_DE_CAMBIOS
+* ROBERT_DECISIONS_LOG
+* ROBERT_TECHNICAL_COMPONENTS_SPEC
+
+## No autorizado en esta fase todavía
+
+* Programar la app
+* Conectar APIs reales
+* Conectar Gmail
+* Conectar Calendar
+* Automatizar GitHub
+* Activar agentes autónomos
+* Ejecutar acciones reales
+
+---
+
+# FASE 11 — CONEXIÓN SEGURA CON HERRAMIENTAS
+
+## Estado
 
 Pendiente.
 
-Criterio de cierre:
+## Objetivo
 
-La fuente central queda lista cuando todos los documentos maestros existan en una estructura clara, ordenada, versionada y fácil de migrar.
+Preparar conexiones seguras con herramientas externas.
 
----
+## Herramientas futuras posibles
 
-# FASE 3 — COMANDOS
+* GitHub
+* Obsidian
+* Google Drive
+* Gmail
+* Google Calendar
+* Claude
+* ChatGPT
+* Notion
+* Tana
+* Make
+* Zapier
+* n8n
 
-Objetivo:
+## Regla
 
-Definir cómo trabaja Robert mediante comandos claros, seguros y repetibles.
+Ninguna herramienta externa se conecta automáticamente sin autorización formal.
 
-Comandos base activos:
+## Condición para iniciar
 
-- RESUMEN
-    
-- CONCLUSION
-    
-- CONCLUCION
-    
-- DETENTE
-    
-- PAUSA
-    
-- NO_AVANCES
-    
-- SOLO_BORRADOR
-    
-- CONTINUA
-    
-- APRUEBO
-    
-- APROBADO
-    
-- SIGUIENTE_PASO
-    
-- REVOCA_AUTONOMIA
-    
-- VOLVER_A_MANUAL
-    
+Debe existir:
 
-Comandos en prueba:
-
-- DECISION
-    
-- CLASIFICAR
-    
-- PROMPT_CLAUDE
-    
-- ACTUALIZA
-    
-- GUARDA_CONTEXTO
-    
-- HILO
-    
-- AUTORIZACION
-    
-- MODO_AUTONOMO
-    
-- MODO_SUPERVISADO
-    
-- MODO_SANDBOX
-    
-- AUTORIZAR_AMBITO
-    
-- EJECUTA_CON_LIMITE
-    
-- INFORME_ACCIONES
-    
-
-Reglas:
-
-Cada comando debe tener:
-
-- nombre;
-    
-- función;
-    
-- tipo;
-    
-- estado;
-    
-- riesgo;
-    
-- autorización;
-    
-- documento relacionado;
-    
-- módulo relacionado;
-    
-- salida esperada;
-    
-- reglas especiales.
-    
-
-Estado:
-
-Base actualizada pendiente de aprobación.
-
-Criterio de cierre:
-
-La fase queda cerrada cuando ROBERT_COMMANDS v0.3 sea revisado, probado manualmente y aprobado.
+* seguridad actualizada;
+* permisos definidos;
+* alcance por herramienta;
+* sandbox técnico;
+* trazabilidad;
+* aprobación del usuario.
 
 ---
 
-# FASE 4 — MÓDULOS
+# FASE 12 — AUTOMATIZACIONES CONTROLADAS
 
-Objetivo:
-
-Definir las capacidades funcionales de Robert.
-
-Módulos prioritarios:
-
-- Robert Core
-    
-- Command Center
-    
-- Memory
-    
-- Ideas
-    
-- Projects
-    
-- Documents
-    
-- Knowledge Base
-    
-- Security
-    
-- Decisions Log
-    
-- Visual Projection
-    
-- Business Builder
-    
-- Finance
-    
-- Accounting
-    
-- Tax / Fiscal
-    
-- Marketing
-    
-- Design
-    
-- Operations
-    
-- Research
-    
-- Analytics
-    
-- Automation
-    
-- Apps Connector
-    
-- Calendar
-    
-- Email
-    
-- Tasks
-    
-- Voice
-    
-- Code / Development
-    
-
-Regla:
-
-Los módulos representan áreas funcionales.
-
-No deben confundirse con:
-
-- capas internas;
-    
-- herramientas externas;
-    
-- agentes futuros;
-    
-- comandos.
-    
-
-Estado:
-
-Base aprobada.
-
-Criterio de cierre:
-
-La fase queda cerrada cuando los módulos estén definidos, priorizados para MVP y conectados con arquitectura.
-
----
-
-# FASE 5 — ARQUITECTURA
-
-Objetivo:
-
-Diseñar el funcionamiento interno de Robert.
-
-Arquitectura oficial:
-
-Robert funciona mediante 6 capas:
-
-0. Identidad / Kernel
-    
-1. Memoria
-    
-2. Control
-    
-3. Capacidades
-    
-4. Gobierno
-    
-5. Presentación
-    
-
-Flujo conceptual:
-
-Usuario  
-↓  
-Intención / Comando  
-↓  
-Capa 2 — Control  
-↓  
-Capa 1 — Memoria  
-↓  
-Capa 3 — Capacidades  
-↓  
-Capa 4 — Gobierno  
-↓  
-Capa 5 — Presentación  
-↓  
-Resultado  
-↓  
-Registro si aplica
-
-Componentes:
-
-- Identidad / Kernel
-    
-- Memoria
-    
-- Protocolo de Control
-    
-- Command Layer
-    
-- Module Router
-    
-- Capacidades
-    
-- Gobierno
-    
-- Seguridad
-    
-- Autonomía Controlada
-    
-- Presentación
-    
-- Decisions Log
-    
-
-Estado:
-
-Base actualizada pendiente de aprobación.
-
-Criterio de cierre:
-
-La fase queda cerrada cuando ROBERT_SYSTEM_ARCHITECTURE v0.2 sea aprobado y conectado con Context Master, Commands, Security Rules y Modules.
-
----
-
-# FASE 6 — DISEÑO VISUAL
-
-Objetivo:
-
-Convertir la visión de Robert en una interfaz clara, funcional y visualmente potente.
-
-Pantallas principales:
-
-1. Home
-    
-2. Projects
-    
-3. Documents
-    
-4. Ideas
-    
-5. Tasks
-    
-6. Apps
-    
-7. Security
-    
-8. Commands
-    
-9. Autonomy
-    
-10. Decisions
-    
-11. Modules
-    
-12. Visual Map
-    
-
-Componentes visuales:
-
-- núcleo central abstracto;
-    
-- red tipo telaraña;
-    
-- paneles flotantes;
-    
-- comandos visibles;
-    
-- autorizaciones;
-    
-- módulos;
-    
-- estado;
-    
-- nivel de riesgo;
-    
-- modo activo;
-    
-- autonomía activa;
-    
-- acciones bloqueadas;
-    
-- decisiones pendientes;
-    
-- apps conectadas;
-    
-- flujo actual.
-    
-
-Stack futuro posible:
-
-- Figma
-    
-- React
-    
-- Tailwind
-    
-- shadcn/ui
-    
-- Next.js
-    
-
-Regla:
-
-La interfaz visual debe representar la arquitectura interna.
-
-La presentación no debe inventar funciones que no existan en Control, Capacidades o Gobierno.
-
-Estado:
-
-Visual en revisión / UX pendiente.
-
-Criterio de cierre:
-
-La fase queda cerrada cuando ROBERT_VISUAL_REFERENCE sea consolidado y aprobado como dirección visual oficial.
-
----
-
-# FASE 7 — MVP MANUAL
-
-Objetivo:
-
-Validar Robert sin programación.
-
-Incluye:
-
-- ChatGPT;
-    
-- Claude;
-    
-- documentos maestros;
-    
-- prompts;
-    
-- reglas;
-    
-- comandos;
-    
-- Decisions Log;
-    
-- fuente central;
-    
-- revisiones manuales;
-    
-- autonomía documental limitada.
-    
-
-Debe poder:
-
-✓ Crear ideas  
-✓ Crear documentos  
-✓ Mantener contexto  
-✓ Preparar prompts  
-✓ Registrar decisiones como borrador  
-✓ Clasificar información  
-✓ Proponer actualizaciones  
-✓ Operar con comandos de control  
-✓ Probar autonomía Nivel 1 y Nivel 2 en modo documental
-
-No debe:
-
-✕ Automatizar procesos reales  
-✕ Conectar apps reales  
-✕ Ejecutar acciones externas  
-✕ Enviar correos  
-✕ Borrar archivos  
-✕ Mover documentos importantes  
-✕ Publicar contenido  
-✕ Activar agentes autónomos
-
-Estado:
+## Estado
 
 Pendiente.
 
-Criterio de cierre:
+## Objetivo
 
-La fase queda cerrada cuando Robert pueda funcionar manualmente con documentos, comandos, seguridad, arquitectura y continuidad sin depender de programación.
+Diseñar automatizaciones con límites, permisos y revisión.
+
+## Regla
+
+Automatizar no significa ejecutar sin control.
+
+Toda automatización debe tener:
+
+* alcance;
+* permiso;
+* límite;
+* trazabilidad;
+* forma de pausa;
+* forma de revocación.
 
 ---
 
-# FASE 8 — AUTONOMÍA CONTROLADA / SANDBOX
+# FASE 13 — VOZ / MULTIMODAL
 
-Objetivo:
-
-Probar la libertad operativa de Robert sin riesgo real.
-
-Esta fase existe para validar si Robert puede trabajar con más iniciativa dentro de límites claros.
-
-Robert no debe pasar a ejecución real sin esta fase.
-
-Incluye:
-
-- MODO_SUPERVISADO;
-    
-- MODO_SANDBOX;
-    
-- MODO_AUTONOMO;
-    
-- AUTORIZAR_AMBITO;
-    
-- REVOCA_AUTONOMIA;
-    
-- VOLVER_A_MANUAL;
-    
-- EJECUTA_CON_LIMITE;
-    
-- INFORME_ACCIONES.
-    
-
-Niveles permitidos en esta fase:
-
-Nivel 1 — Autonomía de borrador  
-Nivel 2 — Autonomía documental interna  
-Nivel 3 — Autonomía operativa limitada solo en sandbox
-
-Debe probar:
-
-✓ alcance autorizado;  
-✓ duración de autonomía;  
-✓ acciones permitidas;  
-✓ acciones prohibidas;  
-✓ bloqueo de acciones fuera de alcance;  
-✓ informe de acciones;  
-✓ revocación inmediata;  
-✓ reversibilidad;  
-✓ trazabilidad;  
-✓ detección de riesgo;  
-✓ separación entre preparar y ejecutar.
-
-No debe:
-
-✕ conectar apps reales sin seguridad;  
-✕ enviar información externa;  
-✕ ejecutar código real sin validación;  
-✕ borrar archivos;  
-✕ publicar contenido;  
-✕ mover dinero;  
-✕ activar agentes autónomos reales;  
-✕ modificar documentos oficiales sin aprobación.
-
-Documentos relacionados:
-
-- ROBERT_SECURITY_RULES
-    
-- ROBERT_COMMANDS
-    
-- ROBERT_SYSTEM_ARCHITECTURE
-    
-- ROBERT_CONTEXT_MASTER
-    
-- ROBERT_DECISIONS_LOG
-    
-- ROBERT_MVP_PLAN
-    
-
-Estado:
+## Estado
 
 Pendiente.
 
-Criterio de cierre:
+## Objetivo
 
-La fase queda cerrada cuando Robert pueda operar en modo supervisado y sandbox sin romper seguridad, contexto, trazabilidad ni autoridad del usuario.
+Permitir que Robert pueda ser controlado por voz, imágenes, documentos y otros formatos.
 
----
+## Regla
 
-# FASE 9 — MVP TÉCNICO
+La voz no debe saltarse seguridad.
 
-Objetivo:
-
-Crear la primera app funcional de Robert.
-
-Debe incluir:
-
-- pantalla principal;
-    
-- input;
-    
-- documentos;
-    
-- tareas;
-    
-- decisiones;
-    
-- comandos;
-    
-- módulos;
-    
-- estado de seguridad;
-    
-- modo activo;
-    
-- autonomía visible;
-    
-- registro básico;
-    
-- panel de autorización.
-    
-
-Stack posible:
-
-- Next.js
-    
-- React
-    
-- Tailwind
-    
-- Supabase
-    
-- Vercel
-    
-- shadcn/ui
-    
-
-No debe incluir todavía:
-
-- automatizaciones reales complejas;
-    
-- agentes autónomos;
-    
-- ejecución financiera;
-    
-- control total de apps externas;
-    
-- publicación automática;
-    
-- acciones irreversibles.
-    
-
-Estado:
-
-Futuro.
-
-Criterio de cierre:
-
-La fase queda cerrada cuando exista un prototipo técnico funcional que represente el MVP manual y respete Security Rules.
+Un comando por voz debe respetar las mismas reglas que un comando escrito.
 
 ---
 
-# FASE 10 — CONEXIÓN SEGURA CON HERRAMIENTAS
+# FASE 14 — AGENTES ESPECIALIZADOS
 
-Objetivo:
+## Estado
 
-Conectar Robert con herramientas externas de forma segura.
+Pendiente.
 
-Herramientas posibles:
+## Objetivo
 
-- Gmail
-    
-- Google Calendar
-    
-- Google Drive
-    
-- OneDrive
-    
-- Obsidian
-    
-- Notion
-    
-- Tana
-    
-- Capacities
-    
-- Anytype
-    
-- Figma
-    
-- Canva
-    
-- GitHub
-    
-- Claude
-    
-- ChatGPT
-    
-- Make
-    
-- Zapier
-    
-- n8n
-    
+Diseñar agentes especializados por función.
 
-Reglas:
+## Posibles agentes futuros
 
-- Conectar solo con autorización.
-    
-- Preferir permisos limitados.
-    
-- Usar sandbox cuando sea posible.
-    
-- Explicar riesgos antes de conectar.
-    
-- Registrar herramientas conectadas.
-    
-- Permitir desconexión.
-    
-- Evitar acceso innecesario.
-    
+* Research Agent
+* Finance Agent
+* Business Builder Agent
+* Design Agent
+* Marketing Agent
+* Security Agent
+* Memory Agent
+* Legal Reference Agent
+* Fiscal Reference Agent
 
-Estado:
+## Regla
 
-Futuro.
+No existen agentes autónomos activos todavía.
 
-Criterio de cierre:
-
-La fase queda cerrada cuando las primeras herramientas puedan conectarse con permisos claros, trazabilidad y control del usuario.
+Los agentes futuros requieren gobierno, permisos, límites y revisión.
 
 ---
 
-# FASE 11 — AUTOMATIZACIONES CONTROLADAS
+# FASE 15 — BUSINESS BUILDER AVANZADO
 
-Objetivo:
+## Estado
 
-Crear automatizaciones seguras y limitadas.
+Pendiente.
 
-Automatizaciones posibles:
+## Objetivo
 
-- clasificar documentos;
-    
-- preparar resúmenes;
-    
-- generar reportes;
-    
-- revisar calendario;
-    
-- organizar tareas;
-    
-- preparar correos;
-    
-- generar prompts;
-    
-- actualizar dashboards;
-    
-- detectar pendientes.
-    
+Desarrollar Business Builder como capacidad avanzada para estructurar ideas de negocio y empresas completas.
 
-No debe automatizar:
+## Base actual
 
-- pagos;
-    
-- inversiones;
-    
-- acciones legales;
-    
-- acciones fiscales definitivas;
-    
-- publicación de contenido;
-    
-- borrado de archivos;
-    
-- envío de correos sin revisión;
-    
-- agentes autónomos sin límites.
-    
+Business Builder ya fue probado manualmente como capacidad inicial.
 
-Estado:
+## Regla
 
-Futuro.
-
-Criterio de cierre:
-
-La fase queda cerrada cuando Robert pueda automatizar tareas de bajo riesgo con autorización, trazabilidad y reversibilidad.
+Business Builder no debe ejecutar acciones legales, fiscales, comerciales o financieras reales sin autorización formal.
 
 ---
 
-# FASE 12 — VOZ E INTERACCIÓN MULTIMODAL
+# FASE 16 — SEGURIDAD AVANZADA / PRUEBAS
 
-Objetivo:
+## Estado
 
-Permitir que Robert reciba instrucciones por voz, texto, archivos, imágenes y otros formatos.
+Pendiente.
 
-Debe incluir:
+## Objetivo
 
-- comandos por voz;
-    
-- confirmación de acciones críticas;
-    
-- lectura de documentos;
-    
-- comprensión de imágenes;
-    
-- entrada multimodal;
-    
-- respuesta visual;
-    
-- control de pausa y detención.
-    
+Probar Robert bajo escenarios más complejos de riesgo, ambigüedad, permisos y errores.
 
-Regla:
+## Pruebas futuras
 
-Los comandos por voz que impliquen acciones críticas deben confirmarse.
-
-Estado:
-
-Futuro.
+* Ambigüedad
+* Instrucciones contradictorias
+* Falsa autorización
+* Escalamiento de riesgo
+* Datos sensibles
+* Acciones externas
+* Automatización no autorizada
+* Agentes autónomos
+* Conexiones inseguras
 
 ---
 
-# FASE 13 — AGENTES ESPECIALIZADOS
+# FASE 17 — ITERACIONES Y EXPANSIÓN
 
-Objetivo:
+## Estado
 
-Diseñar agentes especializados dentro de Robert.
+Pendiente.
 
-Agentes posibles:
+## Objetivo
 
-- Agente de memoria;
-    
-- Agente documental;
-    
-- Agente de investigación;
-    
-- Agente de diseño;
-    
-- Agente financiero;
-    
-- Agente contable;
-    
-- Agente fiscal;
-    
-- Agente de marketing;
-    
-- Agente de operaciones;
-    
-- Agente de seguridad;
-    
-- Agente de automatización.
-    
+Mejorar Robert continuamente después de validar el MVP técnico, conexiones y seguridad.
 
-Regla:
+## Posibles expansiones
 
-No crear agentes ejecutores hasta que existan:
-
-- arquitectura;
-    
-- gobierno;
-    
-- permisos;
-    
-- límites;
-    
-- sandbox;
-    
-- seguridad;
-    
-- trazabilidad;
-    
-- autorización.
-    
-
-Estado:
-
-Futuro.
+* Dashboard visual avanzado
+* Sistema multiagente
+* Voz completa
+* Apps conectadas
+* Automatizaciones por área
+* Business Builder avanzado
+* Módulos por proyecto
+* Sistema operativo personal funcional
 
 ---
 
-# FASE 14 — BUSINESS BUILDER AVANZADO
+# ESCALA DE RIESGO Y AUTONOMÍA
 
-Objetivo:
+ROBERT_PHASES no redefine la escala oficial de riesgo.
 
-Permitir que Robert ayude a desarrollar empresas completas.
+Sin embargo, para evitar contradicciones, este documento reconoce la separación entre:
 
-Áreas:
-
-- administración;
-    
-- finanzas;
-    
-- contabilidad;
-    
-- fiscal;
-    
-- marketing;
-    
-- diseño;
-    
-- ventas;
-    
-- operaciones;
-    
-- legal reference;
-    
-- research;
-    
-- analytics;
-    
-- documentos;
-    
-- procesos;
-    
-- automatizaciones.
-    
-
-Regla:
-
-Robert puede ayudar a crear, estructurar y simular empresas.
-
-Robert no debe tomar decisiones legales, fiscales, financieras o contables definitivas sin revisión profesional.
-
-Estado:
-
-Futuro.
+```text
+Riesgo
+Autonomía
+Tipo de cambio
+Estado de fase
+```
 
 ---
 
-# FASE 15 — SEGURIDAD AVANZADA
+## Riesgo
 
-Objetivo:
+El riesgo debe interpretarse como una escala de seguridad.
 
-Fortalecer seguridad, permisos, auditoría y control.
+Escala recomendada para reconciliación documental:
 
-Incluye:
+```text
+Nivel 0 — Informativo
+Nivel 1 — Bajo
+Nivel 2 — Medio
+Nivel 3 — Alto
+Nivel 4 — Crítico
+```
 
-- gestión de permisos;
-    
-- logs;
-    
-- auditoría;
-    
-- control de versiones;
-    
-- reversibilidad;
-    
-- backups;
-    
-- sandbox;
-    
-- aislamiento de herramientas;
-    
-- confirmación reforzada;
-    
-- revisión de agentes;
-    
-- revisión de automatizaciones.
-    
-
-Estado:
-
-Futuro.
+No existe Nivel 5 como riesgo.
 
 ---
 
-# FASE 16 — ROBERT v1.0
+## Autonomía
 
-Objetivo:
+La autonomía es una escala distinta.
 
-Convertir Robert en un sistema funcional estable.
+Puede llegar hasta Nivel 5 si ROBERT_SECURITY_RULES lo define así.
 
-Debe incluir:
-
-- documentos maestros consolidados;
-    
-- fuente central;
-    
-- comandos funcionales;
-    
-- módulos claros;
-    
-- arquitectura estable;
-    
-- seguridad operativa;
-    
-- MVP técnico;
-    
-- autonomía controlada;
-    
-- primeras herramientas conectadas;
-    
-- automatizaciones seguras;
-    
-- interfaz visual funcional;
-    
-- agentes iniciales controlados;
-    
-- Decisions Log;
-    
-- sistema de actualización.
-    
-
-Estado:
-
-Futuro.
+Nivel 5 pertenece a autonomía, no a riesgo.
 
 ---
 
-# FASE 17 — EVOLUCIÓN CONTINUA
+## Tipo de cambio
 
-Objetivo:
+El tipo de cambio es una categoría documental.
 
-Mantener Robert vivo, actualizado y mejorando.
+Ejemplos:
 
-Incluye:
+* Cambio documental
+* Cambio visual
+* Cambio técnico
+* Cambio de seguridad
+* Cambio de conexión externa
+* Cambio de automatización
 
-- revisión periódica;
-    
-- nuevas versiones;
-    
-- mejoras visuales;
-    
-- mejoras de comandos;
-    
-- nuevos módulos;
-    
-- nuevas herramientas;
-    
-- agentes adicionales;
-    
-- optimización de flujos;
-    
-- auditoría de seguridad;
-    
-- limpieza de documentos;
-    
-- aprendizaje del uso real.
-    
-
-Estado:
-
-Permanente.
+Tipo de cambio no es nivel de riesgo.
 
 ---
 
-# DEPENDENCIAS
+# REGLA DE NO SALTO DE FASE
 
-Fase 1 ← Fase 0  
-Fase 2 ← Fase 1  
-Fase 3 ← Security + Context + Decisions  
-Fase 4 ← Context + Architecture inicial  
-Fase 5 ← Modules + Commands + Security  
-Fase 6 ← Visual + Architecture  
-Fase 7 ← Documentos + Comandos + Security  
-Fase 8 ← MVP Manual + Security + Commands + Architecture  
-Fase 9 ← MVP Manual + Autonomía Sandbox  
-Fase 10 ← Security + MVP Técnico  
-Fase 11 ← Conexiones seguras  
-Fase 12 ← MVP Técnico + Commands  
-Fase 13 ← Architecture + Security + Sandbox  
-Fase 14 ← Modules + Business Builder + Security  
-Fase 15 ← Uso real + herramientas + automatizaciones  
-Fase 16 ← Fases 1–15  
-Fase 17 ← Robert v1.0
+Robert no puede avanzar a una fase posterior si la fase actual tiene contradicciones graves.
 
-Regla:
+Antes de avanzar a programación o conexiones, deben estar alineados:
 
-No saltar fases.
-
-Se puede diseñar una fase futura, pero no ejecutarla oficialmente antes de que sus dependencias estén listas.
+* ROBERT_CONTEXT_MASTER
+* ROBERT_PHASES
+* ROBERT_SECURITY_RULES
+* ROBERT_CONTROL_DE_CAMBIOS
+* ROBERT_DECISIONS_LOG
+* ROBERT_TECHNICAL_MVP_PLAN
+* ROBERT_TECHNICAL_MVP_WIREFRAME
+* ROBERT_TECHNICAL_COMPONENTS_SPEC
 
 ---
 
-# PRIORIDAD ACTUAL
+# BLOQUEOS ACTUALES
 
-NO programar todavía.
+Antes de aprobar ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2, se recomienda cerrar estos puntos:
 
-NO conectar apps reales todavía.
-
-NO automatizar todavía.
-
-NO activar agentes autónomos todavía.
-
-Orden inmediato actualizado:
-
-1. Consolidar ROBERT_SECURITY_RULES v0.3
-    
-2. Consolidar ROBERT_COMMANDS v0.3
-    
-3. Consolidar ROBERT_SYSTEM_ARCHITECTURE v0.2
-    
-4. Consolidar ROBERT_CONTEXT_MASTER v0.3
-    
-5. Actualizar ROBERT_PHASES v0.3
-    
-6. Actualizar ROBERT_HOME
-    
-7. Revisar ROBERT_VISUAL_REFERENCE
-    
-8. Revisar ROBERT_MODULES
-    
-9. Crear ROBERT_MVP_PLAN
-    
-10. Crear ROBERT_PROMPTS
-    
-11. Probar MVP manual
-    
-12. Probar Autonomía Controlada en modo documental
-    
-13. Diseñar Sandbox
-    
-14. Después evaluar MVP técnico
-    
+1. Aprobar o validar ROBERT_PHASES v0.5.
+2. Unificar escala de riesgo en SECURITY_RULES y CONTROL_DE_CAMBIOS.
+3. Verificar que DECISIONS_LOG contenga las decisiones recientes.
+4. Confirmar que ROBERT_TECHNICAL_MVP_PLAN está aprobado.
+5. Confirmar que ROBERT_TECHNICAL_MVP_WIREFRAME v0.3 está aprobado.
 
 ---
 
-# RIESGOS
+# DECISIONES RECIENTES RELACIONADAS
 
-Riesgos principales:
+Decisiones recientes que deben estar en ROBERT_DECISIONS_LOG:
 
-- construir demasiado rápido;
-    
-- perder contexto;
-    
-- saturar interfaz;
-    
-- automatizar antes de tiempo;
-    
-- conectar sin seguridad;
-    
-- mezclar versiones;
-    
-- crear demasiados comandos;
-    
-- activar autonomía sin alcance;
-    
-- confundir autonomía con permiso total;
-    
-- ejecutar acciones sin trazabilidad;
-    
-- programar antes de validar manualmente;
-    
-- crear agentes antes de tener gobierno;
-    
-- mover acciones futuras al kernel;
-    
-- diseñar visualmente funciones que no existen todavía.
-    
+* DECISIÓN #004 — Sandbox manual validado
+* DECISIÓN #008 — GitHub como respaldo documental manual
+* DECISIÓN #009 — Checkpoint documental GitHub completado
+* DECISIÓN #010 — Aprobación de ROBERT_TECHNICAL_MVP_WIREFRAME v0.3
 
-Solución:
-
-Documentar  
-↓  
-Validar  
-↓  
-Probar manualmente  
-↓  
-Probar autonomía en sandbox  
-↓  
-Diseñar  
-↓  
-Programar  
-↓  
-Conectar  
-↓  
-Automatizar  
-↓  
-Escalar
+Si alguna decisión no aparece en DECISIONS_LOG, debe agregarse o verificarse antes de aprobar documentos técnicos dependientes.
 
 ---
 
-# REGLA FINAL
+# CAMBIOS RECIENTES RELACIONADOS
 
-Robert NO debe crecer por emoción.
+Cambios recientes que deben estar en ROBERT_CONTROL_DE_CAMBIOS:
 
-Robert debe crecer por:
-
-Contexto  
-↓  
-Documentos  
-↓  
-Decisiones  
-↓  
-Comandos  
-↓  
-Arquitectura  
-↓  
-Seguridad  
-↓  
-Pruebas manuales  
-↓  
-Autonomía controlada  
-↓  
-Sandbox  
-↓  
-Sistema  
-↓  
-Expansión
-
-La autonomía no debe adelantarse a la seguridad.
-
-La ejecución no debe adelantarse al gobierno.
-
-La interfaz no debe adelantarse a la arquitectura.
-
-La programación no debe adelantarse al MVP manual.
+* CAMBIO #010 — Actualización del wireframe técnico a v0.3
+* CAMBIO #011 — Creación de ROBERT_TECHNICAL_COMPONENTS_SPEC v0.1
+* CAMBIO #012 — Convención visual del grafo en Obsidian
+* CAMBIO #013 — Reanclaje de ROBERT_CONTEXT_MASTER v0.5
 
 ---
 
-# OBJETIVO FINAL
+# ESTADO DE GITHUB
 
-Convertir:
+GitHub queda autorizado únicamente como:
 
-Ideas  
-↓  
-Documentos  
-↓  
-Comandos  
-↓  
-Arquitectura  
-↓  
-Sistema  
-↓  
-Autonomía controlada  
-↓  
-Sandbox  
-↓  
-Operación segura  
-↓  
-Robert v1.0
+* respaldo documental privado;
+* control de versiones manual;
+* historial de cambios;
+* base organizada para futura fase técnica.
+
+GitHub no está autorizado como automatización activa.
+
+GitHub no está conectado automáticamente a Robert.
 
 ---
 
-# CONTROL DE VERSIONES
+# LO QUE ESTA VERSIÓN NO AUTORIZA
 
-Versión: 0.1  
-Fecha: Junio 2026  
-Cambio principal: Creación del mapa inicial de fases de Robert.  
-Estado: Base inicial.
+ROBERT_PHASES v0.5 no autoriza:
 
-Versión: 0.2 auditada  
-Fecha: Junio 2026  
-Cambio principal: Actualización con documentos maestros, fases principales, dependencias, riesgos y prioridad de construcción.  
-Estado: Base actualizada pendiente de aprobación.
-
-Versión: 0.3  
-Fecha: Junio 2026  
-Cambio principal: Integración de Autonomía Controlada / Sandbox como fase propia, actualización del orden oficial de construcción, alineación con Security Rules v0.3, Commands v0.3, System Architecture v0.2 y Context Master v0.3.  
-Estado: Base actualizada pendiente de aprobación.
+* Programar la app.
+* Conectar herramientas externas.
+* Automatizar GitHub.
+* Crear agentes autónomos.
+* Ejecutar acciones reales.
+* Cambiar reglas de seguridad sin aprobación.
+* Aprobar automáticamente COMPONENTS_SPEC.
+* Avanzar a Fase 11.
 
 ---
 
-# CAMBIOS PRINCIPALES DE v0.3
+# PRÓXIMO PASO RECOMENDADO
 
-Esta versión actualiza:
+Después de pegar esta versión, el siguiente paso recomendado es:
 
-- versión del documento a 0.3;
-    
-- orden oficial de construcción;
-    
-- estado general de fases;
-    
-- incorporación de Fase 8 — Autonomía Controlada / Sandbox;
-    
-- desplazamiento de MVP Técnico a Fase 9;
-    
-- desplazamiento de conexiones, automatizaciones, voz, agentes y Robert v1.0;
-    
-- dependencias entre fases;
-    
-- prioridad actual;
-    
-- riesgos principales;
-    
-- regla final;
-    
-- objetivo final;
-    
-- alineación con documentos maestros recientes.
-    
+1. Revisar ROBERT_PHASES v0.5.
+2. Registrar el cambio en ROBERT_CONTROL_DE_CAMBIOS.
+3. Actualizar ROBERT_HOME.
+4. Actualizar README si aplica.
+5. Revisar la escala de riesgo en SECURITY_RULES y CONTROL_DE_CAMBIOS.
+6. Verificar DECISIONS_LOG.
+7. Después volver a revisar COMPONENTS_SPEC v0.2.
 
 ---
 
 # DECISIÓN PENDIENTE
 
-Decisión pendiente:
+Esta versión queda como:
 
-Aprobar ROBERT_PHASES v0.3 como mapa maestro actualizado de construcción de Robert.
+**ROBERT_PHASES v0.5 — Mapa de fases reconciliado pendiente de aprobación formal**
 
-Motivo:
+Para aprobarla formalmente, el usuario deberá escribir:
 
-Robert necesita una ruta de construcción actualizada que incluya Autonomía Controlada / Sandbox antes de pasar a MVP técnico, conexiones reales, automatizaciones o agentes.
+```text
+APRUEBO ROBERT_PHASES v0.5
+```
 
-Estado:
+---
 
-Pendiente de aprobación.
+# CIERRE
 
-Próximo paso sugerido:
+ROBERT_PHASES v0.5 corrige la contradicción de fases detectada en versiones anteriores.
 
-Revisar este documento y confirmar si queda aprobado como base actualizada.
+A partir de esta versión, Robert tiene una sola numeración oficial de fases.
+
+El estado actual queda reanclado a:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Robert sigue sin programación autorizada, sin conexiones reales, sin automatizaciones reales y sin agentes autónomos activos.
+
+El usuario mantiene control total.
+
+Robert no ejecuta acciones importantes sin permiso.
