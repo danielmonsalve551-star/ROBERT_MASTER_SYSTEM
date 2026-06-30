@@ -1351,3 +1351,110 @@ Robert no ejecuta acciones importantes sin permiso.
 
 ---
 
+---
+
+# ACTUALIZACIÓN — COMPONENTS SPEC CREADO
+
+Fecha: 29/06/2026
+Estado: Borrador técnico creado — pendiente de revisión
+Cambio relacionado: CAMBIO #011 — Creación de ROBERT_TECHNICAL_COMPONENTS_SPEC v0.1
+
+---
+
+## Nuevo documento creado
+
+Se creó el documento:
+
+**ROBERT_TECHNICAL_COMPONENTS_SPEC v0.1**
+
+Ubicación:
+
+**10_MVP / ROBERT_TECHNICAL_COMPONENTS_SPEC.md**
+
+---
+
+## Función del documento
+
+Este documento convierte el wireframe técnico v0.3 de Robert en una primera especificación de componentes técnicos.
+
+Define de forma inicial:
+
+* Componentes principales del MVP
+* Modos operativos
+* Estados del sistema
+* RiskBadge
+* ApprovalGate
+* DecisionInbox
+* DocumentStatusMap
+* CurrentStatePanel
+* HistoryLog
+* SandboxPanel
+* Flujos principales del MVP
+* Criterios de aceptación
+* Criterios de seguridad
+
+---
+
+## Estado actual
+
+ROBERT_TECHNICAL_COMPONENTS_SPEC v0.1 queda como:
+
+**Borrador técnico inicial pendiente de revisión**
+
+No está aprobado todavía.
+
+---
+
+## Alcance
+
+Este documento prepara la futura construcción técnica, pero no la autoriza.
+
+No autoriza:
+
+* Programar la app
+* Conectar APIs reales
+* Conectar GitHub automáticamente
+* Conectar Gmail
+* Conectar Google Calendar
+* Automatizar acciones reales
+* Activar agentes autónomos
+
+---
+
+## Estado actualizado de Robert
+
+Robert se mantiene en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Estado operativo:
+
+* MVP manual validado
+* Sandbox manual validado
+* GitHub configurado como respaldo documental privado
+* ROBERT_TECHNICAL_MVP_PLAN aprobado
+* ROBERT_TECHNICAL_MVP_WIREFRAME v0.3 aprobado
+* ROBERT_TECHNICAL_COMPONENTS_SPEC v0.1 creado como borrador
+* Sin programación autorizada todavía
+* Sin conexiones reales
+* Sin automatizaciones reales
+
+---
+
+## Próximo punto pendiente
+
+Revisar y decidir si se aprueba:
+
+**ROBERT_TECHNICAL_COMPONENTS_SPEC v0.1**
+
+Opciones disponibles:
+
+* Revisar
+* Corregir
+* Aprobar formalmente
+* Pausar
+* Archivar
+
+---
+
+
