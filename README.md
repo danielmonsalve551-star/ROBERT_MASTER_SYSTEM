@@ -8,6 +8,8 @@ Este repositorio funciona como respaldo documental, control de versiones y base 
 
 Robert se encuentra en:
 
+* ROBERT_TECHNICAL_COMPONENTS_SPEC v0.1 creado como borrador técnico inicial pendiente de revisión
+
 **Fase 10 — MVP técnico básico en preparación**
 
 Estado operativo:
@@ -23,6 +25,20 @@ Estado operativo:
 * Sin programación autorizada todavía
 * Sin conexiones reales
 * Sin automatizaciones reales
+
+## Documento técnico más reciente
+
+Se creó:
+
+**ROBERT_TECHNICAL_COMPONENTS_SPEC v0.1**
+
+Estado:
+
+**Borrador técnico inicial pendiente de revisión**
+
+Este documento define los componentes técnicos iniciales del MVP básico de Robert, tomando como base el wireframe técnico v0.3 aprobado.
+
+No autoriza programación, conexiones reales ni automatizaciones.
 
 ## Regla central
 
