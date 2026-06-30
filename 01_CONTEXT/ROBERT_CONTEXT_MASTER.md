@@ -1,8 +1,8 @@
 ROBERT_CONTEXT_MASTER
 
-Versión: 0.4  
-Estado: Contexto maestro actualizado post-sandbox manual  
-Última actualización: 26/06/2026
+Versión: 0.5  
+Estado: Contexto maestro reanclado al estado actual del proyecto  
+Última actualización: 30/06/2026
 
 Uso principal:  
 Servir como contexto base para ChatGPT, Claude, Obsidian, la bóveda documental de Robert y futuras herramientas de IA, manteniendo clara la identidad, propósito, estructura, documentos, comandos, reglas, fases, decisiones, autonomía controlada y estado actual del proyecto.
@@ -66,6 +66,20 @@ Ejemplos:
 - Los módulos completos van en ROBERT_MODULES.
     
 - La arquitectura interna completa va en ROBERT_SYSTEM_ARCHITECTURE.
+
+Tags: #robert/orbita-1 #capa/0 #tipo/maestro
+
+---
+
+# ENLACES DE CONTEXTO
+
+ROBERT_CONTEXT_MASTER funciona como centro conceptual de identidad, memoria base y estado general del Proyecto Robert.
+
+Enlaces relacionados:
+
+- [[ROBERT_HOME]]
+- [[ROBERT_COMMANDS]]
+- [[ROBERT_SECURITY_RULES]]
     
 
 ---
@@ -650,82 +664,153 @@ En el futuro, Robert podrá ejecutar, pero solo cuando existan:
 
 ---
 
-13. DOCUMENTOS MAESTROS DE ROBERT
-    
+13. DOCUMENTOS PRINCIPALES DE ROBERT
 
-Los documentos maestros actuales o previstos son:
 
-1. ROBERT_HOME
-    
-2. ROBERT_CONTEXT_MASTER
-    
-3. ROBERT_COMMANDS
-    
-4. ROBERT_VISUAL_REFERENCE
-    
-5. ROBERT_MODULES
-    
-6. ROBERT_SECURITY_RULES
-    
-7. ROBERT_PHASES
-    
-8. ROBERT_DECISIONS_LOG
-    
-9. ROBERT_SYSTEM_ARCHITECTURE
-    
-10. ROBERT_MVP_PLAN
-    
-11. ROBERT_PROMPTS
-    
+Los documentos principales actuales de Robert se organizan por función.
+
+## Núcleo documental
+
+1. ROBERT_HOME  
+   Página principal, centro visual de navegación y estado general.
+
+2. ROBERT_CONTEXT_MASTER  
+   Contexto maestro, identidad, propósito, estado actual y fuente conceptual del sistema.
+
+3. ROBERT_COMMANDS  
+   Catálogo de comandos, comandos activos, comandos en prueba y reglas de uso.
+
+4. ROBERT_DECISIONS_LOG  
+   Registro oficial de decisiones aprobadas, pendientes, reemplazadas o pausadas.
+
+5. ROBERT_SECURITY_RULES  
+   Reglas de seguridad, autorización, límites, niveles de riesgo y control del usuario.
+
+6. ROBERT_CONTROL_DE_CAMBIOS  
+   Registro de cambios, versiones, dependencias, conflictos y modificaciones documentales.
+
+7. ROBERT_PHASES  
+   Ruta oficial de construcción por fases.
+
+8. ROBERT_MODULES  
+   Catálogo de capacidades funcionales del sistema.
+
+9. ROBERT_SYSTEM_ARCHITECTURE  
+   Arquitectura conceptual del sistema por capas.
+
+10. ROBERT_VISUAL  
+   Referencia visual, experiencia deseada, convención visual de Obsidian y dirección de interfaz.
+
+11. ROBERT_PROMPTS  
+   Prompts oficiales y plantillas para operar Robert con ChatGPT, Claude y futuras herramientas.
+
+## MVP y sandbox
+
+12. ROBERT_MVP_PLAN  
+    Plan del MVP manual, sandbox manual y transición al MVP técnico.
+
+13. ROBERT_TECHNICAL_MVP_PLAN  
+    Plan técnico básico del MVP.
+
+14. ROBERT_TECHNICAL_MVP_WIREFRAME  
+    Wireframe técnico oficial del MVP básico.
+
+15. ROBERT_TECHNICAL_COMPONENTS_SPEC  
+    Especificación técnica de componentes, actualmente en revisión.
+
+16. ROBERT_TECHNICAL_COMPONENTS_SPEC_v0.2_PROPUESTA  
+    Propuesta corregida pendiente de revisión.
+
+17. ROBERT_SANDBOX  
+    Documento base del sandbox manual.
+
+18. SANDBOX_RULES  
+    Reglas del sandbox.
+
+19. SANDBOX_TESTS  
+    Pruebas del sandbox.
+
+20. SANDBOX_RESULTS  
+    Resultados del sandbox.
+
 
 ---
 
 14. ESTADO ACTUAL DE DOCUMENTOS
-    
+
+
+Este estado reemplaza la lista anterior que marcaba algunos documentos como no creados.
+
+## Documentos base
 
 ROBERT_HOME  
-Versión actual: v0.2 auditado  
-Estado: Aprobado oficialmente
+Estado: Actualizado post-GitHub, wireframe v0.3 y convención visual de Obsidian.
 
 ROBERT_CONTEXT_MASTER  
-Versión actual: v0.3  
-Estado: Base actualizada pendiente de aprobación
+Versión actual: v0.5  
+Estado: Reanclado al estado actual del proyecto — pendiente de aprobación formal si el usuario lo requiere.
 
 ROBERT_COMMANDS  
-Versión actual: v0.3  
-Estado: Base actualizada pendiente de aprobación
-
-ROBERT_VISUAL_REFERENCE  
-Versión actual: En revisión visual  
-Estado: Borrador visual / pendiente de consolidación
-
-ROBERT_MODULES  
-Versión actual: v0.1  
-Estado: Aprobado como estructura inicial
-
-ROBERT_SECURITY_RULES  
-Versión actual: v0.3  
-Estado: Base actualizada pendiente de aprobación
-
-ROBERT_PHASES  
-Versión actual: v0.2 auditado  
-Estado: Aprobado oficialmente
+Estado: Documento maestro activo. Debe mantenerse alineado con SECURITY_RULES y CONTEXT_MASTER.
 
 ROBERT_DECISIONS_LOG  
-Versión actual: v0.1 auditado  
-Estado: Aprobado oficialmente
+Estado: Documento oficial activo. Incluye decisiones recientes sobre GitHub, checkpoint documental y wireframe v0.3.
+
+ROBERT_SECURITY_RULES  
+Estado: Documento de máxima prioridad. Toda acción sensible debe respetarlo.
+
+ROBERT_CONTROL_DE_CAMBIOS  
+Estado: Registro activo de cambios. Incluye cambios recientes del wireframe, components spec y convención visual de Obsidian.
+
+ROBERT_PHASES  
+Estado: Documento de fases activo. La fase operativa actual es Fase 10 — MVP técnico básico en preparación.
+
+ROBERT_MODULES  
+Estado: Estructura inicial aprobada y usada como referencia de capacidades.
 
 ROBERT_SYSTEM_ARCHITECTURE  
-Versión actual: v0.2  
-Estado: Base actualizada pendiente de aprobación
+Estado: Arquitectura conceptual de referencia. Mantiene las 6 capas del sistema.
 
-ROBERT_MVP_PLAN  
-Versión actual: Pendiente  
-Estado: No creado
+ROBERT_VISUAL  
+Estado: Actualizado con convención visual validada para Obsidian Graph View.
 
 ROBERT_PROMPTS  
-Versión actual: Pendiente  
-Estado: No creado
+Estado: Documento creado y activo como apoyo operativo.
+
+## Documentos MVP
+
+ROBERT_MVP_PLAN  
+Estado: Creado y activo como base del MVP manual, sandbox manual y transición técnica.
+
+ROBERT_TECHNICAL_MVP_PLAN  
+Estado: Aprobado como base del MVP técnico básico.
+
+ROBERT_TECHNICAL_MVP_WIREFRAME  
+Versión actual: v0.3  
+Estado: Aprobado como wireframe técnico oficial actualizado.
+
+ROBERT_TECHNICAL_COMPONENTS_SPEC  
+Versión actual: v0.1  
+Estado: Borrador técnico inicial creado — no aprobado.
+
+ROBERT_TECHNICAL_COMPONENTS_SPEC_v0.2_PROPUESTA  
+Versión actual: v0.2  
+Estado: Propuesta corregida pendiente de revisión.
+
+## Sandbox
+
+ROBERT_SANDBOX  
+Estado: Validado documentalmente como sandbox manual.
+
+SANDBOX_RULES  
+Estado: Documento de reglas sandbox creado.
+
+SANDBOX_TESTS  
+Estado: Documento de pruebas sandbox creado.
+
+SANDBOX_RESULTS  
+Estado: Documento de resultados sandbox creado.
+
 
 ---
 
@@ -908,130 +993,201 @@ Robert debe operar bajo estas reglas de seguridad:
 ---
 
 17. PRIORIDAD ENTRE DOCUMENTOS
-    
 
-Si existe conflicto entre documentos, el orden de prioridad será:
+
+Si existe conflicto entre documentos, el orden canónico de prioridad será:
 
 1. ROBERT_SECURITY_RULES
-    
+
 2. ROBERT_CONTEXT_MASTER
-    
+
 3. ROBERT_COMMANDS
-    
+
 4. ROBERT_DECISIONS_LOG
-    
+
 5. ROBERT_PHASES
-    
+
 6. ROBERT_HOME
-    
+
 7. ROBERT_MODULES
-    
+
 8. ROBERT_SYSTEM_ARCHITECTURE
-    
-9. ROBERT_VISUAL_REFERENCE
-    
+
+9. ROBERT_VISUAL
+
 10. ROBERT_PROMPTS
-    
+
 11. ROBERT_MVP_PLAN
-    
-12. Documentos secundarios
-    
-13. Borradores
-    
-14. Notas temporales
-    
+
+12. Documentos técnicos del MVP
+
+13. Documentos secundarios
+
+14. Borradores
+
+15. Notas temporales
+
 
 La seguridad siempre tiene prioridad sobre diseño, velocidad, automatización, autonomía o conveniencia.
+
+## Nota sobre ROBERT_CONTROL_DE_CAMBIOS
+
+ROBERT_CONTROL_DE_CAMBIOS no reemplaza a ROBERT_CONTEXT_MASTER como fuente central de verdad.
+
+ROBERT_CONTROL_DE_CAMBIOS no reemplaza a ROBERT_SECURITY_RULES como máxima autoridad de seguridad.
+
+ROBERT_CONTROL_DE_CAMBIOS funciona como registro oficial de cambios, versiones, dependencias y conflictos.
+
+Cuando un documento técnico cite cambios, debe apoyarse en ROBERT_CONTROL_DE_CAMBIOS, pero no debe alterar la jerarquía canónica de prioridad.
+
 
 ---
 
 18. ESTADO ACTUAL DEL PROYECTO
-    
 
-Robert está en fase de construcción documental inicial avanzada.
 
-La prioridad actual es consolidar documentos maestros antes de programar, conectar apps o activar automatizaciones reales.
+Robert se encuentra actualmente en:
 
-Ya existen bases importantes para:
+**Fase 10 — MVP técnico básico en preparación**
 
-- contexto maestro;
-    
-- comandos;
-    
-- decisiones;
-    
-- fases;
-    
-- seguridad;
-    
-- módulos;
-    
-- arquitectura conceptual;
-    
-- autonomía controlada;
-    
-- dirección visual en desarrollo.
-    
+Este estado se declara porque Robert ya completó y validó documentalmente el MVP manual y el sandbox manual, y ya cuenta con documentos técnicos iniciales para preparar el MVP básico.
 
-No se deben conectar apps reales todavía.
+## Estado operativo actual
 
-No se deben crear automatizaciones reales todavía.
+Robert cuenta con:
 
-No se deben activar agentes autónomos todavía.
+- MVP manual validado;
 
-No se deben ejecutar acciones externas sin alcance autorizado.
+- Sandbox manual validado;
 
-Primero debe existir una base documental clara, segura, versionada y coherente.
+- GitHub configurado como respaldo documental privado y manual;
+
+- checkpoint documental en GitHub completado;
+
+- ROBERT_HOME actualizado;
+
+- ROBERT_TECHNICAL_MVP_PLAN aprobado;
+
+- ROBERT_TECHNICAL_MVP_WIREFRAME v0.3 aprobado como wireframe oficial;
+
+- ROBERT_TECHNICAL_COMPONENTS_SPEC v0.1 creado como borrador técnico inicial;
+
+- ROBERT_TECHNICAL_COMPONENTS_SPEC_v0.2_PROPUESTA en revisión;
+
+- convención visual de Obsidian validada;
+
+- README actualizado;
+
+- documentos sandbox creados y organizados;
+
+- estructura documental respaldada manualmente en GitHub.
+
+
+## Estado no autorizado
+
+Robert todavía no tiene autorización para:
+
+- programar la app;
+
+- conectar APIs reales;
+
+- conectar GitHub automáticamente;
+
+- conectar Gmail;
+
+- conectar Google Calendar;
+
+- automatizar acciones reales;
+
+- activar agentes autónomos;
+
+- ejecutar acciones externas;
+
+- tomar decisiones legales, fiscales, contables o financieras definitivas.
+
+
+## Prioridad actual
+
+La prioridad actual es corregir y revisar:
+
+**ROBERT_TECHNICAL_COMPONENTS_SPEC_v0.2_PROPUESTA**
+
+antes de aprobar la especificación técnica de componentes o avanzar hacia modelos de datos.
+
 
 ---
 
 19. DECISIONES PRINCIPALES REGISTRADAS O EN PROCESO
-    
+
 
 Las decisiones principales del proyecto son:
 
 1. El proyecto se llama Robert.
-    
+
 2. Robert es un sistema operativo personal de IA.
-    
+
 3. Robert funcionará como AI Command Center.
-    
+
 4. La bóveda documental será fuente central de verdad.
-    
+
 5. Obsidian está en prueba como bóveda documental inicial.
-    
+
 6. Obsidian no es herramienta final obligatoria todavía.
-    
+
 7. Robert tendrá una interfaz visual tipo Command Center.
-    
+
 8. Robert será modular.
-    
+
 9. Robert no debe avanzar ni ejecutar acciones importantes fuera de autorización.
-    
+
 10. Robert se construirá por fases.
-    
+
 11. ChatGPT y Claude serán herramientas conectadas al sistema Robert.
-    
+
 12. Claude no reemplaza a Robert.
-    
+
 13. ChatGPT no reemplaza a Robert.
-    
+
 14. Los comandos RESUMEN, CONCLUSION y CONCLUCION son comandos base.
-    
+
 15. Robert tendrá Autonomía Controlada.
-    
+
 16. Robert será copiloto ahora y ejecutor controlado después.
-    
+
 17. La acción ejecutada no pertenece al propósito raíz; pertenece a Capa 3 — Capacidades como evolución futura.
-    
-18. ROBERT_SECURITY_RULES v0.3 integra Autonomía Controlada.
-    
-19. ROBERT_COMMANDS v0.3 integra comandos de autonomía.
-    
-20. ROBERT_SYSTEM_ARCHITECTURE v0.2 integra autonomía en Control, Capacidades y Gobierno.
-    
-21. La prioridad actual es mantener coherencia entre documentos antes de programar o automatizar.
-    
+
+18. La prioridad actual es mantener coherencia entre documentos antes de programar o automatizar.
+
+
+## Decisiones recientes relevantes
+
+- DECISIÓN #004 — Sandbox manual validado.
+
+- DECISIÓN #008 — GitHub como respaldo documental manual.
+
+- DECISIÓN #009 — Checkpoint documental GitHub completado.
+
+- DECISIÓN #010 — Aprobación de ROBERT_TECHNICAL_MVP_WIREFRAME v0.3.
+
+
+## Cambios recientes relevantes
+
+- CAMBIO #010 — Actualización del wireframe técnico a v0.3.
+
+- CAMBIO #011 — Creación de ROBERT_TECHNICAL_COMPONENTS_SPEC v0.1.
+
+- CAMBIO #012 — Convención visual del grafo en Obsidian.
+
+
+## Decisiones pendientes
+
+- Revisar y decidir si se aprueba ROBERT_TECHNICAL_COMPONENTS_SPEC_v0.2_PROPUESTA.
+
+- No crear ROBERT_TECHNICAL_DATA_MODEL_SPEC hasta cerrar la especificación de componentes.
+
+- No iniciar programación hasta que el usuario lo autorice formalmente.
+
+
 
 ---
 
@@ -1413,7 +1569,7 @@ Esos elementos deben ir en otros documentos.
 ---
 
 28. CONTROL DE VERSIONES
-    
+
 
 Versión: 0.1  
 Fecha: 19/06/2026  
@@ -1430,109 +1586,163 @@ Fecha: Junio 2026
 Cambio principal: Actualización con propósito raíz corregido, separación de acciones fuera del kernel, integración de Autonomía Controlada, relación con Security Rules v0.3, Commands v0.3 y System Architecture v0.2.  
 Estado: Base actualizada pendiente de aprobación.
 
+Versión: 0.4  
+Fecha: 26/06/2026  
+Cambio principal: Actualización post-sandbox manual. Registro de MVP manual y sandbox manual completados y validados documentalmente.  
+Estado: Contexto maestro actualizado post-sandbox manual.
+
+Versión: 0.5  
+Fecha: 30/06/2026  
+Cambio principal: Reanclaje del estado actual post-GitHub, wireframe v0.3, convención visual de Obsidian y revisión de Components Spec.  
+Estado: Contexto maestro reanclado al estado actual del proyecto.
+
+
 ---
 
-29. CAMBIOS PRINCIPALES DE v0.3
-    
+29. CAMBIOS PRINCIPALES DE v0.5
 
-La versión 0.3 agrega o refuerza:
 
-- propósito raíz corregido;
-    
-- separación entre propósito raíz y acciones futuras;
-    
-- definición de acciones autorizadas como capacidad futura;
-    
-- autonomía controlada;
-    
-- estado actualizado de ROBERT_SECURITY_RULES v0.3;
-    
-- estado actualizado de ROBERT_COMMANDS v0.3;
-    
-- estado actualizado de ROBERT_SYSTEM_ARCHITECTURE v0.2;
-    
-- comandos de autonomía;
-    
-- modos operativos;
-    
-- prioridad entre documentos actualizada;
-    
-- relación con Claude sobre kernel y acciones;
-    
-- estado actual del proyecto;
-    
-- reglas actualizadas sobre lo que Robert puede y no puede hacer todavía.
-    
+La versión 0.5 agrega o corrige:
+
+- reanclaje del estado actual del proyecto;
+
+- declaración de Fase 10 — MVP técnico básico en preparación;
+
+- actualización del estado real de documentos creados;
+
+- integración de GitHub como respaldo documental manual;
+
+- integración del checkpoint documental de GitHub;
+
+- integración del wireframe técnico v0.3 aprobado;
+
+- integración de ROBERT_TECHNICAL_COMPONENTS_SPEC v0.1 como borrador;
+
+- integración de ROBERT_TECHNICAL_COMPONENTS_SPEC_v0.2_PROPUESTA como propuesta en revisión;
+
+- integración de la convención visual de Obsidian validada;
+
+- corrección de la lista de documentos que antes marcaba ROBERT_MVP_PLAN y ROBERT_PROMPTS como no creados;
+
+- mantenimiento del orden canónico de prioridad documental;
+
+- aclaración del rol de ROBERT_CONTROL_DE_CAMBIOS como registro de cambios, no como fuente superior a CONTEXT_MASTER;
+
+- bloqueo de avance a DATA_MODEL_SPEC hasta corregir Components Spec.
+
+
 
 ---
 
 30. ESTADO DE ESTE DOCUMENTO
-    
+
 
 Estado actual:
 
-Post-sandbox manual.
+**Contexto maestro reanclado al estado actual del proyecto.**
 
-MVP manual completado.
-Sandbox manual completado.
-Sandbox manual validado documentalmente.
+Este documento refleja que Robert ya superó la etapa post-sandbox manual y se encuentra en preparación del MVP técnico básico.
 
-Siguiente fase pendiente:
+## Estado operativo reflejado
 
-Preparar ROBERT_TECHNICAL_MVP_PLAN.
+- MVP manual completado y validado.
+
+- Sandbox manual completado y validado.
+
+- GitHub configurado como respaldo documental privado y manual.
+
+- Wireframe técnico v0.3 aprobado.
+
+- Convención visual de Obsidian validada.
+
+- Components Spec v0.1 creado como borrador.
+
+- Components Spec v0.2 propuesta en revisión.
+
+- Sin programación autorizada.
+
+- Sin conexiones reales.
+
+- Sin automatizaciones reales.
+
+
+## Siguiente paso pendiente
+
+Corregir, revisar y decidir sobre:
+
+**ROBERT_TECHNICAL_COMPONENTS_SPEC_v0.2_PROPUESTA**
+
+No se debe avanzar a ROBERT_TECHNICAL_DATA_MODEL_SPEC hasta cerrar la especificación de componentes.
 
 Este documento puede:
 
 - revisarse;
-    
+
 - corregirse;
-    
+
 - ampliarse;
-    
-- convertirse en v0.4;
-    
+
 - conectarse con ROBERT_HOME;
-    
+
 - conectarse con ROBERT_COMMANDS;
-    
+
 - conectarse con ROBERT_DECISIONS_LOG;
-    
+
 - conectarse con ROBERT_PHASES;
-    
+
 - conectarse con ROBERT_SECURITY_RULES;
-    
+
 - conectarse con ROBERT_SYSTEM_ARCHITECTURE;
-    
-- usarse como contexto maestro para ChatGPT, Claude y Obsidian.
-    
+
+- usarse como contexto maestro para ChatGPT, Claude, Obsidian y GitHub documental.
+
+
 
 ---
 
 31. DECISIÓN PENDIENTE
-    
+
 
 Decisión pendiente:
 
-Aprobar ROBERT_CONTEXT_MASTER v0.3 como contexto maestro actualizado de Robert.
+Aprobar o corregir **ROBERT_CONTEXT_MASTER v0.5** como contexto maestro reanclado al estado actual del Proyecto Robert.
 
 Motivo:
 
-Robert necesita una fuente central de contexto que refleje el propósito raíz corregido, la separación entre kernel y acciones futuras, los documentos actualizados, comandos, decisiones, reglas, fases, arquitectura y autonomía controlada.
+Robert necesita una fuente central de contexto que refleje correctamente:
+
+- el estado post-sandbox manual;
+
+- GitHub como respaldo documental manual;
+
+- el wireframe técnico v0.3 aprobado;
+
+- la convención visual de Obsidian validada;
+
+- la existencia de Components Spec v0.1;
+
+- la revisión pendiente de Components Spec v0.2;
+
+- la regla de no programar todavía;
+
+- la regla de no conectar herramientas reales todavía.
+
 
 Estado:
 
-Pendiente de aprobación.
+Pendiente de aprobación formal del usuario si se requiere cerrar versión.
 
 Próximo paso sugerido:
 
-Revisar este documento y confirmar si queda aprobado como base actualizada.
+Revisar este documento y confirmar si queda aprobado como contexto maestro v0.5.
+
 
 ---
 
 32. RESUMEN EJECUTIVO
-    
 
-ROBERT_CONTEXT_MASTER v0.3 define el contexto maestro actualizado de Robert.
+
+ROBERT_CONTEXT_MASTER v0.5 define el contexto maestro reanclado de Robert.
 
 Robert queda definido como un sistema operativo personal de inteligencia artificial tipo AI Command Center.
 
@@ -1547,33 +1757,42 @@ Robert no es solo un chatbot, una bóveda, una app o una automatización.
 Robert conecta:
 
 - contexto;
-    
+
 - memoria;
-    
+
 - documentos;
-    
+
 - comandos;
-    
+
 - decisiones;
-    
+
 - herramientas;
-    
+
 - módulos;
-    
+
 - agentes futuros;
-    
+
 - autonomía controlada;
-    
+
 - automatizaciones futuras;
-    
+
 - proyección visual.
-    
 
-El estado actual del proyecto es construcción documental inicial avanzada.
 
-La prioridad actual es consolidar documentos maestros antes de programar, conectar apps o automatizar de forma real.
+El estado actual oficial del proyecto es:
 
-# ACTUALIZACIÓN POST-SANDBOX MANUAL
+**Fase 10 — MVP técnico básico en preparación**
+
+La prioridad actual es revisar y corregir **ROBERT_TECHNICAL_COMPONENTS_SPEC_v0.2_PROPUESTA** antes de aprobar la especificación de componentes o crear documentos técnicos derivados.
+
+Robert todavía no debe programarse, conectar apps reales, automatizar acciones reales ni activar agentes autónomos.
+
+La regla central se mantiene:
+
+Robert debe convertir información dispersa en estructura útil, manteniendo contexto, decisiones, seguridad, autonomía controlada y control del usuario.
+
+
+# ANEXO HISTÓRICO — ACTUALIZACIÓN POST-SANDBOX MANUAL
 
 Fecha: 26/06/2026
 
@@ -1878,19 +2097,18 @@ Robert todavía no tiene agentes autónomos.
 
 ---
 
-# SIGUIENTE FASE RECOMENDADA
+# SIGUIENTE ETAPA ACTUALIZADA
 
-La siguiente fase recomendada es preparar el MVP técnico básico.
+La siguiente etapa ya no es crear ROBERT_TECHNICAL_MVP_PLAN, porque ese documento ya fue creado.
 
-Pero antes de programar, Robert debe crear un plan claro de MVP técnico.
+La etapa actual es:
 
-Nombre sugerido del siguiente documento:
-
-ROBERT_TECHNICAL_MVP_PLAN
+**Revisar y corregir ROBERT_TECHNICAL_COMPONENTS_SPEC_v0.2_PROPUESTA**
 
 Objetivo:
 
-Definir cómo se convertirá Robert de sistema documental/manual a una primera interfaz técnica básica, sin conectar herramientas reales todavía.
+Definir una especificación de componentes técnicos alineada con la fuente de verdad, sin programar, sin conectar herramientas reales y sin automatizar acciones.
+
 
 ---
 
@@ -1946,3 +2164,32 @@ El siguiente reto es diseñar el primer MVP técnico sin romper las reglas de se
 La regla central es:
 
 Robert debe convertir información dispersa en estructura útil, manteniendo contexto, decisiones, seguridad, autonomía controlada y control del usuario.
+
+---
+
+# ACTUALIZACIÓN CORRECTIVA — 30/06/2026
+
+Estado:
+
+ROBERT_CONTEXT_MASTER queda reanclado al estado actual del Proyecto Robert.
+
+Corrección principal:
+
+El estado actual ya no debe leerse como “pendiente de preparar ROBERT_TECHNICAL_MVP_PLAN”.
+
+Ese documento ya existe.
+
+El estado actual correcto es:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Pendiente principal:
+
+**Revisar y corregir ROBERT_TECHNICAL_COMPONENTS_SPEC_v0.2_PROPUESTA**
+
+Regla:
+
+Ninguna especificación técnica puede declarar un estado del proyecto que contradiga a ROBERT_CONTEXT_MASTER.
+
+Si existe contradicción entre una especificación técnica y este documento, prevalece ROBERT_CONTEXT_MASTER, salvo que ROBERT_SECURITY_RULES establezca una regla superior.
+
