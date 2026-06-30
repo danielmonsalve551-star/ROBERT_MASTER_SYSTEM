@@ -1686,6 +1686,40 @@ Robert se encuentra actualmente en:
 
 ## Estado operativo actual
 
+---
+
+# ACTUALIZACIÓN — ESCALA OFICIAL DE RIESGO Y AUTONOMÍA UNIFICADA
+
+Fecha: 30/06/2026  
+Estado: Escala unificada  
+Documentos relacionados: ROBERT_SECURITY_RULES y ROBERT_CONTROL_DE_CAMBIOS  
+
+---
+
+## Estado actualizado
+
+Robert ya cuenta con una separación oficial entre:
+
+1. Riesgo
+2. Autonomía
+3. Tipo de cambio
+4. Estado documental
+
+Estos conceptos no deben mezclarse.
+
+---
+
+## Escala oficial de riesgo
+
+La escala oficial de riesgo queda así:
+
+```text
+Nivel 0 — Informativo
+Nivel 1 — Bajo
+Nivel 2 — Medio
+Nivel 3 — Alto
+Nivel 4 — Crítico
+
 * MVP manual validado
 * Sandbox manual validado
 * GitHub configurado como respaldo documental privado
