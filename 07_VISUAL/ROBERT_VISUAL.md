@@ -1352,3 +1352,302 @@ No debe inventarlo.
 El estado actual es exploratorio.
 
 No existe todavía una versión visual oficial final de Robert.
+
+
+---
+
+# ACTUALIZACIÓN — CONVENCIÓN VISUAL DEL GRAFO EN OBSIDIAN
+
+Fecha: 30/06/2026
+Estado: Convención visual validada en Obsidian
+Tipo de cambio: Visual / UX documental
+Nivel de riesgo: Nivel 2 — Medio
+
+---
+
+## Objetivo
+
+Esta actualización define la convención visual para representar Robert dentro de la vista gráfica de Obsidian.
+
+La convención no crea una nueva arquitectura.
+
+La convención visualiza de forma más clara la arquitectura existente del sistema.
+
+---
+
+## Regla principal
+
+Robert usará dos ejes visuales:
+
+**Órbita = posición / cercanía al núcleo**
+**Capa o función = color visual**
+
+Esto permite que una sola vista comunique dos cosas:
+
+1. Qué tan cerca está un documento del centro del sistema.
+2. Qué función cumple dentro de Robert.
+
+---
+
+## Centro visual del grafo
+
+El centro visual del grafo será:
+
+**ROBERT_HOME**
+
+ROBERT_HOME funciona como:
+
+* Portada principal
+* Índice de navegación
+* Punto de entrada al sistema
+* Núcleo visual del grafo en Obsidian
+
+---
+
+## Centro conceptual del sistema
+
+El centro conceptual seguirá siendo:
+
+**ROBERT_CONTEXT_MASTER**
+
+ROBERT_CONTEXT_MASTER conserva la identidad, contexto, estado general y memoria base del Proyecto Robert.
+
+---
+
+## ROBERT_CORE
+
+No se crea todavía un archivo llamado ROBERT_CORE.
+
+Por ahora:
+
+* ROBERT_HOME = centro visual
+* ROBERT_CONTEXT_MASTER = centro conceptual
+* Robert Core = idea abstracta del sistema, no archivo activo
+
+ROBERT_CORE solo se creará si la identidad del sistema crece demasiado y ya no cabe de forma limpia en ROBERT_CONTEXT_MASTER.
+
+---
+
+## Convención de enlaces
+
+La estructura visual del grafo depende de wikilinks.
+
+Cada documento maestro debe enlazar:
+
+1. A ROBERT_HOME
+2. A sus 1 o 2 documentos vecinos más importantes
+3. A documentos técnicos relacionados cuando aplique
+
+No se debe enlazar todo con todo.
+
+La regla es:
+
+**Enlaces con intención, no enlaces por decoración.**
+
+---
+
+## Convención de etiquetas
+
+Etiquetas base:
+
+```text
+#robert/nucleo
+#robert/orbita-1
+#robert/orbita-2
+#robert/operativo
+#robert/seguridad
+#robert/decisiones
+#robert/control
+#robert/arquitectura
+#robert/visual
+#robert/prompts
+#robert/mvp
+#robert/sandbox
+#robert/temp
+```
+
+Etiquetas de tipo:
+
+```text
+#tipo/centro
+#tipo/maestro
+#tipo/tecnico
+#tipo/visual
+#tipo/sandbox
+#tipo/operativo
+#tipo/revision
+```
+
+Etiquetas de capa:
+
+```text
+#capa/0
+#capa/1
+#capa/2
+#capa/3
+#capa/4
+#capa/5
+```
+
+---
+
+## Grupos de color en Obsidian
+
+Orden recomendado en Vista gráfica → Grupos:
+
+```text
+tag:#robert/nucleo
+tag:#robert/seguridad
+tag:#robert/decisiones
+tag:#robert/control
+tag:#robert/arquitectura
+tag:#robert/visual
+tag:#robert/prompts
+tag:#robert/mvp
+tag:#robert/sandbox
+tag:#robert/orbita-1
+tag:#robert/orbita-2
+tag:#robert/operativo
+```
+
+---
+
+## Significado de colores
+
+```text
+Núcleo / HOME → amarillo energético
+Seguridad → rojo
+Decisiones → dorado
+Control de cambios → naranja / cobre
+Arquitectura → verde oscuro / azul profundo
+Visual → verde / cian claro
+Prompts → morado
+MVP → rosa técnico
+Sandbox → verde prueba
+Órbita 1 → cian / azul
+Órbita 2 → magenta / morado
+Operativo → azul intenso / magenta
+Temporal → gris o sin color oficial
+```
+
+---
+
+## Configuración recomendada del grafo
+
+En Obsidian Graph View:
+
+```text
+Solo archivos existentes: ACTIVADO
+Huérfanos: APAGADO
+Adjuntos: APAGADO
+Etiquetas: OPCIONAL
+Flechas: OPCIONAL
+```
+
+Esto mantiene el grafo limpio y evita que archivos temporales o enlaces fantasmas contaminen la vista.
+
+---
+
+## Reglas de limpieza
+
+Los archivos dentro de:
+
+**99_INBOX_TEMP**
+
+no deben usar etiquetas oficiales del sistema salvo que estén en revisión.
+
+Pueden usar:
+
+```text
+#robert/temp
+#tipo/revision
+```
+
+No deben usar:
+
+```text
+#robert/orbita-1
+#robert/orbita-2
+#robert/control
+#robert/mvp
+#robert/seguridad
+#robert/decisiones
+```
+
+---
+
+## Regla sobre nombres de archivos
+
+Los wikilinks deben usar el nombre exacto del archivo en Obsidian.
+
+Ejemplo:
+
+Si el archivo se llama:
+
+```text
+ROBERT VISUAL
+```
+
+el enlace correcto es:
+
+```text
+[[ROBERT VISUAL]]
+```
+
+No usar:
+
+```text
+[[ROBERT_VISUAL]]
+```
+
+a menos que el archivo realmente se llame así.
+
+---
+
+## Alcance autorizado
+
+Esta convención autoriza únicamente:
+
+* Organización visual en Obsidian
+* Uso de etiquetas
+* Uso de wikilinks
+* Colores por grupo
+* Limpieza de nodos grises
+* Separación entre documentos oficiales y temporales
+
+---
+
+## Alcance no autorizado
+
+Esta convención no autoriza:
+
+* Programar la interfaz visual real
+* Crear el HUD final de Robert
+* Conectar Obsidian automáticamente con GitHub
+* Automatizar cambios de documentos
+* Crear agentes visuales
+* Activar apps externas
+* Ejecutar acciones reales
+
+---
+
+## Regla visual principal
+
+La visual no se adelanta a la arquitectura.
+
+Obsidian se usará ahora para claridad estructural.
+
+El diseño holográfico, tipo JARVIS o command center avanzado, queda reservado para el MVP técnico futuro.
+
+---
+
+## Estado final
+
+La convención visual del grafo de Obsidian queda validada como apoyo estructural del Proyecto Robert.
+
+No reemplaza el wireframe técnico v0.3.
+
+No reemplaza el futuro Command Center visual.
+
+Funciona como una capa de navegación documental dentro de Obsidian.
+
