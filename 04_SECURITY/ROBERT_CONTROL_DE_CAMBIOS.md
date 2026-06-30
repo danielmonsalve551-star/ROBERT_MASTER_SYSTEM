@@ -3044,3 +3044,95 @@ Funciona como una capa de navegación documental dentro de Obsidian.
 Cambio aprobado e integrado documentalmente.
 
 ROBERT_TECHNICAL_MVP_WIREFRAME v0.3 queda como wireframe oficial actualizado del MVP técnico básico.
+
+---
+
+# CAMBIO #013 — Reanclaje de ROBERT_CONTEXT_MASTER v0.5
+
+Fecha: 30/06/2026
+Estado: Actualizado
+Documento afectado: ROBERT_CONTEXT_MASTER
+Tipo de cambio: Actualización de fuente de verdad
+Nivel de riesgo inicial: Alto
+Nivel de riesgo final: Medio
+
+---
+
+## Cambio realizado
+
+Se actualizó **ROBERT_CONTEXT_MASTER** a versión v0.5 para reanclar el estado real actual del Proyecto Robert.
+
+---
+
+## Motivo del cambio
+
+Se detectó que ROBERT_CONTEXT_MASTER todavía contenía secciones desactualizadas que no reflejaban completamente el avance actual del proyecto.
+
+El documento todavía mencionaba estados anteriores como:
+
+* Fase documental inicial
+* Documentos pendientes que ya habían sido creados
+* Preparar ROBERT_TECHNICAL_MVP_PLAN como siguiente paso, aunque ese documento ya existe
+* Estados previos al checkpoint de GitHub
+* Estados previos a la convención visual de Obsidian
+* Estado previo a ROBERT_TECHNICAL_COMPONENTS_SPEC
+
+---
+
+## Corrección aplicada
+
+La versión v0.5 reancla el contexto maestro al estado actual:
+
+* Fase 10 — MVP técnico básico en preparación
+* MVP manual validado
+* Sandbox manual validado
+* GitHub configurado como respaldo documental privado
+* ROBERT_TECHNICAL_MVP_PLAN aprobado
+* ROBERT_TECHNICAL_MVP_WIREFRAME v0.3 aprobado
+* ROBERT_TECHNICAL_COMPONENTS_SPEC v0.1 creado como borrador
+* ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2_PROPUESTA en revisión
+* Convención visual de Obsidian validada
+* Sin programación autorizada todavía
+* Sin conexiones reales
+* Sin automatizaciones reales
+
+---
+
+## Prioridad documental corregida
+
+Se mantuvo la prioridad canónica entre documentos, con ROBERT_SECURITY_RULES como máxima autoridad de seguridad y ROBERT_CONTEXT_MASTER como fuente central de verdad del estado general.
+
+ROBERT_CONTROL_DE_CAMBIOS queda reconocido como documento de registro y trazabilidad de cambios, sin reemplazar a CONTEXT_MASTER ni a SECURITY_RULES.
+
+---
+
+## Alcance autorizado
+
+Este cambio autoriza únicamente:
+
+* Actualizar el contexto maestro
+* Corregir estado del proyecto
+* Alinear documentos técnicos con la fuente de verdad
+* Reanclar futuras especificaciones técnicas
+
+---
+
+## Alcance no autorizado
+
+Este cambio no autoriza:
+
+* Programar la app
+* Conectar herramientas externas
+* Automatizar documentos
+* Activar agentes autónomos
+* Ejecutar acciones reales
+* Aprobar automáticamente COMPONENTS_SPEC v0.2
+
+---
+
+## Estado final
+
+ROBERT_CONTEXT_MASTER v0.5 queda como fuente de verdad actualizada del estado general del Proyecto Robert.
+
+El siguiente paso recomendado es corregir ROBERT_TECHNICAL_COMPONENTS_SPEC_v0.2_PROPUESTA tomando como base el nuevo CONTEXT_MASTER v0.5.
+
