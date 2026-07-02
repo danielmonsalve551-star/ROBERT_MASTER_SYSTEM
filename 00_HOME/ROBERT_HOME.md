@@ -1768,4 +1768,111 @@ Regla recomendada:
 
 ---
 
+---
+
+# ACTUALIZACIÓN — COMPONENTS_SPEC v0.2 APROBADO E INTEGRADO
+
+Fecha: 30/06/2026
+Estado: Aprobado e integrado
+Decisión relacionada: DECISIÓN #011 — Aprobación de ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2
+Cambio relacionado: CAMBIO #015 — Aprobación e integración de ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2
+
+---
+
+## Estado actualizado
+
+ROBERT_TECHNICAL_COMPONENTS_SPEC fue actualizado oficialmente a versión v0.2.
+
+Esta versión queda aprobada como especificación técnica documental inicial del MVP técnico básico de Robert.
+
+---
+
+## Documento oficial actualizado
+
+Documento:
+
+**ROBERT_TECHNICAL_COMPONENTS_SPEC**
+
+Versión:
+
+**v0.2**
+
+Ubicación:
+
+**10_MVP**
+
+Estado:
+
+**Aprobado como especificación técnica documental inicial del MVP técnico básico**
+
+---
+
+## Qué corrige esta versión
+
+La versión v0.2 corrige los problemas detectados en v0.1:
+
+* Reancla el estado del proyecto a ROBERT_CONTEXT_MASTER v0.5.
+* Respeta la jerarquía canónica de documentos.
+* Separa riesgo, autonomía, tipo de cambio y estado documental.
+* Limita el alcance a 10 componentes prioritarios.
+* Mapea componentes a capas.
+* Deja componentes secundarios para versiones futuras.
+* Mantiene la estructura técnica futura como anexo conceptual.
+* No autoriza programación ni conexiones reales.
+
+---
+
+## Estado actual de Robert
+
+Robert se mantiene en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Estado operativo:
+
+* MVP manual validado
+* Sandbox manual validado
+* GitHub configurado como respaldo documental privado
+* ROBERT_CONTEXT_MASTER v0.5 reanclado
+* ROBERT_PHASES v0.5 reconciliado
+* Escala de riesgo y autonomía unificada
+* ROBERT_TECHNICAL_MVP_PLAN aprobado
+* ROBERT_TECHNICAL_MVP_WIREFRAME v0.3 aprobado
+* ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2 aprobado e integrado
+* Convención visual de Obsidian validada
+* Sin programación autorizada todavía
+* Sin conexiones reales
+* Sin automatizaciones reales
+* Sin agentes autónomos activos
+
+---
+
+## Alcance
+
+Esta aprobación autoriza únicamente el uso de COMPONENTS_SPEC v0.2 como base documental para futuras especificaciones técnicas.
+
+No autoriza:
+
+* Programar la app
+* Crear código
+* Conectar APIs reales
+* Conectar GitHub automáticamente
+* Conectar Gmail
+* Conectar Google Calendar
+* Automatizar acciones
+* Activar agentes autónomos
+* Ejecutar acciones reales
+* Avanzar automáticamente a Fase 11
+
+---
+
+## Próximo punto pendiente
+
+El siguiente documento recomendado, si el usuario lo autoriza después, es:
+
+**ROBERT_TECHNICAL_DATA_MODEL_SPEC**
+
+Ese documento deberá definir los datos internos simulados que Robert necesitaría para operar el MVP técnico básico, sin base de datos real ni programación todavía.
+
+---
 
