@@ -1,27 +1,44 @@
 # ROBERT_TECHNICAL_COMPONENTS_SPEC
 
-Versión: 0.1
-Estado: Borrador técnico inicial pendiente de revisión
-Fecha: 29/06/2026
+Versión: 0.2
+Estado: Aprobado como especificación técnica documental inicial del MVP técnico básico
+Fecha: 30/06/2026
 Ubicación: 10_MVP
-Documento base relacionado: ROBERT_TECHNICAL_MVP_WIREFRAME v0.3
-Fase: Fase 10 — MVP técnico básico en preparación
+Documento base anterior: ROBERT_TECHNICAL_COMPONENTS_SPEC v0.1
+Documento base aprobado: ROBERT_TECHNICAL_COMPONENTS_SPEC_v0.2_PROPUESTA
+Fuente de verdad actual: ROBERT_CONTEXT_MASTER v0.5
+Fase relacionada: Fase 10 — MVP técnico básico en preparación
+Decisión relacionada: DECISIÓN #011 — Aprobación de ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2
+
+Tags: #robert/orbita-2 #capa/5 #tipo/tecnico #robert/mvp-tecnico
 
 ---
 
 # OBJETIVO
 
-Este documento convierte el wireframe técnico v0.3 de Robert en una especificación inicial de componentes técnicos.
+Este documento actualiza y reemplaza a **ROBERT_TECHNICAL_COMPONENTS_SPEC v0.1**.
 
-Su función es definir qué partes visuales y funcionales tendría el MVP técnico básico antes de programar.
+Su función es definir una especificación inicial de componentes técnicos para el MVP básico de Robert, alineada con los documentos maestros existentes.
 
-Este documento no programa la app.
+Esta versión v0.2 corrige contradicciones detectadas en la versión v0.1 y queda aprobada como especificación técnica documental inicial del MVP técnico básico.
 
-Este documento no conecta herramientas reales.
+---
 
-Este documento no automatiza acciones.
+# ESTADO DE ESTA ESPECIFICACIÓN
 
-Este documento solo prepara la estructura técnica para una futura fase de desarrollo.
+Esta especificación está aprobada documentalmente.
+
+Reemplaza oficialmente a ROBERT_TECHNICAL_COMPONENTS_SPEC v0.1 como referencia principal de componentes técnicos del MVP básico.
+
+No autoriza programación.
+
+No autoriza conexiones reales.
+
+No autoriza automatizaciones.
+
+No autoriza agentes autónomos.
+
+No autoriza ejecución real.
 
 ---
 
@@ -31,158 +48,237 @@ El usuario manda.
 
 Robert no ejecuta acciones importantes sin permiso.
 
-Ningún componente puede ejecutar acciones reales sin autorización explícita del usuario.
+Todo componente técnico debe respetar las reglas de seguridad, autorización, control de cambios y decisiones aprobadas.
 
 ---
 
-# ESTADO ACTUAL DEL PROYECTO
+# REANCLAJE DEL ESTADO DEL PROYECTO
+
+El estado declarado por este documento debe coincidir con la fuente de verdad vigente.
+
+La fuente de verdad principal para el estado general actual es:
+
+**ROBERT_CONTEXT_MASTER v0.5**
+
+---
+
+## Estado operativo actual
 
 Robert se encuentra en:
 
 **Fase 10 — MVP técnico básico en preparación**
 
-Estado operativo:
+Estado conocido:
 
 * MVP manual validado
 * Sandbox manual validado
-* GitHub configurado como respaldo documental privado
+* GitHub configurado como respaldo documental privado y manual
+* ROBERT_HOME actualizado
+* ROBERT_CONTEXT_MASTER v0.5 reanclado
+* ROBERT_PHASES v0.5 reconciliado
 * ROBERT_TECHNICAL_MVP_PLAN aprobado
 * ROBERT_TECHNICAL_MVP_WIREFRAME v0.3 aprobado
-* ROBERT_HOME actualizado
-* ROBERT_CONTROL_DE_CAMBIOS actualizado
+* ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2 aprobado
+* Convención visual de Obsidian validada
+* README actualizado
+* Escala de riesgo y autonomía unificada
 * Sin programación autorizada todavía
 * Sin conexiones reales
 * Sin automatizaciones reales
+* Sin agentes autónomos activos
 
 ---
 
-# PROPÓSITO DE ESTA ESPECIFICACIÓN
+# PRINCIPIO DE ALINEACIÓN
 
-Esta especificación sirve para responder:
+Este documento no define la jerarquía de autoridad del sistema.
 
-* Qué componentes necesita Robert
-* Qué debe mostrar cada componente
-* Qué datos necesita cada componente
-* Qué acciones puede permitir cada componente
-* Qué acciones debe bloquear
-* Qué reglas de seguridad debe respetar
-* Qué flujo seguirá el MVP técnico básico
+Este documento debe obedecer la jerarquía canónica definida en:
+
+**ROBERT_CONTEXT_MASTER v0.5**
+
+Si existe conflicto entre este documento y un documento maestro, prevalece el documento maestro correspondiente.
+
+Orden de referencia:
+
+1. ROBERT_SECURITY_RULES
+2. ROBERT_CONTEXT_MASTER
+3. ROBERT_COMMANDS
+4. ROBERT_DECISIONS_LOG
+5. ROBERT_PHASES
+6. ROBERT_HOME
+7. ROBERT_MODULES
+8. ROBERT_SYSTEM_ARCHITECTURE
+9. ROBERT_VISUAL / ROBERT_VISUAL_REFERENCE
+10. ROBERT_PROMPTS
+11. ROBERT_MVP_PLAN
+12. Documentos técnicos del MVP
+13. Borradores
+14. Notas temporales
+
+ROBERT_CONTROL_DE_CAMBIOS no reemplaza esta jerarquía.
+
+ROBERT_CONTROL_DE_CAMBIOS funciona como registro y trazabilidad de cambios, versiones y modificaciones documentales.
+
+---
+
+# CORRECCIONES FRENTE A v0.1
+
+Esta versión corrige los siguientes puntos:
+
+1. Reancla el estado declarado del proyecto a ROBERT_CONTEXT_MASTER v0.5.
+2. Evita redefinir la escala oficial de riesgo.
+3. Separa nivel de riesgo, tipo de cambio, nivel de autonomía y estado documental.
+4. Usa la jerarquía canónica de documentos del contexto maestro.
+5. Alinea los modelos conceptuales con las plantillas existentes.
+6. Corrige la capa principal del documento a Capa 5 — Presentación / Interfaz.
+7. Reduce el alcance inicial a 10 componentes prioritarios.
+8. Mueve componentes secundarios a una versión futura.
+9. Mueve estructura técnica tipo app a un anexo futuro no autorizado para programación.
+10. Aclara que los modos del MVP son solo un subconjunto de la arquitectura general.
 
 ---
 
 # ALCANCE AUTORIZADO
 
-Este documento autoriza únicamente:
+Esta especificación autoriza únicamente:
 
-* Diseñar componentes técnicos
-* Definir nombres de componentes
-* Definir estructura visual
-* Definir estados
-* Definir datos internos simulados
-* Definir reglas de interacción
-* Preparar una base para futura programación
+* Usar ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2 como base documental de componentes técnicos.
+* Mapear componentes a capas.
+* Ordenar estados.
+* Alinear modelos conceptuales con documentos maestros.
+* Preparar una base documental para futuras especificaciones técnicas.
+* Mantener el avance en modo documental y supervisado.
 
 ---
 
 # ALCANCE NO AUTORIZADO
 
-Este documento no autoriza:
+Esta especificación no autoriza:
 
-* Programar la app
-* Conectar Gmail
-* Conectar Google Calendar
-* Conectar GitHub automáticamente
-* Conectar APIs reales
-* Crear agentes autónomos
-* Automatizar acciones reales
-* Enviar correos
-* Modificar archivos automáticamente
-* Ejecutar decisiones fiscales, legales o financieras
-* Usar datos sensibles reales
-
----
-
-# PRINCIPIOS TÉCNICOS DEL MVP
-
-El MVP técnico básico debe ser:
-
-* Manual primero
-* Visualmente claro
-* Seguro por defecto
-* Modular
-* Fácil de auditar
-* Fácil de pausar
-* Fácil de revisar
-* Sin ejecución externa real
-* Sin permisos peligrosos
-* Sin automatización oculta
+* Programar la app.
+* Crear repositorio técnico de código.
+* Conectar GitHub automáticamente.
+* Conectar Gmail.
+* Conectar Google Calendar.
+* Conectar APIs reales.
+* Automatizar acciones reales.
+* Crear agentes autónomos.
+* Ejecutar decisiones fiscales, legales o financieras.
+* Usar datos sensibles reales.
+* Modificar documentos automáticamente.
+* Pasar a desarrollo técnico sin aprobación formal.
+* Avanzar automáticamente a Fase 11.
 
 ---
 
-# MODOS OPERATIVOS
+# TIPO DE CAMBIO
 
-Robert debe manejar tres modos principales:
+Este documento no inventa una taxonomía nueva de cambios.
 
-## 1. MODO_MANUAL
+La clasificación de tipos de cambio debe tomarse de:
 
-El usuario controla todo.
+**ROBERT_CONTROL_DE_CAMBIOS**
 
-Robert solo organiza, muestra, resume y prepara información.
+Para esta especificación, el cambio se considera:
 
-No ejecuta acciones externas.
+**Cambio técnico documental / especificación técnica**
 
----
+No debe confundirse con nivel de riesgo.
 
-## 2. MODO_SUPERVISADO
+Tipo de cambio y nivel de riesgo son conceptos separados.
 
-Robert puede:
+Ejemplo:
 
-* Revisar
-* Proponer
-* Detectar riesgos
-* Preparar borradores
-* Sugerir cambios
-* Marcar decisiones pendientes
-
-Robert no puede:
-
-* Aprobar automáticamente
-* Ejecutar acciones reales
-* Modificar documentos sin permiso
-* Conectar herramientas reales
+```text
+Tipo de cambio: Cambio técnico documental
+Nivel de riesgo: Medio o Alto, según evaluación vigente
+```
 
 ---
 
-## 3. MODO_SANDBOX
+# ESCALA DE RIESGO
 
-Robert puede simular procesos sin afectar nada real.
+Este documento no redefine la escala oficial de riesgo.
 
-Se usa para pruebas, flujos, escenarios y validación.
+La escala oficial debe tomarse de:
 
-Robert no puede ejecutar acciones fuera del entorno simulado.
-
----
-
-# ESCALA OFICIAL DE RIESGO
-
-Robert solo usará esta escala:
-
-* Nivel 1 — Bajo
-* Nivel 2 — Medio
-* Nivel 3 — Alto
-* Nivel 4 — Crítico
-
-No existe Nivel 5.
-
-“No permitido” no es nivel de riesgo.
-
-“No permitido” es estado de resultado.
+* ROBERT_SECURITY_RULES
+* ROBERT_CONTROL_DE_CAMBIOS
 
 ---
 
-# ESTADOS GENERALES DEL SISTEMA
+## Separación obligatoria
 
-Estados permitidos:
+Robert no debe mezclar:
+
+* Nivel de riesgo
+* Tipo de cambio
+* Nivel de autonomía
+* Estado del documento
+
+Son conceptos distintos.
+
+---
+
+## Nivel de riesgo
+
+El nivel de riesgo describe qué tan delicada o peligrosa es una acción, decisión, cambio o componente.
+
+Debe tomarse de la escala oficial vigente.
+
+Ejemplo conceptual:
+
+```text
+Nivel de riesgo: Informativo
+Nivel de riesgo: Medio
+Nivel de riesgo: Alto
+Nivel de riesgo: Crítico
+```
+
+---
+
+## Tipo de cambio
+
+El tipo de cambio clasifica qué clase de modificación se está haciendo.
+
+Ejemplo conceptual:
+
+```text
+Tipo de cambio: Cambio técnico documental
+```
+
+Esto no significa que el riesgo tenga ese mismo nivel.
+
+---
+
+## Nivel de autonomía
+
+El nivel de autonomía describe qué tanto puede actuar Robert por sí mismo.
+
+Es una escala distinta al riesgo.
+
+El MVP técnico básico no autoriza autonomía ejecutiva.
+
+---
+
+# VOCABULARIO CANÓNICO DE ESTADOS
+
+Este documento no crea una tercera lista de estados independiente.
+
+Los estados deben referenciarse desde:
+
+* ROBERT_DECISIONS_LOG
+* ROBERT_CONTROL_DE_CAMBIOS
+* ROBERT_TECHNICAL_MVP_WIREFRAME
+* ROBERT_HOME
+* ROBERT_CONTEXT_MASTER
+
+---
+
+## Estados documentales usados en esta especificación
+
+Para esta especificación se usarán solo estados documentales generales:
 
 * Borrador
 * En revisión
@@ -190,271 +286,32 @@ Estados permitidos:
 * Aprobado
 * Rechazado
 * Pausado
+* Reemplazado
+* Archivado
+
+---
+
+## Estados operativos usados en componentes
+
+Para componentes del MVP se usarán estados operativos generales:
+
+* Disponible
+* Simulado
 * Bloqueado
+* No autorizado
+* Requiere aprobación
+* Pendiente de decisión
 * No permitido
-* Parcial
-* Parcial avanzada
-* Inconclusa
-* Interrumpida
-* Fallida
-* Archivada
-* Reemplazada
 
 ---
 
-# COMPONENTES PRINCIPALES DEL MVP
+## Estados visuales
 
-## 1. AppShell
+Los estados visuales del mapa documental deben seguir lo definido en:
 
-### Descripción
+**ROBERT_TECHNICAL_MVP_WIREFRAME v0.3**
 
-Componente principal que contiene toda la estructura visual del MVP técnico.
-
-### Función
-
-Organiza la pantalla completa de Robert.
-
-### Debe incluir
-
-* Barra lateral izquierda
-* Área central de trabajo
-* Panel derecho de estado
-* Barra superior
-* Zona de alertas
-* Zona de historial
-
-### No debe hacer
-
-* Ejecutar acciones reales
-* Aprobar cambios automáticamente
-* Conectar herramientas externas
-
----
-
-## 2. TopBar
-
-### Descripción
-
-Barra superior del sistema.
-
-### Debe mostrar
-
-* Nombre del sistema: Robert
-* Fase actual
-* Modo activo
-* Estado general
-* Indicador de seguridad
-* Fecha de última actualización
-
-### Ejemplo visual
-
-```text
-Robert Command Center
-Fase 10 — MVP técnico básico
-Modo: Supervisado
-Estado: Sin ejecución real
-```
-
----
-
-## 3. LeftSidebar
-
-### Descripción
-
-Menú lateral principal.
-
-### Debe incluir accesos a
-
-* Home
-* Contexto
-* Comandos
-* Decisiones
-* Seguridad
-* Fases
-* Módulos
-* Visual
-* Prompts
-* Arquitectura
-* MVP
-* Sandbox
-* GitHub Backup
-
-### Función
-
-Permitir navegación visual entre áreas del sistema.
-
----
-
-## 4. CommandCenter
-
-### Descripción
-
-Área central donde el usuario escribe o selecciona instrucciones.
-
-### Función
-
-Recibir comandos del usuario y convertirlos en solicitudes clasificadas.
-
-### Debe permitir
-
-* Escribir una instrucción
-* Elegir modo operativo
-* Ver riesgo detectado
-* Ver acción recomendada
-* Enviar a revisión
-* Enviar a sandbox
-* Marcar como decisión pendiente
-
-### No debe permitir
-
-* Ejecutar acciones externas directamente
-* Saltarse aprobación del usuario
-* Conectar herramientas reales sin decisión formal
-
----
-
-## 5. ModeSelector
-
-### Descripción
-
-Selector del modo operativo actual.
-
-### Opciones
-
-* Manual
-* Supervisado
-* Sandbox
-
-### Regla
-
-El modo activo debe estar visible en todo momento.
-
-Si el usuario cambia de modo, Robert debe registrar el cambio en historial.
-
----
-
-## 6. RiskBadge
-
-### Descripción
-
-Indicador visual de riesgo aprobado en el wireframe v0.3.
-
-### Debe mostrar
-
-* Nivel de riesgo
-* Nombre del riesgo
-* Motivo del riesgo
-* Estado de aprobación
-* Acción recomendada
-
-### Ejemplo
-
-```text
-Riesgo: Nivel 3 — Alto
-Motivo: Esta acción modifica un documento aprobado.
-Estado: Requiere aprobación.
-Acción recomendada: Revisar antes de actualizar.
-```
-
-### Regla
-
-Ningún riesgo puede mostrarse sin motivo.
-
----
-
-## 7. ApprovalGate
-
-### Descripción
-
-Componente de control antes de cualquier cambio importante.
-
-### Función
-
-Bloquear acciones que requieren aprobación.
-
-### Debe activarse cuando
-
-* Se modifica un documento aprobado
-* Se cambia una regla de seguridad
-* Se cambia una decisión
-* Se altera el alcance del proyecto
-* Se intenta conectar una herramienta externa
-* Se intenta automatizar una acción
-* Se detecta riesgo Nivel 3 o Nivel 4
-
-### Opciones visibles
-
-* Aprobar
-* Rechazar
-* Pausar
-* Corregir
-* Enviar a revisión
-* Enviar a sandbox
-
-### Regla
-
-Solo el usuario puede aprobar.
-
----
-
-## 8. DecisionInbox
-
-### Nombre visible
-
-Pendiente de mi decisión
-
-### Descripción
-
-Vista aprobada en wireframe v0.3 para agrupar todo lo que necesita decisión del usuario.
-
-### Debe mostrar
-
-* Elemento pendiente
-* Documento afectado
-* Tipo de cambio
-* Nivel de riesgo
-* Motivo del riesgo
-* Estado actual
-* Acción recomendada
-* Opciones de decisión
-
-### Debe incluir elementos con estados
-
-* Aprobación requerida
-* Pendiente de revisión
-* Parcial
-* Parcial avanzada
-* Inconclusa
-* En conflicto
-* Bloqueado por dependencia
-* Borrador pendiente de aprobación
-* Cambio pendiente
-* Riesgo alto pendiente
-* Riesgo crítico pendiente
-
----
-
-## 9. DocumentStatusMap
-
-### Nombre visible
-
-Mapa de documentos
-
-### Descripción
-
-Vista aprobada en wireframe v0.3 para visualizar documentos por fase y estado.
-
-### Debe mostrar
-
-* Carpeta
-* Documento
-* Estado
-* Versión
-* Última actualización
-* Relación con decisiones
-* Riesgo si aplica
-
-### Estados visuales permitidos
+Ejemplos visuales:
 
 ```text
 ✓ Aprobado
@@ -470,326 +327,587 @@ Vista aprobada en wireframe v0.3 para visualizar documentos por fase y estado.
 
 ---
 
-## 10. CurrentStatePanel
+# MODOS OPERATIVOS DEL MVP
 
-### Descripción
+El MVP técnico básico trabajará solo con un subconjunto de los modos definidos en la arquitectura general.
 
-Panel lateral derecho que muestra el estado actual de Robert.
+---
 
-### Debe mostrar
+## Modos incluidos en el MVP básico
 
-* Fase actual
-* Última decisión registrada
-* Último cambio documental
-* Modo activo
-* Riesgo actual
-* Documento en revisión
-* Pendientes abiertos
-* Estado de GitHub manual
+1. MODO_MANUAL
+2. MODO_SUPERVISADO
+3. MODO_SANDBOX
 
-### Ejemplo
+---
+
+## Modos no incluidos todavía
+
+Los siguientes modos pueden existir en la arquitectura general, pero no quedan activos en este MVP básico:
+
+* Autónomo limitado
+* Ejecución limitada
+* Modo crítico
+* Cualquier modo con ejecución real
+
+---
+
+## Regla
+
+El MVP técnico básico debe ser seguro por defecto.
+
+Si un modo requiere ejecución real, conexión externa o autonomía avanzada, queda fuera de alcance.
+
+---
+
+# MAPEO DE CAPAS
+
+Esta especificación pertenece principalmente a:
+
+**Capa 5 — Presentación / Interfaz**
+
+Motivo:
+
+Define componentes visibles, navegación, paneles, vistas, tarjetas y estructura de interacción.
+
+---
+
+## Relación con otras capas
+
+Aunque el documento pertenece principalmente a Capa 5, algunos componentes representan funciones de otras capas:
+
+* Capa 1 — Memoria
+* Capa 2 — Control
+* Capa 3 — Capacidades
+* Capa 4 — Gobierno
+* Capa 5 — Presentación
+
+La interfaz no inventa funciones.
+
+La interfaz representa funciones ya definidas por la arquitectura.
+
+---
+
+# COMPONENTES PRIORITARIOS v0.2
+
+Esta versión reduce el alcance a 10 componentes prioritarios.
+
+Los componentes secundarios quedan para una versión futura.
+
+---
+
+## Lista prioritaria
+
+1. AppShell
+2. TopBar
+3. LeftSidebar
+4. CommandCenter
+5. ModeSelector
+6. RiskBadge
+7. ApprovalGate
+8. DecisionInbox
+9. DocumentStatusMap
+10. CurrentStatePanel
+
+---
+
+# 1. AppShell
+
+## Capa principal
+
+Capa 5 — Presentación
+
+## Descripción
+
+AppShell es el contenedor principal del MVP técnico básico.
+
+Organiza la pantalla general del sistema.
+
+## Debe mostrar
+
+* Barra superior
+* Menú lateral
+* Área central
+* Panel de estado
+* Zona de alertas
+* Historial básico
+
+## Representa
+
+La estructura visual general de Robert.
+
+## No debe hacer
+
+* Ejecutar acciones reales.
+* Aprobar cambios automáticamente.
+* Conectar herramientas externas.
+* Modificar documentos sin autorización.
+
+---
+
+# 2. TopBar
+
+## Capa principal
+
+Capa 5 — Presentación
+
+## Descripción
+
+TopBar muestra el estado superior del sistema.
+
+## Debe mostrar
+
+* Nombre del sistema.
+* Fase actual.
+* Modo activo.
+* Estado de seguridad.
+* Última actualización.
+* Indicador de ejecución real no autorizada.
+
+## Ejemplo
 
 ```text
-Fase actual: 10 — MVP técnico básico
+Robert Command Center
+Fase 10 — MVP técnico básico en preparación
 Modo: Supervisado
-Última decisión: #010 — Wireframe v0.3 aprobado
+Ejecución real: No autorizada
+```
+
+---
+
+# 3. LeftSidebar
+
+## Capa principal
+
+Capa 5 — Presentación
+
+## Descripción
+
+LeftSidebar permite navegar por las áreas principales del sistema.
+
+## Debe incluir
+
+* Home
+* Contexto
+* Comandos
+* Decisiones
+* Seguridad
+* Fases
+* Módulos
+* Visual
+* Prompts
+* Arquitectura
+* MVP
+* Sandbox
+* GitHub Backup
+
+## Regla
+
+La navegación no debe implicar ejecución.
+
+Entrar a una sección solo muestra información.
+
+---
+
+# 4. CommandCenter
+
+## Capa principal representada
+
+Capa 2 — Control
+
+## Capa visual
+
+Capa 5 — Presentación
+
+## Descripción
+
+CommandCenter es el área donde el usuario introduce instrucciones.
+
+## Debe permitir
+
+* Escribir una instrucción.
+* Seleccionar modo operativo.
+* Ver clasificación inicial.
+* Ver riesgo detectado.
+* Ver si requiere aprobación.
+* Preparar una respuesta o borrador.
+
+## No debe permitir
+
+* Ejecutar acciones reales directamente.
+* Saltarse autorización.
+* Activar herramientas externas.
+* Aprobar decisiones automáticamente.
+
+---
+
+# 5. ModeSelector
+
+## Capa principal representada
+
+Capa 2 — Control
+
+## Capa visual
+
+Capa 5 — Presentación
+
+## Descripción
+
+ModeSelector muestra y permite seleccionar el modo operativo del MVP básico.
+
+## Opciones permitidas en v0.2
+
+* Manual
+* Supervisado
+* Sandbox
+
+## Regla
+
+El modo activo debe estar visible en todo momento.
+
+Si el usuario cambia de modo, el cambio debe quedar registrado en historial.
+
+---
+
+# 6. RiskBadge
+
+## Capa principal representada
+
+Capa 4 — Gobierno / Seguridad
+
+## Capa visual
+
+Capa 5 — Presentación
+
+## Descripción
+
+RiskBadge muestra el nivel de riesgo y el motivo del riesgo.
+
+## Debe mostrar
+
+* Nivel de riesgo según escala oficial vigente.
+* Motivo del riesgo.
+* Documento o módulo afectado.
+* Estado de aprobación.
+* Acción recomendada.
+
+## Regla
+
+Ningún riesgo puede mostrarse sin motivo.
+
+El RiskBadge no decide por el usuario.
+
+Solo informa, advierte y orienta.
+
+---
+
+# 7. ApprovalGate
+
+## Capa principal representada
+
+Capa 4 — Gobierno / Seguridad
+
+## Capa visual
+
+Capa 5 — Presentación
+
+## Descripción
+
+ApprovalGate bloquea o detiene acciones que requieren aprobación explícita.
+
+## Debe activarse cuando
+
+* Se modifica un documento aprobado.
+* Se cambia una regla de seguridad.
+* Se registra una decisión formal.
+* Se altera el alcance del proyecto.
+* Se intenta conectar una herramienta externa.
+* Se intenta automatizar una acción.
+* Se detecta riesgo alto o crítico.
+* Se intenta pasar de documentación a ejecución.
+
+## Opciones visibles
+
+* Aprobar
+* Rechazar
+* Pausar
+* Corregir
+* Enviar a revisión
+* Enviar a sandbox
+
+## Regla
+
+Solo el usuario puede aprobar.
+
+---
+
+# 8. DecisionInbox
+
+## Nombre visible
+
+Pendiente de mi decisión
+
+## Capa principal representada
+
+Capa 4 — Gobierno
+Capa 2 — Control
+
+## Capa visual
+
+Capa 5 — Presentación
+
+## Descripción
+
+DecisionInbox agrupa todo lo que necesita decisión directa del usuario.
+
+## Debe mostrar
+
+* Elemento pendiente.
+* Documento afectado.
+* Tipo de cambio.
+* Nivel de riesgo.
+* Motivo del riesgo.
+* Estado actual.
+* Acción recomendada.
+* Opciones de decisión.
+
+## Debe incluir elementos como
+
+* Aprobación requerida.
+* Pendiente de revisión.
+* Cambio pendiente.
+* Riesgo alto pendiente.
+* Riesgo crítico pendiente.
+* Documento en revisión.
+* Bloqueo por dependencia.
+* Conflicto entre cambios.
+
+## Regla
+
+Robert no puede cerrar automáticamente decisiones importantes.
+
+---
+
+# 9. DocumentStatusMap
+
+## Nombre visible
+
+Mapa de documentos
+
+## Capa principal representada
+
+Capa 1 — Memoria / Documentación
+Capa 5 — Presentación
+
+## Descripción
+
+DocumentStatusMap muestra el estado de los documentos principales de Robert.
+
+## Debe mostrar
+
+* Carpeta.
+* Documento.
+* Estado.
+* Versión.
+* Fase relacionada.
+* Decisión relacionada.
+* Cambio relacionado.
+* Riesgo si aplica.
+
+## Regla
+
+El mapa documental debe representar la fuente de verdad, no inventar documentos activos.
+
+Si un documento es futuro o conceptual, debe aparecer como futuro, no como activo.
+
+---
+
+# 10. CurrentStatePanel
+
+## Capa principal representada
+
+Capa 2 — Control
+Capa 4 — Gobierno
+Capa 5 — Presentación
+
+## Descripción
+
+CurrentStatePanel muestra el estado actual del sistema en una vista resumida.
+
+## Debe mostrar
+
+* Fase actual.
+* Modo activo.
+* Última decisión registrada.
+* Último cambio registrado.
+* Documento en revisión.
+* Pendientes abiertos.
+* Estado de GitHub.
+* Estado de ejecución real.
+* Advertencias de seguridad.
+
+## Ejemplo
+
+```text
+Fase actual: 10 — MVP técnico básico en preparación
+Modo: Supervisado
+Última decisión: #011 — COMPONENTS_SPEC v0.2 aprobado
+Último cambio: #014 — Reconciliación de ROBERT_PHASES v0.5
 GitHub: Respaldo manual privado
 Ejecución real: No autorizada
 ```
 
 ---
 
-## 11. ActionComposer
+# COMPONENTES DIFERIDOS PARA VERSIONES FUTURAS
 
-### Descripción
+Los siguientes componentes estaban en v0.1, pero se difieren para evitar sobrealcance:
 
-Componente donde Robert prepara una acción antes de presentarla al usuario.
-
-### Puede preparar
-
-* Borrador documental
-* Resumen
-* Prompt para Claude
-* Propuesta de cambio
-* Registro de decisión
-* Registro de control de cambios
-* Simulación sandbox
-
-### No puede hacer
-
-* Ejecutar automáticamente
-* Aprobar solo
-* Modificar archivos reales
-* Enviar información externa
+* ActionComposer
+* ChangeRequestCard
+* HistoryLog avanzado
+* SandboxPanel avanzado
+* DocumentViewer avanzado
+* PromptLibrary
+* GitHubBackupStatus
 
 ---
 
-## 12. ChangeRequestCard
+## Motivo de diferimiento
 
-### Descripción
+Estos componentes son útiles, pero no son necesarios para validar la primera especificación técnica básica.
 
-Tarjeta que representa una propuesta de cambio.
-
-### Debe incluir
-
-* Título del cambio
-* Documento afectado
-* Tipo de cambio
-* Riesgo inicial
-* Riesgo final
-* Motivo
-* Dependencias
-* Conflictos
-* Estado
-* Recomendación
-
----
-
-## 13. HistoryLog
-
-### Descripción
-
-Historial visible de acciones, cambios y decisiones.
-
-### Debe registrar
-
-* Fecha
-* Acción solicitada
-* Modo operativo
-* Documento afectado
-* Riesgo detectado
-* Estado final
-* Decisión relacionada
-
-### Etiquetas permitidas
-
-* [MANUAL]
-* [SUPERVISADO]
-* [SANDBOX]
-* [CONTROL]
-* [BLOQUEADA]
-* [PARCIAL]
-* [DECISIÓN]
-* [GITHUB]
-* [DOCUMENTO]
-
----
-
-## 14. SandboxPanel
-
-### Descripción
-
-Vista para simular acciones sin afectar nada real.
-
-### Debe permitir
-
-* Crear prueba simulada
-* Ver entrada
-* Ver respuesta de Robert
-* Ver riesgo
-* Ver bloqueo si aplica
-* Ver resultado
-* Guardar resultado como texto
-
-### No debe permitir
-
-* Enviar correos reales
-* Conectar apps
-* Ejecutar automatizaciones
-* Usar datos sensibles reales
-
----
-
-## 15. DocumentViewer
-
-### Descripción
-
-Vista para leer documentos principales de Robert.
-
-### Debe permitir
-
-* Ver documento
-* Ver versión
-* Ver estado
-* Ver decisiones relacionadas
-* Ver cambios relacionados
-* Marcar si necesita actualización
-
-### No debe permitir
-
-* Editar automáticamente sin aprobación
-* Reemplazar documentos aprobados sin registro
-
----
-
-## 16. PromptLibrary
-
-### Descripción
-
-Biblioteca de prompts del proyecto Robert.
-
-### Debe incluir
-
-* Prompts para Claude
-* Prompts para ChatGPT
-* Prompts de revisión
-* Prompts de auditoría
-* Prompts de sandbox
-* Prompts de documentación
-* Prompts de MVP técnico
-
----
-
-## 17. GitHubBackupStatus
-
-### Descripción
-
-Componente que muestra el estado del respaldo manual en GitHub.
-
-### Debe mostrar
-
-* Repositorio: ROBERT_MASTER_SYSTEM
-* Estado: Privado
-* Uso: Respaldo documental manual
-* Último checkpoint
-* Advertencia de no automatización
-
-### Regla
-
-GitHub no debe tratarse como conexión activa.
-
-GitHub es solo respaldo manual hasta nueva aprobación formal.
+Se podrán desarrollar después de aprobar el núcleo de componentes prioritarios.
 
 ---
 
 # MODELOS DE DATOS CONCEPTUALES
 
-Estos modelos no son código final.
+Los modelos de datos no son código.
 
-Sirven para entender qué información necesita manejar Robert.
+No son base de datos final.
+
+No autorizan implementación.
+
+Solo sirven para alinear la información que los componentes deberán mostrar.
 
 ---
 
-## Modelo: RobertDocument
+# Modelo conceptual: RobertDocument
+
+Debe alinearse con DocumentStatusMap y los documentos maestros.
 
 Campos sugeridos:
 
 ```text
-id
 nombre
 carpeta
 version
-estado
-fase
-ultima_actualizacion
+estado_documental
+fase_relacionada
+tipo_documento
+tags_visuales
 decision_relacionada
-riesgo
-descripcion
+cambio_relacionado
+riesgo_asociado
+ultima_actualizacion
 ```
 
 ---
 
-## Modelo: DecisionRecord
+# Modelo conceptual: DecisionRecord
+
+Debe alinearse con la plantilla oficial de ROBERT_DECISIONS_LOG.
 
 Campos sugeridos:
 
 ```text
-id
+numero_decision
 titulo
 fecha
 estado
-tipo_cambio
-riesgo_inicial
-riesgo_final
+tipo_de_decision
 documentos_afectados
 decision
+motivo
 alcance_autorizado
 alcance_no_autorizado
-```
-
----
-
-## Modelo: RiskRecord
-
-Campos sugeridos:
-
-```text
-nivel
-nombre
-motivo
-estado_aprobacion
-accion_recomendada
-documento_afectado
-modo_operativo
-```
-
----
-
-## Modelo: ChangeRequest
-
-Campos sugeridos:
-
-```text
-id
-titulo
-tipo_cambio
-documento_afectado
-modulo_afectado
 riesgo_inicial
 riesgo_final
-motivo
-dependencias
-conflictos
-estado
-decision_relacionada
+regla_activa
+cierre
 ```
 
 ---
 
-## Modelo: CommandRequest
+# Modelo conceptual: ChangeRecord
+
+Debe alinearse con ROBERT_CONTROL_DE_CAMBIOS.
 
 Campos sugeridos:
 
 ```text
-id
-comando
-entrada_usuario
-modo
-documento_afectado
-riesgo_detectado
-accion_recomendada
+numero_cambio
+titulo
+fecha
 estado
-resultado
+documento_afectado
+tipo_de_cambio
+riesgo_inicial
+riesgo_final
+motivo_del_cambio
+dependencias
+conflictos
+alcance_autorizado
+alcance_no_autorizado
+estado_final
 ```
 
 ---
 
-# FLUJO PRINCIPAL DEL MVP
+# Modelo conceptual: RiskRecord
 
-## Flujo 1 — Usuario solicita acción
+Debe alinearse con ROBERT_SECURITY_RULES.
+
+Campos sugeridos:
+
+```text
+nivel_de_riesgo
+nombre_del_riesgo
+motivo_del_riesgo
+documento_o_modulo_afectado
+modo_operativo
+accion_recomendada
+requiere_aprobacion
+bloqueo_aplicado
+```
+
+---
+
+# FLUJOS PRIORITARIOS DEL MVP
+
+Esta especificación conserva solo los flujos necesarios para validar los componentes prioritarios.
+
+---
+
+## Flujo 1 — Solicitud del usuario
 
 ```text
 Usuario escribe instrucción
 ↓
 CommandCenter recibe solicitud
 ↓
-Robert identifica modo operativo
+ModeSelector confirma modo activo
 ↓
-Robert clasifica acción
+Robert clasifica la solicitud
 ↓
-Robert detecta documento o módulo afectado
+RiskBadge muestra riesgo y motivo
 ↓
-Robert calcula riesgo
+ApprovalGate determina si requiere aprobación
 ↓
-RiskBadge muestra nivel y motivo
+CurrentStatePanel actualiza estado
 ↓
-ApprovalGate decide si requiere aprobación
-↓
-Robert prepara borrador o bloquea
-↓
-Usuario decide
-↓
-HistoryLog registra resultado
+Usuario decide siguiente paso
 ```
 
 ---
@@ -801,23 +919,17 @@ Usuario pide actualizar documento
 ↓
 Robert identifica documento afectado
 ↓
-Robert revisa si está aprobado
+Robert revisa si el documento está aprobado
 ↓
 Robert clasifica tipo de cambio
 ↓
-Robert asigna riesgo
+Robert muestra RiskBadge
 ↓
-Robert revisa dependencias
+ApprovalGate solicita aprobación si aplica
 ↓
-Robert prepara borrador
+Usuario aprueba, corrige, pausa o rechaza
 ↓
-Usuario aprueba o corrige
-↓
-Se actualiza documento manualmente
-↓
-Se registra en DECISIONS_LOG si aplica
-↓
-Se registra en CONTROL_DE_CAMBIOS
+Si se aprueba, se registra en DECISIONS_LOG o CONTROL_DE_CAMBIOS según corresponda
 ```
 
 ---
@@ -827,178 +939,139 @@ Se registra en CONTROL_DE_CAMBIOS
 ```text
 Robert detecta decisión requerida
 ↓
-Crea elemento en DecisionInbox
+DecisionInbox crea elemento pendiente
 ↓
-Muestra riesgo y motivo
+Se muestra documento afectado, riesgo, motivo y opciones
 ↓
-Usuario elige acción
+Usuario decide
 ↓
-Robert registra decisión
+Robert prepara registro documental
 ↓
-Se actualizan documentos relacionados si el usuario autoriza
+El usuario confirma antes de actualizar
 ```
 
 ---
 
-## Flujo 4 — Sandbox
+## Flujo 4 — Revisión de estado documental
 
 ```text
-Usuario activa MODO_SANDBOX
+Usuario abre mapa de documentos
 ↓
-Robert crea simulación
+DocumentStatusMap muestra documentos por carpeta, fase y estado
 ↓
-Robert clasifica riesgo
+CurrentStatePanel muestra pendientes principales
 ↓
-Robert ejecuta solo respuesta simulada
+Robert identifica documentos en revisión o pendientes
 ↓
-Robert muestra resultado
-↓
-Robert marca bloqueos si aplica
-↓
-Usuario decide si registra aprendizaje
+Usuario decide si revisar, aprobar, corregir o pausar
 ```
 
 ---
 
-# ESTRUCTURA VISUAL PROPUESTA
+# ESTRUCTURA VISUAL CONCEPTUAL
 
 ```text
 ┌─────────────────────────────────────────────────────────────┐
 │ Robert Command Center | Fase 10 | Modo Supervisado | Seguro │
 ├───────────────┬───────────────────────────────┬─────────────┤
-│ Sidebar       │ CommandCenter                 │ Estado      │
+│ LeftSidebar   │ CommandCenter                 │ Estado      │
 │               │                               │             │
 │ Home          │ Instrucción del usuario        │ Fase actual │
-│ Contexto      │ Resultado preparado            │ Riesgo      │
-│ Comandos      │ RiskBadge                      │ Pendientes  │
-│ Decisiones    │ ApprovalGate                   │ GitHub      │
-│ Seguridad     │                               │             │
+│ Contexto      │ RiskBadge                      │ Modo activo │
+│ Comandos      │ ApprovalGate                   │ Última dec. │
+│ Decisiones    │ DecisionInbox                  │ Riesgo      │
+│ Seguridad     │ DocumentStatusMap              │ GitHub      │
 │ MVP           │                               │             │
 │ Sandbox       │                               │             │
-├───────────────┴───────────────────────────────┴─────────────┤
-│ HistoryLog                                                  │
-└─────────────────────────────────────────────────────────────┘
+└───────────────┴───────────────────────────────┴─────────────┘
 ```
 
 ---
 
-# ESTRUCTURA DE ARCHIVOS FUTURA PROPUESTA
+# DEPENDENCIAS VERIFICADAS
 
-Esta estructura es solo conceptual para una futura app.
+Esta especificación depende de documentos ya existentes en la bóveda de Robert.
 
-No autoriza programación todavía.
+Dependencias principales:
+
+* ROBERT_CONTEXT_MASTER v0.5
+* ROBERT_PHASES v0.5
+* ROBERT_SECURITY_RULES
+* ROBERT_DECISIONS_LOG
+* ROBERT_CONTROL_DE_CAMBIOS
+* ROBERT_HOME
+* ROBERT_MODULES
+* ROBERT_SYSTEM_ARCHITECTURE
+* ROBERT_TECHNICAL_MVP_PLAN
+* ROBERT_TECHNICAL_MVP_WIREFRAME v0.3
+
+Estado:
+
+Estas dependencias deben mantenerse alineadas.
+
+Si alguna dependencia cambia, esta especificación debe revisarse antes de avanzar a documentos técnicos derivados.
+
+---
+
+# ANEXO FUTURO — ESTRUCTURA TÉCNICA POSIBLE
+
+Este anexo es solo conceptual.
+
+No autoriza programación.
+
+No obliga a usar Next.js.
+
+No crea estructura real de archivos.
+
+Solo sirve como referencia futura si el usuario aprueba pasar a desarrollo.
 
 ```text
 robert-command-center/
 │
 ├── app/
-│   ├── page.tsx
-│   ├── layout.tsx
-│   └── globals.css
+│   ├── page
+│   ├── layout
+│   └── styles
 │
 ├── components/
-│   ├── AppShell.tsx
-│   ├── TopBar.tsx
-│   ├── LeftSidebar.tsx
-│   ├── CommandCenter.tsx
-│   ├── ModeSelector.tsx
-│   ├── RiskBadge.tsx
-│   ├── ApprovalGate.tsx
-│   ├── DecisionInbox.tsx
-│   ├── DocumentStatusMap.tsx
-│   ├── CurrentStatePanel.tsx
-│   ├── ActionComposer.tsx
-│   ├── ChangeRequestCard.tsx
-│   ├── HistoryLog.tsx
-│   ├── SandboxPanel.tsx
-│   ├── DocumentViewer.tsx
-│   ├── PromptLibrary.tsx
-│   └── GitHubBackupStatus.tsx
+│   ├── AppShell
+│   ├── TopBar
+│   ├── LeftSidebar
+│   ├── CommandCenter
+│   ├── ModeSelector
+│   ├── RiskBadge
+│   ├── ApprovalGate
+│   ├── DecisionInbox
+│   ├── DocumentStatusMap
+│   └── CurrentStatePanel
 │
 ├── data/
-│   ├── documents.json
-│   ├── decisions.json
-│   ├── changes.json
-│   ├── risks.json
-│   └── sandbox.json
+│   ├── documents
+│   ├── decisions
+│   ├── changes
+│   └── risks
 │
-├── lib/
-│   ├── risk-classifier.ts
-│   ├── command-router.ts
-│   ├── approval-rules.ts
-│   └── document-status.ts
-│
-└── README.md
+└── README
 ```
 
 ---
 
-# COMPONENTES PRIORITARIOS PARA MVP TÉCNICO BÁSICO
+# CRITERIOS DE ACEPTACIÓN DE LA ESPECIFICACIÓN
 
-Para una primera versión técnica, los componentes más importantes serían:
+Esta especificación se considera aprobada porque cumple:
 
-1. AppShell
-2. TopBar
-3. LeftSidebar
-4. CommandCenter
-5. RiskBadge
-6. ApprovalGate
-7. DecisionInbox
-8. DocumentStatusMap
-9. CurrentStatePanel
-10. HistoryLog
-
-Los demás componentes pueden agregarse después.
-
----
-
-# CRITERIOS DE ACEPTACIÓN DEL MVP TÉCNICO
-
-El MVP técnico básico estará listo para revisión cuando pueda mostrar de forma simulada:
-
-* Fase actual de Robert
-* Modo operativo activo
-* Documentos principales
-* Estado de documentos
-* Comandos del usuario
-* Riesgo con motivo visible
-* Decisiones pendientes
-* Historial de acciones
-* Estado de GitHub manual
-* Bloqueo de acciones no autorizadas
-
----
-
-# CRITERIOS DE SEGURIDAD
-
-El MVP técnico debe bloquear o marcar como no permitido:
-
-* Intentos de ejecutar acciones reales
-* Intentos de conectar apps sin aprobación
-* Intentos de automatizar GitHub
-* Intentos de enviar correos
-* Intentos de usar datos sensibles
-* Intentos de modificar reglas críticas sin aprobación
-* Intentos de aprobar decisiones automáticamente
-
----
-
-# DEPENDENCIAS DOCUMENTALES
-
-Este documento depende de:
-
-* ROBERT_HOME
-* ROBERT_CONTEXT_MASTER
-* ROBERT_COMMANDS
-* ROBERT_SECURITY_RULES
-* ROBERT_CONTROL_DE_CAMBIOS
-* ROBERT_PHASES
-* ROBERT_MODULES
-* ROBERT_SYSTEM_ARCHITECTURE
-* ROBERT_MVP_PLAN
-* ROBERT_TECHNICAL_MVP_PLAN
-* ROBERT_TECHNICAL_MVP_WIREFRAME v0.3
-* ROBERT_DECISIONS_LOG
+* El estado del proyecto coincide con ROBERT_CONTEXT_MASTER v0.5.
+* No redefine escalas oficiales.
+* Separa riesgo, tipo de cambio y autonomía.
+* Usa vocabulario de estados alineado con documentos maestros.
+* Usa la jerarquía canónica de documentos.
+* Los modelos conceptuales siguen plantillas existentes.
+* Los componentes están mapeados a capas.
+* El alcance está limitado a los 10 componentes prioritarios.
+* No autoriza programación ni ejecución real.
+* No crea ROBERT_CORE como archivo.
+* No contradice el wireframe v0.3.
+* Fue aprobado formalmente mediante DECISIÓN #011.
 
 ---
 
@@ -1006,7 +1079,7 @@ Este documento depende de:
 
 Tipo de cambio:
 
-**Tipo 5 — Cambio técnico**
+**Cambio técnico documental / especificación técnica**
 
 Nivel de riesgo inicial:
 
@@ -1014,7 +1087,7 @@ Nivel de riesgo inicial:
 
 Motivo:
 
-Este documento empieza a transformar el diseño visual aprobado en estructura técnica de componentes. Aunque no programa nada, acerca el proyecto a una futura fase de desarrollo.
+Este documento convierte un wireframe aprobado en una especificación técnica de componentes. Aunque no programa nada, acerca el proyecto a una futura fase de desarrollo.
 
 Nivel de riesgo final:
 
@@ -1022,39 +1095,68 @@ Nivel de riesgo final:
 
 Motivo de reducción:
 
-El documento es solo especificación. No incluye programación, conexiones reales, automatizaciones ni ejecución externa.
+El documento se mantiene como especificación documental, no autoriza programación, no conecta herramientas reales, no automatiza acciones y fue aprobado formalmente por el usuario.
+
+Nivel de autonomía:
+
+**Nivel 0 — Sin autonomía ejecutiva**
 
 ---
 
-# DECISIÓN PENDIENTE
+# DECISIÓN RELACIONADA
 
-Este documento queda como:
+Esta especificación fue aprobada mediante:
 
-**Borrador técnico inicial pendiente de revisión**
+**DECISIÓN #011 — Aprobación de ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2**
 
-Para aprobarlo formalmente, el usuario deberá escribir:
+Fecha:
 
-```text
-APRUEBO ROBERT_TECHNICAL_COMPONENTS_SPEC v0.1
-```
+**30/06/2026**
+
+Estado:
+
+**Aprobada**
+
+---
+
+# EFECTO DE ESTA APROBACIÓN
+
+Con esta aprobación:
+
+1. ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2 reemplaza a v0.1 como especificación oficial.
+2. ROBERT_TECHNICAL_COMPONENTS_SPEC_v0.2_PROPUESTA queda como documento histórico de origen.
+3. Robert puede usar esta especificación como base para futuras especificaciones documentales.
+4. No se autoriza programación.
+5. No se autoriza conexión real.
+6. No se autoriza automatización.
+7. No se autoriza avance automático a Fase 11.
 
 ---
 
 # PRÓXIMO PASO RECOMENDADO
 
-Después de revisar este documento, el siguiente paso sería crear:
+Después de aprobar esta especificación, el siguiente paso recomendado es registrar el cambio en:
+
+**ROBERT_CONTROL_DE_CAMBIOS**
+
+Después se debe actualizar:
+
+* ROBERT_HOME
+* README
+
+Solo después de eso se podrá decidir si conviene crear:
 
 **ROBERT_TECHNICAL_DATA_MODEL_SPEC**
 
-Ese documento definiría con más detalle los datos internos simulados que necesita Robert para funcionar en el MVP técnico.
+Ese documento deberá definir los datos internos simulados que necesitaría Robert para operar el MVP técnico básico, sin base de datos real ni programación todavía.
 
 ---
 
 # CIERRE
 
-ROBERT_TECHNICAL_COMPONENTS_SPEC v0.1 define los componentes técnicos iniciales del MVP básico de Robert.
+ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2 queda aprobado como especificación técnica documental inicial del MVP técnico básico de Robert.
 
-Este documento prepara la futura construcción técnica, pero no la autoriza.
+La versión v0.2 mantiene el avance técnico, pero reduce el alcance para evitar sobreconstrucción.
 
 Robert sigue en modo documental y supervisado.
 
