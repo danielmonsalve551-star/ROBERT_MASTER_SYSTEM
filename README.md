@@ -137,6 +137,63 @@ Estos conceptos no deben mezclarse.
 
 ### Escala oficial de riesgo
 
+---
+
+## COMPONENTS_SPEC v0.2 aprobado
+
+Robert ya cuenta con:
+
+**ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2**
+
+Estado:
+
+**Aprobado como especificación técnica documental inicial del MVP técnico básico**
+
+### Qué define
+
+Este documento define los componentes prioritarios del MVP técnico básico de Robert:
+
+* AppShell
+* TopBar
+* LeftSidebar
+* CommandCenter
+* ModeSelector
+* RiskBadge
+* ApprovalGate
+* DecisionInbox
+* DocumentStatusMap
+* CurrentStatePanel
+
+### Alcance
+
+Esta aprobación es únicamente documental.
+
+No autoriza:
+
+* Programar la app
+* Crear código
+* Conectar APIs reales
+* Conectar GitHub automáticamente
+* Conectar Gmail
+* Conectar Google Calendar
+* Automatizar acciones
+* Activar agentes autónomos
+* Ejecutar acciones reales
+* Avanzar automáticamente a Fase 11
+
+### Estado actual
+
+Robert se mantiene en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+El siguiente documento recomendado, si el usuario lo autoriza, es:
+
+**ROBERT_TECHNICAL_DATA_MODEL_SPEC**
+
+---
+
+
 ```text
 Nivel 0 — Informativo
 Nivel 1 — Bajo
