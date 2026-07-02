@@ -3392,3 +3392,102 @@ No autoriza:
 
 ROBERT_CONTROL_DE_CAMBIOS queda alineado con ROBERT_SECURITY_RULES en la separación entre riesgo, autonomía, tipo de cambio y estado documental.
 
+
+---
+
+# CAMBIO #015 — Aprobación e integración de ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2
+
+Fecha: 30/06/2026
+Estado: Aprobado e integrado
+Documento afectado: ROBERT_TECHNICAL_COMPONENTS_SPEC
+Tipo de cambio: Cambio técnico documental / especificación técnica
+Nivel de riesgo inicial: Nivel 3 — Alto
+Nivel de riesgo final: Nivel 2 — Medio
+Nivel de autonomía: Nivel 0 — Sin autonomía ejecutiva
+Decisión relacionada: DECISIÓN #011 — Aprobación de ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2
+
+---
+
+## Cambio realizado
+
+Se actualizó el documento oficial:
+
+**ROBERT_TECHNICAL_COMPONENTS_SPEC**
+
+de versión v0.1 a versión v0.2.
+
+La versión v0.2 toma como base la propuesta aprobada:
+
+**ROBERT_TECHNICAL_COMPONENTS_SPEC_v0.2_PROPUESTA**
+
+---
+
+## Motivo del cambio
+
+La versión v0.1 tenía problemas de alineación con la fuente de verdad y sobrealcance técnico.
+
+La versión v0.2 corrige esos puntos y queda alineada con:
+
+* ROBERT_CONTEXT_MASTER v0.5
+* ROBERT_PHASES v0.5
+* ROBERT_SECURITY_RULES
+* ROBERT_CONTROL_DE_CAMBIOS
+* ROBERT_DECISIONS_LOG
+* ROBERT_TECHNICAL_MVP_PLAN
+* ROBERT_TECHNICAL_MVP_WIREFRAME v0.3
+
+---
+
+## Correcciones integradas
+
+La versión v0.2:
+
+* Reancla el estado del proyecto a ROBERT_CONTEXT_MASTER v0.5.
+* Respeta la jerarquía canónica de documentos.
+* Separa riesgo, autonomía, tipo de cambio y estado documental.
+* Limita el alcance a 10 componentes prioritarios.
+* Mapea componentes a capas.
+* Deja componentes secundarios para versiones futuras.
+* Mantiene la estructura técnica futura como anexo conceptual.
+* No autoriza programación ni conexiones reales.
+
+---
+
+## Alcance autorizado
+
+Este cambio autoriza únicamente:
+
+* Usar COMPONENTS_SPEC v0.2 como especificación técnica documental inicial.
+* Usarla como base para futuras especificaciones documentales.
+* Mantener el avance dentro de Fase 10.
+* Preparar, si el usuario lo autoriza después, documentos derivados como DATA_MODEL_SPEC.
+
+---
+
+## Alcance no autorizado
+
+Este cambio no autoriza:
+
+* Programar la app.
+* Crear código.
+* Conectar APIs reales.
+* Conectar GitHub automáticamente.
+* Conectar Gmail.
+* Conectar Google Calendar.
+* Automatizar acciones.
+* Activar agentes autónomos.
+* Ejecutar acciones reales.
+* Avanzar automáticamente a Fase 11.
+
+---
+
+## Estado final
+
+ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2 queda aprobado e integrado como especificación técnica documental inicial del MVP técnico básico.
+
+Robert sigue en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Sin programación autorizada, sin conexiones reales, sin automatizaciones reales y sin agentes autónomos activos.
+
