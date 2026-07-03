@@ -8,6 +8,21 @@ Fecha: 29/06/2026
 
 ---
 
+Tags: #robert/orbita-2 #capa/5 #tipo/tecnico #robert/mvp-tecnico
+
+---
+
+# ENLACES DEL WIREFRAME TÉCNICO
+
+ROBERT_TECHNICAL_MVP_WIREFRAME define la estructura visual funcional del MVP técnico básico de Robert.
+
+Enlaces relacionados:
+
+- [[ROBERT_HOME]]
+- [[ROBERT_TECHNICAL_MVP_PLAN]]
+- [[ROBERT_TECHNICAL_COMPONENTS_SPEC]]
+- [[ROBERT_CONTROL_DE_CAMBIOS]]
+
 # 1. OBJETIVO DEL DOCUMENTO
 
 ROBERT_TECHNICAL_MVP_WIREFRAME define cómo debe verse y funcionar visualmente la primera versión técnica básica de Robert.
@@ -22,15 +37,15 @@ Este documento no autoriza programación todavía.
 
 Solo define el diseño funcional mínimo antes de construir.
 
----
+
 ---
 
 # ACTUALIZACIÓN v0.3 — MEJORAS APROBADAS
 
-Fecha: 29/06/2026
-Estado: Aprobada
-Decisión relacionada: DECISIÓN #010 — Aprobación de ROBERT_TECHNICAL_MVP_WIREFRAME v0.3
-Documento anterior: ROBERT_TECHNICAL_MVP_WIREFRAME v0.2
+Fecha: 29/06/2026  
+Estado: Aprobada  
+Decisión relacionada: DECISIÓN #010 — Aprobación de ROBERT_TECHNICAL_MVP_WIREFRAME v0.3  
+Documento anterior: ROBERT_TECHNICAL_MVP_WIREFRAME v0.2  
 Documento base de propuesta: ROBERT_TECHNICAL_MVP_WIREFRAME_v0.3_PROPUESTA
 
 ---
@@ -42,8 +57,11 @@ Esta versión actualiza el wireframe técnico oficial de Robert de v0.2 a v0.3.
 La actualización integra tres mejoras visuales y funcionales aprobadas:
 
 1. RiskBadge con motivo visible
+    
 2. Vista “Pendiente de mi decisión”
+    
 3. Mapa visual de documentos por fase y estado
+    
 
 Estas mejoras hacen que el MVP técnico básico sea más claro, más seguro y más fácil de controlar por el usuario.
 
@@ -63,29 +81,35 @@ Este indicador no solo mostrará el nivel de riesgo, también debe mostrar el mo
 
 Todo RiskBadge debe incluir:
 
-* Nivel de riesgo
-* Nombre del riesgo
-* Motivo del riesgo
-* Estado de aprobación
-* Acción recomendada
+- Nivel de riesgo
+    
+- Nombre del riesgo
+    
+- Motivo del riesgo
+    
+- Estado de aprobación
+    
+- Acción recomendada
+    
 
 ---
 
 ## Escala oficial permitida
 
-Robert solo usará esta escala:
+La escala oficial de riesgo se toma de ROBERT_SECURITY_RULES y va de Nivel 0 a Nivel 4:
 
-* Nivel 1 — Bajo
-* Nivel 2 — Medio
-* Nivel 3 — Alto
-* Nivel 4 — Crítico
+- Nivel 0 — Informativo
+- Nivel 1 — Bajo
+- Nivel 2 — Medio
+- Nivel 3 — Alto
+- Nivel 4 — Crítico
 
-No existe Nivel 5.
+No existe Nivel 5 como riesgo.
+El Nivel 5 solo puede pertenecer a la escala de autonomía, si SECURITY_RULES lo define.
 
-“No permitido” no es un nivel de riesgo.
+"No permitido" es un estado de resultado, no un nivel de riesgo.
 
-“No permitido” es un estado de resultado.
-
+"No permitido" no es un nivel de riesgo; es un estado de resultado.
 ---
 
 ## Ejemplo visual
@@ -124,17 +148,28 @@ Esta vista evita que decisiones importantes queden perdidas dentro de conversaci
 
 La vista “Pendiente de mi decisión” debe mostrar elementos con estados como:
 
-* Aprobación requerida
-* Pendiente de revisión
-* Parcial
-* Parcial avanzada
-* Inconclusa
-* En conflicto
-* Bloqueado por dependencia
-* Borrador pendiente de aprobación
-* Cambio pendiente
-* Riesgo alto pendiente
-* Riesgo crítico pendiente
+- Aprobación requerida
+    
+- Pendiente de revisión
+    
+- Parcial
+    
+- Parcial avanzada
+    
+- Inconclusa
+    
+- En conflicto
+    
+- Bloqueado por dependencia
+    
+- Borrador pendiente de aprobación
+    
+- Cambio pendiente
+    
+- Riesgo alto pendiente
+    
+- Riesgo crítico pendiente
+    
 
 ---
 
@@ -142,14 +177,22 @@ La vista “Pendiente de mi decisión” debe mostrar elementos con estados como
 
 Desde esta vista, el usuario podrá elegir:
 
-* Aprobar
-* Rechazar
-* Pausar
-* Corregir
-* Pedir resumen
-* Pedir comparación
-* Bloquear
-* Mandar a archivo
+- Aprobar
+    
+- Rechazar
+    
+- Pausar
+    
+- Corregir
+    
+- Pedir resumen
+    
+- Pedir comparación
+    
+- Bloquear
+    
+- Mandar a archivo
+    
 
 ---
 
@@ -179,12 +222,18 @@ Mostrar visualmente el estado de los documentos principales de Robert.
 
 Esta vista permite saber rápidamente:
 
-* Qué documentos existen
-* Qué documentos están aprobados
-* Qué documentos están pendientes
-* Qué documentos están en borrador
-* Qué documentos están bloqueados
-* Qué documentos pertenecen a cada fase
+- Qué documentos existen
+    
+- Qué documentos están aprobados
+    
+- Qué documentos están pendientes
+    
+- Qué documentos están en borrador
+    
+- Qué documentos están bloqueados
+    
+- Qué documentos pertenecen a cada fase
+    
 
 ---
 
@@ -238,15 +287,24 @@ Esta actualización autoriza únicamente cambios documentales y visuales del wir
 
 No autoriza:
 
-* Programar la app
-* Conectar APIs reales
-* Conectar GitHub automáticamente
-* Conectar Gmail
-* Conectar Google Calendar
-* Automatizar acciones
-* Ejecutar agentes autónomos
-* Modificar archivos automáticamente
-* Tomar decisiones por el usuario
+- Programar la app
+    
+- Conectar APIs reales
+    
+- Conectar GitHub automáticamente
+    
+- Conectar Gmail
+    
+- Conectar Google Calendar
+    
+- Automatizar acciones
+    
+- Ejecutar agentes autónomos
+    
+- Modificar archivos automáticamente
+    
+- Tomar decisiones por el usuario
+    
 
 ---
 
@@ -258,6 +316,7 @@ La versión v0.3 reemplaza funcionalmente a la v0.2 como referencia principal de
 
 La propuesta v0.3 queda conservada como documento histórico de origen.
 
+---
 ---
 
 # 2. RELACIÓN CON DOCUMENTOS ANTERIORES
@@ -796,7 +855,7 @@ Mostrar de forma rápida el nivel de riesgo de la instrucción.
 
 Robert mantendrá una sola escala oficial de riesgo.
 
-La escala oficial es de Nivel 1 a Nivel 4.
+La escala oficial es de Nivel 0 a Nivel 4.
 
 No se crea Nivel 5.
 
@@ -805,6 +864,17 @@ No se crea Nivel 5.
 “No permitido” es un estado de resultado o bloqueo.
 
 ---
+## Nivel 0 — Informativo
+
+Texto:
+Informativo
+
+Uso:
+Explicar, resumir, mostrar estado, navegar o responder sin cambiar nada.
+
+Estado típico:
+Permitido / Informativo.
+
 
 ## Nivel 1 — Bajo
 
