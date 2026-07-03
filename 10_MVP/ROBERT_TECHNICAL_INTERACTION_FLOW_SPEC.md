@@ -9,9 +9,15 @@ Documento base relacionado: ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1
 Documento relacionado: ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2  
 Fuente de verdad actual: ROBERT_CONTEXT_MASTER v0.5  
 
-Tags: #robert/orbita-2 #robert/mvp #capa/5 #tipo/tecnico
-
 ---
+
+Tags: #robert/orbita-3 #capa/5 #tipo/tecnico #robert/mvp #robert/interaction-flow
+
+[[ROBERT_HOME]]
+[[ROBERT_TECHNICAL_COMPONENTS_SPEC]]
+[[ROBERT_TECHNICAL_DATA_MODEL_SPEC]]
+[[ROBERT_TECHNICAL_MVP_WIREFRAME]]
+[[ROBERT_SECURITY_RULES]]
 
 # OBJETIVO
 
