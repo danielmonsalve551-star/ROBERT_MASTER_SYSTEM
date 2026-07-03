@@ -5,6 +5,14 @@
 Crear un registro central que conserve todas las decisiones importantes del proyecto Robert para evitar pérdida de contexto, contradicciones y cambios sin control.
 
 ---
+Tags: #robert/orbita-2 #capa/4 #tipo/maestro #robert/decisiones #robert/gobierno
+
+[[ROBERT_HOME]]
+[[ROBERT_CONTEXT_MASTER]]
+[[ROBERT_SECURITY_RULES]]
+[[ROBERT_CONTROL_DE_CAMBIOS]]
+[[ROBERT_PHASES]]
+
 
 # PRINCIPIO CENTRAL
 
