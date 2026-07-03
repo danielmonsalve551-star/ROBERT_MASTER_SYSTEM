@@ -10,9 +10,15 @@ Fuente de verdad actual: ROBERT_CONTEXT_MASTER v0.5
 Decisión relacionada: DECISIÓN #012 — Aprobación de ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1  
 Cambio relacionado: CAMBIO #016 — Creación de ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1  
 
-Tags: #robert/orbita-2 #robert/mvp #capa/5 #tipo/tecnico
-
 ---
+Tags: #robert/orbita-3 #capa/5 #tipo/tecnico #robert/mvp #robert/data-model
+
+[[ROBERT_HOME]]
+[[ROBERT_TECHNICAL_COMPONENTS_SPEC]]
+[[ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC]]
+[[ROBERT_SECURITY_RULES]]
+[[ROBERT_SYSTEM_ARCHITECTURE]]
+
 
 # OBJETIVO
 
