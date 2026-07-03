@@ -3598,6 +3598,140 @@ Este cambio no autoriza:
 * Crear base de datos real
 * Crear tablas reales
 * Conectar Supabase
+
+  ---
+
+# CAMBIO #018 — Aprobación de CONVENCIÓN VISUAL v0.2
+
+Fecha: 03/07/2026  
+Estado: Aprobado e integrado  
+Documento afectado: ROBERT_VISUAL  
+Decisión relacionada: DECISIÓN #013 — Aprobación de CONVENCIÓN VISUAL v0.2  
+Fase relacionada: Fase 10 — MVP técnico básico en preparación  
+
+---
+
+## Cambio realizado
+
+Se aprobó e integró la:
+
+**CONVENCIÓN VISUAL v0.2 — ÓRBITAS POR FUNCIÓN ARQUITECTÓNICA**
+
+como criterio oficial para organizar el grafo documental de Robert en Obsidian.
+
+---
+
+## Motivo del cambio
+
+La convención anterior podía generar ambigüedad porque mezclaba documentos de memoria, control, gobierno, visual, sandbox y técnica dentro de las mismas órbitas.
+
+Con esta actualización, la organización visual queda más clara:
+
+**Órbita = función arquitectónica**
+
+**Color = capa o función visual**
+
+---
+
+## Convención integrada
+
+- Núcleo: ROBERT_HOME
+- Órbita 1: Núcleo estructural / Fuente de verdad
+- Órbita 2: Gobierno / Control / Seguridad
+- Órbita 3: Técnico / MVP / Sandbox
+- Órbita 4: Módulos / Capacidades / Puertas futuras
+- Órbita 5: Visual / Presentación
+
+---
+
+## Ajustes específicos
+
+ROBERT_DECISIONS_LOG queda fijo en:
+
+**Capa 4 — Gobierno / Control**
+
+ROBERT_SYSTEM_ARCHITECTURE queda reconocido como:
+
+**Maestro de facto**
+
+ROBERT_CONTROL_DE_CAMBIOS queda reconocido como:
+
+**Maestro de facto**
+
+---
+
+## Alcance autorizado
+
+Este cambio autoriza únicamente:
+
+- Actualizar ROBERT_VISUAL con la convención v0.2.
+- Corregir tags de órbita en documentos existentes.
+- Usar órbitas por función arquitectónica.
+- Mantener colores por capa o función visual.
+- Corregir inconsistencias visuales en Obsidian Graph View.
+
+---
+
+## Alcance no autorizado
+
+Este cambio no autoriza:
+
+- Crear ROBERT_AGENTS.
+- Crear ROBERT_TOOLS.
+- Crear ROBERT_PROJECTS.
+- Crear nodos vacíos solo para llenar el grafo.
+- Programar la app.
+- Conectar herramientas externas.
+- Automatizar acciones.
+- Activar agentes autónomos.
+- Convertir Obsidian Graph View en el HUD final de Robert.
+- Avanzar automáticamente a Fase 11.
+
+---
+
+## Riesgo
+
+Tipo de cambio:
+
+**Cambio visual documental / organización arquitectónica del grafo**
+
+Nivel de riesgo inicial:
+
+**Nivel 2 — Medio**
+
+Motivo:
+
+El cambio afecta la forma en que se organiza visualmente el sistema documental, pero no modifica reglas operativas ni ejecuta acciones reales.
+
+Nivel de riesgo final:
+
+**Nivel 1 — Bajo**
+
+Motivo:
+
+La convención queda limitada a navegación documental en Obsidian.
+
+Nivel de autonomía:
+
+**Nivel 0 — Sin autonomía ejecutiva**
+
+---
+
+## Estado final
+
+CONVENCIÓN VISUAL v0.2 queda aprobada e integrada como criterio oficial del grafo documental de Obsidian.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Sin programación autorizada.
+
+Sin conexiones externas.
+
+Sin automatizaciones reales.
+
+Sin agentes autónomos activos.
 * Conectar Firebase
 * Conectar GitHub automáticamente
 * Conectar Gmail
