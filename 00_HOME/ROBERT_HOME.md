@@ -1956,7 +1956,7 @@ Estado operativo:
 * ROBERT_TECHNICAL_MVP_PLAN aprobado
 * ROBERT_TECHNICAL_MVP_WIREFRAME v0.3 aprobado
 * ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2 aprobado
-* ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1 creado como borrador
+* ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1 aprobado e integrado
 * Convención visual de Obsidian validada
 * Sin programación autorizada todavía
 * Sin conexiones reales
@@ -1981,3 +1981,43 @@ Opciones disponibles:
 
 ---
 
+---
+
+# ACTUALIZACIÓN — DATA_MODEL_SPEC v0.1 APROBADO
+
+Fecha: 02/07/2026  
+Estado: Aprobado e integrado  
+Decisión relacionada: DECISIÓN #012 — Aprobación de ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1  
+Cambio relacionado: CAMBIO #017 — Aprobación e integración de ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1  
+
+---
+
+## Estado actualizado
+
+ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1 queda aprobado como documento técnico documental del MVP técnico básico.
+
+Este documento define los modelos de datos conceptuales que Robert necesitaría para mostrar:
+
+- Estado general del sistema.
+- Documentos.
+- Decisiones.
+- Cambios.
+- Riesgos.
+- Comandos.
+- Decisiones pendientes.
+- Modos operativos.
+- Componentes.
+- Estado de GitHub.
+- Estado visual de Obsidian.
+
+---
+
+## Alcance
+
+La aprobación de este documento no autoriza programación, base de datos real, conexiones externas, automatizaciones ni agentes autónomos.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+---
