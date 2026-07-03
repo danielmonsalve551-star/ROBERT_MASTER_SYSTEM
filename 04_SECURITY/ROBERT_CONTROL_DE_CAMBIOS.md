@@ -7,6 +7,14 @@ Estado: Aprobado como documento oficial de control de cambios de Robert
 Fecha: 29/06/2026
 
 ---
+Tags: #robert/orbita-2 #capa/4 #tipo/maestro #robert/control #robert/cambios
+
+[[ROBERT_HOME]]
+[[ROBERT_CONTEXT_MASTER]]
+[[ROBERT_SECURITY_RULES]]
+[[ROBERT_DECISIONS_LOG]]
+[[ROBERT_PHASES]]
+
 
 # 1. OBJETIVO DEL DOCUMENTO
 
