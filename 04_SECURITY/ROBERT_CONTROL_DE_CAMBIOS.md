@@ -3618,4 +3618,113 @@ ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1 queda creado como:
 
 No está aprobado todavía.
 
+---
 
+# CAMBIO #017 — Aprobación e integración de ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1
+
+Fecha: 02/07/2026  
+Estado: Aprobado e integrado  
+Documento afectado: ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1  
+Ubicación: 10_MVP  
+Decisión relacionada: DECISIÓN #012 — Aprobación de ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1  
+Cambio relacionado previo: CAMBIO #016 — Creación de ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1  
+Fase relacionada: Fase 10 — MVP técnico básico en preparación  
+
+---
+
+## Cambio realizado
+
+Se registró la aprobación formal de:
+
+**ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1**
+
+como documento técnico documental aprobado del MVP técnico básico de Robert.
+
+---
+
+## Motivo del cambio
+
+Después de crear y revisar DATA_MODEL_SPEC v0.1, el usuario aprobó formalmente el documento.
+
+El documento queda integrado como base conceptual para definir qué datos necesitarían los componentes del MVP técnico básico.
+
+---
+
+## Alcance autorizado
+
+Este cambio autoriza únicamente:
+
+- Marcar DATA_MODEL_SPEC v0.1 como aprobado.
+- Integrarlo al estado documental actual de Robert.
+- Usarlo como base para futuras especificaciones técnicas.
+- Relacionarlo con COMPONENTS_SPEC v0.2.
+- Usarlo para entender datos conceptuales del MVP.
+
+---
+
+## Alcance no autorizado
+
+Este cambio no autoriza:
+
+- Programar la app.
+- Crear una base de datos real.
+- Crear tablas reales.
+- Crear código.
+- Conectar Supabase.
+- Conectar Firebase.
+- Conectar GitHub automáticamente.
+- Conectar Gmail.
+- Conectar Google Calendar.
+- Conectar APIs externas.
+- Automatizar acciones.
+- Activar agentes autónomos.
+- Ejecutar acciones reales.
+- Avanzar automáticamente a Fase 11.
+
+---
+
+## Riesgo
+
+Tipo de cambio:
+
+**Aprobación técnica documental / integración de modelo de datos conceptual**
+
+Nivel de riesgo inicial:
+
+**Nivel 3 — Alto**
+
+Motivo:
+
+El documento define la estructura conceptual de datos que podría alimentar una futura implementación técnica.
+
+Nivel de riesgo final:
+
+**Nivel 2 — Medio**
+
+Motivo:
+
+El cambio queda limitado a documentación. No crea base de datos real, no programa, no conecta herramientas y no ejecuta acciones.
+
+Nivel de autonomía:
+
+**Nivel 0 — Sin autonomía ejecutiva**
+
+---
+
+## Estado final
+
+ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1 queda aprobado e integrado documentalmente.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Sin programación autorizada.
+
+Sin base de datos real.
+
+Sin conexiones externas.
+
+Sin automatizaciones reales.
+
+Sin agentes autónomos activos.
