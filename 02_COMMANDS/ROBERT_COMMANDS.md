@@ -12,6 +12,12 @@ Registrar, definir, ordenar y mejorar los comandos que activan funciones dentro 
 Esta versión integra comandos de Autonomía Controlada para permitir que Robert pueda operar con mayor libertad dentro de límites autorizados por el usuario, sin romper ROBERT_SECURITY_RULES ni quitarle autoridad al usuario.
 
 ---
+Tags: #robert/orbita-2 #capa/4 #tipo/maestro #robert/control #robert/comandos
+
+[[ROBERT_HOME]]
+[[ROBERT_CONTEXT_MASTER]]
+[[ROBERT_SECURITY_RULES]]
+[[ROBERT_DECISIONS_LOG]]
 
 14. TIPOS DE COMANDOS
     
