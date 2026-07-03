@@ -6,7 +6,13 @@ Fecha: 30/06/2026
 Ubicación: 05_PHASES
 Documento relacionado: ROBERT_CONTEXT_MASTER v0.5
 
-Tags: #robert/orbita-1 #capa/3 #tipo/maestro
+Tags: #robert/orbita-2 #capa/4 #tipo/maestro #robert/gobierno #robert/fases
+
+[[ROBERT_HOME]]
+[[ROBERT_CONTEXT_MASTER]]
+[[ROBERT_SYSTEM_ARCHITECTURE]]
+[[ROBERT_SECURITY_RULES]]
+[[ROBERT_DECISIONS_LOG]]
 
 ---
 
