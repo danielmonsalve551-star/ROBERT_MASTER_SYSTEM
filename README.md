@@ -211,7 +211,7 @@ Robert ya cuenta con:
 
 Estado:
 
-**Borrador técnico documental pendiente de revisión**
+ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1 aprobado e integrado
 
 ### Qué define
 
@@ -255,5 +255,49 @@ Robert se mantiene en:
 El siguiente punto pendiente es revisar y decidir si se aprueba:
 
 **ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1**
+
+---
+
+---
+
+## DATA_MODEL_SPEC v0.1 aprobado
+
+ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1 queda aprobado e integrado como documento técnico documental del MVP técnico básico de Robert.
+
+### Estado
+
+- Decisión relacionada: DECISIÓN #012
+- Cambio relacionado: CAMBIO #017
+- Estado: Aprobado e integrado
+- Fase: Fase 10 — MVP técnico básico en preparación
+
+### Alcance
+
+Este documento define modelos de datos conceptuales para:
+
+- Estado del sistema
+- Documentos
+- Decisiones
+- Cambios
+- Riesgos
+- Comandos
+- Decisiones pendientes
+- Modos operativos
+- Componentes
+- GitHub
+- Obsidian Graph
+
+### Restricción
+
+Esta aprobación no autoriza:
+
+- Programación
+- Base de datos real
+- Conexiones externas
+- Automatizaciones
+- Agentes autónomos
+- Ejecución real
+
+Robert continúa en modo documental, manual y supervisado.
 
 ---
