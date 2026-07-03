@@ -1419,3 +1419,206 @@ Sin conexiones externas.
 Sin automatizaciones reales.
 
 Sin agentes autónomos activos.
+
+---
+
+# DECISIÓN #013 — Aprobación de CONVENCIÓN VISUAL v0.2
+
+Fecha: 03/07/2026  
+Estado: Aprobada  
+Documento afectado: ROBERT_VISUAL  
+Nombre de la convención: CONVENCIÓN VISUAL v0.2 — ÓRBITAS POR FUNCIÓN ARQUITECTÓNICA  
+Fase relacionada: Fase 10 — MVP técnico básico en preparación  
+
+---
+
+## Decisión tomada
+
+El usuario aprueba formalmente la:
+
+**CONVENCIÓN VISUAL v0.2 — ÓRBITAS POR FUNCIÓN ARQUITECTÓNICA**
+
+como criterio oficial para organizar visualmente el grafo documental de Robert en Obsidian.
+
+---
+
+## Motivo de la decisión
+
+Se aprueba esta convención porque la versión anterior podía generar ambigüedad visual.
+
+El problema principal era que algunas órbitas mezclaban documentos de memoria, control, gobierno, presentación, sandbox y documentos técnicos bajo el mismo criterio de cercanía.
+
+Con esta decisión, la organización visual queda más clara:
+
+**Órbita = función arquitectónica**
+
+**Color = capa o función visual**
+
+---
+
+## Convención aprobada
+
+### Núcleo
+
+Archivo:
+
+- ROBERT_HOME
+
+Función:
+
+Entrada visual principal del sistema.
+
+---
+
+### Órbita 1 — Núcleo estructural / Fuente de verdad
+
+Archivos:
+
+- ROBERT_CONTEXT_MASTER
+- ROBERT_SYSTEM_ARCHITECTURE
+
+Función:
+
+Define el estado maestro, el contexto central y la arquitectura general de Robert.
+
+---
+
+### Órbita 2 — Gobierno / Control / Seguridad
+
+Archivos:
+
+- ROBERT_COMMANDS
+- ROBERT_SECURITY_RULES
+- ROBERT_DECISIONS_LOG
+- ROBERT_CONTROL_DE_CAMBIOS
+- ROBERT_PHASES
+
+Función:
+
+Controla reglas, comandos, decisiones, cambios, fases y seguridad del sistema.
+
+---
+
+### Órbita 3 — Técnico / MVP / Sandbox
+
+Archivos:
+
+- ROBERT_TECHNICAL_MVP_PLAN
+- ROBERT_TECHNICAL_MVP_WIREFRAME
+- ROBERT_TECHNICAL_COMPONENTS_SPEC
+- ROBERT_TECHNICAL_DATA_MODEL_SPEC
+- ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC
+- ROBERT_SANDBOX
+- SANDBOX_RULES
+- SANDBOX_TESTS
+- SANDBOX_RESULTS
+
+Función:
+
+Agrupa pruebas, validaciones y especificaciones técnicas documentales del MVP básico.
+
+---
+
+### Órbita 4 — Módulos / Capacidades / Puertas futuras
+
+Archivo actual:
+
+- ROBERT_MODULES
+
+Archivos futuros no creados todavía:
+
+- ROBERT_AGENTS
+- ROBERT_TOOLS
+- ROBERT_PROJECTS, solo si se aprueba como nota independiente
+
+Función:
+
+Agrupa capacidades, módulos y futuras puertas operativas.
+
+---
+
+### Órbita 5 — Visual / Presentación
+
+Archivos:
+
+- ROBERT_VISUAL
+- ROBERT_VISUAL_REFERENCE, si existe
+
+Función:
+
+Agrupa diseño visual, interfaz, HUD futuro y experiencia de usuario.
+
+---
+
+## Decisiones específicas
+
+ROBERT_DECISIONS_LOG queda fijado en:
+
+**Capa 4 — Gobierno / Control**
+
+Motivo:
+
+Una decisión formal no es solo memoria. Es un acto de gobierno del sistema.
+
+ROBERT_SYSTEM_ARCHITECTURE queda reconocido como:
+
+**Maestro de facto**
+
+Motivo:
+
+Define la arquitectura completa de Robert y se cita constantemente desde otros documentos.
+
+ROBERT_CONTROL_DE_CAMBIOS queda reconocido como:
+
+**Maestro de facto**
+
+Motivo:
+
+Controla trazabilidad, versiones y cambios del sistema.
+
+---
+
+## Alcance autorizado
+
+Esta decisión autoriza únicamente:
+
+- Actualizar ROBERT_VISUAL con la convención v0.2.
+- Corregir tags de órbita en documentos existentes.
+- Usar órbitas por función arquitectónica.
+- Mantener colores por capa o función visual.
+- Corregir inconsistencias visuales en Obsidian Graph View.
+
+---
+
+## Alcance no autorizado
+
+Esta decisión no autoriza:
+
+- Crear ROBERT_AGENTS.
+- Crear ROBERT_TOOLS.
+- Crear ROBERT_PROJECTS.
+- Crear nodos vacíos solo para llenar el grafo.
+- Programar la app.
+- Conectar herramientas externas.
+- Automatizar acciones.
+- Activar agentes autónomos.
+- Convertir Obsidian Graph View en el HUD final de Robert.
+- Avanzar automáticamente a Fase 11.
+
+---
+
+## Estado final
+
+La convención visual v0.2 queda aprobada como criterio oficial para el grafo documental de Obsidian.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Sin programación autorizada.
+
+Sin conexiones externas.
+
+Sin automatizaciones reales.
+
+Sin agentes autónomos activos.
