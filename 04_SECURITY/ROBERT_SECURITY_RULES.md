@@ -13,6 +13,13 @@ Definir los límites, permisos, reglas de autorización, niveles de riesgo, medi
 Esta versión agrega el modelo de Autonomía Controlada, permitiendo que Robert actúe con mayor libertad dentro de límites previamente autorizados, sin eliminar la autoridad del usuario ni las reglas de seguridad.
 
 ---
+Tags: #robert/orbita-2 #capa/4 #tipo/maestro #robert/seguridad #robert/control
+
+[[ROBERT_HOME]]
+[[ROBERT_CONTEXT_MASTER]]
+[[ROBERT_COMMANDS]]
+[[ROBERT_DECISIONS_LOG]]
+[[ROBERT_CONTROL_DE_CAMBIOS]]
 
 8.1 REGLA DE AUTONOMÍA CONTROLADA
 
