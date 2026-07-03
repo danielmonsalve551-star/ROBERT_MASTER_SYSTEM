@@ -8,6 +8,13 @@ Estado: Aprobado como base del MVP técnico básico — pendiente de wireframe
 Fecha: 26/06/2026
 
 ---
+Tags: #robert/orbita-3 #capa/5 #tipo/tecnico #robert/mvp #robert/tecnico
+
+[[ROBERT_HOME]]
+[[ROBERT_CONTEXT_MASTER]]
+[[ROBERT_TECHNICAL_MVP_WIREFRAME]]
+[[ROBERT_TECHNICAL_COMPONENTS_SPEC]]
+[[ROBERT_SECURITY_RULES]]
 
 # 1. OBJETIVO DEL DOCUMENTO
 
