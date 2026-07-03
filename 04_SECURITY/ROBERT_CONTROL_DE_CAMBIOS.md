@@ -3491,3 +3491,131 @@ Robert sigue en:
 
 Sin programación autorizada, sin conexiones reales, sin automatizaciones reales y sin agentes autónomos activos.
 
+---
+
+# CAMBIO #016 — Creación de ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1
+
+Fecha: 02/07/2026
+Estado: Borrador técnico documental creado — pendiente de revisión
+Documento creado: ROBERT_TECHNICAL_DATA_MODEL_SPEC
+Ubicación: 10_MVP
+Tipo de cambio: Cambio técnico documental / modelo de datos conceptual
+Nivel de riesgo inicial: Nivel 3 — Alto
+Nivel de riesgo final esperado: Nivel 2 — Medio
+Nivel de autonomía: Nivel 0 — Sin autonomía ejecutiva
+
+---
+
+## Cambio realizado
+
+Se creó el documento:
+
+**ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1**
+
+como borrador técnico documental para definir los modelos de datos conceptuales iniciales del MVP técnico básico de Robert.
+
+---
+
+## Documento base relacionado
+
+Este documento toma como base:
+
+**ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2**
+
+---
+
+## Motivo del cambio
+
+Después de aprobar COMPONENTS_SPEC v0.2, el siguiente paso lógico dentro de la Fase 10 es definir qué datos conceptuales necesitarían los componentes prioritarios del MVP técnico básico.
+
+---
+
+## Contenido principal del documento
+
+El documento define modelos conceptuales como:
+
+* SystemState
+* RobertDocument
+* DecisionRecord
+* ChangeRecord
+* RiskRecord
+* CommandRequest
+* PendingDecision
+* ModeState
+* ComponentState
+* GitHubBackupStatus
+* ObsidianGraphStatus
+
+También define:
+
+* Datos permitidos
+* Datos prohibidos
+* Relaciones entre modelos
+* Reglas de validación
+* Criterios de aceptación
+* Riesgo del documento
+
+---
+
+## Motivo del riesgo
+
+El documento empieza a definir estructura de datos para una futura implementación técnica.
+
+Aunque no programa nada ni crea una base de datos real, acerca el proyecto a una futura fase de construcción.
+
+---
+
+## Reducción de riesgo
+
+El riesgo final esperado baja a Nivel 2 — Medio porque:
+
+* El documento es conceptual
+* No crea base de datos real
+* No programa la app
+* No conecta herramientas externas
+* No automatiza acciones
+* No ejecuta acciones reales
+* Queda pendiente de revisión antes de aprobación
+
+---
+
+## Alcance autorizado
+
+Este cambio autoriza únicamente:
+
+* Crear el borrador documental
+* Revisarlo
+* Corregirlo
+* Usarlo como base para discusión técnica futura
+
+---
+
+## Alcance no autorizado
+
+Este cambio no autoriza:
+
+* Programar la app
+* Crear base de datos real
+* Crear tablas reales
+* Conectar Supabase
+* Conectar Firebase
+* Conectar GitHub automáticamente
+* Conectar Gmail
+* Conectar Google Calendar
+* Conectar APIs reales
+* Automatizar acciones
+* Activar agentes autónomos
+* Ejecutar acciones reales
+* Avanzar automáticamente a Fase 11
+
+---
+
+## Estado final
+
+ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1 queda creado como:
+
+**Borrador técnico documental pendiente de revisión**
+
+No está aprobado todavía.
+
+
