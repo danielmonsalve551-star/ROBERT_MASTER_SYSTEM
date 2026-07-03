@@ -5,6 +5,13 @@ Estado: Sandbox manual activado — simulación documental segura
 Fecha: 23/06/2026
 
 ---
+Tags: #robert/orbita-3 #capa/4 #tipo/sandbox #robert/sandbox #robert/validacion
+
+[[ROBERT_HOME]]
+[[ROBERT_SECURITY_RULES]]
+[[ROBERT_PHASES]]
+[[SANDBOX_RULES]]
+[[SANDBOX_TESTS]]
 
 # OBJETIVO
 
