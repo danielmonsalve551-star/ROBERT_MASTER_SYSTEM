@@ -67,8 +67,7 @@ Ejemplos:
     
 - La arquitectura interna completa va en ROBERT_SYSTEM_ARCHITECTURE.
 
-Tags: #robert/orbita-1 #capa/0 #tipo/maestro
-
+Tags: #robert/orbita-1 #capa/1 #tipo/maestro #robert/nucleo #robert/memoria
 ---
 
 # ENLACES DE CONTEXTO
@@ -77,10 +76,10 @@ ROBERT_CONTEXT_MASTER funciona como centro conceptual de identidad, memoria base
 
 Enlaces relacionados:
 
-- [[ROBERT_HOME]]
-- [[ROBERT_COMMANDS]]
-- [[ROBERT_SECURITY_RULES]]
-    
+[[ROBERT_HOME]]
+[[ROBERT_SYSTEM_ARCHITECTURE]]
+[[ROBERT_SECURITY_RULES]]
+[[ROBERT_PHASES]]
 
 ---
 
