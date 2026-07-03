@@ -200,3 +200,60 @@ Nivel 1 — Bajo
 Nivel 2 — Medio
 Nivel 3 — Alto
 Nivel 4 — Crítico
+
+---
+
+## DATA_MODEL_SPEC v0.1 creado
+
+Robert ya cuenta con:
+
+**ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1**
+
+Estado:
+
+**Borrador técnico documental pendiente de revisión**
+
+### Qué define
+
+Este documento define los modelos de datos conceptuales iniciales para el MVP técnico básico de Robert, incluyendo:
+
+- SystemState
+- RobertDocument
+- DecisionRecord
+- ChangeRecord
+- RiskRecord
+- CommandRequest
+- PendingDecision
+- ModeState
+- ComponentState
+- GitHubBackupStatus
+- ObsidianGraphStatus
+
+### Alcance
+
+Este documento es únicamente conceptual y documental.
+
+No autoriza:
+
+- Programar la app
+- Crear base de datos real
+- Crear tablas reales
+- Conectar Supabase
+- Conectar Firebase
+- Conectar APIs reales
+- Automatizar acciones
+- Activar agentes autónomos
+- Ejecutar acciones reales
+- Avanzar automáticamente a Fase 11
+
+### Estado actual
+
+Robert se mantiene en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+El siguiente punto pendiente es revisar y decidir si se aprueba:
+
+**ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1**
+
+---
