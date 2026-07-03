@@ -1875,4 +1875,109 @@ El siguiente documento recomendado, si el usuario lo autoriza después, es:
 Ese documento deberá definir los datos internos simulados que Robert necesitaría para operar el MVP técnico básico, sin base de datos real ni programación todavía.
 
 ---
+---
+
+# ACTUALIZACIÓN — DATA_MODEL_SPEC v0.1 CREADO
+
+Fecha: 02/07/2026
+Estado: Borrador técnico documental creado — pendiente de revisión
+Cambio relacionado: CAMBIO #016 — Creación de ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1
+
+---
+
+## Estado actualizado
+
+Se creó el documento:
+
+**ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1**
+
+Ubicación:
+
+**10_MVP**
+
+Estado:
+
+**Borrador técnico documental pendiente de revisión**
+
+---
+
+## Función del documento
+
+Este documento define los modelos de datos conceptuales iniciales que Robert necesitaría para operar el MVP técnico básico.
+
+Define modelos como:
+
+* SystemState
+* RobertDocument
+* DecisionRecord
+* ChangeRecord
+* RiskRecord
+* CommandRequest
+* PendingDecision
+* ModeState
+* ComponentState
+* GitHubBackupStatus
+* ObsidianGraphStatus
+
+---
+
+## Alcance
+
+Este documento es únicamente conceptual y documental.
+
+No crea una base de datos real.
+
+No programa la app.
+
+No conecta herramientas externas.
+
+No automatiza acciones.
+
+No autoriza agentes autónomos.
+
+No autoriza ejecución real.
+
+---
+
+## Estado actual de Robert
+
+Robert se mantiene en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Estado operativo:
+
+* MVP manual validado
+* Sandbox manual validado
+* GitHub configurado como respaldo documental privado
+* ROBERT_CONTEXT_MASTER v0.5 reanclado
+* ROBERT_PHASES v0.5 reconciliado
+* Escala de riesgo y autonomía unificada
+* ROBERT_TECHNICAL_MVP_PLAN aprobado
+* ROBERT_TECHNICAL_MVP_WIREFRAME v0.3 aprobado
+* ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2 aprobado
+* ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1 creado como borrador
+* Convención visual de Obsidian validada
+* Sin programación autorizada todavía
+* Sin conexiones reales
+* Sin automatizaciones reales
+* Sin agentes autónomos activos
+
+---
+
+## Próximo punto pendiente
+
+Revisar y decidir si se aprueba:
+
+**ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1**
+
+Opciones disponibles:
+
+* Revisar
+* Corregir
+* Aprobar formalmente
+* Pausar
+* Archivar
+
+---
 
