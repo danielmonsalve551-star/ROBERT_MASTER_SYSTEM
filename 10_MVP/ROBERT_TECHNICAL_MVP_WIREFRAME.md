@@ -8,7 +8,14 @@ Fecha: 29/06/2026
 
 ---
 
-Tags: #robert/orbita-2 #capa/5 #tipo/tecnico #robert/mvp-tecnico
+Tags: #robert/orbita-3 #capa/5 #tipo/tecnico #robert/mvp #robert/wireframe
+
+[[ROBERT_HOME]]
+[[ROBERT_TECHNICAL_MVP_PLAN]]
+[[ROBERT_TECHNICAL_COMPONENTS_SPEC]]
+[[ROBERT_TECHNICAL_DATA_MODEL_SPEC]]
+[[ROBERT_VISUAL]]
+
 
 ---
 
