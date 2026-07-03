@@ -10,6 +10,13 @@ Uso principal:
 Definir cómo funciona Robert por dentro mediante capas, flujos, módulos, reglas, memoria, control, capacidades, gobierno, autonomía controlada y presentación visual.
 
 ---
+Tags: #robert/orbita-1 #capa/0 #tipo/maestro #robert/arquitectura #robert/nucleo
+
+[[ROBERT_HOME]]
+[[ROBERT_CONTEXT_MASTER]]
+[[ROBERT_PHASES]]
+[[ROBERT_SECURITY_RULES]]
+
 
 1. IDEA PRINCIPAL
     
