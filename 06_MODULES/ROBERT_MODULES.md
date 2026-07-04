@@ -5,6 +5,13 @@ Estado: Base inicial con Business Builder aprobado por el usuario
 Última actualización: Junio 2026
 
 ---
+Tags: #robert/orbita-4 #capa/3 #tipo/maestro #robert/modulos #robert/capacidades
+
+[[ROBERT_HOME]]
+[[ROBERT_CONTEXT_MASTER]]
+[[ROBERT_SYSTEM_ARCHITECTURE]]
+[[ROBERT_TECHNICAL_COMPONENTS_SPEC]]
+[[ROBERT_VISUAL]]
 
 # OBJETIVO
 
