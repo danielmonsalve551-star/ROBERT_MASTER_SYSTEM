@@ -2336,3 +2336,75 @@ Robert continúa en:
 **Fase 10 — MVP técnico básico en preparación**
 
 ---
+
+---
+
+# ACTUALIZACIÓN — INTERACTION_FLOW_SPEC v0.2 APROBADO
+
+Fecha: 03/07/2026  
+Estado: Aprobado e integrado  
+Decisión relacionada: DECISIÓN #014 — Aprobación de ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2  
+Cambio relacionado: CAMBIO #023 — Aprobación e integración de ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2  
+
+---
+
+## Estado actualizado
+
+ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2 queda aprobado e integrado como documento técnico documental del MVP técnico básico.
+
+---
+
+## Función del documento
+
+Este documento define cómo interactúan conceptualmente los componentes principales del MVP técnico básico de Robert.
+
+Incluye:
+
+- AppShell
+- TopBar
+- LeftSidebar
+- CommandCenter
+- ModeSelector
+- RiskBadge
+- ApprovalGate
+- DecisionInbox
+- DocumentStatusMap
+- CurrentStatePanel
+
+---
+
+## Correcciones validadas
+
+La versión v0.2 integra correcciones sobre:
+
+- Rol de AppShell como contenedor raíz.
+- Datos que recibe TopBar.
+- Datos que recibe y envía LeftSidebar.
+- Uso explícito de ComponentState.
+- FLUJO 13 — Estado de componentes.
+- GitHubBackupStatus.
+- ObsidianGraphStatus.
+- Manejo de riesgo Nivel 2.
+- Reglas de actualización de SystemState.
+- Datos que fluyen entre componentes.
+
+---
+
+## Restricción
+
+Esta aprobación no autoriza:
+
+- Programación.
+- Código real.
+- Base de datos real.
+- Conexiones externas.
+- Automatizaciones.
+- Agentes autónomos.
+- Ejecución real.
+- Avanzar a Fase 11.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+---
