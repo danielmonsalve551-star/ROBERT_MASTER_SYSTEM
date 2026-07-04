@@ -890,3 +890,205 @@ LeftSidebar | MainArea
             | DocumentStatusMap
             | DecisionInbox
             | RiskBadge / ApprovalGate
+
+REGLAS DE VISIBILIDAD
+RiskBadge debe mostrarse cuando:
+Hay riesgo Nivel 1 o superior.
+La acción afecta documento.
+La acción afecta seguridad.
+La acción afecta fase.
+La acción afecta fuente de verdad.
+La acción puede acercar a programación.
+La acción puede conectar herramientas.
+ApprovalGate debe mostrarse cuando:
+Se requiere aprobación explícita.
+Hay riesgo Nivel 3 o Nivel 4.
+Nivel 2 afecta documentos maestros, seguridad, fases o fuente de verdad.
+Se intenta crear o aprobar documento técnico.
+Se intenta modificar reglas.
+Se intenta cambiar de fase.
+DecisionInbox debe mostrarse cuando:
+Hay una PendingDecision.
+Existe una decisión bloqueante.
+Existe aprobación formal pendiente.
+El usuario debe elegir entre aprobar, corregir, pausar o rechazar.
+DocumentStatusMap debe mostrarse cuando:
+Se revisan documentos.
+Se aprueba un documento.
+Se registra un cambio.
+Se corrigen tags.
+Se actualiza estado documental.
+CurrentStatePanel debe mostrarse siempre.
+REGLAS DE ACTUALIZACIÓN DE PANTALLA
+
+La pantalla debe actualizarse cuando:
+
+Cambia el documento activo.
+Cambia el modo activo.
+Se detecta riesgo relevante.
+Se crea una decisión pendiente.
+Se aprueba una decisión.
+Se registra un cambio.
+Se crea un documento.
+Se aprueba un documento.
+Se bloquea una acción.
+Se actualiza GitHub manualmente.
+Se corrige la convención visual.
+Cambia el estado general de Robert.
+
+La pantalla no necesita actualización formal cuando:
+
+La respuesta es solo explicativa.
+No cambia documento.
+No cambia modo.
+No cambia decisión.
+No cambia riesgo.
+No cambia estado del sistema.
+DATOS PROHIBIDOS EN PANTALLAS
+
+En esta etapa, ninguna pantalla debe mostrar, guardar o solicitar:
+
+Contraseñas.
+API keys.
+Tokens.
+Datos bancarios.
+Datos fiscales reales.
+Datos legales confidenciales.
+Correos privados.
+Teléfonos de clientes reales.
+Información personal sensible.
+Listas reales de clientes.
+Credenciales de herramientas.
+Datos médicos.
+Datos financieros operativos.
+Documentos privados de terceros sin autorización.
+DATOS PERMITIDOS EN PANTALLAS
+
+Las pantallas pueden mostrar datos documentales y simulados como:
+
+Nombre de documento.
+Estado de documento.
+Versión.
+Fase relacionada.
+Cambio relacionado.
+Decisión relacionada.
+Riesgo conceptual.
+Modo activo.
+Componente relacionado.
+Estado de GitHub manual.
+Estado de Obsidian Graph.
+Notas de revisión.
+Datos ficticios.
+Datos de prueba no sensibles.
+Estado de autorización.
+Estado de programación.
+Estado de conexiones.
+Estado de automatizaciones.
+Estado de agentes.
+ESTADOS QUE NO DEBEN MOSTRARSE TODAVÍA
+
+Robert no debe mostrar como activos:
+
+Gmail conectado.
+Google Calendar conectado.
+GitHub conectado automáticamente.
+Supabase conectado.
+Firebase conectado.
+Base de datos real activa.
+Agentes autónomos activos.
+Automatizaciones reales activas.
+Ejecución real activa.
+Programación autorizada.
+Fase 11 activa.
+
+Si se muestran, deben aparecer como:
+
+No conectado / No autorizado / Futuro / Pendiente
+
+CRITERIOS DE ACEPTACIÓN
+
+Este documento podrá considerarse listo para aprobación si:
+
+Define qué muestra cada pantalla o panel.
+Usa los componentes de COMPONENTS_SPEC v0.2.
+Usa los modelos de DATA_MODEL_SPEC v0.1.
+Respeta los flujos de INTERACTION_FLOW_SPEC v0.2.
+No autoriza programación.
+No autoriza código real.
+No autoriza base de datos real.
+No autoriza conexiones externas.
+No autoriza automatizaciones.
+No autoriza agentes autónomos.
+Mantiene a Robert en Fase 10.
+Define estados permitidos y prohibidos.
+Define reglas de visibilidad.
+Define reglas de actualización de pantalla.
+Mantiene control total del usuario.
+RIESGO DEL DOCUMENTO
+
+Tipo de cambio:
+
+Cambio técnico documental / estados conceptuales de pantalla
+
+Nivel de riesgo inicial:
+
+Nivel 3 — Alto
+
+Motivo:
+
+Este documento empieza a definir cómo se vería la información del MVP técnico básico en pantallas y paneles. Aunque no programa ni diseña la interfaz final, acerca el proyecto a una futura implementación visual.
+
+Nivel de riesgo final esperado:
+
+Nivel 2 — Medio
+
+Motivo de reducción:
+
+El documento es conceptual, no crea pantallas reales, no crea código, no conecta herramientas externas y no ejecuta acciones.
+
+Nivel de autonomía:
+
+Nivel 0 — Sin autonomía ejecutiva
+
+DECISIÓN PENDIENTE
+
+Este documento queda como:
+
+Borrador técnico documental pendiente de revisión
+
+Para aprobarlo formalmente, el usuario deberá escribir:
+
+APRUEBO ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.1
+
+EFECTO DE UNA APROBACIÓN FUTURA
+
+Si se aprueba este documento, se deberá:
+
+Registrar decisión formal en ROBERT_DECISIONS_LOG.
+Registrar cambio en ROBERT_CONTROL_DE_CAMBIOS.
+Actualizar ROBERT_HOME.
+Actualizar README si aplica.
+Mantenerlo como base para futuras especificaciones técnicas.
+No pasar automáticamente a programación.
+No avanzar automáticamente a Fase 11.
+PRÓXIMO PASO RECOMENDADO
+
+Después de revisar este documento, el siguiente documento posible sería:
+
+ROBERT_TECHNICAL_USER_ACTIONS_SPEC
+
+Ese documento definiría qué acciones puede intentar el usuario desde cada pantalla y qué ocurre con cada una.
+
+No debe crearse hasta revisar o aprobar SCREEN_STATE_SPEC.
+
+CIERRE
+
+ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.1 define los estados conceptuales de pantalla del MVP técnico básico de Robert.
+
+Este documento explica qué debe mostrar cada panel, qué datos recibe, qué estados puede tener y qué información no debe mostrarse todavía.
+
+Robert sigue en modo documental, manual y supervisado.
+
+El usuario mantiene control total.
+
+Robert no ejecuta acciones importantes sin permiso
