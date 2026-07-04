@@ -4166,3 +4166,145 @@ Sin conexiones externas.
 Sin automatizaciones reales.
 
 Sin agentes autónomos activos.
+
+---
+
+# CAMBIO #021 — Creación de ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.1
+
+Fecha: 03/07/2026  
+Estado: Borrador técnico documental creado — pendiente de revisión  
+Documento creado: ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.1  
+Ubicación: 10_MVP  
+Documento base relacionado: ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1  
+Documento relacionado: ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2  
+Fase relacionada: Fase 10 — MVP técnico básico en preparación  
+
+---
+
+## Cambio realizado
+
+Se creó el documento:
+
+**ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.1**
+
+como borrador técnico documental para definir los flujos conceptuales de interacción entre los componentes principales del MVP técnico básico de Robert.
+
+---
+
+## Motivo del cambio
+
+Después de aprobar e integrar ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1, el siguiente paso lógico era definir cómo interactúan los componentes del MVP técnico básico usando los modelos de datos conceptuales ya aprobados.
+
+---
+
+## Contenido principal del documento
+
+El documento define flujos conceptuales relacionados con:
+
+- Instrucción del usuario
+- Comando documental simple
+- Aprobación formal de documento
+- Detección de riesgo
+- Bloqueo por acción no autorizada
+- Actualización del estado general
+- Decisiones pendientes
+- Mapa de documentos
+- Modo activo
+- Respuesta de Robert
+- Respaldo manual en GitHub
+- Grafo visual de Obsidian
+
+También define:
+
+- Componentes involucrados
+- Modelos de datos utilizados
+- Reglas de pausa
+- Reglas de bloqueo
+- Reglas de aprobación
+- Datos permitidos
+- Datos prohibidos
+- Criterios de aceptación
+
+---
+
+## Alcance autorizado
+
+Este cambio autoriza únicamente:
+
+- Crear el borrador documental.
+- Revisarlo.
+- Corregirlo.
+- Usarlo como base para discusión técnica futura.
+- Relacionarlo con DATA_MODEL_SPEC v0.1.
+- Relacionarlo con COMPONENTS_SPEC v0.2.
+
+---
+
+## Alcance no autorizado
+
+Este cambio no autoriza:
+
+- Programar la app.
+- Crear código.
+- Crear base de datos real.
+- Crear endpoints.
+- Conectar Supabase.
+- Conectar Firebase.
+- Conectar GitHub automáticamente.
+- Conectar Gmail.
+- Conectar Google Calendar.
+- Conectar APIs externas.
+- Automatizar acciones.
+- Activar agentes autónomos.
+- Ejecutar acciones reales.
+- Avanzar automáticamente a Fase 11.
+
+---
+
+## Riesgo
+
+Tipo de cambio:
+
+**Cambio técnico documental / flujo conceptual de interacción**
+
+Nivel de riesgo inicial:
+
+**Nivel 3 — Alto**
+
+Motivo:
+
+El documento define cómo interactuarían conceptualmente los componentes del MVP técnico básico. Aunque no programa nada, acerca el proyecto a una futura implementación técnica.
+
+Nivel de riesgo final esperado:
+
+**Nivel 2 — Medio**
+
+Motivo:
+
+El documento es conceptual, no crea código, no conecta herramientas externas, no automatiza acciones y no ejecuta nada.
+
+Nivel de autonomía:
+
+**Nivel 0 — Sin autonomía ejecutiva**
+
+---
+
+## Estado final
+
+ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.1 queda creado como:
+
+**Borrador técnico documental pendiente de revisión**
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Sin programación autorizada.
+
+Sin base de datos real.
+
+Sin conexiones externas.
+
+Sin automatizaciones reales.
+
+Sin agentes autónomos activos.
