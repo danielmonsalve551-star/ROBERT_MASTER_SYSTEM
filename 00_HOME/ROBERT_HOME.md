@@ -2021,3 +2021,88 @@ Robert continúa en:
 **Fase 10 — MVP técnico básico en preparación**
 
 ---
+
+---
+
+# ACTUALIZACIÓN — LIMPIEZA DE ÓRBITAS VISUALES v0.2
+
+Fecha: 03/07/2026  
+Estado: Aprobado e integrado  
+Decisión relacionada: DECISIÓN #013 — Aprobación de CONVENCIÓN VISUAL v0.2  
+Cambio relacionado: CAMBIO #019 — Corrección de tags de órbita según CONVENCIÓN VISUAL v0.2  
+
+---
+
+## Estado actualizado
+
+Se corrigieron los tags de órbita de los documentos principales de Robert para alinearlos con la:
+
+**CONVENCIÓN VISUAL v0.2 — ÓRBITAS POR FUNCIÓN ARQUITECTÓNICA**
+
+---
+
+## Criterio oficial
+
+La organización visual del grafo de Obsidian queda definida así:
+
+**Órbita = función arquitectónica**
+
+**Color = capa o función visual**
+
+---
+
+## Órbitas principales
+
+### Órbita 1 — Núcleo estructural / Fuente de verdad
+
+- ROBERT_CONTEXT_MASTER
+- ROBERT_SYSTEM_ARCHITECTURE
+
+### Órbita 2 — Gobierno / Control / Seguridad
+
+- ROBERT_COMMANDS
+- ROBERT_SECURITY_RULES
+- ROBERT_DECISIONS_LOG
+- ROBERT_CONTROL_DE_CAMBIOS
+- ROBERT_PHASES
+
+### Órbita 3 — Técnico / MVP / Sandbox
+
+- ROBERT_TECHNICAL_MVP_PLAN
+- ROBERT_TECHNICAL_MVP_WIREFRAME
+- ROBERT_TECHNICAL_COMPONENTS_SPEC
+- ROBERT_TECHNICAL_DATA_MODEL_SPEC
+- ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC
+- ROBERT_SANDBOX
+- SANDBOX_RULES
+- SANDBOX_TESTS
+- SANDBOX_RESULTS
+
+### Órbita 4 — Módulos / Capacidades
+
+- ROBERT_MODULES
+
+### Órbita 5 — Visual / Presentación
+
+- ROBERT_VISUAL
+
+---
+
+## Restricción
+
+Esta actualización no autoriza:
+
+- Programación.
+- Conexiones externas.
+- Automatizaciones.
+- Agentes autónomos.
+- Crear ROBERT_AGENTS.
+- Crear ROBERT_TOOLS.
+- Crear ROBERT_PROJECTS.
+- Avanzar a Fase 11.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+---
