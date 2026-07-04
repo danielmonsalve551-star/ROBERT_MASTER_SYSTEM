@@ -4443,3 +4443,133 @@ Sin conexiones externas.
 Sin automatizaciones reales.
 
 Sin agentes autónomos activos.
+
+---
+
+# CAMBIO #023 — Aprobación e integración de ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2
+
+Fecha: 03/07/2026  
+Estado: Aprobado e integrado  
+Documento afectado: ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2  
+Ubicación: 10_MVP  
+Decisión relacionada: DECISIÓN #014 — Aprobación de ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2  
+Cambio relacionado previo: CAMBIO #022 — Corrección de ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2  
+Fase relacionada: Fase 10 — MVP técnico básico en preparación  
+
+---
+
+## Cambio realizado
+
+Se registró la aprobación formal e integración documental de:
+
+**ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2**
+
+como documento técnico documental aprobado del MVP técnico básico de Robert.
+
+---
+
+## Motivo del cambio
+
+Después de corregir la versión v0.1 y revisar la propuesta v0.2, el usuario aprobó formalmente el documento.
+
+La versión v0.2 queda integrada porque define con claridad cómo interactúan conceptualmente los componentes principales del MVP técnico básico.
+
+---
+
+## Correcciones integradas
+
+La versión aprobada integra correcciones sobre:
+
+- AppShell como contenedor raíz.
+- TopBar como barra de estado.
+- LeftSidebar como navegación documental.
+- ComponentState dentro del flujo de componentes.
+- GitHubBackupStatus dentro del flujo de respaldo manual.
+- ObsidianGraphStatus dentro del flujo visual de Obsidian.
+- Manejo de riesgo Nivel 2.
+- Reglas de actualización de SystemState.
+- Datos que fluyen entre componentes.
+
+---
+
+## Alcance autorizado
+
+Este cambio autoriza únicamente:
+
+- Marcar INTERACTION_FLOW_SPEC v0.2 como aprobado.
+- Integrarlo al estado documental actual de Robert.
+- Usarlo como base para futuras especificaciones técnicas.
+- Relacionarlo con DATA_MODEL_SPEC v0.1.
+- Relacionarlo con COMPONENTS_SPEC v0.2.
+- Usarlo para entender flujos conceptuales del MVP técnico básico.
+
+---
+
+## Alcance no autorizado
+
+Este cambio no autoriza:
+
+- Programar la app.
+- Crear código real.
+- Crear base de datos real.
+- Crear endpoints.
+- Conectar Supabase.
+- Conectar Firebase.
+- Conectar GitHub automáticamente.
+- Conectar Gmail.
+- Conectar Google Calendar.
+- Conectar APIs externas.
+- Automatizar acciones.
+- Activar agentes autónomos.
+- Ejecutar acciones reales.
+- Avanzar automáticamente a Fase 11.
+
+---
+
+## Riesgo
+
+Tipo de cambio:
+
+**Aprobación técnica documental / integración de flujo conceptual de interacción**
+
+Nivel de riesgo inicial:
+
+**Nivel 3 — Alto**
+
+Motivo:
+
+El documento define cómo interactuarían conceptualmente los componentes del MVP técnico básico.
+
+Nivel de riesgo final:
+
+**Nivel 2 — Medio**
+
+Motivo:
+
+El cambio queda limitado a documentación. No crea código, no conecta herramientas externas, no automatiza acciones y no ejecuta nada.
+
+Nivel de autonomía:
+
+**Nivel 0 — Sin autonomía ejecutiva**
+
+---
+
+## Estado final
+
+ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2 queda aprobado e integrado documentalmente.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Sin programación autorizada.
+
+Sin código real.
+
+Sin base de datos real.
+
+Sin conexiones externas.
+
+Sin automatizaciones reales.
+
+Sin agentes autónomos activos.
