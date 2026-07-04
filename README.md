@@ -639,3 +639,59 @@ Esta actualización no autoriza:
 Robert continúa en modo documental, manual y supervisado.
 
 ---
+
+---
+
+## SCREEN_STATE_SPEC v0.2 aprobado
+
+Estado: Aprobado e integrado  
+Decisión relacionada: DECISIÓN #015  
+Cambio relacionado: CAMBIO #025  
+Fase: Fase 10 — MVP técnico básico en preparación  
+Documento base principal: ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2
+
+### Estado actualizado
+
+ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2 queda aprobado e integrado como documento técnico documental del MVP técnico básico de Robert.
+
+### Qué define
+
+Este documento define los estados conceptuales de pantalla del MVP técnico básico:
+
+- Qué información aparece en cada pantalla o panel
+- Qué datos recibe cada vista
+- Qué datos muestra cada componente
+- Qué estados visuales existen
+- Qué advertencias deben aparecer
+- Qué bloqueos deben mostrarse
+- Qué información no debe mostrarse todavía
+
+### Correcciones integradas
+
+La versión v0.2 integra correcciones sobre:
+
+- AppShell alineado con INTERACTION_FLOW_SPEC v0.2
+- ModeSelector con restricted_modes como dato enviado
+- TopBar con backup_status recuperado
+- DocumentStatusMap sin SystemState como dato directo
+- Regla de alineación entre SCREEN_STATE_SPEC e INTERACTION_FLOW_SPEC
+- Prohibición de inventar nuevas direcciones de datos
+
+### Restricción
+
+Esta aprobación no autoriza:
+
+- Programación
+- Código real
+- Pantallas reales
+- Prototipo funcional
+- Base de datos real
+- Conexiones externas
+- Automatizaciones
+- Agentes autónomos
+- Ejecución real
+- Avanzar a Fase 11
+
+Robert continúa en modo documental, manual y supervisado.
+
+---
