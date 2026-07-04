@@ -2268,3 +2268,71 @@ Opciones disponibles:
 - Archivar
 
 ---
+
+---
+
+# ACTUALIZACIÓN — INTERACTION_FLOW_SPEC v0.2 CORREGIDO
+
+Fecha: 03/07/2026  
+Estado: Propuesta corregida — pendiente de revisión  
+Cambio relacionado: CAMBIO #022 — Corrección de ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2  
+
+---
+
+## Estado actualizado
+
+Se corrigió el documento:
+
+**ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC**
+
+de v0.1 a:
+
+**v0.2 — Propuesta corregida pendiente de revisión**
+
+---
+
+## Correcciones principales
+
+La versión v0.2 corrige:
+
+- Rol de AppShell como contenedor raíz.
+- Datos que recibe TopBar.
+- Datos que recibe y envía LeftSidebar.
+- Uso explícito de ComponentState.
+- Nuevo FLUJO 13 — Estado de componentes.
+- Integración de GitHubBackupStatus.
+- Integración de ObsidianGraphStatus.
+- Manejo específico de riesgo Nivel 2.
+- Regla de cuándo SystemState debe actualizarse.
+- Sección ampliada de datos que fluyen entre componentes.
+
+---
+
+## Estado del documento
+
+ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2 queda como:
+
+**Propuesta corregida pendiente de revisión**
+
+No está aprobado todavía.
+
+---
+
+## Restricción
+
+Esta actualización no autoriza:
+
+- Programación.
+- Código real.
+- Base de datos real.
+- Conexiones externas.
+- Automatizaciones.
+- Agentes autónomos.
+- Ejecución real.
+- Avanzar a Fase 11.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+---
