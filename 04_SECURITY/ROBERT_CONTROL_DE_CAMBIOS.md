@@ -4018,3 +4018,151 @@ Sin conexiones externas.
 Sin automatizaciones reales.
 
 Sin agentes autónomos activos.
+
+---
+
+# CAMBIO #020 — Ajuste visual final de grupos y MVP_PLAN
+
+Fecha: 03/07/2026  
+Estado: Aprobado e integrado  
+Documento relacionado: ROBERT_VISUAL v0.2  
+Documento ajustado: ROBERT_MVP_PLAN  
+Decisión relacionada: DECISIÓN #013 — Aprobación de CONVENCIÓN VISUAL v0.2  
+Cambio relacionado previo: CAMBIO #019 — Corrección de tags de órbita según CONVENCIÓN VISUAL v0.2  
+Fase relacionada: Fase 10 — MVP técnico básico en preparación  
+
+---
+
+## Cambio realizado
+
+Se realizó un ajuste visual final en la organización del grafo de Obsidian después de aplicar la CONVENCIÓN VISUAL v0.2.
+
+El ajuste incluye:
+
+- Mantener el orden de grupos visuales elegido por el usuario.
+- Confirmar que la vista puede priorizar órbitas antes que funciones si visualmente resulta más clara.
+- Actualizar los tags de ROBERT_MVP_PLAN para evitar que aparezca como nodo gris.
+- Integrar ROBERT_MVP_PLAN dentro de la Órbita 3 — Técnico / MVP / Sandbox.
+
+---
+
+## Criterio visual confirmado
+
+El usuario decidió mantener el orden visual donde las órbitas aparecen primero en el panel de grupos de Obsidian.
+
+Este orden prioriza:
+
+**Órbita primero**
+
+**Función después**
+
+Esto permite que el grafo comunique mejor la estructura arquitectónica general del sistema.
+
+---
+
+## Ajuste aplicado a ROBERT_MVP_PLAN
+
+ROBERT_MVP_PLAN queda clasificado como parte de:
+
+**Órbita 3 — Técnico / MVP / Sandbox**
+
+Tags aplicados:
+
+- #robert/orbita-3
+- #capa/5
+- #tipo/tecnico
+- #robert/mvp
+- #robert/plan
+
+---
+
+## Motivo del ajuste
+
+ROBERT_MVP_PLAN aparecía como nodo gris en Obsidian Graph View.
+
+Esto indicaba que:
+
+- No tenía tags visibles.
+- O tenía tags no alineados con los grupos actuales.
+- O no estaba clasificado dentro de la convención visual v0.2.
+
+Con este ajuste, ROBERT_MVP_PLAN queda integrado visualmente al bloque técnico del MVP.
+
+---
+
+## Alcance autorizado
+
+Este cambio autoriza únicamente:
+
+- Mantener el orden visual actual de grupos en Obsidian.
+- Clasificar ROBERT_MVP_PLAN dentro de la Órbita 3.
+- Corregir tags visuales relacionados.
+- Mejorar la navegación documental del grafo.
+- Mantener Obsidian Graph View como herramienta de claridad estructural.
+
+---
+
+## Alcance no autorizado
+
+Este cambio no autoriza:
+
+- Programar la app.
+- Crear base de datos real.
+- Conectar herramientas externas.
+- Automatizar acciones.
+- Activar agentes autónomos.
+- Crear ROBERT_AGENTS.
+- Crear ROBERT_TOOLS.
+- Crear ROBERT_PROJECTS.
+- Convertir Obsidian Graph View en el HUD final.
+- Avanzar automáticamente a Fase 11.
+
+---
+
+## Riesgo
+
+Tipo de cambio:
+
+**Cambio visual documental / ajuste final de grupos y tags**
+
+Nivel de riesgo inicial:
+
+**Nivel 1 — Bajo**
+
+Motivo:
+
+El cambio solo afecta organización visual, tags y navegación documental en Obsidian.
+
+Nivel de riesgo final:
+
+**Nivel 1 — Bajo**
+
+Motivo:
+
+No modifica reglas operativas, no cambia arquitectura interna, no ejecuta acciones y no conecta herramientas externas.
+
+Nivel de autonomía:
+
+**Nivel 0 — Sin autonomía ejecutiva**
+
+---
+
+## Estado final
+
+ROBERT_MVP_PLAN queda integrado visualmente en la Órbita 3.
+
+La vista gráfica de Obsidian queda ajustada según la preferencia visual actual del usuario.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Sin programación autorizada.
+
+Sin base de datos real.
+
+Sin conexiones externas.
+
+Sin automatizaciones reales.
+
+Sin agentes autónomos activos.
