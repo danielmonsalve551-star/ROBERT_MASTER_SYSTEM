@@ -5,6 +5,13 @@ Estado: Borrador inicial del sandbox manual activado — reglas operativas ampli
 Fecha: 23/06/2026
 
 ---
+Tags: #robert/orbita-3 #capa/4 #tipo/sandbox #robert/sandbox #robert/reglas
+
+[[ROBERT_HOME]]
+[[ROBERT_SANDBOX]]
+[[ROBERT_SECURITY_RULES]]
+[[SANDBOX_TESTS]]
+[[SANDBOX_RESULTS]]
 
 # OBJETIVO
 
