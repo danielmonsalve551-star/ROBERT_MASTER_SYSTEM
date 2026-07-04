@@ -301,3 +301,76 @@ Esta aprobación no autoriza:
 Robert continúa en modo documental, manual y supervisado.
 
 ---
+---
+
+## Convención Visual v0.2 integrada
+
+Robert ya cuenta con la:
+
+**CONVENCIÓN VISUAL v0.2 — ÓRBITAS POR FUNCIÓN ARQUITECTÓNICA**
+
+Estado:
+
+- Decisión relacionada: DECISIÓN #013
+- Cambio relacionado: CAMBIO #019
+- Estado: Aprobado e integrado
+- Fase: Fase 10 — MVP técnico básico en preparación
+
+### Criterio oficial
+
+**Órbita = función arquitectónica**
+
+**Color = capa o función visual**
+
+### Órbitas principales
+
+#### Órbita 1 — Núcleo estructural / Fuente de verdad
+
+- ROBERT_CONTEXT_MASTER
+- ROBERT_SYSTEM_ARCHITECTURE
+
+#### Órbita 2 — Gobierno / Control / Seguridad
+
+- ROBERT_COMMANDS
+- ROBERT_SECURITY_RULES
+- ROBERT_DECISIONS_LOG
+- ROBERT_CONTROL_DE_CAMBIOS
+- ROBERT_PHASES
+
+#### Órbita 3 — Técnico / MVP / Sandbox
+
+- ROBERT_TECHNICAL_MVP_PLAN
+- ROBERT_TECHNICAL_MVP_WIREFRAME
+- ROBERT_TECHNICAL_COMPONENTS_SPEC
+- ROBERT_TECHNICAL_DATA_MODEL_SPEC
+- ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC
+- ROBERT_SANDBOX
+- SANDBOX_RULES
+- SANDBOX_TESTS
+- SANDBOX_RESULTS
+
+#### Órbita 4 — Módulos / Capacidades
+
+- ROBERT_MODULES
+
+#### Órbita 5 — Visual / Presentación
+
+- ROBERT_VISUAL
+
+### Restricción
+
+Esta actualización no autoriza:
+
+- Programación
+- Base de datos real
+- Conexiones externas
+- Automatizaciones
+- Agentes autónomos
+- Crear ROBERT_AGENTS
+- Crear ROBERT_TOOLS
+- Crear ROBERT_PROJECTS
+- Avanzar a Fase 11
+
+Robert continúa en modo documental, manual y supervisado.
+
+---
