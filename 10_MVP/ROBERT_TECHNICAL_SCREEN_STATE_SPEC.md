@@ -1,11 +1,11 @@
 # ROBERT_TECHNICAL_SCREEN_STATE_SPEC
 
-Versión: 0.1  
-Estado: Borrador técnico documental nuevo — pendiente de revisión  
-Fecha: 03/07/2026  
+Versión: 0.2  
+Estado: Propuesta corregida — pendiente de revisión  
+Fecha: 04/07/2026  
 Ubicación: 10_MVP  
 Fase relacionada: Fase 10 — MVP técnico básico en preparación  
-Documento base relacionado: ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2  
+Documento base principal: ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2  
 Documentos relacionados: ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2, ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1  
 Fuente de verdad actual: ROBERT_CONTEXT_MASTER v0.5  
 
@@ -47,15 +47,13 @@ Este documento no conecta herramientas externas.
 
 Este documento no ejecuta acciones reales.
 
-Este documento solo define estados conceptuales de pantalla para una futura implementación controlada.
-
 ---
 
 # ESTADO DEL DOCUMENTO
 
 Este documento queda como:
 
-**Borrador técnico documental nuevo — pendiente de revisión**
+**Propuesta corregida — pendiente de revisión**
 
 No está aprobado todavía.
 
@@ -74,6 +72,55 @@ No autoriza automatizaciones.
 No autoriza agentes autónomos.
 
 No autoriza ejecución real.
+
+---
+
+# CORRECCIONES DE LA VERSIÓN v0.2
+
+Esta versión corrige inconsistencias detectadas en v0.1.
+
+Correcciones principales:
+
+1. AppShell queda alineado con INTERACTION_FLOW_SPEC v0.2.
+2. AppShell recibe exactamente:
+   - system_state
+   - component_list
+   - active_mode
+   - current_phase
+   - active_document
+   - layout_status
+3. PendingDecision y RiskRecord no se declaran como datos directos de AppShell.
+4. ModeSelector corrige la dirección de `restricted_modes`.
+5. `restricted_modes` queda como dato enviado por ModeSelector, no recibido.
+6. TopBar recupera `backup_status`.
+7. TopBar debe mostrar estado de respaldo manual de GitHub.
+8. DocumentStatusMap deja de recibir SystemState directamente.
+9. DocumentStatusMap queda alineado con INTERACTION_FLOW_SPEC v0.2.
+10. Se agrega regla de alineación documental entre SCREEN_STATE_SPEC e INTERACTION_FLOW_SPEC.
+
+---
+
+# REGLA DE ALINEACIÓN ENTRE DOCUMENTOS
+
+INTERACTION_FLOW_SPEC v0.2 es la fuente principal para definir:
+
+- Dirección de datos.
+- Qué componente recibe qué información.
+- Qué componente envía qué información.
+- Flujo conceptual entre componentes.
+
+SCREEN_STATE_SPEC v0.2 define:
+
+- Cómo se muestra esa información en pantalla.
+- Qué ve el usuario.
+- Qué estados visuales tiene cada panel.
+- Qué advertencias, bloqueos o aprobaciones deben aparecer.
+
+Regla:
+
+**SCREEN_STATE_SPEC no debe inventar nuevas direcciones de datos que no existan en INTERACTION_FLOW_SPEC.**
+
+Si una pantalla necesita un nuevo dato que no está en INTERACTION_FLOW_SPEC, primero debe revisarse si se requiere actualizar INTERACTION_FLOW_SPEC.
 
 ---
 
@@ -110,7 +157,7 @@ Estado operativo actual:
 - ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2 aprobado.
 - ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1 aprobado e integrado.
 - ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2 aprobado e integrado.
-- ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.1 creado como borrador.
+- ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2 como propuesta corregida pendiente de revisión.
 - Convención visual de Obsidian v0.2 aprobada e integrada.
 - Sin programación autorizada.
 - Sin código real.
@@ -129,6 +176,7 @@ Este documento autoriza únicamente:
 - Definir qué información debe aparecer en cada panel.
 - Relacionar pantallas con modelos de datos.
 - Relacionar pantallas con componentes.
+- Mantener alineación con INTERACTION_FLOW_SPEC v0.2.
 - Definir estados visuales permitidos.
 - Definir estados visuales prohibidos.
 - Definir cuándo una pantalla debe mostrar advertencia, pausa o bloqueo.
@@ -191,7 +239,7 @@ Las pantallas del MVP técnico básico se componen de:
 
 ---
 
-# MODELOS DE DATOS UTILIZADOS
+# MODELOS DE DATOS RELACIONADOS
 
 Este documento se apoya en los modelos definidos en DATA_MODEL_SPEC v0.1:
 
@@ -215,7 +263,7 @@ Este documento se apoya en los modelos definidos en DATA_MODEL_SPEC v0.1:
 
 AppShell es el contenedor raíz del MVP técnico básico.
 
-Organiza la pantalla principal y aloja los componentes.
+Organiza la pantalla principal y aloja los componentes visuales.
 
 No toma decisiones.
 
@@ -239,18 +287,35 @@ No aprueba nada.
 
 ## Datos que recibe
 
-- SystemState.
-- ComponentState.
-- ModeState.
-- RobertDocument activo.
-- PendingDecision si existe.
-- RiskRecord si existe.
+AppShell recibe exactamente los datos definidos en INTERACTION_FLOW_SPEC v0.2:
+
+- system_state
+- component_list
+- active_mode
+- current_phase
+- active_document
+- layout_status
+
+## Aclaración importante
+
+AppShell puede alojar visualmente componentes como:
+
+- DecisionInbox
+- RiskBadge
+- ApprovalGate
+
+Pero AppShell no recibe directamente:
+
+- PendingDecision
+- RiskRecord
+
+Esos datos pertenecen a los componentes especializados que los muestran o procesan.
 
 ## Estados posibles
 
 - Estado normal.
 - Estado con documento activo.
-- Estado con decisión pendiente.
+- Estado con decisión pendiente visible.
 - Estado con riesgo visible.
 - Estado con acción bloqueada.
 - Estado sandbox.
@@ -283,23 +348,26 @@ Debe permitir entender rápidamente en qué fase, modo y estado está el sistema
 - Estado de conexiones externas.
 - Estado de automatizaciones.
 - Estado de agentes.
+- Estado de respaldo manual de GitHub.
+- Último checkpoint si aplica.
 - Indicador de riesgo si existe.
 - Indicador de decisiones pendientes.
 
 ## Datos que recibe
 
-- current_phase.
-- active_mode.
-- execution_status.
-- last_decision.
-- last_change.
-- risk_summary.
-- pending_decision_count.
-- programming_authorized.
-- database_authorized.
-- external_connections_authorized.
-- automations_authorized.
-- agents_authorized.
+- current_phase
+- active_mode
+- execution_status
+- last_decision
+- last_change
+- risk_summary
+- pending_decision_count
+- backup_status
+- programming_authorized
+- database_authorized
+- external_connections_authorized
+- automations_authorized
+- agents_authorized
 
 ## Ejemplo de estado mostrado
 
@@ -310,6 +378,7 @@ Debe permitir entender rápidamente en qué fase, modo y estado está el sistema
 - Conexiones: No activas.
 - Automatizaciones: No activas.
 - Agentes: No activos.
+- GitHub: Respaldo manual.
 
 ## Estados posibles
 
@@ -319,6 +388,8 @@ Debe permitir entender rápidamente en qué fase, modo y estado está el sistema
 - Bloqueado.
 - Sandbox.
 - Solo documental.
+- Respaldo manual actualizado.
+- Respaldo manual pendiente.
 
 ## Restricción
 
@@ -369,18 +440,18 @@ No ejecuta acciones.
 
 ## Datos que recibe
 
-- document_list.
-- folder_structure.
-- active_document.
-- document_status.
-- document_type.
-- orbit_tag.
-- module_list.
+- document_list
+- folder_structure
+- active_document
+- document_status
+- document_type
+- orbit_tag
+- module_list
 
 ## Datos que puede enviar
 
-- selected_document.
-- navigation_target.
+- selected_document
+- navigation_target
 
 ## Estados posibles
 
@@ -423,21 +494,21 @@ No ejecuta acciones reales por sí solo.
 
 ## Datos que recibe
 
-- user_input.
-- active_mode.
-- current_context.
-- active_document.
-- restricted_actions.
-- allowed_actions.
+- user_input
+- active_mode
+- current_context
+- active_document
+- restricted_actions
+- allowed_actions
 
 ## Datos que envía
 
-- CommandRequest.
-- recognized_command.
-- classified_intent.
-- document_affected.
-- module_affected.
-- risk_level_preliminar.
+- CommandRequest
+- recognized_command
+- classified_intent
+- document_affected
+- module_affected
+- risk_level_preliminary
 
 ## Estados posibles
 
@@ -482,19 +553,29 @@ Modos no activos todavía:
 
 ## Datos que recibe
 
-- ModeState.
-- active_mode.
-- restricted_modes.
-- security_rules.
-- user_confirmation_if_required.
+ModeSelector recibe:
+
+- mode_request
+- current_security_rules
+- current_mode
+- user_confirmation_if_required
 
 ## Datos que envía
 
-- active_mode.
-- execution_allowed.
-- automation_allowed.
-- external_actions_allowed.
-- agent_autonomy_allowed.
+ModeSelector envía:
+
+- active_mode
+- restricted_modes
+- execution_allowed
+- automation_allowed
+- external_actions_allowed
+- agent_autonomy_allowed
+
+## Corrección v0.2
+
+`restricted_modes` queda definido como dato enviado por ModeSelector.
+
+No debe aparecer como dato recibido por ModeSelector en esta versión.
 
 ## Estados posibles
 
@@ -534,20 +615,20 @@ Debe hacer visible el riesgo antes de avanzar.
 
 ## Datos que recibe
 
-- CommandRequest.
-- RiskRecord.
-- active_mode.
-- action_type.
-- document_affected.
-- security_rules.
+- CommandRequest
+- RiskRecord
+- active_mode
+- action_type
+- document_affected
+- security_rules
 
 ## Datos que envía
 
-- risk_level.
-- risk_reason.
-- recommended_action.
-- blocking_required.
-- approval_recommended.
+- risk_level
+- risk_reason
+- recommended_action
+- blocking_required
+- approval_recommended
 
 ## Estados posibles
 
@@ -593,19 +674,19 @@ Solo aplica reglas de autorización.
 
 ## Datos que recibe
 
-- RiskRecord.
-- CommandRequest.
-- ModeState.
-- user_approval_if_available.
-- security_rules.
+- RiskRecord
+- CommandRequest
+- ModeState
+- user_approval_if_available
+- security_rules
 
 ## Datos que envía
 
-- approval_required.
-- approval_status.
-- blocked_reason.
-- next_allowed_action.
-- pending_decision_required.
+- approval_required
+- approval_status
+- blocked_reason
+- next_allowed_action
+- pending_decision_required
 
 ## Estados posibles
 
@@ -646,20 +727,20 @@ Sirve para evitar que Robert avance sin autorización.
 
 ## Datos que recibe
 
-- PendingDecision.
-- RiskRecord.
-- ApprovalGate result.
-- related_document.
-- related_change.
+- PendingDecision
+- RiskRecord
+- ApprovalGate result
+- related_document
+- related_change
 
 ## Datos que envía
 
-- pending_id.
-- title.
-- options_available.
-- recommended_option.
-- current_status.
-- decision_required.
+- pending_id
+- title
+- options_available
+- recommended_option
+- current_status
+- decision_required
 
 ## Opciones posibles
 
@@ -709,26 +790,35 @@ Debe permitir ver qué documentos existen, en qué estado están y cómo se rela
 - Riesgo si aplica.
 - Documento base si aplica.
 - Documento dependiente si aplica.
+- Estado de respaldo GitHub manual.
+- Estado visual de Obsidian Graph si aplica.
 
 ## Datos que recibe
 
-- RobertDocument.
-- DecisionRecord.
-- ChangeRecord.
-- ObsidianGraphStatus.
-- GitHubBackupStatus.
-- SystemState.
+DocumentStatusMap recibe únicamente los datos definidos en INTERACTION_FLOW_SPEC v0.2:
+
+- RobertDocument
+- DecisionRecord
+- ChangeRecord
+- ObsidianGraphStatus
+- GitHubBackupStatus
+
+## Corrección v0.2
+
+DocumentStatusMap no recibe SystemState directamente en esta versión.
+
+Si en el futuro se decide que DocumentStatusMap debe depender de SystemState, primero deberá revisarse INTERACTION_FLOW_SPEC.
 
 ## Datos que envía
 
-- document_name.
-- document_status.
-- version.
-- decision_related.
-- change_related.
-- orbit_tag.
-- document_type.
-- risk_level_if_relevant.
+- document_name
+- document_status
+- version
+- decision_related
+- change_related
+- orbit_tag
+- document_type
+- risk_level_if_relevant
 
 ## Estados posibles
 
@@ -778,27 +868,27 @@ Debe ser la vista más clara para saber en qué punto se encuentra el proyecto.
 
 ## Datos que recibe
 
-- SystemState.
-- DecisionRecord.
-- ChangeRecord.
-- RiskRecord.
-- PendingDecision.
-- GitHubBackupStatus.
-- ObsidianGraphStatus.
-- ComponentState.
+- SystemState
+- DecisionRecord
+- ChangeRecord
+- RiskRecord
+- PendingDecision
+- GitHubBackupStatus
+- ObsidianGraphStatus
+- ComponentState
 
 ## Datos que envía
 
-- current_phase.
-- active_mode.
-- last_decision.
-- last_change.
-- execution_status.
-- programming_authorized.
-- database_authorized.
-- external_connections_authorized.
-- automations_authorized.
-- agents_authorized.
+- current_phase
+- active_mode
+- last_decision
+- last_change
+- execution_status
+- programming_authorized
+- database_authorized
+- external_connections_authorized
+- automations_authorized
+- agents_authorized
 
 ## Estados posibles
 
@@ -890,149 +980,198 @@ LeftSidebar | MainArea
             | DocumentStatusMap
             | DecisionInbox
             | RiskBadge / ApprovalGate
+```
 
-REGLAS DE VISIBILIDAD
-RiskBadge debe mostrarse cuando:
-Hay riesgo Nivel 1 o superior.
-La acción afecta documento.
-La acción afecta seguridad.
-La acción afecta fase.
-La acción afecta fuente de verdad.
-La acción puede acercar a programación.
-La acción puede conectar herramientas.
-ApprovalGate debe mostrarse cuando:
-Se requiere aprobación explícita.
-Hay riesgo Nivel 3 o Nivel 4.
-Nivel 2 afecta documentos maestros, seguridad, fases o fuente de verdad.
-Se intenta crear o aprobar documento técnico.
-Se intenta modificar reglas.
-Se intenta cambiar de fase.
-DecisionInbox debe mostrarse cuando:
-Hay una PendingDecision.
-Existe una decisión bloqueante.
-Existe aprobación formal pendiente.
-El usuario debe elegir entre aprobar, corregir, pausar o rechazar.
-DocumentStatusMap debe mostrarse cuando:
-Se revisan documentos.
-Se aprueba un documento.
-Se registra un cambio.
-Se corrigen tags.
-Se actualiza estado documental.
-CurrentStatePanel debe mostrarse siempre.
-REGLAS DE ACTUALIZACIÓN DE PANTALLA
+---
+
+# REGLAS DE VISIBILIDAD
+
+## RiskBadge debe mostrarse cuando:
+
+- Hay riesgo Nivel 1 o superior.
+- La acción afecta documento.
+- La acción afecta seguridad.
+- La acción afecta fase.
+- La acción afecta fuente de verdad.
+- La acción puede acercar a programación.
+- La acción puede conectar herramientas.
+
+## ApprovalGate debe mostrarse cuando:
+
+- Se requiere aprobación explícita.
+- Hay riesgo Nivel 3 o Nivel 4.
+- Nivel 2 afecta documentos maestros, seguridad, fases o fuente de verdad.
+- Se intenta crear o aprobar documento técnico.
+- Se intenta modificar reglas.
+- Se intenta cambiar de fase.
+
+## DecisionInbox debe mostrarse cuando:
+
+- Hay una PendingDecision.
+- Existe una decisión bloqueante.
+- Existe aprobación formal pendiente.
+- El usuario debe elegir entre aprobar, corregir, pausar o rechazar.
+
+## DocumentStatusMap debe mostrarse cuando:
+
+- Se revisan documentos.
+- Se aprueba un documento.
+- Se registra un cambio.
+- Se corrigen tags.
+- Se actualiza estado documental.
+- Se quiere revisar respaldo manual de GitHub.
+- Se quiere revisar estado visual de Obsidian Graph.
+
+## CurrentStatePanel debe mostrarse siempre.
+
+## TopBar debe mostrarse siempre.
+
+---
+
+# REGLAS DE ACTUALIZACIÓN DE PANTALLA
 
 La pantalla debe actualizarse cuando:
 
-Cambia el documento activo.
-Cambia el modo activo.
-Se detecta riesgo relevante.
-Se crea una decisión pendiente.
-Se aprueba una decisión.
-Se registra un cambio.
-Se crea un documento.
-Se aprueba un documento.
-Se bloquea una acción.
-Se actualiza GitHub manualmente.
-Se corrige la convención visual.
-Cambia el estado general de Robert.
+- Cambia el documento activo.
+- Cambia el modo activo.
+- Se detecta riesgo relevante.
+- Se crea una decisión pendiente.
+- Se aprueba una decisión.
+- Se registra un cambio.
+- Se crea un documento.
+- Se aprueba un documento.
+- Se bloquea una acción.
+- Se actualiza GitHub manualmente.
+- Se corrige la convención visual.
+- Cambia el estado general de Robert.
 
 La pantalla no necesita actualización formal cuando:
 
-La respuesta es solo explicativa.
-No cambia documento.
-No cambia modo.
-No cambia decisión.
-No cambia riesgo.
-No cambia estado del sistema.
-DATOS PROHIBIDOS EN PANTALLAS
+- La respuesta es solo explicativa.
+- No cambia documento.
+- No cambia modo.
+- No cambia decisión.
+- No cambia riesgo.
+- No cambia estado del sistema.
+
+---
+
+# DATOS PROHIBIDOS EN PANTALLAS
 
 En esta etapa, ninguna pantalla debe mostrar, guardar o solicitar:
 
-Contraseñas.
-API keys.
-Tokens.
-Datos bancarios.
-Datos fiscales reales.
-Datos legales confidenciales.
-Correos privados.
-Teléfonos de clientes reales.
-Información personal sensible.
-Listas reales de clientes.
-Credenciales de herramientas.
-Datos médicos.
-Datos financieros operativos.
-Documentos privados de terceros sin autorización.
-DATOS PERMITIDOS EN PANTALLAS
+- Contraseñas.
+- API keys.
+- Tokens.
+- Datos bancarios.
+- Datos fiscales reales.
+- Datos legales confidenciales.
+- Correos privados.
+- Teléfonos de clientes reales.
+- Información personal sensible.
+- Listas reales de clientes.
+- Credenciales de herramientas.
+- Datos médicos.
+- Datos financieros operativos.
+- Documentos privados de terceros sin autorización.
+
+---
+
+# DATOS PERMITIDOS EN PANTALLAS
 
 Las pantallas pueden mostrar datos documentales y simulados como:
 
-Nombre de documento.
-Estado de documento.
-Versión.
-Fase relacionada.
-Cambio relacionado.
-Decisión relacionada.
-Riesgo conceptual.
-Modo activo.
-Componente relacionado.
-Estado de GitHub manual.
-Estado de Obsidian Graph.
-Notas de revisión.
-Datos ficticios.
-Datos de prueba no sensibles.
-Estado de autorización.
-Estado de programación.
-Estado de conexiones.
-Estado de automatizaciones.
-Estado de agentes.
-ESTADOS QUE NO DEBEN MOSTRARSE TODAVÍA
+- Nombre de documento.
+- Estado de documento.
+- Versión.
+- Fase relacionada.
+- Cambio relacionado.
+- Decisión relacionada.
+- Riesgo conceptual.
+- Modo activo.
+- Componente relacionado.
+- Estado de GitHub manual.
+- Estado de Obsidian Graph.
+- Notas de revisión.
+- Datos ficticios.
+- Datos de prueba no sensibles.
+- Estado de autorización.
+- Estado de programación.
+- Estado de conexiones.
+- Estado de automatizaciones.
+- Estado de agentes.
+
+---
+
+# ESTADOS QUE NO DEBEN MOSTRARSE TODAVÍA
 
 Robert no debe mostrar como activos:
 
-Gmail conectado.
-Google Calendar conectado.
-GitHub conectado automáticamente.
-Supabase conectado.
-Firebase conectado.
-Base de datos real activa.
-Agentes autónomos activos.
-Automatizaciones reales activas.
-Ejecución real activa.
-Programación autorizada.
-Fase 11 activa.
+- Gmail conectado.
+- Google Calendar conectado.
+- GitHub conectado automáticamente.
+- Supabase conectado.
+- Firebase conectado.
+- Base de datos real activa.
+- Agentes autónomos activos.
+- Automatizaciones reales activas.
+- Ejecución real activa.
+- Programación autorizada.
+- Fase 11 activa.
 
 Si se muestran, deben aparecer como:
 
-No conectado / No autorizado / Futuro / Pendiente
+**No conectado / No autorizado / Futuro / Pendiente**
 
-CRITERIOS DE ACEPTACIÓN
+---
+
+# TABLA DE ALINEACIÓN CORREGIDA
+
+| Componente | Datos clave corregidos | Estado v0.2 |
+|---|---|---|
+| AppShell | system_state, component_list, active_mode, current_phase, active_document, layout_status | Alineado con INTERACTION_FLOW_SPEC |
+| ModeSelector | restricted_modes pasa a datos enviados | Corregido |
+| TopBar | backup_status recuperado | Corregido |
+| DocumentStatusMap | SystemState eliminado como dato directo | Alineado con INTERACTION_FLOW_SPEC |
+
+---
+
+# CRITERIOS DE ACEPTACIÓN
 
 Este documento podrá considerarse listo para aprobación si:
 
-Define qué muestra cada pantalla o panel.
-Usa los componentes de COMPONENTS_SPEC v0.2.
-Usa los modelos de DATA_MODEL_SPEC v0.1.
-Respeta los flujos de INTERACTION_FLOW_SPEC v0.2.
-No autoriza programación.
-No autoriza código real.
-No autoriza base de datos real.
-No autoriza conexiones externas.
-No autoriza automatizaciones.
-No autoriza agentes autónomos.
-Mantiene a Robert en Fase 10.
-Define estados permitidos y prohibidos.
-Define reglas de visibilidad.
-Define reglas de actualización de pantalla.
-Mantiene control total del usuario.
-RIESGO DEL DOCUMENTO
+- Define qué muestra cada pantalla o panel.
+- Usa los componentes de COMPONENTS_SPEC v0.2.
+- Usa los modelos de DATA_MODEL_SPEC v0.1.
+- Respeta los flujos de INTERACTION_FLOW_SPEC v0.2.
+- No inventa nuevas direcciones de datos.
+- Corrige AppShell.
+- Corrige ModeSelector.
+- Corrige TopBar.
+- Corrige DocumentStatusMap.
+- No autoriza programación.
+- No autoriza código real.
+- No autoriza base de datos real.
+- No autoriza conexiones externas.
+- No autoriza automatizaciones.
+- No autoriza agentes autónomos.
+- Mantiene a Robert en Fase 10.
+- Define estados permitidos y prohibidos.
+- Define reglas de visibilidad.
+- Define reglas de actualización de pantalla.
+- Mantiene control total del usuario.
+
+---
+
+# RIESGO DEL DOCUMENTO
 
 Tipo de cambio:
 
-Cambio técnico documental / estados conceptuales de pantalla
+**Cambio técnico documental / estados conceptuales de pantalla**
 
 Nivel de riesgo inicial:
 
-Nivel 3 — Alto
+**Nivel 3 — Alto**
 
 Motivo:
 
@@ -1040,7 +1179,7 @@ Este documento empieza a definir cómo se vería la información del MVP técnic
 
 Nivel de riesgo final esperado:
 
-Nivel 2 — Medio
+**Nivel 2 — Medio**
 
 Motivo de reducción:
 
@@ -1048,47 +1187,56 @@ El documento es conceptual, no crea pantallas reales, no crea código, no conect
 
 Nivel de autonomía:
 
-Nivel 0 — Sin autonomía ejecutiva
+**Nivel 0 — Sin autonomía ejecutiva**
 
-DECISIÓN PENDIENTE
+---
+
+# DECISIÓN PENDIENTE
 
 Este documento queda como:
 
-Borrador técnico documental pendiente de revisión
+**Propuesta corregida pendiente de revisión**
 
 Para aprobarlo formalmente, el usuario deberá escribir:
 
-APRUEBO ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.1
+**APRUEBO ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2**
 
-EFECTO DE UNA APROBACIÓN FUTURA
+---
+
+# EFECTO DE UNA APROBACIÓN FUTURA
 
 Si se aprueba este documento, se deberá:
 
-Registrar decisión formal en ROBERT_DECISIONS_LOG.
-Registrar cambio en ROBERT_CONTROL_DE_CAMBIOS.
-Actualizar ROBERT_HOME.
-Actualizar README si aplica.
-Mantenerlo como base para futuras especificaciones técnicas.
-No pasar automáticamente a programación.
-No avanzar automáticamente a Fase 11.
-PRÓXIMO PASO RECOMENDADO
+1. Registrar decisión formal en ROBERT_DECISIONS_LOG.
+2. Registrar cambio en ROBERT_CONTROL_DE_CAMBIOS.
+3. Actualizar ROBERT_HOME.
+4. Actualizar README si aplica.
+5. Mantenerlo como base para futuras especificaciones técnicas.
+6. No pasar automáticamente a programación.
+7. No avanzar automáticamente a Fase 11.
+
+---
+
+# PRÓXIMO PASO RECOMENDADO
 
 Después de revisar este documento, el siguiente documento posible sería:
 
-ROBERT_TECHNICAL_USER_ACTIONS_SPEC
+**ROBERT_TECHNICAL_USER_ACTIONS_SPEC**
 
 Ese documento definiría qué acciones puede intentar el usuario desde cada pantalla y qué ocurre con cada una.
 
 No debe crearse hasta revisar o aprobar SCREEN_STATE_SPEC.
 
-CIERRE
+---
 
-ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.1 define los estados conceptuales de pantalla del MVP técnico básico de Robert.
+# CIERRE
 
-Este documento explica qué debe mostrar cada panel, qué datos recibe, qué estados puede tener y qué información no debe mostrarse todavía.
+ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2 define los estados conceptuales de pantalla del MVP técnico básico de Robert.
+
+Esta versión corrige inconsistencias de datos frente a INTERACTION_FLOW_SPEC v0.2.
 
 Robert sigue en modo documental, manual y supervisado.
 
 El usuario mantiene control total.
 
-Robert no ejecuta acciones importantes sin permiso
+Robert no ejecuta acciones importantes sin permiso.
