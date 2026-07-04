@@ -3869,4 +3869,152 @@ Sin conexiones externas.
 
 Sin automatizaciones reales.
 
+Sin agentes autónomos activos
+
+---
+
+# CAMBIO #019 — Corrección de tags de órbita según CONVENCIÓN VISUAL v0.2
+
+Fecha: 03/07/2026  
+Estado: Aprobado e integrado  
+Documento relacionado: ROBERT_VISUAL v0.2  
+Decisión relacionada: DECISIÓN #013 — Aprobación de CONVENCIÓN VISUAL v0.2  
+Cambio relacionado previo: CAMBIO #018 — Aprobación de CONVENCIÓN VISUAL v0.2  
+Fase relacionada: Fase 10 — MVP técnico básico en preparación  
+
+---
+
+## Cambio realizado
+
+Se corrigieron los tags de órbita en los documentos principales de Robert para alinearlos con la:
+
+**CONVENCIÓN VISUAL v0.2 — ÓRBITAS POR FUNCIÓN ARQUITECTÓNICA**
+
+---
+
+## Criterio aplicado
+
+La convención aprobada establece:
+
+**Órbita = función arquitectónica**
+
+**Color = capa o función visual**
+
+---
+
+## Órbitas actualizadas
+
+### Órbita 1 — Núcleo estructural / Fuente de verdad
+
+- ROBERT_CONTEXT_MASTER
+- ROBERT_SYSTEM_ARCHITECTURE
+
+### Órbita 2 — Gobierno / Control / Seguridad
+
+- ROBERT_COMMANDS
+- ROBERT_SECURITY_RULES
+- ROBERT_DECISIONS_LOG
+- ROBERT_CONTROL_DE_CAMBIOS
+- ROBERT_PHASES
+
+### Órbita 3 — Técnico / MVP / Sandbox
+
+- ROBERT_TECHNICAL_MVP_PLAN
+- ROBERT_TECHNICAL_MVP_WIREFRAME
+- ROBERT_TECHNICAL_COMPONENTS_SPEC
+- ROBERT_TECHNICAL_DATA_MODEL_SPEC
+- ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC
+- ROBERT_SANDBOX
+- SANDBOX_RULES
+- SANDBOX_TESTS
+- SANDBOX_RESULTS
+
+### Órbita 4 — Módulos / Capacidades / Puertas futuras
+
+- ROBERT_MODULES
+
+### Órbita 5 — Visual / Presentación
+
+- ROBERT_VISUAL
+
+---
+
+## Motivo del cambio
+
+Antes de esta corrección, algunos documentos técnicos y visuales podían quedar mezclados bajo órbitas que no reflejaban su función arquitectónica real.
+
+Con esta actualización, el grafo de Obsidian comunica mejor la estructura del sistema Robert.
+
+---
+
+## Alcance autorizado
+
+Este cambio autoriza únicamente:
+
+- Corregir tags de órbita.
+- Alinear documentos existentes con la convención visual v0.2.
+- Mejorar la navegación documental en Obsidian.
+- Mantener el grafo como herramienta de claridad estructural.
+
+---
+
+## Alcance no autorizado
+
+Este cambio no autoriza:
+
+- Crear ROBERT_AGENTS.
+- Crear ROBERT_TOOLS.
+- Crear ROBERT_PROJECTS.
+- Crear nodos vacíos.
+- Programar la app.
+- Conectar herramientas externas.
+- Automatizar acciones.
+- Activar agentes autónomos.
+- Convertir Obsidian Graph View en el HUD final.
+- Avanzar a Fase 11.
+
+---
+
+## Riesgo
+
+Tipo de cambio:
+
+**Cambio visual documental / limpieza de tags de órbita**
+
+Nivel de riesgo inicial:
+
+**Nivel 2 — Medio**
+
+Motivo:
+
+El cambio afecta la organización visual documental del sistema.
+
+Nivel de riesgo final:
+
+**Nivel 1 — Bajo**
+
+Motivo:
+
+El cambio solo organiza tags y navegación visual. No modifica reglas operativas, no ejecuta acciones y no conecta herramientas.
+
+Nivel de autonomía:
+
+**Nivel 0 — Sin autonomía ejecutiva**
+
+---
+
+## Estado final
+
+Los documentos principales de Robert quedan alineados visualmente con la CONVENCIÓN VISUAL v0.2.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Sin programación autorizada.
+
+Sin conexiones externas.
+
+Sin automatizaciones reales.
+
 Sin agentes autónomos activos.
