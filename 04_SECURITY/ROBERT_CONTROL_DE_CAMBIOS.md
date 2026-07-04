@@ -4308,3 +4308,138 @@ Sin conexiones externas.
 Sin automatizaciones reales.
 
 Sin agentes autónomos activos.
+
+---
+
+# CAMBIO #022 — Corrección de ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2
+
+Fecha: 03/07/2026  
+Estado: Propuesta corregida — pendiente de revisión  
+Documento afectado: ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC  
+Versión actualizada: v0.2  
+Ubicación: 10_MVP  
+Cambio relacionado previo: CAMBIO #021 — Creación de ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.1  
+Fase relacionada: Fase 10 — MVP técnico básico en preparación  
+
+---
+
+## Cambio realizado
+
+Se actualizó el documento:
+
+**ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC**
+
+de v0.1 a:
+
+**v0.2 — Propuesta corregida pendiente de revisión**
+
+---
+
+## Motivo del cambio
+
+Durante la revisión de v0.1 se detectaron inconsistencias importantes:
+
+- AppShell estaba listado como componente, pero no aparecía claramente en los flujos.
+- TopBar y LeftSidebar aparecían en algunos flujos, pero no declaraban qué datos recibían.
+- ComponentState estaba declarado como modelo, pero no se usaba en ningún flujo.
+- GitHubBackupStatus y ObsidianGraphStatus aparecían en flujos, pero no en la sección de datos que fluyen.
+- El manejo de riesgo Nivel 2 era ambiguo.
+- No estaba claro cuándo una respuesta simple debía actualizar SystemState o CurrentStatePanel.
+
+---
+
+## Correcciones aplicadas
+
+La versión v0.2 corrige estos puntos mediante:
+
+- Aclaración del rol de AppShell como contenedor raíz.
+- Definición de datos recibidos por TopBar.
+- Definición de datos recibidos y enviados por LeftSidebar.
+- Creación de FLUJO 13 — Estado de componentes.
+- Uso explícito de ComponentState.
+- Integración de GitHubBackupStatus en datos que fluyen.
+- Integración de ObsidianGraphStatus en datos que fluyen.
+- Definición específica para riesgo Nivel 2.
+- Regla clara sobre cuándo SystemState debe actualizarse.
+- Sección ampliada de datos que fluyen entre componentes.
+
+---
+
+## Alcance autorizado
+
+Este cambio autoriza únicamente:
+
+- Corregir el documento técnico.
+- Mantenerlo como propuesta pendiente de revisión.
+- Usarlo como base para revisión técnica documental.
+- Relacionarlo con DATA_MODEL_SPEC v0.1.
+- Relacionarlo con COMPONENTS_SPEC v0.2.
+
+---
+
+## Alcance no autorizado
+
+Este cambio no autoriza:
+
+- Aprobar automáticamente INTERACTION_FLOW_SPEC v0.2.
+- Programar la app.
+- Crear código.
+- Crear base de datos real.
+- Crear endpoints.
+- Conectar herramientas externas.
+- Automatizar acciones.
+- Activar agentes autónomos.
+- Ejecutar acciones reales.
+- Avanzar automáticamente a Fase 11.
+
+---
+
+## Riesgo
+
+Tipo de cambio:
+
+**Cambio técnico documental / corrección de flujo conceptual de interacción**
+
+Nivel de riesgo inicial:
+
+**Nivel 3 — Alto**
+
+Motivo:
+
+El documento define cómo interactuarían conceptualmente los componentes del MVP técnico básico.
+
+Nivel de riesgo final esperado:
+
+**Nivel 2 — Medio**
+
+Motivo:
+
+La corrección sigue siendo documental y conceptual. No programa, no conecta herramientas, no automatiza y no ejecuta acciones.
+
+Nivel de autonomía:
+
+**Nivel 0 — Sin autonomía ejecutiva**
+
+---
+
+## Estado final
+
+ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2 queda como:
+
+**Propuesta corregida pendiente de revisión**
+
+No está aprobado todavía.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Sin programación autorizada.
+
+Sin base de datos real.
+
+Sin conexiones externas.
+
+Sin automatizaciones reales.
+
+Sin agentes autónomos activos.
