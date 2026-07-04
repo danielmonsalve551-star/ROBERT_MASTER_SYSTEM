@@ -4573,3 +4573,147 @@ Sin conexiones externas.
 Sin automatizaciones reales.
 
 Sin agentes autónomos activos.
+
+---
+
+# CAMBIO #024 — Corrección de ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2
+
+Fecha: 04/07/2026  
+Estado: Propuesta corregida — pendiente de revisión  
+Documento afectado: ROBERT_TECHNICAL_SCREEN_STATE_SPEC  
+Versión actualizada: v0.2  
+Ubicación: 10_MVP  
+Fase relacionada: Fase 10 — MVP técnico básico en preparación  
+Documento base principal: ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2  
+
+---
+
+## Cambio realizado
+
+Se corrigió el documento:
+
+**ROBERT_TECHNICAL_SCREEN_STATE_SPEC**
+
+de v0.1 a:
+
+**v0.2 — Propuesta corregida pendiente de revisión**
+
+---
+
+## Motivo del cambio
+
+Durante la revisión de v0.1 se detectaron inconsistencias entre SCREEN_STATE_SPEC e INTERACTION_FLOW_SPEC v0.2.
+
+Las inconsistencias principales estaban en:
+
+- AppShell.
+- ModeSelector.
+- TopBar.
+- DocumentStatusMap.
+
+---
+
+## Correcciones aplicadas
+
+La versión v0.2 corrige:
+
+- AppShell queda alineado con INTERACTION_FLOW_SPEC v0.2.
+- AppShell recibe exactamente:
+  - system_state
+  - component_list
+  - active_mode
+  - current_phase
+  - active_document
+  - layout_status
+- PendingDecision y RiskRecord ya no aparecen como datos directos de AppShell.
+- ModeSelector corrige la dirección de restricted_modes.
+- restricted_modes queda como dato enviado por ModeSelector.
+- TopBar recupera backup_status.
+- TopBar muestra estado de respaldo manual de GitHub.
+- DocumentStatusMap deja de recibir SystemState directamente.
+- DocumentStatusMap queda alineado con INTERACTION_FLOW_SPEC v0.2.
+- Se agrega regla de alineación entre SCREEN_STATE_SPEC e INTERACTION_FLOW_SPEC.
+
+---
+
+## Alcance autorizado
+
+Este cambio autoriza únicamente:
+
+- Corregir el documento técnico.
+- Mantenerlo como propuesta pendiente de revisión.
+- Usarlo para revisión documental.
+- Alinear SCREEN_STATE_SPEC con INTERACTION_FLOW_SPEC v0.2.
+- Mantenerlo dentro de Fase 10.
+
+---
+
+## Alcance no autorizado
+
+Este cambio no autoriza:
+
+- Aprobar automáticamente SCREEN_STATE_SPEC v0.2.
+- Programar la app.
+- Crear código real.
+- Crear pantallas reales.
+- Crear base de datos real.
+- Crear endpoints.
+- Conectar herramientas externas.
+- Automatizar acciones.
+- Activar agentes autónomos.
+- Ejecutar acciones reales.
+- Avanzar automáticamente a Fase 11.
+
+---
+
+## Riesgo
+
+Tipo de cambio:
+
+**Cambio técnico documental / corrección de estados conceptuales de pantalla**
+
+Nivel de riesgo inicial:
+
+**Nivel 3 — Alto**
+
+Motivo:
+
+El documento define cómo se mostraría conceptualmente la información del MVP técnico básico en pantallas y paneles.
+
+Nivel de riesgo final esperado:
+
+**Nivel 2 — Medio**
+
+Motivo:
+
+La corrección sigue siendo documental. No crea pantallas reales, no programa, no conecta herramientas externas y no ejecuta acciones.
+
+Nivel de autonomía:
+
+**Nivel 0 — Sin autonomía ejecutiva**
+
+---
+
+## Estado final
+
+ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2 queda como:
+
+**Propuesta corregida pendiente de revisión**
+
+No está aprobado todavía.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Sin programación autorizada.
+
+Sin código real.
+
+Sin base de datos real.
+
+Sin conexiones externas.
+
+Sin automatizaciones reales.
+
+Sin agentes autónomos activos.
