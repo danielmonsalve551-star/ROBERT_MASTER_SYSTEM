@@ -7,6 +7,14 @@ Revisión final aprobada por el usuario — sandbox manual validado documentalme
 Fecha: 23/06/2026
 
 ---
+Tags: #robert/orbita-3 #capa/4 #tipo/sandbox #robert/sandbox #robert/resultados
+
+[[ROBERT_HOME]]
+[[ROBERT_SANDBOX]]
+[[SANDBOX_RULES]]
+[[SANDBOX_TESTS]]
+[[ROBERT_SECURITY_RULES]]
+
 
 # OBJETIVO
 
