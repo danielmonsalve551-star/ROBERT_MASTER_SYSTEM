@@ -585,3 +585,57 @@ Esta aprobación no autoriza:
 Robert continúa en modo documental, manual y supervisado.
 
 ---
+
+---
+
+## SCREEN_STATE_SPEC v0.2 corregido
+
+Estado: Propuesta corregida — pendiente de revisión  
+Cambio relacionado: CAMBIO #024  
+Fase: Fase 10 — MVP técnico básico en preparación  
+Documento base principal: ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2
+
+### Estado actualizado
+
+ROBERT_TECHNICAL_SCREEN_STATE_SPEC fue actualizado de v0.1 a:
+
+**v0.2 — Propuesta corregida pendiente de revisión**
+
+### Correcciones principales
+
+La versión v0.2 corrige:
+
+- AppShell queda alineado con INTERACTION_FLOW_SPEC v0.2
+- AppShell recibe exactamente:
+  - system_state
+  - component_list
+  - active_mode
+  - current_phase
+  - active_document
+  - layout_status
+- PendingDecision y RiskRecord ya no aparecen como datos directos de AppShell
+- ModeSelector corrige la dirección de restricted_modes
+- restricted_modes queda como dato enviado por ModeSelector
+- TopBar recupera backup_status
+- TopBar muestra estado de respaldo manual de GitHub
+- DocumentStatusMap deja de recibir SystemState directamente
+- DocumentStatusMap queda alineado con INTERACTION_FLOW_SPEC v0.2
+- Se agrega regla de alineación entre SCREEN_STATE_SPEC e INTERACTION_FLOW_SPEC
+
+### Restricción
+
+Esta actualización no autoriza:
+
+- Programación
+- Código real
+- Pantallas reales
+- Base de datos real
+- Conexiones externas
+- Automatizaciones
+- Agentes autónomos
+- Ejecución real
+- Avanzar a Fase 11
+
+Robert continúa en modo documental, manual y supervisado.
+
+---
