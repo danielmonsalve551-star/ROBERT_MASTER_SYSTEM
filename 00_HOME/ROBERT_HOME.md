@@ -2106,3 +2106,54 @@ Robert continúa en:
 **Fase 10 — MVP técnico básico en preparación**
 
 ---
+---
+
+# ACTUALIZACIÓN — AJUSTE VISUAL FINAL DE GRUPOS Y MVP_PLAN
+
+Fecha: 03/07/2026  
+Estado: Aprobado e integrado  
+Cambio relacionado: CAMBIO #020 — Ajuste visual final de grupos y MVP_PLAN  
+
+---
+
+## Estado actualizado
+
+Se realizó el ajuste visual final del grafo de Obsidian.
+
+El usuario decidió mantener el orden visual donde las órbitas aparecen primero en los grupos de Obsidian.
+
+Criterio visual actual:
+
+**Órbita primero**
+
+**Función después**
+
+Esto permite que el grafo comunique mejor la estructura arquitectónica general del sistema.
+
+---
+
+## Ajuste aplicado
+
+ROBERT_MVP_PLAN fue integrado visualmente dentro de:
+
+**Órbita 3 — Técnico / MVP / Sandbox**
+
+Tags aplicados:
+
+- #robert/orbita-3
+- #capa/5
+- #tipo/tecnico
+- #robert/mvp
+- #robert/plan
+
+---
+
+## Restricción
+
+Este ajuste no autoriza programación, base de datos real, conexiones externas, automatizaciones ni agentes autónomos.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+---
