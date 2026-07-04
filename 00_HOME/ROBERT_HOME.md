@@ -2157,3 +2157,114 @@ Robert continúa en:
 **Fase 10 — MVP técnico básico en preparación**
 
 ---
+---
+
+# ACTUALIZACIÓN — INTERACTION_FLOW_SPEC v0.1 CREADO
+
+Fecha: 03/07/2026  
+Estado: Borrador técnico documental creado — pendiente de revisión  
+Cambio relacionado: CAMBIO #021 — Creación de ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.1  
+
+---
+
+## Estado actualizado
+
+Se creó el documento:
+
+**ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.1**
+
+Ubicación:
+
+**10_MVP**
+
+Estado:
+
+**Borrador técnico documental pendiente de revisión**
+
+---
+
+## Función del documento
+
+Este documento define los flujos conceptuales de interacción entre los componentes principales del MVP técnico básico de Robert.
+
+Define cómo fluye la información entre:
+
+- Usuario
+- CommandCenter
+- ModeSelector
+- RiskBadge
+- ApprovalGate
+- DecisionInbox
+- DocumentStatusMap
+- CurrentStatePanel
+- TopBar
+- LeftSidebar
+- AppShell
+
+---
+
+## Documentos relacionados
+
+Este documento se relaciona con:
+
+- ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1
+- ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2
+- ROBERT_TECHNICAL_MVP_WIREFRAME v0.3
+- ROBERT_SECURITY_RULES
+- ROBERT_CONTEXT_MASTER v0.5
+
+---
+
+## Alcance
+
+Este documento es únicamente conceptual y documental.
+
+No programa la app.
+
+No crea código.
+
+No crea base de datos real.
+
+No conecta herramientas externas.
+
+No automatiza acciones.
+
+No autoriza agentes autónomos.
+
+No autoriza ejecución real.
+
+---
+
+## Estado actual de Robert
+
+Robert se mantiene en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Sin programación autorizada.
+
+Sin base de datos real.
+
+Sin conexiones externas.
+
+Sin automatizaciones reales.
+
+Sin agentes autónomos activos.
+
+---
+
+## Próximo punto pendiente
+
+Revisar y decidir si se aprueba:
+
+**ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.1**
+
+Opciones disponibles:
+
+- Revisar
+- Corregir
+- Aprobar formalmente
+- Pausar
+- Archivar
+
+---
