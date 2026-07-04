@@ -8,6 +8,8 @@ Estado: MVP manual y sandbox manual completados y validados documentalmente
 
 ---
 
+Tags: #robert/orbita-3 #capa/5 #tipo/tecnico #robert/mvp #robert/plan
+
 # 1. OBJETIVO DEL DOCUMENTO
 
 ROBERT_MVP_PLAN define la primera versión mínima funcional de Robert.
