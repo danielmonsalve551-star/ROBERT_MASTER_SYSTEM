@@ -423,3 +423,61 @@ Este ajuste no autoriza:
 Robert continúa en modo documental, manual y supervisado.
 
 ---
+---
+
+## INTERACTION_FLOW_SPEC v0.1 creado
+
+Robert ya cuenta con:
+
+**ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.1**
+
+Estado:
+
+**Borrador técnico documental pendiente de revisión**
+
+### Cambio relacionado
+
+- CAMBIO #021 — Creación de ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.1
+
+### Qué define
+
+Este documento define los flujos conceptuales de interacción entre los componentes principales del MVP técnico básico de Robert, incluyendo:
+
+- Usuario
+- CommandCenter
+- ModeSelector
+- RiskBadge
+- ApprovalGate
+- DecisionInbox
+- DocumentStatusMap
+- CurrentStatePanel
+- TopBar
+- LeftSidebar
+- AppShell
+
+### Alcance
+
+Este documento es únicamente conceptual y documental.
+
+No autoriza:
+
+- Programación
+- Código real
+- Base de datos real
+- Conexiones externas
+- Automatizaciones
+- Agentes autónomos
+- Ejecución real
+- Avanzar automáticamente a Fase 11
+
+### Estado actual
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+El siguiente punto pendiente es revisar y decidir si se aprueba:
+
+**ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.1**
+
+---
