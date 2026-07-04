@@ -4717,3 +4717,146 @@ Sin conexiones externas.
 Sin automatizaciones reales.
 
 Sin agentes autónomos activos.
+
+---
+
+# CAMBIO #025 — Aprobación e integración de ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2
+
+Fecha: 04/07/2026  
+Estado: Aprobado e integrado  
+Documento afectado: ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2  
+Ubicación: 10_MVP  
+Decisión relacionada: DECISIÓN #015 — Aprobación de ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2  
+Cambio relacionado previo: CAMBIO #024 — Corrección de ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2  
+Documento base principal: ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2  
+Fase relacionada: Fase 10 — MVP técnico básico en preparación  
+
+---
+
+## Cambio realizado
+
+Se registró la aprobación formal e integración documental de:
+
+**ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2**
+
+como documento técnico documental aprobado del MVP técnico básico de Robert.
+
+---
+
+## Motivo del cambio
+
+Después de corregir la versión v0.1 y revisar la propuesta v0.2, el usuario aprobó formalmente el documento.
+
+La versión v0.2 queda integrada porque define los estados conceptuales de pantalla y mantiene alineación con INTERACTION_FLOW_SPEC v0.2.
+
+---
+
+## Correcciones integradas
+
+La versión aprobada integra correcciones sobre:
+
+- AppShell alineado con INTERACTION_FLOW_SPEC v0.2.
+- AppShell recibe exactamente:
+  - system_state
+  - component_list
+  - active_mode
+  - current_phase
+  - active_document
+  - layout_status
+- PendingDecision y RiskRecord ya no aparecen como datos directos de AppShell.
+- ModeSelector corrige la dirección de restricted_modes.
+- restricted_modes queda como dato enviado por ModeSelector.
+- TopBar recupera backup_status.
+- TopBar muestra estado de respaldo manual de GitHub.
+- DocumentStatusMap deja de recibir SystemState directamente.
+- DocumentStatusMap queda alineado con INTERACTION_FLOW_SPEC v0.2.
+- SCREEN_STATE_SPEC no inventa nuevas direcciones de datos.
+
+---
+
+## Alcance autorizado
+
+Este cambio autoriza únicamente:
+
+- Marcar SCREEN_STATE_SPEC v0.2 como aprobado.
+- Integrarlo al estado documental actual de Robert.
+- Usarlo como base para futuras especificaciones técnicas.
+- Usarlo para definir qué información aparece en pantallas y paneles conceptuales.
+- Relacionarlo con INTERACTION_FLOW_SPEC v0.2.
+- Relacionarlo con COMPONENTS_SPEC v0.2.
+- Relacionarlo con DATA_MODEL_SPEC v0.1.
+
+---
+
+## Alcance no autorizado
+
+Este cambio no autoriza:
+
+- Programar la app.
+- Crear código real.
+- Crear pantallas reales.
+- Crear prototipo funcional.
+- Crear base de datos real.
+- Crear endpoints.
+- Conectar Supabase.
+- Conectar Firebase.
+- Conectar GitHub automáticamente.
+- Conectar Gmail.
+- Conectar Google Calendar.
+- Conectar APIs externas.
+- Automatizar acciones.
+- Activar agentes autónomos.
+- Ejecutar acciones reales.
+- Avanzar automáticamente a Fase 11.
+
+---
+
+## Riesgo
+
+Tipo de cambio:
+
+**Aprobación técnica documental / integración de estados conceptuales de pantalla**
+
+Nivel de riesgo inicial:
+
+**Nivel 3 — Alto**
+
+Motivo:
+
+El documento define cómo se mostraría conceptualmente la información del MVP técnico básico en pantallas y paneles.
+
+Nivel de riesgo final:
+
+**Nivel 2 — Medio**
+
+Motivo:
+
+El cambio queda limitado a documentación. No crea pantallas reales, no programa, no conecta herramientas externas y no ejecuta acciones.
+
+Nivel de autonomía:
+
+**Nivel 0 — Sin autonomía ejecutiva**
+
+---
+
+## Estado final
+
+ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2 queda aprobado e integrado documentalmente.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Sin programación autorizada.
+
+Sin código real.
+
+Sin pantallas reales.
+
+Sin base de datos real.
+
+Sin conexiones externas.
+
+Sin automatizaciones reales.
+
+Sin agentes autónomos activos.
