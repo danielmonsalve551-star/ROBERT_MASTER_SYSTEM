@@ -5,6 +5,13 @@ Estado: Borrador inicial de pruebas sandbox — estructura corregida y lista par
 Fecha: 23/06/2026
 
 ---
+Tags: #robert/orbita-3 #capa/4 #tipo/sandbox #robert/sandbox #robert/pruebas
+
+[[ROBERT_HOME]]
+[[ROBERT_SANDBOX]]
+[[SANDBOX_RULES]]
+[[SANDBOX_RESULTS]]
+[[ROBERT_SECURITY_RULES]]
 
 # OBJETIVO
 
