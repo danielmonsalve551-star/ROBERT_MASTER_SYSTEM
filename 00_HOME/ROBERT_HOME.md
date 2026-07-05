@@ -2926,3 +2926,79 @@ Robert continúa en:
 **Fase 10 — MVP técnico básico en preparación**
 
 ---
+---
+
+# ACTUALIZACIÓN — PERMISSIONS_AND_SCOPES_SPEC v0.2 CORREGIDO
+
+Fecha: 04/07/2026  
+Estado: Propuesta corregida — pendiente de revisión  
+Cambio relacionado: CAMBIO #031 — Corrección de ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2  
+Documento base principal: ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2  
+Documentos relacionados: ROBERT_COMMANDS v0.4, ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2, ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1, ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2, ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2, ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2  
+
+---
+
+## Estado actualizado
+
+Se corrigió el documento:
+
+**ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC**
+
+de v0.1 a:
+
+**v0.2 — Propuesta corregida pendiente de revisión**
+
+---
+
+## Correcciones principales
+
+La versión v0.2 corrige:
+
+- Se conecta Permiso y Alcance con los 11 modelos de DATA_MODEL_SPEC v0.1.
+- Se aclara que Permiso y Alcance no son modelos nuevos oficiales.
+- Se define que Permiso y Alcance son estructuras conceptuales derivadas.
+- Se aclara que no se crea todavía el modelo PermissionScope.
+- Se agrega sección de componentes participantes.
+- Se incluyen los 10 componentes aprobados en COMPONENTS_SPEC v0.2.
+- Se define dónde se muestra permiso activo, alcance, duración, expiración, riesgo, decisión pendiente y revocación.
+- Se agrega tabla de correspondencia entre permisos y acciones de USER_ACTIONS_SPEC v0.2.
+- Se agrega EVENTO 5 — Bloqueo automático como categoría general de respaldo.
+- Se mantiene alineación con ROBERT_COMMANDS v0.4.
+- Se mantiene alineación con ERROR_AND_BLOCKING_SPEC v0.2.
+- Se mantiene alineación con DATA_MODEL_SPEC v0.1.
+
+---
+
+## Estado del documento
+
+ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2 queda como:
+
+**Propuesta corregida pendiente de revisión**
+
+No está aprobado todavía.
+
+---
+
+## Restricción
+
+Esta actualización no autoriza:
+
+- Programación.
+- Código real.
+- Botones reales.
+- Pantallas reales.
+- Sistema real de permisos.
+- Usuarios reales.
+- Roles reales.
+- Base de datos real.
+- Conexiones externas.
+- Automatizaciones.
+- Agentes autónomos.
+- Ejecución real.
+- Avanzar a Fase 11.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+---
