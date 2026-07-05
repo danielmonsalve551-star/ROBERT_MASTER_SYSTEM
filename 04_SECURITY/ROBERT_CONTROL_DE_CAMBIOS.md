@@ -5751,3 +5751,165 @@ Sin conexiones externas.
 Sin automatizaciones reales.
 
 Sin agentes autónomos activos.
+
+---
+
+# CAMBIO #032 — Aprobación e integración de ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2
+
+Fecha: 04/07/2026  
+Estado: Aprobado e integrado  
+Documento afectado: ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2  
+Ubicación: 10_MVP  
+Decisión relacionada: DECISIÓN #019 — Aprobación de ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2  
+Cambio relacionado previo: CAMBIO #031 — Corrección de ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2  
+Documento base principal: ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2  
+Documentos relacionados: ROBERT_COMMANDS v0.4, ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2, ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1, ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2, ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2, ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2  
+Fase relacionada: Fase 10 — MVP técnico básico en preparación  
+
+---
+
+## Cambio realizado
+
+Se registró la aprobación formal e integración documental de:
+
+**ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2**
+
+como documento técnico documental aprobado del MVP técnico básico de Robert.
+
+---
+
+## Motivo del cambio
+
+Después de corregir PERMISSIONS_AND_SCOPES_SPEC v0.1 y revisar la propuesta v0.2, el usuario aprobó formalmente el documento.
+
+La versión v0.2 queda integrada porque define permisos, alcances, límites de autorización, duración, expiración, revocación y acciones permitidas dentro del MVP técnico básico.
+
+---
+
+## Correcciones integradas
+
+La versión aprobada integra:
+
+- Relación explícita entre Permiso, Alcance y los 11 modelos de DATA_MODEL_SPEC v0.1.
+- Aclaración de que Permiso y Alcance no son modelos nuevos oficiales.
+- Definición de Permiso y Alcance como estructuras conceptuales derivadas.
+- Aclaración de que no se crea el modelo PermissionScope en esta versión.
+- Regla de que cualquier modelo nuevo futuro requiere actualizar DATA_MODEL_SPEC.
+- Inclusión de los 10 componentes aprobados en COMPONENTS_SPEC v0.2.
+- Definición de dónde se muestra permiso activo, alcance, duración, expiración, riesgo, decisión pendiente y revocación.
+- Tabla de correspondencia entre los 13 permisos y las acciones de USER_ACTIONS_SPEC v0.2.
+- Inclusión de EVENTO 5 — Bloqueo automático como categoría general de respaldo.
+- Nivel 0 únicamente como Informativo.
+- Acciones de control fuera de la escala de riesgo.
+- Alineación con ROBERT_COMMANDS v0.4.
+- Alineación con USER_ACTIONS_SPEC v0.2.
+- Alineación con ERROR_AND_BLOCKING_SPEC v0.2.
+- Alineación con DATA_MODEL_SPEC v0.1.
+- Alineación con SCREEN_STATE_SPEC v0.2.
+- Alineación con INTERACTION_FLOW_SPEC v0.2.
+- Alineación con COMPONENTS_SPEC v0.2.
+
+---
+
+## Alcance autorizado
+
+Este cambio autoriza únicamente:
+
+- Marcar PERMISSIONS_AND_SCOPES_SPEC v0.2 como aprobado.
+- Integrarlo al estado documental actual de Robert.
+- Usarlo como base documental para futuras especificaciones técnicas.
+- Usarlo para interpretar permisos conceptuales.
+- Usarlo para interpretar alcances conceptuales.
+- Usarlo para definir límites de autorización.
+- Usarlo para definir duración de autorizaciones.
+- Usarlo para definir expiración de autorizaciones.
+- Usarlo para definir revocación.
+- Usarlo para mapear permisos con acciones de usuario.
+- Usarlo para conectar permisos con modelos existentes.
+- Usarlo para conectar permisos con componentes visuales conceptuales.
+- Mantenerlo dentro de Fase 10.
+
+---
+
+## Alcance no autorizado
+
+Este cambio no autoriza:
+
+- Programar la app.
+- Crear código real.
+- Crear botones reales.
+- Crear pantallas reales.
+- Crear prototipo funcional.
+- Crear sistema real de permisos.
+- Crear usuarios reales.
+- Crear roles reales.
+- Crear base de datos real.
+- Crear modelo PermissionScope.
+- Modificar DATA_MODEL_SPEC automáticamente.
+- Crear endpoints.
+- Conectar Supabase.
+- Conectar Firebase.
+- Conectar GitHub automáticamente.
+- Conectar Gmail.
+- Conectar Google Calendar.
+- Conectar APIs externas.
+- Automatizar acciones.
+- Activar agentes autónomos.
+- Ejecutar acciones reales.
+- Avanzar automáticamente a Fase 11.
+
+---
+
+## Riesgo
+
+Tipo de cambio:
+
+**Aprobación técnica documental / integración de permisos y alcances conceptuales**
+
+Nivel de riesgo inicial:
+
+**Nivel 3 — Alto**
+
+Motivo:
+
+El documento define cómo Robert interpreta permisos, alcances, límites de autorización, duración, expiración y revocación.
+
+Nivel de riesgo final:
+
+**Nivel 2 — Medio**
+
+Motivo:
+
+El cambio queda limitado a documentación. No crea sistema real de permisos, no crea modelos nuevos oficiales, no crea botones reales, no crea pantallas reales, no programa, no conecta herramientas externas y no ejecuta acciones.
+
+Nivel de autonomía:
+
+**Nivel 0 — Sin autonomía ejecutiva**
+
+---
+
+## Estado final
+
+ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2 queda aprobado e integrado documentalmente.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Sin programación autorizada.
+
+Sin código real.
+
+Sin botones reales.
+
+Sin pantallas reales.
+
+Sin sistema real de permisos.
+
+Sin base de datos real.
+
+Sin conexiones externas.
+
+Sin automatizaciones reales.
+
+Sin agentes autónomos activos.
