@@ -1899,3 +1899,150 @@ Sin conexiones externas.
 Sin automatizaciones reales.
 
 Sin agentes autónomos activos.
+
+---
+
+# DECISIÓN #016 — Aprobación de ROBERT_COMMANDS v0.4
+
+Fecha: 04/07/2026  
+Estado: Aprobada  
+Documento aprobado: ROBERT_COMMANDS v0.4  
+Ubicación: 02_COMMANDS  
+Cambio relacionado previo: CAMBIO #026 — Corrección de ROBERT_COMMANDS v0.4  
+Versión anterior aprobada: ROBERT_COMMANDS v0.3  
+Fase relacionada: Fase 10 — MVP técnico básico en preparación  
+
+---
+
+## Decisión tomada
+
+El usuario aprueba formalmente el documento:
+
+**ROBERT_COMMANDS v0.4**
+
+como versión corregida del documento maestro de comandos de Robert.
+
+---
+
+## Motivo de la aprobación
+
+ROBERT_COMMANDS v0.4 queda aprobado porque corrige la inconsistencia detectada en ROBERT_COMMANDS v0.3, donde se mezclaban en una misma categoría:
+
+**Nivel 0 — Informativo / Control de seguridad**
+
+La versión v0.4 separa correctamente:
+
+**Nivel 0 — Informativo**
+
+de:
+
+**Acciones de control fuera de la escala de riesgo**
+
+---
+
+## Correcciones validadas
+
+La versión v0.4 valida:
+
+- Nivel 0 queda únicamente como Informativo.
+- DETENTE deja de clasificarse como Riesgo 0.
+- PAUSA deja de clasificarse como Riesgo 0.
+- NO_AVANCES deja de clasificarse como Riesgo 0.
+- SOLO_BORRADOR deja de clasificarse como Riesgo 0.
+- REVOCA_AUTONOMIA deja de clasificarse como Riesgo 0.
+- VOLVER_A_MANUAL deja de clasificarse como Riesgo 0.
+- Los comandos de control quedan como acciones fuera de la escala de riesgo.
+- INFORME_ACCIONES queda como Nivel 0 o Nivel 1 según alcance.
+- ROBERT_COMMANDS queda alineado con Capa 2 — Control.
+- Tag corregido: #capa/2.
+- ROBERT_COMMANDS queda alineado con USER_ACTIONS_SPEC v0.2.
+- ROBERT_COMMANDS queda alineado con INTERACTION_FLOW_SPEC v0.2.
+
+---
+
+## Alcance autorizado
+
+Esta decisión autoriza únicamente:
+
+- Marcar ROBERT_COMMANDS v0.4 como documento aprobado.
+- Usarlo como documento maestro vigente de comandos.
+- Usarlo como base para clasificar comandos informativos.
+- Usarlo como base para clasificar comandos de control fuera de la escala de riesgo.
+- Mantener coherencia con USER_ACTIONS_SPEC v0.2.
+- Mantener coherencia con INTERACTION_FLOW_SPEC v0.2.
+- Mantener coherencia con ROBERT_SECURITY_RULES.
+
+---
+
+## Alcance no autorizado
+
+Esta decisión no autoriza:
+
+- Programar la app.
+- Crear código real.
+- Crear pantallas reales.
+- Crear prototipo funcional.
+- Crear base de datos real.
+- Crear endpoints.
+- Conectar Supabase.
+- Conectar Firebase.
+- Conectar GitHub automáticamente.
+- Conectar Gmail.
+- Conectar Google Calendar.
+- Conectar APIs externas.
+- Automatizar acciones.
+- Activar agentes autónomos.
+- Ejecutar acciones reales.
+- Avanzar automáticamente a Fase 11.
+
+---
+
+## Riesgo
+
+Tipo de cambio:
+
+**Aprobación de documento maestro / comandos y clasificación de riesgo-control**
+
+Nivel de riesgo inicial:
+
+**Nivel 3 — Alto**
+
+Motivo:
+
+ROBERT_COMMANDS es un documento maestro y define comandos operativos del sistema.
+
+Nivel de riesgo final:
+
+**Nivel 2 — Medio**
+
+Motivo:
+
+El documento es conceptual y documental. No programa, no conecta herramientas externas, no automatiza y no ejecuta acciones.
+
+Nivel de autonomía:
+
+**Nivel 0 — Sin autonomía ejecutiva**
+
+---
+
+## Estado final
+
+ROBERT_COMMANDS v0.4 queda aprobado como documento maestro vigente de comandos de Robert.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Sin programación autorizada.
+
+Sin código real.
+
+Sin pantallas reales.
+
+Sin base de datos real.
+
+Sin conexiones externas.
+
+Sin automatizaciones reales.
+
+Sin agentes autónomos activos.
