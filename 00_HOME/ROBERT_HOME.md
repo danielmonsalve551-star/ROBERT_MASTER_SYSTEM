@@ -2848,3 +2848,81 @@ Robert continúa en:
 **Fase 10 — MVP técnico básico en preparación**
 
 ---
+
+---
+
+# ACTUALIZACIÓN — ERROR_AND_BLOCKING_SPEC v0.2 APROBADO
+
+Fecha: 04/07/2026  
+Estado: Aprobado e integrado  
+Decisión relacionada: DECISIÓN #018 — Aprobación de ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2  
+Cambio relacionado: CAMBIO #030 — Aprobación e integración de ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2  
+Documento base principal: ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2  
+Documento maestro relacionado: ROBERT_COMMANDS v0.4  
+
+---
+
+## Estado actualizado
+
+ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2 queda aprobado e integrado como documento técnico documental del MVP técnico básico.
+
+---
+
+## Función del documento
+
+Este documento define cómo Robert debe manejar conceptualmente:
+
+- Errores.
+- Advertencias.
+- Bloqueos automáticos.
+- Bloqueos manuales.
+- Acciones prohibidas.
+- Contradicciones documentales.
+- Riesgos críticos.
+- Capacidades futuras no disponibles.
+
+---
+
+## Correcciones validadas
+
+La versión v0.2 integra:
+
+- Regla de precedencia entre eventos.
+- Uso del evento más específico cuando una acción encaja en varios eventos.
+- EVENTO 5 — Bloqueo automático como categoría general.
+- EVENTOS 15 al 20 como subtipos específicos del EVENTO 5.
+- Conexión no autorizada como EVENTO 16 cuando aplique.
+- Ejecución no autorizada como EVENTO 15 cuando aplique.
+- Agente no autorizado como EVENTO 18 cuando aplique.
+- Dato sensible detectado como EVENTO 19 cuando aplique.
+- Fase incorrecta como EVENTO 20 cuando aplique.
+- Cronología corregida del ejemplo de contradicción documental.
+- Nivel 0 únicamente como Informativo.
+- Acciones de control fuera de la escala de riesgo.
+- Alineación con ROBERT_COMMANDS v0.4.
+- Alineación con USER_ACTIONS_SPEC v0.2.
+- Alineación con documentos oficiales de sandbox.
+
+---
+
+## Restricción
+
+Esta aprobación no autoriza:
+
+- Programación.
+- Código real.
+- Botones reales.
+- Pantallas reales.
+- Prototipo funcional.
+- Base de datos real.
+- Conexiones externas.
+- Automatizaciones.
+- Agentes autónomos.
+- Ejecución real.
+- Avanzar a Fase 11.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+---
