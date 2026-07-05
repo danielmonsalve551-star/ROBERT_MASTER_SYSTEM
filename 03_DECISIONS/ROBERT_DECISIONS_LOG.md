@@ -2046,3 +2046,146 @@ Sin conexiones externas.
 Sin automatizaciones reales.
 
 Sin agentes autónomos activos.
+
+---
+
+# DECISIÓN #017 — Aprobación de ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2
+
+Fecha: 04/07/2026  
+Estado: Aprobada  
+Documento aprobado: ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2  
+Ubicación: 10_MVP  
+Documento base principal: ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2  
+Documento maestro alineado: ROBERT_COMMANDS v0.4  
+Fase relacionada: Fase 10 — MVP técnico básico en preparación  
+
+---
+
+## Decisión tomada
+
+El usuario aprueba formalmente el documento:
+
+**ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2**
+
+como especificación técnica documental para definir las acciones conceptuales que el usuario puede intentar desde cada pantalla o panel del MVP técnico básico de Robert.
+
+---
+
+## Motivo de la aprobación
+
+El documento queda aprobado porque corrige las inconsistencias detectadas en v0.1 y queda alineado con:
+
+- ROBERT_COMMANDS v0.4
+- ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2
+- ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2
+- ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2
+- ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1
+- Documentos oficiales de sandbox
+
+---
+
+## Correcciones validadas
+
+La versión v0.2 valida:
+
+- Nivel 0 queda únicamente como Informativo.
+- Las acciones de control quedan fuera de la escala de riesgo.
+- PAUSA, DETENTE y NO_AVANCES no se clasifican como Riesgo 0.
+- Solicitar bloqueo manual queda como acción de control fuera de escala.
+- El riesgo pertenece a la acción original que se intenta detener o bloquear.
+- Los bloqueos automáticos quedan reservados para ERROR_AND_BLOCKING_SPEC.
+- Se agrega regla de alineación documental.
+- Se agrega cruce explícito con ROBERT_SANDBOX, SANDBOX_RULES, SANDBOX_TESTS y SANDBOX_RESULTS.
+- USER_ACTIONS_SPEC no redefine la lógica del sandbox.
+- USER_ACTIONS_SPEC queda alineado con ROBERT_COMMANDS v0.4.
+
+---
+
+## Alcance autorizado
+
+Esta decisión autoriza únicamente:
+
+- Marcar USER_ACTIONS_SPEC v0.2 como documento aprobado.
+- Usarlo como base documental para futuras especificaciones técnicas.
+- Usarlo para definir acciones conceptuales del usuario.
+- Usarlo para clasificar acciones permitidas, restringidas, bloqueadas o futuras.
+- Relacionarlo con SCREEN_STATE_SPEC v0.2.
+- Relacionarlo con INTERACTION_FLOW_SPEC v0.2.
+- Relacionarlo con ROBERT_COMMANDS v0.4.
+- Relacionarlo con documentos oficiales de sandbox.
+
+---
+
+## Alcance no autorizado
+
+Esta decisión no autoriza:
+
+- Programar la app.
+- Crear código real.
+- Crear botones reales.
+- Crear pantallas reales.
+- Crear prototipo funcional.
+- Crear base de datos real.
+- Crear endpoints.
+- Conectar Supabase.
+- Conectar Firebase.
+- Conectar GitHub automáticamente.
+- Conectar Gmail.
+- Conectar Google Calendar.
+- Conectar APIs externas.
+- Automatizar acciones.
+- Activar agentes autónomos.
+- Ejecutar acciones reales.
+- Avanzar automáticamente a Fase 11.
+
+---
+
+## Riesgo
+
+Tipo de cambio:
+
+**Aprobación técnica documental / acciones conceptuales del usuario**
+
+Nivel de riesgo inicial:
+
+**Nivel 3 — Alto**
+
+Motivo:
+
+El documento define qué acciones podría intentar hacer el usuario desde el MVP técnico básico.
+
+Nivel de riesgo final:
+
+**Nivel 2 — Medio**
+
+Motivo:
+
+El documento es conceptual y documental. No crea botones reales, no crea pantallas reales, no programa, no conecta herramientas externas y no ejecuta nada.
+
+Nivel de autonomía:
+
+**Nivel 0 — Sin autonomía ejecutiva**
+
+---
+
+## Estado final
+
+ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2 queda aprobado como documento técnico documental del MVP técnico básico.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Sin programación autorizada.
+
+Sin código real.
+
+Sin pantallas reales.
+
+Sin base de datos real.
+
+Sin conexiones externas.
+
+Sin automatizaciones reales.
+
+Sin agentes autónomos activos.
