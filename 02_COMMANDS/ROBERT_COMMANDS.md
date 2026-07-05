@@ -1,10 +1,12 @@
-# ROBERT_COMMANDS v0.3
+# ROBERT_COMMANDS v0.4
 
 Proyecto: Robert  
 Tipo de documento: Catálogo vivo de comandos de Robert  
-Versión: 0.3  
-Estado: Base actualizada pendiente de aprobación  
-Última actualización: Junio 2026
+Versión: 0.4  
+Estado: Propuesta corregida — pendiente de revisión  
+Fecha de corrección: 04/07/2026  
+Versión anterior aprobada: v0.3  
+Motivo de corrección: separación entre Nivel 0 informativo y acciones de control fuera de la escala de riesgo
 
 Uso principal:  
 Registrar, definir, ordenar y mejorar los comandos que activan funciones dentro del sistema Robert, conectando contexto, documentos, decisiones, fases, seguridad, módulos, prompts, herramientas, autonomía controlada y futuras automatizaciones.
@@ -12,12 +14,21 @@ Registrar, definir, ordenar y mejorar los comandos que activan funciones dentro 
 Esta versión integra comandos de Autonomía Controlada para permitir que Robert pueda operar con mayor libertad dentro de límites autorizados por el usuario, sin romper ROBERT_SECURITY_RULES ni quitarle autoridad al usuario.
 
 ---
-Tags: #robert/orbita-2 #capa/4 #tipo/maestro #robert/control #robert/comandos
+Tags: #robert/orbita-2 #capa/2 #tipo/maestro #robert/control #robert/comandos 
+
+---
+
+# ENLACES DE COMANDOS
+
+ROBERT_COMMANDS define los comandos principales que controlan la operación de Robert.
+
+Enlaces relacionados:
 
 [[ROBERT_HOME]]
 [[ROBERT_CONTEXT_MASTER]]
 [[ROBERT_SECURITY_RULES]]
-[[ROBERT_DECISIONS_LOG]]
+[[ROBERT_DECISIONS_LOG]] 
+
 
 14. TIPOS DE COMANDOS
     
@@ -450,7 +461,7 @@ Por ahora, los comandos activos son:
 
 Estos comandos ya pueden usarse durante conversaciones reales.
 
-REVOCA_AUTONOMIA y VOLVER_A_MANUAL se consideran activos porque reducen riesgo, no lo aumentan.
+REVOCA_AUTONOMIA y VOLVER_A_MANUAL se consideran activos porque son acciones de control fuera de la escala de riesgo y reducen exposición operativa.
 
 ---
 
@@ -883,7 +894,7 @@ Estado: Activo
 Tipo de comando: Control / Seguridad  
 Documento relacionado: ROBERT_SECURITY_RULES, ROBERT_COMMANDS  
 Módulos relacionados: Security, Robert Core, Command Center  
-Nivel de riesgo: 0  
+Clasificación: Acción de control fuera de la escala de riesgo  
 ¿Requiere autorización?: No
 
 Activador:
@@ -893,17 +904,17 @@ REVOCA_AUTONOMIA
 También puede activarse con:
 
 - revoca autonomía;
-    
+
 - cancela autonomía;
-    
+
 - quita autonomía;
-    
+
 - vuelve a control manual;
-    
+
 - ya no trabajes autónomo;
-    
+
 - detén modo autónomo.
-    
+
 
 Propósito:
 
@@ -918,21 +929,23 @@ Qué debe entregar:
 Robert debe confirmar:
 
 - autonomía cancelada;
-    
+
 - qué estaba haciendo;
-    
+
 - acciones realizadas;
-    
+
 - acciones pendientes;
-    
+
 - siguiente paso posible.
-    
+
 
 Reglas especiales:
 
 Debe ejecutarse inmediatamente.
 
-No requiere autorización adicional porque reduce riesgo.
+No requiere autorización adicional porque reduce exposición operativa.
+
+No debe clasificarse como Nivel 0.
 
 No debe continuar acciones autónomas después de recibir este comando.
 
@@ -945,17 +958,17 @@ Autonomía revocada.
 Estado actual:
 
 - [qué estaba haciendo]
-    
+
 
 Acciones realizadas:
 
 - [lista breve]
-    
+
 
 Pendientes:
 
 - [lista breve]
-    
+
 
 Espero nuevas instrucciones.
 
@@ -967,7 +980,7 @@ Estado: Activo
 Tipo de comando: Control / Seguridad  
 Documento relacionado: ROBERT_SECURITY_RULES, ROBERT_COMMANDS  
 Módulos relacionados: Security, Robert Core, Command Center  
-Nivel de riesgo: 0  
+Clasificación: Acción de control fuera de la escala de riesgo  
 ¿Requiere autorización?: No
 
 Activador:
@@ -977,15 +990,15 @@ VOLVER_A_MANUAL
 También puede activarse con:
 
 - vuelve a manual;
-    
+
 - modo manual;
-    
+
 - ya no avances solo;
-    
+
 - trabajemos paso por paso;
-    
+
 - espera mi autorización.
-    
+
 
 Propósito:
 
@@ -1000,17 +1013,19 @@ Qué debe entregar:
 Robert debe confirmar:
 
 - modo manual activado;
-    
+
 - autonomía desactivada;
-    
+
 - acciones bloqueadas;
-    
+
 - siguiente paso pendiente de autorización.
-    
+
 
 Reglas especiales:
 
 Debe cancelar cualquier autonomía activa.
+
+No debe clasificarse como Nivel 0.
 
 Debe respetar NO_AVANCES si está activo.
 
@@ -1118,8 +1133,8 @@ Estado: En prueba
 Tipo de comando: Autonomía / Registro  
 Documento relacionado: ROBERT_DECISIONS_LOG, ROBERT_SECURITY_RULES, ROBERT_COMMANDS  
 Módulos relacionados: Decisions Log, Security, Memory  
-Nivel de riesgo: 0  
-¿Requiere autorización?: No
+Nivel de riesgo: Nivel 0 o Nivel 1, según alcance  
+¿Requiere autorización?: No para consultar; sí si pretende registrar cambios formales
 
 Activador:
 
@@ -1128,15 +1143,15 @@ INFORME_ACCIONES
 También puede activarse con:
 
 - informe de acciones;
-    
+
 - qué hiciste;
-    
+
 - muéstrame lo que hiciste;
-    
+
 - resumen de acciones;
-    
+
 - reporte de autonomía.
-    
+
 
 Propósito:
 
@@ -1151,25 +1166,25 @@ Qué debe entregar:
 Debe incluir:
 
 - modo usado;
-    
+
 - nivel de autonomía;
-    
+
 - alcance autorizado;
-    
+
 - acciones realizadas;
-    
+
 - documentos trabajados;
-    
+
 - acciones bloqueadas;
-    
+
 - riesgos detectados;
-    
+
 - pendientes;
-    
+
 - aprobaciones requeridas;
-    
+
 - siguiente paso recomendado.
-    
+
 
 Reglas especiales:
 
@@ -1178,6 +1193,12 @@ No debe ocultar acciones.
 Debe diferenciar entre acciones ejecutadas, borradores, simulaciones y propuestas.
 
 Debe indicar si algo requiere registro en Decisions Log.
+
+Si solo informa, se clasifica como Nivel 0 — Informativo.
+
+Si organiza un reporte simple sin modificar documentos oficiales, puede clasificarse como Nivel 1 — Bajo.
+
+Si registra decisiones, cambios o actualizaciones oficiales, debe subir al nivel correspondiente.
 
 Formato recomendado:
 
@@ -1197,206 +1218,545 @@ Siguiente paso:
 
 ---
 
-62. NIVELES DE RIESGO POR COMANDO
-    
+62. CLASIFICACIÓN DE COMANDOS POR RIESGO Y CONTROL
 
-Nivel 0 — Informativo / Control de seguridad
+Estado: Corregido en v0.4  
+Documento base de escala: ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2  
+Documento técnico alineado: ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2  
 
-Ejemplos:  
-RESUMEN, DETENTE, PAUSA, REVOCA_AUTONOMIA, VOLVER_A_MANUAL, INFORME_ACCIONES.
+---
 
-Autorización:  
-No.
+## Regla central
 
-Nivel 1 — Borrador / Preparación
+La escala oficial de riesgo de Robert no debe mezclar información con control.
 
-Ejemplos:  
-CONCLUSION, PROMPT_CLAUDE, ORDENAR, CREAR_DASHBOARD.
+A partir de ROBERT_COMMANDS v0.4, el criterio oficial queda así:
 
-Autorización:  
-Normalmente no, salvo datos sensibles o actualización oficial.
+```text
+Nivel 0 = Informativo
+Acciones de control = fuera de la escala de riesgo
+```
 
-Nivel 2 — Documento / Decisión / Autonomía documental
+---
 
-Ejemplos:  
-DECISION, ACTUALIZA, CERRAR_FASE, MODO_SUPERVISADO, MODO_SANDBOX, AUTORIZAR_AMBITO.
+## Escala oficial de riesgo
 
-Autorización:  
-Sí si afecta documentos oficiales, decisiones, fases o registros.
+Robert usa la siguiente escala oficial:
 
-Nivel 3 — Acción externa / Autonomía operativa
-
-Ejemplos:  
-CONECTAR_HERRAMIENTA, AUTOMATIZAR, MODO_AUTONOMO, EJECUTA_CON_LIMITE.
-
-Autorización:  
-Sí explícita.
-
+```text
+Nivel 0 — Informativo
+Nivel 1 — Bajo
+Nivel 2 — Medio
+Nivel 3 — Alto
 Nivel 4 — Crítico
+```
 
-Ejemplos:  
-Pagos, datos sensibles, reglas de seguridad, credenciales, acciones irreversibles, cuentas sensibles.
+Regla:
 
-Autorización:  
-Confirmación reforzada.
+```text
+No existe Nivel 5 como riesgo.
+Nivel 5 solo puede existir como autonomía, no como riesgo.
+```
+
+---
+
+## Nivel 0 — Informativo
+
+Nivel 0 se usa únicamente para comandos que piden información, resumen, lectura, explicación o estado sin modificar documentos, decisiones, seguridad, fases, configuración, respaldo, permisos, autonomía o conexiones.
+
+Ejemplos:
+
+```text
+RESUMEN
+ESTADO
+VER_ESTADO
+CONSULTAR
+EXPLICAR
+MOSTRAR
+HILO
+AUTORIZACION
+```
+
+También puede incluir:
+
+```text
+INFORME_ACCIONES
+```
+
+solo cuando el comando se limite a informar acciones realizadas o pendientes sin registrar cambios formales.
+
+---
+
+## Nivel 1 — Bajo
+
+Nivel 1 se usa para acciones simples de apoyo que no modifican documentos maestros ni técnicos aprobados.
+
+Ejemplos:
+
+```text
+CONCLUSION
+CONCLUCION
+IDEA PRINCIPAL
+ACLARAR
+REFORMULAR
+ORDENAR_TEXTO
+PROMPT_CLAUDE
+CREA_PROMPT_PARA_CLAUDE
+SIGUIENTE_PASO
+```
+
+Puede subir de nivel si afecta documentos oficiales, decisiones, seguridad, fases o fuente de verdad.
+
+---
+
+## Nivel 2 — Medio
+
+Nivel 2 se usa para acciones documentales que pueden modificar estado no crítico o preparar cambios.
+
+Ejemplos:
+
+```text
+ACTUALIZA
+REVISAR
+CORREGIR_BORRADOR
+PREPARAR_BLOQUE
+ACTUALIZAR_HOME
+ACTUALIZAR_README
+REGISTRAR_CAMBIO_NO_CRITICO
+MODO_SUPERVISADO
+MODO_SANDBOX
+AUTORIZAR_AMBITO
+```
+
+Debe mostrar advertencia visible cuando aplique.
+
+Si afecta documentos maestros, seguridad, fases o fuente de verdad, puede subir a Nivel 3.
+
+---
+
+## Nivel 3 — Alto
+
+Nivel 3 se usa cuando una acción afecta documentos técnicos, documentos maestros, decisiones formales, arquitectura conceptual, fases, seguridad o fuente de verdad.
+
+Ejemplos:
+
+```text
+APRUEBO
+APROBADO
+DECISION
+REGISTRAR_DECISION
+REGISTRAR_CAMBIO_CRITICO
+APROBAR_DOCUMENTO_TECNICO
+CREAR_DOCUMENTO_TECNICO
+CORREGIR_DOCUMENTO_MAESTRO
+CAMBIAR_FASE
+MODIFICAR_SECURITY_RULES
+MODIFICAR_CONTEXT_MASTER
+MODO_AUTONOMO
+EJECUTA_CON_LIMITE
+```
+
+Requiere aprobación explícita del usuario.
+
+---
+
+## Nivel 4 — Crítico
+
+Nivel 4 se usa para acciones que intentan ejecutar, conectar, automatizar o activar capacidades reales no autorizadas, o que involucran datos sensibles, credenciales, pagos o acciones irreversibles.
+
+Ejemplos:
+
+```text
+CONECTAR_GMAIL
+CONECTAR_GOOGLE_CALENDAR
+CONECTAR_GITHUB_AUTOMATICO
+CONECTAR_SUPABASE
+CONECTAR_FIREBASE
+CREAR_BASE_DATOS_REAL
+PROGRAMAR_APP
+EJECUTAR_CODIGO_REAL
+ACTIVAR_AGENTES_AUTONOMOS
+ACTIVAR_AUTOMATIZACIONES_REALES
+AVANZAR_A_FASE_11_SIN_DECISION
+ACTUALIZAR_SECURITY_RULES_SIN_APROBACION
+USAR_CREDENCIALES
+REALIZAR_PAGO
+BORRAR_INFORMACION_CRITICA
+```
+
+Estas acciones deben bloquearse si no existe autorización formal.
+
+---
+
+# 62.1 ACCIONES DE CONTROL FUERA DE LA ESCALA DE RIESGO
+
+Las acciones de control no son Nivel 0.
+
+Las acciones de control no son Nivel 1.
+
+Las acciones de control no son Nivel 2.
+
+Las acciones de control no son Nivel 3.
+
+Las acciones de control no son Nivel 4.
+
+Son una categoría separada:
+
+```text
+Acciones de control fuera de la escala de riesgo
+```
+
+---
+
+## Definición
+
+Una acción de control es una instrucción del usuario para detener, pausar, limitar, revocar, bloquear o regresar a un estado más seguro.
+
+No representa riesgo por sí misma.
+
+El riesgo pertenece a la acción original que se intenta detener, pausar, bloquear o revertir.
+
+---
+
+## Comandos de control
+
+Los siguientes comandos quedan clasificados como acciones de control fuera de la escala de riesgo:
+
+```text
+DETENTE
+PAUSA
+NO_AVANCES
+SOLO_BORRADOR
+REVOCA_AUTONOMIA
+VOLVER_A_MANUAL
+BLOQUEA
+CANCELA
+DETENER_ACCION
+NO_SIGAS
+NO_EJECUTES
+ESPERA_MI_AUTORIZACION
+REGRESA
+```
+
+---
+
+## Regla de control
+
+Cuando el usuario usa un comando de control, Robert debe obedecer inmediatamente dentro del alcance seguro.
+
+Ejemplo:
+
+```text
+Usuario: DETENTE
+Robert: detiene avance y no continúa al siguiente paso.
+```
+
+Ejemplo:
+
+```text
+Usuario: PAUSA
+Robert: pausa la operación y espera nueva autorización.
+```
+
+Ejemplo:
+
+```text
+Usuario: REVOCA_AUTONOMIA
+Robert: vuelve al nivel de autonomía más bajo permitido.
+```
+
+---
+
+## Riesgo de la acción bloqueada
+
+Si una acción de control detiene otra acción, se debe separar:
+
+```text
+Acción de control: fuera de la escala de riesgo
+Acción detenida: conserva su nivel de riesgo original
+```
+
+Ejemplo:
+
+```text
+Conectar Gmail sin autorización = Nivel 4 — Crítico
+Bloquear esa conexión = Acción de control fuera de la escala de riesgo
+```
+
+Ejemplo:
+
+```text
+Avanzar a Fase 11 sin decisión formal = Nivel 4 — Crítico
+DETENTE = Acción de control fuera de la escala de riesgo
+```
+
+---
+
+## Diferencia entre informar y controlar
+
+No se debe mezclar:
+
+```text
+Nivel 0 — Informativo
+```
+
+con:
+
+```text
+Acción de control fuera de la escala de riesgo
+```
+
+Nivel 0 solo informa.
+
+Control detiene, limita, pausa, revoca o bloquea.
+
+---
+
+# 62.2 TABLA CORREGIDA DE COMANDOS
+
+| Comando | Clasificación corregida | Motivo |
+|---|---|---|
+| RESUMEN | Nivel 0 — Informativo | Solo resume información |
+| ESTADO | Nivel 0 — Informativo | Solo muestra estado |
+| VER_ESTADO | Nivel 0 — Informativo | Solo muestra estado |
+| HILO | Nivel 0 — Informativo | Conserva continuidad sin modificar por sí solo |
+| AUTORIZACION | Nivel 0 — Informativo | Solicita validación, no ejecuta por sí solo |
+| INFORME_ACCIONES | Nivel 0 o Nivel 1 | Nivel 0 si solo informa; Nivel 1 si organiza reporte simple |
+| CONCLUSION | Nivel 1 — Bajo | Prepara prompt o cierre sin modificar por sí solo |
+| CONCLUCION | Nivel 1 — Bajo | Variante aceptada de CONCLUSION |
+| IDEA PRINCIPAL | Nivel 1 — Bajo | Reenfoca sin modificar documentos por sí solo |
+| SIGUIENTE_PASO | Nivel 1 — Bajo | Recomienda sin ejecutar |
+| ACTUALIZA | Nivel 2 o Nivel 3 | Depende del documento afectado |
+| CORRIGE | Nivel 2 o Nivel 3 | Depende del documento afectado |
+| REVISA | Nivel 2 o Nivel 3 | Depende del documento afectado |
+| DECISION | Nivel 3 — Alto | Puede crear registro formal |
+| APRUEBO | Nivel 3 — Alto | Aprueba documento o decisión |
+| APROBADO | Nivel 3 — Alto | Aprueba documento o decisión |
+| DETENTE | Acción de control fuera de escala | Detiene avance |
+| PAUSA | Acción de control fuera de escala | Pausa operación |
+| NO_AVANCES | Acción de control fuera de escala | Impide avanzar |
+| SOLO_BORRADOR | Acción de control fuera de escala | Limita alcance |
+| REVOCA_AUTONOMIA | Acción de control fuera de escala | Reduce autonomía |
+| VOLVER_A_MANUAL | Acción de control fuera de escala | Regresa a modo manual |
+| BLOQUEA | Acción de control fuera de escala | Solicita bloqueo |
+| CANCELA | Acción de control fuera de escala | Cancela intento |
+| NO_EJECUTES | Acción de control fuera de escala | Impide ejecución |
+| ESPERA_MI_AUTORIZACION | Acción de control fuera de escala | Obliga a esperar autorización |
+
+---
+
+# 62.3 REGLA DE PRECEDENCIA
+
+A partir de ROBERT_COMMANDS v0.4, el criterio oficial queda alineado con:
+
+- ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2
+- ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2
+- ROBERT_SECURITY_RULES
+- ROBERT_PHASES
+
+Regla:
+
+```text
+Si un comando solo informa, puede ser Nivel 0.
+Si un comando controla, pausa, bloquea o revoca, queda fuera de la escala de riesgo.
+```
+
+---
+
+# 62.4 EFECTO SOBRE VERSIONES ANTERIORES
+
+ROBERT_COMMANDS v0.3 fue aprobado oficialmente.
+
+Sin embargo, v0.3 mezclaba:
+
+```text
+Nivel 0 — Informativo / Control de seguridad
+```
+
+ROBERT_COMMANDS v0.4 corrige esa mezcla.
+
+La versión v0.4 no elimina el historial de v0.3.
+
+La versión v0.4 reemplaza únicamente el criterio de clasificación de riesgo/control para comandos.
+
+---
+
+# 62.5 RESTRICCIÓN
+
+Esta corrección no autoriza:
+
+- Programación.
+- Código real.
+- Pantallas reales.
+- Base de datos real.
+- Conexiones externas.
+- Automatizaciones.
+- Agentes autónomos.
+- Ejecución real.
+- Avanzar a Fase 11.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
 
 ---
 
 63. RIESGO DE COMANDOS ACTIVOS
-    
 
 Comando: RESUMEN  
-Riesgo: 0  
+Riesgo: Nivel 0 — Informativo  
 Autorización: No
 
 Comando: CONCLUSION  
-Riesgo: 1  
-Autorización: No, salvo datos sensibles
+Riesgo: Nivel 1 — Bajo  
+Autorización: No, salvo datos sensibles o modificación oficial
 
 Comando: CONCLUCION  
-Riesgo: 1  
-Autorización: No, salvo datos sensibles
+Riesgo: Nivel 1 — Bajo  
+Autorización: No, salvo datos sensibles o modificación oficial
 
 Comando: DETENTE  
-Riesgo: 0  
+Clasificación: Acción de control fuera de la escala de riesgo  
 Autorización: No
 
 Comando: PAUSA  
-Riesgo: 0  
+Clasificación: Acción de control fuera de la escala de riesgo  
 Autorización: No
 
 Comando: NO_AVANCES  
-Riesgo: 0  
+Clasificación: Acción de control fuera de la escala de riesgo  
 Autorización: No
 
 Comando: SOLO_BORRADOR  
-Riesgo: 0  
+Clasificación: Acción de control fuera de la escala de riesgo  
 Autorización: No
 
 Comando: CONTINUA  
-Riesgo: 1 o 2  
+Riesgo: Nivel 1 o Nivel 2  
 Autorización: Depende del siguiente paso
 
 Comando: APRUEBO  
-Riesgo: 2  
-Autorización: El propio comando es autorización
+Riesgo: Nivel 3 — Alto  
+Autorización: El propio comando es autorización explícita, pero debe registrarse correctamente si afecta documento oficial
 
 Comando: APROBADO  
-Riesgo: 2  
-Autorización: El propio comando es autorización
+Riesgo: Nivel 3 — Alto  
+Autorización: El propio comando es autorización explícita, pero debe registrarse correctamente si afecta documento oficial
 
 Comando: SIGUIENTE_PASO  
-Riesgo: 1  
+Riesgo: Nivel 1 — Bajo  
 Autorización: No para proponer, sí para ejecutar
 
 Comando: REVOCA_AUTONOMIA  
-Riesgo: 0  
+Clasificación: Acción de control fuera de la escala de riesgo  
 Autorización: No
 
 Comando: VOLVER_A_MANUAL  
-Riesgo: 0  
+Clasificación: Acción de control fuera de la escala de riesgo  
 Autorización: No
+
 
 ---
 
 64. RIESGO DE COMANDOS EN PRUEBA
-    
 
 Comando: DECISION  
-Riesgo: 2  
+Riesgo: Nivel 3 — Alto  
 Autorización: Sí
 
 Comando: CLASIFICAR  
-Riesgo: 1 o 2  
+Riesgo: Nivel 1 o Nivel 2  
 Autorización: No para clasificar, sí para guardar oficial
 
 Comando: PROMPT_CLAUDE  
-Riesgo: 1  
+Riesgo: Nivel 1 — Bajo  
 Autorización: No, salvo datos sensibles
 
 Comando: ACTUALIZAR_CONTEXT_MASTER  
-Riesgo: 2  
+Riesgo: Nivel 3 — Alto  
 Autorización: Sí
 
 Comando: ACTUALIZAR_COMMANDS  
-Riesgo: 2  
+Riesgo: Nivel 3 — Alto  
 Autorización: Sí
 
 Comando: ACTUALIZAR_PHASES  
-Riesgo: 2  
+Riesgo: Nivel 3 — Alto  
 Autorización: Sí
 
 Comando: ACTUALIZAR_VISUAL_REFERENCE  
-Riesgo: 2  
-Autorización: Sí
+Riesgo: Nivel 2 o Nivel 3  
+Autorización: Sí si afecta documento oficial
 
 Comando: ACTUALIZAR_MODULES  
-Riesgo: 2  
-Autorización: Sí
+Riesgo: Nivel 2 o Nivel 3  
+Autorización: Sí si afecta documento oficial
 
 Comando: ACTUALIZAR_SECURITY_RULES  
-Riesgo: 4  
+Riesgo: Nivel 4 — Crítico  
 Autorización: Sí, confirmación reforzada
 
 Comando: ACTUALIZAR_DECISIONS_LOG  
-Riesgo: 2  
+Riesgo: Nivel 3 — Alto  
 Autorización: Sí
 
 Comando: NUEVA_FASE  
-Riesgo: 2  
+Riesgo: Nivel 3 — Alto  
 Autorización: Sí
 
 Comando: REVISAR_FASE  
-Riesgo: 1  
+Riesgo: Nivel 1 o Nivel 2  
 Autorización: No para revisar, sí para cerrar o avanzar
 
 Comando: CERRAR_FASE  
-Riesgo: 2  
+Riesgo: Nivel 3 — Alto  
 Autorización: Sí
 
 Comando: HILO  
-Riesgo: 0  
+Riesgo: Nivel 0 — Informativo  
 Autorización: No
 
 Comando: AUTORIZACION  
-Riesgo: 0  
+Riesgo: Nivel 0 — Informativo  
 Autorización: No
 
 Comando: GUARDA_CONTEXTO  
-Riesgo: 1 o 2  
+Riesgo: Nivel 1 o Nivel 2  
 Autorización: Depende si se guarda permanente
 
 Comando: ACTUALIZA  
-Riesgo: 2  
+Riesgo: Nivel 2 o Nivel 3  
 Autorización: Sí si afecta documento oficial
 
 Comando: CREA_PROMPT_PARA_CLAUDE  
-Riesgo: 1  
+Riesgo: Nivel 1 — Bajo  
 Autorización: No, salvo datos sensibles
 
 Comando: MODO_AUTONOMO  
-Riesgo: 2 o 3  
+Riesgo: Nivel 2 o Nivel 3  
 Autorización: Sí, según alcance
 
 Comando: MODO_SUPERVISADO  
-Riesgo: 1 o 2  
+Riesgo: Nivel 1 o Nivel 2  
 Autorización: Sí si afecta documentos oficiales
 
 Comando: MODO_SANDBOX  
-Riesgo: 2  
+Riesgo: Nivel 2 o Nivel 3  
 Autorización: Sí
 
 Comando: AUTORIZAR_AMBITO  
-Riesgo: 2 o 3  
+Riesgo: Nivel 2 o Nivel 3  
 Autorización: Sí
 
 Comando: EJECUTA_CON_LIMITE  
-Riesgo: 3  
+Riesgo: Nivel 3 — Alto  
 Autorización: Sí explícita
 
 Comando: INFORME_ACCIONES  
-Riesgo: 0  
-Autorización: No
+Riesgo: Nivel 0 o Nivel 1  
+Autorización: No para consultar; sí si registra cambio formal
+
 
 ---
 
@@ -1454,7 +1814,7 @@ Robert debe detenerse y pedir autorización si:
 66. RELACIÓN CON AUTONOMÍA CONTROLADA
     
 
-ROBERT_COMMANDS v0.3 reconoce que Robert puede operar con distintos niveles de autonomía definidos en ROBERT_SECURITY_RULES.
+ROBERT_COMMANDS v0.4 reconoce que Robert puede operar con distintos niveles de autonomía definidos en ROBERT_SECURITY_RULES.
 
 Los comandos permiten activar, limitar, supervisar, probar, revocar y reportar autonomía.
 
@@ -1481,10 +1841,11 @@ Robert debe obedecer siempre:
 
 Estos comandos tienen prioridad sobre MODO_AUTONOMO, MODO_SUPERVISADO, MODO_SANDBOX y EJECUTA_CON_LIMITE.
 
+Estos comandos de control se clasifican como acciones de control fuera de la escala de riesgo, no como Nivel 0.
+
 ---
 
 67. CONTROL DE VERSIONES
-    
 
 Versión: 0.1 auditada  
 Fecha: Junio 2026  
@@ -1499,7 +1860,13 @@ Estado: Base actualizada pendiente de aprobación.
 Versión: 0.3  
 Fecha: Junio 2026  
 Cambio principal: Integración de comandos de Autonomía Controlada: MODO_AUTONOMO, MODO_SUPERVISADO, MODO_SANDBOX, AUTORIZAR_AMBITO, REVOCA_AUTONOMIA, VOLVER_A_MANUAL, EJECUTA_CON_LIMITE e INFORME_ACCIONES. Actualización de tipos de comandos, comandos activos, comandos en prueba, niveles de riesgo y reglas generales de autonomía.  
-Estado: Base actualizada pendiente de aprobación.
+Estado: Aprobado oficialmente.
+
+Versión: 0.4  
+Fecha: 04/07/2026  
+Cambio principal: Corrección de clasificación de riesgo/control. Se separa Nivel 0 — Informativo de las acciones de control fuera de la escala de riesgo. Se corrige alineación con USER_ACTIONS_SPEC v0.2 e INTERACTION_FLOW_SPEC v0.2. Se confirma tag/capa correcto como Capa 2 — Control.  
+Estado: Propuesta corregida — pendiente de revisión.
+
 
 ---
 
@@ -1544,80 +1911,96 @@ Esta versión agrega:
 ---
 
 69. ESTADO ACTUAL DEL DOCUMENTO
-    
 
 Estado actual:  
-Base actualizada pendiente de aprobación.
+Propuesta corregida — pendiente de revisión.
+
+Versión actual del archivo:  
+ROBERT_COMMANDS v0.4.
+
+Versión anterior aprobada:  
+ROBERT_COMMANDS v0.3.
 
 Este documento puede:
 
 - revisarse;
-    
+
 - corregirse;
-    
-- ampliarse;
-    
+
+- validarse;
+
 - conectarse con ROBERT_SECURITY_RULES;
-    
+
 - conectarse con ROBERT_CONTEXT_MASTER;
-    
+
 - conectarse con ROBERT_DECISIONS_LOG;
-    
+
 - conectarse con ROBERT_PHASES;
-    
+
 - conectarse con ROBERT_SYSTEM_ARCHITECTURE;
-    
-- usarse como catálogo operativo de comandos de Robert.
-    
+
+- conectarse con ROBERT_TECHNICAL_USER_ACTIONS_SPEC;
+
+- usarse como catálogo operativo de comandos de Robert cuando sea aprobado.
+
 
 ---
 
 70. DECISIÓN PENDIENTE
-    
 
 Decisión pendiente:  
-Aprobar ROBERT_COMMANDS v0.3 como catálogo actualizado de comandos de Robert, integrando comandos de Autonomía Controlada.
+Aprobar ROBERT_COMMANDS v0.4 como propuesta corregida del catálogo de comandos de Robert.
 
 Motivo:  
-Robert necesita comandos claros para activar, limitar, supervisar, probar, revocar y reportar autonomía sin romper seguridad ni autoridad del usuario.
+ROBERT_COMMANDS v0.3 fue aprobado oficialmente, pero mezclaba Nivel 0 — Informativo con control de seguridad.
+
+ROBERT_COMMANDS v0.4 corrige esa inconsistencia separando:
+
+```text
+Nivel 0 — Informativo
+Acciones de control — fuera de la escala de riesgo
+```
 
 Estado:  
-Pendiente de aprobación.
+Pendiente de revisión y aprobación.
 
 Próximo paso sugerido:  
-Revisar los comandos de autonomía, confirmar su estado y decidir si ROBERT_COMMANDS v0.3 queda aprobado como base actualizada.
+Revisar esta corrección y decidir si ROBERT_COMMANDS v0.4 queda aprobado como versión corregida.
 
 ---
 
 71. RESUMEN EJECUTIVO
-    
 
-ROBERT_COMMANDS v0.3 define el catálogo actualizado de comandos de Robert.
+ROBERT_COMMANDS v0.4 define la propuesta corregida del catálogo actualizado de comandos de Robert.
 
-Los comandos funcionan como el sistema de control operativo de Robert.
+Esta versión conserva la base de ROBERT_COMMANDS v0.3, que fue aprobada oficialmente, pero corrige una inconsistencia clave:
 
-Esta versión mantiene los comandos existentes de resumen, Claude, decisión, organización, actualización, fases, control, visuales, automatización y agentes.
+ROBERT_COMMANDS v0.3 mezclaba en una misma categoría:
 
-Además, integra comandos de Autonomía Controlada para permitir que Robert opere con más libertad dentro de límites definidos por el usuario.
+- Nivel 0 — Informativo;
+- Control de seguridad.
 
-Los nuevos comandos principales son:
+ROBERT_COMMANDS v0.4 separa ambos conceptos:
 
-- MODO_AUTONOMO;
-    
-- MODO_SUPERVISADO;
-    
-- MODO_SANDBOX;
-    
-- AUTORIZAR_AMBITO;
-    
+```text
+Nivel 0 — Informativo
+Acciones de control — fuera de la escala de riesgo
+```
+
+Los comandos de control como:
+
+- DETENTE;
+- PAUSA;
+- NO_AVANCES;
+- SOLO_BORRADOR;
 - REVOCA_AUTONOMIA;
-    
 - VOLVER_A_MANUAL;
-    
-- EJECUTA_CON_LIMITE;
-    
-- INFORME_ACCIONES.
-    
+- BLOQUEA;
+- CANCELA;
+
+no se clasifican como Nivel 0.
+
+Se clasifican como acciones de control fuera de la escala de riesgo.
 
 La regla central se mantiene:
 
@@ -1630,3 +2013,44 @@ Robert puede actuar con mayor autonomía solo dentro de un alcance autorizado, t
 La prioridad absoluta es:
 
 Contexto, seguridad, claridad, autorización y control antes de ejecución.
+
+---
+
+# NOTA DE CORRECCIÓN v0.4
+
+ROBERT_COMMANDS v0.4 corrige una inconsistencia detectada en ROBERT_COMMANDS v0.3.
+
+La versión v0.3 fue aprobada oficialmente, pero mezclaba en una misma categoría:
+
+- Nivel 0 — Informativo
+- Control de seguridad
+
+La versión v0.4 separa ambos conceptos:
+
+```text
+Nivel 0 — Informativo
+Acciones de control — fuera de la escala de riesgo
+```
+
+También confirma la alineación de capa del documento:
+
+```text
+ROBERT_COMMANDS pertenece a Capa 2 — Control
+```
+
+por lo que su tag correcto es:
+
+```markdown
+#capa/2
+```
+
+Esta corrección mantiene coherencia con:
+
+- ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2
+- ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2
+- ROBERT_SYSTEM_ARCHITECTURE
+- ROBERT_SECURITY_RULES
+
+Estado de ROBERT_COMMANDS v0.4:
+
+**Propuesta corregida — pendiente de revisión**
