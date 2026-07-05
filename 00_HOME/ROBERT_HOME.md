@@ -2551,3 +2551,91 @@ Robert continúa en:
 **Fase 10 — MVP técnico básico en preparación**
 
 ---
+---
+
+# ACTUALIZACIÓN — ROBERT_COMMANDS v0.4 CORREGIDO
+
+Fecha: 04/07/2026  
+Estado: Propuesta corregida — pendiente de revisión  
+Cambio relacionado: CAMBIO #026 — Corrección de ROBERT_COMMANDS v0.4  
+Versión anterior aprobada: ROBERT_COMMANDS v0.3  
+
+---
+
+## Estado actualizado
+
+Se corrigió el documento:
+
+**ROBERT_COMMANDS**
+
+de v0.3 aprobado a:
+
+**v0.4 — Propuesta corregida pendiente de revisión**
+
+---
+
+## Motivo de la corrección
+
+ROBERT_COMMANDS v0.3 mezclaba en una misma categoría:
+
+**Nivel 0 — Informativo / Control de seguridad**
+
+La versión v0.4 separa correctamente:
+
+**Nivel 0 — Informativo**
+
+de:
+
+**Acciones de control fuera de la escala de riesgo**
+
+---
+
+## Correcciones principales
+
+La versión v0.4 corrige:
+
+- Nivel 0 queda únicamente como Informativo.
+- DETENTE deja de clasificarse como Riesgo 0.
+- PAUSA deja de clasificarse como Riesgo 0.
+- NO_AVANCES deja de clasificarse como Riesgo 0.
+- SOLO_BORRADOR deja de clasificarse como Riesgo 0.
+- REVOCA_AUTONOMIA deja de clasificarse como Riesgo 0.
+- VOLVER_A_MANUAL deja de clasificarse como Riesgo 0.
+- Los comandos de control quedan fuera de la escala de riesgo.
+- INFORME_ACCIONES queda como Nivel 0 o Nivel 1 según alcance.
+- ROBERT_COMMANDS queda alineado con Capa 2 — Control.
+- Tag corregido: #capa/2.
+- Se alinea con USER_ACTIONS_SPEC v0.2.
+- Se alinea con INTERACTION_FLOW_SPEC v0.2.
+
+---
+
+## Estado del documento
+
+ROBERT_COMMANDS v0.4 queda como:
+
+**Propuesta corregida pendiente de revisión**
+
+No está aprobado todavía.
+
+---
+
+## Restricción
+
+Esta actualización no autoriza:
+
+- Programación.
+- Código real.
+- Pantallas reales.
+- Base de datos real.
+- Conexiones externas.
+- Automatizaciones.
+- Agentes autónomos.
+- Ejecución real.
+- Avanzar a Fase 11.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+---
