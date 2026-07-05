@@ -759,3 +759,54 @@ Esta actualización no autoriza:
 Robert continúa en modo documental, manual y supervisado.
 
 ---
+---
+
+## ROBERT_COMMANDS v0.4 aprobado
+
+Estado: Aprobado e integrado  
+Decisión relacionada: DECISIÓN #016  
+Cambio relacionado: CAMBIO #027  
+Versión anterior aprobada: ROBERT_COMMANDS v0.3  
+Fase: Fase 10 — MVP técnico básico en preparación
+
+### Estado actualizado
+
+ROBERT_COMMANDS v0.4 queda aprobado e integrado como documento maestro vigente de comandos de Robert.
+
+### Qué define
+
+ROBERT_COMMANDS define el catálogo maestro de comandos que controlan la operación documental, manual, supervisada y futura de Robert.
+
+### Correcciones integradas
+
+La versión v0.4 integra:
+
+- Nivel 0 queda únicamente como Informativo
+- DETENTE, PAUSA, NO_AVANCES y SOLO_BORRADOR dejan de clasificarse como Riesgo 0
+- REVOCA_AUTONOMIA y VOLVER_A_MANUAL dejan de clasificarse como Riesgo 0
+- Los comandos de control quedan como acciones fuera de la escala de riesgo
+- INFORME_ACCIONES queda como Nivel 0 o Nivel 1 según alcance
+- ROBERT_COMMANDS queda alineado con Capa 2 — Control
+- Tag corregido: #capa/2
+- ROBERT_COMMANDS queda alineado con USER_ACTIONS_SPEC v0.2
+- ROBERT_COMMANDS queda alineado con INTERACTION_FLOW_SPEC v0.2
+- ROBERT_COMMANDS queda alineado con ROBERT_SECURITY_RULES
+
+### Restricción
+
+Esta aprobación no autoriza:
+
+- Programación
+- Código real
+- Pantallas reales
+- Prototipo funcional
+- Base de datos real
+- Conexiones externas
+- Automatizaciones
+- Agentes autónomos
+- Ejecución real
+- Avanzar a Fase 11
+
+Robert continúa en modo documental, manual y supervisado.
+
+---
