@@ -810,3 +810,68 @@ Esta aprobación no autoriza:
 Robert continúa en modo documental, manual y supervisado.
 
 ---
+---
+
+## USER_ACTIONS_SPEC v0.2 aprobado
+
+Estado: Aprobado e integrado  
+Decisión relacionada: DECISIÓN #017  
+Cambio relacionado: CAMBIO #028  
+Fase: Fase 10 — MVP técnico básico en preparación  
+Documento base principal: ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2  
+Documento maestro alineado: ROBERT_COMMANDS v0.4
+
+### Estado actualizado
+
+ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2 queda aprobado e integrado como documento técnico documental del MVP técnico básico de Robert.
+
+### Qué define
+
+Este documento define las acciones conceptuales que el usuario puede intentar desde cada pantalla o panel del MVP técnico básico:
+
+- Qué puede intentar hacer el usuario
+- Desde qué pantalla o componente lo intenta
+- Qué acciones son permitidas
+- Qué acciones requieren confirmación
+- Qué acciones requieren aprobación formal
+- Qué acciones deben bloquearse
+- Qué componente recibe la acción
+- Qué riesgo tiene la acción intentada
+- Qué pasa después de cada acción
+
+### Correcciones integradas
+
+La versión v0.2 integra:
+
+- Nivel 0 queda únicamente como Informativo
+- Las acciones de control quedan fuera de la escala de riesgo
+- PAUSA, DETENTE y NO_AVANCES no se clasifican como Riesgo 0
+- Solicitar bloqueo manual queda como acción de control fuera de escala
+- El riesgo pertenece a la acción original que se intenta detener o bloquear
+- Los bloqueos automáticos quedan reservados para ERROR_AND_BLOCKING_SPEC
+- Se agrega regla de alineación documental
+- Se agrega cruce explícito con ROBERT_SANDBOX, SANDBOX_RULES, SANDBOX_TESTS y SANDBOX_RESULTS
+- USER_ACTIONS_SPEC no redefine la lógica del sandbox
+- USER_ACTIONS_SPEC queda alineado con ROBERT_COMMANDS v0.4
+- USER_ACTIONS_SPEC queda alineado con SCREEN_STATE_SPEC v0.2
+- USER_ACTIONS_SPEC queda alineado con INTERACTION_FLOW_SPEC v0.2
+
+### Restricción
+
+Esta aprobación no autoriza:
+
+- Programación
+- Código real
+- Botones reales
+- Pantallas reales
+- Prototipo funcional
+- Base de datos real
+- Conexiones externas
+- Automatizaciones
+- Agentes autónomos
+- Ejecución real
+- Avanzar a Fase 11
+
+Robert continúa en modo documental, manual y supervisado.
+
+---
