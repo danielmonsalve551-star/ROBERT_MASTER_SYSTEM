@@ -5439,3 +5439,155 @@ Sin conexiones externas.
 Sin automatizaciones reales.
 
 Sin agentes autónomos activos.
+
+---
+
+# CAMBIO #030 — Aprobación e integración de ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2
+
+Fecha: 04/07/2026  
+Estado: Aprobado e integrado  
+Documento afectado: ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2  
+Ubicación: 10_MVP  
+Decisión relacionada: DECISIÓN #018 — Aprobación de ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2  
+Cambio relacionado previo: CAMBIO #029 — Corrección de ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2  
+Documento base principal: ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2  
+Documento maestro relacionado: ROBERT_COMMANDS v0.4  
+Fase relacionada: Fase 10 — MVP técnico básico en preparación  
+
+---
+
+## Cambio realizado
+
+Se registró la aprobación formal e integración documental de:
+
+**ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2**
+
+como documento técnico documental aprobado del MVP técnico básico de Robert.
+
+---
+
+## Motivo del cambio
+
+Después de corregir ERROR_AND_BLOCKING_SPEC v0.1 y revisar la propuesta v0.2, el usuario aprobó formalmente el documento.
+
+La versión v0.2 queda integrada porque define cómo Robert debe manejar errores, advertencias, bloqueos automáticos, bloqueos manuales, acciones prohibidas, contradicciones documentales, riesgos críticos y capacidades futuras no disponibles.
+
+---
+
+## Correcciones integradas
+
+La versión aprobada integra:
+
+- Regla de precedencia entre eventos.
+- Uso del evento más específico cuando una acción encaja en varios eventos.
+- EVENTO 5 — Bloqueo automático como categoría general.
+- EVENTOS 15 al 20 como subtipos específicos del EVENTO 5.
+- Conexión no autorizada como EVENTO 16 cuando aplique.
+- Ejecución no autorizada como EVENTO 15 cuando aplique.
+- Agente no autorizado como EVENTO 18 cuando aplique.
+- Dato sensible detectado como EVENTO 19 cuando aplique.
+- Fase incorrecta como EVENTO 20 cuando aplique.
+- Cronología corregida del ejemplo de contradicción documental.
+- Nivel 0 únicamente como Informativo.
+- Acciones de control fuera de la escala de riesgo.
+- Alineación con ROBERT_COMMANDS v0.4.
+- Alineación con USER_ACTIONS_SPEC v0.2.
+- Alineación con documentos oficiales de sandbox.
+
+---
+
+## Alcance autorizado
+
+Este cambio autoriza únicamente:
+
+- Marcar ERROR_AND_BLOCKING_SPEC v0.2 como aprobado.
+- Integrarlo al estado documental actual de Robert.
+- Usarlo como base para futuras especificaciones técnicas.
+- Usarlo para definir errores conceptuales.
+- Usarlo para definir advertencias conceptuales.
+- Usarlo para definir bloqueos automáticos conceptuales.
+- Usarlo para definir bloqueos manuales conceptuales.
+- Usarlo para definir respuestas ante acciones prohibidas.
+- Usarlo para definir respuestas ante contradicciones documentales.
+- Usarlo para definir reglas de precedencia entre eventos.
+- Relacionarlo con ROBERT_COMMANDS v0.4.
+- Relacionarlo con USER_ACTIONS_SPEC v0.2.
+- Relacionarlo con documentos oficiales de sandbox.
+
+---
+
+## Alcance no autorizado
+
+Este cambio no autoriza:
+
+- Programar la app.
+- Crear código real.
+- Crear botones reales.
+- Crear pantallas reales.
+- Crear prototipo funcional.
+- Crear base de datos real.
+- Crear endpoints.
+- Conectar Supabase.
+- Conectar Firebase.
+- Conectar GitHub automáticamente.
+- Conectar Gmail.
+- Conectar Google Calendar.
+- Conectar APIs externas.
+- Automatizar acciones.
+- Activar agentes autónomos.
+- Ejecutar acciones reales.
+- Avanzar automáticamente a Fase 11.
+
+---
+
+## Riesgo
+
+Tipo de cambio:
+
+**Aprobación técnica documental / integración de errores y bloqueos conceptuales**
+
+Nivel de riesgo inicial:
+
+**Nivel 3 — Alto**
+
+Motivo:
+
+El documento define cómo Robert debe reaccionar ante errores, bloqueos, contradicciones y acciones prohibidas.
+
+Nivel de riesgo final:
+
+**Nivel 2 — Medio**
+
+Motivo:
+
+El cambio queda limitado a documentación. No crea botones reales, no crea pantallas reales, no programa, no conecta herramientas externas y no ejecuta acciones.
+
+Nivel de autonomía:
+
+**Nivel 0 — Sin autonomía ejecutiva**
+
+---
+
+## Estado final
+
+ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2 queda aprobado e integrado documentalmente.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Sin programación autorizada.
+
+Sin código real.
+
+Sin botones reales.
+
+Sin pantallas reales.
+
+Sin base de datos real.
+
+Sin conexiones externas.
+
+Sin automatizaciones reales.
+
+Sin agentes autónomos activos.
