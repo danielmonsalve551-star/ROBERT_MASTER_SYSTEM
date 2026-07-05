@@ -5298,3 +5298,144 @@ Sin conexiones externas.
 Sin automatizaciones reales.
 
 Sin agentes autónomos activos.
+
+---
+
+# CAMBIO #029 — Corrección de ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2
+
+Fecha: 04/07/2026  
+Estado: Propuesta corregida — pendiente de revisión  
+Documento afectado: ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC  
+Versión actualizada: v0.2  
+Ubicación: 10_MVP  
+Documento base principal: ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2  
+Documento maestro relacionado: ROBERT_COMMANDS v0.4  
+Fase relacionada: Fase 10 — MVP técnico básico en preparación  
+
+---
+
+## Cambio realizado
+
+Se corrigió el documento:
+
+**ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC**
+
+de v0.1 a:
+
+**v0.2 — Propuesta corregida pendiente de revisión**
+
+---
+
+## Motivo del cambio
+
+Durante la revisión de v0.1 se detectaron dos puntos a corregir:
+
+- Existía solapamiento entre eventos de bloqueo sin una regla de precedencia.
+- El ejemplo histórico de contradicción documental entre USER_ACTIONS_SPEC y ROBERT_COMMANDS tenía una cronología imprecisa.
+
+---
+
+## Correcciones aplicadas
+
+La versión v0.2 corrige:
+
+- Se agrega regla de precedencia entre eventos.
+- Se define que, cuando una acción encaje en varios eventos, Robert debe usar el evento más específico disponible.
+- EVENTO 5 — Bloqueo automático queda como categoría general.
+- EVENTOS 15 al 20 quedan como subtipos específicos del EVENTO 5.
+- Conexión no autorizada queda como EVENTO 16 cuando aplique.
+- Ejecución no autorizada queda como EVENTO 15 cuando aplique.
+- Agente no autorizado queda como EVENTO 18 cuando aplique.
+- Se corrige la cronología del ejemplo de contradicción documental.
+- Se aclara que USER_ACTIONS_SPEC v0.2 ya había separado Nivel 0 de acciones de control antes de corregir ROBERT_COMMANDS v0.4.
+- Se mantiene alineación con ROBERT_COMMANDS v0.4 y USER_ACTIONS_SPEC v0.2.
+
+---
+
+## Alcance autorizado
+
+Este cambio autoriza únicamente:
+
+- Corregir el documento técnico.
+- Mantenerlo como propuesta pendiente de revisión.
+- Usarlo para revisión documental.
+- Alinear errores y bloqueos con USER_ACTIONS_SPEC v0.2.
+- Alinear errores y bloqueos con ROBERT_COMMANDS v0.4.
+- Mantenerlo dentro de Fase 10.
+
+---
+
+## Alcance no autorizado
+
+Este cambio no autoriza:
+
+- Aprobar automáticamente ERROR_AND_BLOCKING_SPEC v0.2.
+- Programar la app.
+- Crear código real.
+- Crear botones reales.
+- Crear pantallas reales.
+- Crear base de datos real.
+- Crear endpoints.
+- Conectar herramientas externas.
+- Automatizar acciones.
+- Activar agentes autónomos.
+- Ejecutar acciones reales.
+- Avanzar automáticamente a Fase 11.
+
+---
+
+## Riesgo
+
+Tipo de cambio:
+
+**Cambio técnico documental / corrección de errores y bloqueos conceptuales**
+
+Nivel de riesgo inicial:
+
+**Nivel 3 — Alto**
+
+Motivo:
+
+El documento define cómo Robert debe reaccionar ante errores, bloqueos, contradicciones y acciones prohibidas.
+
+Nivel de riesgo final esperado:
+
+**Nivel 2 — Medio**
+
+Motivo:
+
+La corrección sigue siendo documental. No crea pantallas reales, no programa, no conecta herramientas externas y no ejecuta acciones.
+
+Nivel de autonomía:
+
+**Nivel 0 — Sin autonomía ejecutiva**
+
+---
+
+## Estado final
+
+ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2 queda como:
+
+**Propuesta corregida pendiente de revisión**
+
+No está aprobado todavía.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Sin programación autorizada.
+
+Sin código real.
+
+Sin botones reales.
+
+Sin pantallas reales.
+
+Sin base de datos real.
+
+Sin conexiones externas.
+
+Sin automatizaciones reales.
+
+Sin agentes autónomos activos.
