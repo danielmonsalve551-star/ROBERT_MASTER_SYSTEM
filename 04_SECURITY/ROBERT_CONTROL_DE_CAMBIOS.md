@@ -5591,3 +5591,163 @@ Sin conexiones externas.
 Sin automatizaciones reales.
 
 Sin agentes autónomos activos.
+
+---
+
+# CAMBIO #031 — Corrección de ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2
+
+Fecha: 04/07/2026  
+Estado: Propuesta corregida — pendiente de revisión  
+Documento afectado: ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC  
+Versión actualizada: v0.2  
+Ubicación: 10_MVP  
+Documento base principal: ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2  
+Documentos relacionados: ROBERT_COMMANDS v0.4, ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2, ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2, ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2, ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2, ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1  
+Fase relacionada: Fase 10 — MVP técnico básico en preparación  
+
+---
+
+## Cambio realizado
+
+Se corrigió el documento:
+
+**ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC**
+
+de v0.1 a:
+
+**v0.2 — Propuesta corregida pendiente de revisión**
+
+---
+
+## Motivo del cambio
+
+Durante la revisión de v0.1 se detectaron lagunas estructurales importantes:
+
+- El documento no conectaba Permiso y Alcance con los 11 modelos de DATA_MODEL_SPEC v0.1.
+- Permiso y Alcance podían interpretarse como modelos nuevos no registrados.
+- No existía sección de componentes participantes.
+- No se definía dónde se mostraba permiso activo, alcance, duración, expiración o revocación.
+- No existía tabla de correspondencia entre permisos y acciones de USER_ACTIONS_SPEC v0.2.
+- En la relación con ERROR_AND_BLOCKING_SPEC faltaba EVENTO 5 — Bloqueo automático como categoría general de respaldo.
+
+---
+
+## Correcciones aplicadas
+
+La versión v0.2 corrige:
+
+- Se agrega relación explícita con los 11 modelos de DATA_MODEL_SPEC v0.1.
+- Se aclara que Permiso y Alcance no son modelos nuevos oficiales.
+- Se define que Permiso y Alcance son estructuras conceptuales derivadas.
+- Se aclara que no se crea el modelo PermissionScope en esta versión.
+- Se establece que cualquier modelo nuevo futuro requiere actualizar DATA_MODEL_SPEC.
+- Se agrega sección de componentes participantes.
+- Se incluyen los 10 componentes aprobados en COMPONENTS_SPEC v0.2.
+- Se define el rol de AppShell, TopBar, LeftSidebar, CommandCenter, ModeSelector, RiskBadge, ApprovalGate, DecisionInbox, DocumentStatusMap y CurrentStatePanel.
+- Se define dónde se muestra permiso activo, alcance activo, duración, expiración, riesgo, decisión pendiente y revocación.
+- Se agrega tabla de correspondencia entre los 13 permisos y las acciones de USER_ACTIONS_SPEC v0.2.
+- Se agrega EVENTO 5 — Bloqueo automático como categoría general de respaldo.
+- Se mantiene alineación con ROBERT_COMMANDS v0.4.
+- Se mantiene alineación con USER_ACTIONS_SPEC v0.2.
+- Se mantiene alineación con ERROR_AND_BLOCKING_SPEC v0.2.
+- Se mantiene alineación con DATA_MODEL_SPEC v0.1.
+- Se mantiene alineación con SCREEN_STATE_SPEC v0.2 e INTERACTION_FLOW_SPEC v0.2.
+
+---
+
+## Alcance autorizado
+
+Este cambio autoriza únicamente:
+
+- Corregir el documento técnico.
+- Mantenerlo como propuesta pendiente de revisión.
+- Usarlo para revisión documental.
+- Alinear permisos y alcances con DATA_MODEL_SPEC v0.1.
+- Alinear permisos con USER_ACTIONS_SPEC v0.2.
+- Alinear bloqueos con ERROR_AND_BLOCKING_SPEC v0.2.
+- Alinear visualización con COMPONENTS_SPEC v0.2 y SCREEN_STATE_SPEC v0.2.
+- Mantenerlo dentro de Fase 10.
+
+---
+
+## Alcance no autorizado
+
+Este cambio no autoriza:
+
+- Aprobar automáticamente PERMISSIONS_AND_SCOPES_SPEC v0.2.
+- Crear modelo PermissionScope.
+- Modificar DATA_MODEL_SPEC automáticamente.
+- Programar la app.
+- Crear código real.
+- Crear botones reales.
+- Crear pantallas reales.
+- Crear sistema real de permisos.
+- Crear usuarios reales.
+- Crear roles reales.
+- Crear base de datos real.
+- Crear endpoints.
+- Conectar herramientas externas.
+- Automatizar acciones.
+- Activar agentes autónomos.
+- Ejecutar acciones reales.
+- Avanzar automáticamente a Fase 11.
+
+---
+
+## Riesgo
+
+Tipo de cambio:
+
+**Cambio técnico documental / corrección de permisos y alcances conceptuales**
+
+Nivel de riesgo inicial:
+
+**Nivel 3 — Alto**
+
+Motivo:
+
+El documento define cómo Robert interpreta permisos, alcances, límites de autorización, duración y revocación.
+
+Nivel de riesgo final esperado:
+
+**Nivel 2 — Medio**
+
+Motivo:
+
+La corrección sigue siendo documental. No crea modelo real nuevo, no crea sistema real de permisos, no crea botones reales, no crea pantallas reales, no programa, no conecta herramientas externas y no ejecuta acciones.
+
+Nivel de autonomía:
+
+**Nivel 0 — Sin autonomía ejecutiva**
+
+---
+
+## Estado final
+
+ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2 queda como:
+
+**Propuesta corregida pendiente de revisión**
+
+No está aprobado todavía.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Sin programación autorizada.
+
+Sin código real.
+
+Sin botones reales.
+
+Sin pantallas reales.
+
+Sin sistema real de permisos.
+
+Sin base de datos real.
+
+Sin conexiones externas.
+
+Sin automatizaciones reales.
+
+Sin agentes autónomos activos.
