@@ -3002,3 +3002,92 @@ Robert continúa en:
 **Fase 10 — MVP técnico básico en preparación**
 
 ---
+
+---
+
+# ACTUALIZACIÓN — PERMISSIONS_AND_SCOPES_SPEC v0.2 APROBADO
+
+Fecha: 04/07/2026  
+Estado: Aprobado e integrado  
+Decisión relacionada: DECISIÓN #019 — Aprobación de ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2  
+Cambio relacionado: CAMBIO #032 — Aprobación e integración de ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2  
+Documento base principal: ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2  
+Documentos relacionados: ROBERT_COMMANDS v0.4, ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2, ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1, ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2, ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2, ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2  
+
+---
+
+## Estado actualizado
+
+ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2 queda aprobado e integrado como documento técnico documental del MVP técnico básico.
+
+---
+
+## Función del documento
+
+Este documento define conceptualmente:
+
+- Permisos.
+- Alcances.
+- Límites de autorización.
+- Duración de autorizaciones.
+- Expiración de autorizaciones.
+- Revocación.
+- Acciones permitidas.
+- Acciones fuera de alcance.
+- Correspondencia entre permisos y acciones.
+- Relación de permisos con modelos existentes.
+- Relación de permisos con componentes visuales conceptuales.
+
+---
+
+## Correcciones validadas
+
+La versión v0.2 integra:
+
+- Relación explícita entre Permiso, Alcance y los 11 modelos de DATA_MODEL_SPEC v0.1.
+- Aclaración de que Permiso y Alcance no son modelos nuevos oficiales.
+- Definición de Permiso y Alcance como estructuras conceptuales derivadas.
+- Aclaración de que no se crea el modelo PermissionScope en esta versión.
+- Regla de que cualquier modelo nuevo futuro requiere actualizar DATA_MODEL_SPEC.
+- Inclusión de los 10 componentes aprobados en COMPONENTS_SPEC v0.2.
+- Definición de dónde se muestra permiso activo, alcance, duración, expiración, riesgo, decisión pendiente y revocación.
+- Tabla de correspondencia entre los 13 permisos y las acciones de USER_ACTIONS_SPEC v0.2.
+- Inclusión de EVENTO 5 — Bloqueo automático como categoría general de respaldo.
+- Nivel 0 únicamente como Informativo.
+- Acciones de control fuera de la escala de riesgo.
+- Alineación con ROBERT_COMMANDS v0.4.
+- Alineación con USER_ACTIONS_SPEC v0.2.
+- Alineación con ERROR_AND_BLOCKING_SPEC v0.2.
+- Alineación con DATA_MODEL_SPEC v0.1.
+- Alineación con SCREEN_STATE_SPEC v0.2.
+- Alineación con INTERACTION_FLOW_SPEC v0.2.
+- Alineación con COMPONENTS_SPEC v0.2.
+
+---
+
+## Restricción
+
+Esta aprobación no autoriza:
+
+- Programación.
+- Código real.
+- Botones reales.
+- Pantallas reales.
+- Prototipo funcional.
+- Sistema real de permisos.
+- Usuarios reales.
+- Roles reales.
+- Base de datos real.
+- Modelo PermissionScope.
+- Modificar DATA_MODEL_SPEC automáticamente.
+- Conexiones externas.
+- Automatizaciones.
+- Agentes autónomos.
+- Ejecución real.
+- Avanzar a Fase 11.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+---
