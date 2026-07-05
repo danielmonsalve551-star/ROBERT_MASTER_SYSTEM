@@ -875,3 +875,52 @@ Esta aprobación no autoriza:
 Robert continúa en modo documental, manual y supervisado.
 
 ---
+---
+
+## ERROR_AND_BLOCKING_SPEC v0.2 corregido
+
+Estado: Propuesta corregida — pendiente de revisión  
+Cambio relacionado: CAMBIO #029  
+Fase: Fase 10 — MVP técnico básico en preparación  
+Documento base principal: ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2  
+Documento maestro relacionado: ROBERT_COMMANDS v0.4
+
+### Estado actualizado
+
+ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC fue actualizado de v0.1 a:
+
+**v0.2 — Propuesta corregida pendiente de revisión**
+
+### Correcciones principales
+
+La versión v0.2 corrige:
+
+- Se agrega regla de precedencia entre eventos
+- Cuando una acción encaja en varios eventos, Robert debe usar el evento más específico disponible
+- EVENTO 5 — Bloqueo automático queda como categoría general
+- EVENTOS 15 al 20 quedan como subtipos específicos del EVENTO 5
+- Conexión no autorizada queda como EVENTO 16 cuando aplique
+- Ejecución no autorizada queda como EVENTO 15 cuando aplique
+- Agente no autorizado queda como EVENTO 18 cuando aplique
+- Se corrige la cronología del ejemplo de contradicción documental
+- Se mantiene alineación con ROBERT_COMMANDS v0.4
+- Se mantiene alineación con USER_ACTIONS_SPEC v0.2
+
+### Restricción
+
+Esta actualización no autoriza:
+
+- Programación
+- Código real
+- Botones reales
+- Pantallas reales
+- Base de datos real
+- Conexiones externas
+- Automatizaciones
+- Agentes autónomos
+- Ejecución real
+- Avanzar a Fase 11
+
+Robert continúa en modo documental, manual y supervisado.
+
+---
