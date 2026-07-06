@@ -3178,3 +3178,96 @@ Robert continúa en:
 **Fase 10 — MVP técnico básico en preparación**
 
 ---
+---
+
+# ACTUALIZACIÓN — AUDIT_TRAIL_SPEC v0.2 APROBADO
+
+Fecha: 06/07/2026  
+Estado: Aprobado e integrado  
+Decisión relacionada: DECISIÓN #020 — Aprobación de ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2  
+Cambio relacionado: CAMBIO #034 — Aprobación e integración de ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2  
+Documento base principal: ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2  
+Documentos relacionados: ROBERT_COMMANDS v0.4, ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2, ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2, ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1, ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2, ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2, ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2  
+
+---
+
+## Estado actualizado
+
+ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2 queda aprobado e integrado como documento técnico documental del MVP técnico básico.
+
+---
+
+## Función del documento
+
+Este documento define conceptualmente:
+
+- Trazabilidad documental.
+- Historial.
+- Evidencia mínima.
+- Registro de acciones.
+- Registro de decisiones.
+- Registro de cambios.
+- Registro de riesgos.
+- Registro de permisos.
+- Registro de bloqueos.
+- Relación entre registros y eventos.
+- Relación entre auditoría y modelos existentes.
+- Relación entre auditoría y componentes visuales conceptuales.
+
+---
+
+## Correcciones validadas
+
+La versión v0.2 integra:
+
+- EVENTO 3 — Aprobación formal requerida.
+- EVENTO 10 — Contradicción documental.
+- Conexión de REGISTRO 8 — Aprobación con EVENTO 3.
+- Conexión de REGISTRO 16 — Contradicción documental con EVENTO 10.
+- Tabla de relación entre registros y eventos.
+- Uniformidad de los 17 tipos de REGISTRO.
+- Cada REGISTRO incluye:
+  - Qué registra.
+  - Ejemplos.
+  - Riesgo típico.
+  - Modelo principal.
+  - Componente principal.
+  - Registro formal requerido.
+  - Restricción.
+- Aclaración de que Audit Trail no crea el modelo AuditTrailEntry.
+- Aclaración de que Audit Trail no crea el componente AuditTrailPanel.
+- Alineación con DATA_MODEL_SPEC v0.1.
+- Alineación con COMPONENTS_SPEC v0.2.
+- Alineación con USER_ACTIONS_SPEC v0.2.
+- Alineación con PERMISSIONS_AND_SCOPES_SPEC v0.2.
+- Alineación con ERROR_AND_BLOCKING_SPEC v0.2.
+- Alineación con SCREEN_STATE_SPEC v0.2.
+- Alineación con INTERACTION_FLOW_SPEC v0.2.
+
+---
+
+## Restricción
+
+Esta aprobación no autoriza:
+
+- Programación.
+- Código real.
+- Logs reales.
+- Sistema real de auditoría.
+- Base de datos real.
+- Botones reales.
+- Pantallas reales.
+- Prototipo funcional.
+- Modelo AuditTrailEntry.
+- Componente AuditTrailPanel.
+- Conexiones externas.
+- Automatizaciones.
+- Agentes autónomos.
+- Ejecución real.
+- Avanzar a Fase 11.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+---
