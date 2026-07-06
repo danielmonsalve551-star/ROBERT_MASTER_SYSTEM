@@ -6609,3 +6609,160 @@ Sin conexiones externas.
 Sin automatizaciones reales.
 
 Sin agentes autónomos activos.
+
+---
+
+# CAMBIO #037 — Corrección de ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC v0.2
+
+Fecha: 06/07/2026  
+Estado: Propuesta corregida — pendiente de revisión  
+Documento afectado: ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC  
+Versión actualizada: v0.2  
+Ubicación: 10_MVP  
+Documento base principal: ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC v0.2  
+Documentos relacionados: ROBERT_COMMANDS v0.4, ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2, ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2, ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2, ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2, ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1, ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2, ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2, ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2  
+Fase relacionada: Fase 10 — MVP técnico básico en preparación  
+
+---
+
+## Cambio realizado
+
+Se corrigió el documento:
+
+**ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC**
+
+de v0.1 a:
+
+**v0.2 — Propuesta corregida pendiente de revisión**
+
+---
+
+## Motivo del cambio
+
+Durante la revisión de v0.1 se detectaron huecos en la relación con AUDIT_TRAIL_SPEC v0.2:
+
+- REGISTRO 2 — Comando no estaba referenciado en ningún tipo de sesión.
+- REGISTRO 11 — Riesgo no estaba referenciado en ningún tipo de sesión.
+- TIPO 10 — Sesión de bloqueo mezclaba riesgo numérico con acción de control fuera de escala.
+- Existía una posible asimetría con NOTIFICATION_AND_ALERTS_SPEC v0.2 sobre respaldo manual.
+- No estaba aclarado si debía existir un TIPO 18 — Sesión de respaldo manual.
+
+---
+
+## Correcciones aplicadas
+
+La versión v0.2 corrige:
+
+- Se agrega REGISTRO 2 — Comando a TIPO 1 — Sesión informativa.
+- Se agrega REGISTRO 2 — Comando a TIPO 3 — Sesión de corrección.
+- Se agrega REGISTRO 11 — Riesgo a TIPO 10 — Sesión de bloqueo cuando aplica.
+- Se agrega REGISTRO 11 — Riesgo a TIPO 13 — Sesión de revisión crítica.
+- Se corrige TIPO 10 separando Riesgo típico de Nota de control.
+- Se aclara que las acciones de control quedan fuera de la escala de riesgo.
+- Se aclara que no se crea TIPO 18 — Sesión de respaldo manual.
+- Se confirma que el respaldo manual se absorbe dentro de TIPO 15 — Sesión de cierre de bloque.
+- Se aclara que una notificación específica no siempre requiere un tipo de sesión independiente.
+- Se refuerza la relación con AUDIT_TRAIL_SPEC v0.2.
+- Se actualizan los criterios de aceptación.
+- Se cambia la aprobación futura esperada a v0.2.
+
+---
+
+## Alcance autorizado
+
+Este cambio autoriza únicamente:
+
+- Corregir el documento técnico.
+- Mantenerlo como propuesta pendiente de revisión.
+- Usarlo para revisión documental.
+- Alinear sesión y contexto con AUDIT_TRAIL_SPEC v0.2.
+- Alinear sesión y contexto con NOTIFICATION_AND_ALERTS_SPEC v0.2.
+- Mantenerlo dentro de Fase 10.
+
+---
+
+## Alcance no autorizado
+
+Este cambio no autoriza:
+
+- Aprobar automáticamente SESSION_AND_CONTEXT_SPEC v0.2.
+- Crear modelo SessionRecord.
+- Crear modelo ContextSnapshot.
+- Crear modelo ConversationState.
+- Crear componente SessionPanel.
+- Crear componente ContextTimeline.
+- Crear TIPO 18 — Sesión de respaldo manual.
+- Programar la app.
+- Crear código real.
+- Crear sistema real de sesiones.
+- Crear memoria automática real.
+- Crear base de datos real.
+- Crear botones reales.
+- Crear pantallas reales.
+- Conectar herramientas externas.
+- Automatizar recuperación de contexto.
+- Activar agentes autónomos.
+- Ejecutar acciones reales.
+- Avanzar automáticamente a Fase 11.
+
+---
+
+## Riesgo
+
+Tipo de cambio:
+
+**Cambio técnico documental / corrección de sesión, contexto y continuidad conceptual**
+
+Nivel de riesgo inicial:
+
+**Nivel 3 — Alto**
+
+Motivo:
+
+El documento define cómo Robert mantiene continuidad, interpreta confirmaciones, reanuda trabajo y evita perder el hilo.
+
+Nivel de riesgo final esperado:
+
+**Nivel 2 — Medio**
+
+Motivo:
+
+La corrección sigue siendo documental. No crea memoria real automática, no crea sistema real de sesiones, no crea base de datos real, no crea modelos nuevos oficiales, no crea componentes nuevos oficiales, no programa, no conecta herramientas externas y no ejecuta acciones.
+
+Nivel de autonomía:
+
+**Nivel 0 — Sin autonomía ejecutiva**
+
+---
+
+## Estado final
+
+ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC v0.2 queda como:
+
+**Propuesta corregida pendiente de revisión**
+
+No está aprobado todavía.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Sin programación autorizada.
+
+Sin código real.
+
+Sin botones reales.
+
+Sin pantallas reales.
+
+Sin memoria real automática.
+
+Sin sistema real de sesiones.
+
+Sin base de datos real.
+
+Sin conexiones externas.
+
+Sin automatizaciones reales.
+
+Sin agentes autónomos activos.
