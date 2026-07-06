@@ -6251,3 +6251,180 @@ Sin conexiones externas.
 Sin automatizaciones reales.
 
 Sin agentes autónomos activos.
+
+---
+
+# CAMBIO #035 — Corrección de ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC v0.2
+
+Fecha: 06/07/2026  
+Estado: Propuesta corregida — pendiente de revisión  
+Documento afectado: ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC  
+Versión actualizada: v0.2  
+Ubicación: 10_MVP  
+Documento base principal: ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2  
+Documentos relacionados: ROBERT_COMMANDS v0.4, ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2, ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2, ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2, ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1, ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2, ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2, ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2  
+Fase relacionada: Fase 10 — MVP técnico básico en preparación  
+
+---
+
+## Cambio realizado
+
+Se corrigió el documento:
+
+**ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC**
+
+de v0.1 a:
+
+**v0.2 — Propuesta corregida pendiente de revisión**
+
+---
+
+## Motivo del cambio
+
+Durante la revisión de v0.1 se detectaron huecos reales en la relación con ERROR_AND_BLOCKING_SPEC:
+
+- TIPO 12 — Alerta de capacidad futura no disponible no conectaba con EVENTO 8 — Acción futura no disponible.
+- EVENTO 4 — Pausa obligatoria no estaba referenciado.
+- EVENTO 6 — Bloqueo manual solicitado no estaba referenciado.
+- ACCIÓN 13 — Pausar avance no estaba conectada con EVENTO 4.
+- ACCIÓN 14 — Solicitar bloqueo manual no estaba conectada con EVENTO 6.
+- Eventos importantes como EVENTO 7, EVENTO 9, EVENTO 11, EVENTO 13 y EVENTO 14 estaban cubiertos solo de forma implícita.
+
+---
+
+## Correcciones aplicadas
+
+La versión v0.2 corrige:
+
+- Se agrega EVENTO 4 — Pausa obligatoria.
+- Se agrega EVENTO 6 — Bloqueo manual solicitado.
+- Se agrega EVENTO 7 — Acción prohibida.
+- Se agrega EVENTO 8 — Acción futura no disponible.
+- Se agrega EVENTO 9 — Falta de información.
+- Se agrega EVENTO 11 — Riesgo crítico.
+- Se agrega EVENTO 13 — Sandbox requerido.
+- Se agrega EVENTO 14 — Sandbox excedido.
+- Se conecta ACCIÓN 13 — Pausar avance con EVENTO 4.
+- Se conecta ACCIÓN 14 — Solicitar bloqueo manual con EVENTO 6.
+- Se conecta TIPO 12 — Alerta de capacidad futura no disponible con EVENTO 8 como evento general.
+- Se aclara que TIPO 12 solo usa EVENTOS 15 al 20 cuando la capacidad futura intenta activarse como acción real.
+- Se conecta TIPO 4 — Alerta de comando ambiguo o falta de información con EVENTO 9.
+- Se conecta TIPO 5 — Advertencia de riesgo con EVENTO 11.
+- Se conecta TIPO 9 — Mensaje de bloqueo con EVENTO 6 y EVENTO 7.
+- Se conecta TIPO 16 — Aviso de sandbox manual con EVENTO 13 y EVENTO 14.
+- Se actualiza la lista de eventos relevantes.
+- Se actualiza la tabla de relación entre tipos y eventos.
+- Se actualiza la correspondencia con USER_ACTIONS_SPEC v0.2.
+- Se mantiene que las acciones de control están fuera de la escala de riesgo.
+- Se mantiene alineación con ERROR_AND_BLOCKING_SPEC v0.2.
+- Se mantiene alineación con AUDIT_TRAIL_SPEC v0.2.
+- Se mantiene alineación con PERMISSIONS_AND_SCOPES_SPEC v0.2.
+
+---
+
+## Alcance autorizado
+
+Este cambio autoriza únicamente:
+
+- Corregir el documento técnico.
+- Mantenerlo como propuesta pendiente de revisión.
+- Usarlo para revisión documental.
+- Alinear notificaciones y alertas con ERROR_AND_BLOCKING_SPEC v0.2.
+- Alinear notificaciones con USER_ACTIONS_SPEC v0.2.
+- Alinear notificaciones con AUDIT_TRAIL_SPEC v0.2.
+- Alinear notificaciones con PERMISSIONS_AND_SCOPES_SPEC v0.2.
+- Mantenerlo dentro de Fase 10.
+
+---
+
+## Alcance no autorizado
+
+Este cambio no autoriza:
+
+- Aprobar automáticamente NOTIFICATION_AND_ALERTS_SPEC v0.2.
+- Crear modelo NotificationRecord.
+- Crear modelo AlertRecord.
+- Crear componente NotificationCenter.
+- Crear componente AlertPanel.
+- Modificar DATA_MODEL_SPEC automáticamente.
+- Modificar COMPONENTS_SPEC automáticamente.
+- Programar la app.
+- Crear código real.
+- Crear notificaciones reales.
+- Crear emails.
+- Crear push notifications.
+- Crear sistema real de alertas.
+- Crear base de datos real.
+- Crear botones reales.
+- Crear pantallas reales.
+- Conectar herramientas externas.
+- Automatizar acciones.
+- Activar agentes autónomos.
+- Ejecutar acciones reales.
+- Avanzar automáticamente a Fase 11.
+
+---
+
+## Riesgo
+
+Tipo de cambio:
+
+**Cambio técnico documental / corrección de notificaciones y alertas conceptuales**
+
+Nivel de riesgo inicial:
+
+**Nivel 3 — Alto**
+
+Motivo:
+
+El documento define cómo Robert comunica riesgos, bloqueos, permisos, confirmaciones, advertencias y estados al usuario.
+
+Nivel de riesgo final esperado:
+
+**Nivel 2 — Medio**
+
+Motivo:
+
+La corrección sigue siendo documental. No crea notificaciones reales, no crea sistema real de alertas, no crea modelos nuevos oficiales, no crea componentes nuevos oficiales, no programa, no conecta herramientas externas y no ejecuta acciones.
+
+Nivel de autonomía:
+
+**Nivel 0 — Sin autonomía ejecutiva**
+
+---
+
+## Estado final
+
+ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC v0.2 queda como:
+
+**Propuesta corregida pendiente de revisión**
+
+No está aprobado todavía.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Sin programación autorizada.
+
+Sin código real.
+
+Sin botones reales.
+
+Sin pantallas reales.
+
+Sin notificaciones reales.
+
+Sin emails.
+
+Sin push notifications.
+
+Sin sistema real de alertas.
+
+Sin base de datos real.
+
+Sin conexiones externas.
+
+Sin automatizaciones reales.
+
+Sin agentes autónomos activos.
