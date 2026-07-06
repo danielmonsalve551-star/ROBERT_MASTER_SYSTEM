@@ -5913,3 +5913,167 @@ Sin conexiones externas.
 Sin automatizaciones reales.
 
 Sin agentes autónomos activos.
+
+---
+
+# CAMBIO #033 — Corrección de ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2
+
+Fecha: 06/07/2026  
+Estado: Propuesta corregida — pendiente de revisión  
+Documento afectado: ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC  
+Versión actualizada: v0.2  
+Ubicación: 10_MVP  
+Documento base principal: ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2  
+Documentos relacionados: ROBERT_COMMANDS v0.4, ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2, ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2, ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1, ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2, ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2, ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2  
+Fase relacionada: Fase 10 — MVP técnico básico en preparación  
+
+---
+
+## Cambio realizado
+
+Se corrigió el documento:
+
+**ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC**
+
+de v0.1 a:
+
+**v0.2 — Propuesta corregida pendiente de revisión**
+
+---
+
+## Motivo del cambio
+
+Durante la revisión de v0.1 se detectaron dos inconsistencias:
+
+- La relación con ERROR_AND_BLOCKING_SPEC no incluía EVENTO 3 — Aprobación formal requerida.
+- La relación con ERROR_AND_BLOCKING_SPEC no incluía EVENTO 10 — Contradicción documental.
+- Los 17 tipos de REGISTRO no usaban una estructura uniforme de campos.
+
+---
+
+## Correcciones aplicadas
+
+La versión v0.2 corrige:
+
+- Se agrega EVENTO 3 — Aprobación formal requerida.
+- Se agrega EVENTO 10 — Contradicción documental.
+- Se conecta REGISTRO 8 — Aprobación con EVENTO 3.
+- Se conecta REGISTRO 16 — Contradicción documental con EVENTO 10.
+- Se agrega tabla de relación entre registros y eventos.
+- Se uniforman los 17 tipos de REGISTRO.
+- Cada REGISTRO ahora incluye:
+  - Qué registra.
+  - Ejemplos.
+  - Riesgo típico.
+  - Modelo principal.
+  - Componente principal.
+  - Registro formal requerido.
+  - Restricción.
+- Se mantiene que Audit Trail no crea el modelo AuditTrailEntry.
+- Se mantiene que Audit Trail no crea el componente AuditTrailPanel.
+- Se mantiene alineación con DATA_MODEL_SPEC v0.1.
+- Se mantiene alineación con COMPONENTS_SPEC v0.2.
+- Se mantiene alineación con USER_ACTIONS_SPEC v0.2.
+- Se mantiene alineación con PERMISSIONS_AND_SCOPES_SPEC v0.2.
+- Se mantiene alineación con ERROR_AND_BLOCKING_SPEC v0.2.
+
+---
+
+## Alcance autorizado
+
+Este cambio autoriza únicamente:
+
+- Corregir el documento técnico.
+- Mantenerlo como propuesta pendiente de revisión.
+- Usarlo para revisión documental.
+- Alinear auditoría con ERROR_AND_BLOCKING_SPEC v0.2.
+- Alinear registros con DATA_MODEL_SPEC v0.1.
+- Alinear registros con COMPONENTS_SPEC v0.2.
+- Alinear registros con USER_ACTIONS_SPEC v0.2.
+- Mantenerlo dentro de Fase 10.
+
+---
+
+## Alcance no autorizado
+
+Este cambio no autoriza:
+
+- Aprobar automáticamente AUDIT_TRAIL_SPEC v0.2.
+- Crear modelo AuditTrailEntry.
+- Crear componente AuditTrailPanel.
+- Modificar DATA_MODEL_SPEC automáticamente.
+- Modificar COMPONENTS_SPEC automáticamente.
+- Programar la app.
+- Crear código real.
+- Crear logs reales.
+- Crear sistema real de auditoría.
+- Crear base de datos real.
+- Crear botones reales.
+- Crear pantallas reales.
+- Conectar herramientas externas.
+- Automatizar acciones.
+- Activar agentes autónomos.
+- Ejecutar acciones reales.
+- Avanzar automáticamente a Fase 11.
+
+---
+
+## Riesgo
+
+Tipo de cambio:
+
+**Cambio técnico documental / corrección de trazabilidad y auditoría conceptual**
+
+Nivel de riesgo inicial:
+
+**Nivel 3 — Alto**
+
+Motivo:
+
+El documento define cómo Robert debe rastrear acciones, cambios, decisiones, permisos, bloqueos y evidencia documental.
+
+Nivel de riesgo final esperado:
+
+**Nivel 2 — Medio**
+
+Motivo:
+
+La corrección sigue siendo documental. No crea logs reales, no crea sistema real de auditoría, no crea modelos nuevos oficiales, no crea componentes nuevos oficiales, no programa, no conecta herramientas externas y no ejecuta acciones.
+
+Nivel de autonomía:
+
+**Nivel 0 — Sin autonomía ejecutiva**
+
+---
+
+## Estado final
+
+ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2 queda como:
+
+**Propuesta corregida pendiente de revisión**
+
+No está aprobado todavía.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Sin programación autorizada.
+
+Sin código real.
+
+Sin botones reales.
+
+Sin pantallas reales.
+
+Sin logs reales.
+
+Sin sistema real de auditoría.
+
+Sin base de datos real.
+
+Sin conexiones externas.
+
+Sin automatizaciones reales.
+
+Sin agentes autónomos activos.
