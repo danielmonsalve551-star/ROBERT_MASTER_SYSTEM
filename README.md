@@ -1270,3 +1270,70 @@ Esta aprobación no autoriza:
 Robert continúa en modo documental, manual y supervisado.
 
 ---
+---
+
+## NOTIFICATION_AND_ALERTS_SPEC v0.2 corregido
+
+Estado: Propuesta corregida — pendiente de revisión  
+Cambio relacionado: CAMBIO #035  
+Fase: Fase 10 — MVP técnico básico en preparación  
+Documento base principal: ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2  
+Documentos relacionados: ROBERT_COMMANDS v0.4, ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2, ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2, ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2, ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1, ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2, ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2, ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2
+
+### Estado actualizado
+
+ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC fue actualizado de v0.1 a:
+
+**v0.2 — Propuesta corregida pendiente de revisión**
+
+### Correcciones principales
+
+La versión v0.2 corrige:
+
+- Se agrega EVENTO 4 — Pausa obligatoria
+- Se agrega EVENTO 6 — Bloqueo manual solicitado
+- Se agrega EVENTO 7 — Acción prohibida
+- Se agrega EVENTO 8 — Acción futura no disponible
+- Se agrega EVENTO 9 — Falta de información
+- Se agrega EVENTO 11 — Riesgo crítico
+- Se agrega EVENTO 13 — Sandbox requerido
+- Se agrega EVENTO 14 — Sandbox excedido
+- Se conecta ACCIÓN 13 — Pausar avance con EVENTO 4
+- Se conecta ACCIÓN 14 — Solicitar bloqueo manual con EVENTO 6
+- Se conecta TIPO 12 — Alerta de capacidad futura no disponible con EVENTO 8
+- Se aclara que TIPO 12 solo usa EVENTOS 15 al 20 cuando la capacidad futura intenta activarse como acción real
+- Se conecta TIPO 4 con EVENTO 9
+- Se conecta TIPO 5 con EVENTO 11
+- Se conecta TIPO 9 con EVENTO 6 y EVENTO 7
+- Se conecta TIPO 16 con EVENTO 13 y EVENTO 14
+- Se actualiza la lista de eventos relevantes
+- Se actualiza la tabla de relación entre tipos y eventos
+- Se actualiza la correspondencia con USER_ACTIONS_SPEC v0.2
+- Se mantiene que las acciones de control están fuera de la escala de riesgo
+
+### Restricción
+
+Esta actualización no autoriza:
+
+- Programación
+- Código real
+- Notificaciones reales
+- Emails
+- Push notifications
+- Sistema real de alertas
+- Base de datos real
+- Botones reales
+- Pantallas reales
+- Modelo NotificationRecord
+- Modelo AlertRecord
+- Componente NotificationCenter
+- Componente AlertPanel
+- Conexiones externas
+- Automatizaciones
+- Agentes autónomos
+- Ejecución real
+- Avanzar a Fase 11
+
+Robert continúa en modo documental, manual y supervisado.
+
+---
