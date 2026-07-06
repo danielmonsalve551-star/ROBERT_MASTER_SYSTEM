@@ -2869,3 +2869,175 @@ Sin conexiones externas.
 Sin automatizaciones reales.
 
 Sin agentes autónomos activos.
+
+---
+
+# DECISIÓN #022 — Aprobación de ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC v0.2
+
+Fecha: 06/07/2026  
+Estado: Aprobada  
+Documento aprobado: ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC v0.2  
+Ubicación: 10_MVP  
+Cambio relacionado previo: CAMBIO #037 — Corrección de ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC v0.2  
+Documento base principal: ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC v0.2  
+Documentos relacionados: ROBERT_COMMANDS v0.4, ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2, ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2, ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2, ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2, ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1, ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2, ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2, ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2  
+Fase relacionada: Fase 10 — MVP técnico básico en preparación  
+
+---
+
+## Decisión tomada
+
+El usuario aprueba formalmente el documento:
+
+**ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC v0.2**
+
+como especificación técnica documental para definir sesión, contexto activo, continuidad, pausa, reanudación, interpretación de confirmaciones cortas, recuperación del hilo y cierre de bloques dentro del MVP técnico básico de Robert.
+
+---
+
+## Motivo de la aprobación
+
+El documento queda aprobado porque corrige los huecos detectados en v0.1 y queda alineado con:
+
+- ROBERT_COMMANDS v0.4
+- ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC v0.2
+- ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2
+- ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2
+- ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2
+- ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2
+- ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1
+- ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2
+- ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2
+- ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2
+- ROBERT_CONTEXT_MASTER v0.5
+- Documentos oficiales de sandbox
+
+---
+
+## Correcciones validadas
+
+La versión v0.2 valida:
+
+- Se agrega REGISTRO 2 — Comando a TIPO 1 — Sesión informativa.
+- Se agrega REGISTRO 2 — Comando a TIPO 3 — Sesión de corrección.
+- Se agrega REGISTRO 11 — Riesgo a TIPO 10 — Sesión de bloqueo cuando aplica.
+- Se agrega REGISTRO 11 — Riesgo a TIPO 13 — Sesión de revisión crítica.
+- Se separa en TIPO 10 el Riesgo típico de la Nota de control.
+- Se aclara que las acciones de control quedan fuera de la escala de riesgo.
+- Se aclara que Nivel 0 es únicamente Informativo.
+- Se aclara que no se crea TIPO 18 — Sesión de respaldo manual.
+- Se confirma que el respaldo manual se absorbe dentro de TIPO 15 — Sesión de cierre de bloque.
+- Se aclara que una notificación específica no siempre requiere un tipo de sesión independiente.
+- Se refuerza la relación con AUDIT_TRAIL_SPEC v0.2.
+- Se actualizan los criterios de aceptación.
+- Se mantiene a Robert en Fase 10.
+
+---
+
+## Alcance autorizado
+
+Esta decisión autoriza únicamente:
+
+- Marcar SESSION_AND_CONTEXT_SPEC v0.2 como documento aprobado.
+- Usarlo como base documental para futuras especificaciones técnicas.
+- Usarlo para definir sesión conceptual.
+- Usarlo para definir contexto activo conceptual.
+- Usarlo para definir continuidad documental.
+- Usarlo para definir pausa conceptual.
+- Usarlo para definir reanudación conceptual.
+- Usarlo para definir recuperación del hilo.
+- Usarlo para interpretar confirmaciones cortas como “ya”.
+- Usarlo para definir bloque abierto y bloque cerrado.
+- Usarlo para conectar sesión con auditoría, permisos, acciones, eventos, notificaciones y componentes conceptuales.
+- Mantenerlo dentro de Fase 10.
+
+---
+
+## Alcance no autorizado
+
+Esta decisión no autoriza:
+
+- Programar la app.
+- Crear código real.
+- Crear sistema real de sesiones.
+- Crear memoria automática real.
+- Crear base de datos real.
+- Crear modelo SessionRecord.
+- Crear modelo ContextSnapshot.
+- Crear modelo ConversationState.
+- Crear componente SessionPanel.
+- Crear componente ContextTimeline.
+- Crear TIPO 18 — Sesión de respaldo manual.
+- Crear botones reales.
+- Crear pantallas reales.
+- Crear prototipo funcional.
+- Crear endpoints.
+- Conectar Supabase.
+- Conectar Firebase.
+- Conectar GitHub automáticamente.
+- Conectar Obsidian automáticamente.
+- Conectar Gmail.
+- Conectar Google Calendar.
+- Conectar APIs externas.
+- Automatizar recuperación de contexto.
+- Activar agentes autónomos.
+- Ejecutar acciones reales.
+- Avanzar automáticamente a Fase 11.
+
+---
+
+## Riesgo
+
+Tipo de cambio:
+
+**Aprobación técnica documental / sesión, contexto y continuidad conceptual**
+
+Nivel de riesgo inicial:
+
+**Nivel 3 — Alto**
+
+Motivo:
+
+El documento define cómo Robert mantiene continuidad, interpreta confirmaciones, reanuda trabajo y evita perder el hilo.
+
+Nivel de riesgo final:
+
+**Nivel 2 — Medio**
+
+Motivo:
+
+El documento es conceptual y documental. No crea memoria real automática, no crea sistema real de sesiones, no crea base de datos real, no crea modelos nuevos oficiales, no crea componentes nuevos oficiales, no programa, no conecta herramientas externas y no ejecuta acciones.
+
+Nivel de autonomía:
+
+**Nivel 0 — Sin autonomía ejecutiva**
+
+---
+
+## Estado final
+
+ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC v0.2 queda aprobado como documento técnico documental del MVP técnico básico.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Sin programación autorizada.
+
+Sin código real.
+
+Sin botones reales.
+
+Sin pantallas reales.
+
+Sin memoria real automática.
+
+Sin sistema real de sesiones.
+
+Sin base de datos real.
+
+Sin conexiones externas.
+
+Sin automatizaciones reales.
+
+Sin agentes autónomos activos.
