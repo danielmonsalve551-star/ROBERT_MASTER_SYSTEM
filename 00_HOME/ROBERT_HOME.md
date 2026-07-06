@@ -3459,3 +3459,84 @@ Robert continúa en:
 **Fase 10 — MVP técnico básico en preparación**
 
 ---
+---
+
+# ACTUALIZACIÓN — SESSION_AND_CONTEXT_SPEC v0.2 CORREGIDO
+
+Fecha: 06/07/2026  
+Estado: Propuesta corregida — pendiente de revisión  
+Cambio relacionado: CAMBIO #037 — Corrección de ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC v0.2  
+Documento base principal: ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC v0.2  
+Documentos relacionados: ROBERT_COMMANDS v0.4, ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2, ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2, ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2, ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2, ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1, ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2, ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2, ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2  
+
+---
+
+## Estado actualizado
+
+Se corrigió el documento:
+
+**ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC**
+
+de v0.1 a:
+
+**v0.2 — Propuesta corregida pendiente de revisión**
+
+---
+
+## Correcciones principales
+
+La versión v0.2 corrige:
+
+- Se agrega REGISTRO 2 — Comando a TIPO 1 — Sesión informativa.
+- Se agrega REGISTRO 2 — Comando a TIPO 3 — Sesión de corrección.
+- Se agrega REGISTRO 11 — Riesgo a TIPO 10 — Sesión de bloqueo cuando aplica.
+- Se agrega REGISTRO 11 — Riesgo a TIPO 13 — Sesión de revisión crítica.
+- Se separa en TIPO 10 el Riesgo típico de la Nota de control.
+- Se aclara que las acciones de control quedan fuera de la escala de riesgo.
+- Se aclara que no se crea TIPO 18 — Sesión de respaldo manual.
+- Se confirma que el respaldo manual se absorbe dentro de TIPO 15 — Sesión de cierre de bloque.
+- Se aclara que una notificación específica no siempre requiere un tipo de sesión independiente.
+- Se refuerza la relación con AUDIT_TRAIL_SPEC v0.2.
+- Se actualizan los criterios de aceptación.
+- Se cambia la aprobación futura esperada a v0.2.
+
+---
+
+## Estado del documento
+
+ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC v0.2 queda como:
+
+**Propuesta corregida pendiente de revisión**
+
+No está aprobado todavía.
+
+---
+
+## Restricción
+
+Esta actualización no autoriza:
+
+- Programación.
+- Código real.
+- Sistema real de sesiones.
+- Memoria automática real.
+- Base de datos real.
+- Botones reales.
+- Pantallas reales.
+- Modelo SessionRecord.
+- Modelo ContextSnapshot.
+- Modelo ConversationState.
+- Componente SessionPanel.
+- Componente ContextTimeline.
+- TIPO 18 — Sesión de respaldo manual.
+- Conexiones externas.
+- Automatizaciones.
+- Agentes autónomos.
+- Ejecución real.
+- Avanzar a Fase 11.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+---
