@@ -3540,3 +3540,99 @@ Robert continúa en:
 **Fase 10 — MVP técnico básico en preparación**
 
 ---
+---
+
+# ACTUALIZACIÓN — SESSION_AND_CONTEXT_SPEC v0.2 APROBADO
+
+Fecha: 06/07/2026  
+Estado: Aprobado e integrado  
+Decisión relacionada: DECISIÓN #022 — Aprobación de ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC v0.2  
+Cambio relacionado: CAMBIO #038 — Aprobación e integración de ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC v0.2  
+Documento base principal: ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC v0.2  
+Documentos relacionados: ROBERT_COMMANDS v0.4, ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2, ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2, ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2, ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2, ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1, ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2, ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2, ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2  
+
+---
+
+## Estado actualizado
+
+ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC v0.2 queda aprobado e integrado como documento técnico documental del MVP técnico básico.
+
+---
+
+## Función del documento
+
+Este documento define conceptualmente:
+
+- Sesión.
+- Contexto activo.
+- Continuidad.
+- Pausa.
+- Reanudación.
+- Recuperación del hilo.
+- Interpretación de confirmaciones cortas como “ya”.
+- Bloque abierto.
+- Bloque cerrado.
+- Relación entre sesión y auditoría.
+- Relación entre sesión y permisos.
+- Relación entre sesión y acciones.
+- Relación entre sesión y eventos.
+- Relación entre sesión y notificaciones.
+- Relación entre sesión y componentes visuales conceptuales.
+
+---
+
+## Correcciones validadas
+
+La versión v0.2 integra:
+
+- REGISTRO 2 — Comando en TIPO 1 — Sesión informativa.
+- REGISTRO 2 — Comando en TIPO 3 — Sesión de corrección.
+- REGISTRO 11 — Riesgo en TIPO 10 — Sesión de bloqueo cuando aplica.
+- REGISTRO 11 — Riesgo en TIPO 13 — Sesión de revisión crítica.
+- Separación de Riesgo típico y Nota de control en TIPO 10.
+- Aclaración de que las acciones de control quedan fuera de la escala de riesgo.
+- Aclaración de que Nivel 0 es únicamente Informativo.
+- Aclaración de que no se crea TIPO 18 — Sesión de respaldo manual.
+- Confirmación de que el respaldo manual se absorbe dentro de TIPO 15 — Sesión de cierre de bloque.
+- Aclaración de que una notificación específica no siempre requiere un tipo de sesión independiente.
+- Refuerzo de relación con AUDIT_TRAIL_SPEC v0.2.
+- Alineación con NOTIFICATION_AND_ALERTS_SPEC v0.2.
+- Alineación con PERMISSIONS_AND_SCOPES_SPEC v0.2.
+- Alineación con ERROR_AND_BLOCKING_SPEC v0.2.
+- Alineación con USER_ACTIONS_SPEC v0.2.
+- Alineación con DATA_MODEL_SPEC v0.1.
+- Alineación con COMPONENTS_SPEC v0.2.
+- Alineación con SCREEN_STATE_SPEC v0.2.
+- Alineación con INTERACTION_FLOW_SPEC v0.2.
+
+---
+
+## Restricción
+
+Esta aprobación no autoriza:
+
+- Programación.
+- Código real.
+- Sistema real de sesiones.
+- Memoria automática real.
+- Base de datos real.
+- Botones reales.
+- Pantallas reales.
+- Prototipo funcional.
+- Modelo SessionRecord.
+- Modelo ContextSnapshot.
+- Modelo ConversationState.
+- Componente SessionPanel.
+- Componente ContextTimeline.
+- TIPO 18 — Sesión de respaldo manual.
+- Conexiones externas.
+- Automatizaciones.
+- Agentes autónomos.
+- Ejecución real.
+- Avanzar a Fase 11.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+---
