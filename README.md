@@ -1123,3 +1123,67 @@ Esta aprobación no autoriza:
 Robert continúa en modo documental, manual y supervisado.
 
 ---
+---
+
+## AUDIT_TRAIL_SPEC v0.2 corregido
+
+Estado: Propuesta corregida — pendiente de revisión  
+Cambio relacionado: CAMBIO #033  
+Fase: Fase 10 — MVP técnico básico en preparación  
+Documento base principal: ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2  
+Documentos relacionados: ROBERT_COMMANDS v0.4, ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2, ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2, ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1, ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2, ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2, ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2
+
+### Estado actualizado
+
+ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC fue actualizado de v0.1 a:
+
+**v0.2 — Propuesta corregida pendiente de revisión**
+
+### Correcciones principales
+
+La versión v0.2 corrige:
+
+- Se agrega EVENTO 3 — Aprobación formal requerida
+- Se agrega EVENTO 10 — Contradicción documental
+- Se conecta REGISTRO 8 — Aprobación con EVENTO 3
+- Se conecta REGISTRO 16 — Contradicción documental con EVENTO 10
+- Se agrega tabla de relación entre registros y eventos
+- Se uniforman los 17 tipos de REGISTRO
+- Cada REGISTRO ahora incluye:
+  - Qué registra
+  - Ejemplos
+  - Riesgo típico
+  - Modelo principal
+  - Componente principal
+  - Registro formal requerido
+  - Restricción
+- Se mantiene que Audit Trail no crea el modelo AuditTrailEntry
+- Se mantiene que Audit Trail no crea el componente AuditTrailPanel
+- Se mantiene alineación con DATA_MODEL_SPEC v0.1
+- Se mantiene alineación con COMPONENTS_SPEC v0.2
+- Se mantiene alineación con USER_ACTIONS_SPEC v0.2
+- Se mantiene alineación con PERMISSIONS_AND_SCOPES_SPEC v0.2
+- Se mantiene alineación con ERROR_AND_BLOCKING_SPEC v0.2
+
+### Restricción
+
+Esta actualización no autoriza:
+
+- Programación
+- Código real
+- Logs reales
+- Sistema real de auditoría
+- Base de datos real
+- Botones reales
+- Pantallas reales
+- Modelo AuditTrailEntry
+- Componente AuditTrailPanel
+- Conexiones externas
+- Automatizaciones
+- Agentes autónomos
+- Ejecución real
+- Avanzar a Fase 11
+
+Robert continúa en modo documental, manual y supervisado.
+
+---
