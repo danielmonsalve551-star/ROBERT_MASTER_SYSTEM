@@ -2686,3 +2686,186 @@ Sin conexiones externas.
 Sin automatizaciones reales.
 
 Sin agentes autónomos activos.
+
+---
+
+# DECISIÓN #021 — Aprobación de ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC v0.2
+
+Fecha: 06/07/2026  
+Estado: Aprobada  
+Documento aprobado: ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC v0.2  
+Ubicación: 10_MVP  
+Cambio relacionado previo: CAMBIO #035 — Corrección de ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC v0.2  
+Documento base principal: ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2  
+Documentos relacionados: ROBERT_COMMANDS v0.4, ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2, ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2, ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2, ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1, ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2, ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2, ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2  
+Fase relacionada: Fase 10 — MVP técnico básico en preparación  
+
+---
+
+## Decisión tomada
+
+El usuario aprueba formalmente el documento:
+
+**ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC v0.2**
+
+como especificación técnica documental para definir avisos, alertas, advertencias, confirmaciones, mensajes de bloqueo y notificaciones internas conceptuales dentro del MVP técnico básico de Robert.
+
+---
+
+## Motivo de la aprobación
+
+El documento queda aprobado porque corrige los huecos detectados en v0.1 y queda alineado con:
+
+- ROBERT_COMMANDS v0.4
+- ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2
+- ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2
+- ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2
+- ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2
+- ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1
+- ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2
+- ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2
+- ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2
+- Documentos oficiales de sandbox
+
+---
+
+## Correcciones validadas
+
+La versión v0.2 valida:
+
+- Se agrega EVENTO 4 — Pausa obligatoria.
+- Se agrega EVENTO 6 — Bloqueo manual solicitado.
+- Se agrega EVENTO 7 — Acción prohibida.
+- Se agrega EVENTO 8 — Acción futura no disponible.
+- Se agrega EVENTO 9 — Falta de información.
+- Se agrega EVENTO 11 — Riesgo crítico.
+- Se agrega EVENTO 13 — Sandbox requerido.
+- Se agrega EVENTO 14 — Sandbox excedido.
+- Se conecta ACCIÓN 13 — Pausar avance con EVENTO 4.
+- Se conecta ACCIÓN 14 — Solicitar bloqueo manual con EVENTO 6.
+- Se conecta TIPO 12 — Alerta de capacidad futura no disponible con EVENTO 8.
+- Se aclara que TIPO 12 solo usa EVENTOS 15 al 20 cuando la capacidad futura intenta activarse como acción real.
+- Se conecta TIPO 4 con EVENTO 9.
+- Se conecta TIPO 5 con EVENTO 11.
+- Se conecta TIPO 9 con EVENTO 6 y EVENTO 7.
+- Se conecta TIPO 16 con EVENTO 13 y EVENTO 14.
+- Se mantiene que las acciones de control están fuera de la escala de riesgo.
+- Se mantiene Nivel 0 únicamente como Informativo.
+- Se mantiene alineación con ERROR_AND_BLOCKING_SPEC v0.2.
+- Se mantiene alineación con AUDIT_TRAIL_SPEC v0.2.
+- Se mantiene alineación con PERMISSIONS_AND_SCOPES_SPEC v0.2.
+
+---
+
+## Alcance autorizado
+
+Esta decisión autoriza únicamente:
+
+- Marcar NOTIFICATION_AND_ALERTS_SPEC v0.2 como documento aprobado.
+- Usarlo como base documental para futuras especificaciones técnicas.
+- Usarlo para definir notificaciones conceptuales.
+- Usarlo para definir avisos conceptuales.
+- Usarlo para definir alertas conceptuales.
+- Usarlo para definir advertencias conceptuales.
+- Usarlo para definir confirmaciones conceptuales.
+- Usarlo para definir mensajes de bloqueo conceptuales.
+- Usarlo para conectar avisos con eventos de ERROR_AND_BLOCKING_SPEC.
+- Usarlo para conectar avisos con registros de AUDIT_TRAIL_SPEC.
+- Usarlo para conectar avisos con permisos y alcances.
+- Mantenerlo dentro de Fase 10.
+
+---
+
+## Alcance no autorizado
+
+Esta decisión no autoriza:
+
+- Programar la app.
+- Crear código real.
+- Crear notificaciones reales.
+- Crear emails.
+- Crear push notifications.
+- Crear sistema real de alertas.
+- Crear base de datos real.
+- Crear modelo NotificationRecord.
+- Crear modelo AlertRecord.
+- Crear componente NotificationCenter.
+- Crear componente AlertPanel.
+- Modificar DATA_MODEL_SPEC automáticamente.
+- Modificar COMPONENTS_SPEC automáticamente.
+- Crear botones reales.
+- Crear pantallas reales.
+- Crear prototipo funcional.
+- Crear endpoints.
+- Conectar Supabase.
+- Conectar Firebase.
+- Conectar GitHub automáticamente.
+- Conectar Gmail.
+- Conectar Google Calendar.
+- Conectar APIs externas.
+- Automatizar avisos.
+- Activar agentes autónomos.
+- Ejecutar acciones reales.
+- Avanzar automáticamente a Fase 11.
+
+---
+
+## Riesgo
+
+Tipo de cambio:
+
+**Aprobación técnica documental / notificaciones y alertas conceptuales**
+
+Nivel de riesgo inicial:
+
+**Nivel 3 — Alto**
+
+Motivo:
+
+El documento define cómo Robert comunica riesgos, bloqueos, permisos, confirmaciones, advertencias y estados al usuario.
+
+Nivel de riesgo final:
+
+**Nivel 2 — Medio**
+
+Motivo:
+
+El documento es conceptual y documental. No crea notificaciones reales, no crea sistema real de alertas, no crea modelos nuevos oficiales, no crea componentes nuevos oficiales, no programa, no conecta herramientas externas y no ejecuta acciones.
+
+Nivel de autonomía:
+
+**Nivel 0 — Sin autonomía ejecutiva**
+
+---
+
+## Estado final
+
+ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC v0.2 queda aprobado como documento técnico documental del MVP técnico básico.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Sin programación autorizada.
+
+Sin código real.
+
+Sin botones reales.
+
+Sin pantallas reales.
+
+Sin notificaciones reales.
+
+Sin emails.
+
+Sin push notifications.
+
+Sin sistema real de alertas.
+
+Sin base de datos real.
+
+Sin conexiones externas.
+
+Sin automatizaciones reales.
+
+Sin agentes autónomos activos.
