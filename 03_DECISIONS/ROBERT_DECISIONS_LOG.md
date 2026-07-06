@@ -2508,3 +2508,181 @@ Sin conexiones externas.
 Sin automatizaciones reales.
 
 Sin agentes autónomos activos.
+
+---
+
+# DECISIÓN #020 — Aprobación de ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2
+
+Fecha: 06/07/2026  
+Estado: Aprobada  
+Documento aprobado: ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2  
+Ubicación: 10_MVP  
+Cambio relacionado previo: CAMBIO #033 — Corrección de ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2  
+Documento base principal: ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2  
+Documentos relacionados: ROBERT_COMMANDS v0.4, ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2, ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2, ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1, ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2, ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2, ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2  
+Fase relacionada: Fase 10 — MVP técnico básico en preparación  
+
+---
+
+## Decisión tomada
+
+El usuario aprueba formalmente el documento:
+
+**ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2**
+
+como especificación técnica documental para definir trazabilidad, historial, evidencia mínima, registro de acciones, decisiones, cambios, riesgos, permisos y bloqueos dentro del MVP técnico básico de Robert.
+
+---
+
+## Motivo de la aprobación
+
+El documento queda aprobado porque corrige las inconsistencias detectadas en v0.1 y queda alineado con:
+
+- ROBERT_COMMANDS v0.4
+- ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2
+- ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2
+- ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2
+- ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1
+- ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2
+- ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2
+- ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2
+- Documentos oficiales de sandbox
+
+---
+
+## Correcciones validadas
+
+La versión v0.2 valida:
+
+- Se agrega EVENTO 3 — Aprobación formal requerida.
+- Se agrega EVENTO 10 — Contradicción documental.
+- Se conecta REGISTRO 8 — Aprobación con EVENTO 3.
+- Se conecta REGISTRO 16 — Contradicción documental con EVENTO 10.
+- Se agrega tabla de relación entre registros y eventos.
+- Se uniforman los 17 tipos de REGISTRO.
+- Cada REGISTRO incluye:
+  - Qué registra.
+  - Ejemplos.
+  - Riesgo típico.
+  - Modelo principal.
+  - Componente principal.
+  - Registro formal requerido.
+  - Restricción.
+- Se mantiene que Audit Trail no crea el modelo AuditTrailEntry.
+- Se mantiene que Audit Trail no crea el componente AuditTrailPanel.
+- Se mantiene alineación con DATA_MODEL_SPEC v0.1.
+- Se mantiene alineación con COMPONENTS_SPEC v0.2.
+- Se mantiene alineación con USER_ACTIONS_SPEC v0.2.
+- Se mantiene alineación con PERMISSIONS_AND_SCOPES_SPEC v0.2.
+- Se mantiene alineación con ERROR_AND_BLOCKING_SPEC v0.2.
+
+---
+
+## Alcance autorizado
+
+Esta decisión autoriza únicamente:
+
+- Marcar AUDIT_TRAIL_SPEC v0.2 como documento aprobado.
+- Usarlo como base documental para futuras especificaciones técnicas.
+- Usarlo para definir trazabilidad conceptual.
+- Usarlo para definir historial documental.
+- Usarlo para definir evidencia mínima.
+- Usarlo para definir qué acciones deben registrarse.
+- Usarlo para definir qué decisiones deben registrarse.
+- Usarlo para definir qué cambios deben registrarse.
+- Usarlo para definir qué riesgos deben registrarse.
+- Usarlo para definir qué permisos deben registrarse.
+- Usarlo para definir qué bloqueos deben registrarse.
+- Usarlo para conectar registros con modelos existentes.
+- Usarlo para conectar registros con componentes visuales conceptuales.
+- Usarlo para conectar registros con eventos de ERROR_AND_BLOCKING_SPEC.
+- Mantenerlo dentro de Fase 10.
+
+---
+
+## Alcance no autorizado
+
+Esta decisión no autoriza:
+
+- Programar la app.
+- Crear código real.
+- Crear logs reales.
+- Crear sistema real de auditoría.
+- Crear tabla real de auditoría.
+- Crear base de datos real.
+- Crear modelo AuditTrailEntry.
+- Crear componente AuditTrailPanel.
+- Modificar DATA_MODEL_SPEC automáticamente.
+- Modificar COMPONENTS_SPEC automáticamente.
+- Crear botones reales.
+- Crear pantallas reales.
+- Crear prototipo funcional.
+- Crear endpoints.
+- Conectar Supabase.
+- Conectar Firebase.
+- Conectar GitHub automáticamente.
+- Conectar Gmail.
+- Conectar Google Calendar.
+- Conectar APIs externas.
+- Automatizar registros.
+- Activar agentes autónomos.
+- Ejecutar acciones reales.
+- Avanzar automáticamente a Fase 11.
+
+---
+
+## Riesgo
+
+Tipo de cambio:
+
+**Aprobación técnica documental / trazabilidad y auditoría conceptual**
+
+Nivel de riesgo inicial:
+
+**Nivel 3 — Alto**
+
+Motivo:
+
+El documento define cómo Robert debe rastrear acciones, cambios, decisiones, permisos, bloqueos y evidencia documental.
+
+Nivel de riesgo final:
+
+**Nivel 2 — Medio**
+
+Motivo:
+
+El documento es conceptual y documental. No crea logs reales, no crea sistema real de auditoría, no crea base de datos real, no crea modelos nuevos oficiales, no crea componentes nuevos oficiales, no programa, no conecta herramientas externas y no ejecuta acciones.
+
+Nivel de autonomía:
+
+**Nivel 0 — Sin autonomía ejecutiva**
+
+---
+
+## Estado final
+
+ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2 queda aprobado como documento técnico documental del MVP técnico básico.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Sin programación autorizada.
+
+Sin código real.
+
+Sin botones reales.
+
+Sin pantallas reales.
+
+Sin logs reales.
+
+Sin sistema real de auditoría.
+
+Sin base de datos real.
+
+Sin conexiones externas.
+
+Sin automatizaciones reales.
+
+Sin agentes autónomos activos.
