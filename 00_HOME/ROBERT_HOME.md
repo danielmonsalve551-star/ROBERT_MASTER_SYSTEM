@@ -3360,3 +3360,102 @@ Robert continúa en:
 **Fase 10 — MVP técnico básico en preparación**
 
 ---
+---
+
+# ACTUALIZACIÓN — NOTIFICATION_AND_ALERTS_SPEC v0.2 APROBADO
+
+Fecha: 06/07/2026  
+Estado: Aprobado e integrado  
+Decisión relacionada: DECISIÓN #021 — Aprobación de ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC v0.2  
+Cambio relacionado: CAMBIO #036 — Aprobación e integración de ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC v0.2  
+Documento base principal: ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2  
+Documentos relacionados: ROBERT_COMMANDS v0.4, ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2, ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2, ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2, ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1, ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2, ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2, ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2  
+
+---
+
+## Estado actualizado
+
+ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC v0.2 queda aprobado e integrado como documento técnico documental del MVP técnico básico.
+
+---
+
+## Función del documento
+
+Este documento define conceptualmente:
+
+- Avisos.
+- Alertas.
+- Advertencias.
+- Confirmaciones.
+- Mensajes de bloqueo.
+- Notificaciones internas conceptuales.
+- Relación entre avisos y eventos.
+- Relación entre avisos y acciones.
+- Relación entre avisos y auditoría.
+- Relación entre avisos y permisos.
+- Relación entre avisos y componentes visuales conceptuales.
+
+---
+
+## Correcciones validadas
+
+La versión v0.2 integra:
+
+- EVENTO 4 — Pausa obligatoria.
+- EVENTO 6 — Bloqueo manual solicitado.
+- EVENTO 7 — Acción prohibida.
+- EVENTO 8 — Acción futura no disponible.
+- EVENTO 9 — Falta de información.
+- EVENTO 11 — Riesgo crítico.
+- EVENTO 13 — Sandbox requerido.
+- EVENTO 14 — Sandbox excedido.
+- Conexión de ACCIÓN 13 — Pausar avance con EVENTO 4.
+- Conexión de ACCIÓN 14 — Solicitar bloqueo manual con EVENTO 6.
+- Conexión de TIPO 12 — Alerta de capacidad futura no disponible con EVENTO 8.
+- Aclaración de que TIPO 12 solo usa EVENTOS 15 al 20 cuando la capacidad futura intenta activarse como acción real.
+- Conexión de TIPO 4 con EVENTO 9.
+- Conexión de TIPO 5 con EVENTO 11.
+- Conexión de TIPO 9 con EVENTO 6 y EVENTO 7.
+- Conexión de TIPO 16 con EVENTO 13 y EVENTO 14.
+- Nivel 0 únicamente como Informativo.
+- Acciones de control fuera de la escala de riesgo.
+- Alineación con ERROR_AND_BLOCKING_SPEC v0.2.
+- Alineación con AUDIT_TRAIL_SPEC v0.2.
+- Alineación con PERMISSIONS_AND_SCOPES_SPEC v0.2.
+- Alineación con USER_ACTIONS_SPEC v0.2.
+- Alineación con DATA_MODEL_SPEC v0.1.
+- Alineación con COMPONENTS_SPEC v0.2.
+- Alineación con SCREEN_STATE_SPEC v0.2.
+- Alineación con INTERACTION_FLOW_SPEC v0.2.
+
+---
+
+## Restricción
+
+Esta aprobación no autoriza:
+
+- Programación.
+- Código real.
+- Notificaciones reales.
+- Emails.
+- Push notifications.
+- Sistema real de alertas.
+- Base de datos real.
+- Botones reales.
+- Pantallas reales.
+- Prototipo funcional.
+- Modelo NotificationRecord.
+- Modelo AlertRecord.
+- Componente NotificationCenter.
+- Componente AlertPanel.
+- Conexiones externas.
+- Automatizaciones.
+- Agentes autónomos.
+- Ejecución real.
+- Avanzar a Fase 11.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+---
