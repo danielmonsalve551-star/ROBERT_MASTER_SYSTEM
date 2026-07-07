@@ -7787,3 +7787,367 @@ Sin conexiones externas.
 Sin automatizaciones reales.
 
 Sin agentes autónomos activos.
+
+---
+
+# CAMBIO #044 — Aprobación e integración de ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3
+
+Fecha: 07/07/2026  
+Estado: Aprobado e integrado  
+Documento afectado: ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3  
+Ubicación: 10_MVP  
+Decisión relacionada: DECISIÓN #025 — Aprobación de ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3  
+Cambio relacionado previo: CAMBIO #043 — Corrección de ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3  
+Documento base principal: ROBERT_TECHNICAL_VERSIONING_AND_CHANGE_POLICY_SPEC v0.2  
+Documentos relacionados: ROBERT_COMMANDS v0.4, ROBERT_TECHNICAL_DOCUMENT_LIFECYCLE_SPEC v0.2, ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC v0.2, ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC v0.2, ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2, ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2, ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2, ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2, ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1, ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2, ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2, ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2  
+Fase relacionada: Fase 10 — MVP técnico básico en preparación  
+
+---
+
+## Cambio realizado
+
+Se registró la aprobación formal e integración documental de:
+
+**ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3**
+
+como documento técnico documental aprobado del MVP técnico básico de Robert.
+
+---
+
+## Motivo del cambio
+
+Después de corregir DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.2 y revisar la propuesta v0.3, el usuario aprobó formalmente el documento.
+
+La versión v0.3 queda integrada porque define reglas de consistencia documental, contradicciones, prioridad entre fuentes, resolución conceptual de inconsistencias, precedencia entre tipos de conflicto y bloqueo por información contradictoria.
+
+---
+
+## Correcciones integradas
+
+La versión aprobada integra:
+
+- Regla de consistencia documental.
+- Regla de contradicción documental.
+- Regla de conflicto crítico.
+- Jerarquía conceptual general de fuentes.
+- Integración de documentos técnicos aprobados dentro de la posición 9.
+- Subjerarquía temática de documentos técnicos aprobados.
+- Regla general vs regla temática.
+- Prioridad de SECURITY_RULES.
+- Prioridad de DECISIONS_LOG.
+- Prioridad de CONTROL_DE_CAMBIOS.
+- Regla HOME vs README.
+- 17 tipos de conflicto documental.
+- Tabla maestra de precedencia entre los 17 tipos de conflicto.
+- Regla de fuente única oficial de precedencia.
+- Regla de que la tabla maestra es la única fuente oficial del orden completo.
+- Regla de que la prosa individual no reemplaza ni contradice la tabla maestra.
+- Regla de tipo más específico disponible.
+- Regla de clasificación final y conflictos secundarios.
+- Regla de orden para conflictos secundarios.
+- Corrección del ejemplo de Gmail con conflictos secundarios ordenados por precedencia.
+- Relación con VERSIONING_AND_CHANGE_POLICY_SPEC v0.2.
+- Relación con DOCUMENT_LIFECYCLE_SPEC v0.2.
+- Relación con SESSION_AND_CONTEXT_SPEC v0.2.
+- Relación con AUDIT_TRAIL_SPEC v0.2.
+- Relación con NOTIFICATION_AND_ALERTS_SPEC v0.2.
+- Relación con ERROR_AND_BLOCKING_SPEC v0.2.
+- Relación con PERMISSIONS_AND_SCOPES_SPEC v0.2.
+- Relación con USER_ACTIONS_SPEC v0.2.
+- Relación con DATA_MODEL_SPEC v0.1.
+- Relación con COMPONENTS_SPEC v0.2.
+- Relación con SCREEN_STATE_SPEC v0.2.
+- Relación con INTERACTION_FLOW_SPEC v0.2.
+
+---
+
+## Alcance autorizado
+
+Este cambio autoriza únicamente:
+
+- Marcar DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3 como aprobado.
+- Integrarlo al estado documental actual de Robert.
+- Usarlo como base documental para futuras especificaciones técnicas.
+- Usarlo para definir reglas conceptuales de consistencia documental.
+- Usarlo para definir reglas conceptuales de resolución de conflictos.
+- Usarlo para definir prioridad entre fuentes.
+- Usarlo para definir clasificación final de conflictos.
+- Usarlo para definir conflictos secundarios en orden de precedencia.
+- Usarlo para definir cuándo pausar por contradicción.
+- Usarlo para definir cuándo bloquear por contradicción.
+- Usarlo para definir cuándo pedir confirmación por falta de trazabilidad.
+- Usarlo para conectar consistencia documental con versionamiento, ciclo documental, sesión, auditoría, permisos, eventos, notificaciones, acciones, modelos, componentes, pantallas y flujos.
+- Mantenerlo dentro de Fase 10.
+
+---
+
+## Alcance no autorizado
+
+Este cambio no autoriza:
+
+- Programar la app.
+- Crear código real.
+- Crear sistema real de consistencia documental.
+- Crear base de datos real.
+- Crear motor real de resolución de conflictos.
+- Crear validación automática.
+- Crear reconciliación automática.
+- Crear modelo ConflictRecord.
+- Crear modelo ConsistencyCheckRecord.
+- Crear modelo ConflictResolutionRecord.
+- Crear modelo SourcePriorityRecord.
+- Crear componente ConflictPanel.
+- Crear componente ConsistencyMap.
+- Crear componente ConflictResolver.
+- Crear botones reales.
+- Crear pantallas reales.
+- Crear prototipo funcional.
+- Crear endpoints.
+- Conectar Supabase.
+- Conectar Firebase.
+- Conectar GitHub automáticamente.
+- Conectar Obsidian automáticamente.
+- Sincronizar documentos automáticamente.
+- Resolver conflictos automáticamente.
+- Automatizar correcciones.
+- Automatizar HOME.
+- Automatizar README.
+- Activar agentes autónomos.
+- Ejecutar acciones reales.
+- Avanzar automáticamente a Fase 11.
+
+---
+
+## Riesgo
+
+Tipo de cambio:
+
+**Aprobación técnica documental / integración de consistencia documental y resolución conceptual de conflictos**
+
+Nivel de riesgo inicial:
+
+**Nivel 3 — Alto**
+
+Motivo:
+
+El documento define cómo Robert detecta contradicciones, prioriza fuentes, clasifica conflictos múltiples, bloquea acciones por conflictos y resuelve inconsistencias documentales.
+
+Nivel de riesgo final:
+
+**Nivel 2 — Medio**
+
+Motivo:
+
+El cambio queda limitado a documentación. No crea sistema real de consistencia documental, no crea base de datos real, no crea motor real de resolución de conflictos, no crea modelos nuevos oficiales, no crea componentes nuevos oficiales, no programa, no conecta herramientas externas y no ejecuta acciones.
+
+Nivel de autonomía:
+
+**Nivel 0 — Sin autonomía ejecutiva**
+
+---
+
+## Estado final
+
+ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3 queda aprobado e integrado documentalmente.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Sin programación autorizada.
+
+Sin código real.
+
+Sin sistema real de consistencia documental.
+
+Sin base de datos real.
+
+Sin motor real de resolución de conflictos.
+
+Sin conexiones externas.
+
+Sin automatizaciones reales.
+
+Sin agentes autónomos activos.
+
+---
+
+# CAMBIO #044 — Aprobación e integración de ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3
+
+Fecha: 07/07/2026  
+Estado: Aprobado e integrado  
+Documento afectado: ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3  
+Ubicación: 10_MVP  
+Decisión relacionada: DECISIÓN #025 — Aprobación de ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3  
+Cambio relacionado previo: CAMBIO #043 — Corrección de ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3  
+Documento base principal: ROBERT_TECHNICAL_VERSIONING_AND_CHANGE_POLICY_SPEC v0.2  
+Documentos relacionados: ROBERT_COMMANDS v0.4, ROBERT_TECHNICAL_DOCUMENT_LIFECYCLE_SPEC v0.2, ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC v0.2, ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC v0.2, ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2, ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2, ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2, ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2, ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1, ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2, ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2, ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2  
+Fase relacionada: Fase 10 — MVP técnico básico en preparación  
+
+---
+
+## Cambio realizado
+
+Se registró la aprobación formal e integración documental de:
+
+**ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3**
+
+como documento técnico documental aprobado del MVP técnico básico de Robert.
+
+---
+
+## Motivo del cambio
+
+Después de corregir DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.2 y revisar la propuesta v0.3, el usuario aprobó formalmente el documento.
+
+La versión v0.3 queda integrada porque define reglas de consistencia documental, contradicciones, prioridad entre fuentes, resolución conceptual de inconsistencias, precedencia entre tipos de conflicto y bloqueo por información contradictoria.
+
+---
+
+## Correcciones integradas
+
+La versión aprobada integra:
+
+- Regla de consistencia documental.
+- Regla de contradicción documental.
+- Regla de conflicto crítico.
+- Jerarquía conceptual general de fuentes.
+- Integración de documentos técnicos aprobados dentro de la posición 9.
+- Subjerarquía temática de documentos técnicos aprobados.
+- Regla general vs regla temática.
+- Prioridad de SECURITY_RULES.
+- Prioridad de DECISIONS_LOG.
+- Prioridad de CONTROL_DE_CAMBIOS.
+- Regla HOME vs README.
+- 17 tipos de conflicto documental.
+- Tabla maestra de precedencia entre los 17 tipos de conflicto.
+- Regla de fuente única oficial de precedencia.
+- Regla de que la tabla maestra es la única fuente oficial del orden completo.
+- Regla de que la prosa individual no reemplaza ni contradice la tabla maestra.
+- Regla de tipo más específico disponible.
+- Regla de clasificación final y conflictos secundarios.
+- Regla de orden para conflictos secundarios.
+- Corrección del ejemplo de Gmail con conflictos secundarios ordenados por precedencia.
+- Relación con VERSIONING_AND_CHANGE_POLICY_SPEC v0.2.
+- Relación con DOCUMENT_LIFECYCLE_SPEC v0.2.
+- Relación con SESSION_AND_CONTEXT_SPEC v0.2.
+- Relación con AUDIT_TRAIL_SPEC v0.2.
+- Relación con NOTIFICATION_AND_ALERTS_SPEC v0.2.
+- Relación con ERROR_AND_BLOCKING_SPEC v0.2.
+- Relación con PERMISSIONS_AND_SCOPES_SPEC v0.2.
+- Relación con USER_ACTIONS_SPEC v0.2.
+- Relación con DATA_MODEL_SPEC v0.1.
+- Relación con COMPONENTS_SPEC v0.2.
+- Relación con SCREEN_STATE_SPEC v0.2.
+- Relación con INTERACTION_FLOW_SPEC v0.2.
+
+---
+
+## Alcance autorizado
+
+Este cambio autoriza únicamente:
+
+- Marcar DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3 como aprobado.
+- Integrarlo al estado documental actual de Robert.
+- Usarlo como base documental para futuras especificaciones técnicas.
+- Usarlo para definir reglas conceptuales de consistencia documental.
+- Usarlo para definir reglas conceptuales de resolución de conflictos.
+- Usarlo para definir prioridad entre fuentes.
+- Usarlo para definir clasificación final de conflictos.
+- Usarlo para definir conflictos secundarios en orden de precedencia.
+- Usarlo para definir cuándo pausar por contradicción.
+- Usarlo para definir cuándo bloquear por contradicción.
+- Usarlo para definir cuándo pedir confirmación por falta de trazabilidad.
+- Usarlo para conectar consistencia documental con versionamiento, ciclo documental, sesión, auditoría, permisos, eventos, notificaciones, acciones, modelos, componentes, pantallas y flujos.
+- Mantenerlo dentro de Fase 10.
+
+---
+
+## Alcance no autorizado
+
+Este cambio no autoriza:
+
+- Programar la app.
+- Crear código real.
+- Crear sistema real de consistencia documental.
+- Crear base de datos real.
+- Crear motor real de resolución de conflictos.
+- Crear validación automática.
+- Crear reconciliación automática.
+- Crear modelo ConflictRecord.
+- Crear modelo ConsistencyCheckRecord.
+- Crear modelo ConflictResolutionRecord.
+- Crear modelo SourcePriorityRecord.
+- Crear componente ConflictPanel.
+- Crear componente ConsistencyMap.
+- Crear componente ConflictResolver.
+- Crear botones reales.
+- Crear pantallas reales.
+- Crear prototipo funcional.
+- Crear endpoints.
+- Conectar Supabase.
+- Conectar Firebase.
+- Conectar GitHub automáticamente.
+- Conectar Obsidian automáticamente.
+- Sincronizar documentos automáticamente.
+- Resolver conflictos automáticamente.
+- Automatizar correcciones.
+- Automatizar HOME.
+- Automatizar README.
+- Activar agentes autónomos.
+- Ejecutar acciones reales.
+- Avanzar automáticamente a Fase 11.
+
+---
+
+## Riesgo
+
+Tipo de cambio:
+
+**Aprobación técnica documental / integración de consistencia documental y resolución conceptual de conflictos**
+
+Nivel de riesgo inicial:
+
+**Nivel 3 — Alto**
+
+Motivo:
+
+El documento define cómo Robert detecta contradicciones, prioriza fuentes, clasifica conflictos múltiples, bloquea acciones por conflictos y resuelve inconsistencias documentales.
+
+Nivel de riesgo final:
+
+**Nivel 2 — Medio**
+
+Motivo:
+
+El cambio queda limitado a documentación. No crea sistema real de consistencia documental, no crea base de datos real, no crea motor real de resolución de conflictos, no crea modelos nuevos oficiales, no crea componentes nuevos oficiales, no programa, no conecta herramientas externas y no ejecuta acciones.
+
+Nivel de autonomía:
+
+**Nivel 0 — Sin autonomía ejecutiva**
+
+---
+
+## Estado final
+
+ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3 queda aprobado e integrado documentalmente.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Sin programación autorizada.
+
+Sin código real.
+
+Sin sistema real de consistencia documental.
+
+Sin base de datos real.
+
+Sin motor real de resolución de conflictos.
+
+Sin conexiones externas.
+
+Sin automatizaciones reales.
+
+Sin agentes autónomos activos.
