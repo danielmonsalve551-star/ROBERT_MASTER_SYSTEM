@@ -3041,3 +3041,174 @@ Sin conexiones externas.
 Sin automatizaciones reales.
 
 Sin agentes autónomos activos.
+
+---
+
+# DECISIÓN #023 — Aprobación de ROBERT_TECHNICAL_DOCUMENT_LIFECYCLE_SPEC v0.2
+
+Fecha: 06/07/2026  
+Estado: Aprobada  
+Documento aprobado: ROBERT_TECHNICAL_DOCUMENT_LIFECYCLE_SPEC v0.2  
+Ubicación: 10_MVP  
+Cambio relacionado previo: CAMBIO #039 — Corrección de ROBERT_TECHNICAL_DOCUMENT_LIFECYCLE_SPEC v0.2  
+Documento base principal: ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC v0.2  
+Documentos relacionados: ROBERT_COMMANDS v0.4, ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC v0.2, ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2, ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2, ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2, ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2, ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1, ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2, ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2, ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2  
+Fase relacionada: Fase 10 — MVP técnico básico en preparación  
+
+---
+
+## Decisión tomada
+
+El usuario aprueba formalmente el documento:
+
+**ROBERT_TECHNICAL_DOCUMENT_LIFECYCLE_SPEC v0.2**
+
+como especificación técnica documental para definir el ciclo de vida documental de Robert dentro del MVP técnico básico.
+
+---
+
+## Motivo de la aprobación
+
+El documento queda aprobado porque corrige los huecos detectados en v0.1 y define de forma clara:
+
+- Estados documentales.
+- Estructura uniforme de los 12 estados.
+- Riesgo típico por estado.
+- Transiciones permitidas.
+- Transiciones prohibidas.
+- Salidas desde Bloqueado.
+- Transición Depreciado → Archivado.
+- Aclaración de “Estado anterior”.
+- Relación con sesión, contexto, auditoría, permisos, acciones, eventos, notificaciones y componentes conceptuales.
+
+---
+
+## Correcciones validadas
+
+La versión v0.2 valida:
+
+- Se agrega la sección ESTRUCTURA UNIFORME DE LOS 12 ESTADOS.
+- Se agrega Riesgo típico a los 12 estados documentales.
+- Se agrega Transición siguiente permitida a los 12 estados documentales.
+- Se agregan salidas desde Bloqueado.
+- Se agrega Bloqueado → En revisión.
+- Se agrega Bloqueado → Propuesta corregida.
+- Se agrega Bloqueado → Depreciado.
+- Se agrega Bloqueado → Reemplazado.
+- Se agrega Bloqueado → Archivado.
+- Se agrega Bloqueado → Estado anterior, solo si existe trazabilidad clara.
+- Se aclara que “Estado anterior” significa el estado documental inmediatamente previo a entrar en Bloqueado.
+- Se aclara que si no hay trazabilidad clara, Robert debe pasar a Bloqueado → En revisión o pedir confirmación explícita.
+- Se agrega Depreciado → Archivado.
+- Se aclara que Bloqueado no es estado final obligatorio.
+- Se actualizan los criterios de aceptación.
+- Se mantiene Nivel 0 únicamente como Informativo.
+- Se mantienen las acciones de control fuera de la escala de riesgo.
+- Se mantiene a Robert en Fase 10.
+
+---
+
+## Alcance autorizado
+
+Esta decisión autoriza únicamente:
+
+- Marcar DOCUMENT_LIFECYCLE_SPEC v0.2 como documento aprobado.
+- Usarlo como base documental para futuras especificaciones técnicas.
+- Usarlo para definir el ciclo de vida documental conceptual.
+- Usarlo para definir estados documentales.
+- Usarlo para definir transiciones documentales.
+- Usarlo para definir bloqueos documentales.
+- Usarlo para definir salidas desde Bloqueado.
+- Usarlo para definir depreciación, reemplazo y archivo documental.
+- Usarlo para conectar ciclo documental con sesión, auditoría, permisos, acciones, eventos, notificaciones y componentes conceptuales.
+- Mantenerlo dentro de Fase 10.
+
+---
+
+## Alcance no autorizado
+
+Esta decisión no autoriza:
+
+- Programar la app.
+- Crear código real.
+- Crear sistema real de gestión documental.
+- Crear base de datos real.
+- Crear control automático de versiones.
+- Crear modelo DocumentLifecycleRecord.
+- Crear modelo VersionRecord.
+- Crear modelo DocumentTransitionRecord.
+- Crear modelo DeprecationRecord.
+- Crear modelo ReplacementRecord.
+- Crear componente LifecyclePanel.
+- Crear componente VersionTimeline.
+- Crear componente DocumentLifecycleMap.
+- Crear botones reales.
+- Crear pantallas reales.
+- Crear prototipo funcional.
+- Crear endpoints.
+- Conectar Supabase.
+- Conectar Firebase.
+- Conectar GitHub automáticamente.
+- Conectar Obsidian automáticamente.
+- Sincronizar documentos automáticamente.
+- Automatizar commits.
+- Automatizar aprobaciones.
+- Automatizar HOME.
+- Automatizar README.
+- Activar agentes autónomos.
+- Ejecutar acciones reales.
+- Avanzar automáticamente a Fase 11.
+
+---
+
+## Riesgo
+
+Tipo de cambio:
+
+**Aprobación técnica documental / ciclo de vida documental conceptual**
+
+Nivel de riesgo inicial:
+
+**Nivel 3 — Alto**
+
+Motivo:
+
+El documento define cómo los documentos de Robert nacen, cambian, se corrigen, se aprueban, se integran, se actualizan, se bloquean, se reemplazan, se deprecian y se archivan.
+
+Nivel de riesgo final:
+
+**Nivel 2 — Medio**
+
+Motivo:
+
+El documento es conceptual y documental. No crea sistema real de gestión documental, no crea base de datos real, no crea control automático de versiones, no crea modelos nuevos oficiales, no crea componentes nuevos oficiales, no programa, no conecta herramientas externas y no ejecuta acciones.
+
+Nivel de autonomía:
+
+**Nivel 0 — Sin autonomía ejecutiva**
+
+---
+
+## Estado final
+
+ROBERT_TECHNICAL_DOCUMENT_LIFECYCLE_SPEC v0.2 queda aprobado como documento técnico documental del MVP técnico básico.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Sin programación autorizada.
+
+Sin código real.
+
+Sin sistema real de gestión documental.
+
+Sin base de datos real.
+
+Sin control automático de versiones.
+
+Sin conexiones externas.
+
+Sin automatizaciones reales.
+
+Sin agentes autónomos activos.
