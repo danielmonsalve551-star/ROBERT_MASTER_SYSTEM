@@ -6935,3 +6935,170 @@ Sin conexiones externas.
 Sin automatizaciones reales.
 
 Sin agentes autónomos activos.
+
+---
+
+# CAMBIO #039 — Corrección de ROBERT_TECHNICAL_DOCUMENT_LIFECYCLE_SPEC v0.2
+
+Fecha: 06/07/2026  
+Estado: Propuesta corregida — pendiente de revisión  
+Documento afectado: ROBERT_TECHNICAL_DOCUMENT_LIFECYCLE_SPEC  
+Versión actualizada: v0.2  
+Ubicación: 10_MVP  
+Documento base principal: ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC v0.2  
+Documentos relacionados: ROBERT_COMMANDS v0.4, ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC v0.2, ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2, ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2, ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2, ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2, ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1, ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2, ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2, ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2  
+Fase relacionada: Fase 10 — MVP técnico básico en preparación  
+
+---
+
+## Cambio realizado
+
+Se corrigió el documento:
+
+**ROBERT_TECHNICAL_DOCUMENT_LIFECYCLE_SPEC**
+
+de v0.1 a:
+
+**v0.2 — Propuesta corregida pendiente de revisión**
+
+---
+
+## Motivo del cambio
+
+Durante la revisión de v0.1 se detectaron huecos en el ciclo de vida documental:
+
+- Faltaba una estructura uniforme para los 12 estados documentales.
+- Los estados no incluían el campo Riesgo típico.
+- RiskRecord y RiskBadge estaban listados como relevantes, pero no se reflejaban dentro de cada estado.
+- La tabla de transiciones permitidas permitía llegar a Bloqueado desde cualquier estado, pero no definía salidas desde Bloqueado.
+- Faltaba la transición directa Depreciado → Archivado.
+- La salida Bloqueado → Estado anterior podía quedar ambigua sin una aclaración formal.
+
+---
+
+## Correcciones aplicadas
+
+La versión v0.2 corrige:
+
+- Se agrega la sección ESTRUCTURA UNIFORME DE LOS 12 ESTADOS.
+- Se agrega Riesgo típico a los 12 estados documentales.
+- Se agrega Transición siguiente permitida a los 12 estados documentales.
+- Se agregan salidas desde Bloqueado.
+- Se agrega Bloqueado → En revisión.
+- Se agrega Bloqueado → Propuesta corregida.
+- Se agrega Bloqueado → Depreciado.
+- Se agrega Bloqueado → Reemplazado.
+- Se agrega Bloqueado → Archivado.
+- Se agrega Bloqueado → Estado anterior, solo si existe trazabilidad clara.
+- Se aclara que “Estado anterior” significa el estado documental inmediatamente previo a entrar en Bloqueado.
+- Se aclara que si no hay trazabilidad clara, Robert debe pasar a Bloqueado → En revisión o pedir confirmación explícita.
+- Se agrega Depreciado → Archivado.
+- Se aclara que Bloqueado no es estado final obligatorio.
+- Se actualizan los criterios de aceptación.
+- Se cambia la aprobación futura esperada a v0.2.
+
+---
+
+## Alcance autorizado
+
+Este cambio autoriza únicamente:
+
+- Corregir el documento técnico.
+- Mantenerlo como propuesta pendiente de revisión.
+- Usarlo para revisión documental.
+- Alinear el ciclo documental con SESSION_AND_CONTEXT_SPEC v0.2.
+- Alinear el ciclo documental con AUDIT_TRAIL_SPEC v0.2.
+- Alinear el ciclo documental con ERROR_AND_BLOCKING_SPEC v0.2.
+- Alinear el ciclo documental con NOTIFICATION_AND_ALERTS_SPEC v0.2.
+- Mantenerlo dentro de Fase 10.
+
+---
+
+## Alcance no autorizado
+
+Este cambio no autoriza:
+
+- Aprobar automáticamente DOCUMENT_LIFECYCLE_SPEC v0.2.
+- Crear modelo DocumentLifecycleRecord.
+- Crear modelo VersionRecord.
+- Crear modelo DocumentTransitionRecord.
+- Crear modelo DeprecationRecord.
+- Crear modelo ReplacementRecord.
+- Crear componente LifecyclePanel.
+- Crear componente VersionTimeline.
+- Crear componente DocumentLifecycleMap.
+- Crear sistema real de gestión documental.
+- Crear base de datos real.
+- Crear control automático de versiones.
+- Programar la app.
+- Crear código real.
+- Crear botones reales.
+- Crear pantallas reales.
+- Conectar GitHub automáticamente.
+- Conectar Obsidian automáticamente.
+- Sincronizar documentos automáticamente.
+- Automatizar commits.
+- Automatizar aprobaciones.
+- Automatizar HOME.
+- Automatizar README.
+- Activar agentes autónomos.
+- Ejecutar acciones reales.
+- Avanzar automáticamente a Fase 11.
+
+---
+
+## Riesgo
+
+Tipo de cambio:
+
+**Cambio técnico documental / corrección del ciclo de vida documental conceptual**
+
+Nivel de riesgo inicial:
+
+**Nivel 3 — Alto**
+
+Motivo:
+
+El documento define cómo los documentos de Robert nacen, cambian, se corrigen, se aprueban, se integran, se actualizan, se bloquean, se reemplazan y se archivan.
+
+Nivel de riesgo final esperado:
+
+**Nivel 2 — Medio**
+
+Motivo:
+
+La corrección sigue siendo documental. No crea sistema real de gestión documental, no crea base de datos real, no crea control automático de versiones, no crea modelos nuevos oficiales, no crea componentes nuevos oficiales, no programa, no conecta herramientas externas y no ejecuta acciones.
+
+Nivel de autonomía:
+
+**Nivel 0 — Sin autonomía ejecutiva**
+
+---
+
+## Estado final
+
+ROBERT_TECHNICAL_DOCUMENT_LIFECYCLE_SPEC v0.2 queda como:
+
+**Propuesta corregida pendiente de revisión**
+
+No está aprobado todavía.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Sin programación autorizada.
+
+Sin código real.
+
+Sin sistema real de gestión documental.
+
+Sin base de datos real.
+
+Sin control automático de versiones.
+
+Sin conexiones externas.
+
+Sin automatizaciones reales.
+
+Sin agentes autónomos activos.
