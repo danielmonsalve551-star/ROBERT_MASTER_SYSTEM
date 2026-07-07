@@ -7620,3 +7620,170 @@ Sin conexiones externas.
 Sin automatizaciones reales.
 
 Sin agentes autónomos activos.
+
+---
+
+# CAMBIO #043 — Corrección de ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3
+
+Fecha: 06/07/2026  
+Estado: Propuesta corregida — pendiente de revisión  
+Documento afectado: ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC  
+Versión actualizada: v0.3  
+Ubicación: 10_MVP  
+Documento base principal: ROBERT_TECHNICAL_VERSIONING_AND_CHANGE_POLICY_SPEC v0.2  
+Documentos relacionados: ROBERT_COMMANDS v0.4, ROBERT_TECHNICAL_DOCUMENT_LIFECYCLE_SPEC v0.2, ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC v0.2, ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC v0.2, ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2, ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2, ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2, ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2, ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1, ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2, ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2, ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2  
+Fase relacionada: Fase 10 — MVP técnico básico en preparación  
+
+---
+
+## Cambio realizado
+
+Se corrigió el documento:
+
+**ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC**
+
+de v0.2 a:
+
+**v0.3 — Propuesta corregida pendiente de revisión**
+
+---
+
+## Motivo del cambio
+
+Durante la revisión cruzada de v0.2 se detectó una inconsistencia interna sistemática:
+
+- La tabla maestra de precedencia establecía un orden total entre los 17 tipos de conflicto.
+- Las secciones individuales “Precedencia” de varios tipos repetían listas incompletas.
+- Esto podía crear dos fuentes internas de verdad para clasificar conflictos.
+- Si alguien usaba solo la sección individual de un tipo, podía llegar a una clasificación distinta a la tabla maestra.
+- También faltaba aclarar que los conflictos secundarios deben listarse en orden de precedencia.
+
+---
+
+## Correcciones aplicadas
+
+La versión v0.3 corrige:
+
+- Se establece que la TABLA DE PRECEDENCIA ENTRE LOS 17 TIPOS DE CONFLICTO es la única fuente oficial del orden completo.
+- Se aclara que las secciones individuales de cada tipo no reemplazan, no duplican y no contradicen la tabla maestra.
+- Se elimina la contradicción interna entre tabla maestra y prosa individual.
+- Se modifica la sección “Precedencia” de cada tipo para remitir al orden completo de la tabla maestra.
+- Se mantiene una nota específica por tipo solo cuando ayuda a entender su uso.
+- Se evita duplicar listas completas de precedencia dentro de cada tipo.
+- Se agrega regla explícita para ordenar conflictos secundarios.
+- Se aclara que los conflictos secundarios deben listarse en orden de precedencia.
+- Se corrige el ejemplo de Gmail para ordenar los conflictos secundarios según la tabla maestra.
+- Se mantiene la regla de categoría general + subtipo específico + tipo más específico disponible.
+- Se mantiene la integración de documentos técnicos aprobados dentro de la posición 9 de la jerarquía general.
+- Se mantiene la subjerarquía temática de documentos técnicos aprobados.
+
+---
+
+## Alcance autorizado
+
+Este cambio autoriza únicamente:
+
+- Corregir el documento técnico.
+- Mantenerlo como propuesta pendiente de revisión.
+- Usarlo para revisión documental.
+- Alinear la precedencia interna de los 17 tipos de conflicto.
+- Alinear clasificación final y conflictos secundarios.
+- Alinear consistencia documental con VERSIONING_AND_CHANGE_POLICY_SPEC v0.2.
+- Alinear consistencia documental con DOCUMENT_LIFECYCLE_SPEC v0.2.
+- Alinear consistencia documental con ERROR_AND_BLOCKING_SPEC v0.2.
+- Alinear consistencia documental con AUDIT_TRAIL_SPEC v0.2.
+- Alinear consistencia documental con PERMISSIONS_AND_SCOPES_SPEC v0.2.
+- Mantenerlo dentro de Fase 10.
+
+---
+
+## Alcance no autorizado
+
+Este cambio no autoriza:
+
+- Aprobar automáticamente DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3.
+- Crear sistema real de consistencia documental.
+- Crear base de datos real.
+- Crear motor real de resolución de conflictos.
+- Crear validación automática.
+- Crear reconciliación automática.
+- Crear modelo ConflictRecord.
+- Crear modelo ConsistencyCheckRecord.
+- Crear modelo ConflictResolutionRecord.
+- Crear modelo SourcePriorityRecord.
+- Crear componente ConflictPanel.
+- Crear componente ConsistencyMap.
+- Crear componente ConflictResolver.
+- Programar la app.
+- Crear código real.
+- Crear botones reales.
+- Crear pantallas reales.
+- Crear prototipo funcional.
+- Conectar GitHub automáticamente.
+- Conectar Obsidian automáticamente.
+- Sincronizar documentos automáticamente.
+- Resolver conflictos automáticamente.
+- Automatizar correcciones.
+- Automatizar HOME.
+- Automatizar README.
+- Activar agentes autónomos.
+- Ejecutar acciones reales.
+- Avanzar automáticamente a Fase 11.
+
+---
+
+## Riesgo
+
+Tipo de cambio:
+
+**Cambio técnico documental / corrección de consistencia documental y precedencia de conflictos**
+
+Nivel de riesgo inicial:
+
+**Nivel 3 — Alto**
+
+Motivo:
+
+El documento define cómo Robert detecta contradicciones, prioriza fuentes, clasifica conflictos múltiples, bloquea acciones por conflictos y resuelve inconsistencias documentales.
+
+Nivel de riesgo final esperado:
+
+**Nivel 2 — Medio**
+
+Motivo:
+
+La corrección sigue siendo documental. No crea sistema real de consistencia, no crea base de datos real, no crea motor real de resolución de conflictos, no crea modelos nuevos oficiales, no crea componentes nuevos oficiales, no programa, no conecta herramientas externas y no ejecuta acciones.
+
+Nivel de autonomía:
+
+**Nivel 0 — Sin autonomía ejecutiva**
+
+---
+
+## Estado final
+
+ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3 queda como:
+
+**Propuesta corregida pendiente de revisión**
+
+No está aprobado todavía.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Sin programación autorizada.
+
+Sin código real.
+
+Sin sistema real de consistencia documental.
+
+Sin base de datos real.
+
+Sin motor real de resolución de conflictos.
+
+Sin conexiones externas.
+
+Sin automatizaciones reales.
+
+Sin agentes autónomos activos.
