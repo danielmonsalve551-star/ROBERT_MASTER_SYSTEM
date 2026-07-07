@@ -8151,3 +8151,41 @@ Sin conexiones externas.
 Sin automatizaciones reales.
 
 Sin agentes autónomos activos.
+
+---
+
+## CAMBIO #045 — Corrección acumulada de ROBERT_HOME v0.5–v0.7
+
+Fecha: 07/07/2026  
+Tipo de cambio: Corrección documental / trazabilidad interna / reconciliación de HOME  
+Documento afectado: ROBERT_HOME.md  
+Versiones afectadas: v0.5, v0.6, v0.7  
+Estado: Registrado — pendiente de integración en ROBERT_HOME v0.8  
+Fase relacionada: Fase 10 — MVP técnico básico en preparación  
+
+---
+
+### Descripción del cambio
+
+Se registra formalmente la corrección acumulada de ROBERT_HOME después de detectar que las versiones v0.5, v0.6 y v0.7 corrigieron distintos conflictos internos del HOME, pero no habían dejado trazabilidad formal dentro de ROBERT_CONTROL_DE_CAMBIOS.
+
+Este cambio documenta que ROBERT_HOME estaba en proceso de reconciliación y que sus versiones recientes fueron propuestas corregidas, no versiones aprobadas ni cerradas.
+
+---
+
+### Motivo del cambio
+
+Se detectó que ROBERT_HOME presentaba un conflicto de trazabilidad sobre sí mismo.
+
+Las versiones v0.5, v0.6 y v0.7 indicaban en PRIORIDAD ACTUAL y PRÓXIMOS PASOS que debía registrarse la corrección de HOME en CONTROL_DE_CAMBIOS, pero ninguna confirmaba que dicho registro existiera.
+
+Esto generaba un hueco de trazabilidad acumulado.
+
+---
+
+### Clasificación del conflicto
+
+Clasificación final:
+
+```text
+TIPO 17 — Conflicto de trazabilidad insuficiente
