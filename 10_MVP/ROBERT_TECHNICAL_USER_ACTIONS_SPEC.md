@@ -1,13 +1,15 @@
 # ROBERT_TECHNICAL_USER_ACTIONS_SPEC
 
-Versión: 0.2  
-Estado: Propuesta corregida — pendiente de revisión  
-Fecha: 07/07/2026  
+Versión: v0.2 (sin cambio de número — documento ya aprobado)  
+Estado: Aprobado — auditoría voluntaria completada sin hallazgos que requieran corrección de contenido  
+Fecha de auditoría: 07/07/2026  
 Ubicación: 10_MVP  
 Fase relacionada: Fase 10 — MVP técnico básico en preparación  
 Documento base principal: ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2  
 Documentos relacionados: ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2, ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2, ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1, ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2, ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2, ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2, ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC v0.2, ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC v0.2, ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3  
 Fuente de verdad actual: ROBERT_CONTEXT_MASTER v0.5  
+Decisión relacionada: DECISIÓN #017  
+Cambio relacionado: CAMBIO #028  
 
 Tags: #robert/orbita-3 #capa/5 #tipo/tecnico #robert/mvp #robert/user-actions
 
@@ -54,11 +56,24 @@ Este documento no ejecuta acciones reales.
 
 Este documento queda como:
 
-**Propuesta corregida — pendiente de revisión**
+**Aprobado — auditoría voluntaria completada sin hallazgos que requieran corrección de contenido**
 
-No está aprobado todavía.
+Este documento ya estaba aprobado e integrado mediante:
 
-No reemplaza a ningún documento maestro.
+```text
+DECISIÓN #017
+CAMBIO #028
+```
+
+La auditoría voluntaria no reabre su estado de aprobación.
+
+La auditoría voluntaria no convierte este documento en borrador.
+
+La auditoría voluntaria no lo convierte en propuesta corregida.
+
+La auditoría voluntaria no requiere nueva decisión formal.
+
+La auditoría voluntaria no requiere nuevo cambio formal porque no hubo corrección sustantiva de contenido.
 
 No autoriza programación.
 
@@ -78,42 +93,52 @@ No autoriza avanzar a Fase 11.
 
 ---
 
-# CORRECCIÓN PRINCIPAL DE v0.2
+# AUDITORÍA VOLUNTARIA DE v0.2
 
-Esta versión corrige el conflicto detectado entre la referencia usada por documentos posteriores y el archivo real disponible.
-
-Problema detectado:
+Esta sección documenta una revisión voluntaria de ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2, ya aprobado e integrado mediante:
 
 ```text
-Varios documentos posteriores citaban ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2 como referencia.
-Sin embargo, el archivo real disponible estaba en v0.1 y en estado de borrador técnico documental.
+DECISIÓN #017
+CAMBIO #028
 ```
 
-Clasificación del conflicto:
+Motivo de la auditoría:
 
 ```text
-TIPO 3 — Conflicto de versión
-TIPO 16 — Conflicto de fuente vigente
-TIPO 17 — Conflicto de trazabilidad insuficiente
+El usuario solicitó volver a verificar este documento, sin que existiera 
+un conflicto de aprobación real ni un hueco de trazabilidad pendiente.
 ```
 
-Acción tomada:
+Resultado de la auditoría:
 
 ```text
-Se crea ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2 como propuesta corregida pendiente de revisión.
+No se encontraron errores de contenido.
+La lista canónica de 20 acciones es correcta y completa.
+Los 10 componentes usados son los canónicos: AppShell incluido, MainCanvas ausente.
+Se corrigió un detalle menor en la TABLA DE MAPEO CON APPROVAL GATE: ACCIÓN 12.
 ```
 
-Resultado esperado:
+Clasificación:
 
 ```text
-USER_ACTIONS_SPEC v0.2 queda como versión corregida y revisable antes de aprobarse formalmente.
+No aplica ningún TIPO de conflicto de DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3.
+Esta auditoría no reabre el estado de aprobación del documento.
 ```
 
-Restricción:
+Regla aplicada:
 
 ```text
-Esta versión no queda aprobada automáticamente.
-Debe aprobarse formalmente por el usuario.
+Según DOCUMENT_LIFECYCLE_SPEC v0.2, un documento aprobado que recibe un ajuste menor 
+permanece en estado "Aprobado" — no regresa a "Borrador" ni a "Propuesta corregida".
+```
+
+Uso previsto de esta auditoría:
+
+```text
+Servir como referencia canónica confirmada para corregir 
+ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3, 
+que sí tiene dos errores reales pendientes: uso de MainCanvas en vez de AppShell, 
+y numeración incorrecta en 13 de las 20 acciones de su tabla de correspondencia.
 ```
 
 ---
@@ -189,7 +214,16 @@ Estado operativo actual:
 - ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1 aprobado e integrado.
 - ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2 aprobado e integrado.
 - ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2 aprobado e integrado.
-- ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2 creado como propuesta corregida pendiente de revisión.
+- ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2 aprobado e integrado, auditado sin cambios de fondo.
+- ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2 aprobado.
+- ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2 aprobado.
+- ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2 aprobado.
+- ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC v0.2 aprobado.
+- ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC v0.2 aprobado.
+- ROBERT_TECHNICAL_DOCUMENT_LIFECYCLE_SPEC v0.2 aprobado.
+- ROBERT_TECHNICAL_VERSIONING_AND_CHANGE_POLICY_SPEC v0.2 aprobado.
+- ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3 aprobado.
+- ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.2 pendiente de corrección, v0.3 por preparar.
 - ROBERT_HOME v0.8 aprobado e integrado.
 - Sin programación autorizada.
 - Sin código real.
@@ -214,12 +248,12 @@ Este documento autoriza únicamente:
 - Definir cuándo una acción debe bloquearse.
 - Definir qué ocurre después de una acción.
 - Definir la lista canónica de 20 acciones.
-- Corregir la fuente vigente de USER_ACTIONS_SPEC.
 - Mantener alineación con SCREEN_STATE_SPEC v0.2.
 - Mantener alineación con INTERACTION_FLOW_SPEC v0.2.
 - Mantener alineación con COMPONENTS_SPEC v0.2.
 - Mantener alineación con DATA_MODEL_SPEC v0.1.
 - Mantener a Robert en modo documental, manual y supervisado.
+- Servir como referencia canónica para corregir APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3.
 
 ---
 
@@ -2072,7 +2106,7 @@ TIPO 1 — Informativa.
 | 9 | Actualizar HOME | Gate 4 |
 | 10 | Actualizar README | Gate 4 |
 | 11 | Cambiar modo | Gate 2 / 5 / 6 |
-| 12 | Activar sandbox manual | Gate 2 |
+| 12 | Activar sandbox manual | Gate 2 / Gate 7 |
 | 13 | Pausar avance | Gate 7 |
 | 14 | Bloquear acción | Gate 5 / 7 |
 | 15 | Ver decisiones pendientes | Gate 0 |
@@ -2266,7 +2300,7 @@ TIPO 15 — Conflicto de ejecución no autorizada
 
 # CRITERIOS DE ACEPTACIÓN
 
-Este documento podrá considerarse listo para aprobación si:
+Este documento se mantiene aceptado si:
 
 - Define qué acciones puede intentar el usuario.
 - Mantiene la lista canónica de 20 acciones.
@@ -2301,23 +2335,23 @@ Este documento podrá considerarse listo para aprobación si:
 
 Tipo de cambio:
 
-**Cambio técnico documental / acciones conceptuales del usuario**
+**Auditoría voluntaria / acciones conceptuales del usuario**
 
-Nivel de riesgo inicial:
+Nivel de riesgo inicial de la auditoría:
 
-**Nivel 3 — Alto**
+**Nivel 1 — Bajo**
 
 Motivo:
 
-Este documento define qué acciones podría intentar hacer el usuario desde el MVP técnico básico. Aunque sigue siendo conceptual, acerca el sistema a una futura lógica de interacción.
+La auditoría revisa un documento ya aprobado e integrado, sin reabrir su aprobación ni modificar contenido sustantivo.
 
-Nivel de riesgo final esperado:
+Nivel de riesgo final:
 
-**Nivel 2 — Medio**
+**Nivel 0 — Informativo**
 
 Motivo de reducción:
 
-El documento es documental. No crea botones reales, no crea pantallas reales, no programa, no conecta herramientas externas y no ejecuta acciones.
+No se encontraron errores de contenido. El único ajuste aplicado fue menor: corrección de la fila ACCIÓN 12 en la TABLA DE MAPEO CON APPROVAL GATE.
 
 Nivel de autonomía:
 
@@ -2325,61 +2359,60 @@ Nivel de autonomía:
 
 ---
 
-# DECISIÓN PENDIENTE
+# ESTADO DE APROBACIÓN
 
-Este documento queda como:
-
-**Propuesta corregida pendiente de revisión**
-
-Para aprobarlo formalmente, el usuario deberá escribir:
-
-**APRUEBO ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2**
-
----
-
-# EFECTO DE UNA APROBACIÓN FUTURA
-
-Si se aprueba este documento, se deberá:
-
-1. Registrar decisión formal en ROBERT_DECISIONS_LOG.
-2. Registrar cambio en ROBERT_CONTROL_DE_CAMBIOS.
-3. Actualizar ROBERT_HOME.
-4. Actualizar README si aplica.
-5. Mantenerlo como base para APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3.
-6. No pasar automáticamente a programación.
-7. No avanzar automáticamente a Fase 11.
-
----
-
-# PRÓXIMO PASO RECOMENDADO
-
-Después de revisar o aprobar este documento, el siguiente documento a corregir será:
-
-**ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3**
-
-Ese documento deberá usar:
+ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2 se mantiene como:
 
 ```text
-AppShell
+Aprobado e integrado
+DECISIÓN #017
+CAMBIO #028
 ```
 
-en lugar de:
+Esta auditoría no requiere nueva decisión formal.
 
-```text
-MainCanvas
-```
-
-y deberá mapear las 20 acciones usando la numeración canónica de este documento.
+Esta auditoría no requiere nuevo cambio formal porque no hubo corrección sustantiva de contenido.
 
 ---
 
-# CIERRE
+# USO COMO REFERENCIA CANÓNICA
 
-ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2 define las acciones conceptuales que el usuario puede intentar desde cada pantalla, panel o componente del MVP técnico básico.
+Este documento debe usarse como referencia confirmada para corregir:
 
-Esta versión corrige el conflicto de versión entre USER_ACTIONS_SPEC v0.1 y las referencias posteriores a v0.2.
+```text
+ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3
+```
 
-Este documento mantiene a Robert en modo documental, manual y supervisado.
+La corrección de APPROVAL_GATE v0.3 deberá:
+
+```text
+1. Reemplazar MainCanvas por AppShell.
+2. Usar la lista canónica de 20 acciones de este documento.
+3. Corregir la numeración de las acciones en su tabla de correspondencia.
+4. Mantener Fase 10 sin programación ni ejecución real.
+```
+
+---
+
+# CIERRE DE AUDITORÍA
+
+ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2 se mantiene aprobado e integrado, sin cambios de fondo tras esta auditoría voluntaria.
+
+Único ajuste aplicado:
+
+```text
+Corrección de la fila ACCIÓN 12 en TABLA DE MAPEO CON APPROVAL GATE.
+```
+
+Este documento sirve como referencia confirmada para corregir:
+
+```text
+APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3
+```
+
+No se requiere nueva DECISIÓN ni CAMBIO formal, ya que no hubo corrección sustantiva de contenido.
+
+Robert continúa en modo documental, manual y supervisado.
 
 El usuario mantiene control total.
 
