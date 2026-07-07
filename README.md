@@ -2009,3 +2009,47 @@ Esta aprobación no autoriza:
 Robert continúa en modo documental, manual y supervisado.
 
 ---
+---
+
+## USER_ACTIONS_SPEC v0.2 corregido
+
+Estado: Propuesta corregida — pendiente de revisión  
+Cambio relacionado: CAMBIO #047  
+Fase: Fase 10 — MVP técnico básico en preparación  
+
+### Estado actualizado
+
+ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2 queda registrado como propuesta corregida pendiente de revisión.
+
+### Qué corrige
+
+USER_ACTIONS_SPEC v0.2 corrige:
+
+- Conflicto de versión entre referencias a v0.2 y archivo real v0.1.
+- Fuente vigente de USER_ACTIONS_SPEC.
+- Lista canónica de 20 acciones.
+- Numeración correcta de las 20 acciones.
+- Uso de los 10 componentes canónicos.
+- Inclusión de AppShell como componente oficial.
+- Exclusión de MainCanvas como componente oficial.
+- Relación con ApprovalGate.
+- Relación con DATA_CONSISTENCY.
+
+### Restricción
+
+Esta corrección no aprueba automáticamente USER_ACTIONS_SPEC v0.2.
+
+Tampoco autoriza:
+
+- Programación.
+- Código real.
+- Pantallas reales.
+- Base de datos real.
+- Conexiones externas.
+- Automatizaciones reales.
+- Agentes autónomos.
+- Avanzar a Fase 11.
+
+Robert continúa en modo documental, manual y supervisado.
+
+---
