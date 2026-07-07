@@ -3636,3 +3636,91 @@ Robert continúa en:
 **Fase 10 — MVP técnico básico en preparación**
 
 ---
+
+---
+
+# ACTUALIZACIÓN — DOCUMENT_LIFECYCLE_SPEC v0.2 CORREGIDO
+
+Fecha: 06/07/2026  
+Estado: Propuesta corregida — pendiente de revisión  
+Cambio relacionado: CAMBIO #039 — Corrección de ROBERT_TECHNICAL_DOCUMENT_LIFECYCLE_SPEC v0.2  
+Documento base principal: ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC v0.2  
+Documentos relacionados: ROBERT_COMMANDS v0.4, ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC v0.2, ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2, ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2, ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2, ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2, ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1, ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2, ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2, ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2  
+
+---
+
+## Estado actualizado
+
+Se corrigió el documento:
+
+**ROBERT_TECHNICAL_DOCUMENT_LIFECYCLE_SPEC**
+
+de v0.1 a:
+
+**v0.2 — Propuesta corregida pendiente de revisión**
+
+---
+
+## Correcciones principales
+
+La versión v0.2 corrige:
+
+- Se agrega la sección ESTRUCTURA UNIFORME DE LOS 12 ESTADOS.
+- Se agrega Riesgo típico a los 12 estados documentales.
+- Se agrega Transición siguiente permitida a los 12 estados documentales.
+- Se agregan salidas desde Bloqueado.
+- Se agrega Bloqueado → En revisión.
+- Se agrega Bloqueado → Propuesta corregida.
+- Se agrega Bloqueado → Depreciado.
+- Se agrega Bloqueado → Reemplazado.
+- Se agrega Bloqueado → Archivado.
+- Se agrega Bloqueado → Estado anterior, solo si existe trazabilidad clara.
+- Se aclara que “Estado anterior” significa el estado documental inmediatamente previo a entrar en Bloqueado.
+- Se aclara que si no hay trazabilidad clara, Robert debe pasar a Bloqueado → En revisión o pedir confirmación explícita.
+- Se agrega Depreciado → Archivado.
+- Se aclara que Bloqueado no es estado final obligatorio.
+- Se actualizan los criterios de aceptación.
+- Se cambia la aprobación futura esperada a v0.2.
+
+---
+
+## Estado del documento
+
+ROBERT_TECHNICAL_DOCUMENT_LIFECYCLE_SPEC v0.2 queda como:
+
+**Propuesta corregida pendiente de revisión**
+
+No está aprobado todavía.
+
+---
+
+## Restricción
+
+Esta actualización no autoriza:
+
+- Programación.
+- Código real.
+- Sistema real de gestión documental.
+- Base de datos real.
+- Control automático de versiones.
+- Botones reales.
+- Pantallas reales.
+- Modelo DocumentLifecycleRecord.
+- Modelo VersionRecord.
+- Modelo DocumentTransitionRecord.
+- Modelo DeprecationRecord.
+- Modelo ReplacementRecord.
+- Componente LifecyclePanel.
+- Componente VersionTimeline.
+- Componente DocumentLifecycleMap.
+- Conexiones externas.
+- Automatizaciones.
+- Agentes autónomos.
+- Ejecución real.
+- Avanzar a Fase 11.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+---
