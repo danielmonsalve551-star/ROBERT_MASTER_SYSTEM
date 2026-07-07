@@ -8225,3 +8225,39 @@ Estado: Aprobado e integrado
 Decisión relacionada: DECISIÓN #026
 Cambio relacionado previo: CAMBIO #045
 Cambio de integración: CAMBIO #046
+
+---
+
+## CAMBIO #047 — Corrección de ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2
+
+Fecha: 07/07/2026  
+Tipo de cambio: Corrección técnica documental / fuente vigente / acciones canónicas  
+Documento afectado: ROBERT_TECHNICAL_USER_ACTIONS_SPEC.md  
+Versión afectada: v0.2  
+Estado: Propuesta corregida — pendiente de revisión  
+Fase relacionada: Fase 10 — MVP técnico básico en preparación  
+
+---
+
+### Descripción del cambio
+
+Se registra la corrección de `ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2` como propuesta corregida pendiente de revisión.
+
+Esta versión se creó a partir del único archivo real disponible, `USER_ACTIONS_SPEC v0.1`, para resolver el conflicto entre las referencias posteriores a `USER_ACTIONS_SPEC v0.2` y la fuente física existente.
+
+---
+
+### Motivo del cambio
+
+Se detectó que varios documentos posteriores citaban `ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2`, pero el archivo real disponible estaba en `v0.1` y en estado de borrador.
+
+Esto generaba un conflicto de versión, fuente vigente y trazabilidad.
+
+---
+
+### Clasificación del conflicto
+
+```text
+TIPO 3 — Conflicto de versión
+TIPO 16 — Conflicto de fuente vigente
+TIPO 17 — Conflicto de trazabilidad insuficiente
