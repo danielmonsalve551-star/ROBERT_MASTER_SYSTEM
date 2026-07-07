@@ -1,12 +1,12 @@
 # ROBERT_TECHNICAL_USER_ACTIONS_SPEC
 
-Versión: 0.1  
-Estado: Borrador técnico documental nuevo — pendiente de revisión  
-Fecha: 04/07/2026  
+Versión: 0.2  
+Estado: Propuesta corregida — pendiente de revisión  
+Fecha: 07/07/2026  
 Ubicación: 10_MVP  
 Fase relacionada: Fase 10 — MVP técnico básico en preparación  
 Documento base principal: ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2  
-Documentos relacionados: ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2, ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2, ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1  
+Documentos relacionados: ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2, ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2, ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1, ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2, ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2, ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2, ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC v0.2, ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC v0.2, ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3  
 Fuente de verdad actual: ROBERT_CONTEXT_MASTER v0.5  
 
 Tags: #robert/orbita-3 #capa/5 #tipo/tecnico #robert/mvp #robert/user-actions
@@ -15,7 +15,7 @@ Tags: #robert/orbita-3 #capa/5 #tipo/tecnico #robert/mvp #robert/user-actions
 
 # OBJETIVO
 
-ROBERT_TECHNICAL_USER_ACTIONS_SPEC define qué acciones puede intentar hacer el usuario desde cada pantalla o panel del MVP técnico básico de Robert.
+ROBERT_TECHNICAL_USER_ACTIONS_SPEC define qué acciones puede intentar hacer el usuario desde cada pantalla, panel o componente conceptual del MVP técnico básico de Robert.
 
 Su objetivo es responder:
 
@@ -28,6 +28,13 @@ Su objetivo es responder:
 - Qué flujo debe activarse.
 - Qué riesgo tiene cada acción.
 - Qué pasa después de cada acción.
+- Qué acciones son solo informativas.
+- Qué acciones son de control.
+- Qué acciones son de cambio documental.
+- Qué acciones son futuras o no disponibles.
+- Qué acciones no deben confundirse con ejecución real.
+- Cómo se relacionan las 20 acciones con ApprovalGate.
+- Cómo se relacionan las 20 acciones con riesgo, auditoría, notificaciones, permisos y estados.
 
 Este documento no programa la app.
 
@@ -47,7 +54,7 @@ Este documento no ejecuta acciones reales.
 
 Este documento queda como:
 
-**Borrador técnico documental nuevo — pendiente de revisión**
+**Propuesta corregida — pendiente de revisión**
 
 No está aprobado todavía.
 
@@ -66,6 +73,83 @@ No autoriza automatizaciones.
 No autoriza agentes autónomos.
 
 No autoriza ejecución real.
+
+No autoriza avanzar a Fase 11.
+
+---
+
+# CORRECCIÓN PRINCIPAL DE v0.2
+
+Esta versión corrige el conflicto detectado entre la referencia usada por documentos posteriores y el archivo real disponible.
+
+Problema detectado:
+
+```text
+Varios documentos posteriores citaban ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2 como referencia.
+Sin embargo, el archivo real disponible estaba en v0.1 y en estado de borrador técnico documental.
+```
+
+Clasificación del conflicto:
+
+```text
+TIPO 3 — Conflicto de versión
+TIPO 16 — Conflicto de fuente vigente
+TIPO 17 — Conflicto de trazabilidad insuficiente
+```
+
+Acción tomada:
+
+```text
+Se crea ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2 como propuesta corregida pendiente de revisión.
+```
+
+Resultado esperado:
+
+```text
+USER_ACTIONS_SPEC v0.2 queda como versión corregida y revisable antes de aprobarse formalmente.
+```
+
+Restricción:
+
+```text
+Esta versión no queda aprobada automáticamente.
+Debe aprobarse formalmente por el usuario.
+```
+
+---
+
+# FUENTE CANÓNICA DE ESTA VERSIÓN
+
+La lista canónica de acciones se mantiene con 20 acciones:
+
+```text
+ACCIÓN 1 — ESCRIBIR COMANDO
+ACCIÓN 2 — SELECCIONAR DOCUMENTO
+ACCIÓN 3 — REVISAR ESTADO GENERAL
+ACCIÓN 4 — CREAR DOCUMENTO TÉCNICO
+ACCIÓN 5 — CORREGIR DOCUMENTO TÉCNICO
+ACCIÓN 6 — APROBAR DOCUMENTO
+ACCIÓN 7 — REGISTRAR DECISIÓN
+ACCIÓN 8 — REGISTRAR CAMBIO
+ACCIÓN 9 — ACTUALIZAR HOME
+ACCIÓN 10 — ACTUALIZAR README
+ACCIÓN 11 — CAMBIAR MODO
+ACCIÓN 12 — ACTIVAR SANDBOX MANUAL
+ACCIÓN 13 — PAUSAR AVANCE
+ACCIÓN 14 — BLOQUEAR ACCIÓN
+ACCIÓN 15 — VER DECISIONES PENDIENTES
+ACCIÓN 16 — RESOLVER DECISIÓN PENDIENTE
+ACCIÓN 17 — VER MAPA DOCUMENTAL
+ACCIÓN 18 — MARCAR RESPALDO MANUAL EN GITHUB
+ACCIÓN 19 — SOLICITAR REVISIÓN CRÍTICA
+ACCIÓN 20 — PEDIR SIGUIENTE PASO
+```
+
+Regla:
+
+```text
+Esta numeración debe mantenerse igual en documentos posteriores.
+```
 
 ---
 
@@ -94,8 +178,10 @@ Estado operativo actual:
 - MVP manual validado.
 - Sandbox manual validado.
 - GitHub configurado como respaldo documental privado y manual.
+- Obsidian usado como cerebro documental manual.
 - ROBERT_CONTEXT_MASTER v0.5 reanclado.
 - ROBERT_PHASES v0.5 reconciliado.
+- ROBERT_COMMANDS v0.4 aprobado e integrado.
 - Escala de riesgo y autonomía unificada.
 - ROBERT_TECHNICAL_MVP_PLAN aprobado.
 - ROBERT_TECHNICAL_MVP_WIREFRAME v0.3 aprobado.
@@ -103,7 +189,8 @@ Estado operativo actual:
 - ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1 aprobado e integrado.
 - ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2 aprobado e integrado.
 - ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2 aprobado e integrado.
-- ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.1 creado como borrador.
+- ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2 creado como propuesta corregida pendiente de revisión.
+- ROBERT_HOME v0.8 aprobado e integrado.
 - Sin programación autorizada.
 - Sin código real.
 - Sin pantallas reales.
@@ -111,6 +198,7 @@ Estado operativo actual:
 - Sin conexiones externas.
 - Sin automatizaciones reales.
 - Sin agentes autónomos activos.
+- Sin Fase 11 autorizada.
 
 ---
 
@@ -121,11 +209,16 @@ Este documento autoriza únicamente:
 - Definir acciones conceptuales del usuario.
 - Relacionar acciones con pantallas y componentes.
 - Clasificar acciones por riesgo.
+- Definir cuándo una acción requiere confirmación.
 - Definir cuándo una acción requiere aprobación.
 - Definir cuándo una acción debe bloquearse.
 - Definir qué ocurre después de una acción.
+- Definir la lista canónica de 20 acciones.
+- Corregir la fuente vigente de USER_ACTIONS_SPEC.
 - Mantener alineación con SCREEN_STATE_SPEC v0.2.
 - Mantener alineación con INTERACTION_FLOW_SPEC v0.2.
+- Mantener alineación con COMPONENTS_SPEC v0.2.
+- Mantener alineación con DATA_MODEL_SPEC v0.1.
 - Mantener a Robert en modo documental, manual y supervisado.
 
 ---
@@ -183,9 +276,10 @@ Las acciones del usuario se clasifican en:
 7. Acción de cambio de modo.
 8. Acción de sandbox.
 9. Acción de respaldo manual.
-10. Acción bloqueada por fase.
-11. Acción prohibida.
-12. Acción futura no disponible.
+10. Acción de control.
+11. Acción bloqueada por fase.
+12. Acción prohibida.
+13. Acción futura no disponible.
 
 ---
 
@@ -193,24 +287,46 @@ Las acciones del usuario se clasifican en:
 
 Robert usa la escala oficial:
 
-- Nivel 0 — Informativo.
-- Nivel 1 — Bajo.
-- Nivel 2 — Medio.
-- Nivel 3 — Alto.
-- Nivel 4 — Crítico.
+```text
+Nivel 0 — Informativo
+Nivel 1 — Bajo
+Nivel 2 — Medio
+Nivel 3 — Alto
+Nivel 4 — Crítico
+```
 
 Regla:
 
-**No existe Nivel 5 como riesgo.**
-
+```text
+No existe Nivel 5 como riesgo.
 Nivel 5 solo puede existir como autonomía, no como riesgo.
+```
+
+Acciones de control:
+
+```text
+DETENTE
+PAUSA
+NO_AVANCES
+BLOQUEA
+CANCELA
+NO EJECUTES
+```
+
+Regla:
+
+```text
+Las acciones de control están fuera de la escala de riesgo cuando funcionan como protección del usuario.
+La acción bloqueada sí puede tener Nivel 3 o Nivel 4.
+```
 
 ---
 
 # COMPONENTES BASE
 
-Este documento usa los componentes aprobados:
+Este documento usa los 10 componentes aprobados:
 
+```text
 1. AppShell
 2. TopBar
 3. LeftSidebar
@@ -221,6 +337,14 @@ Este documento usa los componentes aprobados:
 8. DecisionInbox
 9. DocumentStatusMap
 10. CurrentStatePanel
+```
+
+Regla:
+
+```text
+MainCanvas no forma parte de la lista canónica de componentes aprobados.
+No debe usarse como componente oficial en este documento.
+```
 
 ---
 
@@ -228,6 +352,7 @@ Este documento usa los componentes aprobados:
 
 Este documento se apoya en los modelos definidos en DATA_MODEL_SPEC v0.1:
 
+```text
 1. SystemState
 2. RobertDocument
 3. DecisionRecord
@@ -239,10 +364,44 @@ Este documento se apoya en los modelos definidos en DATA_MODEL_SPEC v0.1:
 9. ComponentState
 10. GitHubBackupStatus
 11. ObsidianGraphStatus
+```
 
 Este documento no crea un modelo de datos nuevo oficial.
 
-Las acciones del usuario se entienden conceptualmente como instrucciones, solicitudes o intentos de operación que pueden convertirse en CommandRequest, PendingDecision, RiskRecord, DecisionRecord o ChangeRecord según el caso.
+Las acciones del usuario se entienden conceptualmente como instrucciones, solicitudes o intentos de operación que pueden convertirse en:
+
+- CommandRequest.
+- PendingDecision.
+- RiskRecord.
+- DecisionRecord.
+- ChangeRecord.
+- ModeState.
+- GitHubBackupStatus.
+- ObsidianGraphStatus.
+
+---
+
+# ESTRUCTURA UNIFORME DE LAS 20 ACCIONES
+
+Cada acción debe poder mostrar:
+
+```text
+Dónde ocurre:
+Qué intenta hacer el usuario:
+Ejemplos:
+Componente principal:
+Componentes relacionados:
+Modelo principal:
+Flujo activado:
+Riesgo:
+Resultado permitido:
+Requiere aprobación:
+Restricción:
+Gate probable:
+Evento relacionado:
+Registro de auditoría relacionado:
+Notificación relacionada:
+```
 
 ---
 
@@ -271,9 +430,20 @@ El usuario escribe una instrucción, comando, pregunta o solicitud.
 
 CommandCenter.
 
+## Componentes relacionados
+
+- AppShell.
+- RiskBadge.
+- ApprovalGate.
+- DecisionInbox.
+- CurrentStatePanel.
+
+## Modelo principal
+
+CommandRequest.
+
 ## Flujo activado
 
-- CommandRequest.
 - Clasificación de intención.
 - Evaluación preliminar de riesgo.
 - RiskBadge si aplica.
@@ -304,9 +474,33 @@ Robert puede:
 - Crear decisión pendiente.
 - Sugerir siguiente paso.
 
+## Requiere aprobación
+
+Solo si la acción implica aprobación formal, integración, cambio maestro, fase, seguridad o decisión relevante.
+
 ## Restricción
 
 CommandCenter no ejecuta acciones reales.
+
+## Gate probable
+
+Gate 0, Gate 1, Gate 2, Gate 3, Gate 5 o Gate 7 según intención.
+
+## Evento relacionado
+
+EVENTO 9 — Falta de información, si la instrucción es ambigua.  
+EVENTO 15 — Ejecución no autorizada, si intenta ejecución real.
+
+## Registro de auditoría relacionado
+
+REGISTRO 3 — Revisión.  
+REGISTRO 6 — Decisión, si se convierte en aprobación.
+
+## Notificación relacionada
+
+TIPO 1 — Informativa.  
+TIPO 6 — Confirmación requerida.  
+TIPO 9 — Bloqueo, si aplica.
 
 ---
 
@@ -337,6 +531,17 @@ LeftSidebar.
 - DocumentStatusMap.
 - CurrentStatePanel.
 - TopBar.
+- AppShell.
+
+## Modelo principal
+
+RobertDocument.
+
+## Flujo activado
+
+- Selección de documento.
+- Visualización de estado.
+- Confirmación de documento activo.
 
 ## Riesgo
 
@@ -353,9 +558,29 @@ Robert puede mostrar:
 - Relación con decisiones y cambios.
 - Riesgo si aplica.
 
+## Requiere aprobación
+
+No.
+
 ## Restricción
 
 Seleccionar un documento no lo modifica.
+
+## Gate probable
+
+Gate 0 o Gate 1.
+
+## Evento relacionado
+
+Ninguno obligatorio.
+
+## Registro de auditoría relacionado
+
+REGISTRO 3 — Revisión, si forma parte de una auditoría documental.
+
+## Notificación relacionada
+
+TIPO 1 — Informativa.
 
 ---
 
@@ -387,6 +612,18 @@ CurrentStatePanel.
 - TopBar.
 - DecisionInbox.
 - DocumentStatusMap.
+- AppShell.
+
+## Modelo principal
+
+SystemState.
+
+## Flujo activado
+
+- Lectura de estado.
+- Consulta de fase.
+- Consulta de restricciones.
+- Consulta de pendientes.
 
 ## Riesgo
 
@@ -396,9 +633,29 @@ Nivel 0 — Informativo.
 
 Robert puede mostrar estado actual.
 
+## Requiere aprobación
+
+No.
+
 ## Restricción
 
 Ver estado no autoriza avanzar.
+
+## Gate probable
+
+Gate 0.
+
+## Evento relacionado
+
+Ninguno obligatorio.
+
+## Registro de auditoría relacionado
+
+REGISTRO 3 — Revisión, si forma parte de auditoría.
+
+## Notificación relacionada
+
+TIPO 1 — Informativa.
 
 ---
 
@@ -429,14 +686,22 @@ CommandCenter.
 - ApprovalGate.
 - DocumentStatusMap.
 - CurrentStatePanel.
+- AppShell.
+
+## Modelo principal
+
+RobertDocument.
+
+## Flujo activado
+
+- Crear borrador.
+- Clasificar riesgo.
+- Marcar documento como borrador o propuesta.
+- Preparar bloque para copiar.
 
 ## Riesgo
 
 Nivel 3 — Alto.
-
-## Motivo
-
-Crear documentos técnicos puede cambiar la arquitectura conceptual de Robert y acercar el proyecto a implementación futura.
 
 ## Resultado permitido
 
@@ -449,11 +714,31 @@ Robert puede crear:
 
 ## Requiere aprobación
 
-No siempre para crear borrador, pero sí para aprobar formalmente.
+No siempre para crear borrador.
+
+Sí para aprobar formalmente.
 
 ## Restricción
 
 Crear documento técnico no autoriza programación.
+
+## Gate probable
+
+Gate 2 — Autorización documental.
+
+## Evento relacionado
+
+EVENTO 3 — Aprobación formal requerida, si el usuario intenta aprobar.  
+EVENTO 12 — Fuera de alcance, si excede documentación.
+
+## Registro de auditoría relacionado
+
+REGISTRO 5 — Corrección, si es una versión corregida.  
+REGISTRO 7 — Cambio, si se registra formalmente.
+
+## Notificación relacionada
+
+TIPO 6 — Confirmación requerida.
 
 ---
 
@@ -485,6 +770,19 @@ CommandCenter.
 - ApprovalGate.
 - DocumentStatusMap.
 - CurrentStatePanel.
+- AppShell.
+
+## Modelo principal
+
+ChangeRecord.
+
+## Flujo activado
+
+- Detectar conflicto.
+- Proponer corrección.
+- Crear versión corregida.
+- Mantener pendiente de revisión.
+- Preparar cambio si aplica.
 
 ## Riesgo
 
@@ -502,9 +800,33 @@ Robert puede:
 - Preparar cambio para CONTROL_DE_CAMBIOS.
 - Preparar actualización de HOME y README.
 
+## Requiere aprobación
+
+No para preparar propuesta corregida.
+
+Sí para aprobar e integrar.
+
 ## Restricción
 
 Corregir no significa aprobar.
+
+## Gate probable
+
+Gate 2 — Autorización documental.
+
+## Evento relacionado
+
+EVENTO 10 — Contradicción documental.  
+EVENTO 9 — Falta de información, si falta fuente.
+
+## Registro de auditoría relacionado
+
+REGISTRO 5 — Corrección.  
+REGISTRO 16 — Contradicción documental, si aplica.
+
+## Notificación relacionada
+
+TIPO 10 — Alerta de contradicción documental.
 
 ---
 
@@ -535,6 +857,18 @@ DecisionInbox.
 - RiskBadge.
 - DocumentStatusMap.
 - CurrentStatePanel.
+- AppShell.
+
+## Modelo principal
+
+DecisionRecord.
+
+## Flujo activado
+
+- Validar aprobación explícita.
+- Validar documento y versión.
+- Registrar decisión.
+- Preparar cambio de integración.
 
 ## Riesgo
 
@@ -550,7 +884,7 @@ Robert puede preparar:
 - Actualización de README.
 - Estado aprobado e integrado.
 
-## Requiere aprobación explícita
+## Requiere aprobación
 
 Sí.
 
@@ -559,6 +893,24 @@ Debe existir instrucción clara del usuario.
 ## Restricción
 
 Aprobar documento no autoriza ejecución real.
+
+## Gate probable
+
+Gate 3 — Aprobación formal.
+
+## Evento relacionado
+
+EVENTO 3 — Aprobación formal requerida.  
+EVENTO 9 — Falta de información, si falta versión.
+
+## Registro de auditoría relacionado
+
+REGISTRO 6 — Decisión.  
+REGISTRO 8 — Aprobación.
+
+## Notificación relacionada
+
+TIPO 6 — Confirmación requerida.
 
 ---
 
@@ -588,6 +940,18 @@ CommandCenter.
 - DecisionInbox.
 - DocumentStatusMap.
 - CurrentStatePanel.
+- AppShell.
+
+## Modelo principal
+
+DecisionRecord.
+
+## Flujo activado
+
+- Crear bloque para DECISIONS_LOG.
+- Relacionar decisión con documento.
+- Relacionar decisión con versión.
+- Preparar siguiente cambio si aplica.
 
 ## Riesgo
 
@@ -599,11 +963,32 @@ Nivel 3 si afecta documento técnico, maestro, seguridad o fases.
 
 Robert puede preparar bloque para pegar en DECISIONS_LOG.
 
+## Requiere aprobación
+
+Sí, cuando representa una decisión formal.
+
 ## Restricción
 
 La decisión debe representar una aprobación real del usuario.
 
 Robert no debe inventar aprobaciones.
+
+## Gate probable
+
+Gate 3 — Aprobación formal.
+
+## Evento relacionado
+
+EVENTO 3 — Aprobación formal requerida.
+
+## Registro de auditoría relacionado
+
+REGISTRO 6 — Decisión.
+
+## Notificación relacionada
+
+TIPO 1 — Informativa.  
+TIPO 6 — Confirmación requerida, si falta claridad.
 
 ---
 
@@ -633,6 +1018,18 @@ CommandCenter.
 - DocumentStatusMap.
 - CurrentStatePanel.
 - TopBar.
+- AppShell.
+
+## Modelo principal
+
+ChangeRecord.
+
+## Flujo activado
+
+- Crear bloque para CONTROL_DE_CAMBIOS.
+- Relacionar cambio con decisión.
+- Relacionar cambio con documento.
+- Relacionar cambio con versión.
 
 ## Riesgo
 
@@ -644,9 +1041,34 @@ Nivel 3 si el cambio afecta documentos técnicos, maestros, seguridad o fases.
 
 Robert puede preparar bloque de cambio para pegar.
 
+## Requiere aprobación
+
+Depende del cambio.
+
+Si integra documento aprobado, debe existir decisión previa.
+
 ## Restricción
 
 Registrar cambio no autoriza acciones externas.
+
+## Gate probable
+
+Gate 4 — Integración documental.
+
+## Evento relacionado
+
+EVENTO 3 — Aprobación formal requerida, si falta decisión.  
+EVENTO 10 — Contradicción documental, si el cambio no coincide.
+
+## Registro de auditoría relacionado
+
+REGISTRO 7 — Cambio.  
+REGISTRO 9 — Integración, si aplica.
+
+## Notificación relacionada
+
+TIPO 1 — Informativa.  
+TIPO 10 — Contradicción documental, si aplica.
 
 ---
 
@@ -660,6 +1082,13 @@ CommandCenter.
 
 El usuario actualiza ROBERT_HOME con el nuevo estado del sistema.
 
+## Ejemplos
+
+- Actualizar HOME con una decisión.
+- Actualizar HOME con un cambio.
+- Actualizar HOME con documento aprobado.
+- Corregir estado desactualizado.
+
 ## Componente principal
 
 CommandCenter.
@@ -669,18 +1098,54 @@ CommandCenter.
 - CurrentStatePanel.
 - DocumentStatusMap.
 - TopBar.
+- AppShell.
+
+## Modelo principal
+
+RobertDocument.
+
+## Flujo activado
+
+- Preparar bloque de actualización.
+- Verificar estado real.
+- Verificar decisión/cambio relacionado.
+- Evitar contradicción interna.
 
 ## Riesgo
 
 Nivel 2 — Medio.
 
+Puede subir a Nivel 3 si corrige estado central del sistema.
+
 ## Resultado permitido
 
 Robert puede preparar bloque para ROBERT_HOME.
 
+## Requiere aprobación
+
+Sí si cambia estado central, versión, fase, aprobación o integración.
+
 ## Restricción
 
 HOME debe reflejar estado real, no capacidades futuras como si estuvieran activas.
+
+## Gate probable
+
+Gate 4 — Integración documental.
+
+## Evento relacionado
+
+EVENTO 10 — Contradicción documental.  
+EVENTO 9 — Falta de información, si falta trazabilidad.
+
+## Registro de auditoría relacionado
+
+REGISTRO 7 — Cambio.  
+REGISTRO 9 — Integración.
+
+## Notificación relacionada
+
+TIPO 10 — Alerta de contradicción documental.
 
 ---
 
@@ -694,6 +1159,13 @@ CommandCenter.
 
 El usuario actualiza README.md con el estado general del repositorio.
 
+## Ejemplos
+
+- Actualizar README con documento aprobado.
+- Actualizar README con estado de Fase 10.
+- Actualizar README con bloque de cierre.
+- Actualizar README con restricciones activas.
+
 ## Componente principal
 
 CommandCenter.
@@ -703,6 +1175,17 @@ CommandCenter.
 - DocumentStatusMap.
 - TopBar.
 - CurrentStatePanel.
+- AppShell.
+
+## Modelo principal
+
+GitHubBackupStatus.
+
+## Flujo activado
+
+- Preparar bloque para README.
+- Verificar que el texto coincida con HOME.
+- Mantener respaldo manual.
 
 ## Riesgo
 
@@ -712,9 +1195,32 @@ Nivel 2 — Medio.
 
 Robert puede preparar bloque para README.
 
+## Requiere aprobación
+
+Puede requerir confirmación si actualiza estado oficial.
+
 ## Restricción
 
 README no debe decir que hay app funcional si todavía no existe.
+
+## Gate probable
+
+Gate 4 — Integración documental.
+
+## Evento relacionado
+
+EVENTO 10 — Contradicción documental, si README no coincide.  
+EVENTO 16 — Conexión no autorizada, si se intenta automatizar GitHub.
+
+## Registro de auditoría relacionado
+
+REGISTRO 7 — Cambio.  
+REGISTRO 12 — Permiso, si se relaciona con GitHub.
+
+## Notificación relacionada
+
+TIPO 1 — Informativa.  
+TIPO 9 — Bloqueo, si se intenta automatizar.
 
 ---
 
@@ -739,6 +1245,8 @@ El usuario pide cambiar el modo operativo.
 - Autónomo limitado.
 - Ejecución limitada.
 - Modo crítico.
+- Agentes autónomos.
+- Automatización real.
 
 ## Componente principal
 
@@ -749,6 +1257,18 @@ ModeSelector.
 - ApprovalGate.
 - RiskBadge.
 - CurrentStatePanel.
+- TopBar.
+- AppShell.
+
+## Modelo principal
+
+ModeState.
+
+## Flujo activado
+
+- Evaluar modo solicitado.
+- Confirmar si el modo está permitido.
+- Bloquear modo futuro o no autorizado.
 
 ## Riesgo
 
@@ -767,9 +1287,33 @@ Robert puede:
 - Bloquear modo no autorizado.
 - Mostrar modo activo.
 
+## Requiere aprobación
+
+Sí si el modo cambia alcance o riesgo.
+
 ## Restricción
 
 Cambiar modo no activa autonomía real.
+
+## Gate probable
+
+Gate 2, Gate 5 o Gate 6.
+
+## Evento relacionado
+
+EVENTO 8 — Acción futura no disponible.  
+EVENTO 18 — Agente no autorizado, si aplica.  
+EVENTO 20 — Fase incorrecta, si aplica.
+
+## Registro de auditoría relacionado
+
+REGISTRO 12 — Permiso.  
+REGISTRO 17 — Capacidad futura no disponible.
+
+## Notificación relacionada
+
+TIPO 11 — Fase incorrecta.  
+TIPO 12 — Capacidad futura no disponible.
 
 ---
 
@@ -783,6 +1327,13 @@ ModeSelector o CommandCenter.
 
 El usuario quiere entrar en modo de prueba controlada.
 
+## Ejemplos
+
+- Activar sandbox manual.
+- Probar idea en simulación.
+- Ejecutar prueba documental.
+- Revisar comportamiento de Business Builder.
+
 ## Componente principal
 
 ModeSelector.
@@ -793,6 +1344,17 @@ ModeSelector.
 - ApprovalGate.
 - CurrentStatePanel.
 - DocumentStatusMap.
+- AppShell.
+
+## Modelo principal
+
+ModeState.
+
+## Flujo activado
+
+- Cambiar a modo sandbox conceptual.
+- Mantener simulación documental.
+- Verificar que no haya ejecución real.
 
 ## Riesgo
 
@@ -802,9 +1364,31 @@ Nivel 2 o Nivel 3.
 
 Robert puede operar en simulación documental.
 
+## Requiere aprobación
+
+Sí, si la prueba afecta documentos, seguridad o decisiones.
+
 ## Restricción
 
 Sandbox manual no ejecuta acciones reales.
+
+## Gate probable
+
+Gate 2 o Gate 7 si el usuario pausa.
+
+## Evento relacionado
+
+EVENTO 12 — Fuera de alcance, si intenta ejecución real.  
+EVENTO 15 — Ejecución no autorizada, si aplica.
+
+## Registro de auditoría relacionado
+
+REGISTRO 3 — Revisión.  
+REGISTRO 11 — Riesgo, si aplica.
+
+## Notificación relacionada
+
+TIPO 5 — Advertencia de riesgo, si aplica.
 
 ---
 
@@ -823,6 +1407,9 @@ El usuario ordena detener temporalmente el avance.
 - PAUSA.
 - DETENTE.
 - NO_AVANCES.
+- NO SIGAS.
+- CANCELA.
+- SOLO BORRADOR.
 
 ## Componente principal
 
@@ -833,18 +1420,50 @@ ApprovalGate.
 - CommandCenter.
 - CurrentStatePanel.
 - DecisionInbox.
+- TopBar.
+- AppShell.
+
+## Modelo principal
+
+ModeState.
+
+## Flujo activado
+
+- Pausa inmediata.
+- Bloqueo temporal de siguiente paso.
+- Esperar nueva autorización.
 
 ## Riesgo
 
-Nivel 0 — Control de seguridad.
+Acción de control fuera de escala de riesgo.
 
 ## Resultado permitido
 
 Robert debe detener el avance.
 
+## Requiere aprobación
+
+No.
+
 ## Restricción
 
 Robert no debe continuar al siguiente paso hasta nueva autorización.
+
+## Gate probable
+
+Gate 7 — Revocación o control manual.
+
+## Evento relacionado
+
+EVENTO 4 — Pausa obligatoria.
+
+## Registro de auditoría relacionado
+
+REGISTRO 3 — Revisión.
+
+## Notificación relacionada
+
+TIPO 1 — Informativa.
 
 ---
 
@@ -875,10 +1494,23 @@ ApprovalGate.
 - RiskBadge.
 - CurrentStatePanel.
 - DecisionInbox.
+- TopBar.
+- AppShell.
+
+## Modelo principal
+
+RiskRecord.
+
+## Flujo activado
+
+- Bloqueo.
+- Mostrar motivo.
+- Detener avance.
+- Mantener restricción activa.
 
 ## Riesgo
 
-Nivel 0 como acción de control.
+Acción de control fuera de escala de riesgo.
 
 La acción bloqueada puede tener Nivel 3 o Nivel 4.
 
@@ -886,9 +1518,32 @@ La acción bloqueada puede tener Nivel 3 o Nivel 4.
 
 Robert debe mostrar motivo del bloqueo.
 
+## Requiere aprobación
+
+No, si el bloqueo protege seguridad o respeta instrucción del usuario.
+
 ## Restricción
 
 Robert no debe buscar rutas alternas para ejecutar lo bloqueado.
+
+## Gate probable
+
+Gate 5 o Gate 7.
+
+## Evento relacionado
+
+EVENTO 6 — Bloqueo manual solicitado.  
+EVENTO 7 — Acción prohibida.  
+EVENTO 15 — Ejecución no autorizada, si aplica.
+
+## Registro de auditoría relacionado
+
+REGISTRO 10 — Bloqueo.  
+REGISTRO 11 — Riesgo.
+
+## Notificación relacionada
+
+TIPO 9 — Mensaje de bloqueo.
 
 ---
 
@@ -902,6 +1557,13 @@ DecisionInbox.
 
 El usuario quiere revisar qué decisiones siguen pendientes.
 
+## Ejemplos
+
+- Ver qué falta aprobar.
+- Ver decisiones abiertas.
+- Ver documentos pendientes.
+- Ver riesgos pendientes.
+
 ## Componente principal
 
 DecisionInbox.
@@ -910,6 +1572,17 @@ DecisionInbox.
 
 - CurrentStatePanel.
 - DocumentStatusMap.
+- AppShell.
+
+## Modelo principal
+
+PendingDecision.
+
+## Flujo activado
+
+- Mostrar decisiones pendientes.
+- Mostrar documento afectado.
+- Mostrar riesgo y opciones.
 
 ## Riesgo
 
@@ -925,9 +1598,29 @@ Robert puede mostrar:
 - Documento afectado.
 - Opciones disponibles.
 
+## Requiere aprobación
+
+No.
+
 ## Restricción
 
 Ver pendientes no resuelve decisiones.
+
+## Gate probable
+
+Gate 0.
+
+## Evento relacionado
+
+Ninguno obligatorio.
+
+## Registro de auditoría relacionado
+
+REGISTRO 3 — Revisión.
+
+## Notificación relacionada
+
+TIPO 1 — Informativa.
 
 ---
 
@@ -960,6 +1653,18 @@ DecisionInbox.
 - ApprovalGate.
 - RiskBadge.
 - CurrentStatePanel.
+- AppShell.
+
+## Modelo principal
+
+PendingDecision.
+
+## Flujo activado
+
+- Elegir resolución.
+- Registrar decisión si aplica.
+- Registrar cambio si aplica.
+- Mantener pendiente si falta información.
 
 ## Riesgo
 
@@ -969,9 +1674,31 @@ Nivel 2 o Nivel 3.
 
 Robert puede preparar el registro correspondiente.
 
+## Requiere aprobación
+
+Sí si resuelve una decisión formal o aprueba un documento.
+
 ## Restricción
 
 Robert no resuelve decisiones sin instrucción del usuario.
+
+## Gate probable
+
+Gate 3 o Gate 4.
+
+## Evento relacionado
+
+EVENTO 3 — Aprobación formal requerida.  
+EVENTO 9 — Falta de información, si falta claridad.
+
+## Registro de auditoría relacionado
+
+REGISTRO 6 — Decisión.  
+REGISTRO 7 — Cambio, si aplica.
+
+## Notificación relacionada
+
+TIPO 6 — Confirmación requerida.
 
 ---
 
@@ -985,6 +1712,14 @@ DocumentStatusMap.
 
 El usuario quiere ver los documentos, estados y relaciones del sistema.
 
+## Ejemplos
+
+- Ver documentos por carpeta.
+- Ver documentos aprobados.
+- Ver documentos pendientes.
+- Ver relación entre decisiones y cambios.
+- Ver mapa de órbitas.
+
 ## Componente principal
 
 DocumentStatusMap.
@@ -993,6 +1728,17 @@ DocumentStatusMap.
 
 - LeftSidebar.
 - CurrentStatePanel.
+- AppShell.
+
+## Modelo principal
+
+RobertDocument.
+
+## Flujo activado
+
+- Mostrar mapa documental.
+- Mostrar estado por documento.
+- Mostrar versión y relación.
 
 ## Riesgo
 
@@ -1012,9 +1758,29 @@ Robert puede mostrar:
 - Respaldo manual.
 - Estado visual de Obsidian Graph.
 
+## Requiere aprobación
+
+No.
+
 ## Restricción
 
 Ver el mapa no modifica documentos.
+
+## Gate probable
+
+Gate 0.
+
+## Evento relacionado
+
+Ninguno obligatorio.
+
+## Registro de auditoría relacionado
+
+REGISTRO 3 — Revisión.
+
+## Notificación relacionada
+
+TIPO 1 — Informativa.
 
 ---
 
@@ -1034,6 +1800,7 @@ El usuario indica que ya actualizó GitHub manualmente.
 - ya actualicé README
 - ya registré CAMBIO
 - ya hice commit
+- ya subí el cambio
 
 ## Componente principal
 
@@ -1044,18 +1811,56 @@ CurrentStatePanel.
 - TopBar.
 - DocumentStatusMap.
 - CommandCenter.
+- AppShell.
+
+## Modelo principal
+
+GitHubBackupStatus.
+
+## Flujo activado
+
+- Interpretar confirmación del usuario.
+- Actualizar estado conversacional.
+- Preparar siguiente paso documental.
+- No conectar GitHub automáticamente.
 
 ## Riesgo
 
 Nivel 1 o Nivel 2.
 
+Puede subir si el respaldo confirma un cambio técnico o maestro.
+
 ## Resultado permitido
 
 Robert puede actualizar el estado documental de la conversación y preparar el siguiente paso.
 
+## Requiere aprobación
+
+No si solo confirma respaldo manual.
+
+Sí si implica cambio de estado documental oficial.
+
 ## Restricción
 
 Robert no debe asumir que puede conectarse a GitHub automáticamente.
+
+## Gate probable
+
+Gate 1 o Gate 4.
+
+## Evento relacionado
+
+EVENTO 16 — Conexión no autorizada, si intenta automatizar GitHub.
+
+## Registro de auditoría relacionado
+
+REGISTRO 12 — Permiso.  
+REGISTRO 7 — Cambio, si el respaldo confirma cambio.
+
+## Notificación relacionada
+
+TIPO 1 — Informativa.  
+TIPO 9 — Bloqueo, si se intenta automatizar.
 
 ---
 
@@ -1069,6 +1874,14 @@ CommandCenter.
 
 El usuario pide revisar un documento para detectar contradicciones.
 
+## Ejemplos
+
+- Revisar un documento técnico.
+- Detectar conflictos.
+- Comparar con la serie.
+- Revisar si hay huecos.
+- Auditar consistencia.
+
 ## Componente principal
 
 CommandCenter.
@@ -1078,6 +1891,19 @@ CommandCenter.
 - RiskBadge.
 - DocumentStatusMap.
 - CurrentStatePanel.
+- AppShell.
+
+## Modelo principal
+
+RiskRecord.
+
+## Flujo activado
+
+- Revisar documento.
+- Detectar conflictos.
+- Clasificar conflicto.
+- Proponer corrección.
+- Mantener pendiente de aprobación.
 
 ## Riesgo
 
@@ -1094,9 +1920,33 @@ Robert puede:
 - Proponer v0.2 o nueva versión.
 - Mantener pendiente de aprobación.
 
+## Requiere aprobación
+
+No para revisar.
+
+Sí para corregir, aprobar o integrar.
+
 ## Restricción
 
 Revisar no aprueba ni modifica por sí solo.
+
+## Gate probable
+
+Gate 0 o Gate 2.
+
+## Evento relacionado
+
+EVENTO 10 — Contradicción documental.  
+EVENTO 9 — Falta de información, si falta fuente.
+
+## Registro de auditoría relacionado
+
+REGISTRO 3 — Revisión.  
+REGISTRO 16 — Contradicción documental.
+
+## Notificación relacionada
+
+TIPO 10 — Alerta de contradicción documental.
 
 ---
 
@@ -1110,6 +1960,14 @@ CommandCenter.
 
 El usuario pregunta qué sigue.
 
+## Ejemplos
+
+- ¿Qué sigue?
+- Dame el siguiente paso.
+- ¿Ahora qué hago?
+- Continúa.
+- Siguiente documento.
+
 ## Componente principal
 
 CommandCenter.
@@ -1119,18 +1977,110 @@ CommandCenter.
 - CurrentStatePanel.
 - DecisionInbox.
 - DocumentStatusMap.
+- AppShell.
+
+## Modelo principal
+
+SystemState.
+
+## Flujo activado
+
+- Revisar estado actual.
+- Detectar pendientes.
+- Recomendar siguiente paso.
+- No ejecutar sin permiso.
 
 ## Riesgo
 
 Nivel 0 o Nivel 1.
 
+Puede subir si el siguiente paso afecta documentos, decisiones o integraciones.
+
 ## Resultado permitido
 
 Robert puede recomendar siguiente paso.
 
+## Requiere aprobación
+
+No para recomendar.
+
+Sí para ejecutar/corregir/aprobar/integrar.
+
 ## Restricción
 
 Recomendar no significa avanzar sin autorización.
+
+## Gate probable
+
+Gate 0 o Gate 1.
+
+## Evento relacionado
+
+Ninguno obligatorio.
+
+EVENTO 9 — Falta de información, si no hay contexto suficiente.
+
+## Registro de auditoría relacionado
+
+REGISTRO 3 — Revisión.
+
+## Notificación relacionada
+
+TIPO 1 — Informativa.
+
+---
+
+# TABLA RESUMEN DE ACCIONES
+
+| Acción | Nombre | Componente principal | Riesgo típico | Resultado permitido |
+|---:|---|---|---:|---|
+| 1 | Escribir comando | CommandCenter | Variable | Clasificar, responder o pedir aprobación |
+| 2 | Seleccionar documento | LeftSidebar | 0 | Mostrar documento |
+| 3 | Revisar estado general | CurrentStatePanel | 0 | Mostrar estado |
+| 4 | Crear documento técnico | CommandCenter | 3 | Borrador pendiente |
+| 5 | Corregir documento técnico | CommandCenter | 2-3 | Propuesta corregida |
+| 6 | Aprobar documento | DecisionInbox | 3 | Decisión y cambio |
+| 7 | Registrar decisión | CommandCenter | 2-3 | Bloque para DECISIONS_LOG |
+| 8 | Registrar cambio | CommandCenter | 2-3 | Bloque para CONTROL_DE_CAMBIOS |
+| 9 | Actualizar HOME | CommandCenter | 2-3 | Bloque para HOME |
+| 10 | Actualizar README | CommandCenter | 2 | Bloque para README |
+| 11 | Cambiar modo | ModeSelector | 2-4 | Cambio conceptual o bloqueo |
+| 12 | Activar sandbox manual | ModeSelector | 2-3 | Simulación documental |
+| 13 | Pausar avance | ApprovalGate | Control | Detener avance |
+| 14 | Bloquear acción | ApprovalGate | Control | Bloqueo visible |
+| 15 | Ver decisiones pendientes | DecisionInbox | 0 | Mostrar pendientes |
+| 16 | Resolver decisión pendiente | DecisionInbox | 2-3 | Registro correspondiente |
+| 17 | Ver mapa documental | DocumentStatusMap | 0 | Mostrar mapa |
+| 18 | Marcar respaldo manual en GitHub | CurrentStatePanel | 1-2 | Actualizar estado conversacional |
+| 19 | Solicitar revisión crítica | CommandCenter | 2-3 | Detectar inconsistencias |
+| 20 | Pedir siguiente paso | CommandCenter | 0-1 | Recomendar, no ejecutar |
+
+---
+
+# TABLA DE MAPEO CON APPROVAL GATE
+
+| Acción | Nombre | Gate probable |
+|---:|---|---|
+| 1 | Escribir comando | Gate 0 / 1 / 2 / 3 / 5 / 7 |
+| 2 | Seleccionar documento | Gate 0 / 1 |
+| 3 | Revisar estado general | Gate 0 |
+| 4 | Crear documento técnico | Gate 2 |
+| 5 | Corregir documento técnico | Gate 2 |
+| 6 | Aprobar documento | Gate 3 |
+| 7 | Registrar decisión | Gate 3 |
+| 8 | Registrar cambio | Gate 4 |
+| 9 | Actualizar HOME | Gate 4 |
+| 10 | Actualizar README | Gate 4 |
+| 11 | Cambiar modo | Gate 2 / 5 / 6 |
+| 12 | Activar sandbox manual | Gate 2 |
+| 13 | Pausar avance | Gate 7 |
+| 14 | Bloquear acción | Gate 5 / 7 |
+| 15 | Ver decisiones pendientes | Gate 0 |
+| 16 | Resolver decisión pendiente | Gate 3 / 4 |
+| 17 | Ver mapa documental | Gate 0 |
+| 18 | Marcar respaldo manual en GitHub | Gate 1 / 4 |
+| 19 | Solicitar revisión crítica | Gate 0 / 2 |
+| 20 | Pedir siguiente paso | Gate 0 / 1 |
 
 ---
 
@@ -1192,6 +2142,8 @@ Una acción requiere confirmación simple cuando:
 - Actualiza HOME.
 - Registra un cambio no crítico.
 - Cambia modo entre opciones permitidas.
+- Confirma respaldo manual en GitHub.
+- Confirma que el usuario terminó un paso.
 
 Una acción requiere aprobación formal cuando:
 
@@ -1218,30 +2170,97 @@ Una acción debe bloquearse cuando:
 
 ---
 
-# TABLA RESUMEN DE ACCIONES
+# RELACIÓN CON COMPONENTS_SPEC v0.2
 
-| Acción | Componente principal | Riesgo típico | Resultado permitido |
-|---|---|---:|---|
-| Escribir comando | CommandCenter | Variable | Clasificar, responder o pedir aprobación |
-| Seleccionar documento | LeftSidebar | 0 | Mostrar documento |
-| Revisar estado | CurrentStatePanel | 0 | Mostrar estado |
-| Crear documento técnico | CommandCenter | 3 | Borrador pendiente |
-| Corregir documento | CommandCenter | 2-3 | Propuesta corregida |
-| Aprobar documento | DecisionInbox | 3 | Decisión y cambio |
-| Registrar decisión | CommandCenter | 2-3 | Bloque para DECISIONS_LOG |
-| Registrar cambio | CommandCenter | 2-3 | Bloque para CONTROL_DE_CAMBIOS |
-| Actualizar HOME | CommandCenter | 2 | Bloque para HOME |
-| Actualizar README | CommandCenter | 2 | Bloque para README |
-| Cambiar modo | ModeSelector | 2-4 | Cambio conceptual o bloqueo |
-| Activar sandbox manual | ModeSelector | 2-3 | Simulación documental |
-| Pausar avance | ApprovalGate | 0 | Detener avance |
-| Bloquear acción | ApprovalGate | 0 | Bloqueo visible |
-| Ver decisiones pendientes | DecisionInbox | 0 | Mostrar pendientes |
-| Resolver decisión | DecisionInbox | 2-3 | Registro correspondiente |
-| Ver mapa documental | DocumentStatusMap | 0 | Mostrar mapa |
-| Marcar respaldo manual | CurrentStatePanel | 1-2 | Actualizar estado conversacional |
-| Solicitar revisión crítica | CommandCenter | 2-3 | Detectar inconsistencias |
-| Pedir siguiente paso | CommandCenter | 0-1 | Recomendar, no ejecutar |
+Este documento usa exclusivamente los componentes canónicos aprobados:
+
+```text
+AppShell
+TopBar
+LeftSidebar
+CommandCenter
+ModeSelector
+RiskBadge
+ApprovalGate
+DecisionInbox
+DocumentStatusMap
+CurrentStatePanel
+```
+
+Regla:
+
+```text
+No usar MainCanvas como componente oficial.
+```
+
+---
+
+# RELACIÓN CON DATA_MODEL_SPEC v0.1
+
+Este documento no crea modelos nuevos.
+
+Usa modelos ya existentes para interpretar acciones del usuario.
+
+Relación principal:
+
+| Acción | Modelo principal |
+|---:|---|
+| 1 | CommandRequest |
+| 2 | RobertDocument |
+| 3 | SystemState |
+| 4 | RobertDocument |
+| 5 | ChangeRecord |
+| 6 | DecisionRecord |
+| 7 | DecisionRecord |
+| 8 | ChangeRecord |
+| 9 | RobertDocument |
+| 10 | GitHubBackupStatus |
+| 11 | ModeState |
+| 12 | ModeState |
+| 13 | ModeState |
+| 14 | RiskRecord |
+| 15 | PendingDecision |
+| 16 | PendingDecision |
+| 17 | RobertDocument |
+| 18 | GitHubBackupStatus |
+| 19 | RiskRecord |
+| 20 | SystemState |
+
+---
+
+# RELACIÓN CON APPROVAL_AND_AUTHORIZATION_GATE_SPEC
+
+USER_ACTIONS_SPEC define qué intenta hacer el usuario.
+
+APPROVAL_AND_AUTHORIZATION_GATE_SPEC define si la acción puede pasar, requiere confirmación, requiere aprobación o debe bloquearse.
+
+Regla:
+
+```text
+Toda acción importante debe pasar por ApprovalGate antes de cambiar estado documental.
+```
+
+---
+
+# RELACIÓN CON DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3
+
+Si una acción produce conflicto entre documentos, debe clasificarse según DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC.
+
+Ejemplos:
+
+```text
+Acción con versión incorrecta:
+TIPO 3 — Conflicto de versión
+
+Acción con fuente vigente incorrecta:
+TIPO 16 — Conflicto de fuente vigente
+
+Acción sin trazabilidad:
+TIPO 17 — Conflicto de trazabilidad insuficiente
+
+Acción que intenta ejecución real:
+TIPO 15 — Conflicto de ejecución no autorizada
+```
 
 ---
 
@@ -1250,12 +2269,18 @@ Una acción debe bloquearse cuando:
 Este documento podrá considerarse listo para aprobación si:
 
 - Define qué acciones puede intentar el usuario.
+- Mantiene la lista canónica de 20 acciones.
+- Mantiene la numeración correcta de las 20 acciones.
 - Relaciona acciones con componentes.
+- Usa AppShell como componente canónico.
+- No usa MainCanvas como componente oficial.
 - Clasifica acciones por riesgo.
 - Define resultados permitidos.
 - Define restricciones.
 - Define acciones prohibidas.
 - Define acciones futuras no disponibles.
+- Define relación con ApprovalGate.
+- Define relación con DATA_CONSISTENCY.
 - Respeta SCREEN_STATE_SPEC v0.2.
 - Respeta INTERACTION_FLOW_SPEC v0.2.
 - Respeta COMPONENTS_SPEC v0.2.
@@ -1304,11 +2329,11 @@ Nivel de autonomía:
 
 Este documento queda como:
 
-**Borrador técnico documental pendiente de revisión**
+**Propuesta corregida pendiente de revisión**
 
 Para aprobarlo formalmente, el usuario deberá escribir:
 
-**APRUEBO ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.1**
+**APRUEBO ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2**
 
 ---
 
@@ -1320,7 +2345,7 @@ Si se aprueba este documento, se deberá:
 2. Registrar cambio en ROBERT_CONTROL_DE_CAMBIOS.
 3. Actualizar ROBERT_HOME.
 4. Actualizar README si aplica.
-5. Mantenerlo como base para futuras especificaciones técnicas.
+5. Mantenerlo como base para APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3.
 6. No pasar automáticamente a programación.
 7. No avanzar automáticamente a Fase 11.
 
@@ -1328,19 +2353,31 @@ Si se aprueba este documento, se deberá:
 
 # PRÓXIMO PASO RECOMENDADO
 
-Después de revisar este documento, el siguiente documento posible sería:
+Después de revisar o aprobar este documento, el siguiente documento a corregir será:
 
-**ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC**
+**ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3**
 
-Ese documento definiría cómo Robert debe mostrar errores, bloqueos, advertencias, intentos prohibidos y acciones detenidas.
+Ese documento deberá usar:
 
-No debe crearse hasta revisar o aprobar USER_ACTIONS_SPEC.
+```text
+AppShell
+```
+
+en lugar de:
+
+```text
+MainCanvas
+```
+
+y deberá mapear las 20 acciones usando la numeración canónica de este documento.
 
 ---
 
 # CIERRE
 
-ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.1 define las acciones conceptuales que el usuario puede intentar desde cada pantalla o panel del MVP técnico básico.
+ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2 define las acciones conceptuales que el usuario puede intentar desde cada pantalla, panel o componente del MVP técnico básico.
+
+Esta versión corrige el conflicto de versión entre USER_ACTIONS_SPEC v0.1 y las referencias posteriores a v0.2.
 
 Este documento mantiene a Robert en modo documental, manual y supervisado.
 
