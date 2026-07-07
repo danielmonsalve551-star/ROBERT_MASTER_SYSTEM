@@ -1733,3 +1733,71 @@ Esta aprobación no autoriza:
 Robert continúa en modo documental, manual y supervisado.
 
 ---
+---
+
+## VERSIONING_AND_CHANGE_POLICY_SPEC v0.2 corregido
+
+Estado: Propuesta corregida — pendiente de revisión  
+Cambio relacionado: CAMBIO #041  
+Fase: Fase 10 — MVP técnico básico en preparación  
+Documento base principal: ROBERT_TECHNICAL_DOCUMENT_LIFECYCLE_SPEC v0.2  
+Documentos relacionados: ROBERT_COMMANDS v0.4, ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC v0.2, ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC v0.2, ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2, ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2, ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2, ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2, ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1, ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2, ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2, ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2
+
+### Estado actualizado
+
+ROBERT_TECHNICAL_VERSIONING_AND_CHANGE_POLICY_SPEC fue actualizado de v0.1 a:
+
+**v0.2 — Propuesta corregida pendiente de revisión**
+
+### Correcciones principales
+
+La versión v0.2 corrige:
+
+- Se agrega tabla explícita de correspondencia entre DOCUMENT_LIFECYCLE_SPEC v0.2 y los 8 niveles de versión
+- Se aclara que el estado documental y el número de versión son dimensiones distintas
+- Se aclara que el número de versión indica evolución/versionado
+- Se aclara que el estado documental indica posición dentro del ciclo de vida
+- Se aclara que una misma versión puede tener distintos estados documentales según el avance
+- Se agrega transición hacia Bloqueado en los 8 niveles de versión
+- Se agrega v0.0 → Bloqueado
+- Se agrega v0.1 → Bloqueado
+- Se agrega v0.2 → Bloqueado
+- Se agrega v0.3+ → Bloqueado
+- Se agrega v0.x aprobado → Bloqueado
+- Se agrega v1.0 → Bloqueado
+- Se agrega v1.x → Bloqueado
+- Se agrega v2.0 → Bloqueado
+- Se aclara que cualquier nivel de versión puede entrar en Bloqueado si existe riesgo, contradicción, falta de permiso, falta de información, fase incorrecta o intento de ejecución no autorizada
+- Se aclara que la salida desde Bloqueado se rige por DOCUMENT_LIFECYCLE_SPEC v0.2
+- Se actualizan los criterios de aceptación
+- Se cambia la aprobación futura esperada a v0.2
+
+### Restricción
+
+Esta actualización no autoriza:
+
+- Programación
+- Código real
+- Sistema real de control de versiones
+- Base de datos real
+- Control automático de versiones
+- Botones reales
+- Pantallas reales
+- Modelo VersionRecord
+- Modelo VersionPolicyRecord
+- Modelo CompatibilityRecord
+- Modelo BreakingChangeRecord
+- Modelo VersionTransitionRecord
+- Componente VersionTimeline
+- Componente CompatibilityPanel
+- Componente VersionStatusBadge
+- Componente ChangePolicyMap
+- Conexiones externas
+- Automatizaciones
+- Agentes autónomos
+- Ejecución real
+- Avanzar a Fase 11
+
+Robert continúa en modo documental, manual y supervisado.
+
+---
