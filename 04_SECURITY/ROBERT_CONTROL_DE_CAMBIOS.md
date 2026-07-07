@@ -8189,3 +8189,39 @@ Clasificación final:
 
 ```text
 TIPO 17 — Conflicto de trazabilidad insuficiente
+
+---
+
+## CAMBIO #046 — Aprobación e integración de ROBERT_HOME v0.8
+
+Fecha: 07/07/2026  
+Tipo de cambio: Aprobación e integración documental  
+Documento afectado: ROBERT_HOME.md  
+Versión afectada: v0.8  
+Estado: Aprobado e integrado  
+Decisión relacionada: DECISIÓN #026 — Aprobación de ROBERT_HOME v0.8  
+Cambio relacionado previo: CAMBIO #045 — Corrección acumulada de ROBERT_HOME v0.5–v0.7  
+Fase relacionada: Fase 10 — MVP técnico básico en preparación  
+
+---
+
+### Descripción del cambio
+
+Se registra la aprobación e integración de `ROBERT_HOME v0.8` como punto central de navegación, estado, núcleo visual y control del sistema Robert.
+
+---
+
+### Motivo del cambio
+
+ROBERT_HOME v0.8 fue aprobado formalmente mediante DECISIÓN #026 después de corregir la trazabilidad acumulada de las versiones v0.5, v0.6 y v0.7.
+
+---
+
+### Estado integrado
+
+```text
+ROBERT_HOME v0.8
+Estado: Aprobado e integrado
+Decisión relacionada: DECISIÓN #026
+Cambio relacionado previo: CAMBIO #045
+Cambio de integración: CAMBIO #046
