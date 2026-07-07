@@ -4110,3 +4110,94 @@ Robert continúa en:
 **Fase 10 — MVP técnico básico en preparación**
 
 ---
+---
+
+# ACTUALIZACIÓN — DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3 APROBADO
+
+Fecha: 07/07/2026  
+Estado: Aprobado e integrado  
+Decisión relacionada: DECISIÓN #025 — Aprobación de ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3  
+Cambio relacionado: CAMBIO #044 — Aprobación e integración de ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3  
+Documento base principal: ROBERT_TECHNICAL_VERSIONING_AND_CHANGE_POLICY_SPEC v0.2  
+Documentos relacionados: ROBERT_COMMANDS v0.4, ROBERT_TECHNICAL_DOCUMENT_LIFECYCLE_SPEC v0.2, ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC v0.2, ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC v0.2, ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2, ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2, ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2, ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2, ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1, ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2, ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2, ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2  
+
+---
+
+## Estado actualizado
+
+ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3 queda aprobado e integrado como documento técnico documental del MVP técnico básico.
+
+---
+
+## Función del documento
+
+Este documento define conceptualmente:
+
+- Consistencia documental.
+- Contradicción documental.
+- Inconsistencias menores y mayores.
+- Conflictos críticos.
+- Jerarquía conceptual general de fuentes.
+- Integración de documentos técnicos aprobados dentro de la posición 9.
+- Subjerarquía temática de documentos técnicos aprobados.
+- Prioridad entre fuentes.
+- Resolución conceptual de inconsistencias.
+- Clasificación final de conflictos.
+- Conflictos secundarios en orden de precedencia.
+- Precedencia entre los 17 tipos de conflicto.
+- Fuente única oficial de precedencia.
+- Cuándo pausar por contradicción.
+- Cuándo bloquear por contradicción.
+- Cuándo pedir confirmación por falta de trazabilidad.
+
+---
+
+## Correcciones validadas
+
+La versión v0.3 integra:
+
+- La TABLA DE PRECEDENCIA ENTRE LOS 17 TIPOS DE CONFLICTO como única fuente oficial del orden completo.
+- La regla de que las secciones individuales no reemplazan, no duplican y no contradicen la tabla maestra.
+- La eliminación de la contradicción interna entre tabla maestra y prosa individual.
+- La regla de tipo más específico disponible.
+- La regla de clasificación final y conflictos secundarios.
+- La regla de ordenar conflictos secundarios por precedencia.
+- El ejemplo de Gmail corregido con conflictos secundarios ordenados.
+- La integración de documentos técnicos aprobados dentro de la posición 9 de la jerarquía general.
+- La subjerarquía temática de documentos técnicos aprobados.
+- La relación con versionamiento, ciclo documental, sesión, auditoría, notificaciones, bloqueos, permisos, acciones, modelos, componentes, pantallas y flujos.
+
+---
+
+## Restricción
+
+Esta aprobación no autoriza:
+
+- Programación.
+- Código real.
+- Sistema real de consistencia documental.
+- Base de datos real.
+- Motor real de resolución de conflictos.
+- Validación automática.
+- Reconciliación automática.
+- Modelo ConflictRecord.
+- Modelo ConsistencyCheckRecord.
+- Modelo ConflictResolutionRecord.
+- Modelo SourcePriorityRecord.
+- Componente ConflictPanel.
+- Componente ConsistencyMap.
+- Componente ConflictResolver.
+- Botones reales.
+- Pantallas reales.
+- Prototipo funcional.
+- Conexiones externas.
+- Automatizaciones.
+- Agentes autónomos.
+- Ejecución real.
+- Avanzar a Fase 11.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+---
