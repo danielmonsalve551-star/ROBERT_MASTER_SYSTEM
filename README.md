@@ -1801,3 +1801,100 @@ Esta actualización no autoriza:
 Robert continúa en modo documental, manual y supervisado.
 
 ---
+
+---
+
+## VERSIONING_AND_CHANGE_POLICY_SPEC v0.2 aprobado
+
+Estado: Aprobado e integrado  
+Decisión relacionada: DECISIÓN #024  
+Cambio relacionado: CAMBIO #042  
+Fase: Fase 10 — MVP técnico básico en preparación  
+Documento base principal: ROBERT_TECHNICAL_DOCUMENT_LIFECYCLE_SPEC v0.2  
+Documentos relacionados: ROBERT_COMMANDS v0.4, ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC v0.2, ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC v0.2, ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2, ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2, ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2, ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2, ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1, ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2, ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2, ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2
+
+### Estado actualizado
+
+ROBERT_TECHNICAL_VERSIONING_AND_CHANGE_POLICY_SPEC v0.2 queda aprobado e integrado como documento técnico documental del MVP técnico básico de Robert.
+
+### Qué define
+
+Este documento define conceptualmente:
+
+- Reglas de versionamiento
+- Niveles de versión
+- Tipos de cambio documental
+- Compatibilidad entre versiones
+- Versiones vigentes
+- Versiones históricas
+- Reemplazos documentales
+- Parches documentales
+- Cambios mayores
+- Cambios menores
+- Relación entre versionamiento y ciclo documental
+- Relación entre número de versión y estado documental
+- Transiciones hacia Bloqueado
+- Reglas de salida desde Bloqueado según DOCUMENT_LIFECYCLE_SPEC v0.2
+
+### Correcciones integradas
+
+La versión v0.2 integra:
+
+- Tabla explícita de correspondencia entre DOCUMENT_LIFECYCLE_SPEC v0.2 y los 8 niveles de versión
+- Separación entre estado documental y número de versión
+- Regla de que el número de versión indica evolución/versionado
+- Regla de que el estado documental indica posición dentro del ciclo de vida
+- Regla de que una misma versión puede tener distintos estados documentales según avance
+- Transición hacia Bloqueado en los 8 niveles de versión
+- v0.0 → Bloqueado
+- v0.1 → Bloqueado
+- v0.2 → Bloqueado
+- v0.3+ → Bloqueado
+- v0.x aprobado → Bloqueado
+- v1.0 → Bloqueado
+- v1.x → Bloqueado
+- v2.0 → Bloqueado
+- Regla de que cualquier nivel de versión puede entrar en Bloqueado si existe riesgo, contradicción, falta de permiso, falta de información, fase incorrecta o intento de ejecución no autorizada
+- Regla de que la salida desde Bloqueado se rige por DOCUMENT_LIFECYCLE_SPEC v0.2
+- Alineación con DOCUMENT_LIFECYCLE_SPEC v0.2
+- Alineación con SESSION_AND_CONTEXT_SPEC v0.2
+- Alineación con NOTIFICATION_AND_ALERTS_SPEC v0.2
+- Alineación con AUDIT_TRAIL_SPEC v0.2
+- Alineación con PERMISSIONS_AND_SCOPES_SPEC v0.2
+- Alineación con ERROR_AND_BLOCKING_SPEC v0.2
+- Alineación con USER_ACTIONS_SPEC v0.2
+- Alineación con DATA_MODEL_SPEC v0.1
+- Alineación con COMPONENTS_SPEC v0.2
+- Alineación con SCREEN_STATE_SPEC v0.2
+- Alineación con INTERACTION_FLOW_SPEC v0.2
+
+### Restricción
+
+Esta aprobación no autoriza:
+
+- Programación
+- Código real
+- Sistema real de control de versiones
+- Base de datos real
+- Control automático de versiones
+- Botones reales
+- Pantallas reales
+- Prototipo funcional
+- Modelo VersionRecord
+- Modelo VersionPolicyRecord
+- Modelo CompatibilityRecord
+- Modelo BreakingChangeRecord
+- Modelo VersionTransitionRecord
+- Componente VersionTimeline
+- Componente CompatibilityPanel
+- Componente VersionStatusBadge
+- Componente ChangePolicyMap
+- Conexiones externas
+- Automatizaciones
+- Agentes autónomos
+- Ejecución real
+- Avanzar a Fase 11
+
+Robert continúa en modo documental, manual y supervisado.
+
+---
