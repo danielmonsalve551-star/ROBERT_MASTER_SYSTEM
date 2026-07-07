@@ -3212,3 +3212,182 @@ Sin conexiones externas.
 Sin automatizaciones reales.
 
 Sin agentes autónomos activos.
+
+---
+
+# DECISIÓN #024 — Aprobación de ROBERT_TECHNICAL_VERSIONING_AND_CHANGE_POLICY_SPEC v0.2
+
+Fecha: 06/07/2026  
+Estado: Aprobada  
+Documento aprobado: ROBERT_TECHNICAL_VERSIONING_AND_CHANGE_POLICY_SPEC v0.2  
+Ubicación: 10_MVP  
+Cambio relacionado previo: CAMBIO #041 — Corrección de ROBERT_TECHNICAL_VERSIONING_AND_CHANGE_POLICY_SPEC v0.2  
+Documento base principal: ROBERT_TECHNICAL_DOCUMENT_LIFECYCLE_SPEC v0.2  
+Documentos relacionados: ROBERT_COMMANDS v0.4, ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC v0.2, ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC v0.2, ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2, ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2, ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2, ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2, ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1, ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2, ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2, ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2  
+Fase relacionada: Fase 10 — MVP técnico básico en preparación  
+
+---
+
+## Decisión tomada
+
+El usuario aprueba formalmente el documento:
+
+**ROBERT_TECHNICAL_VERSIONING_AND_CHANGE_POLICY_SPEC v0.2**
+
+como especificación técnica documental para definir reglas de versiones, numeración, cambios, compatibilidad, reemplazos, parches, versiones vigentes y versiones históricas dentro del MVP técnico básico de Robert.
+
+---
+
+## Motivo de la aprobación
+
+El documento queda aprobado porque corrige los huecos detectados en v0.1 y define de forma clara:
+
+- Reglas de versionamiento.
+- Niveles de versión.
+- Tipos de cambio documental.
+- Correspondencia entre ciclo documental y niveles de versión.
+- Diferencia entre estado documental y número de versión.
+- Transiciones hacia Bloqueado.
+- Reglas para versiones vigentes.
+- Reglas para versiones históricas.
+- Reglas para cambios mayores.
+- Reglas para cambios menores.
+- Reglas para parches documentales.
+- Compatibilidad entre versiones.
+
+---
+
+## Correcciones validadas
+
+La versión v0.2 valida:
+
+- Se agrega tabla explícita de correspondencia entre DOCUMENT_LIFECYCLE_SPEC v0.2 y los 8 niveles de versión.
+- Se aclara que el estado documental y el número de versión son dimensiones distintas.
+- Se aclara que el número de versión indica evolución/versionado.
+- Se aclara que el estado documental indica posición dentro del ciclo de vida.
+- Se aclara que una misma versión puede tener distintos estados documentales según el avance.
+- Se agrega transición hacia Bloqueado en los 8 niveles de versión.
+- Se agrega v0.0 → Bloqueado.
+- Se agrega v0.1 → Bloqueado.
+- Se agrega v0.2 → Bloqueado.
+- Se agrega v0.3+ → Bloqueado.
+- Se agrega v0.x aprobado → Bloqueado.
+- Se agrega v1.0 → Bloqueado.
+- Se agrega v1.x → Bloqueado.
+- Se agrega v2.0 → Bloqueado.
+- Se aclara que cualquier nivel de versión puede entrar en Bloqueado si existe riesgo, contradicción, falta de permiso, falta de información, fase incorrecta o intento de ejecución no autorizada.
+- Se aclara que la salida desde Bloqueado se rige por DOCUMENT_LIFECYCLE_SPEC v0.2.
+- Se actualizan los criterios de aceptación.
+- Se mantiene Nivel 0 únicamente como Informativo.
+- Se mantienen las acciones de control fuera de la escala de riesgo.
+- Se mantiene a Robert en Fase 10.
+
+---
+
+## Alcance autorizado
+
+Esta decisión autoriza únicamente:
+
+- Marcar VERSIONING_AND_CHANGE_POLICY_SPEC v0.2 como documento aprobado.
+- Usarlo como base documental para futuras especificaciones técnicas.
+- Usarlo para definir reglas conceptuales de versionamiento.
+- Usarlo para definir niveles de versión.
+- Usarlo para definir tipos de cambio documental.
+- Usarlo para definir compatibilidad entre versiones.
+- Usarlo para definir versiones vigentes.
+- Usarlo para definir versiones históricas.
+- Usarlo para definir reemplazos documentales.
+- Usarlo para definir parches documentales.
+- Usarlo para conectar versionamiento con ciclo documental, sesión, auditoría, permisos, acciones, eventos, notificaciones y componentes conceptuales.
+- Mantenerlo dentro de Fase 10.
+
+---
+
+## Alcance no autorizado
+
+Esta decisión no autoriza:
+
+- Programar la app.
+- Crear código real.
+- Crear sistema real de control de versiones.
+- Crear base de datos real.
+- Crear control automático de versiones.
+- Crear modelo VersionRecord.
+- Crear modelo VersionPolicyRecord.
+- Crear modelo CompatibilityRecord.
+- Crear modelo BreakingChangeRecord.
+- Crear modelo VersionTransitionRecord.
+- Crear componente VersionTimeline.
+- Crear componente CompatibilityPanel.
+- Crear componente VersionStatusBadge.
+- Crear componente ChangePolicyMap.
+- Crear botones reales.
+- Crear pantallas reales.
+- Crear prototipo funcional.
+- Crear endpoints.
+- Conectar Supabase.
+- Conectar Firebase.
+- Conectar GitHub automáticamente.
+- Conectar Obsidian automáticamente.
+- Sincronizar documentos automáticamente.
+- Automatizar commits.
+- Automatizar aprobaciones.
+- Automatizar HOME.
+- Automatizar README.
+- Activar agentes autónomos.
+- Ejecutar acciones reales.
+- Avanzar automáticamente a Fase 11.
+
+---
+
+## Riesgo
+
+Tipo de cambio:
+
+**Aprobación técnica documental / política conceptual de versiones y cambios**
+
+Nivel de riesgo inicial:
+
+**Nivel 3 — Alto**
+
+Motivo:
+
+El documento define cómo Robert numera versiones, registra cambios, corrige documentos, reemplaza versiones, mantiene compatibilidad y evita contradicciones entre documentos.
+
+Nivel de riesgo final:
+
+**Nivel 2 — Medio**
+
+Motivo:
+
+El documento es conceptual y documental. No crea sistema real de control de versiones, no crea base de datos real, no crea control automático de versiones, no crea modelos nuevos oficiales, no crea componentes nuevos oficiales, no programa, no conecta herramientas externas y no ejecuta acciones.
+
+Nivel de autonomía:
+
+**Nivel 0 — Sin autonomía ejecutiva**
+
+---
+
+## Estado final
+
+ROBERT_TECHNICAL_VERSIONING_AND_CHANGE_POLICY_SPEC v0.2 queda aprobado como documento técnico documental del MVP técnico básico.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Sin programación autorizada.
+
+Sin código real.
+
+Sin sistema real de control de versiones.
+
+Sin base de datos real.
+
+Sin control automático de versiones.
+
+Sin conexiones externas.
+
+Sin automatizaciones reales.
+
+Sin agentes autónomos activos.
