@@ -3569,6 +3569,42 @@ Sin motor real de resolución de conflictos.
 
 Sin conexiones externas.
 
+---
+
+## DECISIÓN #026 — Aprobación de ROBERT_HOME v0.8
+
+Fecha: 07/07/2026  
+Tipo de decisión: Aprobación documental  
+Documento aprobado: ROBERT_HOME.md  
+Versión aprobada: v0.8  
+Estado: Aprobada  
+Cambio relacionado previo: CAMBIO #045 — Corrección acumulada de ROBERT_HOME v0.5–v0.7  
+Fase relacionada: Fase 10 — MVP técnico básico en preparación  
+
+---
+
+### Decisión
+
+Se aprueba formalmente `ROBERT_HOME v0.8` como punto central de navegación, estado, núcleo visual y control del sistema Robert.
+
+---
+
+### Motivo de aprobación
+
+ROBERT_HOME v0.8 corrige y consolida:
+
+```text
+1. Estado real del proyecto en Fase 10.
+2. Corrección de contradicciones internas previas del HOME.
+3. Reconocimiento de CAMBIO #045 como trazabilidad formal.
+4. Inclusión de ROBERT_CONTROL_DE_CAMBIOS como documento maestro operativo.
+5. Lista actualizada de documentos técnicos aprobados.
+6. Reconocimiento del wireframe v0.3 como fuente conceptual vigente.
+7. Tarea pendiente de normalización física del wireframe.
+8. Trazabilidad pendiente de APPROVAL_GATE v0.1/v0.2.
+9. Inclusión del tag #robert/nucleo.
+10. Restricciones activas de Fase 10.
+
 Sin automatizaciones reales.
 
 Sin agentes autónomos activos.
