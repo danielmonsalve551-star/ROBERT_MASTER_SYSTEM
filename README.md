@@ -1638,3 +1638,98 @@ Esta actualización no autoriza:
 Robert continúa en modo documental, manual y supervisado.
 
 ---
+---
+
+## DOCUMENT_LIFECYCLE_SPEC v0.2 aprobado
+
+Estado: Aprobado e integrado  
+Decisión relacionada: DECISIÓN #023  
+Cambio relacionado: CAMBIO #040  
+Fase: Fase 10 — MVP técnico básico en preparación  
+Documento base principal: ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC v0.2  
+Documentos relacionados: ROBERT_COMMANDS v0.4, ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC v0.2, ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2, ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2, ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2, ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2, ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1, ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2, ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2, ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2
+
+### Estado actualizado
+
+ROBERT_TECHNICAL_DOCUMENT_LIFECYCLE_SPEC v0.2 queda aprobado e integrado como documento técnico documental del MVP técnico básico de Robert.
+
+### Qué define
+
+Este documento define conceptualmente:
+
+- Ciclo de vida documental
+- Estados documentales
+- Transiciones permitidas
+- Transiciones prohibidas
+- Documentos en borrador
+- Documentos en propuesta
+- Documentos en propuesta corregida
+- Documentos en revisión
+- Documentos aprobados
+- Documentos integrados
+- Documentos actualizados
+- Documentos depreciados
+- Documentos reemplazados
+- Documentos bloqueados
+- Documentos archivados
+- Salidas desde Bloqueado
+- Relación entre ciclo documental, sesión, auditoría, permisos, acciones, eventos, notificaciones y componentes conceptuales
+
+### Correcciones integradas
+
+La versión v0.2 integra:
+
+- Estructura uniforme de los 12 estados documentales
+- Riesgo típico en los 12 estados documentales
+- Transición siguiente permitida en los 12 estados documentales
+- Salidas desde Bloqueado
+- Bloqueado → En revisión
+- Bloqueado → Propuesta corregida
+- Bloqueado → Depreciado
+- Bloqueado → Reemplazado
+- Bloqueado → Archivado
+- Bloqueado → Estado anterior, solo si existe trazabilidad clara
+- Aclaración de que “Estado anterior” significa el estado documental inmediatamente previo a entrar en Bloqueado
+- Regla de que si no hay trazabilidad clara, Robert debe pasar a Bloqueado → En revisión o pedir confirmación explícita
+- Transición Depreciado → Archivado
+- Aclaración de que Bloqueado no es estado final obligatorio
+- Alineación con SESSION_AND_CONTEXT_SPEC v0.2
+- Alineación con NOTIFICATION_AND_ALERTS_SPEC v0.2
+- Alineación con AUDIT_TRAIL_SPEC v0.2
+- Alineación con PERMISSIONS_AND_SCOPES_SPEC v0.2
+- Alineación con ERROR_AND_BLOCKING_SPEC v0.2
+- Alineación con USER_ACTIONS_SPEC v0.2
+- Alineación con DATA_MODEL_SPEC v0.1
+- Alineación con COMPONENTS_SPEC v0.2
+- Alineación con SCREEN_STATE_SPEC v0.2
+- Alineación con INTERACTION_FLOW_SPEC v0.2
+
+### Restricción
+
+Esta aprobación no autoriza:
+
+- Programación
+- Código real
+- Sistema real de gestión documental
+- Base de datos real
+- Control automático de versiones
+- Botones reales
+- Pantallas reales
+- Prototipo funcional
+- Modelo DocumentLifecycleRecord
+- Modelo VersionRecord
+- Modelo DocumentTransitionRecord
+- Modelo DeprecationRecord
+- Modelo ReplacementRecord
+- Componente LifecyclePanel
+- Componente VersionTimeline
+- Componente DocumentLifecycleMap
+- Conexiones externas
+- Automatizaciones
+- Agentes autónomos
+- Ejecución real
+- Avanzar a Fase 11
+
+Robert continúa en modo documental, manual y supervisado.
+
+---
