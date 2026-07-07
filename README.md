@@ -1960,3 +1960,52 @@ Robert continúa en modo documental, manual y supervisado.
 
 ---
 ---
+
+---
+
+## ROBERT_HOME v0.8 aprobado e integrado
+
+Estado: Aprobado e integrado  
+Decisión relacionada: DECISIÓN #026  
+Cambio previo relacionado: CAMBIO #045 — Corrección acumulada de ROBERT_HOME v0.5–v0.7  
+Cambio de integración: CAMBIO #046 — Aprobación e integración de ROBERT_HOME v0.8  
+Fase: Fase 10 — MVP técnico básico en preparación  
+
+### Estado actualizado
+
+ROBERT_HOME v0.8 queda aprobado e integrado como punto central de navegación, estado, núcleo visual y control del sistema Robert.
+
+### Qué corrige
+
+ROBERT_HOME v0.8 consolida:
+
+- Estado real del proyecto en Fase 10.
+- Corrección de contradicciones internas previas del HOME.
+- Trazabilidad formal mediante CAMBIO #045.
+- Aprobación formal mediante DECISIÓN #026.
+- Integración formal mediante CAMBIO #046.
+- Inclusión de ROBERT_CONTROL_DE_CAMBIOS como documento maestro operativo.
+- Lista actualizada de documentos técnicos aprobados.
+- Wireframe v0.3 reconocido como fuente conceptual vigente.
+- Normalización física del wireframe marcada como pendiente.
+- APPROVAL_GATE v0.2 marcado como pendiente de revisión y trazabilidad.
+- Tag #robert/nucleo integrado.
+- Restricciones activas de Fase 10.
+
+### Restricción
+
+Esta aprobación no autoriza:
+
+- Programación.
+- Código real.
+- Base de datos real.
+- Gate real.
+- Sistema real de autorización.
+- Conexiones externas.
+- Automatizaciones reales.
+- Agentes autónomos.
+- Avanzar a Fase 11.
+
+Robert continúa en modo documental, manual y supervisado.
+
+---
