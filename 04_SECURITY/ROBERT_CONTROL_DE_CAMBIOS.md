@@ -8261,3 +8261,32 @@ Esto generaba un conflicto de versión, fuente vigente y trazabilidad.
 TIPO 3 — Conflicto de versión
 TIPO 16 — Conflicto de fuente vigente
 TIPO 17 — Conflicto de trazabilidad insuficiente
+
+---
+
+## CAMBIO #048 — Corrección de ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3
+
+Fecha: 07/07/2026  
+Tipo de cambio: Corrección técnica documental / ApprovalGate conceptual  
+Documento afectado: ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC.md  
+Versión afectada: v0.3  
+Estado: Propuesta corregida — pendiente de revisión  
+Fase relacionada: Fase 10 — MVP técnico básico en preparación  
+
+---
+
+### Descripción del cambio
+
+Se registra la creación de `ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3` como propuesta corregida pendiente de revisión.
+
+Esta versión corrige los errores detectados en `APPROVAL_GATE v0.2`.
+
+---
+
+### Motivo del cambio
+
+Se detectaron dos errores principales en `APPROVAL_GATE v0.2`:
+
+```text
+1. Uso de MainCanvas como componente participante.
+2. Numeración incorrecta en la tabla de correspondencia con USER_ACTIONS_SPEC v0.2.
