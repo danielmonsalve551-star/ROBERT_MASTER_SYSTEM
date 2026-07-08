@@ -3737,3 +3737,140 @@ No autoriza programación, código real, conexiones externas, automatizaciones, 
 Sin automatizaciones reales.
 
 Sin agentes autónomos activos.
+
+## DECISIÓN #028 — Aprobación de ROBERT_HOME v0.11
+
+Fecha: 08/07/2026
+Estado: Aprobada
+Nivel de impacto: Nivel 3 — Alto
+Documento relacionado: ROBERT_HOME
+Versión relacionada: v0.11
+Fase relacionada: Fase 10 — MVP técnico básico en preparación
+Módulos relacionados: Home, Documents, Decisions Log, Control de Cambios, Visual Reference, MVP técnico
+
+---
+
+### Decisión
+
+Se aprueba formalmente `ROBERT_HOME v0.11` como versión corregida del punto central de navegación, estado, núcleo visual y control del sistema Robert.
+
+---
+
+### Motivo
+
+Se aprueba porque `ROBERT_HOME v0.11` corrige los conflictos detectados en `ROBERT_HOME v0.10`.
+
+La versión v0.11 corrige:
+
+1. Reconocimiento de `CAMBIO #047`.
+2. Eliminación del aparente hueco de trazabilidad entre `CAMBIO #046` y `CAMBIO #048`.
+3. Corrección de `ROBERT_VISUAL` a `ROBERT_VISUAL_REFERENCE`.
+4. Corrección de `[[ROBERT_VISUAL]]` a `[[ROBERT_VISUAL_REFERENCE]]`.
+5. Mantenimiento de `APPROVAL_GATE v0.3` como aprobado e integrado.
+6. Mantenimiento de `DECISIÓN #027` y `CAMBIO #049`.
+7. Mantenimiento de `USER_ACTIONS_SPEC v0.2` como fuente canónica aprobada, integrada y auditada voluntariamente.
+8. Confirmación de que `ApprovalGate` sigue siendo conceptual y documental, no gate real.
+9. Confirmación de que Robert sigue en Fase 10 sin programación ni Fase 11.
+
+---
+
+### Impacto en Robert
+
+`ROBERT_HOME v0.11` queda como nueva versión aprobada e integrada del documento central de navegación y estado del sistema Robert.
+
+El HOME vuelve a reflejar correctamente:
+
+* Estado real del proyecto.
+* Fase actual.
+* Documentos aprobados.
+* Documentos pendientes.
+* Trazabilidad reciente.
+* Documento visual correcto.
+* Restricciones activas.
+* Control total del usuario.
+
+---
+
+### Qué cambia
+
+* `ROBERT_HOME v0.11` pasa de “Propuesta corregida — pendiente de revisión” a “Aprobado e integrado”.
+* Se reconoce formalmente `CAMBIO #047` dentro de la trazabilidad reciente.
+* Se corrige la nomenclatura visual a `ROBERT_VISUAL_REFERENCE`.
+* Se mantiene `APPROVAL_GATE v0.3` como aprobado e integrado.
+* Se mantiene `APPROVAL_GATE` como especificación conceptual.
+* Se actualiza el estado documental central de Robert.
+
+---
+
+### Qué no cambia
+
+Esta decisión no autoriza:
+
+* Programación.
+* Código real.
+* Pantallas reales.
+* Base de datos real.
+* Gate real.
+* Sistema real de autorización.
+* Conexiones externas.
+* Automatizaciones reales.
+* Agentes autónomos.
+* Ejecución real.
+* Avanzar a Fase 11.
+
+---
+
+### Riesgos
+
+Riesgos controlados:
+
+* Confundir aprobación de HOME con autorización técnica.
+* Confundir `ApprovalGate` conceptual con gate real.
+* Reabrir documentos ya aprobados sin necesidad.
+* Perder trazabilidad entre cambios recientes.
+* Usar nombres de documentos no vigentes.
+
+Medida de control:
+
+`ROBERT_HOME v0.11` queda aprobado únicamente como documento maestro de navegación, estado y control documental.
+
+---
+
+### Aprobación del usuario
+
+Sí.
+
+El usuario aprobó explícitamente escribiendo:
+
+```text
+apruebo
+```
+
+Contexto de aprobación:
+
+La aprobación corresponde a `ROBERT_HOME v0.11`, después de revisar que corrige:
+
+1. `CAMBIO #047`.
+2. `ROBERT_VISUAL_REFERENCE`.
+
+---
+
+### Siguiente paso
+
+Registrar el cambio de aprobación e integración en `ROBERT_CONTROL_DE_CAMBIOS`.
+
+Después, actualizar `README` para reflejar que:
+
+`ROBERT_HOME v0.11` queda aprobado e integrado mediante:
+
+* DECISIÓN #028
+* CAMBIO #050
+
+---
+
+### Notas
+
+Esta decisión aprueba únicamente `ROBERT_HOME v0.11` como documento maestro actualizado.
+
+No autoriza programación, código real, conexiones externas, automatizaciones, agentes autónomos ni Fase 11.
+
