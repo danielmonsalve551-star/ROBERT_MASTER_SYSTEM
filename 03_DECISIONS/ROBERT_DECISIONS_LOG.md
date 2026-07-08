@@ -3605,6 +3605,135 @@ ROBERT_HOME v0.8 corrige y consolida:
 9. Inclusión del tag #robert/nucleo.
 10. Restricciones activas de Fase 10.
 
+## DECISIÓN #027 — Aprobación de ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3
+
+Fecha: 07/07/2026
+Estado: Aprobada
+Nivel de impacto: Nivel 3 — Alto
+Documento relacionado: ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC
+Versión relacionada: v0.3
+Fase relacionada: Fase 10 — MVP técnico básico en preparación
+Módulos relacionados: Security, Command Center, Documents, Decisions Log, MVP técnico, ApprovalGate
+
+---
+
+### Decisión
+
+Se aprueba formalmente `ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3` como especificación técnica documental conceptual del ApprovalGate de Robert.
+
+El documento queda aprobado como referencia conceptual para definir cómo Robert debe decidir si una acción del usuario puede continuar, requiere confirmación, requiere aprobación formal, debe pausarse o debe bloquearse.
+
+---
+
+### Motivo
+
+Se aprueba porque la versión v0.3 corrigió los errores detectados en versiones anteriores y quedó alineada con la fuente canónica vigente:
+
+`ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2`
+
+La versión aprobada corrige:
+
+1. Reemplazo de `MainCanvas` por `AppShell`.
+2. Corrección de la lista de componentes participantes.
+3. Corrección de la tabla de mapeo entre Gates y componentes.
+4. Corrección de la tabla de dónde se muestra cada elemento.
+5. Corrección de la tabla de correspondencia con `USER_ACTIONS_SPEC v0.2`.
+6. Uso de las 20 acciones canónicas de `USER_ACTIONS_SPEC v0.2` auditado.
+7. Mantenimiento de `ApprovalGate` como especificación conceptual, no como gate real.
+
+---
+
+### Impacto en Robert
+
+Robert incorpora `ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3` como documento técnico aprobado dentro de Fase 10.
+
+El sistema queda mejor preparado documentalmente para definir controles conceptuales de aprobación, autorización, bloqueo y pausa dentro del MVP técnico básico.
+
+---
+
+### Qué cambia
+
+* `APPROVAL_GATE v0.3` pasa de “Propuesta corregida — pendiente de revisión” a “Aprobado e integrado”.
+* `ApprovalGate` queda definido como especificación conceptual del sistema.
+* Se formaliza la relación entre gates, acciones del usuario, componentes, eventos, auditoría y notificaciones.
+* Se reconoce `USER_ACTIONS_SPEC v0.2` como fuente canónica utilizada para esta aprobación.
+* Se confirma que `AppShell` es el componente canónico correcto.
+* Se confirma que `MainCanvas` no debe usarse como componente oficial.
+* Se confirma el uso de las 20 acciones canónicas.
+* Se confirma que ACCIÓN 12 — Activar sandbox manual queda mapeada como `Gate 2 / Gate 7`.
+
+---
+
+### Qué no cambia
+
+Esta decisión no autoriza:
+
+* Programación.
+* Código real.
+* Pantallas reales.
+* Botones reales.
+* Base de datos real.
+* Gate real.
+* Sistema real de autorización.
+* Sistema real de permisos.
+* Conexiones externas.
+* Automatizaciones reales.
+* Agentes autónomos.
+* Ejecución real.
+* Avanzar a Fase 11.
+
+---
+
+### Riesgos
+
+Riesgos controlados:
+
+* Confundir ApprovalGate conceptual con gate real.
+* Interpretar aprobación documental como autorización para programar.
+* Interpretar gates conceptuales como sistema operativo activo.
+* Avanzar a ejecución técnica antes de tiempo.
+* Saltar a Fase 11 sin autorización.
+
+Medida de control:
+
+`APPROVAL_GATE v0.3` queda aprobado únicamente como documento técnico conceptual, manteniendo a Robert en modo documental, manual y supervisado.
+
+---
+
+### Aprobación del usuario
+
+Sí.
+
+El usuario aprobó explícitamente escribiendo:
+
+```text
+APRUEBO ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3
+```
+
+---
+
+### Siguiente paso
+
+Registrar el cambio de aprobación e integración en `ROBERT_CONTROL_DE_CAMBIOS`.
+
+Después, actualizar:
+
+1. `ROBERT_HOME`
+2. `README`
+
+Ambos deben reflejar que:
+
+`ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3` queda aprobado e integrado.
+
+---
+
+### Notas
+
+Esta decisión aprueba únicamente la especificación técnica documental conceptual.
+
+No autoriza programación, código real, conexiones externas, automatizaciones, agentes autónomos ni Fase 11.
+
+
 Sin automatizaciones reales.
 
 Sin agentes autónomos activos.
