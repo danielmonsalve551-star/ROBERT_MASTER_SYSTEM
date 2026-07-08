@@ -1,13 +1,13 @@
 # ROBERT_HOME
 
-Versión: 0.10
+Versión: 0.11
 Estado: Propuesta corregida — pendiente de revisión
 Fecha: 07/07/2026
 Ubicación: 00_HOME
 Función: Punto central de navegación, estado, núcleo visual y control del sistema Robert
 Fase actual: Fase 10 — MVP técnico básico en preparación
-Cambio relacionado: CAMBIO #049 — Aprobación e integración de ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3
-Decisión relacionada: DECISIÓN #027 — Aprobación de ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3
+Cambio relacionado: Pendiente de registro formal si esta corrección se aprueba
+Decisión relacionada: Sin nueva decisión formal para esta versión
 Estado de aprobación de esta versión: Pendiente de revisión del usuario
 
 Tags: #robert/home #robert/nucleo #robert/estado-actual #robert/navegacion #robert/fase-10
@@ -39,82 +39,123 @@ Este documento funciona como el punto central de navegación del proyecto.
 
 ---
 
-# CORRECCIÓN PRINCIPAL DE v0.10
+# CORRECCIÓN PRINCIPAL DE v0.11
 
-ROBERT_HOME v0.10 corrige el estado documental posterior a la aprobación formal de:
+ROBERT_HOME v0.11 corrige dos conflictos detectados en `ROBERT_HOME v0.10`.
+
+Conflictos detectados:
 
 ```text
-ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3
+1. CAMBIO #047 existía, pero HOME v0.10 no lo mostraba en la trazabilidad reciente.
+2. HOME v0.10 seguía usando ROBERT_VISUAL y [[ROBERT_VISUAL]] en lugar de ROBERT_VISUAL_REFERENCE y [[ROBERT_VISUAL_REFERENCE]].
 ```
 
-La aprobación quedó registrada mediante:
+Clasificación de los conflictos:
 
 ```text
-DECISIÓN #027 — Aprobación de ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3
-CAMBIO #049 — Aprobación e integración de ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3
+TIPO 3 — Conflicto de versión / numeración
+TIPO 5 — Conflicto de cambio
+TIPO 16 — Conflicto de fuente vigente
+TIPO 17 — Conflicto de trazabilidad insuficiente
 ```
 
-Problema que corrige esta versión:
+Correcciones aplicadas en v0.11:
 
 ```text
-ROBERT_HOME v0.9 mostraba APPROVAL_GATE v0.3 como propuesta corregida pendiente de revisión.
-Ese estado ya cambió porque el usuario aprobó formalmente APPROVAL_GATE v0.3.
-```
-
-Nuevo estado real:
-
-```text
-ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3
-Estado: Aprobado e integrado
-Decisión relacionada: DECISIÓN #027
-Cambio relacionado: CAMBIO #049
+1. Se reconoce CAMBIO #047 en la trazabilidad reciente.
+2. Se aclara que CAMBIO #047 pertenece a ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2.
+3. Se elimina el aparente hueco entre CAMBIO #046 y CAMBIO #048.
+4. Se corrige ROBERT_VISUAL por ROBERT_VISUAL_REFERENCE.
+5. Se corrige [[ROBERT_VISUAL]] por [[ROBERT_VISUAL_REFERENCE]].
+6. Se mantiene APPROVAL_GATE v0.3 como aprobado e integrado.
+7. Se mantiene DECISIÓN #027 y CAMBIO #049 como aprobación formal de APPROVAL_GATE v0.3.
+8. Se mantiene USER_ACTIONS_SPEC v0.2 como fuente canónica aprobada, integrada y auditada voluntariamente.
+9. Se mantiene Fase 10 sin programación, sin gate real, sin conexiones, sin automatizaciones, sin agentes y sin Fase 11.
 ```
 
 Resultado:
 
 ```text
-ROBERT_HOME v0.10 refleja que APPROVAL_GATE v0.3 ya quedó aprobado e integrado como especificación técnica documental conceptual.
+ROBERT_HOME v0.11 corrige la trazabilidad reciente y la nomenclatura del documento visual.
 ```
 
 ---
 
 # TRAZABILIDAD DE ESTA VERSIÓN
 
-Esta versión se apoya en:
+Esta versión se apoya en la revisión manual del usuario sobre `ROBERT_HOME v0.10`.
+
+Trazabilidad corregida:
 
 ```text
-DECISIÓN #027 — Aprobación de ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3
+CAMBIO #047 — Corrección de ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2
+CAMBIO #048 — Corrección de ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3
 CAMBIO #049 — Aprobación e integración de ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3
 ```
 
-Estado de la decisión:
+Estado de esta versión:
 
 ```text
-Aprobada
-```
-
-Estado del cambio:
-
-```text
-Aprobado e integrado
-```
-
-Función de esta actualización:
-
-```text
-Actualizar el punto central de navegación de Robert para reflejar que APPROVAL_GATE v0.3 ya no está pendiente de revisión.
+ROBERT_HOME v0.11
+Estado: Propuesta corregida — pendiente de revisión
 ```
 
 Restricción:
 
 ```text
-Esta actualización de HOME no autoriza programación.
-Esta actualización de HOME no autoriza código real.
-Esta actualización de HOME no autoriza gate real.
-Esta actualización de HOME no autoriza conexiones externas.
-Esta actualización de HOME no autoriza automatizaciones.
-Esta actualización de HOME no autoriza agentes autónomos.
-Esta actualización de HOME no autoriza avanzar a Fase 11.
+ROBERT_HOME v0.11 no está aprobado todavía.
+ROBERT_HOME v0.11 no está integrado todavía.
+ROBERT_HOME v0.11 no crea una nueva decisión formal.
+ROBERT_HOME v0.11 no registra por sí mismo un nuevo cambio formal.
+```
+
+---
+
+# NOTA DE CONSISTENCIA SOBRE CAMBIO #047
+
+CAMBIO #047 existe y corresponde a:
+
+```text
+CAMBIO #047 — Corrección de ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2
+```
+
+Función de CAMBIO #047:
+
+```text
+Registrar la corrección documental de USER_ACTIONS_SPEC v0.2 frente al conflicto entre referencias posteriores a v0.2 y la fuente física disponible.
+```
+
+Clasificación relacionada:
+
+```text
+TIPO 3 — Conflicto de versión
+TIPO 16 — Conflicto de fuente vigente
+TIPO 17 — Conflicto de trazabilidad insuficiente
+```
+
+Regla de interpretación:
+
+```text
+CAMBIO #047 debe mostrarse como antecedente de trazabilidad.
+CAMBIO #047 no debe aparecer como hueco de numeración.
+CAMBIO #047 no reemplaza por sí solo a DECISIÓN #017 ni a CAMBIO #028.
+```
+
+Estado operativo vigente de USER_ACTIONS_SPEC v0.2:
+
+```text
+ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2
+Estado: Aprobado e integrado
+Decisión relacionada: DECISIÓN #017
+Cambio relacionado: CAMBIO #028
+Auditoría voluntaria completada sin cambios de fondo
+```
+
+Nota de control:
+
+```text
+Si el texto completo de CAMBIO #047 contiene un cierre distinto, deberá revisarse y reconciliarse.
+Mientras tanto, HOME v0.11 reconoce CAMBIO #047 como antecedente de trazabilidad sin reabrir automáticamente USER_ACTIONS_SPEC v0.2.
 ```
 
 ---
@@ -260,12 +301,14 @@ DOCUMENT_LIFECYCLE_SPEC v0.2 aprobado
 VERSIONING_AND_CHANGE_POLICY_SPEC v0.2 aprobado
 DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3 aprobado
 ROBERT_HOME v0.8 aprobado e integrado
-ROBERT_HOME v0.9 creado como propuesta corregida pendiente de revisión
-ROBERT_HOME v0.10 en propuesta corregida pendiente de revisión
+ROBERT_HOME v0.10 creado como propuesta corregida pendiente de revisión
+ROBERT_HOME v0.11 en propuesta corregida pendiente de revisión
 USER_ACTIONS_SPEC v0.2 aprobado, integrado y auditado voluntariamente
+CAMBIO #047 reconocido como antecedente de trazabilidad de USER_ACTIONS_SPEC v0.2
 APPROVAL_GATE v0.3 aprobado e integrado
 DECISIÓN #027 registrada
 CAMBIO #049 registrado
+ROBERT_VISUAL_REFERENCE reconocido como documento visual correcto
 Wireframe v0.3 reconocido como vigente
 Fuente física del wireframe pendiente de normalización manual
 ```
@@ -295,10 +338,8 @@ Sin avance a Fase 11
 
 ```text
 ROBERT_HOME.md
-Versión actual propuesta: v0.10
+Versión actual propuesta: v0.11
 Estado: Propuesta corregida — pendiente de revisión
-Decisión relacionada: DECISIÓN #027
-Cambio relacionado: CAMBIO #049
 Función: Punto central de navegación, estado, núcleo visual y control del sistema
 Tag clave: #robert/nucleo
 ```
@@ -312,12 +353,14 @@ Decisión relacionada: DECISIÓN #026
 Cambio de integración: CAMBIO #046
 ```
 
-Estado intermedio:
+Estado previo no aprobado:
 
 ```text
-ROBERT_HOME v0.9
-Estado: Propuesta corregida — pendiente de revisión
-Función: Reflejar APPROVAL_GATE v0.3 como propuesta corregida pendiente de revisión antes de su aprobación formal.
+ROBERT_HOME v0.10
+Estado: Propuesta corregida pendiente de revisión
+Conflictos detectados:
+1. No mostraba CAMBIO #047.
+2. Usaba ROBERT_VISUAL en lugar de ROBERT_VISUAL_REFERENCE.
 ```
 
 ---
@@ -368,7 +411,7 @@ ROBERT_CONTROL_DE_CAMBIOS.md
 Estado: Activo
 Función: Registro formal de cambios, correcciones e integraciones
 Nota: Documento maestro operativo de trazabilidad
-Último cambio relevante: CAMBIO #049
+Cambios recientes relevantes: CAMBIO #047, CAMBIO #048, CAMBIO #049
 ```
 
 ---
@@ -397,10 +440,17 @@ Función: Módulos funcionales del sistema Robert
 ## 07_VISUAL
 
 ```text
-ROBERT_VISUAL.md
+ROBERT_VISUAL_REFERENCE.md
 Estado: En desarrollo conceptual
 Función: Dirección visual, núcleo, galaxias, paneles y experiencia visual
 Nota: HOME funciona como núcleo documental y visual de entrada
+```
+
+Regla de nomenclatura visual:
+
+```text
+El documento visual correcto es ROBERT_VISUAL_REFERENCE.
+No usar ROBERT_VISUAL como documento oficial si la fuente vigente confirmada es ROBERT_VISUAL_REFERENCE.
 ```
 
 ---
@@ -544,6 +594,7 @@ Versión: v0.2
 Estado: Aprobado e integrado — auditoría voluntaria completada sin cambios de fondo
 Decisión relacionada: DECISIÓN #017
 Cambio relacionado: CAMBIO #028
+Antecedente de trazabilidad: CAMBIO #047
 Nota: Fuente canónica usada para APPROVAL_GATE v0.3
 ```
 
@@ -601,6 +652,7 @@ Versión: v0.3
 Estado: Aprobado e integrado
 Decisión relacionada: DECISIÓN #027
 Cambio relacionado: CAMBIO #049
+Cambio de corrección previo: CAMBIO #048
 Nota: Especificación conceptual del ApprovalGate. No crea gate real.
 ```
 
@@ -631,6 +683,7 @@ Relación formal:
 ```text
 DECISIÓN #027 — Aprobación de ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3
 CAMBIO #049 — Aprobación e integración de ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3
+CAMBIO #048 — Corrección de ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3
 ```
 
 Función:
@@ -675,6 +728,7 @@ ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2
 Estado: Aprobado e integrado
 DECISIÓN #017
 CAMBIO #028
+Antecedente de trazabilidad: CAMBIO #047
 Auditoría voluntaria: completada sin cambios de fondo
 ```
 
@@ -752,7 +806,7 @@ MainCanvas no debe usarse como componente oficial.
 [[ROBERT_SECURITY_RULES]]
 [[ROBERT_PHASES]]
 [[ROBERT_MODULES]]
-[[ROBERT_VISUAL]]
+[[ROBERT_VISUAL_REFERENCE]]
 [[ROBERT_PROMPTS]]
 [[ROBERT_SYSTEM_ARCHITECTURE]]
 [[ROBERT_MVP_PLAN]]
@@ -799,19 +853,22 @@ MainCanvas no debe usarse como componente oficial.
 Prioridad actual real:
 
 ```text
-1. Reemplazar ROBERT_HOME con v0.10 como propuesta corregida pendiente de revisión.
-2. Revisar ROBERT_HOME v0.10 completo.
-3. Confirmar que HOME v0.10 refleja APPROVAL_GATE v0.3 como aprobado e integrado.
-4. Confirmar que HOME v0.10 cita DECISIÓN #027 y CAMBIO #049.
-5. Confirmar que HOME v0.10 mantiene APPROVAL_GATE como especificación conceptual, no como gate real.
-6. Actualizar README para reflejar APPROVAL_GATE v0.3 como aprobado e integrado.
-7. Mantener Fase 10 sin programación.
-8. Mantener GitHub y Obsidian manuales.
-9. Resolver fuente física vigente del wireframe v0.3.
-10. Registrar en CONTROL_DE_CAMBIOS la normalización del wireframe si se renombra, archiva o marca histórico.
-11. Definir el siguiente documento técnico solo con autorización del usuario.
-12. No avanzar a programación.
-13. No avanzar a Fase 11.
+1. Reemplazar ROBERT_HOME con v0.11 como propuesta corregida pendiente de revisión.
+2. Revisar ROBERT_HOME v0.11 completo.
+3. Confirmar que HOME v0.11 reconoce CAMBIO #047.
+4. Confirmar que HOME v0.11 ya no muestra hueco entre CAMBIO #046 y CAMBIO #048.
+5. Confirmar que HOME v0.11 usa ROBERT_VISUAL_REFERENCE y [[ROBERT_VISUAL_REFERENCE]].
+6. Confirmar que HOME v0.11 mantiene APPROVAL_GATE v0.3 como aprobado e integrado.
+7. Confirmar que HOME v0.11 cita DECISIÓN #027 y CAMBIO #049.
+8. Confirmar que HOME v0.11 mantiene ApprovalGate como especificación conceptual, no como gate real.
+9. Actualizar README después de HOME v0.11 si se acepta la corrección.
+10. Mantener Fase 10 sin programación.
+11. Mantener GitHub y Obsidian manuales.
+12. Resolver fuente física vigente del wireframe v0.3.
+13. Registrar en CONTROL_DE_CAMBIOS la normalización del wireframe si se renombra, archiva o marca histórico.
+14. Definir el siguiente documento técnico solo con autorización del usuario.
+15. No avanzar a programación.
+16. No avanzar a Fase 11.
 ```
 
 ---
@@ -822,19 +879,20 @@ Próximos pasos recomendados:
 
 ```text
 Paso 1:
-Reemplazar ROBERT_HOME con v0.10.
+Reemplazar ROBERT_HOME con v0.11.
 
 Paso 2:
-Revisar ROBERT_HOME v0.10 completo.
+Revisar ROBERT_HOME v0.11 completo.
 
 Paso 3:
-Actualizar README para reflejar:
+Si ROBERT_HOME v0.11 queda correcto, actualizar README para reflejar:
 
+- ROBERT_HOME v0.11 como propuesta corregida pendiente de revisión.
+- CAMBIO #047 reconocido en trazabilidad.
+- ROBERT_VISUAL_REFERENCE como documento visual correcto.
 - APPROVAL_GATE v0.3 aprobado e integrado.
 - DECISIÓN #027 registrada.
 - CAMBIO #049 registrado.
-- USER_ACTIONS_SPEC v0.2 como fuente canónica aprobada, integrada y auditada.
-- ApprovalGate como especificación conceptual.
 - Sin gate real.
 - Sin programación.
 - Sin conexiones.
@@ -843,12 +901,21 @@ Actualizar README para reflejar:
 - Sin Fase 11.
 
 Paso 4:
-Después de actualizar README, revisar estado documental general.
+No aprobar HOME automáticamente.
 
 Paso 5:
-Preguntar al usuario antes de definir el siguiente documento técnico.
+Si el usuario decide aprobar HOME v0.11, deberá escribir:
+
+APRUEBO ROBERT_HOME v0.11
 
 Paso 6:
+Solo después de esa aprobación explícita:
+
+- Registrar decisión formal.
+- Registrar cambio de aprobación e integración.
+- Actualizar README si aplica.
+
+Paso 7:
 No avanzar a programación.
 No activar conexiones.
 No activar automatizaciones.
@@ -995,11 +1062,12 @@ Automatización de GitHub
 Últimas acciones manuales relevantes:
 
 ```text
-ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3
-Estado: Aprobado e integrado
-
+CAMBIO #047 identificado como antecedente de USER_ACTIONS_SPEC v0.2
+CAMBIO #048 registrado como corrección de APPROVAL_GATE v0.3
 DECISIÓN #027 registrada manualmente
 CAMBIO #049 registrado manualmente
+APPROVAL_GATE v0.3 aprobado e integrado
+ROBERT_HOME v0.11 preparado como propuesta corregida pendiente de revisión
 ```
 
 ---
@@ -1022,6 +1090,12 @@ Sincronización automática
 Automatización de notas
 Agentes modificando archivos
 Conexiones automáticas
+```
+
+Documento visual correcto:
+
+```text
+ROBERT_VISUAL_REFERENCE
 ```
 
 ---
@@ -1060,31 +1134,33 @@ Fase 10 — MVP técnico básico en preparación
 
 # CONTROL DE VERSIONES DE ROBERT_HOME
 
-| Versión | Estado                                    | Descripción                                                                                                                                                                        |
-| ------- | ----------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| v0.1    | Inicial                                   | Primer documento HOME del sistema                                                                                                                                                  |
-| v0.2    | Actualización                             | Se integró dirección general del proyecto Robert                                                                                                                                   |
-| v0.3    | Base actualizada                          | Se organizaron documentos maestros y navegación inicial                                                                                                                            |
-| v0.4    | Parcial / inconsistente                   | Se agregaron múltiples logs de avances, pero la parte superior quedó desactualizada                                                                                                |
-| v0.5    | Propuesta corregida no cerrada            | Se reconcilió HOME con Fase 10, pero quedaron huecos de wireframe, trazabilidad y tag de núcleo                                                                                    |
-| v0.6    | Propuesta corregida no cerrada            | Se corrigió fuente vigente del wireframe, trazabilidad pendiente de APPROVAL_GATE y tag #robert/nucleo, pero faltó tarea operativa para normalizar el archivo físico del wireframe |
-| v0.7    | Propuesta corregida no cerrada            | Se agregó tarea manual para resolver la fuente física vigente del wireframe v0.3, pero aún faltaba trazabilidad formal del propio HOME                                             |
-| v0.8    | Aprobado e integrado                      | Se cita CAMBIO #045 para cerrar trazabilidad acumulada de HOME v0.5–v0.7 y se integra mediante DECISIÓN #026 / CAMBIO #046                                                         |
-| v0.9    | Propuesta corregida pendiente de revisión | Actualizó HOME después de CAMBIO #048 y reconoció APPROVAL_GATE v0.3 como propuesta corregida pendiente de revisión                                                                |
-| v0.10   | Propuesta corregida pendiente de revisión | Actualiza HOME después de DECISIÓN #027 / CAMBIO #049 y reconoce APPROVAL_GATE v0.3 como aprobado e integrado                                                                      |
+| Versión | Estado                                      | Descripción                                                                                                                                                                        |
+| ------- | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| v0.1    | Inicial                                     | Primer documento HOME del sistema                                                                                                                                                  |
+| v0.2    | Actualización                               | Se integró dirección general del proyecto Robert                                                                                                                                   |
+| v0.3    | Base actualizada                            | Se organizaron documentos maestros y navegación inicial                                                                                                                            |
+| v0.4    | Parcial / inconsistente                     | Se agregaron múltiples logs de avances, pero la parte superior quedó desactualizada                                                                                                |
+| v0.5    | Propuesta corregida no cerrada              | Se reconcilió HOME con Fase 10, pero quedaron huecos de wireframe, trazabilidad y tag de núcleo                                                                                    |
+| v0.6    | Propuesta corregida no cerrada              | Se corrigió fuente vigente del wireframe, trazabilidad pendiente de APPROVAL_GATE y tag #robert/nucleo, pero faltó tarea operativa para normalizar el archivo físico del wireframe |
+| v0.7    | Propuesta corregida no cerrada              | Se agregó tarea manual para resolver la fuente física vigente del wireframe v0.3, pero aún faltaba trazabilidad formal del propio HOME                                             |
+| v0.8    | Aprobado e integrado                        | Se cita CAMBIO #045 para cerrar trazabilidad acumulada de HOME v0.5–v0.7 y se integra mediante DECISIÓN #026 / CAMBIO #046                                                         |
+| v0.9    | Propuesta corregida pendiente de revisión   | Actualizó HOME después de CAMBIO #048 y reconoció APPROVAL_GATE v0.3 como propuesta corregida pendiente de revisión                                                                |
+| v0.10   | Propuesta corregida con conflicto detectado | Actualizó HOME después de DECISIÓN #027 / CAMBIO #049, pero omitió CAMBIO #047 y mantuvo ROBERT_VISUAL en lugar de ROBERT_VISUAL_REFERENCE                                         |
+| v0.11   | Propuesta corregida pendiente de revisión   | Corrige trazabilidad de CAMBIO #047 y reemplaza ROBERT_VISUAL por ROBERT_VISUAL_REFERENCE                                                                                          |
 
 ---
 
-# MOTIVO DE v0.10
+# MOTIVO DE v0.11
 
-ROBERT_HOME v0.10 existe para corregir:
+ROBERT_HOME v0.11 existe para corregir:
 
 ```text
-APPROVAL_GATE v0.3 ya fue aprobado formalmente.
-HOME debía dejar de mostrar APPROVAL_GATE v0.3 como pendiente de revisión.
-HOME debía reflejar DECISIÓN #027 y CAMBIO #049.
-HOME debía mantener claro que APPROVAL_GATE v0.3 es conceptual y documental.
-HOME debía evitar que la aprobación documental se confunda con programación, gate real o Fase 11.
+1. El aparente hueco de numeración de CAMBIO #047.
+2. La ausencia de CAMBIO #047 en la trazabilidad reciente.
+3. La persistencia de ROBERT_VISUAL como nombre de documento visual.
+4. La persistencia de [[ROBERT_VISUAL]] como enlace central.
+5. La necesidad de usar ROBERT_VISUAL_REFERENCE como fuente visual correcta.
+6. La necesidad de mantener APPROVAL_GATE v0.3 como aprobado e integrado sin convertirlo en gate real.
 ```
 
 ---
@@ -1110,6 +1186,12 @@ CAMBIO #049 — Aprobación e integración de ROBERT_TECHNICAL_APPROVAL_AND_AUTH
 ---
 
 ## Cambios recientes registrados
+
+```text
+CAMBIO #047 — Corrección de ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2
+Estado: Registrado como antecedente de corrección / trazabilidad
+Función: Resolver conflicto de versión, fuente vigente y trazabilidad de USER_ACTIONS_SPEC v0.2
+```
 
 ```text
 CAMBIO #048 — Corrección de ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3
@@ -1191,18 +1273,24 @@ No avanzar a Fase 11.
 
 ---
 
-# CRITERIOS PARA REVISAR ROBERT_HOME v0.10
+# CRITERIOS PARA REVISAR ROBERT_HOME v0.11
 
-ROBERT_HOME v0.10 podrá considerarse correcto si:
+ROBERT_HOME v0.11 podrá considerarse correcto si:
 
 * Refleja Fase 10 como fase activa.
 * Reconoce ROBERT_HOME v0.8 como aprobado e integrado.
-* Reconoce ROBERT_HOME v0.10 como propuesta corregida pendiente de revisión.
+* Reconoce ROBERT_HOME v0.11 como propuesta corregida pendiente de revisión.
+* Reconoce CAMBIO #047.
+* No muestra hueco entre CAMBIO #046 y CAMBIO #048.
 * Reconoce APPROVAL_GATE v0.3 como aprobado e integrado.
 * Cita DECISIÓN #027.
 * Cita CAMBIO #049.
 * Reconoce USER_ACTIONS_SPEC v0.2 como aprobado, integrado y auditado.
 * Reconoce DECISIÓN #017 y CAMBIO #028 para USER_ACTIONS_SPEC v0.2.
+* Reconoce CAMBIO #047 como antecedente de trazabilidad.
+* Usa ROBERT_VISUAL_REFERENCE.
+* Usa [[ROBERT_VISUAL_REFERENCE]].
+* No usa ROBERT_VISUAL como documento visual oficial.
 * Reconoce AppShell como componente canónico.
 * Excluye MainCanvas como componente canónico.
 * Mantiene las 20 acciones canónicas.
@@ -1224,53 +1312,53 @@ ROBERT_HOME v0.10 podrá considerarse correcto si:
 
 ---
 
-# DECISIÓN PENDIENTE SOBRE ROBERT_HOME v0.10
+# DECISIÓN PENDIENTE SOBRE ROBERT_HOME v0.11
 
 Este documento queda como:
 
 ```text
-ROBERT_HOME v0.10
+ROBERT_HOME v0.11
 Estado: Propuesta corregida — pendiente de revisión
-Decisión relacionada: DECISIÓN #027
-Cambio relacionado: CAMBIO #049
 ```
 
 Para aprobarlo formalmente como nueva versión integrada, el usuario deberá escribir:
 
 ```text
-APRUEBO ROBERT_HOME v0.10
+APRUEBO ROBERT_HOME v0.11
 ```
 
 Mientras eso no ocurra:
 
 ```text
-ROBERT_HOME v0.10 no queda aprobado.
-ROBERT_HOME v0.10 no queda integrado.
+ROBERT_HOME v0.11 no queda aprobado.
+ROBERT_HOME v0.11 no queda integrado.
 ROBERT_HOME v0.8 sigue siendo la última versión aprobada e integrada.
 ```
 
 ---
 
-# EFECTO DE UNA APROBACIÓN FUTURA DE HOME v0.10
+# EFECTO DE UNA APROBACIÓN FUTURA DE HOME v0.11
 
-Si se aprueba ROBERT_HOME v0.10:
+Si se aprueba ROBERT_HOME v0.11:
 
 1. Registrar decisión formal en `ROBERT_DECISIONS_LOG`.
 2. Registrar cambio de aprobación e integración en `ROBERT_CONTROL_DE_CAMBIOS`.
 3. Actualizar README.
 4. Mantener APPROVAL_GATE v0.3 como aprobado e integrado.
-5. Mantener Robert en Fase 10.
-6. No programar.
-7. No conectar apps.
-8. No automatizar.
-9. No activar agentes.
-10. No avanzar a Fase 11.
+5. Mantener ROBERT_VISUAL_REFERENCE como documento visual correcto.
+6. Mantener CAMBIO #047 visible en trazabilidad reciente.
+7. Mantener Robert en Fase 10.
+8. No programar.
+9. No conectar apps.
+10. No automatizar.
+11. No activar agentes.
+12. No avanzar a Fase 11.
 
 ---
 
 # CIERRE
 
-ROBERT_HOME v0.10 actualiza el punto central de navegación del sistema Robert después de la aprobación formal de `APPROVAL_GATE v0.3`.
+ROBERT_HOME v0.11 corrige el punto central de navegación del sistema Robert después de detectar conflictos en `ROBERT_HOME v0.10`.
 
 El HOME ahora refleja el estado real:
 
@@ -1278,12 +1366,14 @@ El HOME ahora refleja el estado real:
 Fase 10 — MVP técnico básico en preparación
 Modo documental, manual y supervisado
 ROBERT_HOME v0.8 aprobado e integrado
-ROBERT_HOME v0.10 como propuesta corregida pendiente de revisión
+ROBERT_HOME v0.11 como propuesta corregida pendiente de revisión
+CAMBIO #047 reconocido en trazabilidad reciente
 USER_ACTIONS_SPEC v0.2 aprobado, integrado y auditado voluntariamente
 USER_ACTIONS_SPEC v0.2 como fuente canónica usada para APPROVAL_GATE v0.3
 APPROVAL_GATE v0.3 aprobado e integrado
 DECISIÓN #027 registrada
 CAMBIO #049 registrado
+ROBERT_VISUAL_REFERENCE como documento visual correcto
 AppShell como componente canónico
 MainCanvas excluido como componente canónico
 20 acciones canónicas reconocidas
