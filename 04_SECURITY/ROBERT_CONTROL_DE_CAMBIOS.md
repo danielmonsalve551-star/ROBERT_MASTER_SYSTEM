@@ -8290,3 +8290,169 @@ Se detectaron dos errores principales en `APPROVAL_GATE v0.2`:
 ```text
 1. Uso de MainCanvas como componente participante.
 2. Numeración incorrecta en la tabla de correspondencia con USER_ACTIONS_SPEC v0.2.
+
+## CAMBIO #049 — Aprobación e integración de ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3
+
+Fecha: 07/07/2026
+Estado: Aprobado e integrado
+Tipo de cambio: Aprobación técnica documental / ApprovalGate conceptual
+Documento afectado: ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC.md
+Versión afectada: v0.3
+Ubicación: 10_MVP
+Decisión relacionada: DECISIÓN #027 — Aprobación de ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3
+Cambio relacionado previo: CAMBIO #048 — Corrección de ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3
+Documento base principal: ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2
+Fase relacionada: Fase 10 — MVP técnico básico en preparación
+
+---
+
+### Cambio realizado
+
+Se registra la aprobación formal e integración documental de:
+
+**ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3**
+
+como documento técnico conceptual aprobado del MVP técnico básico de Robert.
+
+---
+
+### Motivo del cambio
+
+Después de corregir y revisar `APPROVAL_GATE v0.3`, el usuario aprobó formalmente el documento.
+
+La versión v0.3 queda integrada porque corrige errores de componente, flujo, fuente vigente y trazabilidad detectados en versiones anteriores.
+
+---
+
+### Correcciones integradas
+
+La versión aprobada integra:
+
+1. Reemplazo de `MainCanvas` por `AppShell`.
+2. Corrección de la lista de componentes participantes.
+3. Corrección de la tabla de mapeo entre Gates y componentes.
+4. Corrección de la tabla de dónde se muestra cada elemento.
+5. Corrección de la tabla de correspondencia con `USER_ACTIONS_SPEC v0.2`.
+6. Uso de las 20 acciones canónicas de `USER_ACTIONS_SPEC v0.2` auditado.
+7. Confirmación de `ApprovalGate` como especificación conceptual, no como gate real.
+8. Confirmación de ACCIÓN 12 — Activar sandbox manual como `Gate 2 / Gate 7`.
+9. Alineación con los 10 componentes canónicos aprobados.
+10. Exclusión de `MainCanvas` como componente oficial.
+
+---
+
+### Alcance autorizado
+
+Este cambio autoriza únicamente:
+
+* Marcar `APPROVAL_GATE v0.3` como aprobado e integrado.
+* Integrarlo al estado documental actual de Robert.
+* Usarlo como especificación conceptual de ApprovalGate.
+* Relacionar gates conceptuales con acciones del usuario.
+* Relacionar gates conceptuales con componentes aprobados.
+* Relacionar gates conceptuales con eventos, registros de auditoría y notificaciones.
+* Mantenerlo como documento técnico aprobado dentro de Fase 10.
+* Actualizar `ROBERT_HOME` y `README` para reflejar su nuevo estado.
+
+---
+
+### Alcance no autorizado
+
+Este cambio no autoriza:
+
+* Programar ApprovalGate.
+* Crear código real.
+* Crear botones reales.
+* Crear pantallas reales.
+* Crear prototipo funcional.
+* Crear sistema real de autorización.
+* Crear sistema real de permisos.
+* Crear base de datos real.
+* Crear endpoints.
+* Conectar Supabase.
+* Conectar Firebase.
+* Conectar GitHub automáticamente.
+* Conectar Gmail.
+* Conectar Google Calendar.
+* Conectar APIs externas.
+* Automatizar acciones.
+* Activar agentes autónomos.
+* Ejecutar acciones reales.
+* Avanzar automáticamente a Fase 11.
+
+---
+
+### Riesgo
+
+Tipo de cambio:
+
+**Aprobación técnica documental / ApprovalGate conceptual**
+
+Nivel de riesgo inicial:
+
+**Nivel 3 — Alto**
+
+Motivo:
+
+El documento define cómo Robert debe decidir conceptualmente si una acción puede continuar, requiere confirmación, requiere aprobación, debe pausarse o debe bloquearse.
+
+Nivel de riesgo final:
+
+**Nivel 2 — Medio**
+
+Motivo:
+
+La aprobación sigue siendo documental y conceptual. No crea gate real, no programa, no conecta herramientas externas, no automatiza y no ejecuta acciones reales.
+
+Nivel de autonomía:
+
+**Nivel 0 — Sin autonomía ejecutiva**
+
+---
+
+### Estado final
+
+`ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3` queda como:
+
+**Aprobado e integrado**
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+Sin programación autorizada.
+Sin código real.
+Sin botones reales.
+Sin pantallas reales.
+Sin gate real.
+Sin base de datos real.
+Sin conexiones externas.
+Sin automatizaciones reales.
+Sin agentes autónomos activos.
+Sin Fase 11 autorizada.
+
+---
+
+### Siguiente paso
+
+Actualizar:
+
+1. `ROBERT_HOME`
+2. `README`
+
+Ambos deben reflejar que:
+
+`ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3` queda aprobado e integrado mediante:
+
+* DECISIÓN #027
+* CAMBIO #049
+
+---
+
+### Nota de control
+
+Aprobar este documento no equivale a ejecutar ApprovalGate.
+
+`ApprovalGate` sigue siendo conceptual y documental.
+
+Robert no ejecuta acciones importantes sin permiso.
