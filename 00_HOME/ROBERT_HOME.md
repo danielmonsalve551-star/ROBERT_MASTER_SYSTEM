@@ -1,695 +1,954 @@
-# ROBERT_MASTER_SYSTEM
+# ROBERT_HOME
 
-Repositorio privado del Proyecto Robert.
+Versión: 0.12
+Estado: Propuesta corregida — pendiente de revisión
+Fecha: 09/07/2026
+Ubicación: 00_HOME
+Función: Punto central de navegación, estado, núcleo visual y control del sistema Robert
+Fase actual: Fase 10 — MVP técnico básico en preparación
+Cambio relacionado: CAMBIO #051 — Normalización de fuente física vigente de ROBERT_TECHNICAL_MVP_WIREFRAME v0.3
+Decisión relacionada: Sin nueva decisión formal para esta versión
+Estado de aprobación de esta versión: Pendiente de revisión del usuario
 
-Este repositorio funciona como respaldo documental, control de versiones manual y base futura para el MVP técnico de Robert.
+Tags: #robert/home #robert/nucleo #robert/estado-actual #robert/navegacion #robert/fase-10
 
 ---
 
-## Estado actual
+# OBJETIVO
+
+ROBERT_HOME es la entrada principal del sistema Robert.
+
+Su función es mostrar de forma rápida:
+
+* Qué es Robert.
+* Estado real del proyecto.
+* Fase actual.
+* Documentos maestros disponibles.
+* Documentos técnicos disponibles.
+* Documentos aprobados.
+* Documentos pendientes.
+* Documento vigente cuando existan versiones previas.
+* Prioridades actuales.
+* Próximos pasos.
+* Reglas principales.
+* Restricciones activas.
+* Dirección general del sistema.
+* Núcleo visual del sistema dentro de la navegación documental.
+
+Este documento funciona como el punto central de navegación del proyecto.
+
+---
+
+# CORRECCIÓN PRINCIPAL DE v0.12
+
+ROBERT_HOME v0.12 actualiza el estado documental posterior a:
+
+```text
+CAMBIO #051 — Normalización de fuente física vigente de ROBERT_TECHNICAL_MVP_WIREFRAME v0.3
+```
+
+Problema que corrige esta versión:
+
+```text
+ROBERT_HOME v0.11 todavía mostraba la fuente física del wireframe v0.3 como pendiente de normalización manual.
+```
+
+Nuevo estado real:
+
+```text
+ROBERT_TECHNICAL_MVP_WIREFRAME.md
+Estado: Fuente física oficial vigente
+Versión: v0.3
+Estado documental: Aprobado e integrado
+```
+
+Archivo propuesta:
+
+```text
+ROBERT_TECHNICAL_MVP_WIREFRAME_v0.3_PROPUESTA.md
+Estado: Eliminado previamente / no vigente / no fuente oficial / no requerido
+```
+
+Resultado:
+
+```text
+ROBERT_HOME v0.12 elimina la pendiente de normalización física del wireframe v0.3.
+```
+
+---
+
+# TRAZABILIDAD DE ESTA VERSIÓN
+
+Esta versión se apoya en:
+
+```text
+CAMBIO #051 — Normalización de fuente física vigente de ROBERT_TECHNICAL_MVP_WIREFRAME v0.3
+```
+
+Estado del cambio:
+
+```text
+Registrado
+```
+
+Función del cambio:
+
+```text
+Confirmar que ROBERT_TECHNICAL_MVP_WIREFRAME.md es la fuente física oficial vigente del wireframe v0.3 y que la propuesta eliminada no debe recrearse.
+```
+
+Restricción:
+
+```text
+CAMBIO #051 no cambia el contenido aprobado del wireframe.
+CAMBIO #051 no autoriza programación.
+CAMBIO #051 no autoriza código real.
+CAMBIO #051 no autoriza pantallas reales.
+CAMBIO #051 no autoriza prototipo funcional.
+CAMBIO #051 no autoriza conexiones externas.
+CAMBIO #051 no autoriza automatizaciones.
+CAMBIO #051 no autoriza agentes autónomos.
+CAMBIO #051 no autoriza avanzar a Fase 11.
+```
+
+---
+
+# DEFINICIÓN DE ROBERT
+
+Robert no es:
+
+* Un chatbot.
+* Una app de productividad simple.
+* Una automatización aislada.
+* Una bóveda de notas.
+* Un sistema autónomo sin control del usuario.
+
+Robert es:
+
+**Un sistema operativo personal de inteligencia artificial tipo AI Command Center.**
+
+Su objetivo es transformar:
+
+```text
+Ideas
+↓
+Conversaciones
+↓
+Documentos
+↓
+Decisiones
+↓
+Sistemas
+↓
+Acciones supervisadas
+```
+
+Robert busca funcionar como un centro de mando personal, documental, visual, modular y seguro.
+
+---
+
+# ROBERT_HOME COMO NÚCLEO
+
+ROBERT_HOME funciona como el núcleo de entrada del sistema.
+
+Esto significa que:
+
+* Es el primer punto de navegación.
+* Resume el estado real.
+* Enlaza documentos principales.
+* Muestra restricciones activas.
+* Muestra prioridades.
+* Muestra documentos técnicos aprobados.
+* Muestra documentos pendientes.
+* Conecta la parte documental con la visión visual de Robert.
+* Funciona como referencia rápida antes de avanzar.
+
+Alineación visual:
+
+```text
+ROBERT_HOME = Núcleo documental y visual de entrada
+Tag oficial: #robert/nucleo
+```
+
+---
+
+# PRINCIPIO CENTRAL
+
+```text
+El usuario manda.
+Robert no ejecuta acciones importantes sin permiso.
+```
+
+---
+
+# ESTADO ACTUAL DEL PROYECTO
+
+Estado real actualizado:
+
+```text
+Fase actual:
+Fase 10 — MVP técnico básico en preparación
+
+Modo operativo:
+Documental, manual y supervisado
+
+MVP manual:
+Validado
+
+Sandbox manual:
+Validado
+
+GitHub:
+Configurado como respaldo documental privado y manual
+
+Obsidian:
+Cerebro documental manual
+
+Programación:
+No autorizada
+
+Código real:
+No autorizado
+
+Pantallas reales:
+No autorizadas
+
+Base de datos real:
+No autorizada
+
+Conexiones externas:
+No autorizadas
+
+Automatizaciones reales:
+No autorizadas
+
+Agentes autónomos:
+No autorizados
+
+Fase 11:
+No autorizada
+```
+
+---
+
+# ESTADO OPERATIVO ACTUAL
 
 Robert se encuentra en:
 
-**Fase 10 — MVP técnico básico en preparación**
+```text
+Fase 10 — MVP técnico básico en preparación
+```
 
-Estado operativo actual:
+Estado consolidado:
 
-* MVP manual validado.
-* Sandbox manual validado.
-* GitHub configurado como respaldo documental privado y manual.
-* Obsidian usado como cerebro documental manual.
-* Documentos principales respaldados manualmente.
-* ROBERT_HOME v0.11 aprobado e integrado.
-* ROBERT_CONTROL_DE_CAMBIOS actualizado.
-* CAMBIO #047 reconocido como antecedente de trazabilidad de USER_ACTIONS_SPEC v0.2.
-* DECISIÓN #027 registrada.
-* CAMBIO #049 registrado.
-* DECISIÓN #028 registrada.
-* CAMBIO #050 registrado.
-* ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2 aprobado, integrado y auditado voluntariamente.
-* ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3 aprobado e integrado.
-* ROBERT_VISUAL_REFERENCE reconocido como documento visual correcto.
-* Sin programación autorizada.
-* Sin código real.
-* Sin pantallas reales.
-* Sin base de datos real.
-* Sin conexiones externas.
-* Sin automatizaciones reales.
-* Sin agentes autónomos activos.
-* Sin Fase 11 autorizada.
+```text
+MVP manual validado
+Sandbox manual validado
+GitHub configurado como respaldo documental privado/manual
+Obsidian usado como cerebro documental manual
+CONTEXT_MASTER v0.5 reanclado
+PHASES v0.5 reconciliado
+COMMANDS v0.4 aprobado e integrado
+Escala de riesgo y autonomía unificada
+DOCUMENT_LIFECYCLE_SPEC v0.2 aprobado
+VERSIONING_AND_CHANGE_POLICY_SPEC v0.2 aprobado
+DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3 aprobado
+ROBERT_HOME v0.11 aprobado e integrado
+ROBERT_HOME v0.12 en propuesta corregida pendiente de revisión
+USER_ACTIONS_SPEC v0.2 aprobado, integrado y auditado voluntariamente
+CAMBIO #047 reconocido como antecedente de trazabilidad de USER_ACTIONS_SPEC v0.2
+APPROVAL_GATE v0.3 aprobado e integrado
+DECISIÓN #027 registrada
+CAMBIO #049 registrado
+ROBERT_HOME v0.11 aprobado e integrado mediante DECISIÓN #028 / CAMBIO #050
+ROBERT_VISUAL_REFERENCE reconocido como documento visual correcto
+Wireframe v0.3 aprobado e integrado
+Fuente física del wireframe v0.3 normalizada mediante CAMBIO #051
+```
 
----
+Restricciones activas:
 
-## Regla central
-
-El usuario manda.
-
-Robert no ejecuta acciones importantes sin permiso.
-
-Intentar una acción no significa ejecutarla.
-
-Robert continúa en modo:
-
-**Documental, manual y supervisado**
-
----
-
-## Alcance actual del repositorio
-
-Este repositorio funciona únicamente como:
-
-* Respaldo documental privado.
-* Control de versiones manual.
-* Historial de cambios.
-* Base organizada para futura fase técnica.
-* Fuente de consulta para documentos maestros, técnicos y de control.
-
-Este repositorio no autoriza:
-
-* Programación.
-* Automatizaciones.
-* Conexiones externas.
-* Base de datos real.
-* Ejecución real.
-* Agentes autónomos.
-* Avanzar automáticamente a Fase 11.
+```text
+Sin programación autorizada
+Sin código real
+Sin base de datos real
+Sin gate real
+Sin sistema real de autorización
+Sin sistema real de consistencia documental
+Sin sistema real de control de versiones
+Sin motor real de resolución de conflictos
+Sin conexiones externas
+Sin automatizaciones reales
+Sin agentes autónomos activos
+Sin avance a Fase 11
+```
 
 ---
 
-## Documentos maestros principales
+# DOCUMENTOS MAESTROS DEL SISTEMA
 
-Los documentos maestros principales del sistema Robert son:
+## 00_HOME
 
-* ROBERT_HOME
-* ROBERT_CONTEXT_MASTER
-* ROBERT_COMMANDS
-* ROBERT_DECISIONS_LOG
-* ROBERT_CONTROL_DE_CAMBIOS
-* ROBERT_SECURITY_RULES
-* ROBERT_PHASES
-* ROBERT_MODULES
-* ROBERT_VISUAL_REFERENCE
-* ROBERT_SYSTEM_ARCHITECTURE
+```text
+ROBERT_HOME.md
+Versión actual propuesta: v0.12
+Estado: Propuesta corregida — pendiente de revisión
+Cambio relacionado: CAMBIO #051
+Función: Punto central de navegación, estado, núcleo visual y control del sistema
+Tag clave: #robert/nucleo
+```
 
----
+Estado previo aprobado:
 
-## Documentos técnicos principales de Fase 10
-
-Robert cuenta actualmente con los siguientes documentos técnicos del MVP básico:
-
-* ROBERT_TECHNICAL_MVP_PLAN
-* ROBERT_TECHNICAL_MVP_WIREFRAME v0.3
-* ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2
-* ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1
-* ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2
-* ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2
-* ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2
-* ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2
-* ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2
-* ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2
-* ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC v0.2
-* ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC v0.2
-* ROBERT_TECHNICAL_DOCUMENT_LIFECYCLE_SPEC v0.2
-* ROBERT_TECHNICAL_VERSIONING_AND_CHANGE_POLICY_SPEC v0.2
-* ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3
-* ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3
+```text
+ROBERT_HOME v0.11
+Estado: Aprobado e integrado
+Decisión relacionada: DECISIÓN #028
+Cambio de integración: CAMBIO #050
+```
 
 ---
 
-## Estado de ROBERT_HOME
+## 01_CONTEXT
 
-### ROBERT_HOME v0.8
-
-Estado:
-
-**Aprobado e integrado**
-
-Relación documental:
-
-* DECISIÓN #026 — Aprobación de ROBERT_HOME v0.8.
-* CAMBIO #046 — Aprobación e integración de ROBERT_HOME v0.8.
-* CAMBIO #045 — Corrección acumulada de ROBERT_HOME v0.5–v0.7.
-
-Función:
-
-ROBERT_HOME v0.8 fue la versión aprobada e integrada del punto central de navegación, estado, núcleo visual y control del sistema Robert antes de la corrección v0.11.
+```text
+ROBERT_CONTEXT_MASTER.md
+Versión actual: v0.5
+Estado: Reanclado
+Función: Fuente central de verdad contextual
+```
 
 ---
 
-### ROBERT_HOME v0.10
+## 02_COMMANDS
 
-Estado:
-
-**Propuesta corregida con conflicto detectado**
-
-Función:
-
-ROBERT_HOME v0.10 actualizó el estado después de la aprobación de `APPROVAL_GATE v0.3`, pero arrastró dos conflictos:
-
-1. No mostraba `CAMBIO #047` en la trazabilidad reciente.
-2. Seguía usando `ROBERT_VISUAL` en lugar de `ROBERT_VISUAL_REFERENCE`.
-
-Por esos motivos, `ROBERT_HOME v0.10` no debe tratarse como versión aprobada.
+```text
+ROBERT_COMMANDS.md
+Versión actual: v0.4
+Estado: Aprobado e integrado
+Función: Comandos, acciones de control e interpretación operativa
+```
 
 ---
 
-### ROBERT_HOME v0.11
+## 03_DECISIONS
 
-Estado:
-
-**Aprobado e integrado**
-
-Relación documental:
-
-* DECISIÓN #028 — Aprobación de ROBERT_HOME v0.11.
-* CAMBIO #050 — Aprobación e integración de ROBERT_HOME v0.11.
-* CAMBIO #047 — Reconocido como antecedente de trazabilidad de USER_ACTIONS_SPEC v0.2.
-* DECISIÓN #027 — Aprobación de APPROVAL_GATE v0.3.
-* CAMBIO #049 — Aprobación e integración de APPROVAL_GATE v0.3.
-
-Función:
-
-ROBERT_HOME v0.11 queda como versión aprobada e integrada del punto central de navegación, estado, núcleo visual y control documental del sistema Robert.
-
-Qué corrige:
-
-* Reconoce `CAMBIO #047` como antecedente de trazabilidad.
-* Elimina el aparente hueco de numeración entre `CAMBIO #046` y `CAMBIO #048`.
-* Reemplaza `ROBERT_VISUAL` por `ROBERT_VISUAL_REFERENCE`.
-* Reemplaza `[[ROBERT_VISUAL]]` por `[[ROBERT_VISUAL_REFERENCE]]`.
-* Mantiene `APPROVAL_GATE v0.3` como aprobado e integrado.
-* Mantiene `DECISIÓN #027`.
-* Mantiene `CAMBIO #049`.
-* Mantiene `USER_ACTIONS_SPEC v0.2` como fuente canónica aprobada, integrada y auditada voluntariamente.
-* Mantiene `ApprovalGate` como especificación conceptual.
-* Aclara que la aprobación de `APPROVAL_GATE v0.3` no autoriza programación, gate real ni Fase 11.
-
-Restricción:
-
-ROBERT_HOME v0.11 no autoriza:
-
-* Programación.
-* Código real.
-* Base de datos real.
-* Gate real.
-* Sistema real de autorización.
-* Conexiones externas.
-* Automatizaciones reales.
-* Agentes autónomos.
-* Avanzar a Fase 11.
+```text
+ROBERT_DECISIONS_LOG.md
+Estado: Activo
+Función: Registro formal de decisiones aprobadas por el usuario
+Última decisión relevante: DECISIÓN #028
+```
 
 ---
 
-## ROBERT_VISUAL_REFERENCE
+## 04_SECURITY
 
-Documento visual correcto:
+```text
+ROBERT_SECURITY_RULES.md
+Estado: Aprobado
+Función: Seguridad, límites, permisos y control del usuario
+```
 
-**ROBERT_VISUAL_REFERENCE**
-
-Estado:
-
-**En desarrollo conceptual**
-
-Función:
-
-Definir la dirección visual de Robert, incluyendo núcleo, galaxias, paneles, experiencia visual, estética, jerarquía y navegación conceptual.
-
-Regla de nomenclatura:
-
-* Usar `ROBERT_VISUAL_REFERENCE`.
-* Usar `[[ROBERT_VISUAL_REFERENCE]]`.
-* No usar `ROBERT_VISUAL` como documento visual oficial si la fuente vigente confirmada es `ROBERT_VISUAL_REFERENCE`.
-
-Restricción:
-
-ROBERT_VISUAL_REFERENCE no autoriza:
-
-* Programar el HUD final.
-* Crear interfaz real.
-* Conectar Obsidian automáticamente.
-* Automatizar cambios documentales.
-* Crear agentes visuales.
-* Activar apps externas.
-* Ejecutar acciones reales.
+```text
+ROBERT_CONTROL_DE_CAMBIOS.md
+Estado: Activo
+Función: Registro formal de cambios, correcciones e integraciones
+Nota: Documento maestro operativo de trazabilidad
+Último cambio relevante: CAMBIO #051
+```
 
 ---
 
-## USER_ACTIONS_SPEC v0.2 aprobado, integrado y auditado
+## 05_PHASES
 
-Documento:
+```text
+ROBERT_PHASES.md
+Versión actual: v0.5
+Estado: Reconciliado
+Función: Mapa de fases del proyecto Robert
+```
 
-**ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2**
+---
 
-Estado:
+## 06_MODULES
 
-**Aprobado e integrado — auditoría voluntaria completada sin cambios de fondo**
+```text
+ROBERT_MODULES.md
+Estado: Estructura inicial aprobada
+Función: Módulos funcionales del sistema Robert
+```
 
-Relación documental:
+---
 
-* DECISIÓN #017.
-* CAMBIO #028.
-* CAMBIO #047 como antecedente de trazabilidad.
-* Auditoría voluntaria completada el 07/07/2026.
+## 07_VISUAL
 
-Resultado de la auditoría:
+```text
+ROBERT_VISUAL_REFERENCE.md
+Estado: En desarrollo conceptual
+Función: Dirección visual, núcleo, galaxias, paneles y experiencia visual
+Nota: HOME funciona como núcleo documental y visual de entrada
+```
 
-* No se encontraron errores de contenido.
-* No se reabre su aprobación.
-* No se requiere nueva decisión formal.
-* No se requiere nuevo cambio formal porque no hubo corrección sustantiva de contenido.
-* Se confirma como fuente canónica usada para corregir y aprobar `APPROVAL_GATE v0.3`.
+Regla de nomenclatura visual:
 
-Nota sobre CAMBIO #047:
+```text
+El documento visual correcto es ROBERT_VISUAL_REFERENCE.
+No usar ROBERT_VISUAL como documento oficial si la fuente vigente confirmada es ROBERT_VISUAL_REFERENCE.
+```
 
-`CAMBIO #047` existe y corresponde a la corrección/trazabilidad de `ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2`.
+---
 
-Debe reconocerse como antecedente documental para evitar un hueco aparente de numeración.
+## 08_PROMPTS
 
-Lista canónica de 20 acciones:
+```text
+ROBERT_PROMPTS.md
+Estado: Activo / en evolución
+Función: Prompts base para trabajar con ChatGPT, Claude y otros modelos
+```
 
-1. Escribir comando.
-2. Seleccionar documento.
-3. Revisar estado general.
-4. Crear documento técnico.
-5. Corregir documento técnico.
-6. Aprobar documento.
-7. Registrar decisión.
-8. Registrar cambio.
-9. Actualizar HOME.
-10. Actualizar README.
-11. Cambiar modo.
-12. Activar sandbox manual.
-13. Pausar avance.
-14. Bloquear acción.
-15. Ver decisiones pendientes.
-16. Resolver decisión pendiente.
-17. Ver mapa documental.
-18. Marcar respaldo manual en GitHub.
-19. Solicitar revisión crítica.
-20. Pedir siguiente paso.
+---
 
-Componentes canónicos confirmados:
+## 09_ARCHITECTURE
 
-1. AppShell.
-2. TopBar.
-3. LeftSidebar.
-4. CommandCenter.
-5. ModeSelector.
-6. RiskBadge.
-7. ApprovalGate.
-8. DecisionInbox.
-9. DocumentStatusMap.
-10. CurrentStatePanel.
+```text
+ROBERT_SYSTEM_ARCHITECTURE.md
+Estado: Activo
+Función: Arquitectura conceptual por capas
+```
+
+---
+
+## 10_MVP
+
+```text
+ROBERT_MVP_PLAN.md
+Estado: Aprobado
+Función: Plan del MVP manual y técnico
+```
+
+---
+
+## 15_SANDBOX
+
+```text
+ROBERT_SANDBOX.md
+Estado: Validado
+Función: Área de pruebas manuales y simulaciones controladas
+```
+
+```text
+SANDBOX_RULES.md
+Estado: Activo
+Función: Reglas del sandbox manual
+```
+
+```text
+SANDBOX_TESTS.md
+Estado: Activo
+Función: Pruebas manuales del sistema
+```
+
+```text
+SANDBOX_RESULTS.md
+Estado: Activo
+Función: Resultados de pruebas del sandbox
+```
+
+---
+
+# DOCUMENTOS TÉCNICOS DE FASE 10
+
+## Wireframe oficial vigente
+
+```text
+ROBERT_TECHNICAL_MVP_WIREFRAME.md
+Versión vigente: v0.3
+Estado: Aprobado e integrado
+Fuente física oficial vigente: Sí
+Normalización física: Completada mediante CAMBIO #051
+```
+
+Regla de fuente vigente:
+
+```text
+No existen dos wireframes oficiales vigentes en paralelo.
+El wireframe vigente conceptual y físico es ROBERT_TECHNICAL_MVP_WIREFRAME.md v0.3.
+Cualquier versión anterior queda como histórica/reemplazada o no vigente.
+```
+
+Archivo propuesta:
+
+```text
+ROBERT_TECHNICAL_MVP_WIREFRAME_v0.3_PROPUESTA.md
+Estado: Eliminado previamente / no vigente / no fuente oficial / no requerido
+```
 
 Regla:
 
-`MainCanvas` no forma parte de la lista canónica de componentes aprobados y no debe usarse como componente oficial.
+```text
+No recrear la propuesta.
+No restaurar el archivo eliminado.
+No mantener dos fuentes físicas paralelas.
+```
 
 ---
 
-## APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3 aprobado e integrado
+## Documentos aprobados e integrados
+
+```text
+ROBERT_TECHNICAL_MVP_PLAN.md
+Estado: Aprobado
+```
+
+```text
+ROBERT_TECHNICAL_MVP_WIREFRAME.md
+Versión vigente: v0.3
+Estado: Aprobado e integrado
+Fuente física oficial vigente: Sí
+Cambio de normalización: CAMBIO #051
+Nota: La pendiente de normalización física quedó cerrada.
+```
+
+```text
+ROBERT_TECHNICAL_COMPONENTS_SPEC.md
+Versión: v0.2
+Estado: Aprobado
+```
+
+```text
+ROBERT_TECHNICAL_DATA_MODEL_SPEC.md
+Versión: v0.1
+Estado: Aprobado
+```
+
+```text
+ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC.md
+Versión: v0.2
+Estado: Aprobado
+```
+
+```text
+ROBERT_TECHNICAL_SCREEN_STATE_SPEC.md
+Versión: v0.2
+Estado: Aprobado
+```
+
+```text
+ROBERT_TECHNICAL_USER_ACTIONS_SPEC.md
+Versión: v0.2
+Estado: Aprobado e integrado — auditoría voluntaria completada sin cambios de fondo
+Decisión relacionada: DECISIÓN #017
+Cambio relacionado: CAMBIO #028
+Antecedente de trazabilidad: CAMBIO #047
+Nota: Fuente canónica usada para APPROVAL_GATE v0.3
+```
+
+```text
+ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC.md
+Versión: v0.2
+Estado: Aprobado
+```
+
+```text
+ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC.md
+Versión: v0.2
+Estado: Aprobado
+```
+
+```text
+ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC.md
+Versión: v0.2
+Estado: Aprobado
+```
+
+```text
+ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC.md
+Versión: v0.2
+Estado: Aprobado
+```
+
+```text
+ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC.md
+Versión: v0.2
+Estado: Aprobado
+```
+
+```text
+ROBERT_TECHNICAL_DOCUMENT_LIFECYCLE_SPEC.md
+Versión: v0.2
+Estado: Aprobado
+```
+
+```text
+ROBERT_TECHNICAL_VERSIONING_AND_CHANGE_POLICY_SPEC.md
+Versión: v0.2
+Estado: Aprobado
+```
+
+```text
+ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC.md
+Versión: v0.3
+Estado: Aprobado
+```
+
+```text
+ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC.md
+Versión: v0.3
+Estado: Aprobado e integrado
+Decisión relacionada: DECISIÓN #027
+Cambio relacionado: CAMBIO #049
+Cambio de corrección previo: CAMBIO #048
+Nota: Especificación conceptual del ApprovalGate. No crea gate real.
+```
+
+---
+
+# ESTADO DE WIREFRAME v0.3
 
 Documento:
 
-**ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC**
+```text
+ROBERT_TECHNICAL_MVP_WIREFRAME.md
+```
 
-Versión actual:
+Versión:
 
-**v0.3**
+```text
+v0.3
+```
 
-Estado actual:
+Estado:
 
-**Aprobado e integrado**
+```text
+Aprobado e integrado
+Fuente física oficial vigente
+Normalización física completada
+```
 
 Relación formal:
 
-* CAMBIO #048 — Corrección de ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3.
-* DECISIÓN #027 — Aprobación de ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3.
-* CAMBIO #049 — Aprobación e integración de ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3.
+```text
+DECISIÓN #010 — Aprobación de ROBERT_TECHNICAL_MVP_WIREFRAME v0.3
+CAMBIO #010 — Actualización del wireframe técnico a v0.3
+CAMBIO #051 — Normalización de fuente física vigente de ROBERT_TECHNICAL_MVP_WIREFRAME v0.3
+```
 
-Fuente canónica:
+Archivo propuesta:
 
-**ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2 auditado**
+```text
+ROBERT_TECHNICAL_MVP_WIREFRAME_v0.3_PROPUESTA.md
+Estado: Eliminado previamente / no vigente / no fuente oficial / no requerido
+```
 
----
+Regla:
 
-### Qué define APPROVAL_GATE v0.3
-
-`APPROVAL_GATE v0.3` define de forma conceptual y documental cómo Robert debe decidir si una acción del usuario:
-
-* Puede continuar.
-* Requiere confirmación simple.
-* Requiere autorización documental.
-* Requiere aprobación formal.
-* Requiere integración documental.
-* Debe bloquearse por ser sensible en Fase 10.
-* Es una acción futura no disponible.
-* Debe pausarse o revocarse por control manual del usuario.
+```text
+La fuente conceptual y física vigente es ROBERT_TECHNICAL_MVP_WIREFRAME.md.
+La propuesta eliminada no debe recrearse.
+```
 
 ---
 
-### Correcciones integradas en APPROVAL_GATE v0.3
+# ESTADO DE APPROVAL_GATE v0.3
 
-`APPROVAL_GATE v0.3` corrige errores reales detectados en versiones anteriores.
+Documento:
 
-Correcciones principales:
+```text
+ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC.md
+```
 
-1. Reemplaza `MainCanvas` por `AppShell`.
-2. Corrige la lista de componentes participantes.
-3. Corrige la tabla de mapeo entre Gates y componentes.
-4. Corrige la tabla de dónde se muestra cada elemento.
-5. Corrige la tabla de correspondencia con `USER_ACTIONS_SPEC v0.2`.
-6. Usa las 20 acciones canónicas de `USER_ACTIONS_SPEC v0.2` auditado.
-7. Mantiene `ApprovalGate` como especificación conceptual, no como gate real.
-8. Confirma ACCIÓN 12 — Activar sandbox manual como `Gate 2 / Gate 7`.
-9. Alinea el documento con los 10 componentes canónicos aprobados.
-10. Excluye `MainCanvas` como componente oficial.
+Versión:
 
----
-
-### Estado de aprobación
-
-`APPROVAL_GATE v0.3` queda:
-
-**Aprobado e integrado**
-
-Esto significa que puede usarse como documento técnico conceptual dentro de Fase 10.
-
-No significa que exista un gate real.
-
-No significa que Robert pueda ejecutar acciones.
-
-No significa que se autorice programación.
-
-No significa que se autorice Fase 11.
-
----
-
-### Restricción
-
-Aprobar `APPROVAL_GATE v0.3` no autoriza:
-
-* Gate real.
-* Sistema real de autorización.
-* Programación.
-* Código real.
-* Pantallas reales.
-* Base de datos real.
-* Conexiones externas.
-* Automatizaciones.
-* Agentes autónomos.
-* Ejecución real.
-* Avanzar a Fase 11.
-
----
-
-## CAMBIO #047
-
-Cambio registrado:
-
-**CAMBIO #047 — Corrección de ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2**
+```text
+v0.3
+```
 
 Estado:
 
-**Registrado como antecedente de trazabilidad**
+```text
+Aprobado e integrado
+```
 
-Documento afectado:
+Relación formal:
 
-`ROBERT_TECHNICAL_USER_ACTIONS_SPEC.md`
-
-Versión afectada:
-
-`v0.2`
-
-Función:
-
-Reconocer la corrección/trazabilidad de `USER_ACTIONS_SPEC v0.2` frente al conflicto de versión, fuente vigente y trazabilidad.
-
-Clasificación relacionada:
-
-* TIPO 3 — Conflicto de versión.
-* TIPO 16 — Conflicto de fuente vigente.
-* TIPO 17 — Conflicto de trazabilidad insuficiente.
-
-Nota de control:
-
-`CAMBIO #047` debe mostrarse en la trazabilidad reciente para evitar un hueco aparente entre `CAMBIO #046` y `CAMBIO #048`.
-
----
-
-## CAMBIO #048
-
-Cambio registrado:
-
-**CAMBIO #048 — Corrección de ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3**
-
-Estado:
-
-**Registrado**
-
-Documento afectado:
-
-`ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC.md`
-
-Versión afectada:
-
-`v0.3`
+```text
+DECISIÓN #027 — Aprobación de ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3
+CAMBIO #049 — Aprobación e integración de ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3
+CAMBIO #048 — Corrección de ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3
+```
 
 Función:
 
-Registrar la creación/corrección de `APPROVAL_GATE v0.3` como propuesta corregida pendiente de revisión.
+```text
+Definir conceptualmente cómo Robert debe decidir si una acción del usuario puede continuar, requiere confirmación, requiere aprobación formal, debe pausarse o debe bloquearse.
+```
 
-Este cambio no aprobó `APPROVAL_GATE v0.3`.
+Regla:
 
-Este cambio no integró `APPROVAL_GATE v0.3`.
-
-Este cambio no creó una nueva decisión formal.
-
-Este cambio no autorizó programación, conexiones externas, automatizaciones, agentes ni Fase 11.
-
----
-
-## DECISIÓN #027
-
-Decisión registrada:
-
-**DECISIÓN #027 — Aprobación de ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3**
-
-Estado:
-
-**Aprobada**
-
-Documento relacionado:
-
-`ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC`
-
-Versión relacionada:
-
-`v0.3`
-
-Función:
-
-Aprobar formalmente `APPROVAL_GATE v0.3` como especificación técnica documental conceptual del MVP técnico básico de Robert.
-
-Restricción:
-
-Esta decisión no autoriza programación, código real, conexiones externas, automatizaciones, agentes autónomos, ejecución real ni Fase 11.
+```text
+APPROVAL_GATE v0.3 está aprobado e integrado como documento técnico conceptual.
+APPROVAL_GATE v0.3 no crea gate real.
+APPROVAL_GATE v0.3 no autoriza programación.
+APPROVAL_GATE v0.3 no autoriza ejecución real.
+APPROVAL_GATE v0.3 no autoriza Fase 11.
+```
 
 ---
 
-## CAMBIO #049
+# FUENTE CANÓNICA USADA PARA APPROVAL_GATE v0.3
 
-Cambio registrado:
+La fuente canónica usada para APPROVAL_GATE v0.3 es:
 
-**CAMBIO #049 — Aprobación e integración de ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3**
+```text
+ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2
+Estado: Aprobado e integrado
+DECISIÓN #017
+CAMBIO #028
+Antecedente de trazabilidad: CAMBIO #047
+Auditoría voluntaria: completada sin cambios de fondo
+```
 
-Estado:
+La auditoría voluntaria confirmó:
 
-**Aprobado e integrado**
+```text
+1. Lista canónica de 20 acciones.
+2. Numeración correcta de las 20 acciones.
+3. Uso de los 10 componentes canónicos.
+4. Inclusión de AppShell como componente oficial.
+5. Exclusión de MainCanvas como componente oficial.
+6. ACCIÓN 12 mapeada correctamente como Gate 2 / Gate 7.
+7. Uso como referencia canónica para corregir APPROVAL_GATE v0.3.
+```
 
-Documento afectado:
+Lista canónica de 20 acciones:
 
-`ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC.md`
+```text
+ACCIÓN 1 — ESCRIBIR COMANDO
+ACCIÓN 2 — SELECCIONAR DOCUMENTO
+ACCIÓN 3 — REVISAR ESTADO GENERAL
+ACCIÓN 4 — CREAR DOCUMENTO TÉCNICO
+ACCIÓN 5 — CORREGIR DOCUMENTO TÉCNICO
+ACCIÓN 6 — APROBAR DOCUMENTO
+ACCIÓN 7 — REGISTRAR DECISIÓN
+ACCIÓN 8 — REGISTRAR CAMBIO
+ACCIÓN 9 — ACTUALIZAR HOME
+ACCIÓN 10 — ACTUALIZAR README
+ACCIÓN 11 — CAMBIAR MODO
+ACCIÓN 12 — ACTIVAR SANDBOX MANUAL
+ACCIÓN 13 — PAUSAR AVANCE
+ACCIÓN 14 — BLOQUEAR ACCIÓN
+ACCIÓN 15 — VER DECISIONES PENDIENTES
+ACCIÓN 16 — RESOLVER DECISIÓN PENDIENTE
+ACCIÓN 17 — VER MAPA DOCUMENTAL
+ACCIÓN 18 — MARCAR RESPALDO MANUAL EN GITHUB
+ACCIÓN 19 — SOLICITAR REVISIÓN CRÍTICA
+ACCIÓN 20 — PEDIR SIGUIENTE PASO
+```
 
-Versión afectada:
+Componentes canónicos confirmados:
 
-`v0.3`
+```text
+1. AppShell
+2. TopBar
+3. LeftSidebar
+4. CommandCenter
+5. ModeSelector
+6. RiskBadge
+7. ApprovalGate
+8. DecisionInbox
+9. DocumentStatusMap
+10. CurrentStatePanel
+```
 
-Función:
+Regla:
 
-Registrar la aprobación formal e integración documental de `APPROVAL_GATE v0.3`.
-
-Este cambio autoriza únicamente:
-
-* Marcar `APPROVAL_GATE v0.3` como aprobado e integrado.
-* Integrarlo al estado documental actual de Robert.
-* Usarlo como especificación conceptual de ApprovalGate.
-* Actualizar `ROBERT_HOME` y `README` para reflejar su nuevo estado.
-
-Este cambio no autoriza:
-
-* Programar ApprovalGate.
-* Crear código real.
-* Crear botones reales.
-* Crear pantallas reales.
-* Crear prototipo funcional.
-* Crear sistema real de autorización.
-* Crear sistema real de permisos.
-* Crear base de datos real.
-* Conectar Supabase.
-* Conectar Firebase.
-* Conectar GitHub automáticamente.
-* Conectar Gmail.
-* Conectar Google Calendar.
-* Conectar APIs externas.
-* Automatizar acciones.
-* Activar agentes autónomos.
-* Ejecutar acciones reales.
-* Avanzar automáticamente a Fase 11.
-
----
-
-## DECISIÓN #028
-
-Decisión registrada:
-
-**DECISIÓN #028 — Aprobación de ROBERT_HOME v0.11**
-
-Estado:
-
-**Aprobada**
-
-Documento relacionado:
-
-`ROBERT_HOME`
-
-Versión relacionada:
-
-`v0.11`
-
-Función:
-
-Aprobar formalmente `ROBERT_HOME v0.11` como versión corregida del punto central de navegación, estado, núcleo visual y control del sistema Robert.
-
-Restricción:
-
-Esta decisión no autoriza programación, código real, conexiones externas, automatizaciones, agentes autónomos, ejecución real ni Fase 11.
+```text
+MainCanvas no forma parte de la lista canónica de componentes aprobados.
+MainCanvas no debe usarse como componente oficial.
+```
 
 ---
 
-## CAMBIO #050
+# ENLACES CENTRALES DEL SISTEMA
 
-Cambio registrado:
+## Documentos base
 
-**CAMBIO #050 — Aprobación e integración de ROBERT_HOME v0.11**
-
-Estado:
-
-**Aprobado e integrado**
-
-Documento afectado:
-
-`ROBERT_HOME.md`
-
-Versión afectada:
-
-`v0.11`
-
-Función:
-
-Registrar la aprobación formal e integración documental de `ROBERT_HOME v0.11`.
-
-Este cambio autoriza únicamente:
-
-* Marcar `ROBERT_HOME v0.11` como aprobado e integrado.
-* Integrarlo al estado documental actual de Robert.
-* Usarlo como punto central vigente de navegación, estado y control documental.
-* Reconocer `ROBERT_VISUAL_REFERENCE` como documento visual correcto dentro del HOME.
-* Reconocer `CAMBIO #047` dentro de la trazabilidad reciente.
-* Actualizar `README` para reflejar el nuevo estado de `ROBERT_HOME v0.11`.
-
-Este cambio no autoriza:
-
-* Programar Robert.
-* Crear código real.
-* Crear pantallas reales.
-* Crear prototipo funcional.
-* Crear base de datos real.
-* Crear gate real.
-* Crear sistema real de autorización.
-* Conectar GitHub automáticamente.
-* Conectar Obsidian automáticamente.
-* Conectar Gmail.
-* Conectar Google Calendar.
-* Conectar APIs externas.
-* Automatizar acciones.
-* Activar agentes autónomos.
-* Ejecutar acciones reales.
-* Avanzar automáticamente a Fase 11.
+```text
+[[ROBERT_HOME]]
+[[ROBERT_CONTEXT_MASTER]]
+[[ROBERT_COMMANDS]]
+[[ROBERT_DECISIONS_LOG]]
+[[ROBERT_CONTROL_DE_CAMBIOS]]
+[[ROBERT_SECURITY_RULES]]
+[[ROBERT_PHASES]]
+[[ROBERT_MODULES]]
+[[ROBERT_VISUAL_REFERENCE]]
+[[ROBERT_PROMPTS]]
+[[ROBERT_SYSTEM_ARCHITECTURE]]
+[[ROBERT_MVP_PLAN]]
+```
 
 ---
 
-## Convención visual de Obsidian
+## MVP técnico
 
-Robert cuenta con una convención visual validada para representar su estructura documental dentro de Obsidian Graph View.
-
-Esta convención usa:
-
-* Órbitas.
-* Capas.
-* Colores semánticos.
-* Wikilinks.
-* Etiquetas.
-* Grupos visuales.
-
-### Regla visual principal
-
-**Órbita = posición / cercanía al núcleo**
-
-**Capa o función = color visual**
-
-### Centro visual
-
-El centro visual del grafo es:
-
-**ROBERT_HOME**
-
-### Centro conceptual
-
-El centro conceptual del sistema es:
-
-**ROBERT_CONTEXT_MASTER**
-
-### Documento visual correcto
-
-El documento visual correcto es:
-
-**ROBERT_VISUAL_REFERENCE**
-
-### Estado de ROBERT_CORE
-
-No se crea todavía un archivo llamado ROBERT_CORE.
-
-Robert Core se mantiene como idea abstracta del sistema, no como documento activo.
-
-### Alcance
-
-Esta convención aplica únicamente a la navegación visual documental dentro de Obsidian.
-
-No autoriza:
-
-* Programar el HUD final.
-* Conectar Obsidian automáticamente con GitHub.
-* Automatizar cambios documentales.
-* Crear agentes visuales.
-* Activar apps externas.
-* Ejecutar acciones reales.
+```text
+[[ROBERT_TECHNICAL_MVP_PLAN]]
+[[ROBERT_TECHNICAL_MVP_WIREFRAME]]
+[[ROBERT_TECHNICAL_COMPONENTS_SPEC]]
+[[ROBERT_TECHNICAL_DATA_MODEL_SPEC]]
+[[ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC]]
+[[ROBERT_TECHNICAL_SCREEN_STATE_SPEC]]
+[[ROBERT_TECHNICAL_USER_ACTIONS_SPEC]]
+[[ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC]]
+[[ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC]]
+[[ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC]]
+[[ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC]]
+[[ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC]]
+[[ROBERT_TECHNICAL_DOCUMENT_LIFECYCLE_SPEC]]
+[[ROBERT_TECHNICAL_VERSIONING_AND_CHANGE_POLICY_SPEC]]
+[[ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC]]
+[[ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC]]
+```
 
 ---
 
-## Escala oficial de riesgo
+## Sandbox
 
-Robert usa la escala oficial:
+```text
+[[ROBERT_SANDBOX]]
+[[SANDBOX_RULES]]
+[[SANDBOX_TESTS]]
+[[SANDBOX_RESULTS]]
+```
+
+---
+
+# PRIORIDAD ACTUAL
+
+Prioridad actual real:
+
+```text
+1. Reemplazar ROBERT_HOME con v0.12 como propuesta corregida pendiente de revisión.
+2. Revisar ROBERT_HOME v0.12 completo.
+3. Confirmar que HOME v0.12 elimina la pendiente de normalización física del wireframe.
+4. Confirmar que HOME v0.12 reconoce CAMBIO #051.
+5. Confirmar que HOME v0.12 mantiene ROBERT_TECHNICAL_MVP_WIREFRAME.md como fuente física oficial vigente.
+6. Confirmar que HOME v0.12 no recrea la propuesta eliminada.
+7. Actualizar README después de HOME v0.12 si se acepta la corrección.
+8. Mantener APPROVAL_GATE v0.3 como aprobado e integrado.
+9. Mantener ROBERT_VISUAL_REFERENCE como documento visual correcto.
+10. Mantener Fase 10 sin programación.
+11. Mantener GitHub y Obsidian manuales.
+12. Definir el siguiente documento técnico solo con autorización del usuario.
+13. No avanzar a programación.
+14. No avanzar a Fase 11.
+```
+
+---
+
+# PRÓXIMOS PASOS
+
+Próximos pasos recomendados:
+
+```text
+Paso 1:
+Reemplazar ROBERT_HOME con v0.12.
+
+Paso 2:
+Revisar ROBERT_HOME v0.12 completo.
+
+Paso 3:
+Si ROBERT_HOME v0.12 queda correcto, actualizar README para reflejar:
+
+- ROBERT_HOME v0.12 como propuesta corregida pendiente de revisión.
+- CAMBIO #051 registrado.
+- Fuente física del wireframe v0.3 normalizada.
+- ROBERT_TECHNICAL_MVP_WIREFRAME.md como fuente física oficial vigente.
+- Archivo propuesta eliminado previamente / no vigente / no requerido.
+- APPROVAL_GATE v0.3 aprobado e integrado.
+- ROBERT_HOME v0.11 aprobado e integrado.
+- Sin programación.
+- Sin conexiones.
+- Sin automatizaciones.
+- Sin agentes.
+- Sin Fase 11.
+
+Paso 4:
+No aprobar HOME automáticamente.
+
+Paso 5:
+Si el usuario decide aprobar HOME v0.12, deberá escribir:
+
+APRUEBO ROBERT_HOME v0.12
+
+Paso 6:
+Solo después de esa aprobación explícita:
+
+- Registrar decisión formal.
+- Registrar cambio de aprobación e integración.
+- Actualizar README si aplica.
+
+Paso 7:
+No avanzar a programación.
+No activar conexiones.
+No activar automatizaciones.
+No activar agentes.
+No avanzar a Fase 11.
+```
+
+---
+
+# REGLAS PRINCIPALES ACTIVAS
+
+```text
+El usuario manda.
+Robert no ejecuta acciones importantes sin permiso.
+Primero orden. Después poder.
+Simular no es ejecutar.
+Preparar no es enviar.
+Diseñar no es activar.
+Proponer no es decidir.
+Aprobar no es ejecutar.
+Documento técnico no es sistema real.
+ApprovalGate conceptual no es gate real.
+Fase 10 no autoriza programación.
+Fase 10 no autoriza conexiones externas.
+Fase 10 no autoriza automatizaciones reales.
+Fase 10 no autoriza agentes autónomos.
+```
+
+---
+
+# ACCIONES DE CONTROL
+
+Las acciones de control están fuera de la escala de riesgo.
+
+Comandos de control:
+
+```text
+DETENTE
+PAUSA
+NO_AVANCES
+NO SIGAS
+CANCELA
+BLOQUEA
+NO EJECUTES
+SOLO BORRADOR
+REVOCA_AUTONOMIA
+VOLVER_A_MANUAL
+```
+
+Regla:
+
+```text
+Si el usuario usa una acción de control, Robert debe obedecer inmediatamente.
+```
+
+---
+
+# ESCALA DE RIESGO ACTUAL
 
 ```text
 Nivel 0 — Informativo
@@ -699,133 +958,411 @@ Nivel 3 — Alto
 Nivel 4 — Crítico
 ```
 
-Regla:
+Regla corregida:
 
 ```text
-No existe Nivel 5 como riesgo.
-Nivel 5 solo puede existir como autonomía, no como riesgo.
+Nivel 0 = Informativo
+Acciones de control = fuera de la escala de riesgo
 ```
 
 ---
 
-## Acciones de control fuera de la escala de riesgo
+# AUTONOMÍA ACTUAL
 
-Las acciones de control no se clasifican como riesgo cuando funcionan para proteger al usuario o detener avance.
-
-Ejemplos:
-
-* DETENTE
-* PAUSA
-* NO_AVANCES
-* SOLO_BORRADOR
-* BLOQUEA
-* CANCELA
-* NO_EJECUTES
-* REVOCA_AUTONOMIA
-* VOLVER_A_MANUAL
-
-Regla:
+Nivel de autonomía actual:
 
 ```text
-Las acciones de control están fuera de la escala de riesgo.
-El riesgo pertenece a la acción original que se intenta detener, bloquear o limitar.
+Nivel 0 — Sin autonomía ejecutiva
+```
+
+Robert puede:
+
+```text
+Explicar
+Resumir
+Ordenar
+Proponer
+Redactar documentos
+Corregir documentos
+Detectar contradicciones
+Sugerir siguientes pasos
+Preparar bloques para copiar/pegar
+```
+
+Robert no puede:
+
+```text
+Ejecutar acciones reales
+Programar
+Crear sistemas reales
+Conectar apps
+Automatizar flujos
+Modificar GitHub automáticamente
+Modificar Obsidian automáticamente
+Enviar correos
+Crear bases de datos
+Activar agentes autónomos
+Avanzar de fase por su cuenta
 ```
 
 ---
 
-## Restricciones activas de Fase 10
+# ESTADO DE GITHUB
 
-Robert permanece en:
+Repositorio:
 
-**Fase 10 — MVP técnico básico en preparación**
+```text
+ROBERT_MASTER_SYSTEM
+```
 
-En esta fase no está autorizado:
+Uso autorizado:
 
-* Programar.
-* Crear código real.
-* Crear pantallas reales.
-* Crear base de datos real.
-* Crear sistema real de autorización.
-* Crear gate real.
-* Conectar GitHub automáticamente.
-* Conectar Obsidian automáticamente.
-* Conectar Gmail.
-* Conectar Google Calendar.
-* Conectar Drive.
-* Conectar WhatsApp.
-* Conectar CRM.
-* Conectar APIs externas.
-* Automatizar flujos.
-* Enviar correos reales.
-* Crear eventos reales.
-* Contactar clientes reales.
-* Activar agentes autónomos.
-* Ejecutar acciones reales.
-* Avanzar automáticamente a Fase 11.
+```text
+Respaldo documental privado
+Control de versiones manual
+Historial manual de cambios
+Base documental para futura fase técnica
+```
 
----
+No autorizado:
 
-## Estado final del README
+```text
+Commits automáticos
+Sincronización automática
+Agentes modificando archivos
+Conexiones automáticas
+Automatización de GitHub
+```
 
-Este README queda actualizado para reflejar:
+Últimas acciones manuales relevantes:
 
-* Fase 10 activa.
-* Modo documental, manual y supervisado.
-* ROBERT_HOME v0.11 aprobado e integrado.
-* DECISIÓN #028 registrada.
-* CAMBIO #050 registrado.
-* CAMBIO #047 reconocido como antecedente de trazabilidad.
-* USER_ACTIONS_SPEC v0.2 aprobado, integrado y auditado voluntariamente.
-* USER_ACTIONS_SPEC v0.2 como fuente canónica usada para APPROVAL_GATE v0.3.
-* APPROVAL_GATE v0.3 aprobado e integrado.
-* DECISIÓN #027 registrada.
-* CAMBIO #049 registrado.
-* ROBERT_VISUAL_REFERENCE como documento visual correcto.
-* AppShell como componente canónico.
-* MainCanvas excluido como componente canónico.
-* ApprovalGate como especificación conceptual.
-* Sin gate real.
-* Sin programación.
-* Sin conexiones.
-* Sin automatizaciones.
-* Sin agentes.
-* Sin Fase 11.
+```text
+DECISIÓN #028 registrada manualmente
+CAMBIO #050 registrado manualmente
+ROBERT_HOME v0.11 aprobado e integrado
+CAMBIO #051 registrado manualmente
+Fuente física del wireframe v0.3 normalizada
+ROBERT_HOME v0.12 preparado como propuesta corregida pendiente de revisión
+```
 
 ---
 
-## Siguiente paso recomendado
+# ESTADO DE OBSIDIAN
 
-El siguiente paso documental es hacer una pausa de cierre y revisar el estado general antes de crear cualquier documento nuevo.
+Uso actual:
 
-Posibles siguientes pasos, solo con autorización explícita del usuario:
+```text
+Cerebro documental manual
+Organización por carpetas
+Grafo visual conceptual
+Lectura y navegación de documentos
+```
 
-1. Revisar estado documental general.
-2. Normalizar la fuente física del wireframe v0.3.
-3. Definir el siguiente documento técnico de Fase 10.
-4. Pausar y cerrar el bloque actual.
+No autorizado:
 
-No debe avanzarse automáticamente.
+```text
+Sincronización automática
+Automatización de notas
+Agentes modificando archivos
+Conexiones automáticas
+```
+
+Documento visual correcto:
+
+```text
+ROBERT_VISUAL_REFERENCE
+```
 
 ---
 
-## Cierre
+# FASES DEL PROYECTO
 
-Robert continúa en:
+Estado resumido:
 
-**Fase 10 — MVP técnico básico en preparación**
+```text
+Fase 1 — Identidad y visión: completada
+Fase 2 — Documentos maestros: completada
+Fase 3 — Fuente central de verdad: completada
+Fase 4 — Comandos: completada
+Fase 5 — Módulos: completada
+Fase 6 — Arquitectura conceptual: completada
+Fase 7 — Diseño visual/UX: en evolución conceptual
+Fase 8 — MVP manual: validado
+Fase 9 — Sandbox manual: validado
+Fase 10 — MVP técnico básico: en preparación
+Fase 11 — Conexión de herramientas: no autorizada
+Fase 12 — Automatizaciones controladas: no autorizada
+Fase 13 — Voz/multimodal: futura
+Fase 14 — Agentes especializados: futura
+Fase 15 — Business Builder avanzado: futura
+Fase 16 — Seguridad avanzada/pruebas: futura
+Fase 17 — Iteraciones: futura
+```
 
-Modo actual:
+Fase activa:
 
-**Documental, manual y supervisado**
+```text
+Fase 10 — MVP técnico básico en preparación
+```
 
-Regla central:
+---
 
-**El usuario manda. Robert no ejecuta acciones importantes sin permiso.**
+# CONTROL DE VERSIONES DE ROBERT_HOME
 
-`ROBERT_HOME v0.11` queda aprobado e integrado.
+| Versión | Estado                                      | Descripción                                                                                                                                                                        |
+| ------- | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| v0.1    | Inicial                                     | Primer documento HOME del sistema                                                                                                                                                  |
+| v0.2    | Actualización                               | Se integró dirección general del proyecto Robert                                                                                                                                   |
+| v0.3    | Base actualizada                            | Se organizaron documentos maestros y navegación inicial                                                                                                                            |
+| v0.4    | Parcial / inconsistente                     | Se agregaron múltiples logs de avances, pero la parte superior quedó desactualizada                                                                                                |
+| v0.5    | Propuesta corregida no cerrada              | Se reconcilió HOME con Fase 10, pero quedaron huecos de wireframe, trazabilidad y tag de núcleo                                                                                    |
+| v0.6    | Propuesta corregida no cerrada              | Se corrigió fuente vigente del wireframe, trazabilidad pendiente de APPROVAL_GATE y tag #robert/nucleo, pero faltó tarea operativa para normalizar el archivo físico del wireframe |
+| v0.7    | Propuesta corregida no cerrada              | Se agregó tarea manual para resolver la fuente física vigente del wireframe v0.3, pero aún faltaba trazabilidad formal del propio HOME                                             |
+| v0.8    | Aprobado e integrado                        | Se cita CAMBIO #045 para cerrar trazabilidad acumulada de HOME v0.5–v0.7 y se integra mediante DECISIÓN #026 / CAMBIO #046                                                         |
+| v0.9    | Propuesta corregida pendiente de revisión   | Actualizó HOME después de CAMBIO #048 y reconoció APPROVAL_GATE v0.3 como propuesta corregida pendiente de revisión                                                                |
+| v0.10   | Propuesta corregida con conflicto detectado | Actualizó HOME después de DECISIÓN #027 / CAMBIO #049, pero omitió CAMBIO #047 y mantuvo ROBERT_VISUAL en lugar de ROBERT_VISUAL_REFERENCE                                         |
+| v0.11   | Aprobado e integrado                        | Corrigió trazabilidad de CAMBIO #047 y reemplazó ROBERT_VISUAL por ROBERT_VISUAL_REFERENCE                                                                                         |
+| v0.12   | Propuesta corregida pendiente de revisión   | Actualiza HOME después de CAMBIO #051 y cierra la pendiente de normalización física del wireframe v0.3                                                                             |
 
-`APPROVAL_GATE v0.3` queda aprobado e integrado como especificación técnica documental conceptual.
+---
 
-`ROBERT_VISUAL_REFERENCE` queda reconocido como documento visual correcto.
+# MOTIVO DE v0.12
+
+ROBERT_HOME v0.12 existe para corregir:
+
+```text
+1. La pendiente de normalización física del wireframe v0.3.
+2. La referencia a posible duplicidad entre ROBERT_TECHNICAL_MVP_WIREFRAME.md y ROBERT_TECHNICAL_MVP_WIREFRAME_v0.3_PROPUESTA.md.
+3. La necesidad de reflejar CAMBIO #051.
+4. La necesidad de reconocer que ROBERT_TECHNICAL_MVP_WIREFRAME.md es la fuente física oficial vigente.
+5. La necesidad de registrar que la propuesta v0.3 ya fue eliminada previamente y no debe recrearse.
+```
+
+---
+
+# ESTADO DE DOCUMENTOS Y CAMBIOS RECIENTES
+
+## Aprobaciones recientes
+
+```text
+DECISIÓN #027 — Aprobación de ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3
+CAMBIO #049 — Aprobación e integración de ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3
+
+DECISIÓN #028 — Aprobación de ROBERT_HOME v0.11
+CAMBIO #050 — Aprobación e integración de ROBERT_HOME v0.11
+```
+
+---
+
+## Cambios recientes registrados
+
+```text
+CAMBIO #047 — Corrección de ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2
+Estado: Registrado como antecedente de corrección / trazabilidad
+Función: Resolver conflicto de versión, fuente vigente y trazabilidad de USER_ACTIONS_SPEC v0.2
+```
+
+```text
+CAMBIO #048 — Corrección de ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3
+Estado: Registrado
+Función: Registrar APPROVAL_GATE v0.3 como propuesta corregida pendiente de revisión antes de su aprobación formal
+```
+
+```text
+CAMBIO #049 — Aprobación e integración de ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3
+Estado: Aprobado e integrado
+Función: Registrar APPROVAL_GATE v0.3 como documento técnico conceptual aprobado e integrado
+```
+
+```text
+CAMBIO #050 — Aprobación e integración de ROBERT_HOME v0.11
+Estado: Aprobado e integrado
+Función: Registrar ROBERT_HOME v0.11 como documento maestro aprobado e integrado
+```
+
+```text
+CAMBIO #051 — Normalización de fuente física vigente de ROBERT_TECHNICAL_MVP_WIREFRAME v0.3
+Estado: Registrado
+Función: Confirmar ROBERT_TECHNICAL_MVP_WIREFRAME.md como fuente física oficial vigente y aclarar que la propuesta eliminada no debe recrearse
+```
+
+---
+
+# NORMALIZACIÓN DEL WIREFRAME
+
+Estado:
+
+```text
+Completada mediante CAMBIO #051
+```
+
+Fuente física oficial vigente:
+
+```text
+ROBERT_TECHNICAL_MVP_WIREFRAME.md
+```
+
+Versión:
+
+```text
+v0.3
+```
+
+Estado:
+
+```text
+Aprobado e integrado
+```
+
+Archivo propuesta:
+
+```text
+ROBERT_TECHNICAL_MVP_WIREFRAME_v0.3_PROPUESTA.md
+```
+
+Estado:
+
+```text
+Eliminado previamente
+No vigente
+No fuente oficial
+No requerido
+No recrear
+```
+
+---
+
+# DOCUMENTO TÉCNICO RECIÉN NORMALIZADO
+
+```text
+ROBERT_TECHNICAL_MVP_WIREFRAME.md
+Estado: Fuente física oficial vigente
+Versión: v0.3
+Estado documental: Aprobado e integrado
+Cambio de normalización: CAMBIO #051
+```
+
+Regla:
+
+```text
+La normalización no cambia el contenido aprobado del wireframe.
+Solo elimina la ambigüedad física entre archivo oficial y archivo propuesta.
+```
+
+---
+
+# CRITERIOS PARA REVISAR ROBERT_HOME v0.12
+
+ROBERT_HOME v0.12 podrá considerarse correcto si:
+
+* Refleja Fase 10 como fase activa.
+* Reconoce ROBERT_HOME v0.11 como aprobado e integrado.
+* Reconoce ROBERT_HOME v0.12 como propuesta corregida pendiente de revisión.
+* Reconoce CAMBIO #051.
+* Elimina la pendiente de normalización física del wireframe.
+* Reconoce ROBERT_TECHNICAL_MVP_WIREFRAME.md como fuente física oficial vigente.
+* Reconoce ROBERT_TECHNICAL_MVP_WIREFRAME_v0.3_PROPUESTA.md como eliminado previamente / no vigente / no requerido.
+* Indica que la propuesta no debe recrearse.
+* Mantiene APPROVAL_GATE v0.3 como aprobado e integrado.
+* Mantiene ROBERT_VISUAL_REFERENCE como documento visual correcto.
+* Mantiene USER_ACTIONS_SPEC v0.2 como aprobado, integrado y auditado.
+* Reconoce CAMBIO #047 como antecedente de trazabilidad.
+* Mantiene AppShell como componente canónico.
+* Excluye MainCanvas como componente canónico.
+* Mantiene ApprovalGate como especificación conceptual.
+* No convierte ApprovalGate en gate real.
+* Actualiza prioridades actuales.
+* Actualiza próximos pasos.
+* Mantiene restricciones de Fase 10.
+* No autoriza programación.
+* No autoriza código real.
+* No autoriza gate real.
+* No autoriza conexiones externas.
+* No autoriza automatizaciones.
+* No autoriza agentes autónomos.
+* No autoriza Fase 11.
+* Mantiene control total del usuario.
+
+---
+
+# DECISIÓN PENDIENTE SOBRE ROBERT_HOME v0.12
+
+Este documento queda como:
+
+```text
+ROBERT_HOME v0.12
+Estado: Propuesta corregida — pendiente de revisión
+Cambio relacionado: CAMBIO #051
+```
+
+Para aprobarlo formalmente como nueva versión integrada, el usuario deberá escribir:
+
+```text
+APRUEBO ROBERT_HOME v0.12
+```
+
+Mientras eso no ocurra:
+
+```text
+ROBERT_HOME v0.12 no queda aprobado.
+ROBERT_HOME v0.12 no queda integrado.
+ROBERT_HOME v0.11 sigue siendo la última versión aprobada e integrada.
+```
+
+---
+
+# EFECTO DE UNA APROBACIÓN FUTURA DE HOME v0.12
+
+Si se aprueba ROBERT_HOME v0.12:
+
+1. Registrar decisión formal en `ROBERT_DECISIONS_LOG`.
+2. Registrar cambio de aprobación e integración en `ROBERT_CONTROL_DE_CAMBIOS`.
+3. Actualizar README.
+4. Mantener wireframe v0.3 como fuente física oficial vigente.
+5. Mantener el archivo propuesta como eliminado previamente / no vigente / no requerido.
+6. Mantener APPROVAL_GATE v0.3 como aprobado e integrado.
+7. Mantener ROBERT_VISUAL_REFERENCE como documento visual correcto.
+8. Mantener Robert en Fase 10.
+9. No programar.
+10. No conectar apps.
+11. No automatizar.
+12. No activar agentes.
+13. No avanzar a Fase 11.
+
+---
+
+# CIERRE
+
+ROBERT_HOME v0.12 actualiza el punto central de navegación del sistema Robert después de la normalización física del wireframe v0.3.
+
+El HOME ahora refleja el estado real:
+
+```text
+Fase 10 — MVP técnico básico en preparación
+Modo documental, manual y supervisado
+ROBERT_HOME v0.11 aprobado e integrado
+ROBERT_HOME v0.12 como propuesta corregida pendiente de revisión
+CAMBIO #051 registrado
+Wireframe v0.3 aprobado e integrado
+ROBERT_TECHNICAL_MVP_WIREFRAME.md como fuente física oficial vigente
+ROBERT_TECHNICAL_MVP_WIREFRAME_v0.3_PROPUESTA.md eliminado previamente / no vigente / no requerido
+No recrear la propuesta
+USER_ACTIONS_SPEC v0.2 aprobado, integrado y auditado voluntariamente
+APPROVAL_GATE v0.3 aprobado e integrado
+ROBERT_VISUAL_REFERENCE como documento visual correcto
+AppShell como componente canónico
+MainCanvas excluido como componente canónico
+ApprovalGate como especificación conceptual
+Sin programación autorizada
+Sin código real
+Sin gate real
+Sin ejecución real
+Sin conexiones externas
+Sin automatizaciones reales
+Sin agentes autónomos
+Sin Fase 11
+```
+
+Robert continúa bajo control total del usuario.
 
 Robert no ejecuta acciones importantes sin permiso.
