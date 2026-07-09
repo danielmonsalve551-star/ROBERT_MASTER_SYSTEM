@@ -8539,6 +8539,215 @@ Aprobar este documento no equivale a ejecutar ApprovalGate.
 
 Robert no ejecuta acciones importantes sin permiso.
 
+## CAMBIO #051 — Normalización de fuente física vigente de ROBERT_TECHNICAL_MVP_WIREFRAME v0.3
+
+Fecha: 09/07/2026
+Estado: Registrado
+Tipo de cambio: Normalización documental / fuente física vigente / wireframe
+Documento afectado: ROBERT_TECHNICAL_MVP_WIREFRAME.md
+Versión afectada: v0.3
+Ubicación: 10_MVP
+Decisión relacionada: DECISIÓN #010 — Aprobación de ROBERT_TECHNICAL_MVP_WIREFRAME v0.3
+Cambio relacionado previo: CAMBIO #010 — Actualización del wireframe técnico a v0.3
+Fase relacionada: Fase 10 — MVP técnico básico en preparación
+
+---
+
+### Cambio realizado
+
+Se registra la normalización de la fuente física vigente del wireframe técnico aprobado de Robert.
+
+El archivo oficial vigente queda como:
+
+```text
+10_MVP/ROBERT_TECHNICAL_MVP_WIREFRAME.md
+```
+
+El archivo de propuesta ya no existe en la fuente física actual:
+
+```text
+10_MVP/ROBERT_TECHNICAL_MVP_WIREFRAME_v0.3_PROPUESTA.md
+```
+
+Estado del archivo propuesta:
+
+```text
+Eliminado previamente / no vigente / no fuente oficial
+```
+
+---
+
+### Motivo del cambio
+
+Se mantenía una pendiente documental sobre la fuente física vigente del wireframe v0.3.
+
+Aunque conceptualmente `ROBERT_TECHNICAL_MVP_WIREFRAME v0.3` ya estaba aprobado, existía una posible ambigüedad entre:
+
+```text
+ROBERT_TECHNICAL_MVP_WIREFRAME.md
+ROBERT_TECHNICAL_MVP_WIREFRAME_v0.3_PROPUESTA.md
+```
+
+El usuario confirmó que el archivo de propuesta ya había sido eliminado previamente.
+
+Por lo tanto, no se crea ni se restaura ningún archivo histórico adicional.
+
+Esta normalización deja claro que solo existe una fuente física vigente para el wireframe v0.3.
+
+---
+
+### Fuente oficial vigente
+
+A partir de esta normalización, la fuente física oficial vigente es:
+
+```text
+ROBERT_TECHNICAL_MVP_WIREFRAME.md
+```
+
+Versión:
+
+```text
+v0.3
+```
+
+Estado:
+
+```text
+Aprobado e integrado
+```
+
+---
+
+### Archivo propuesta
+
+El archivo:
+
+```text
+ROBERT_TECHNICAL_MVP_WIREFRAME_v0.3_PROPUESTA.md
+```
+
+queda reconocido como:
+
+```text
+Eliminado previamente
+No vigente
+No fuente oficial
+No requerido para continuar
+```
+
+Regla:
+
+```text
+No recrear la propuesta.
+No restaurar el archivo eliminado.
+No mantener dos fuentes físicas paralelas.
+```
+
+---
+
+### Alcance autorizado
+
+Este cambio autoriza únicamente:
+
+* Confirmar `ROBERT_TECHNICAL_MVP_WIREFRAME.md` como fuente física oficial vigente.
+* Registrar que la propuesta v0.3 ya no existe como archivo físico activo.
+* Eliminar la ambigüedad entre archivo oficial y archivo propuesta.
+* Actualizar `ROBERT_HOME` y `README` para reflejar que la normalización física del wireframe v0.3 quedó completada.
+
+---
+
+### Alcance no autorizado
+
+Este cambio no autoriza:
+
+* Programación.
+* Código real.
+* Pantallas reales.
+* Prototipo funcional.
+* Base de datos real.
+* Gate real.
+* Sistema real de autorización.
+* Conexiones externas.
+* Automatizaciones reales.
+* Agentes autónomos.
+* Ejecución real.
+* Avanzar a Fase 11.
+
+---
+
+### Riesgo
+
+Tipo de cambio:
+
+**Normalización documental / fuente física vigente**
+
+Nivel de riesgo inicial:
+
+**Nivel 2 — Medio**
+
+Motivo:
+
+El cambio afecta la fuente física vigente de un documento técnico aprobado.
+
+Nivel de riesgo final:
+
+**Nivel 1 — Bajo**
+
+Motivo:
+
+La normalización no cambia el contenido aprobado del wireframe. Solo elimina ambigüedad física entre archivo oficial y archivo propuesta.
+
+Nivel de autonomía:
+
+**Nivel 0 — Sin autonomía ejecutiva**
+
+---
+
+### Estado final
+
+`ROBERT_TECHNICAL_MVP_WIREFRAME.md` queda como:
+
+```text
+Fuente física oficial vigente
+Versión: v0.3
+Estado: Aprobado e integrado
+```
+
+`ROBERT_TECHNICAL_MVP_WIREFRAME_v0.3_PROPUESTA.md` queda como:
+
+```text
+Eliminado previamente
+No vigente
+No fuente oficial
+No requerido
+```
+
+---
+
+### Siguiente paso
+
+Actualizar:
+
+1. `ROBERT_HOME`
+2. `README`
+
+Ambos deben reflejar que la normalización física del wireframe v0.3 quedó completada mediante:
+
+```text
+CAMBIO #051
+```
+
+---
+
+### Nota de control
+
+Esta normalización no cambia el contenido aprobado del wireframe.
+
+Solo define cuál archivo físico queda vigente y aclara que el archivo propuesta ya no existe como fuente activa.
+
+Robert continúa en modo documental, manual y supervisado.
+
+Robert no ejecuta acciones importantes sin permiso.
 
 
 
