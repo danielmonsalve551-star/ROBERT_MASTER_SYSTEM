@@ -3874,3 +3874,133 @@ Esta decisión aprueba únicamente `ROBERT_HOME v0.11` como documento maestro ac
 
 No autoriza programación, código real, conexiones externas, automatizaciones, agentes autónomos ni Fase 11.
 
+## DECISIÓN #029 — Aprobación de ROBERT_HOME v0.12
+
+Fecha: 09/07/2026
+Estado: Aprobada
+Nivel de impacto: Nivel 2 — Medio
+Documento relacionado: ROBERT_HOME
+Versión relacionada: v0.12
+Fase relacionada: Fase 10 — MVP técnico básico en preparación
+Cambio relacionado: CAMBIO #051 — Normalización de fuente física vigente de ROBERT_TECHNICAL_MVP_WIREFRAME v0.3
+
+---
+
+### Decisión
+
+Se aprueba formalmente `ROBERT_HOME v0.12` como versión corregida del punto central de navegación, estado, núcleo visual y control documental del sistema Robert.
+
+---
+
+### Motivo
+
+Se aprueba porque `ROBERT_HOME v0.12` actualiza correctamente el estado documental después de la normalización física del wireframe v0.3.
+
+La versión v0.12 corrige:
+
+1. Reconocimiento de `CAMBIO #051`.
+2. Cierre de la pendiente de normalización física del wireframe v0.3.
+3. Confirmación de `ROBERT_TECHNICAL_MVP_WIREFRAME.md` como fuente física oficial vigente.
+4. Confirmación de que `ROBERT_TECHNICAL_MVP_WIREFRAME_v0.3_PROPUESTA.md` fue eliminado previamente y no debe recrearse.
+5. Mantenimiento de `ROBERT_HOME v0.11` como versión previa aprobada e integrada.
+6. Mantenimiento de `APPROVAL_GATE v0.3` como aprobado e integrado.
+7. Mantenimiento de `ROBERT_VISUAL_REFERENCE` como documento visual correcto.
+8. Confirmación de que Robert sigue en Fase 10 sin programación ni Fase 11.
+
+---
+
+### Impacto en Robert
+
+`ROBERT_HOME v0.12` queda como nueva versión aprobada e integrada del documento central de navegación y estado del sistema Robert.
+
+El HOME ahora refleja correctamente:
+
+* Estado real del proyecto.
+* Wireframe v0.3 aprobado e integrado.
+* Fuente física oficial vigente del wireframe.
+* Eliminación previa de la propuesta v0.3.
+* Cambios recientes registrados.
+* Restricciones activas.
+* Control total del usuario.
+
+---
+
+### Qué cambia
+
+* `ROBERT_HOME v0.12` pasa de “Propuesta corregida — pendiente de revisión” a “Aprobado e integrado”.
+* Se reconoce formalmente `CAMBIO #051` dentro del estado documental central.
+* Se cierra la pendiente de normalización física del wireframe v0.3.
+* Se confirma `ROBERT_TECHNICAL_MVP_WIREFRAME.md` como fuente física oficial vigente.
+* Se confirma que la propuesta eliminada no debe recrearse.
+
+---
+
+### Qué no cambia
+
+Esta decisión no autoriza:
+
+* Programación.
+* Código real.
+* Pantallas reales.
+* Base de datos real.
+* Gate real.
+* Sistema real de autorización.
+* Conexiones externas.
+* Automatizaciones reales.
+* Agentes autónomos.
+* Ejecución real.
+* Avanzar a Fase 11.
+
+---
+
+### Riesgos
+
+Riesgos controlados:
+
+* Confundir normalización documental con desarrollo técnico.
+* Recrear una propuesta ya eliminada.
+* Mantener dos fuentes físicas paralelas del wireframe.
+* Confundir aprobación de HOME con autorización de programación.
+* Avanzar de fase sin autorización explícita.
+
+Medida de control:
+
+`ROBERT_HOME v0.12` queda aprobado únicamente como documento maestro de navegación, estado y control documental.
+
+---
+
+### Aprobación del usuario
+
+Sí.
+
+El usuario aprobó explícitamente escribiendo:
+
+```text id="y2km8l"
+apruebo
+```
+
+Contexto de aprobación:
+
+La aprobación corresponde a `ROBERT_HOME v0.12`, después de confirmar que corrige la normalización física del wireframe v0.3 mediante `CAMBIO #051`.
+
+---
+
+### Siguiente paso
+
+Registrar el cambio de aprobación e integración en `ROBERT_CONTROL_DE_CAMBIOS`.
+
+Después, actualizar `README` para reflejar que:
+
+`ROBERT_HOME v0.12` queda aprobado e integrado mediante:
+
+* DECISIÓN #029
+* CAMBIO #052
+
+---
+
+### Notas
+
+Esta decisión aprueba únicamente `ROBERT_HOME v0.12` como documento maestro actualizado.
+
+No autoriza programación, código real, conexiones externas, automatizaciones, agentes autónomos ni Fase 11.
+
