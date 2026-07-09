@@ -19,14 +19,20 @@ Estado operativo actual:
 * GitHub configurado como respaldo documental privado y manual.
 * Obsidian usado como cerebro documental manual.
 * Documentos principales respaldados manualmente.
-* ROBERT_HOME v0.8 aprobado e integrado.
-* ROBERT_HOME v0.11 creado como propuesta corregida pendiente de revisión.
+* ROBERT_HOME v0.12 aprobado e integrado.
 * ROBERT_CONTROL_DE_CAMBIOS actualizado.
 * CAMBIO #047 reconocido como antecedente de trazabilidad de USER_ACTIONS_SPEC v0.2.
 * DECISIÓN #027 registrada.
 * CAMBIO #049 registrado.
+* DECISIÓN #028 registrada.
+* CAMBIO #050 registrado.
+* CAMBIO #051 registrado.
+* DECISIÓN #029 registrada.
+* CAMBIO #052 registrado.
 * ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2 aprobado, integrado y auditado voluntariamente.
 * ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3 aprobado e integrado.
+* ROBERT_TECHNICAL_MVP_WIREFRAME.md reconocido como fuente física oficial vigente del wireframe v0.3.
+* ROBERT_TECHNICAL_MVP_WIREFRAME_v0.3_PROPUESTA.md reconocido como eliminado previamente / no vigente / no requerido.
 * ROBERT_VISUAL_REFERENCE reconocido como documento visual correcto.
 * Sin programación autorizada.
 * Sin código real.
@@ -117,7 +123,7 @@ Robert cuenta actualmente con los siguientes documentos técnicos del MVP básic
 
 ## Estado de ROBERT_HOME
 
-### ROBERT_HOME v0.8
+### ROBERT_HOME v0.11
 
 Estado:
 
@@ -125,59 +131,48 @@ Estado:
 
 Relación documental:
 
-* DECISIÓN #026 — Aprobación de ROBERT_HOME v0.8.
-* CAMBIO #046 — Aprobación e integración de ROBERT_HOME v0.8.
-* CAMBIO #045 — Corrección acumulada de ROBERT_HOME v0.5–v0.7.
+* DECISIÓN #028 — Aprobación de ROBERT_HOME v0.11.
+* CAMBIO #050 — Aprobación e integración de ROBERT_HOME v0.11.
+* CAMBIO #047 — Reconocido como antecedente de trazabilidad de USER_ACTIONS_SPEC v0.2.
+* DECISIÓN #027 — Aprobación de APPROVAL_GATE v0.3.
+* CAMBIO #049 — Aprobación e integración de APPROVAL_GATE v0.3.
 
 Función:
 
-ROBERT_HOME v0.8 queda como la última versión aprobada e integrada del punto central de navegación, estado, núcleo visual y control del sistema Robert.
+ROBERT_HOME v0.11 fue la versión aprobada e integrada del punto central de navegación, estado, núcleo visual y control documental del sistema Robert antes de la normalización física del wireframe v0.3.
 
 ---
 
-### ROBERT_HOME v0.10
+### ROBERT_HOME v0.12
 
 Estado:
 
-**Propuesta corregida con conflicto detectado**
+**Aprobado e integrado**
+
+Relación documental:
+
+* CAMBIO #051 — Normalización de fuente física vigente de ROBERT_TECHNICAL_MVP_WIREFRAME v0.3.
+* DECISIÓN #029 — Aprobación de ROBERT_HOME v0.12.
+* CAMBIO #052 — Aprobación e integración de ROBERT_HOME v0.12.
 
 Función:
 
-ROBERT_HOME v0.10 actualizó el estado después de la aprobación de `APPROVAL_GATE v0.3`, pero arrastró dos conflictos:
-
-1. No mostraba `CAMBIO #047` en la trazabilidad reciente.
-2. Seguía usando `ROBERT_VISUAL` en lugar de `ROBERT_VISUAL_REFERENCE`.
-
-Por esos motivos, `ROBERT_HOME v0.10` no debe aprobarse como versión final.
-
----
-
-### ROBERT_HOME v0.11
-
-Estado:
-
-**Propuesta corregida — pendiente de revisión**
-
-Función:
-
-ROBERT_HOME v0.11 corrige los conflictos detectados en `ROBERT_HOME v0.10`.
+ROBERT_HOME v0.12 queda como versión aprobada e integrada del punto central de navegación, estado, núcleo visual y control documental del sistema Robert.
 
 Qué corrige:
 
-* Reconoce `CAMBIO #047` como antecedente de trazabilidad.
-* Elimina el aparente hueco de numeración entre `CAMBIO #046` y `CAMBIO #048`.
-* Reemplaza `ROBERT_VISUAL` por `ROBERT_VISUAL_REFERENCE`.
-* Reemplaza `[[ROBERT_VISUAL]]` por `[[ROBERT_VISUAL_REFERENCE]]`.
+* Reconoce `CAMBIO #051`.
+* Elimina la pendiente de normalización física del wireframe v0.3.
+* Reconoce `ROBERT_TECHNICAL_MVP_WIREFRAME.md` como fuente física oficial vigente.
+* Reconoce `ROBERT_TECHNICAL_MVP_WIREFRAME_v0.3_PROPUESTA.md` como eliminado previamente / no vigente / no requerido.
+* Aclara que no se debe recrear la propuesta.
 * Mantiene `APPROVAL_GATE v0.3` como aprobado e integrado.
-* Mantiene `DECISIÓN #027`.
-* Mantiene `CAMBIO #049`.
+* Mantiene `ROBERT_VISUAL_REFERENCE` como documento visual correcto.
 * Mantiene `USER_ACTIONS_SPEC v0.2` como fuente canónica aprobada, integrada y auditada voluntariamente.
-* Mantiene `ApprovalGate` como especificación conceptual.
-* Aclara que la aprobación de `APPROVAL_GATE v0.3` no autoriza programación, gate real ni Fase 11.
 
 Restricción:
 
-ROBERT_HOME v0.11 no autoriza:
+ROBERT_HOME v0.12 no autoriza:
 
 * Programación.
 * Código real.
@@ -189,15 +184,80 @@ ROBERT_HOME v0.11 no autoriza:
 * Agentes autónomos.
 * Avanzar a Fase 11.
 
-Estado de aprobación de HOME v0.11:
+---
 
-**Pendiente de revisión del usuario**
+## WIREFRAME v0.3 — Fuente física normalizada
 
-Para aprobarlo formalmente, el usuario deberá escribir:
+Documento oficial vigente:
 
-```text
-APRUEBO ROBERT_HOME v0.11
-```
+**ROBERT_TECHNICAL_MVP_WIREFRAME.md**
+
+Versión:
+
+**v0.3**
+
+Estado:
+
+**Aprobado e integrado**
+
+Fuente física oficial vigente:
+
+**Sí**
+
+Cambio de normalización:
+
+**CAMBIO #051 — Normalización de fuente física vigente de ROBERT_TECHNICAL_MVP_WIREFRAME v0.3**
+
+Relación documental:
+
+* DECISIÓN #010 — Aprobación de ROBERT_TECHNICAL_MVP_WIREFRAME v0.3.
+* CAMBIO #010 — Actualización del wireframe técnico a v0.3.
+* CAMBIO #051 — Normalización de fuente física vigente de ROBERT_TECHNICAL_MVP_WIREFRAME v0.3.
+
+---
+
+### Archivo propuesta
+
+Archivo:
+
+**ROBERT_TECHNICAL_MVP_WIREFRAME_v0.3_PROPUESTA.md**
+
+Estado:
+
+**Eliminado previamente / no vigente / no fuente oficial / no requerido**
+
+Regla:
+
+* No recrear la propuesta.
+* No restaurar el archivo eliminado.
+* No mantener dos fuentes físicas paralelas.
+* Usar `ROBERT_TECHNICAL_MVP_WIREFRAME.md` como fuente física oficial vigente.
+
+---
+
+### Alcance de CAMBIO #051
+
+CAMBIO #051 autoriza únicamente:
+
+* Confirmar `ROBERT_TECHNICAL_MVP_WIREFRAME.md` como fuente física oficial vigente.
+* Registrar que la propuesta v0.3 ya no existe como archivo físico activo.
+* Eliminar la ambigüedad entre archivo oficial y archivo propuesta.
+* Actualizar `ROBERT_HOME` y `README` para reflejar que la normalización física del wireframe v0.3 quedó completada.
+
+CAMBIO #051 no autoriza:
+
+* Programación.
+* Código real.
+* Pantallas reales.
+* Prototipo funcional.
+* Base de datos real.
+* Gate real.
+* Sistema real de autorización.
+* Conexiones externas.
+* Automatizaciones reales.
+* Agentes autónomos.
+* Ejecución real.
+* Avanzar a Fase 11.
 
 ---
 
@@ -404,9 +464,9 @@ Aprobar `APPROVAL_GATE v0.3` no autoriza:
 
 ---
 
-## CAMBIO #047
+## Cambios y decisiones recientes
 
-Cambio registrado:
+### CAMBIO #047
 
 **CAMBIO #047 — Corrección de ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2**
 
@@ -414,33 +474,13 @@ Estado:
 
 **Registrado como antecedente de trazabilidad**
 
-Documento afectado:
-
-`ROBERT_TECHNICAL_USER_ACTIONS_SPEC.md`
-
-Versión afectada:
-
-`v0.2`
-
 Función:
 
 Reconocer la corrección/trazabilidad de `USER_ACTIONS_SPEC v0.2` frente al conflicto de versión, fuente vigente y trazabilidad.
 
-Clasificación relacionada:
-
-* TIPO 3 — Conflicto de versión.
-* TIPO 16 — Conflicto de fuente vigente.
-* TIPO 17 — Conflicto de trazabilidad insuficiente.
-
-Nota de control:
-
-`CAMBIO #047` debe mostrarse en la trazabilidad reciente para evitar un hueco aparente entre `CAMBIO #046` y `CAMBIO #048`.
-
 ---
 
-## CAMBIO #048
-
-Cambio registrado:
+### CAMBIO #048
 
 **CAMBIO #048 — Corrección de ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3**
 
@@ -448,31 +488,13 @@ Estado:
 
 **Registrado**
 
-Documento afectado:
-
-`ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC.md`
-
-Versión afectada:
-
-`v0.3`
-
 Función:
 
 Registrar la creación/corrección de `APPROVAL_GATE v0.3` como propuesta corregida pendiente de revisión.
 
-Este cambio no aprobó `APPROVAL_GATE v0.3`.
-
-Este cambio no integró `APPROVAL_GATE v0.3`.
-
-Este cambio no creó una nueva decisión formal.
-
-Este cambio no autorizó programación, conexiones externas, automatizaciones, agentes ni Fase 11.
-
 ---
 
-## DECISIÓN #027
-
-Decisión registrada:
+### DECISIÓN #027
 
 **DECISIÓN #027 — Aprobación de ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3**
 
@@ -480,27 +502,13 @@ Estado:
 
 **Aprobada**
 
-Documento relacionado:
-
-`ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC`
-
-Versión relacionada:
-
-`v0.3`
-
 Función:
 
 Aprobar formalmente `APPROVAL_GATE v0.3` como especificación técnica documental conceptual del MVP técnico básico de Robert.
 
-Restricción:
-
-Esta decisión no autoriza programación, código real, conexiones externas, automatizaciones, agentes autónomos, ejecución real ni Fase 11.
-
 ---
 
-## CAMBIO #049
-
-Cambio registrado:
+### CAMBIO #049
 
 **CAMBIO #049 — Aprobación e integración de ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3**
 
@@ -508,38 +516,105 @@ Estado:
 
 **Aprobado e integrado**
 
-Documento afectado:
-
-`ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC.md`
-
-Versión afectada:
-
-`v0.3`
-
 Función:
 
 Registrar la aprobación formal e integración documental de `APPROVAL_GATE v0.3`.
 
+---
+
+### DECISIÓN #028
+
+**DECISIÓN #028 — Aprobación de ROBERT_HOME v0.11**
+
+Estado:
+
+**Aprobada**
+
+Función:
+
+Aprobar formalmente `ROBERT_HOME v0.11`.
+
+---
+
+### CAMBIO #050
+
+**CAMBIO #050 — Aprobación e integración de ROBERT_HOME v0.11**
+
+Estado:
+
+**Aprobado e integrado**
+
+Función:
+
+Registrar la aprobación formal e integración documental de `ROBERT_HOME v0.11`.
+
+---
+
+### CAMBIO #051
+
+**CAMBIO #051 — Normalización de fuente física vigente de ROBERT_TECHNICAL_MVP_WIREFRAME v0.3**
+
+Estado:
+
+**Registrado**
+
+Función:
+
+Confirmar `ROBERT_TECHNICAL_MVP_WIREFRAME.md` como fuente física oficial vigente y aclarar que la propuesta eliminada no debe recrearse.
+
+---
+
+### DECISIÓN #029
+
+**DECISIÓN #029 — Aprobación de ROBERT_HOME v0.12**
+
+Estado:
+
+**Aprobada**
+
+Función:
+
+Aprobar formalmente `ROBERT_HOME v0.12` como versión corregida del punto central de navegación, estado, núcleo visual y control documental del sistema Robert.
+
+Restricción:
+
+Esta decisión no autoriza programación, código real, conexiones externas, automatizaciones, agentes autónomos, ejecución real ni Fase 11.
+
+---
+
+### CAMBIO #052
+
+**CAMBIO #052 — Aprobación e integración de ROBERT_HOME v0.12**
+
+Estado:
+
+**Aprobado e integrado**
+
+Función:
+
+Registrar la aprobación formal e integración documental de `ROBERT_HOME v0.12`.
+
 Este cambio autoriza únicamente:
 
-* Marcar `APPROVAL_GATE v0.3` como aprobado e integrado.
+* Marcar `ROBERT_HOME v0.12` como aprobado e integrado.
 * Integrarlo al estado documental actual de Robert.
-* Usarlo como especificación conceptual de ApprovalGate.
-* Actualizar `ROBERT_HOME` y `README` para reflejar su nuevo estado.
+* Usarlo como punto central vigente de navegación, estado y control documental.
+* Reconocer `CAMBIO #051` dentro del HOME.
+* Reconocer `ROBERT_TECHNICAL_MVP_WIREFRAME.md` como fuente física oficial vigente.
+* Reconocer que la propuesta v0.3 fue eliminada previamente y no debe recrearse.
+* Actualizar `README` para reflejar el nuevo estado de `ROBERT_HOME v0.12`.
 
 Este cambio no autoriza:
 
-* Programar ApprovalGate.
+* Programar Robert.
 * Crear código real.
-* Crear botones reales.
 * Crear pantallas reales.
 * Crear prototipo funcional.
-* Crear sistema real de autorización.
-* Crear sistema real de permisos.
 * Crear base de datos real.
-* Conectar Supabase.
-* Conectar Firebase.
+* Crear gate real.
+* Crear sistema real de autorización.
 * Conectar GitHub automáticamente.
+* Conectar Obsidian automáticamente.
 * Conectar Gmail.
 * Conectar Google Calendar.
 * Conectar APIs externas.
@@ -692,8 +767,14 @@ Este README queda actualizado para reflejar:
 
 * Fase 10 activa.
 * Modo documental, manual y supervisado.
-* ROBERT_HOME v0.8 aprobado e integrado.
-* ROBERT_HOME v0.11 creado como propuesta corregida pendiente de revisión.
+* ROBERT_HOME v0.12 aprobado e integrado.
+* DECISIÓN #029 registrada.
+* CAMBIO #052 registrado.
+* CAMBIO #051 registrado.
+* Fuente física del wireframe v0.3 normalizada.
+* ROBERT_TECHNICAL_MVP_WIREFRAME.md como fuente física oficial vigente.
+* ROBERT_TECHNICAL_MVP_WIREFRAME_v0.3_PROPUESTA.md como eliminado previamente / no vigente / no requerido.
+* No recrear la propuesta eliminada.
 * CAMBIO #047 reconocido como antecedente de trazabilidad.
 * USER_ACTIONS_SPEC v0.2 aprobado, integrado y auditado voluntariamente.
 * USER_ACTIONS_SPEC v0.2 como fuente canónica usada para APPROVAL_GATE v0.3.
@@ -715,21 +796,16 @@ Este README queda actualizado para reflejar:
 
 ## Siguiente paso recomendado
 
-El siguiente paso documental es revisar si `ROBERT_HOME v0.11` queda correcto.
+El bloque documental actual queda cerrado.
 
-Si el usuario decide aprobarlo formalmente, deberá escribir:
+Posibles siguientes pasos, solo con autorización explícita del usuario:
 
-```text
-APRUEBO ROBERT_HOME v0.11
-```
+1. Revisar estado documental general.
+2. Definir el siguiente documento técnico de Fase 10.
+3. Revisar pendientes abiertos.
+4. Pausar y cerrar sesión.
 
-Solo después de esa aprobación se deberá:
-
-1. Registrar decisión formal para `ROBERT_HOME v0.11`.
-2. Registrar cambio de aprobación e integración para `ROBERT_HOME v0.11`.
-3. Actualizar README nuevamente si aplica.
-
-No debe aprobarse automáticamente.
+No debe avanzarse automáticamente.
 
 ---
 
@@ -747,7 +823,11 @@ Regla central:
 
 **El usuario manda. Robert no ejecuta acciones importantes sin permiso.**
 
-`ROBERT_HOME v0.11` queda como propuesta corregida pendiente de revisión.
+`ROBERT_HOME v0.12` queda aprobado e integrado.
+
+`ROBERT_TECHNICAL_MVP_WIREFRAME.md` queda como fuente física oficial vigente del wireframe v0.3.
+
+`ROBERT_TECHNICAL_MVP_WIREFRAME_v0.3_PROPUESTA.md` queda como eliminado previamente / no vigente / no requerido.
 
 `APPROVAL_GATE v0.3` queda aprobado e integrado como especificación técnica documental conceptual.
 
