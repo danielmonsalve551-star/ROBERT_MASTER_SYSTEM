@@ -2732,86 +2732,6 @@ No autoriza agentes autónomos.
 
 Autoriza únicamente usar este documento como regla para manejar cambios futuros de Robert.
 
-
----
-
-# CAMBIO #010 — Actualización del wireframe técnico a v0.3
-
-Fecha: 29/06/2026
-Estado: Aprobado
-Decisión relacionada: DECISIÓN #010 — Aprobación de ROBERT_TECHNICAL_MVP_WIREFRAME v0.3
-Documento afectado: ROBERT_TECHNICAL_MVP_WIREFRAME.md
-Tipo de cambio: Tipo 3 — Cambio visual / UX
-Nivel de riesgo inicial: Nivel 2 — Medio
-Nivel de riesgo final: Nivel 2 — Medio
-
----
-
-## Cambio realizado
-
-Se actualizó el documento oficial:
-
-**ROBERT_TECHNICAL_MVP_WIREFRAME.md**
-
-de versión v0.2 a versión v0.3.
-
----
-
-## Mejoras integradas
-
-La versión v0.3 integra:
-
-1. RiskBadge con motivo visible
-2. Vista “Pendiente de mi decisión”
-3. Mapa visual de documentos por fase y estado
-
----
-
-## Motivo del cambio
-
-El cambio mejora la claridad, seguridad y control visual del MVP técnico básico de Robert.
-
-Permite que el usuario vea mejor:
-
-* Riesgos
-* Motivos de riesgo
-* Decisiones pendientes
-* Estados documentales
-* Avance general del sistema
-
----
-
-## Documentos relacionados
-
-* ROBERT_TECHNICAL_MVP_WIREFRAME.md
-* ROBERT_TECHNICAL_MVP_WIREFRAME_v0.3_PROPUESTA.md
-* ROBERT_HOME.md
-* ROBERT_DECISIONS_LOG.md
-* ROBERT_CONTROL_DE_CAMBIOS.md
-
----
-
-## Alcance autorizado
-
-Este cambio autoriza únicamente actualización documental y visual.
-
----
-
-## Alcance no autorizado
-
-Este cambio no autoriza:
-
-* Programar la app
-* Conectar APIs reales
-* Conectar GitHub automáticamente
-* Conectar Gmail
-* Conectar Google Calendar
-* Automatizar acciones reales
-* Ejecutar agentes autónomos
-* Tomar decisiones por el usuario
-
----
-
 ---
 
 # CAMBIO #011 — Creación de ROBERT_TECHNICAL_COMPONENTS_SPEC v0.1
@@ -7972,187 +7892,6 @@ Sin agentes autónomos activos.
 
 ---
 
-# CAMBIO #044 — Aprobación e integración de ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3
-
-Fecha: 07/07/2026  
-Estado: Aprobado e integrado  
-Documento afectado: ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3  
-Ubicación: 10_MVP  
-Decisión relacionada: DECISIÓN #025 — Aprobación de ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3  
-Cambio relacionado previo: CAMBIO #043 — Corrección de ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3  
-Documento base principal: ROBERT_TECHNICAL_VERSIONING_AND_CHANGE_POLICY_SPEC v0.2  
-Documentos relacionados: ROBERT_COMMANDS v0.4, ROBERT_TECHNICAL_DOCUMENT_LIFECYCLE_SPEC v0.2, ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC v0.2, ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC v0.2, ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2, ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2, ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2, ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2, ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1, ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2, ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2, ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2  
-Fase relacionada: Fase 10 — MVP técnico básico en preparación  
-
----
-
-## Cambio realizado
-
-Se registró la aprobación formal e integración documental de:
-
-**ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3**
-
-como documento técnico documental aprobado del MVP técnico básico de Robert.
-
----
-
-## Motivo del cambio
-
-Después de corregir DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.2 y revisar la propuesta v0.3, el usuario aprobó formalmente el documento.
-
-La versión v0.3 queda integrada porque define reglas de consistencia documental, contradicciones, prioridad entre fuentes, resolución conceptual de inconsistencias, precedencia entre tipos de conflicto y bloqueo por información contradictoria.
-
----
-
-## Correcciones integradas
-
-La versión aprobada integra:
-
-- Regla de consistencia documental.
-- Regla de contradicción documental.
-- Regla de conflicto crítico.
-- Jerarquía conceptual general de fuentes.
-- Integración de documentos técnicos aprobados dentro de la posición 9.
-- Subjerarquía temática de documentos técnicos aprobados.
-- Regla general vs regla temática.
-- Prioridad de SECURITY_RULES.
-- Prioridad de DECISIONS_LOG.
-- Prioridad de CONTROL_DE_CAMBIOS.
-- Regla HOME vs README.
-- 17 tipos de conflicto documental.
-- Tabla maestra de precedencia entre los 17 tipos de conflicto.
-- Regla de fuente única oficial de precedencia.
-- Regla de que la tabla maestra es la única fuente oficial del orden completo.
-- Regla de que la prosa individual no reemplaza ni contradice la tabla maestra.
-- Regla de tipo más específico disponible.
-- Regla de clasificación final y conflictos secundarios.
-- Regla de orden para conflictos secundarios.
-- Corrección del ejemplo de Gmail con conflictos secundarios ordenados por precedencia.
-- Relación con VERSIONING_AND_CHANGE_POLICY_SPEC v0.2.
-- Relación con DOCUMENT_LIFECYCLE_SPEC v0.2.
-- Relación con SESSION_AND_CONTEXT_SPEC v0.2.
-- Relación con AUDIT_TRAIL_SPEC v0.2.
-- Relación con NOTIFICATION_AND_ALERTS_SPEC v0.2.
-- Relación con ERROR_AND_BLOCKING_SPEC v0.2.
-- Relación con PERMISSIONS_AND_SCOPES_SPEC v0.2.
-- Relación con USER_ACTIONS_SPEC v0.2.
-- Relación con DATA_MODEL_SPEC v0.1.
-- Relación con COMPONENTS_SPEC v0.2.
-- Relación con SCREEN_STATE_SPEC v0.2.
-- Relación con INTERACTION_FLOW_SPEC v0.2.
-
----
-
-## Alcance autorizado
-
-Este cambio autoriza únicamente:
-
-- Marcar DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3 como aprobado.
-- Integrarlo al estado documental actual de Robert.
-- Usarlo como base documental para futuras especificaciones técnicas.
-- Usarlo para definir reglas conceptuales de consistencia documental.
-- Usarlo para definir reglas conceptuales de resolución de conflictos.
-- Usarlo para definir prioridad entre fuentes.
-- Usarlo para definir clasificación final de conflictos.
-- Usarlo para definir conflictos secundarios en orden de precedencia.
-- Usarlo para definir cuándo pausar por contradicción.
-- Usarlo para definir cuándo bloquear por contradicción.
-- Usarlo para definir cuándo pedir confirmación por falta de trazabilidad.
-- Usarlo para conectar consistencia documental con versionamiento, ciclo documental, sesión, auditoría, permisos, eventos, notificaciones, acciones, modelos, componentes, pantallas y flujos.
-- Mantenerlo dentro de Fase 10.
-
----
-
-## Alcance no autorizado
-
-Este cambio no autoriza:
-
-- Programar la app.
-- Crear código real.
-- Crear sistema real de consistencia documental.
-- Crear base de datos real.
-- Crear motor real de resolución de conflictos.
-- Crear validación automática.
-- Crear reconciliación automática.
-- Crear modelo ConflictRecord.
-- Crear modelo ConsistencyCheckRecord.
-- Crear modelo ConflictResolutionRecord.
-- Crear modelo SourcePriorityRecord.
-- Crear componente ConflictPanel.
-- Crear componente ConsistencyMap.
-- Crear componente ConflictResolver.
-- Crear botones reales.
-- Crear pantallas reales.
-- Crear prototipo funcional.
-- Crear endpoints.
-- Conectar Supabase.
-- Conectar Firebase.
-- Conectar GitHub automáticamente.
-- Conectar Obsidian automáticamente.
-- Sincronizar documentos automáticamente.
-- Resolver conflictos automáticamente.
-- Automatizar correcciones.
-- Automatizar HOME.
-- Automatizar README.
-- Activar agentes autónomos.
-- Ejecutar acciones reales.
-- Avanzar automáticamente a Fase 11.
-
----
-
-## Riesgo
-
-Tipo de cambio:
-
-**Aprobación técnica documental / integración de consistencia documental y resolución conceptual de conflictos**
-
-Nivel de riesgo inicial:
-
-**Nivel 3 — Alto**
-
-Motivo:
-
-El documento define cómo Robert detecta contradicciones, prioriza fuentes, clasifica conflictos múltiples, bloquea acciones por conflictos y resuelve inconsistencias documentales.
-
-Nivel de riesgo final:
-
-**Nivel 2 — Medio**
-
-Motivo:
-
-El cambio queda limitado a documentación. No crea sistema real de consistencia documental, no crea base de datos real, no crea motor real de resolución de conflictos, no crea modelos nuevos oficiales, no crea componentes nuevos oficiales, no programa, no conecta herramientas externas y no ejecuta acciones.
-
-Nivel de autonomía:
-
-**Nivel 0 — Sin autonomía ejecutiva**
-
----
-
-## Estado final
-
-ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3 queda aprobado e integrado documentalmente.
-
-Robert continúa en:
-
-**Fase 10 — MVP técnico básico en preparación**
-
-Sin programación autorizada.
-
-Sin código real.
-
-Sin sistema real de consistencia documental.
-
-Sin base de datos real.
-
-Sin motor real de resolución de conflictos.
-
-Sin conexiones externas.
-
-Sin automatizaciones reales.
-
-Sin agentes autónomos activos.
-
----
 
 ## CAMBIO #045 — Corrección acumulada de ROBERT_HOME v0.5–v0.7
 
@@ -8228,39 +7967,100 @@ Cambio de integración: CAMBIO #046
 
 ---
 
-## CAMBIO #047 — Corrección de ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2
+CAMBIO #047 — Auditoría voluntaria de ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2
 
-Fecha: 07/07/2026  
-Tipo de cambio: Corrección técnica documental / fuente vigente / acciones canónicas  
-Documento afectado: ROBERT_TECHNICAL_USER_ACTIONS_SPEC.md  
-Versión afectada: v0.2  
-Estado: Propuesta corregida — pendiente de revisión  
-Fase relacionada: Fase 10 — MVP técnico básico en preparación  
+Fecha: 07/07/2026
+Tipo de cambio: Auditoría voluntaria documental / confirmación de fuente vigente
+Documento afectado: ROBERT_TECHNICAL_USER_ACTIONS_SPEC.md
+Versión afectada: v0.2
+Estado: Auditado — sin cambios de fondo
+Fase relacionada: Fase 10 — MVP técnico básico en preparación
 
 ---
 
 ### Descripción del cambio
 
-Se registra la corrección de `ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2` como propuesta corregida pendiente de revisión.
+Se registra una auditoría voluntaria de ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2,
+documento ya aprobado e integrado previamente (DECISIÓN #017, CAMBIO #028).
 
-Esta versión se creó a partir del único archivo real disponible, `USER_ACTIONS_SPEC v0.1`, para resolver el conflicto entre las referencias posteriores a `USER_ACTIONS_SPEC v0.2` y la fuente física existente.
+El usuario solicitó volver a verificar este documento sin que existiera un conflicto
+de aprobación real ni un hueco de trazabilidad pendiente.
 
 ---
 
 ### Motivo del cambio
 
-Se detectó que varios documentos posteriores citaban `ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2`, pero el archivo real disponible estaba en `v0.1` y en estado de borrador.
+Corrección de registro: la versión original de este CAMBIO #047 describía
+incorrectamente que "el archivo real disponible estaba en v0.1 y en estado de
+borrador" y que existía "un conflicto de versión, fuente vigente y trazabilidad".
 
-Esto generaba un conflicto de versión, fuente vigente y trazabilidad.
+Esa descripción era inexacta. ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2 ya estaba
+aprobado e integrado desde DECISIÓN #017 / CAMBIO #028, antes de que existieran los
+9 documentos técnicos posteriores de la serie (ERROR_AND_BLOCKING_SPEC hasta
+APPROVAL_AND_AUTHORIZATION_GATE_SPEC), todos construidos correctamente sobre esa
+base ya vigente.
+
+No existió conflicto real de versión, fuente vigente ni trazabilidad. El usuario
+confirmó explícitamente que el documento ya estaba aprobado y que solo pidió
+revisarlo de nuevo por precaución.
+
+---
+
+### Resultado de la auditoría
+
+No se encontraron errores de contenido de fondo.
+
+- La lista canónica de 20 acciones es correcta y completa.
+- Los 10 componentes usados son los canónicos (AppShell incluido, MainCanvas
+  ausente).
+- Único ajuste aplicado: corrección de la fila ACCIÓN 12 en la tabla de mapeo con
+  Gates ("Gate 2" → "Gate 2 / Gate 7").
 
 ---
 
 ### Clasificación del conflicto
 
-```text
-TIPO 3 — Conflicto de versión
-TIPO 16 — Conflicto de fuente vigente
-TIPO 17 — Conflicto de trazabilidad insuficiente
+Clasificación corregida:
+
+Ninguna. No aplica ningún TIPO de conflicto de
+DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3.
+
+(Clasificación anterior, ahora retirada por ser incorrecta: TIPO 3, TIPO 16, TIPO 17)
+
+---
+
+### Regla aplicada
+
+Según DOCUMENT_LIFECYCLE_SPEC v0.2, un documento aprobado que recibe un ajuste
+menor permanece en estado "Aprobado" — no regresa a "Borrador" ni a "Propuesta
+corregida".
+
+Esta auditoría no reabre el estado de aprobación de USER_ACTIONS_SPEC v0.2.
+
+---
+
+### Uso de esta auditoría
+
+Sirve como referencia canónica confirmada, usada posteriormente para corregir
+ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3 (CAMBIO #048/#049).
+
+---
+
+### Estado final
+
+ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2 se mantiene:
+Aprobado e integrado — auditoría voluntaria completada sin cambios de fondo
+
+No se requirió nueva DECISIÓN, ya que no hubo corrección sustantiva de contenido.
+
+---
+
+### Nota de control
+
+Este registro corrige la descripción original de CAMBIO #047, que contenía una
+narrativa inexacta sobre el estado del documento. La corrección es solo de
+redacción del registro de cambios — no afecta ningún documento técnico downstream.
+Robert no ejecuta acciones importantes sin permiso.
 
 ---
 ## CAMBIO #048 — Corrección de ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3
@@ -8868,3 +8668,5 @@ Debe reflejar que ROBERT_HOME v0.11 queda aprobado e integrado mediante:
 Esta aprobación no modifica el estado operativo de Robert.
 Robert continúa en modo documental, manual y supervisado.
 Robert no ejecuta acciones importantes sin permiso.
+
+
