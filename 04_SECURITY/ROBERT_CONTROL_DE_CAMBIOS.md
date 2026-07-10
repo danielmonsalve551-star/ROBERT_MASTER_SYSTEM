@@ -8750,4 +8750,121 @@ Robert continúa en modo documental, manual y supervisado.
 Robert no ejecuta acciones importantes sin permiso.
 
 
+CAMBIO #050 — Aprobación e integración de ROBERT_HOME v0.11
 
+Fecha: 07/07/2026
+Tipo de cambio: Aprobación e integración documental
+Documento afectado: ROBERT_HOME.md
+Versión afectada: v0.11
+Estado: Aprobado e integrado
+Decisión relacionada: DECISIÓN #028 — Aprobación de ROBERT_HOME v0.11
+Cambio relacionado previo: CAMBIO #049 — Aprobación e integración de
+ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3
+Fase relacionada: Fase 10 — MVP técnico básico en preparación
+
+---
+
+### Descripción del cambio
+
+Se registra la aprobación e integración de ROBERT_HOME v0.11 como punto central de
+navegación, estado, núcleo visual y control del sistema Robert.
+
+---
+
+### Motivo del cambio
+
+ROBERT_HOME v0.11 fue aprobado formalmente mediante DECISIÓN #028 después de
+corregir dos huecos detectados en ROBERT_HOME v0.10:
+
+1. Trazabilidad faltante de CAMBIO #047, omitida en v0.10.
+2. Uso incorrecto de "ROBERT_VISUAL" en lugar del nombre confirmado
+   "ROBERT_VISUAL_REFERENCE" como documento visual oficial.
+
+---
+
+### Correcciones integradas
+
+La versión aprobada integra:
+
+1. Reconocimiento explícito de CAMBIO #047 como antecedente de trazabilidad.
+2. Reemplazo de todas las referencias a ROBERT_VISUAL por ROBERT_VISUAL_REFERENCE
+   en enlaces, tags y menciones del documento.
+3. Regla de nomenclatura visual: "El documento visual correcto es
+   ROBERT_VISUAL_REFERENCE. No usar ROBERT_VISUAL como documento oficial."
+
+---
+
+### Alcance autorizado
+
+Este cambio autoriza únicamente:
+
+- Marcar ROBERT_HOME v0.11 como aprobado e integrado.
+- Integrarlo al estado documental actual de Robert.
+- Sustituir ROBERT_HOME v0.10 como versión vigente de navegación.
+- Actualizar README para reflejar su nuevo estado.
+- Mantenerlo dentro de Fase 10.
+
+---
+
+### Alcance no autorizado
+
+Este cambio no autoriza:
+
+- Programar la app.
+- Crear código real.
+- Crear pantallas reales.
+- Crear base de datos real.
+- Conectar herramientas externas.
+- Automatizar acciones.
+- Activar agentes autónomos.
+- Avanzar a Fase 11.
+
+---
+
+### Riesgo
+
+Tipo de cambio: Aprobación técnica documental / corrección de trazabilidad y
+nomenclatura visual
+Nivel de riesgo inicial: Nivel 2 — Medio
+Motivo: El documento es el punto central de navegación del sistema; un error de
+trazabilidad o nomenclatura ahí se propaga a todos los documentos que lo referencian.
+Nivel de riesgo final: Nivel 1 — Bajo
+Motivo: La corrección es documental. No crea sistema real, no programa, no conecta
+herramientas externas y no ejecuta acciones.
+Nivel de autonomía: Nivel 0 — Sin autonomía ejecutiva
+
+---
+
+### Estado final
+
+ROBERT_HOME v0.11 queda como:
+Aprobado e integrado
+
+Robert continúa en:
+Fase 10 — MVP técnico básico en preparación
+
+Sin programación autorizada.
+Sin código real.
+Sin conexiones externas.
+Sin automatizaciones reales.
+Sin agentes autónomos activos.
+Sin Fase 11 autorizada.
+
+---
+
+### Siguiente paso
+
+Actualizar:
+1. README
+
+Debe reflejar que ROBERT_HOME v0.11 queda aprobado e integrado mediante:
+- DECISIÓN #028
+- CAMBIO #050
+
+---
+
+### Nota de control
+
+Esta aprobación no modifica el estado operativo de Robert.
+Robert continúa en modo documental, manual y supervisado.
+Robert no ejecuta acciones importantes sin permiso.
