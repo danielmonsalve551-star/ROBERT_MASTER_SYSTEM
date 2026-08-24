@@ -46,11 +46,16 @@ Estas capas permiten que Robert tenga identidad, continuidad, control, capacidad
 
 La arquitectura debe permitir que Robert evolucione de copiloto seguro a ejecutor controlado, sin perder seguridad, contexto ni autoridad del usuario.
 
-Relación canónica vigente:
+### Relación con el Canonical Model
 
 `ROBERT_CANONICAL_MODEL v0.2` define el significado oficial de los conceptos utilizados por esta arquitectura.
 
+`ROBERT_SYSTEM_ARCHITECTURE` organiza esos conceptos y define cómo se relacionan dentro del sistema, pero no los redefine.
+
+En caso de diferencia semántica entre ambos documentos, deberá aplicarse el sistema vigente de detección y resolución de conflictos antes de modificar cualquiera de ellos.
+
 La arquitectura organiza esos conceptos, pero no los redefine.
+
 ---
 
 2. CAPA 0 — IDENTIDAD / KERNEL
@@ -376,6 +381,32 @@ La futura `ROBERT_ORCHESTRATOR_SPEC` deberá especializar esta Capa 2 y este Pro
 No podrá crear un segundo protocolo de control paralelo.
 
 ---
+
+### Evolución hacia Orchestration
+
+La futura `ROBERT_ORCHESTRATOR_SPEC` será una especialización y evolución técnica de la Capa 2 — Control y del Protocolo Canónico de Control existente.
+
+No deberá crear un segundo sistema de control paralelo.
+
+La futura especificación podrá formalizar responsabilidades como:
+
+- Intent Router;
+- Context Resolver;
+- Module Router;
+- Agent Router;
+- Skill Resolver;
+- Model Router;
+- Tool Resolver;
+- Risk Check;
+- Permission / Scope Check;
+- Conflict Check;
+- Approval Gate;
+- Validator;
+- Audit Output.
+
+Todos estos elementos deberán respetar las reglas, prioridades, seguridad, permisos y autoridad ya definidos por Robert.
+
+La introducción de estos elementos en documentación no implica activación automática, ejecución real ni autonomía.
 
 6. CONTROL DE AUTONOMÍA
     
