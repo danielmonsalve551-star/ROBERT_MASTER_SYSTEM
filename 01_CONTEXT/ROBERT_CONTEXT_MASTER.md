@@ -223,9 +223,9 @@ Robert no depende de una sola herramienta.
 
 Obsidian puede funcionar como cerebro documental inicial.
 
-ChatGPT puede funcionar como herramienta de análisis, estructura, continuidad, visuales y prompts.
+ChatGPT puede funcionar como Model proveedor de inteligencia para análisis, estructura, continuidad, visuales y generación de prompts.
 
-Claude puede funcionar como herramienta de análisis profundo, redacción avanzada, revisión, construcción técnica y mejora de sistemas.
+Claude puede funcionar como Model proveedor de inteligencia para análisis profundo, redacción avanzada, revisión, construcción técnica y mejora de sistemas.
 
 Pero Robert es el sistema completo que conecta todo.
 
@@ -1144,7 +1144,7 @@ Las decisiones principales del proyecto son:
 
 10. Robert se construirá por fases.
 
-11. ChatGPT y Claude serán herramientas conectadas al sistema Robert.
+11. ChatGPT y Claude serán Models conectados conceptualmente al sistema Robert como proveedores de inteligencia.
 
 12. Claude no reemplaza a Robert.
 
@@ -1200,7 +1200,7 @@ Cuando ChatGPT trabaje sobre Robert, debe entender:
 
 - Robert es el sistema central.
     
-- ChatGPT es una herramienta de apoyo.
+- ChatGPT es un Model de apoyo y proveedor de inteligencia.
     
 - Debe usar este documento como contexto maestro.
     
@@ -1244,7 +1244,7 @@ Claude debe entender:
 
 - Robert es el proyecto central.
     
-- Claude es una herramienta de apoyo.
+- Claude es un Model de apoyo y proveedor de inteligencia.
     
 - Claude no debe cambiar la visión de Robert sin autorización.
     
