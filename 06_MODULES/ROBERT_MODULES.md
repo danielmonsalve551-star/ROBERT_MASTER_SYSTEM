@@ -10,6 +10,7 @@ Tags: #robert/orbita-4 #capa/3 #tipo/maestro #robert/modulos #robert/capacidades
 [[ROBERT_HOME]]
 [[ROBERT_CONTEXT_MASTER]]
 [[ROBERT_SYSTEM_ARCHITECTURE]]
+[[ROBERT_CANONICAL_MODEL]]
 [[ROBERT_TECHNICAL_COMPONENTS_SPEC]]
 [[ROBERT_VISUAL]]
 
@@ -199,10 +200,24 @@ Ejemplos:
     
 - Presentación.
     
+## MODELS
+
+Son proveedores de inteligencia que Robert puede utilizar para razonamiento, análisis y generación.
+
+Ejemplos:
+
+- Claude;
+- ChatGPT.
+
+Regla canónica:
+
+`MODEL ≠ TOOL`
+
+Fuente conceptual: `ROBERT_CANONICAL_MODEL v0.2`.
 
 ## TOOLS
 
-Son herramientas externas que Robert puede usar o conectar.
+Son herramientas externas o capacidades técnicas que Robert puede usar o conectar.
 
 Ejemplos:
 
@@ -218,11 +233,13 @@ Ejemplos:
     
 - Figma;
     
-- Claude;
-    
-- ChatGPT.
-    
+- GitHub;
 
+- filesystem;
+
+- web.
+
+  
 ## AGENTS
 
 Son especialistas futuros que pueden operar dentro de un módulo.
