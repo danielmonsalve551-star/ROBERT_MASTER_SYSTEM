@@ -16,7 +16,7 @@ Tags: #robert/orbita-1 #capa/0 #tipo/maestro #robert/arquitectura #robert/nucleo
 [[ROBERT_CONTEXT_MASTER]]
 [[ROBERT_PHASES]]
 [[ROBERT_SECURITY_RULES]]
-
+[[ROBERT_CANONICAL_MODEL]]
 
 1. IDEA PRINCIPAL
     
@@ -46,6 +46,11 @@ Estas capas permiten que Robert tenga identidad, continuidad, control, capacidad
 
 La arquitectura debe permitir que Robert evolucione de copiloto seguro a ejecutor controlado, sin perder seguridad, contexto ni autoridad del usuario.
 
+Relación canónica vigente:
+
+`ROBERT_CANONICAL_MODEL v0.2` define el significado oficial de los conceptos utilizados por esta arquitectura.
+
+La arquitectura organiza esos conceptos, pero no los redefine.
 ---
 
 2. CAPA 0 — IDENTIDAD / KERNEL
@@ -365,6 +370,10 @@ Regla:
 Robert no debe tener múltiples protocolos de control diferentes.
 
 Este protocolo es la referencia canónica.
+
+La futura `ROBERT_ORCHESTRATOR_SPEC` deberá especializar esta Capa 2 y este Protocolo Canónico de Control.
+
+No podrá crear un segundo protocolo de control paralelo.
 
 ---
 
