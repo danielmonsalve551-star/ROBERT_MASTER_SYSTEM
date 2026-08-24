@@ -834,12 +834,22 @@ Ejemplos:
 - Google Drive;
     
 - Figma;
-    
-- Claude;
-    
-- ChatGPT.
-    
 
+
+    ### MODELS
+
+Los Models son proveedores de inteligencia utilizados por Robert para razonamiento, análisis, generación y evaluación.
+
+Ejemplos:
+
+- Claude;
+- ChatGPT.
+
+Regla canónica:
+
+`MODEL ≠ TOOL`
+
+Los Models pueden utilizar Tools autorizadas y colaborar con Agents, Skills y Modules, pero no adquieren autoridad ni permisos por existir.
 AGENTS
 
 Son especialistas futuros que pueden operar dentro de un módulo.
