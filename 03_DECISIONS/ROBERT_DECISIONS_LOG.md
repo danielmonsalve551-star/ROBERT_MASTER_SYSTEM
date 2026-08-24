@@ -4004,3 +4004,82 @@ Esta decisión aprueba únicamente `ROBERT_HOME v0.12` como documento maestro ac
 
 No autoriza programación, código real, conexiones externas, automatizaciones, agentes autónomos ni Fase 11.
 
+## DECISIÓN #030 — Aprobación de ROBERT_CANONICAL_MODEL v0.2
+
+Fecha: 24/08/2026
+Estado: Aprobada
+Nivel de impacto: Nivel 3 — Alto / Arquitectónico
+Documento relacionado: ROBERT_CANONICAL_MODEL
+Versión relacionada: v0.2
+Fase relacionada: Fase 10 — MVP técnico básico en preparación
+Cambio relacionado: CAMBIO #053 — Integración de ROBERT_CANONICAL_MODEL v0.2
+
+---
+
+### Decisión
+
+Se aprueba formalmente `ROBERT_CANONICAL_MODEL v0.2` como modelo conceptual canónico para los conceptos fundamentales del sistema Robert.
+
+---
+
+### Motivo
+
+La aprobación establece una fuente semántica común para evitar definiciones incompatibles entre documentos, modelos de IA, agentes futuros, skills, tools, módulos e implementaciones futuras.
+
+La v0.2 incorpora la auditoría de compatibilidad y corrige específicamente:
+
+1. Separación formal entre `Model` y `Tool`.
+2. Compatibilidad entre `Agent` y la definición vigente de `Module`.
+3. Arquitectura de `Memory` en dos dimensiones: Retention y Memory Type.
+4. `State` como abstracción conceptual sobre modelos técnicos especializados.
+5. `AuditRecord` como abstracción sin creación automática de un nuevo modelo técnico.
+6. Máquinas de estado específicas por entidad, no un lifecycle universal.
+7. Orchestration como evolución de la Capa 2 — Control y del Protocolo Canónico de Control existente.
+
+---
+
+### Autoridad
+
+El usuario aprobó explícitamente `ROBERT_CANONICAL_MODEL v0.2` el 24/08/2026.
+
+---
+
+### Impacto
+
+A partir de esta decisión:
+
+* `ROBERT_CANONICAL_MODEL v0.2` pasa de `PROPOSED` a `APPROVED`.
+* Su autoridad conceptual pasa a `CANONICAL`.
+* Los documentos futuros deben preservar sus distinciones semánticas.
+* Los modelos técnicos existentes continúan siendo las representaciones técnicas autorizadas de Fase 10.
+* Claude y ChatGPT pasan conceptualmente a la categoría `Model`, separados de `Tool`.
+* La futura especificación de orquestación deberá extender la Capa 2 — Control existente y no crear un sistema paralelo.
+
+---
+
+### Qué no autoriza
+
+Esta decisión no autoriza:
+
+* programación;
+* código real;
+* base de datos real;
+* conexiones externas;
+* memoria automática real;
+* agentes autónomos;
+* ejecución autónoma;
+* comunicación automática Claude ↔ ChatGPT;
+* avance automático a Fase 11.
+
+---
+
+### Siguiente paso
+
+1. Registrar CAMBIO #053.
+2. Integrar `ROBERT_CANONICAL_MODEL.md` en `09_ARCHITECTURE`.
+3. Actualizar referencias mínimas de README, CONTEXT_MASTER, MODULES y SYSTEM_ARCHITECTURE.
+4. Preparar `ROBERT_ORCHESTRATOR_SPEC v0.1` como especialización de Capa 2 — Control.
+
+---
+
+
