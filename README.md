@@ -43,7 +43,7 @@ Estado operativo actual:
 * Sin automatizaciones reales.
 * Sin agentes autónomos activos.
 * Sin Fase 11 autorizada.
-
+* ROBERT_CANONICAL_MODEL v0.2 aprobado e integrado mediante DECISIÓN #030 y CAMBIO #053.
 ---
 
 ## Regla central
@@ -795,7 +795,7 @@ Este README queda actualizado para reflejar:
 * Sin automatizaciones.
 * Sin agentes.
 * Sin Fase 11.
-
+* ROBERT_CANONICAL_MODEL v0.2 aprobado e integrado mediante DECISIÓN #030 y CAMBIO #053.
 ---
 
 ## Siguiente paso recomendado
@@ -838,3 +838,4 @@ Regla central:
 `ROBERT_VISUAL_REFERENCE` queda reconocido como documento visual correcto.
 
 Robert no ejecuta acciones importantes sin permiso.
+
