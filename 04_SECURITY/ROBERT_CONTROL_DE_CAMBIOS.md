@@ -8746,6 +8746,100 @@ El riesgo se reduce porque la integración es documental, mantiene las specs té
 ```text
 ROBERT_CANONICAL_MODEL
 Version: 0.2
+
+CAMBIO #053 — Integración de ROBERT_CANONICAL_MODEL v0.2
+
+Fecha: 24/08/2026
+Tipo de cambio: Arquitectónico documental / canonicalización conceptual
+Documento afectado: ROBERT_CANONICAL_MODEL.md
+Versión afectada: v0.2
+Estado: Aprobado e integrado
+Decisión relacionada: DECISIÓN #030 — Aprobación de ROBERT_CANONICAL_MODEL v0.2
+Fase relacionada: Fase 10 — MVP técnico básico en preparación
+
+---
+
+### Descripción del cambio
+
+Se integra `ROBERT_CANONICAL_MODEL v0.2` en `09_ARCHITECTURE` como fuente conceptual canónica de los conceptos fundamentales de Robert.
+
+---
+
+### Alcance autorizado
+
+Este cambio autoriza únicamente:
+
+* añadir `09_ARCHITECTURE/ROBERT_CANONICAL_MODEL.md`;
+* marcar v0.2 como aprobada y canónica;
+* registrar DECISIÓN #030 y CAMBIO #053;
+* añadir referencias mínimas de integración;
+* actualizar la taxonomía documental para distinguir Models de Tools;
+* preparar como siguiente documento `ROBERT_ORCHESTRATOR_SPEC v0.1`.
+
+---
+
+### Cambios conceptuales integrados
+
+1. `Model ≠ Tool`.
+2. `Agent ≠ Skill`.
+3. `Agent ≠ Module`.
+4. `Context ≠ Memory`.
+5. `Proposal ≠ Decision`.
+6. `Decision ≠ Change`.
+7. `Permission ≠ Scope`.
+8. `Risk ≠ Conflict`.
+9. Memory se clasifica por Retention y Memory Type.
+10. Orchestration queda subordinada a Capa 2 — Control / Protocolo Canónico de Control.
+
+---
+
+### Alcance no autorizado
+
+No se autoriza:
+
+* programación;
+* código real;
+* ejecución real;
+* automatizaciones reales;
+* conexiones externas;
+* agentes autónomos;
+* memoria automática;
+* despliegue;
+* Fase 11.
+
+---
+
+### Riesgo
+
+Nivel de riesgo inicial: Nivel 3 — Alto / Arquitectónico.
+Nivel de riesgo residual: Nivel 2 — Medio / Documental.
+Nivel de autonomía: Nivel 0 — Sin autonomía ejecutiva.
+
+El riesgo se reduce porque la integración es documental, mantiene las specs técnicas vigentes y no activa capacidades reales.
+
+---
+
+### Estado final
+
+```text
+ROBERT_CANONICAL_MODEL
+Version: 0.2
+Status: APPROVED
+Authority: CANONICAL
+Decision: #030
+Change: #053
+```
+
+Robert continúa en Fase 10, modo documental, manual y supervisado.
+
+---
+
+### Siguiente paso
+
+Preparar `ROBERT_ORCHESTRATOR_SPEC v0.1` como especificación formal y evolución de la Capa 2 — Control existente.
+
+---
+
 Status: APPROVED
 Authority: CANONICAL
 Decision: #030
