@@ -215,6 +215,8 @@ Regla canónica:
 
 Fuente conceptual: `ROBERT_CANONICAL_MODEL v0.2`.
 
+Los Models pueden colaborar con Agents, Skills, Modules y Tools, pero no adquieren autoridad propia ni permisos de ejecución por existir.
+
 ## TOOLS
 
 Son herramientas externas o capacidades técnicas que Robert puede usar o conectar.
