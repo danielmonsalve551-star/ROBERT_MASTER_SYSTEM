@@ -20,6 +20,7 @@ Estado operativo actual:
 * Obsidian usado como cerebro documental manual.
 * Documentos principales respaldados manualmente.
 * ROBERT_HOME v0.12 aprobado e integrado.
+* ROBERT_CANONICAL_MODEL v0.2 aprobado e integrado mediante DECISIÓN #030 y CAMBIO #053.
 * ROBERT_CONTROL_DE_CAMBIOS actualizado.
 * CAMBIO #047 reconocido como antecedente de trazabilidad de USER_ACTIONS_SPEC v0.2.
 * DECISIÓN #027 registrada.
@@ -95,6 +96,8 @@ Los documentos maestros principales del sistema Robert son:
 * ROBERT_MODULES
 * ROBERT_VISUAL_REFERENCE
 * ROBERT_SYSTEM_ARCHITECTURE
+* ROBERT_CANONICAL_MODEL v0.2
+* 
 
 ---
 
@@ -768,6 +771,7 @@ Este README queda actualizado para reflejar:
 * Fase 10 activa.
 * Modo documental, manual y supervisado.
 * ROBERT_HOME v0.12 aprobado e integrado.
+* ROBERT_CANONICAL_MODEL v0.2 aprobado e integrado mediante DECISIÓN #030 y CAMBIO #053.
 * DECISIÓN #029 registrada.
 * CAMBIO #052 registrado.
 * CAMBIO #051 registrado.
