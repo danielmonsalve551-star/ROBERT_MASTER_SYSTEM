@@ -67,6 +67,8 @@ Ejemplos:
     
 - La arquitectura interna completa va en ROBERT_SYSTEM_ARCHITECTURE.
 
+- Las definiciones conceptuales canónicas van en ROBERT_CANONICAL_MODEL.
+
 Tags: #robert/orbita-1 #capa/1 #tipo/maestro #robert/nucleo #robert/memoria
 ---
 
@@ -78,6 +80,7 @@ Enlaces relacionados:
 
 [[ROBERT_HOME]]
 [[ROBERT_SYSTEM_ARCHITECTURE]]
+[[ROBERT_CANONICAL_MODEL]]
 [[ROBERT_SECURITY_RULES]]
 [[ROBERT_PHASES]]
 
