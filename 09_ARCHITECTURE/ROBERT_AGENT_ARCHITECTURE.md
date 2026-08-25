@@ -7,7 +7,8 @@
 **Fase relacionada:** Fase 10 — MVP técnico básico en preparación
 **Decisión de aprobación:** DECISIÓN #032
 **Cambio de integración:** CAMBIO #055
-**Corrección de consistencia:** CAMBIO #056 — pendiente de registro formal
+CONSISTENCY_CORRECTION: #056
+
 
 **Dependencias principales:**
 
