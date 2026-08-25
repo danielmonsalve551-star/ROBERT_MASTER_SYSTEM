@@ -4082,4 +4082,179 @@ Esta decisión no autoriza:
 
 ---
 
+## DECISIÓN #031 — Aprobación de ROBERT_ORCHESTRATOR_SPEC v0.1
+
+Fecha: 24/08/2026
+Estado: Aprobada
+Nivel de impacto: Nivel 3 — Alto / Arquitectónico
+Documento relacionado: ROBERT_ORCHESTRATOR_SPEC
+Versión relacionada: v0.1
+Fase relacionada: Fase 10 — MVP técnico básico en preparación
+Cambio relacionado: CAMBIO #054 — Integración de ROBERT_ORCHESTRATOR_SPEC v0.1
+
+---
+
+### Decisión
+
+Se aprueba formalmente `ROBERT_ORCHESTRATOR_SPEC v0.1` como especificación arquitectónica de orquestación de Robert.
+
+La especificación se integra como especialización y evolución técnica de:
+
+* Capa 2 — Control;
+* Protocolo Canónico de Control;
+* ROBERT_CANONICAL_MODEL v0.2.
+
+---
+
+### Motivo
+
+Robert necesita una capa formal que determine cómo procesar una solicitud desde su entrada hasta la generación de una respuesta, propuesta o acción autorizada.
+
+La especificación formaliza responsabilidades como:
+
+* clasificación de intención;
+* definición de tarea;
+* resolución de contexto;
+* routing por Module;
+* selección futura de Agents;
+* resolución futura de Skills;
+* selección de Models;
+* resolución de Tools;
+* verificación de Permission y Scope;
+* evaluación de Risk;
+* detección de Conflicts;
+* Approval Gate;
+* Validation;
+* Audit Output.
+
+---
+
+### Principio arquitectónico
+
+El Orchestrator no constituye un segundo sistema de control.
+
+```text
+CAPA 2 — CONTROL
+        ↓
+ROBERT_ORCHESTRATOR
+```
+
+`ROBERT_ORCHESTRATOR_SPEC` especializa y formaliza la Capa 2 existente.
+
+Por tanto:
+
+```text
+ROBERT ≠ ORCHESTRATOR
+ORCHESTRATOR ≠ AUTHORITY
+```
+
+---
+
+### Arquitectura aprobada
+
+El flujo conceptual aprobado es:
+
+```text
+INPUT
+  ↓
+INTENT CLASSIFICATION
+  ↓
+TASK DEFINITION
+  ↓
+CONTEXT RESOLUTION
+  ↓
+MODULE ROUTING
+  ↓
+CAPABILITY PLANNING
+  ↓
+AGENT ROUTING
+  ↓
+SKILL RESOLUTION
+  ↓
+MODEL ROUTING
+  ↓
+TOOL RESOLUTION
+  ↓
+PERMISSION / SCOPE CHECK
+  ↓
+RISK CHECK
+  ↓
+CONFLICT CHECK
+  ↓
+APPROVAL CHECK
+  ↓
+EXECUTION / GENERATION
+  ↓
+VALIDATION
+  ↓
+AUDIT
+  ↓
+STATE / MEMORY UPDATE WHEN AUTHORIZED
+  ↓
+OUTPUT
+```
+
+No todas las tareas requieren todos los pasos.
+
+---
+
+### Autoridad
+
+El usuario aprobó explícitamente `ROBERT_ORCHESTRATOR_SPEC v0.1` el 24/08/2026.
+
+---
+
+### Impacto
+
+A partir de esta decisión:
+
+* `ROBERT_ORCHESTRATOR_SPEC v0.1` pasa de `PROPOSED` a `APPROVED`.
+* El Orchestrator se reconoce como especialización oficial de la Capa 2 — Control.
+* La arquitectura futura de Agents, Skills, Models y Tools deberá poder integrarse con este sistema de routing.
+* El Model Router deberá distinguir Models de Tools según `ROBERT_CANONICAL_MODEL v0.2`.
+* El Orchestrator deberá preservar Security, Permission, Scope, Risk, Conflict Resolution y Approval.
+* Las futuras arquitecturas de Agents y Skills deberán diseñarse como dependencias del Orchestrator y no como sistemas paralelos.
+
+---
+
+### Qué no autoriza
+
+Esta decisión no autoriza:
+
+* routing automático real;
+* Agents ejecutivos reales;
+* Skills ejecutables reales;
+* ejecución autónoma;
+* memoria automática;
+* Model Router automático;
+* Tool Router automático;
+* conexión automática entre Claude y ChatGPT;
+* programación de producción;
+* acceso externo sin autorización;
+* avance automático a Fase 11.
+
+---
+
+### Estado operativo
+
+En Fase 10 el Orchestrator permanece:
+
+```text
+DOCUMENTAL
+CONCEPTUAL
+MANUAL
+SUPERVISED
+```
+
+---
+
+### Siguiente paso
+
+1. Registrar CAMBIO #054.
+2. Integrar `09_ARCHITECTURE/ROBERT_ORCHESTRATOR_SPEC.md`.
+3. Actualizar referencias arquitectónicas mínimas.
+4. Realizar revisión de consistencia.
+5. Preparar `ROBERT_AGENT_ARCHITECTURE v0.1`.
+
+---
 
