@@ -9848,3 +9848,363 @@ Execution Authority: NONE
 ---
 
 CAMBIO #058 — Corrección de ownership de Autonomy, Execution Authority y Skill Requesters
+
+Fecha: 25/08/2026
+Tipo de cambio: Corrección de consistencia arquitectónica
+Documento afectado: `ROBERT_SKILL_ARCHITECTURE.md`
+Versión afectada: v0.1
+Estado: APROBADO E INTEGRADO
+Decisión relacionada: DECISIÓN #033 — Aprobación de `ROBERT_SKILL_ARCHITECTURE v0.1`
+Cambio previo relacionado: CAMBIO #057 — Integración de `ROBERT_SKILL_ARCHITECTURE v0.1`
+Fase relacionada: Fase 10 — MVP técnico básico en preparación
+
+---
+
+### Descripción del cambio
+
+Se corrige `ROBERT_SKILL_ARCHITECTURE v0.1` para separar formalmente la Skill del ownership de:
+
+```text
+AUTONOMY
+EXECUTION AUTHORITY
+```
+
+y para generalizar el origen válido de una solicitud de Skill mediante el concepto:
+
+```text
+AUTHORIZED REQUESTER
+```
+
+sin transferir autoridad de routing fuera del Orchestrator.
+
+---
+
+### Motivo
+
+La revisión final de consistencia detectó dos ambigüedades:
+
+1. El Skill Manifest incluía:
+
+```text
+autonomy
+execution authority
+```
+
+como si fueran propiedades propias de una Skill.
+
+2. El flujo principal implicaba que toda Skill debía ser solicitada necesariamente por un Agent, aunque componentes autorizados como Validator u Orchestrator puedan necesitar procedimientos reutilizables.
+
+---
+
+### Corrección 1 — Ownership de Autonomy
+
+Se formaliza:
+
+```text
+SKILL ≠ AUTONOMOUS ACTOR
+SKILL DOES NOT OWN AUTONOMY
+```
+
+Autonomy pertenece al contexto operativo autorizado del sistema y, cuando corresponda, al actor operativo que participa en una Task.
+
+Durante Fase 10:
+
+```text
+PHASE 10 OPERATIONAL CONTEXT:
+AUTONOMY_LEVEL = 0
+```
+
+Esto no constituye una propiedad interna de la Skill.
+
+---
+
+### Corrección 2 — Ownership de Execution Authority
+
+Se formaliza:
+
+```text
+SKILL DOES NOT OWN EXECUTION AUTHORITY
+```
+
+Una Skill únicamente puede describir procedimientos que potencialmente requieran una Action o efecto externo.
+
+La autorización de ejecución deberá resolverse mediante el contexto operativo autorizado y al menos:
+
+```text
+PERMISSION
++
+SCOPE
++
+EXECUTION AUTHORITY
++
+RISK EVALUATION
++
+APPROVAL WHEN REQUIRED
+```
+
+Durante Fase 10:
+
+```text
+PHASE 10 OPERATIONAL CONTEXT:
+EXECUTION_AUTHORITY = NONE
+```
+
+Por tanto:
+
+```text
+ACTION PROCEDURE ≠ AUTHORIZED ACTION
+```
+
+---
+
+### Skill Manifest actualizado
+
+Se elimina del manifest conceptual:
+
+```yaml
+autonomy:
+  level:
+
+execution:
+  authority:
+```
+
+como propiedades de la Skill.
+
+Se reemplaza por:
+
+```yaml
+authorization_requirements:
+  permissions:
+  scopes:
+  approval:
+
+operational_constraints:
+  external_effects_allowed:
+```
+
+La Skill puede declarar requisitos o restricciones.
+
+No posee la autorización resultante.
+
+---
+
+### Corrección 3 — Authorized Requester
+
+Se generaliza el flujo de solicitud de capacidades.
+
+Arquitectura general:
+
+```text
+AUTHORIZED REQUESTER
+        ↓
+CAPABILITY REQUEST
+        ↓
+ORCHESTRATOR
+        ↓
+SKILL RESOLVER
+        ↓
+SKILL
+```
+
+Conceptualmente, un `AUTHORIZED REQUESTER` puede ser:
+
+```text
+AGENT
+OR
+VALIDATOR
+OR
+AUTHORIZED ROBERT COMPONENT
+```
+
+según la arquitectura vigente y el contexto autorizado.
+
+---
+
+### Caso específico de Agent
+
+Se mantiene como flujo válido:
+
+```text
+AGENT
+  ↓
+CAPABILITY REQUEST
+  ↓
+ORCHESTRATOR
+  ↓
+SKILL RESOLVER
+  ↓
+SKILL
+```
+
+Esta corrección no elimina ni modifica el mecanismo de Agent Capability Request.
+
+---
+
+### Routing Authority
+
+Se formalizan:
+
+```text
+AUTHORIZED REQUESTER ≠ ROUTING AUTHORITY
+```
+
+y:
+
+```text
+SKILL REQUEST ≠ DIRECT SKILL INVOCATION
+```
+
+El Orchestrator conserva la autoridad para resolver:
+
+* Skill;
+* Model;
+* Tool;
+* contexto;
+* Permission;
+* Scope;
+* Risk;
+* Approval;
+* Validation.
+
+---
+
+### Composite Skills
+
+Se mantiene:
+
+```text
+COMPOSITION ≠ ROUTING AUTHORITY
+```
+
+Una Composite Skill tampoco adquiere autoridad de routing como consecuencia de esta corrección.
+
+---
+
+### Impacto arquitectónico
+
+Este cambio mejora la separación entre:
+
+```text
+PROCEDURE
+ACTOR
+AUTHORIZATION
+ROUTING
+```
+
+quedando:
+
+```text
+SKILL = PROCEDURE
+
+AUTHORIZED REQUESTER = ACTOR OR COMPONENT REQUESTING CAPABILITY
+
+ORCHESTRATOR = ROUTING AUTHORITY
+
+OPERATIONAL CONTEXT = AUTHORIZATION STATE
+```
+
+---
+
+### Invariantes resultantes
+
+Se integran:
+
+```text
+SKILL ≠ AGENT
+SKILL ≠ MODEL
+SKILL ≠ TOOL
+SKILL ≠ MODULE
+SKILL ≠ AUTONOMOUS ACTOR
+
+SKILL REQUIREMENT ≠ PERMISSION
+SKILL REQUIREMENT ≠ SCOPE
+
+SKILL DOES NOT OWN AUTONOMY
+SKILL DOES NOT OWN EXECUTION AUTHORITY
+
+AUTHORIZED REQUESTER ≠ ROUTING AUTHORITY
+SKILL REQUEST ≠ DIRECT SKILL INVOCATION
+
+COMPOSITION ≠ ROUTING AUTHORITY
+
+RISK ≠ AUTONOMY
+RISK ≠ EXECUTION AUTHORITY
+```
+
+---
+
+### Restricciones
+
+Este cambio no autoriza:
+
+* Skills autónomas;
+* acceso directo de Requesters a Skills fuera del Orchestrator;
+* Tool invocation automática;
+* Model invocation automática;
+* Memory writes automáticos;
+* creación de Permissions;
+* creación o expansión de Scope;
+* creación de Autonomy;
+* creación de Execution Authority;
+* routing paralelo;
+* self-modification;
+* ejecución externa automática;
+* avance automático a Fase 11.
+
+---
+
+### Riesgo
+
+Nivel de riesgo del cambio:
+
+```text
+Nivel 1 — Bajo / Corrección documental de consistencia
+```
+
+Contexto operativo:
+
+```text
+AUTONOMY_LEVEL = 0
+EXECUTION_AUTHORITY = NONE
+```
+
+---
+
+### Estado final
+
+```text
+ROBERT_SKILL_ARCHITECTURE
+Version: 0.1
+Status: APPROVED
+Decision: #033
+Integration Change: #057
+Consistency Change: #058
+Phase: 10
+Implementation: NONE
+Operational Autonomy: 0
+Operational Execution Authority: NONE
+```
+
+---
+
+### Siguiente paso
+
+Con esta corrección registrada, `ROBERT_SKILL_ARCHITECTURE v0.1` queda cerrada a nivel arquitectónico documental.
+
+El siguiente documento es:
+
+```text
+ROBERT_MODEL_INTERFACE_SPEC v0.1
+```
+
+Su objetivo será definir una interfaz uniforme entre Robert y:
+
+```text
+Claude
+ChatGPT
+futuros Models
+```
+
+sin acoplar Agents o Skills directamente a un proveedor.
+
