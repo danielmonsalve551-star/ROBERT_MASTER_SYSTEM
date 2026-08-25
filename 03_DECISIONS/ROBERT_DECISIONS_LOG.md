@@ -4554,3 +4554,259 @@ SUPERVISED
 5. Preparar `ROBERT_SKILL_ARCHITECTURE v0.1`.
 
 ---
+DECISIÓN #033 — Aprobación de ROBERT_SKILL_ARCHITECTURE v0.1
+
+Fecha: 25/08/2026
+Tipo: Arquitectónica / documental
+Documento relacionado: `09_ARCHITECTURE/ROBERT_SKILL_ARCHITECTURE.md`
+Versión: v0.1
+Estado: APROBADA
+Fase: Fase 10 — MVP técnico básico en preparación
+
+---
+
+### Decisión
+
+Se aprueba `ROBERT_SKILL_ARCHITECTURE v0.1` como arquitectura documental vigente para la definición, clasificación, composición, reutilización y gobierno de Skills dentro de Robert.
+
+---
+
+### Definición aprobada
+
+Se mantiene la separación:
+
+```text
+AGENT = quién trabaja
+SKILL = cómo trabaja
+MODEL = quién procesa
+TOOL = con qué interactúa
+ORCHESTRATOR = quién coordina
+ROBERT = quién gobierna
+```
+
+Y las distinciones:
+
+```text
+SKILL ≠ AGENT
+SKILL ≠ MODEL
+SKILL ≠ TOOL
+SKILL ≠ MODULE
+SKILL ≠ COMMAND
+```
+
+---
+
+### Principios aprobados
+
+Se aprueba que:
+
+* una Skill represente un procedimiento reutilizable;
+* las Skills sean preferentemente pequeñas, reutilizables y componibles;
+* los Agents soliciten capacidades mediante `CAPABILITY REQUEST`;
+* el Orchestrator conserve la autoridad de routing;
+* Skill Resolver opere bajo el Orchestrator;
+* Skills declaren requisitos de Model y Tool sin seleccionar unilateralmente recursos;
+* una Skill pueda declarar Permission y Scope requirements sin poseer Permission o Scope propios;
+* Risk permanezca separado de Autonomy y Execution Authority;
+* Composite Skills no se conviertan en Orchestrators paralelos;
+* Skills soporten Evidence Requirements y Source Requirements;
+* exista conceptualmente un `ROBERT_SKILL_REGISTRY`;
+* se priorice reutilización antes que creación de Skills duplicadas.
+
+---
+
+### Skill Contract
+
+Se aprueba conceptualmente el contrato con entradas como:
+
+```text
+TASK
+CONTEXT
+INPUTS
+CONSTRAINTS
+PERMISSIONS
+SCOPE
+RISK
+EVIDENCE_REQUIREMENTS
+SOURCE_REQUIREMENTS
+EXPECTED_OUTPUT
+```
+
+y salidas como:
+
+```text
+RESULT
+EVIDENCE
+SOURCES
+RISKS
+CONFLICTS
+CONFIDENCE
+LIMITATIONS
+VALIDATION_STATUS
+NEXT_RECOMMENDATION
+```
+
+El formato técnico definitivo queda pendiente.
+
+---
+
+### Skill Registry
+
+Se aprueba conceptualmente un catálogo único de Skills.
+
+Antes de crear una nueva Skill deberá comprobarse:
+
+1. si existe una equivalente;
+2. si existe una parcialmente equivalente;
+3. si puede resolverse mediante composición;
+4. si realmente se necesita una nueva capacidad.
+
+Principio:
+
+```text
+ONE CAPABILITY
+      ↓
+ONE PRIMARY SKILL DEFINITION
+```
+
+cuando sea razonablemente posible.
+
+---
+
+### Catálogo inicial
+
+Se aprueba el catálogo inicial de Skills como arquitectura documental provisional en las categorías:
+
+```text
+ANALYSIS
+RESEARCH
+ARCHITECTURE
+SECURITY
+MEMORY
+CODE
+TESTING
+STRATEGY
+VALIDATION
+DOCUMENTATION
+```
+
+La aprobación del catálogo no implica implementación ni activación automática de cada Skill.
+
+---
+
+### Authorization Requirements
+
+Se aprueba:
+
+```text
+SKILL DECLARES REQUIREMENTS
+        ≠
+SKILL OWNS AUTHORIZATION
+```
+
+Y:
+
+```text
+SKILL REQUIREMENT ≠ PERMISSION
+SKILL REQUIREMENT ≠ SCOPE
+TOOL REQUIREMENT ≠ TOOL AUTHORIZATION
+```
+
+---
+
+### Composition
+
+Se aprueba:
+
+```text
+COMPOSITION ≠ ROUTING AUTHORITY
+```
+
+Una Composite Skill puede definir procedimiento, dependencia o secuencia lógica, pero no puede asignar Agents ni seleccionar unilateralmente Models o Tools.
+
+---
+
+### Risk, Autonomy y Execution
+
+Se mantienen:
+
+```text
+RISK ≠ PERMISSION
+RISK ≠ AUTONOMY
+RISK ≠ EXECUTION AUTHORITY
+```
+
+Durante Fase 10:
+
+```text
+AUTONOMY_LEVEL = 0
+EXECUTION_AUTHORITY = NONE
+```
+
+---
+
+### Evidence y Sources
+
+Se aprueba distinguir:
+
+```text
+SOURCE
+CLAIM
+EVIDENCE
+INTERPRETATION
+```
+
+y:
+
+```text
+SOURCE ≠ CLAIM
+CLAIM ≠ EVIDENCE
+EVIDENCE ≠ INTERPRETATION
+```
+
+Las políticas técnicas definitivas de Evidence y Sources quedan pendientes para versiones posteriores.
+
+---
+
+### Restricciones
+
+Esta decisión no autoriza:
+
+* ejecución autónoma de Skills;
+* Tool invocation automática;
+* Memory writes automáticos;
+* creación autónoma de Permissions;
+* creación autónoma de Scope;
+* creación autónoma de Autonomy;
+* creación autónoma de Execution Authority;
+* routing paralelo al Orchestrator;
+* self-modification;
+* ejecución externa;
+* avance automático de Phase.
+
+---
+
+### Estado aprobado
+
+```text
+ROBERT_SKILL_ARCHITECTURE
+Version: 0.1
+Status: APPROVED
+Decision: #033
+Phase: 10
+Implementation: NONE
+Autonomy Level: 0
+Execution Authority: NONE
+```
+
+---
+
+### Siguiente paso
+
+1. Registrar `CAMBIO #057`.
+2. Promover `ROBERT_SKILL_ARCHITECTURE.md` de `PROPOSED` a `APPROVED`.
+3. Actualizar referencias mínimas.
+4. Realizar revisión final de consistencia.
+5. Preparar `ROBERT_MODEL_INTERFACE_SPEC v0.1`.
+
+---
