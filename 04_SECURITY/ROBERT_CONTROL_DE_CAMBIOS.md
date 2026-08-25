@@ -8973,3 +8973,274 @@ ROBERT_AGENT_ARCHITECTURE v0.1
 
 ---
 
+CAMBIO #055 — Integración de ROBERT_AGENT_ARCHITECTURE v0.1
+
+Fecha: 24/08/2026
+Tipo de cambio: Arquitectónico documental / formalización de Agents
+Documento afectado: ROBERT_AGENT_ARCHITECTURE.md
+Versión afectada: v0.1
+Estado: Aprobado e integrado
+Decisión relacionada: DECISIÓN #032 — Aprobación de ROBERT_AGENT_ARCHITECTURE v0.1
+Fase relacionada: Fase 10 — MVP técnico básico en preparación
+
+---
+
+### Descripción del cambio
+
+Se integra `ROBERT_AGENT_ARCHITECTURE v0.1` en `09_ARCHITECTURE` como arquitectura oficial documental y conceptual de Agents dentro de Robert.
+
+La integración formaliza la relación entre:
+
+* Orchestrator;
+* Modules;
+* Agents;
+* Skills;
+* Models;
+* Tools;
+* Permissions;
+* Scopes;
+* Risk;
+* Approval;
+* Validation;
+* Audit.
+
+---
+
+### Alcance autorizado
+
+Este cambio autoriza únicamente:
+
+* añadir e integrar `09_ARCHITECTURE/ROBERT_AGENT_ARCHITECTURE.md`;
+* marcar v0.1 como `APPROVED`;
+* registrar DECISIÓN #032 y CAMBIO #055;
+* reconocer documentalmente el catálogo inicial de Agents;
+* formalizar reglas de Agent Routing;
+* formalizar Capability Request;
+* formalizar Primary y Supporting Agents;
+* formalizar reglas de Handoff;
+* formalizar Structured Context Transfer;
+* formalizar límites de Permission, Scope y Risk;
+* formalizar reglas de Validation y Escalation;
+* preparar `ROBERT_SKILL_ARCHITECTURE v0.1`.
+
+---
+
+### Catálogo inicial integrado
+
+Se reconoce documentalmente:
+
+```text id="8zlfkj"
+ROBERT_ARCHITECT
+ROBERT_RESEARCHER
+ROBERT_CRITIC
+ROBERT_SECURITY
+ROBERT_MEMORY
+ROBERT_CODER
+ROBERT_TESTER
+ROBERT_STRATEGIST
+```
+
+Estado operativo del catálogo:
+
+```text id="6jjp9z"
+DOCUMENTAL
+CONCEPTUAL
+MANUAL
+SUPERVISED
+```
+
+Los Agents no quedan implementados ni activos por este cambio.
+
+---
+
+### Distinciones arquitectónicas integradas
+
+```text id="x6n29y"
+AGENT ≠ MODEL
+AGENT ≠ SKILL
+AGENT ≠ TOOL
+AGENT ≠ MODULE
+AGENT ≠ USER
+AGENT ≠ ROBERT
+```
+
+También se integra:
+
+```text id="h3zy9u"
+AGENT REQUEST ≠ DIRECT INVOCATION
+```
+
+Por tanto, la necesidad de una capacidad deberá expresarse mediante:
+
+```text id="hgih4u"
+AGENT
+  ↓
+CAPABILITY REQUEST
+  ↓
+ORCHESTRATOR
+  ↓
+SKILL / MODEL / TOOL RESOLUTION
+```
+
+---
+
+### Ownership
+
+Cuando participen varios Agents:
+
+* deberá existir un `Primary Agent`;
+* podrán existir `Supporting Agents`;
+* el Orchestrator conserva la autoridad de routing;
+* el Agent no puede autoasignarse autoridad sobre otra área;
+* compartir Skills no implica compartir ownership.
+
+---
+
+### Agent Communication
+
+Se integra como flujo preferido:
+
+```text id="dy993u"
+Agent A
+  ↓
+structured output
+  ↓
+ORCHESTRATOR
+  ↓
+authorized context
+  ↓
+Agent B
+```
+
+No se autoriza comunicación autónoma Agent-to-Agent.
+
+---
+
+### Handoff
+
+Un Agent podrá solicitar conceptualmente:
+
+```text id="92ymxv"
+HANDOFF_REQUIRED
+```
+
+pero:
+
+```text id="grng7a"
+HANDOFF RECOMMENDATION ≠ ROUTING AUTHORITY
+```
+
+El Orchestrator determina el siguiente destino.
+
+---
+
+### Permission y Scope
+
+Los Agents quedan sujetos a:
+
+```text id="awfnmd"
+PERMISSION
+SCOPE
+RISK LIMIT
+APPROVAL REQUIREMENTS
+```
+
+Un Permission no implica Scope ilimitado.
+
+Una capacidad documentada no implica autorización de ejecución.
+
+---
+
+### Risk
+
+Durante Fase 10 se mantiene:
+
+```text id="gvvzdc"
+EXECUTION_RISK_LIMIT = 0
+```
+
+para Agents fuera de Sandbox o simulaciones explícitamente autorizadas.
+
+Los Agents pueden analizar o recomendar sobre niveles de Risk superiores sin adquirir autoridad de ejecución.
+
+---
+
+### Lifecycle
+
+Los estados descritos en `ROBERT_AGENT_ARCHITECTURE v0.1` permanecen como candidatos conceptuales.
+
+Este cambio no crea todavía una state machine técnica oficial para Agents.
+
+---
+
+### Restricciones
+
+Ningún Agent puede:
+
+```text id="jzs6vz"
+BYPASS SECURITY
+CREATE PERMISSIONS
+EXPAND SCOPE
+SELF-APPROVE
+ALTER PHASE
+ALTER CANONICAL MODEL
+HIDE CONFLICT
+EXECUTE OUTSIDE AUTHORITY
+BYPASS ORCHESTRATOR ROUTING
+```
+
+---
+
+### Alcance no autorizado
+
+Este cambio no autoriza:
+
+* ejecución autónoma;
+* Agents persistentes;
+* routing automático real;
+* Tool access automático;
+* Memory writes automáticos;
+* Agent-to-Agent messaging autónomo;
+* self-modification;
+* self-replication;
+* self-approval;
+* programación de producción;
+* conexiones externas nuevas;
+* avance automático a Fase 11.
+
+---
+
+### Riesgo
+
+Nivel de riesgo inicial: Nivel 3 — Alto / Arquitectónico.
+Nivel de riesgo residual: Nivel 2 — Medio / Documental.
+Nivel de autonomía: Nivel 0 — Sin autonomía ejecutiva.
+
+El riesgo residual permanece limitado porque la integración continúa siendo documental y conceptual.
+
+---
+
+### Estado final
+
+```text id="uuv7ki"
+ROBERT_AGENT_ARCHITECTURE
+Version: 0.1
+Status: APPROVED
+Decision: #032
+Change: #055
+Phase: 10
+Implementation: NONE
+Execution: NONE
+Autonomy: NONE
+```
+
+---
+
+### Siguiente paso
+
+1. Cambiar el encabezado de `ROBERT_AGENT_ARCHITECTURE.md` de `PROPUESTA` a `APROBADO`.
+2. Actualizar referencias mínimas en `ROBERT_ORCHESTRATOR_SPEC` y `README`.
+3. Realizar revisión final de consistencia.
+4. Preparar `ROBERT_SKILL_ARCHITECTURE v0.1`.
+
+---
