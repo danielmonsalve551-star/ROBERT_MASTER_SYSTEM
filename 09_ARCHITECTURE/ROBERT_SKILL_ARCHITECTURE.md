@@ -1,7 +1,7 @@
 # ROBERT_SKILL_ARCHITECTURE
 
 **Versión:** 0.1
-**Estado:** PROPUESTA — pendiente de aprobación
+**Estado:** APROBADA
 **Tipo:** Especificación arquitectónica de Skills
 **Ubicación propuesta:** `09_ARCHITECTURE/ROBERT_SKILL_ARCHITECTURE.md`
 **Fase relacionada:** Fase 10 — MVP técnico básico en preparación
