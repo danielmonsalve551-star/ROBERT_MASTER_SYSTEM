@@ -9244,3 +9244,283 @@ Autonomy: NONE
 4. Preparar `ROBERT_SKILL_ARCHITECTURE v0.1`.
 
 ---
+CAMBIO #056 — Separación de Risk, Autonomy y Execution Authority en Agent Architecture
+
+Fecha: 24/08/2026
+Tipo de cambio: Corrección de consistencia arquitectónica
+Documento afectado: ROBERT_AGENT_ARCHITECTURE.md
+Versión afectada: v0.1
+Estado: Aprobado e integrado
+Decisión relacionada: DECISIÓN #032 — Aprobación de ROBERT_AGENT_ARCHITECTURE v0.1
+Cambio previo relacionado: CAMBIO #055 — Integración de ROBERT_AGENT_ARCHITECTURE v0.1
+Fase relacionada: Fase 10 — MVP técnico básico en preparación
+
+---
+
+### Descripción del cambio
+
+Se corrige `ROBERT_AGENT_ARCHITECTURE v0.1` para separar formalmente los conceptos de:
+
+```text
+RISK
+AUTONOMY
+EXECUTION AUTHORITY
+```
+
+La corrección evita interpretar un nivel bajo de Risk como autorización de ejecución.
+
+---
+
+### Motivo
+
+La revisión final de consistencia detectó que expresiones como:
+
+```text
+EXECUTION_RISK_LIMIT = 0
+```
+
+podían interpretarse como si un Agent tuviera capacidad de ejecución cuando el Risk fuera 0.
+
+Esto contradice los principios de seguridad vigentes de Robert, donde:
+
+```text
+RISK ≠ AUTONOMY
+RISK ≠ AUTHORIZATION
+```
+
+y durante Fase 10 no existe autonomía ejecutiva activa.
+
+---
+
+### Corrección aplicada
+
+Se reemplaza la relación anterior basada en límites de Risk de ejecución por:
+
+```text
+AUTONOMY_LEVEL = 0
+EXECUTION_AUTHORITY = NONE
+```
+
+para todos los Agents durante Fase 10.
+
+---
+
+### Reglas resultantes
+
+Se formalizan las siguientes distinciones:
+
+```text
+RISK ≠ PERMISSION
+
+RISK ≠ AUTONOMY
+
+RISK ≠ EXECUTION AUTHORITY
+
+PERMISSION ≠ EXECUTION AUTHORITY
+
+LOW RISK ≠ AUTHORIZED EXECUTION
+
+HIGH RISK ≠ INABILITY TO ANALYZE
+```
+
+---
+
+### Política de Risk
+
+Risk continúa clasificando:
+
+* impacto;
+* sensibilidad;
+* peligrosidad;
+* incertidumbre;
+* posible efecto de una Task, Proposal o Action.
+
+Risk puede influir en:
+
+* Validation;
+* Escalation;
+* Approval;
+* Security Review;
+* Conflict Review.
+
+Risk no concede ejecución.
+
+---
+
+### Política de Autonomy
+
+Autonomy representa el nivel autorizado de actuación independiente.
+
+Durante Fase 10:
+
+```text
+AUTONOMY_LEVEL = 0
+```
+
+para todos los Agents.
+
+Esto mantiene a los Agents en estado:
+
+```text
+DOCUMENTAL
+CONCEPTUAL
+MANUAL
+SUPERVISED
+```
+
+---
+
+### Política de Execution Authority
+
+Execution Authority representa la capacidad explícita de producir efectos ejecutivos reales.
+
+Durante Fase 10:
+
+```text
+EXECUTION_AUTHORITY = NONE
+```
+
+para todos los Agents.
+
+Esto se mantiene aunque:
+
+* Risk sea 0;
+* exista Permission;
+* exista una Tool;
+* un Model recomiende ejecutar;
+* el Agent tenga Confidence elevada.
+
+---
+
+### Requisitos para ejecución futura
+
+Una futura capacidad ejecutiva deberá depender como mínimo de:
+
+```text
+PERMISSION
++
+SCOPE
++
+AUTONOMY
++
+EXECUTION AUTHORITY
++
+RISK EVALUATION
++
+APPROVAL WHEN REQUIRED
+```
+
+Ninguno de estos elementos sustituye automáticamente a los demás.
+
+---
+
+### Agent Manifest
+
+La estructura conceptual de Risk queda separada de Autonomy y Execution:
+
+```yaml
+risk:
+  analysis_range:
+  recommendation_range:
+  escalation_threshold:
+
+autonomy:
+  level:
+
+execution:
+  authority:
+```
+
+Durante Fase 10:
+
+```yaml
+autonomy:
+  level: 0
+
+execution:
+  authority: NONE
+```
+
+---
+
+### Impacto
+
+Este cambio:
+
+* no crea nuevos Agents;
+* no cambia el catálogo aprobado;
+* no modifica DECISIÓN #032;
+* no cambia el Orchestrator;
+* no activa Tools;
+* no activa ejecución;
+* no activa autonomía;
+* no cambia Phase.
+
+Únicamente corrige la consistencia semántica y de seguridad de `ROBERT_AGENT_ARCHITECTURE v0.1`.
+
+---
+
+### Alcance no autorizado
+
+No se autoriza:
+
+* ejecución autónoma;
+* Tool access automático;
+* Agent loops;
+* Agent-to-Agent messaging autónomo;
+* modificación automática;
+* autoaprobación;
+* creación automática de Permissions;
+* creación automática de Scope;
+* creación automática de Autonomy;
+* creación automática de Execution Authority;
+* avance automático a Fase 11.
+
+---
+
+### Riesgo
+
+Nivel de riesgo del cambio: Nivel 1 — Bajo / Corrección documental.
+
+Nivel de autonomía:
+
+```text
+0
+```
+
+Execution Authority:
+
+```text
+NONE
+```
+
+---
+
+### Estado final
+
+```text
+ROBERT_AGENT_ARCHITECTURE
+Version: 0.1
+Status: APPROVED
+Decision: #032
+Integration Change: #055
+Consistency Change: #056
+Phase: 10
+Implementation: NONE
+Autonomy Level: 0
+Execution Authority: NONE
+```
+
+---
+
+### Siguiente paso
+
+Preparar:
+
+```text
+ROBERT_SKILL_ARCHITECTURE v0.1
+```
+
+como siguiente pieza arquitectónica dependiente de Agent Architecture y Orchestrator.
+
+---
