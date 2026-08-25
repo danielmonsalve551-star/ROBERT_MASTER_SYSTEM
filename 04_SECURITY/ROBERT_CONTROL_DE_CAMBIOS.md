@@ -8844,3 +8844,132 @@ Status: APPROVED
 Authority: CANONICAL
 Decision: #030
 Change: #053
+
+CAMBIO #054 — Integración de ROBERT_ORCHESTRATOR_SPEC v0.1
+
+Fecha: 24/08/2026
+Tipo de cambio: Arquitectónico documental / formalización de orquestación
+Documento afectado: ROBERT_ORCHESTRATOR_SPEC.md
+Versión afectada: v0.1
+Estado: Aprobado e integrado
+Decisión relacionada: DECISIÓN #031 — Aprobación de ROBERT_ORCHESTRATOR_SPEC v0.1
+Fase relacionada: Fase 10 — MVP técnico básico en preparación
+
+---
+
+### Descripción del cambio
+
+Se integra `ROBERT_ORCHESTRATOR_SPEC v0.1` en `09_ARCHITECTURE` como especificación arquitectónica oficial de la orquestación de Robert.
+
+El documento formaliza y especializa la Capa 2 — Control y el Protocolo Canónico de Control existentes.
+
+---
+
+### Alcance autorizado
+
+Este cambio autoriza únicamente:
+
+* añadir `09_ARCHITECTURE/ROBERT_ORCHESTRATOR_SPEC.md`;
+* marcar v0.1 como aprobada;
+* registrar DECISIÓN #031 y CAMBIO #054;
+* establecer formalmente el Orchestrator como especialización de Capa 2 — Control;
+* documentar routing conceptual para Modules, Agents, Skills, Models y Tools;
+* documentar Permission / Scope Check;
+* documentar Risk Check;
+* documentar Conflict Check;
+* documentar Approval Gate;
+* documentar Validation;
+* documentar Audit Output;
+* preparar `ROBERT_AGENT_ARCHITECTURE v0.1`.
+
+---
+
+### Cambios arquitectónicos integrados
+
+1. Se formaliza `ROBERT_ORCHESTRATOR`.
+2. Se mantiene `ROBERT ≠ ORCHESTRATOR`.
+3. Se mantiene `ORCHESTRATOR ≠ AUTHORITY`.
+4. El Orchestrator especializa la Capa 2 — Control.
+5. Se formaliza `Intent Router`.
+6. Se formaliza `Context Resolver`.
+7. Se formaliza `Module Router`.
+8. Se documenta `Agent Router`.
+9. Se documenta `Skill Resolver`.
+10. Se documenta `Model Router`.
+11. Se documenta `Tool Resolver`.
+12. Se formalizan checks de Permission, Scope, Risk y Conflict.
+13. Se formalizan Approval Gate, Validator y Audit Output.
+14. Se introducen niveles conceptuales de Orchestration.
+15. Se documenta la posibilidad futura de Multi-Model Routing.
+
+---
+
+### Restricciones
+
+El Orchestrator no puede:
+
+* modificar Security Rules;
+* crear sus propios Permissions;
+* ampliar Scope silenciosamente;
+* autoaprobar Actions de riesgo;
+* convertir Proposal en Decision;
+* ocultar Conflicts;
+* alterar el Canonical Model sin Change Control;
+* ejecutar Tools sin autorización válida.
+
+---
+
+### Alcance no autorizado
+
+No se autoriza:
+
+* routing automático real;
+* programación de producción;
+* autonomía;
+* ejecución externa automática;
+* Agents autónomos;
+* Skills ejecutables;
+* memoria automática;
+* Model Router automático;
+* Tool Router automático;
+* conexiones externas nuevas;
+* comunicación automática Claude ↔ ChatGPT;
+* avance automático a Fase 11.
+
+---
+
+### Riesgo
+
+Nivel de riesgo inicial: Nivel 3 — Alto / Arquitectónico.
+Nivel de riesgo residual: Nivel 2 — Medio / Documental.
+Nivel de autonomía: Nivel 0 — Sin autonomía ejecutiva.
+
+El riesgo residual se mantiene limitado porque la integración continúa siendo conceptual, documental, manual y supervisada.
+
+---
+
+### Estado final
+
+```text
+ROBERT_ORCHESTRATOR_SPEC
+Version: 0.1
+Status: APPROVED
+Decision: #031
+Change: #054
+Phase: 10
+Execution: NONE
+Autonomy: NONE
+```
+
+---
+
+### Siguiente paso
+
+Integrar las referencias mínimas del Orchestrator y posteriormente preparar:
+
+```text
+ROBERT_AGENT_ARCHITECTURE v0.1
+```
+
+---
+
