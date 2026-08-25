@@ -17,6 +17,7 @@
 * `ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC`
 * `ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC`
 * `ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC`
+* ROBERT_SKILL_ARCHITECTURE v0.1
 
 ---
 
@@ -511,6 +512,38 @@ availability
 ---
 
 # 14. Skill Resolver
+
+### Skill Architecture vigente
+
+La arquitectura documental vigente de Skills es:
+
+`ROBERT_SKILL_ARCHITECTURE v0.1`
+
+Aprobada mediante:
+
+- DECISIÓN #033
+- CAMBIO #057
+
+El Skill Resolver deberá respetar:
+
+- Skill Contract;
+- Skill Reuse;
+- Skill Registry;
+- Skill Composition;
+- Model Requirements;
+- Tool Requirements;
+- Permission Requirements;
+- Scope Requirements;
+- Evidence Requirements;
+- Source Requirements;
+- Validation Requirements.
+
+Una Skill declara requisitos, pero no posee autorización.
+
+```text
+SKILL REQUIREMENT ≠ PERMISSION
+SKILL REQUIREMENT ≠ SCOPE
+COMPOSITION ≠ ROUTING AUTHORITY
 
 ## 14.1 Propósito
 
