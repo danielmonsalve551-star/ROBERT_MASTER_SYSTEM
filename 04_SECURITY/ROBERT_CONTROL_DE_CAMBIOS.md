@@ -9335,6 +9335,8 @@ Risk continúa clasificando:
 * incertidumbre;
 * posible efecto de una Task, Proposal o Action.
 
+
+
 Risk puede influir en:
 
 * Validation;
@@ -9522,5 +9524,325 @@ ROBERT_SKILL_ARCHITECTURE v0.1
 ```
 
 como siguiente pieza arquitectónica dependiente de Agent Architecture y Orchestrator.
+
+---
+CAMBIO #057 — Integración de ROBERT_SKILL_ARCHITECTURE v0.1
+
+Fecha: 25/08/2026
+Tipo de cambio: Arquitectónico documental / formalización de Skills
+Documento afectado: `ROBERT_SKILL_ARCHITECTURE.md`
+Versión afectada: v0.1
+Estado: APROBADO E INTEGRADO
+Decisión relacionada: DECISIÓN #033 — Aprobación de `ROBERT_SKILL_ARCHITECTURE v0.1`
+Fase relacionada: Fase 10 — MVP técnico básico en preparación
+
+---
+
+### Descripción del cambio
+
+Se integra `09_ARCHITECTURE/ROBERT_SKILL_ARCHITECTURE.md` como arquitectura documental vigente para Skills dentro de Robert.
+
+La integración formaliza:
+
+* definición de Skill;
+* Skill Contract;
+* Skill Resolver;
+* Capability Request;
+* reutilización;
+* composición;
+* Skill Registry;
+* requisitos de Model;
+* requisitos de Tool;
+* requisitos de Permission y Scope;
+* Risk;
+* Evidence;
+* Sources;
+* Validation;
+* Failure Modes;
+* Fallback;
+* observabilidad futura.
+
+---
+
+### Alcance autorizado
+
+Este cambio autoriza documentalmente:
+
+* integrar `ROBERT_SKILL_ARCHITECTURE v0.1`;
+* marcarla como `APPROVED`;
+* reconocer el catálogo inicial de Skills;
+* reconocer las categorías iniciales;
+* reconocer `ROBERT_SKILL_REGISTRY` como concepto arquitectónico;
+* formalizar Skill Contract;
+* formalizar Skill Composition;
+* formalizar Skill Reuse;
+* formalizar Skill Requirements;
+* formalizar Evidence y Source requirements;
+* actualizar referencias arquitectónicas mínimas;
+* preparar `ROBERT_MODEL_INTERFACE_SPEC v0.1`.
+
+---
+
+### Distinciones integradas
+
+Se integran formalmente:
+
+```text
+SKILL ≠ AGENT
+SKILL ≠ MODEL
+SKILL ≠ TOOL
+SKILL ≠ MODULE
+SKILL ≠ COMMAND
+SKILL ≠ ROBERT
+```
+
+Y:
+
+```text
+AGENT = quién trabaja
+SKILL = cómo trabaja
+MODEL = quién procesa
+TOOL = con qué interactúa
+ORCHESTRATOR = quién coordina
+ROBERT = quién gobierna
+```
+
+---
+
+### Capability Request
+
+Se formaliza el flujo:
+
+```text
+AGENT
+  ↓
+CAPABILITY REQUEST
+  ↓
+ORCHESTRATOR
+  ↓
+SKILL RESOLVER
+  ↓
+SKILL
+```
+
+Regla:
+
+```text
+AGENT REQUEST ≠ SKILL EXECUTION AUTHORITY
+```
+
+---
+
+### Skill Requirements
+
+Las Skills pueden declarar requisitos de:
+
+```text
+MODEL
+TOOL
+PERMISSION
+SCOPE
+EVIDENCE
+SOURCE
+VALIDATION
+```
+
+pero:
+
+```text
+SKILL DECLARES REQUIREMENTS
+        ≠
+SKILL OWNS AUTHORIZATION
+```
+
+Y:
+
+```text
+SKILL REQUIREMENT ≠ PERMISSION
+SKILL REQUIREMENT ≠ SCOPE
+TOOL REQUIREMENT ≠ TOOL AUTHORIZATION
+```
+
+---
+
+### Skill Composition
+
+Se integra:
+
+```text
+COMPOSITION ≠ ROUTING AUTHORITY
+```
+
+Una Composite Skill puede definir:
+
+* dependencias;
+* procedimiento;
+* secuencia lógica.
+
+No puede:
+
+* asignar Agents;
+* seleccionar unilateralmente Models;
+* conceder Tool access;
+* ampliar Scope;
+* aprobar Actions;
+* sustituir al Orchestrator.
+
+---
+
+### Skill Registry
+
+Se integra conceptualmente:
+
+```text
+ROBERT_SKILL_REGISTRY
+```
+
+con la regla:
+
+```text
+ONE CAPABILITY
+      ↓
+ONE PRIMARY SKILL DEFINITION
+```
+
+cuando sea razonablemente posible.
+
+Antes de crear una Skill nueva deberán revisarse:
+
+1. equivalencia;
+2. solapamiento;
+3. reutilización;
+4. composición;
+5. necesidad real de nueva capacidad.
+
+---
+
+### Evidence y Sources
+
+Se integra la separación:
+
+```text
+SOURCE
+CLAIM
+EVIDENCE
+INTERPRETATION
+```
+
+Y:
+
+```text
+SOURCE ≠ CLAIM
+CLAIM ≠ EVIDENCE
+EVIDENCE ≠ INTERPRETATION
+```
+
+Las políticas técnicas completas quedan pendientes de futuras especificaciones.
+
+---
+
+### Risk, Autonomy y Execution Authority
+
+Se mantiene:
+
+```text
+RISK ≠ PERMISSION
+RISK ≠ AUTONOMY
+RISK ≠ EXECUTION AUTHORITY
+```
+
+Durante Fase 10:
+
+```text
+AUTONOMY_LEVEL = 0
+EXECUTION_AUTHORITY = NONE
+```
+
+para el uso operativo de Skills.
+
+---
+
+### Catálogo inicial
+
+Se reconoce documentalmente el catálogo inicial agrupado en:
+
+```text
+ANALYSIS
+RESEARCH
+ARCHITECTURE
+SECURITY
+MEMORY
+CODE
+TESTING
+STRATEGY
+VALIDATION
+DOCUMENTATION
+```
+
+El catálogo continúa siendo provisional y podrá depurarse antes de v1.0.
+
+---
+
+### Restricciones
+
+Este cambio no autoriza:
+
+* Skill execution autónoma;
+* Tool invocation automática;
+* Memory writes automáticos;
+* creación automática de Permissions;
+* Scope expansion;
+* creación de Autonomy;
+* creación de Execution Authority;
+* routing autónomo;
+* self-modification;
+* loops autónomos;
+* acciones externas automáticas;
+* avance automático a Fase 11.
+
+---
+
+### Riesgo
+
+Nivel de riesgo inicial: Nivel 3 — Arquitectónico.
+
+Nivel de riesgo residual: Nivel 2 — Documental.
+
+Autonomía:
+
+```text
+0
+```
+
+Execution Authority:
+
+```text
+NONE
+```
+
+---
+
+### Estado final
+
+```text
+ROBERT_SKILL_ARCHITECTURE
+Version: 0.1
+Status: APPROVED
+Decision: #033
+Change: #057
+Phase: 10
+Implementation: NONE
+Autonomy Level: 0
+Execution Authority: NONE
+```
+
+---
+
+### Siguiente paso
+
+1. Actualizar el propio `ROBERT_SKILL_ARCHITECTURE.md` a `APPROVED`.
+2. Actualizar referencias mínimas en Orchestrator, Agent Architecture y README.
+3. Ejecutar revisión final de consistencia.
+4. Preparar `ROBERT_MODEL_INTERFACE_SPEC v0.1`.
 
 ---
