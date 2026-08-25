@@ -1,10 +1,13 @@
 # ROBERT_AGENT_ARCHITECTURE
 
 **Versión:** 0.1
-**Estado:** APROBADA
+**Estado:** APROBADO — corrección de consistencia incorporada
 **Tipo:** Especificación arquitectónica de Agents
-**Ubicación propuesta:** `09_ARCHITECTURE/ROBERT_AGENT_ARCHITECTURE.md`
+**Ubicación:** `09_ARCHITECTURE/ROBERT_AGENT_ARCHITECTURE.md`
 **Fase relacionada:** Fase 10 — MVP técnico básico en preparación
+**Decisión de aprobación:** DECISIÓN #032
+**Cambio de integración:** CAMBIO #055
+**Corrección de consistencia:** CAMBIO #056 — pendiente de registro formal
 
 **Dependencias principales:**
 
@@ -37,7 +40,9 @@ Su objetivo es establecer:
 * cómo solicita acceso a Tools;
 * qué Permissions necesita;
 * qué Scopes debe respetar;
-* qué Risk limits puede tener;
+* cómo se evalúa Risk;
+* qué nivel de Autonomy posee;
+* qué Execution Authority posee;
 * cómo se valida su trabajo;
 * cómo escala problemas;
 * cómo se registra su actividad;
@@ -93,6 +98,8 @@ CONSTRAINTS
 PERMISSION
 SCOPE
 RISK
+AUTONOMY
+EXECUTION AUTHORITY
 SECURITY
 PHASE
 ```
@@ -114,11 +121,9 @@ MODULE
   ↓
 AGENT
   ↓
-SKILLS
+CAPABILITY REQUEST
   ↓
-MODEL
-  ↓
-TOOLS
+SKILLS / MODELS / TOOLS
   ↓
 VALIDATION
   ↓
@@ -145,14 +150,16 @@ Un Agent puede:
 * recomendar Actions;
 * solicitar revisión;
 * generar resultados;
-* realizar handoff;
+* realizar Handoff;
 * colaborar indirectamente con otros Agents mediante el Orchestrator.
 
 Un Agent no puede:
 
 * crear Permissions;
 * ampliar Scope;
-* aprobar su propia Action de alto riesgo;
+* crear Autonomy;
+* concederse Execution Authority;
+* aprobar su propia Action;
 * cambiar Security Rules;
 * cambiar el Canonical Model;
 * modificar Decisions vigentes;
@@ -210,7 +217,9 @@ model_preferences
 tool_requirements
 permissions
 scopes
-risk_limits
+risk_policy
+autonomy_level
+execution_authority
 approval_requirements
 inputs
 outputs
@@ -239,6 +248,8 @@ CONSTRAINTS
 PERMISSIONS
 SCOPE
 RISK
+AUTONOMY
+EXECUTION AUTHORITY
 EXPECTED_OUTPUT
 ```
 
@@ -513,6 +524,8 @@ SECURITY
 PHASE
 PERMISSION
 SCOPE
+AUTONOMY
+EXECUTION AUTHORITY
 ORCHESTRATOR
 ```
 
@@ -567,39 +580,127 @@ AGENT PERMISSION ≠ UNLIMITED SCOPE
 
 ---
 
-# 19. Agent Risk Limit
+# 19. Agent Risk Policy
 
-Cada Agent podrá tener un límite máximo de riesgo según el tipo de operación.
+Risk clasifica el impacto, sensibilidad o peligrosidad de una Task, Proposal o Action.
 
-Ejemplo conceptual:
+Risk no define por sí mismo si un Agent puede ejecutar.
 
 ```text
-ROBERT_RESEARCHER
-
-max_execution_risk: 0
+RISK ≠ PERMISSION
+RISK ≠ AUTONOMY
+RISK ≠ EXECUTION AUTHORITY
 ```
 
-Otro ejemplo:
+Un Agent puede analizar Tasks de Risk elevado sin adquirir autoridad para ejecutarlas.
+
+Ejemplo:
 
 ```text
 ROBERT_SECURITY
 
-max_analysis_risk: 4
-max_recommendation_risk: 4
-max_execution_risk: 0
+analysis_allowed_risk:
+0-4
+
+execution_authority:
+NONE
 ```
 
 Durante Fase 10:
 
 ```text
-EXECUTION_RISK_LIMIT = 0
+AUTONOMY_LEVEL = 0
+EXECUTION_AUTHORITY = NONE
 ```
 
-para todos los Agents fuera de simulaciones o Sandbox explícitamente autorizados.
+para todos los Agents.
+
+Una futura capacidad de ejecución deberá depender como mínimo de:
+
+```text
+PERMISSION
++
+SCOPE
++
+AUTONOMY
++
+EXECUTION AUTHORITY
++
+RISK EVALUATION
++
+APPROVAL WHEN REQUIRED
+```
+
+Por tanto:
+
+```text
+LOW RISK ≠ AUTHORIZED EXECUTION
+```
+
+y:
+
+```text
+HIGH RISK ≠ INABILITY TO ANALYZE
+```
 
 ---
 
-# 20. Agent Approval Requirements
+# 20. Agent Autonomy
+
+Autonomy representa el nivel autorizado de actuación independiente de un Agent.
+
+Durante Fase 10:
+
+```text
+AUTONOMY_LEVEL = 0
+```
+
+Esto significa que los Agents permanecen:
+
+```text
+DOCUMENTAL
+CONCEPTUAL
+MANUAL
+SUPERVISED
+```
+
+Autonomy no debe deducirse a partir de Risk.
+
+```text
+AUTONOMY ≠ RISK
+```
+
+---
+
+# 21. Agent Execution Authority
+
+Execution Authority determina si un Agent puede producir efectos ejecutivos reales.
+
+Durante Fase 10:
+
+```text
+EXECUTION_AUTHORITY = NONE
+```
+
+para todos los Agents.
+
+Esto se aplica aunque:
+
+* el Risk sea 0;
+* exista una Tool;
+* exista Permission documental;
+* el Model recomiende ejecutar;
+* el Agent tenga Confidence alta.
+
+```text
+PERMISSION ALONE ≠ EXECUTION AUTHORITY
+```
+
+Una futura Execution Authority deberá ser explícita, acotada y compatible con Phase, Security, Scope y Approval.
+
+---
+
+# 22. Agent Approval Requirements
 
 Un Agent debe conocer cuándo su resultado requiere Approval antes de continuar.
 
@@ -624,7 +725,7 @@ APPROVED ACTION
 
 ---
 
-# 21. Agent Skills
+# 23. Agent Skills
 
 Un Agent no debe contener toda su lógica internamente.
 
@@ -645,7 +746,7 @@ Esto permite que otros Agents reutilicen las mismas capacidades.
 
 ---
 
-# 22. Agent Model Usage
+# 24. Agent Model Usage
 
 Un Agent puede expresar una necesidad o preferencia de Model.
 
@@ -674,7 +775,7 @@ La selección final corresponde al Orchestrator / Model Router.
 
 ---
 
-# 23. Model Independence
+# 25. Model Independence
 
 Preferencia arquitectónica:
 
@@ -702,7 +803,7 @@ Los adaptadores específicos se definirán en `ROBERT_MODEL_INTERFACE_SPEC`.
 
 ---
 
-# 24. Agent Tool Usage
+# 26. Agent Tool Usage
 
 Un Agent puede solicitar una Tool cuando sea necesaria.
 
@@ -737,12 +838,14 @@ El Orchestrator debe validar:
 * Permission;
 * Scope;
 * Risk;
+* Autonomy;
+* Execution Authority;
 * Phase;
 * Approval.
 
 ---
 
-# 25. Agent Memory Access
+# 27. Agent Memory Access
 
 El acceso a Memory debe limitarse.
 
@@ -771,7 +874,7 @@ memory_access:
 
 ---
 
-# 26. Agent Context
+# 28. Agent Context
 
 El Orchestrator debe entregar al Agent el Context mínimo suficiente.
 
@@ -798,7 +901,7 @@ Esto reduce:
 
 ---
 
-# 27. Agent Validation
+# 29. Agent Validation
 
 El resultado de un Agent puede requerir validación.
 
@@ -824,9 +927,15 @@ external_effect
 canonical_effect
 ```
 
+Validation no concede autoridad ejecutiva.
+
+```text
+VALIDATION ≠ AUTHORIZATION
+```
+
 ---
 
-# 28. Agent Escalation
+# 30. Agent Escalation
 
 Un Agent debe escalar cuando exista:
 
@@ -841,6 +950,7 @@ security_issue
 approval_required
 task_outside_domain
 validation_failure
+execution_authority_missing
 ```
 
 Flujo:
@@ -857,7 +967,7 @@ USER / SECURITY / VALIDATOR
 
 ---
 
-# 29. Agent Failure
+# 31. Agent Failure
 
 Si un Agent falla:
 
@@ -883,11 +993,13 @@ CONTEXT_FAILURE
 PERMISSION_FAILURE
 SCOPE_FAILURE
 VALIDATION_FAILURE
+ROUTING_FAILURE
+EXECUTION_AUTHORITY_FAILURE
 ```
 
 ---
 
-# 30. Agent Replacement
+# 32. Agent Replacement
 
 En fases futuras, un Agent podrá cambiar de Model sin cambiar su identidad.
 
@@ -907,7 +1019,7 @@ El contrato del Agent debe permanecer igual.
 
 ---
 
-# 31. Agent Versioning
+# 33. Agent Versioning
 
 Cada Agent debe poder registrar:
 
@@ -929,7 +1041,7 @@ Las modificaciones sustanciales requieren Change Control.
 
 ---
 
-# 32. Agent Observability
+# 34. Agent Observability
 
 Cada ejecución futura deberá poder registrar:
 
@@ -946,6 +1058,8 @@ tools_used
 risk
 permissions
 scope
+autonomy
+execution_authority
 approval
 result
 validation
@@ -957,11 +1071,9 @@ Esto deberá integrarse con Audit.
 
 ---
 
-# 33. Catálogo inicial propuesto
+# 35. Catálogo inicial aprobado
 
-La v0.1 propone **8 Agents iniciales**.
-
-No están implementados todavía.
+La v0.1 reconoce **8 Agents iniciales**.
 
 ```text
 ROBERT_ARCHITECT
@@ -974,11 +1086,13 @@ ROBERT_TESTER
 ROBERT_STRATEGIST
 ```
 
-El catálogo se considera provisional hasta aprobación explícita.
+El catálogo está aprobado documentalmente mediante DECISIÓN #032.
+
+No implica implementación ni activación.
 
 ---
 
-# 34. ROBERT_ARCHITECT
+# 36. ROBERT_ARCHITECT
 
 **Propósito:** diseñar y revisar arquitectura.
 
@@ -1017,9 +1131,16 @@ system_structure
 technical_dependency_design
 ```
 
+Estado en Fase 10:
+
+```text
+AUTONOMY_LEVEL: 0
+EXECUTION_AUTHORITY: NONE
+```
+
 ---
 
-# 35. ROBERT_RESEARCHER
+# 37. ROBERT_RESEARCHER
 
 **Propósito:** investigar información externa o interna.
 
@@ -1049,9 +1170,16 @@ web
 documents
 ```
 
+Estado en Fase 10:
+
+```text
+AUTONOMY_LEVEL: 0
+EXECUTION_AUTHORITY: NONE
+```
+
 ---
 
-# 36. ROBERT_CRITIC
+# 38. ROBERT_CRITIC
 
 **Propósito:** desafiar propuestas.
 
@@ -1079,9 +1207,16 @@ Principio:
 CRITIC ≠ DECISION MAKER
 ```
 
+Estado en Fase 10:
+
+```text
+AUTONOMY_LEVEL: 0
+EXECUTION_AUTHORITY: NONE
+```
+
 ---
 
-# 37. ROBERT_SECURITY
+# 39. ROBERT_SECURITY
 
 **Propósito:** revisar seguridad y gobierno.
 
@@ -1094,6 +1229,7 @@ Responsabilidades:
 * Approval requirements;
 * Tool access;
 * autonomy limits;
+* execution authority;
 * data exposure.
 
 Skills:
@@ -1105,11 +1241,21 @@ scope_analysis
 risk_assessment
 ```
 
+Puede analizar Risk 0-4.
+
 No puede autoaprobar Actions.
+
+Estado:
+
+```text
+analysis_allowed_risk: 0-4
+AUTONOMY_LEVEL: 0
+EXECUTION_AUTHORITY: NONE
+```
 
 ---
 
-# 38. ROBERT_MEMORY
+# 40. ROBERT_MEMORY
 
 **Propósito:** gestionar el diseño conceptual de Memory.
 
@@ -1135,9 +1281,16 @@ retention_analysis
 
 En Fase 10 no almacena Memory automáticamente.
 
+Estado:
+
+```text
+AUTONOMY_LEVEL: 0
+EXECUTION_AUTHORITY: NONE
+```
+
 ---
 
-# 39. ROBERT_CODER
+# 41. ROBERT_CODER
 
 **Propósito:** diseñar y producir trabajo técnico de software.
 
@@ -1168,17 +1321,18 @@ terminal
 GitHub
 ```
 
-Durante Fase 10:
+Durante Fase 10 puede producir código como output documental o trabajar dentro de Sandbox cuando exista autorización explícita.
+
+Fuera de ello:
 
 ```text
-EXECUTION = NONE
+AUTONOMY_LEVEL: 0
+EXECUTION_AUTHORITY: NONE
 ```
-
-salvo Sandbox explícitamente autorizado.
 
 ---
 
-# 40. ROBERT_TESTER
+# 42. ROBERT_TESTER
 
 **Propósito:** intentar romper diseños y sistemas de forma controlada.
 
@@ -1201,9 +1355,18 @@ failure_injection
 adversarial_testing
 ```
 
+Estado:
+
+```text
+AUTONOMY_LEVEL: 0
+EXECUTION_AUTHORITY: NONE
+```
+
+Las pruebas destructivas requerirán autorización específica cuando lleguen a existir técnicamente.
+
 ---
 
-# 41. ROBERT_STRATEGIST
+# 43. ROBERT_STRATEGIST
 
 **Propósito:** priorización y roadmap.
 
@@ -1236,24 +1399,35 @@ phase_planning
 
 No sustituye al Architect en decisiones de diseño arquitectónico.
 
----
+Estado:
 
-# 42. Agent Matrix
-
-| Agent             | Primary Purpose    |                   Typical Risk | Tool Need | Human Approval          |
-| ----------------- | ------------------ | -----------------------------: | --------- | ----------------------- |
-| ROBERT_ARCHITECT  | Architecture       |                         Medium | Low       | For canonical changes   |
-| ROBERT_RESEARCHER | Research           |                            Low | Medium    | For external actions    |
-| ROBERT_CRITIC     | Adversarial review |                            Low | Low       | No                      |
-| ROBERT_SECURITY   | Security review    | High-analysis / zero-execution | Low       | For policy changes      |
-| ROBERT_MEMORY     | Memory design      |                         Medium | Low       | For persistence changes |
-| ROBERT_CODER      | Software           |                           High | High      | For execution           |
-| ROBERT_TESTER     | Testing            |                         Medium | Medium    | For destructive tests   |
-| ROBERT_STRATEGIST | Strategy           |                         Medium | Low       | For project decisions   |
+```text
+AUTONOMY_LEVEL: 0
+EXECUTION_AUTHORITY: NONE
+```
 
 ---
 
-# 43. Agent Selection Examples
+# 44. Agent Matrix
+
+| Agent             | Primary Purpose    | Analysis Risk | Tool Need | Execution Authority |
+| ----------------- | ------------------ | ------------- | --------- | ------------------- |
+| ROBERT_ARCHITECT  | Architecture       | Variable      | Low       | NONE                |
+| ROBERT_RESEARCHER | Research           | Variable      | Medium    | NONE                |
+| ROBERT_CRITIC     | Adversarial review | Variable      | Low       | NONE                |
+| ROBERT_SECURITY   | Security review    | 0–4           | Low       | NONE                |
+| ROBERT_MEMORY     | Memory design      | Variable      | Low       | NONE                |
+| ROBERT_CODER      | Software           | Variable      | High      | NONE                |
+| ROBERT_TESTER     | Testing            | Variable      | Medium    | NONE                |
+| ROBERT_STRATEGIST | Strategy           | Variable      | Low       | NONE                |
+
+Risk describe la tarea.
+
+No concede Execution Authority.
+
+---
+
+# 45. Agent Selection Examples
 
 ## Example A
 
@@ -1338,7 +1512,7 @@ ROBERT_ARCHITECT
 
 ---
 
-# 44. Agent Composition
+# 46. Agent Composition
 
 Un Agent puede componerse conceptualmente de:
 
@@ -1356,7 +1530,9 @@ AGENT
 ├── MEMORY POLICY
 ├── PERMISSIONS
 ├── SCOPES
-├── RISK LIMITS
+├── RISK POLICY
+├── AUTONOMY
+├── EXECUTION AUTHORITY
 ├── APPROVAL REQUIREMENTS
 ├── VALIDATION
 └── ESCALATION
@@ -1364,7 +1540,7 @@ AGENT
 
 ---
 
-# 45. Agent Manifest
+# 47. Agent Manifest
 
 Cada Agent futuro deberá tener un manifest.
 
@@ -1406,9 +1582,15 @@ permissions:
 scopes:
 
 risk:
-  max_analysis:
-  max_recommendation:
-  max_execution:
+  analysis_range:
+  recommendation_range:
+  escalation_threshold:
+
+autonomy:
+  level:
+
+execution:
+  authority:
 
 approval:
   requirements:
@@ -1418,11 +1600,21 @@ validation:
 escalation:
 ```
 
-El formato técnico exacto se definirá más adelante.
+Durante Fase 10:
+
+```yaml
+autonomy:
+  level: 0
+
+execution:
+  authority: NONE
+```
+
+El formato técnico exacto se definirá posteriormente.
 
 ---
 
-# 46. Agent Communication
+# 48. Agent Communication
 
 Los Agents no deben comunicarse libremente sin coordinación.
 
@@ -1454,7 +1646,7 @@ Esto permite:
 
 ---
 
-# 47. Structured Context Transfer
+# 49. Structured Context Transfer
 
 El Orchestrator puede transferir entre Agents:
 
@@ -1485,7 +1677,7 @@ El Orchestrator determina qué información es necesaria para el siguiente Agent
 
 ---
 
-# 48. Agent Handoff
+# 50. Agent Handoff
 
 Un Agent puede devolver:
 
@@ -1514,7 +1706,7 @@ HANDOFF RECOMMENDATION ≠ ROUTING AUTHORITY
 
 ---
 
-# 49. Agent Conflict
+# 51. Agent Conflict
 
 Dos Agents pueden producir conclusiones incompatibles.
 
@@ -1552,7 +1744,7 @@ MAJORITY OF AGENTS = TRUTH
 
 ---
 
-# 50. Agent Confidence
+# 52. Agent Confidence
 
 Los Agents pueden reportar Confidence.
 
@@ -1568,11 +1760,12 @@ Pero:
 CONFIDENCE ≠ AUTHORITY
 CONFIDENCE ≠ PERMISSION
 CONFIDENCE ≠ TRUTH
+CONFIDENCE ≠ EXECUTION AUTHORITY
 ```
 
 ---
 
-# 51. Agent Proposal Rule
+# 53. Agent Proposal Rule
 
 Salida de un Agent:
 
@@ -1604,7 +1797,7 @@ DECISION
 
 ---
 
-# 52. Security Invariants
+# 54. Security Invariants
 
 Ningún Agent puede:
 
@@ -1612,6 +1805,8 @@ Ningún Agent puede:
 BYPASS SECURITY
 CREATE PERMISSIONS
 EXPAND SCOPE
+CREATE AUTONOMY
+CREATE EXECUTION AUTHORITY
 SELF-APPROVE
 ALTER PHASE
 ALTER CANONICAL MODEL
@@ -1622,7 +1817,7 @@ BYPASS ORCHESTRATOR ROUTING
 
 ---
 
-# 53. Governance Invariants
+# 55. Governance Invariants
 
 ```text
 USER > AGENT
@@ -1640,11 +1835,17 @@ SCOPE > AGENT INTENT
 APPROVED DECISION > AGENT PROPOSAL
 
 VALIDATION ≠ AUTHORIZATION
+
+RISK ≠ AUTONOMY
+
+RISK ≠ EXECUTION AUTHORITY
+
+PERMISSION ≠ EXECUTION AUTHORITY
 ```
 
 ---
 
-# 54. Fase 10
+# 56. Fase 10
 
 Durante Fase 10, los Agents definidos aquí son:
 
@@ -1655,11 +1856,18 @@ MANUAL
 SUPERVISED
 ```
 
+Y para todos:
+
+```text
+AUTONOMY_LEVEL = 0
+EXECUTION_AUTHORITY = NONE
+```
+
 No existen como procesos autónomos reales.
 
 ---
 
-# 55. Permitido en Fase 10
+# 57. Permitido en Fase 10
 
 Sí se permite:
 
@@ -1670,11 +1878,14 @@ Sí se permite:
 * diseñar Skills;
 * diseñar tests;
 * comparar Models;
-* probar workflows en Sandbox.
+* probar workflows en Sandbox;
+* producir Analysis;
+* producir Proposals;
+* producir código como output documental cuando corresponda.
 
 ---
 
-# 56. No permitido en Fase 10
+# 58. No permitido en Fase 10
 
 No se permite:
 
@@ -1687,11 +1898,14 @@ No se permite:
 * self-modification;
 * self-replication;
 * self-approval;
-* routing fuera del Orchestrator.
+* routing fuera del Orchestrator;
+* creación autónoma de Permissions;
+* creación autónoma de Scope;
+* creación autónoma de Execution Authority.
 
 ---
 
-# 57. Sandbox Tests futuros
+# 59. Sandbox Tests futuros
 
 ```text
 TEST 1
@@ -1732,11 +1946,23 @@ Agent attempts direct Model invocation
 
 TEST 13
 Primary / Supporting ownership conflict
+
+TEST 14
+Low Risk but no Execution Authority
+
+TEST 15
+High Risk analysis without execution
+
+TEST 16
+Agent attempts to create Autonomy
+
+TEST 17
+Agent attempts to create Execution Authority
 ```
 
 ---
 
-# 58. Métricas futuras
+# 60. Métricas futuras
 
 ```text
 agent_selection_accuracy
@@ -1749,11 +1975,12 @@ context_efficiency
 user_correction_rate
 risk_escalation_accuracy
 routing_bypass_attempts
+unauthorized_execution_attempts
 ```
 
 ---
 
-# 59. Dependencia con Skill Architecture
+# 61. Dependencia con Skill Architecture
 
 Los Agents no estarán completos hasta definir:
 
@@ -1769,13 +1996,14 @@ Ese documento deberá establecer:
 * outputs;
 * reutilización;
 * permisos;
-* tool dependencies;
-* model compatibility;
-* versioning.
+* Tool dependencies;
+* Model compatibility;
+* versioning;
+* Capability Request compatibility.
 
 ---
 
-# 60. Dependencia con Model Interface
+# 62. Dependencia con Model Interface
 
 Los Agents no deberán invocar Claude o ChatGPT directamente mediante lógica propietaria.
 
@@ -1795,7 +2023,7 @@ MODEL
 
 ---
 
-# 61. Dependencia con Memory Architecture
+# 63. Dependencia con Memory Architecture
 
 El acceso de cada Agent a Memory deberá definirse en:
 
@@ -1811,7 +2039,7 @@ MINIMUM NECESSARY MEMORY ACCESS
 
 ---
 
-# 62. Dependencia con Validation Architecture
+# 64. Dependencia con Validation Architecture
 
 Las políticas comunes de evaluación de outputs deberán formalizarse posteriormente en:
 
@@ -1823,9 +2051,9 @@ Los Agents únicamente declaran qué tipo de validación requieren.
 
 ---
 
-# 63. Orden de construcción
+# 65. Orden de construcción
 
-Después de aprobar este documento:
+Después de cerrar este documento:
 
 ```text
 AGENT ARCHITECTURE
@@ -1841,52 +2069,82 @@ VALIDATION ARCHITECTURE
 
 ---
 
-# 64. Decisiones pendientes antes de v1.0
+# 66. Decisiones pendientes antes de v1.0
 
 Todavía deberán resolverse:
 
-1. catálogo definitivo de Agents;
-2. nombres oficiales definitivos;
-3. criterios exactos de Agent Router;
-4. estructura final de Agent Manifest;
-5. lifecycle técnico;
-6. reglas de multi-Agent parallelism;
-7. reglas de handoff;
-8. límite de Agents simultáneos;
-9. políticas definitivas de Memory Access;
-10. políticas definitivas de Tool Access;
-11. Model preferences;
-12. fallback behavior;
-13. auditoría técnica;
-14. formato de Capability Request;
-15. ownership rules entre Primary y Supporting Agents.
+1. criterios exactos de Agent Router;
+2. estructura final de Agent Manifest;
+3. lifecycle técnico;
+4. reglas de multi-Agent parallelism;
+5. reglas técnicas de Handoff;
+6. límite de Agents simultáneos;
+7. políticas definitivas de Memory Access;
+8. políticas definitivas de Tool Access;
+9. Model preferences;
+10. fallback behavior;
+11. auditoría técnica;
+12. formato técnico de Capability Request;
+13. ownership rules completas;
+14. política futura de Autonomy;
+15. política futura de Execution Authority.
 
 ---
 
-# 65. Estado actual
+# 67. Estado actual
 
 ```text
 DOCUMENT: ROBERT_AGENT_ARCHITECTURE
 VERSION: 0.1
-STATUS: PROPOSED
-AUTHORITY: NON-CANONICAL
+STATUS: APPROVED
+AUTHORITY: ARCHITECTURAL
+DECISION: #032
+CHANGE: #055
+CONSISTENCY_CORRECTION: #056_PENDING_REGISTRATION
 PHASE: 10
 IMPLEMENTATION: NONE
-EXECUTION: NONE
-AUTONOMY: NONE
+AUTONOMY_LEVEL: 0
+EXECUTION_AUTHORITY: NONE
 ```
 
 ---
 
-# 66. Próximo paso recomendado
+# 68. Corrección de consistencia incorporada
 
-Después de revisar y aprobar `ROBERT_AGENT_ARCHITECTURE v0.1`, el siguiente documento será:
+Esta versión incorpora la separación formal entre:
+
+```text
+RISK
+AUTONOMY
+EXECUTION AUTHORITY
+```
+
+Reglas resultantes:
+
+```text
+RISK ≠ AUTONOMY
+RISK ≠ EXECUTION AUTHORITY
+PERMISSION ≠ EXECUTION AUTHORITY
+LOW RISK ≠ AUTHORIZED EXECUTION
+```
+
+La corrección deberá registrarse formalmente como:
+
+```text
+CAMBIO #056 — Separación de Risk, Autonomy y Execution Authority en Agent Architecture
+```
+
+---
+
+# 69. Próximo paso recomendado
+
+Después de registrar CAMBIO #056, el siguiente documento será:
 
 ```text
 ROBERT_SKILL_ARCHITECTURE v0.1
 ```
 
-Esto permitirá mantener de forma explícita:
+Esto permitirá mantener explícitamente:
 
 ```text
 AGENT = quién trabaja
