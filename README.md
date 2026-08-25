@@ -46,7 +46,7 @@ Estado operativo actual:
 * ROBERT_CANONICAL_MODEL v0.2 aprobado e integrado mediante DECISIÓN #030 y CAMBIO #053.
 * ROBERT_ORCHESTRATOR_SPEC v0.1 aprobado e integrado mediante DECISIÓN #031 y CAMBIO #054.
 * ROBERT_AGENT_ARCHITECTURE v0.1 aprobado e integrado mediante DECISIÓN #032 y CAMBIO #055.
-    
+* ROBERT_SKILL_ARCHITECTURE v0.1 aprobado e integrado mediante DECISIÓN #033 y CAMBIO #057.  
 ---
 
 ## Regla central
@@ -102,6 +102,7 @@ Los documentos maestros principales del sistema Robert son:
 * ROBERT_CANONICAL_MODEL v0.2
 * ROBERT_ORCHESTRATOR_SPEC v0.1
 * ROBERT_AGENT_ARCHITECTURE v0.1
+* ROBERT_SKILL_ARCHITECTURE v0.1
 
 ---
 
