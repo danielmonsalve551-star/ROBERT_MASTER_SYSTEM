@@ -358,6 +358,10 @@ Regla:
 
 ```text
 AGENT REQUEST ≠ SKILL EXECUTION AUTHORITY
+
+AUTHORIZED REQUESTER ≠ ROUTING AUTHORITY
+
+SKILL REQUEST ≠ DIRECT SKILL INVOCATION
 ```
 
 ---
@@ -756,20 +760,11 @@ Una Skill de alto impacto puede existir documentalmente sin poder ejecutarse.
 
 # 29. Autonomy
 
-Una Skill no tiene Autonomy propia.
+Una Skill no posee Autonomy.
 
 ```text
-SKILL AUTONOMY = NONE
-```
-
-La Autonomy pertenece al contexto operativo autorizado del sistema.
-
-Durante Fase 10:
-
-```text
-AUTONOMY_LEVEL = 0
-```
-
+SKILL ≠ AUTONOMOUS ACTOR
+SKILL DOES NOT OWN AUTONOMY
 ---
 
 # 30. Execution Authority
@@ -1089,11 +1084,13 @@ risk:
   factors:
   escalation_threshold:
 
-autonomy:
-  level: 0
+authorization_requirements:
+  permissions:
+  scopes:
+  approval:
 
-execution:
-  authority: NONE
+operational_constraints:
+  external_effects_allowed:
 
 approval:
   requirements:
