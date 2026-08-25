@@ -44,6 +44,8 @@ Estado operativo actual:
 * Sin agentes autónomos activos.
 * Sin Fase 11 autorizada.
 * ROBERT_CANONICAL_MODEL v0.2 aprobado e integrado mediante DECISIÓN #030 y CAMBIO #053.
+* ROBERT_ORCHESTRATOR_SPEC v0.1 aprobado e integrado mediante DECISIÓN #031 y CAMBIO #054.
+    
 ---
 
 ## Regla central
@@ -97,7 +99,7 @@ Los documentos maestros principales del sistema Robert son:
 * ROBERT_VISUAL_REFERENCE
 * ROBERT_SYSTEM_ARCHITECTURE
 * ROBERT_CANONICAL_MODEL v0.2
-* 
+* ROBERT_ORCHESTRATOR_SPEC v0.1
 
 ---
 
@@ -839,3 +841,4 @@ Regla central:
 
 Robert no ejecuta acciones importantes sin permiso.
 
+* ROBERT_ORCHESTRATOR_SPEC v0.1 aprobado e integrado mediante DECISIÓN #031 y CAMBIO #054.
