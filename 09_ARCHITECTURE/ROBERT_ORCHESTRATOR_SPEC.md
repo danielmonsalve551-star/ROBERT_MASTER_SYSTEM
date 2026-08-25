@@ -1323,6 +1323,31 @@ AGENT
   ↓
 CLAUDE ONLY
 ```
+### Agent Architecture vigente
+
+La arquitectura documental vigente de Agents es:
+
+`ROBERT_AGENT_ARCHITECTURE v0.1`
+
+Aprobada mediante:
+
+- DECISIÓN #032
+- CAMBIO #055
+
+El Agent Router deberá respetar las reglas de:
+
+- Primary / Supporting ownership;
+- Capability Request;
+- Permission;
+- Scope;
+- Risk limits;
+- Approval requirements;
+- Handoff;
+- Structured Context Transfer;
+- Validation;
+- Escalation.
+
+Los Agents permanecen documentales, conceptuales, manuales y supervisados durante Fase 10.
 
 ---
 
@@ -1564,6 +1589,7 @@ ROBERT_SKILL_ARCHITECTURE
 ROBERT_MODEL_INTERFACE_SPEC
 ROBERT_MEMORY_ARCHITECTURE
 ROBERT_VALIDATION_ARCHITECTURE
+ROBERT_AGENT_ARCHITECTURE v0.1
 ```
 
 Orden recomendado:
