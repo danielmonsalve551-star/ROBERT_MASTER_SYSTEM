@@ -9846,3 +9846,5 @@ Execution Authority: NONE
 4. Preparar `ROBERT_MODEL_INTERFACE_SPEC v0.1`.
 
 ---
+
+CAMBIO #058 — Corrección de ownership de Autonomy, Execution Authority y Skill Requesters
