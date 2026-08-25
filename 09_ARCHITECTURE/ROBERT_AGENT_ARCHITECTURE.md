@@ -23,6 +23,7 @@ CONSISTENCY_CORRECTION: #056
 * `ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC`
 * `ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC`
 * `ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC`
+* ROBERT_SKILL_ARCHITECTURE v0.1
 
 ---
 
@@ -1981,27 +1982,22 @@ unauthorized_execution_attempts
 
 ---
 
-# 61. Dependencia con Skill Architecture
+# 61. Skill Architecture vigente
 
-Los Agents no estarán completos hasta definir:
+`ROBERT_SKILL_ARCHITECTURE v0.1` está aprobada mediante DECISIÓN #033 y CAMBIO #057.
+
+Los Agents deberán solicitar capacidades mediante:
 
 ```text
-ROBERT_SKILL_ARCHITECTURE
-```
-
-Ese documento deberá establecer:
-
-* qué es una Skill;
-* estructura;
-* inputs;
-* outputs;
-* reutilización;
-* permisos;
-* Tool dependencies;
-* Model compatibility;
-* versioning;
-* Capability Request compatibility.
-
+AGENT
+  ↓
+CAPABILITY REQUEST
+  ↓
+ORCHESTRATOR
+  ↓
+SKILL RESOLVER
+  ↓
+SKILL
 ---
 
 # 62. Dependencia con Model Interface
