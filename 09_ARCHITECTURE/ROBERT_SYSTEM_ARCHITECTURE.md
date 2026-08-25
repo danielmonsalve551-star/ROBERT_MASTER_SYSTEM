@@ -17,6 +17,7 @@ Tags: #robert/orbita-1 #capa/0 #tipo/maestro #robert/arquitectura #robert/nucleo
 [[ROBERT_PHASES]]
 [[ROBERT_SECURITY_RULES]]
 [[ROBERT_CANONICAL_MODEL]]
+[[ROBERT_ORCHESTRATOR_SPEC]]
 
 1. IDEA PRINCIPAL
     
@@ -407,6 +408,37 @@ La futura especificación podrá formalizar responsabilidades como:
 Todos estos elementos deberán respetar las reglas, prioridades, seguridad, permisos y autoridad ya definidos por Robert.
 
 La introducción de estos elementos en documentación no implica activación automática, ejecución real ni autonomía.
+
+### Especificación vigente de Orchestration
+
+La especificación arquitectónica vigente de la orquestación de Robert es:
+
+`ROBERT_ORCHESTRATOR_SPEC v0.1`
+
+Aprobada mediante:
+
+- DECISIÓN #031
+- CAMBIO #054
+
+Esta especificación formaliza la evolución de la Capa 2 — Control y del Protocolo Canónico de Control.
+
+El Orchestrator coordina conceptualmente:
+
+- Intent Routing;
+- Context Resolution;
+- Module Routing;
+- Agent Routing;
+- Skill Resolution;
+- Model Routing;
+- Tool Resolution;
+- Permission / Scope Checks;
+- Risk Checks;
+- Conflict Checks;
+- Approval Gates;
+- Validation;
+- Audit Output.
+
+La integración de esta especificación permanece documental, conceptual, manual y supervisada durante Fase 10.
 
 6. CONTROL DE AUTONOMÍA
     
