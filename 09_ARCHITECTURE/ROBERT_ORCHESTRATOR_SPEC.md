@@ -15,7 +15,7 @@
 * `ROBERT_MODULES`
 * `ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC`
 * `ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC`
-* `ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_SPEC`
+* `ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC`
 * `ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC`
 
 ---
@@ -209,6 +209,36 @@ OUTPUT
 No todas las tareas deben utilizar todos los pasos.
 
 ---
+## 6.1 Relación con el Protocolo Canónico de Control
+
+El flujo de orquestación definido en este documento NO reemplaza ni crea un protocolo de control paralelo.
+
+Los 18 pasos del Orchestrator son una descomposición técnica de los 14 pasos del Protocolo Canónico de Control existente en `ROBERT_SYSTEM_ARCHITECTURE`.
+
+La relación conceptual es:
+
+| Protocolo Canónico de Control | Orchestrator |
+|---|---|
+| 1. Capturar intención | Normalize / Intent Classification |
+| 2. Detectar tipo de solicitud | Intent Classification |
+| 3. Clasificar intención | Intent Classification / Task Definition |
+| 4. Identificar documento relacionado | Context Resolution |
+| 5. Identificar capa activa | Context Resolution / Module Routing |
+| 6. Identificar módulo relacionado | Module Routing |
+| 7. Evaluar nivel de riesgo | Risk Check |
+| 8. Revisar Security Rules | Permission / Scope / Risk / Conflict Checks |
+| 9. Revisar autonomía activa | Permission / Scope Check |
+| 10. Revisar alcance autorizado | Permission / Scope Check |
+| 11. Decidir respuesta / propuesta / ejecución / bloqueo | Capability Planning / Agent / Skill / Model / Tool Routing / Approval Check |
+| 12. Entregar salida | Execution / Generation / Output |
+| 13. Registrar si aplica | Audit / State / Memory Update |
+| 14. Pedir aprobación cuando corresponda | Approval Check |
+
+Regla:
+
+`ORCHESTRATOR FLOW = TECHNICAL DECOMPOSITION OF CANONICAL CONTROL PROTOCOL`
+
+Nunca debe interpretarse como un protocolo alternativo.
 
 # 7. Orchestration Request
 
@@ -1260,7 +1290,18 @@ ROBERT_MODEL_INTERFACE_SPEC
 ```
 
 ---
+### Estado de dependencias técnicas
 
+Algunas Technical Specs relacionadas pueden encontrarse todavía en estado de propuesta o pendiente de revisión.
+
+Mientras no hayan sido aprobadas formalmente:
+
+- pueden utilizarse como referencia de diseño;
+- no adquieren autoridad canónica por ser citadas aquí;
+- no pueden sobreescribir Security Rules, Decisions, Canonical Model o documentos maestros aprobados;
+- cualquier contradicción deberá escalarse mediante el sistema vigente de conflictos y Change Control.
+
+  
 # 36. Agent Independence
 
 Los Agents no deben escribirse exclusivamente para un único Model salvo necesidad explícita.
