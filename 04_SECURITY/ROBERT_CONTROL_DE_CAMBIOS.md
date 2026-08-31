@@ -10923,3 +10923,89 @@ STATUS: APPROVED
 DECISION: #036
 CHANGE: #061
 
+# CAMBIO #062 — Aprobación e integración de ROBERT_TOOL_ARCHITECTURE v0.1
+
+**Fecha:** 31/08/2026
+**Tipo:** Arquitectónico documental / Tool Architecture
+**Estado:** APROBADO E INTEGRADO
+**Decisión relacionada:** DECISIÓN #037
+**Documento relacionado:** `09_ARCHITECTURE/ROBERT_TOOL_ARCHITECTURE.md`
+**Versión:** v0.1
+**Fase:** 10
+
+## Descripción
+
+Se aprueba e integra formalmente:
+
+```text
+ROBERT_TOOL_ARCHITECTURE v0.1
+```
+
+como arquitectura vigente de Tools dentro de Robert.
+
+## Elementos integrados
+
+```text
+TOOL REQUEST
+TOOL RESULT
+TOOL FAILURE
+TOOL INTERFACE
+TOOL ADAPTER / CONNECTOR
+TOOL REGISTRY
+TOOL POLICY
+ACCESS MODE
+SIDE EFFECT CLASS
+RETRY / FALLBACK
+TOOL SECURITY
+TOOL AUDIT
+```
+
+## Correcciones incorporadas
+
+La versión aprobada incorpora:
+
+1. `Tool Resolver` confirmado como responsabilidad preexistente del Orchestrator.
+2. `Human Confirmation` subordinada al `Approval Gate`.
+3. `Tool Adapter / Connector` con Architectural Growth Check.
+4. `Security Check` integrado en el flujo principal.
+5. separación entre Tool Capability, Permission, Scope, Risk y Execution Authority.
+6. prohibición de invocación directa Model→Tool, Agent→Tool y Skill→Tool.
+7. Tool Result separado de Truth, Decision, Approval y Memory Write.
+8. Tool Registry y Tool Policy sin routing ni approval authority.
+
+## Riesgo
+
+**Nivel inicial:** 3 — Alto
+**Nivel residual:** 2 — Medio / documental
+
+## Restricciones
+
+No se autoriza:
+
+```text
+REAL TOOL EXECUTION
+AUTOMATIC TOOL EXECUTION
+AUTONOMOUS MODEL-TO-TOOL LOOPS
+AUTONOMOUS AGENT-TO-TOOL LOOPS
+AUTONOMOUS TOOL-TO-TOOL CHAINS
+AUTOMATIC PERMISSION CREATION
+AUTOMATIC SCOPE EXPANSION
+AUTOMATIC MEMORY WRITE
+PHASE 11
+```
+
+Se mantiene:
+
+```text
+AUTONOMY_LEVEL = 0
+EXECUTION_AUTHORITY = NONE
+```
+
+## Resultado
+
+```text
+ROBERT_TOOL_ARCHITECTURE v0.1
+STATUS: APPROVED
+DECISION: #037
+CHANGE: #062
+```
