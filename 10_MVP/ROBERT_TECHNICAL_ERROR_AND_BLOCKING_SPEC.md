@@ -61,27 +61,30 @@ Este documento no ejecuta acciones reales.
 
 Este documento queda como:
 
-**Propuesta corregida — pendiente de revisión**
+**APROBADO E INTEGRADO — v0.2**
 
-No está aprobado todavía.
+Trazabilidad formal:
 
-No reemplaza a ningún documento maestro.
+```text
+DECISIÓN #018
+CAMBIO #029 — Corrección
+CAMBIO #030 — Aprobación e integración
+```
 
-No autoriza programación.
+Estado operativo:
 
-No autoriza prototipo funcional.
+```text
+STATUS: APPROVED / INTEGRATED
+PHASE: 10
+IMPLEMENTATION: NONE
+AUTONOMY_LEVEL: 0
+EXECUTION_AUTHORITY: NONE
+```
 
-No autoriza base de datos real.
-
-No autoriza conexiones externas.
-
-No autoriza automatizaciones.
-
-No autoriza agentes autónomos.
-
-No autoriza ejecución real.
+La aprobación no activa bloqueos automáticos reales ni ejecución técnica.
 
 ---
+
 
 # REGLA CENTRAL
 
