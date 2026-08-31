@@ -4810,3 +4810,242 @@ Execution Authority: NONE
 5. Preparar `ROBERT_MODEL_INTERFACE_SPEC v0.1`.
 
 ---
+
+---
+
+# DECISIÓN #034 — Aprobación de ROBERT_MODEL_INTERFACE_SPEC v0.1
+
+Fecha: 25/08/2026
+Tipo: Arquitectónica / documental
+Documento relacionado: `09_ARCHITECTURE/ROBERT_MODEL_INTERFACE_SPEC.md`
+Versión: v0.1
+Estado: APROBADA
+Fase: Fase 10 — MVP técnico básico en preparación
+Cambio relacionado: CAMBIO #059 — Integración de ROBERT_MODEL_INTERFACE_SPEC v0.1
+
+---
+
+### Decisión
+
+Se aprueba `ROBERT_MODEL_INTERFACE_SPEC v0.1` como arquitectura documental vigente para la interacción uniforme entre Robert y Models actuales o futuros.
+
+La especificación formaliza la separación entre:
+
+```text
+ORCHESTRATOR
+MODEL ROUTER
+MODEL INTERFACE
+MODEL ADAPTER
+MODEL
+```
+
+y permite que Robert dependa de capacidades y contratos, no de proveedores específicos.
+
+---
+
+### Principios aprobados
+
+```text
+MODEL ≠ AGENT
+MODEL ≠ SKILL
+MODEL ≠ TOOL
+MODEL ≠ MODULE
+MODEL ≠ ORCHESTRATOR
+MODEL ≠ ROBERT
+
+MODEL USE ≠ SKILL REQUIRED
+SKILL MAY REQUIRE MODEL
+
+MODEL PREFERENCE ≠ MODEL SELECTION AUTHORITY
+
+MODEL OUTPUT ≠ DECISION
+MODEL OUTPUT ≠ TRUTH
+
+MODEL TOOL REQUEST ≠ TOOL AUTHORIZATION
+MODEL TOOL CAPABILITY ≠ ROBERT TOOL AUTHORIZATION
+ADAPTER TOOL SUPPORT ≠ TOOL EXECUTION AUTHORITY
+
+MODEL-TO-MODEL TRANSFER MUST BE MEDIATED BY ROBERT
+
+RATIONALE SUMMARY ≠ PRIVATE REASONING TRACE
+MODEL INTERFACE MUST NOT REQUIRE PRIVATE CHAIN OF THOUGHT
+
+CONSENSUS ≠ TRUTH
+CONSENSUS ≠ AUTHORIZATION
+
+PROVIDER CHANGE ≠ AGENT REWRITE
+PROVIDER CHANGE ≠ SKILL REWRITE
+```
+
+---
+
+### Arquitectura aprobada
+
+```text
+AUTHORIZED REQUESTER
+        ↓
+CAPABILITY REQUEST
+        ↓
+ORCHESTRATOR
+        ↓
+CAPABILITY RESOLUTION
+        ↓
+MODEL REQUIRED?
+        ↓
+MODEL ROUTER
+        ↓
+MODEL INTERFACE
+        ↓
+MODEL ADAPTER
+        ↓
+MODEL
+```
+
+El Orchestrator conserva la autoridad de routing.
+
+Model Router realiza selección de Model.
+
+Model Interface mantiene el contrato común.
+
+Model Adapter traduce al proveedor.
+
+Model procesa la información.
+
+---
+
+### Model Request / Response
+
+Se aprueban conceptualmente los contratos:
+
+```text
+MODEL_REQUEST
+MODEL_RESPONSE
+```
+
+Model Response puede incluir:
+
+```text
+result
+rationale_summary
+evidence
+sources
+risks
+conflicts
+confidence
+confidence_source
+limitations
+assumptions
+tool_requests
+validation_notes
+usage
+errors
+```
+
+Robert no deberá depender de razonamiento interno privado del Model.
+
+---
+
+### Model Registry
+
+Se aprueba conceptualmente:
+
+```text
+ROBERT_MODEL_REGISTRY
+```
+
+con separación entre:
+
+```text
+MODEL PROFILE
+MODEL RUNTIME STATE
+```
+
+Profile representa identidad, capacidades y límites relativamente estables.
+
+Runtime State representa disponibilidad, health, latency, cost information y otras condiciones dinámicas.
+
+---
+
+### Tool Boundary
+
+Aunque un proveedor soporte native Tool Calling:
+
+```text
+PROVIDER TOOL CALL ≠ INDEPENDENT TOOL AUTHORITY
+```
+
+La autorización lógica de Tools permanece bajo Robert.
+
+---
+
+### Memory Boundary
+
+Se mantiene:
+
+```text
+MODEL OUTPUT ≠ MEMORY WRITE
+```
+
+El output de un Model puede ser candidato para evaluación futura, pero no Memory persistente automática.
+
+---
+
+### Multi-Model
+
+Se permiten conceptualmente patrones como:
+
+```text
+PRIMARY + REVIEWER
+PARALLEL ANALYSIS
+ADVERSARIAL REVIEW
+SPECIALIST MODELS
+FALLBACK
+CONSENSUS SUPPORT
+```
+
+siempre mediados por Robert.
+
+---
+
+### Restricciones
+
+Esta decisión no autoriza:
+
+- routing autónomo productivo;
+- llamadas API persistentes autónomas;
+- Tool execution automática;
+- Memory writes automáticos;
+- loops multi-model autónomos;
+- creación de Permissions;
+- expansión de Scope;
+- creación de Autonomy;
+- creación de Execution Authority;
+- self-modification;
+- ejecución externa autónoma;
+- avance automático a Fase 11.
+
+---
+
+### Estado aprobado
+
+```text
+ROBERT_MODEL_INTERFACE_SPEC
+Version: 0.1
+Status: APPROVED
+Decision: #034
+Change: #059
+Phase: 10
+Implementation: NONE
+Operational Autonomy: 0
+Operational Execution Authority: NONE
+```
+
+---
+
+### Siguiente paso
+
+1. Integrar referencias arquitectónicas mínimas.
+2. Cerrar consistencia documental.
+3. Preparar `ROBERT_MEMORY_ARCHITECTURE v0.1`.
+
+---
