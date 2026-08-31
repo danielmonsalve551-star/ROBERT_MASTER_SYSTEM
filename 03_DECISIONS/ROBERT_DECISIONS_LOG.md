@@ -5503,3 +5503,155 @@ AUTHORITY: ARCHITECTURAL
 PHASE: 10
 IMPLEMENTATION: NONE
 ```
+# DECISIÓN #037 — Aprobación de ROBERT_TOOL_ARCHITECTURE v0.1
+
+**Fecha:** 31/08/2026
+**Tipo:** Arquitectónica / documental
+**Estado:** APROBADA
+**Fase:** 10
+**Documento relacionado:** `09_ARCHITECTURE/ROBERT_TOOL_ARCHITECTURE.md`
+**Versión:** v0.1
+**Cambio relacionado:** CAMBIO #062
+
+## Decisión
+
+Se aprueba formalmente:
+
+```text
+ROBERT_TOOL_ARCHITECTURE v0.1
+```
+
+como arquitectura vigente para Tools dentro de Robert.
+
+## Elementos formalizados
+
+Se formalizan:
+
+```text
+TOOL CAPABILITY
+TOOL REQUEST
+TOOL RESULT
+TOOL FAILURE
+TOOL INTERFACE
+TOOL ADAPTER / CONNECTOR
+TOOL REGISTRY
+TOOL POLICY
+TOOL RESOLVER RELATION
+ACCESS MODE
+SIDE EFFECT CLASS
+RETRY
+FALLBACK
+IDEMPOTENCY
+TOOL AUDIT
+TOOL SECURITY
+```
+
+## Invariantes aprobadas
+
+```text
+TOOL ≠ MODEL
+TOOL ≠ AGENT
+TOOL ≠ SKILL
+
+TOOL REQUEST ≠ TOOL AUTHORIZATION
+
+TOOL REQUIREMENT ≠ TOOL AUTHORIZATION
+
+TOOL AVAILABLE ≠ TOOL ALLOWED
+
+TOOL SELECTED ≠ TOOL EXECUTED
+
+TOOL CAPABILITY ≠ PERMISSION
+
+PERMISSION ≠ EXECUTION AUTHORITY
+
+LOW RISK ≠ AUTHORIZED EXECUTION
+
+MODEL TOOL REQUEST ≠ DIRECT TOOL EXECUTION
+
+AGENT TOOL REQUEST ≠ DIRECT TOOL EXECUTION
+
+SKILL TOOL REQUIREMENT ≠ DIRECT TOOL EXECUTION
+
+TOOL RESULT ≠ TRUTH
+
+TOOL RESULT ≠ DECISION
+
+TOOL RESULT ≠ APPROVAL
+
+TOOL RESULT ≠ MEMORY WRITE
+
+TOOL REGISTRY ≠ ROUTING AUTHORITY
+
+TOOL POLICY ≠ APPROVAL AUTHORITY
+
+TOOL ADAPTER ≠ PERMISSION AUTHORITY
+
+CONNECTED ≠ AUTHORIZED
+```
+
+## Tool Resolver
+
+`TOOL RESOLVER` continúa siendo una responsabilidad preexistente del Orchestrator aprobado.
+
+```text
+ROBERT_ORCHESTRATOR_SPEC v0.1
+DECISIÓN #031
+CAMBIO #054
+```
+
+Tool Architecture no crea una autoridad nueva.
+
+## Human Confirmation
+
+`Human Confirmation` queda subordinada al:
+
+```text
+APPROVAL GATE
+```
+
+y no constituye una vía independiente de autorización.
+
+## Tool Adapter / Connector
+
+`Tool Adapter / Connector` traduce contratos hacia proveedores específicos.
+
+No posee:
+
+```text
+ROUTING AUTHORITY
+APPROVAL AUTHORITY
+PERMISSION AUTHORITY
+EXECUTION AUTHORITY
+```
+
+## Fase 10
+
+Se mantiene:
+
+```text
+TOOL ARCHITECTURE = DOCUMENTAL
+TOOL RESOLVER = CONCEPTUAL
+TOOL INTERFACE = CONCEPTUAL
+TOOL REGISTRY = CONCEPTUAL
+TOOL POLICY = CONCEPTUAL
+
+TOOL ADAPTERS = NOT IMPLEMENTED
+TOOL EXECUTION ENGINE = NOT IMPLEMENTED
+REAL TOOL EXECUTION = DISABLED
+
+AUTONOMY_LEVEL = 0
+EXECUTION_AUTHORITY = NONE
+```
+
+Esta aprobación no autoriza ejecución real de Tools ni conexiones externas automáticas.
+
+## Resultado
+
+```text
+ROBERT_TOOL_ARCHITECTURE v0.1
+STATUS: APPROVED
+AUTHORITY: ARCHITECTURAL
+PHASE: 10
+IMPLEMENTATION: NONE
+```
