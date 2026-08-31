@@ -1,7 +1,7 @@
 # ROBERT_HOME
 
 Versión: 0.12
-Estado: Propuesta corregida — pendiente de revisión
+Estado: APROBADA
 Fecha: 09/07/2026
 Ubicación: 00_HOME
 Función: Punto central de navegación, estado, núcleo visual y control del sistema Robert
