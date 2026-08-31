@@ -1,7 +1,7 @@
 # ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC
 
 Versión: 0.2  
-Estado: Propuesta corregida — pendiente de revisión  
+Estado: APROBADA  
 Fecha: 04/07/2026  
 Ubicación: 10_MVP  
 Fase relacionada: Fase 10 — MVP técnico básico en preparación  
