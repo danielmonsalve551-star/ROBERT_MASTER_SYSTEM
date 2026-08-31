@@ -60,23 +60,29 @@ Este documento solo define flujos conceptuales de interacción para una futura i
 
 Este documento queda como:
 
-**Propuesta corregida — pendiente de revisión**
+**APROBADO E INTEGRADO — v0.2**
 
-No está aprobado todavía.
+Trazabilidad formal:
 
-No reemplaza a ningún documento maestro.
+```text
+DECISIÓN #014
+CAMBIO #022 — Corrección
+CAMBIO #023 — Aprobación e integración
+```
 
-No autoriza programación.
+Estado operativo:
 
-No autoriza base de datos real.
+```text
+STATUS: APPROVED / INTEGRATED
+PHASE: 10
+IMPLEMENTATION: NONE
+AUTONOMY_LEVEL: 0
+EXECUTION_AUTHORITY: NONE
+```
 
-No autoriza conexiones externas.
+La aprobación es documental y conceptual.
 
-No autoriza automatizaciones.
-
-No autoriza agentes autónomos.
-
-No autoriza ejecución real.
+No autoriza programación, automatización, conexiones externas, ejecución real ni avance automático a Fase 11.
 
 ---
 
