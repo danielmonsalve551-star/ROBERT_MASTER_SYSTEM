@@ -10813,5 +10813,113 @@ CHANGE: #060
 ROBERT_VALIDATION_ARCHITECTURE v0.1
 ```
 
+CAMBIO #061 — Aprobación e integración de ROBERT_VALIDATION_ARCHITECTURE v0.1
 
+Fecha: 31/08/2026
+Tipo: Arquitectónico documental / Validation Architecture
+Estado: APROBADO E INTEGRADO
+Decisión relacionada: DECISIÓN #036
+Documento relacionado: 09_ARCHITECTURE/ROBERT_VALIDATION_ARCHITECTURE.md
+Versión: v0.1
+Fase: 10
+
+Descripción
+
+Se aprueba e integra formalmente:
+
+ROBERT_VALIDATION_ARCHITECTURE v0.1
+
+como arquitectura vigente de Validation dentro de Robert.
+
+Elementos integrados
+
+Se formalizan:
+
+VALIDATION_TYPE
+REVIEWER_ROLE
+VALIDATION_REQUEST
+VALIDATION_RESULT
+VALIDATION_STATUS
+VALIDATION_RESOLVER
+VALIDATION_POLICY
+VALIDATION_REGISTRY
+VALIDATION DEPTH
+MULTI-VALIDATOR REVIEW
+VALIDATION CONFLICT RESOLUTION
+VALIDATION ESCALATION
+Correcciones de consistencia incorporadas
+
+La versión aprobada incorpora:
+
+separación entre VALIDATION_TYPE y REVIEWER_ROLE;
+Validator tratado como rol funcional, no nueva entidad canónica;
+Validation Resolver subordinado al Orchestrator;
+Validation Matrix marcada como ilustrativa y no vinculante;
+Validation Registry declarado conceptual, sin routing authority;
+reutilización de Agents y Skills existentes;
+ausencia de un nuevo ROBERT_VALIDATOR por defecto;
+separación estricta entre Validation, Approval y Authorization;
+Multi-Validator Consensus sin autoridad de Truth;
+integración con Memory, Model Interface, Permissions, Audit y Data Consistency sin crear sistemas paralelos.
+Invariantes
+VALIDATION_TYPE ≠ REVIEWER_ROLE
+
+VALIDATION ≠ AUTHORIZATION
+
+VALIDATION ≠ APPROVAL
+
+VALIDATION ≠ EXECUTION AUTHORITY
+
+VALIDATED OUTPUT ≠ AUTHORIZED ACTION
+
+VALIDATOR ≠ ROUTING AUTHORITY
+
+VALIDATOR ≠ APPROVAL AUTHORITY
+
+VALIDATION REGISTRY ≠ ROUTING AUTHORITY
+
+VALIDATION REGISTRY ≠ EXECUTION ENGINE
+
+CONSENSUS ≠ TRUTH
+
+CONFIDENCE ≠ TRUTH
+
+VALIDATION RESULT ≠ MEMORY WRITE
+
+VALIDATION TOOL REQUIREMENT ≠ TOOL AUTHORIZATION
+Impacto
+
+Robert incorpora una arquitectura formal para evaluar outputs y artifacts sin conceder automáticamente:
+
+AUTHORITY
+APPROVAL
+PERMISSION
+EXECUTION
+Riesgo
+
+Nivel inicial: 3 — Alto
+Nivel residual: 2 — Medio / documental
+
+Restricciones
+
+Este cambio no autoriza:
+
+AUTOMATED VALIDATION ENGINE
+AUTOMATIC APPROVAL
+AUTOMATIC AUTHORIZATION
+AUTONOMOUS REVIEWER LOOPS
+AUTOMATIC TOOL EXECUTION
+AUTOMATIC MEMORY WRITE
+AUTONOMOUS CANONICAL CHANGES
+EXTERNAL EXECUTION
+
+Se mantiene:
+
+AUTONOMY_LEVEL = 0
+EXECUTION_AUTHORITY = NONE
+Resultado
+ROBERT_VALIDATION_ARCHITECTURE v0.1
+STATUS: APPROVED
+DECISION: #036
+CHANGE: #061
 
