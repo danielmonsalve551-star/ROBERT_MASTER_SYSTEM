@@ -10669,7 +10669,149 @@ EXPIRATION
 MODEL ACCESS
 AGENT ACCESS
 ```
+# CAMBIO #060 — Aprobación e integración de ROBERT_MEMORY_ARCHITECTURE v0.1
 
----
+**Fecha:** 31/08/2026
+**Tipo:** Arquitectónico documental / Memory Architecture
+**Estado:** APROBADO E INTEGRADO
+**Decisión relacionada:** DECISIÓN #035
+**Documento relacionado:** `09_ARCHITECTURE/ROBERT_MEMORY_ARCHITECTURE.md`
+**Versión:** v0.1
+**Fase:** 10
+
+## Descripción
+
+Se aprueba e integra formalmente:
+
+```text
+ROBERT_MEMORY_ARCHITECTURE v0.1
+```
+
+como arquitectura vigente de Memory dentro de Robert.
+
+## Cambios integrados
+
+Se formalizan:
+
+```text
+MEMORY TYPES
+RETENTION
+MEMORY ELIGIBILITY
+MEMORY CANDIDATES
+MEMORY RETRIEVAL
+MEMORY RETRIEVAL SCOPE
+PROVENANCE
+AUTHORITY METADATA
+CONFIDENCE
+FRESHNESS
+CONFLICT HANDLING
+SUPERSESSION
+EXPIRATION
+FORGET / DELETE
+AGENT MEMORY ACCESS
+MODEL MEMORY ACCESS
+```
+
+Se preservan las dimensiones canónicas:
+
+```text
+RETENTION:
+ACTIVE
+TEMPORARY
+PERSISTENT
+
+MEMORY_TYPE:
+CORE
+SEMANTIC
+EPISODIC
+DECISIONAL
+PROCEDURAL
+```
+
+## Correcciones de consistencia incorporadas
+
+La versión aprobada incorpora:
+
+1. `Memory Manifest` declarado explícitamente conceptual y no schema técnico definitivo.
+2. `Memory Resolver` subordinado al Orchestrator.
+3. `ROBERT_MEMORY` referenciado desde Agent Architecture, no redefinido.
+4. `Validator` tratado como función futura de Validation y no como nueva entidad canónica.
+5. Separación entre `Memory Authority Metadata` y precedencia global de fuentes.
+6. Separación entre `Memory Retrieval Scope` y `Authorized Operational Scope`.
+7. Reutilización de Audit Trail existente sin crear un sistema de auditoría paralelo.
+8. Alineación conceptual con Permissions & Scopes y Data Consistency.
+
+## Invariantes
+
+```text
+MEMORY RESOLVER ≠ INDEPENDENT AUTHORITY
+
+MEMORY CANDIDATE ≠ MEMORY
+
+MODEL OUTPUT ≠ MEMORY WRITE
+
+AGENT OUTPUT ≠ MEMORY WRITE
+
+SKILL OUTPUT ≠ MEMORY WRITE
+
+MEMORY RETRIEVAL SCOPE ≠ AUTHORIZED OPERATIONAL SCOPE
+
+MEMORY AUTHORITY METADATA ≠ GLOBAL SOURCE PRECEDENCE
+
+MEMORY AUDIT REQUIREMENT ≠ NEW AUDIT SYSTEM
+```
+
+## Impacto
+
+Se amplía la arquitectura de Robert con una capa formal de Memory sin introducir ejecución productiva.
+
+## Riesgo
+
+**Nivel inicial:** 3 — Alto
+**Nivel residual:** 2 — Medio / documental
+
+Motivo:
+
+La arquitectura afecta futura persistencia, recuperación y exposición de información, pero en Fase 10 permanece completamente conceptual y supervisada.
+
+## Restricciones
+
+Este cambio no autoriza:
+
+```text
+MEMORY STORE REAL
+VECTOR DATABASE REAL
+AUTOMATIC MEMORY WRITE
+AUTOMATIC MEMORY RETRIEVAL
+AUTOMATIC MEMORY DELETION
+AUTOMATIC CONFLICT RESOLUTION
+MODEL DIRECT MEMORY ACCESS
+AGENT DIRECT MEMORY WRITE
+SKILL DIRECT MEMORY WRITE
+AUTONOMOUS MEMORY MANAGEMENT
+```
+
+Se mantiene:
+
+```text
+AUTONOMY_LEVEL = 0
+EXECUTION_AUTHORITY = NONE
+```
+
+## Resultado
+
+```text
+ROBERT_MEMORY_ARCHITECTURE v0.1
+STATUS: APPROVED
+DECISION: #035
+CHANGE: #060
+```
+
+## Siguiente bloque arquitectónico
+
+```text
+ROBERT_VALIDATION_ARCHITECTURE v0.1
+```
+
 
 
