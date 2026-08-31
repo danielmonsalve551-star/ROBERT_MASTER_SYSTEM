@@ -8,7 +8,7 @@ Tipo de documento: Catálogo vivo de comandos de Robert  
 
 Versión: 0.4  
 
-Estado: Propuesta corregida — pendiente de revisión  
+Estado: APROBADO E INTEGRADO
 
 Fecha de corrección: 04/07/2026  
 
@@ -25032,8 +25032,27 @@ Esta corrección mantiene coherencia con:
 - ROBERT_SECURITY_RULES
 
   
-
 Estado de ROBERT_COMMANDS v0.4:
+
+**APROBADO E INTEGRADO**
+
+Trazabilidad formal:
+
+```text
+DECISIÓN #016
+CAMBIO #026 — Corrección
+CAMBIO #027 — Aprobación e integración
+```
+
+La versión v0.4 es el catálogo vigente de comandos de Robert.
+
+Su aprobación no autoriza ejecución automática ni autonomía operativa.
+
+```text
+AUTONOMY_LEVEL = 0
+EXECUTION_AUTHORITY = NONE
+```
+
 
   
 
