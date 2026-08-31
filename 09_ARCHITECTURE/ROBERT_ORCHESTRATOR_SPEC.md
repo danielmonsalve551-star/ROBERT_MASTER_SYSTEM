@@ -1683,18 +1683,16 @@ Todavía deben decidirse:
 9. relación precisa entre Orchestrator y Memory Gate;
 10. implementación técnica futura.
 
----
+# 49. Estado de aprobación
 
-# 49. Criterios de aprobación
+`ROBERT_ORCHESTRATOR_SPEC v0.1` fue aprobado formalmente mediante:
 
-Esta propuesta puede pasar a `APPROVED` cuando:
+```text
+DECISIÓN #031
+CAMBIO #054
+```
 
-1. el User la revise y apruebe;
-2. se verifique compatibilidad con Capa 2 — Control;
-3. se registre la Decision correspondiente;
-4. se registre el Change correspondiente;
-5. se añada a `09_ARCHITECTURE`;
-6. se actualicen las referencias mínimas necesarias.
+No requiere una nueva aprobación para reconocer su estado arquitectónico vigente.
 
 ---
 
@@ -1703,36 +1701,75 @@ Esta propuesta puede pasar a `APPROVED` cuando:
 ```text
 DOCUMENT: ROBERT_ORCHESTRATOR_SPEC
 VERSION: 0.1
-STATUS: PROPOSED
-AUTHORITY: NON-CANONICAL
+STATUS: APPROVED
+AUTHORITY: ARCHITECTURAL
+
+DECISION: #031
+CHANGE: #054
+
 PHASE: 10
-EXECUTION: NONE
-AUTONOMY: NONE
+IMPLEMENTATION: NONE
+
+ORCHESTRATOR: CONCEPTUAL
+AUTOMATED_ROUTING: NOT_IMPLEMENTED
+
+AUTONOMY_LEVEL: 0
+EXECUTION_AUTHORITY: NONE
 ```
 
 ---
 
-# 51. Siguiente paso recomendado
+# 51. Integración arquitectónica
 
-Después de aprobar `ROBERT_ORCHESTRATOR_SPEC v0.1`:
+El Orchestrator queda integrado con:
 
 ```text
+ROBERT_CANONICAL_MODEL v0.2
 ROBERT_AGENT_ARCHITECTURE v0.1
+ROBERT_SKILL_ARCHITECTURE v0.1
+ROBERT_MODEL_INTERFACE_SPEC v0.1
+ROBERT_MEMORY_ARCHITECTURE v0.1
+ROBERT_VALIDATION_ARCHITECTURE v0.1
 ```
 
-deberá definir formalmente:
+Se mantiene:
 
-* qué es un Agent en Robert;
-* catálogo inicial;
-* roles;
-* responsabilidades;
-* inputs;
-* outputs;
-* permisos;
-* scopes;
-* acceso a Skills;
-* acceso a Models;
-* acceso a Tools;
-* lifecycle;
-* límites;
-* interacción entre Agents.
+```text
+ORCHESTRATOR = ROUTING AUTHORITY
+
+AGENT ≠ ROUTING AUTHORITY
+
+SKILL ≠ ROUTING AUTHORITY
+
+MODEL ≠ ROUTING AUTHORITY
+
+MEMORY RESOLVER ≠ INDEPENDENT ROUTING AUTHORITY
+
+VALIDATION RESOLVER ≠ INDEPENDENT ROUTING AUTHORITY
+```
+
+---
+
+# 52. Restricciones de Fase 10
+
+Esta aprobación no autoriza:
+
+```text
+AUTOMATED ROUTING ENGINE
+AUTONOMOUS AGENTS
+AUTOMATIC TOOL EXECUTION
+AUTOMATIC MEMORY
+AUTOMATIC VALIDATION
+EXTERNAL EXECUTION
+PHASE 11
+```
+
+Se mantiene:
+
+```text
+AUTONOMY_LEVEL = 0
+EXECUTION_AUTHORITY = NONE
+```
+
+---
+
