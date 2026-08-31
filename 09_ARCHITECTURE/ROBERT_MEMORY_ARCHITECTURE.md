@@ -719,9 +719,9 @@ Saber de dónde proviene algo no significa que sea autoritativo.
 
 ---
 
-# 35. Memory Authority
+# 35. Memory Authority Metadata
 
-Authority representa qué peso debe tener una Memory frente a otras fuentes.
+Memory puede conservar metadata que indique el nivel de autoridad o confiabilidad operativa de la información almacenada.
 
 Ejemplos conceptuales:
 
@@ -734,39 +734,97 @@ DERIVED
 UNVERIFIED
 ```
 
-La taxonomía técnica definitiva queda pendiente.
+Estos valores son metadata conceptual.
+
+No constituyen una nueva jerarquía general de fuentes para Robert.
+
+```text
+MEMORY AUTHORITY METADATA
+        ≠
+GLOBAL SOURCE PRECEDENCE
+```
 
 ---
 
-# 36. Authority Hierarchy
+# 36. Source Precedence Boundary
 
-Conceptualmente:
+`ROBERT_MEMORY_ARCHITECTURE` no define una segunda jerarquía independiente para resolver qué fuente gana cuando existe una contradicción.
+
+La precedencia general y temática entre fuentes debe regirse por:
 
 ```text
-CANONICAL
-   ↓
-APPROVED DECISION
-   ↓
-USER EXPLICIT AUTHORIZED MEMORY
-   ↓
-VERIFIED SYSTEM REFERENCE
-   ↓
-DERIVED MEMORY
-   ↓
-UNVERIFIED MEMORY
+ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3
 ```
 
-Esta jerarquía debe permanecer alineada con la política documental existente.
+Por tanto:
+
+```text
+MEMORY ARCHITECTURE
+DOES NOT OWN
+GLOBAL SOURCE PRECEDENCE
+```
+
+Cuando una Memory contradiga:
+
+```text
+CANONICAL DOCUMENT
+APPROVED DECISION
+SECURITY RULE
+PHASE RULE
+APPROVED TECHNICAL SPEC
+OTHER AUTHORITATIVE SOURCE
+```
+
+el conflicto deberá remitirse al sistema vigente de Data Consistency and Conflict Resolution.
+
+Flujo:
+
+```text
+MEMORY CONFLICT
+      ↓
+ORCHESTRATOR
+      ↓
+DATA CONSISTENCY / CONFLICT RESOLUTION
+      ↓
+AUTHORIZED RESOLUTION
+```
+
+Memory metadata puede aportar:
+
+```text
+provenance
+authority_metadata
+freshness
+confidence
+source_reference
+```
+
+pero no decide unilateralmente qué fuente gana.
 
 ---
 
 # 37. Memory Authority ≠ Truth
 
+Se mantienen:
+
 ```text
 AUTHORITY ≠ TRUTH
+
+MEMORY AUTHORITY METADATA ≠ GLOBAL AUTHORITY
+
+MEMORY RETRIEVAL RANK ≠ SOURCE PRECEDENCE
 ```
 
-Una Memory puede tener autoridad operativa y aun así necesitar actualización si su fuente cambia.
+Una Memory puede tener alta autoridad operativa y aun así:
+
+```text
+become stale
+be superseded
+conflict with a newer approved source
+require validation
+```
+
+La resolución final deberá respetar la gobernanza documental vigente.
 
 ---
 
@@ -1504,37 +1562,107 @@ Esto evita contaminación entre proyectos distintos.
 
 ---
 
-# 79. Global vs Scoped Memory
+# 79. Memory Retrieval Scope
 
-Debe distinguirse:
+Memory puede clasificarse conceptualmente según el contexto en el que puede ser recuperada.
+
+Ejemplos:
 
 ```text
-GLOBAL MEMORY
-PROJECT MEMORY
-MODULE MEMORY
-TASK MEMORY
-SESSION MEMORY
+GLOBAL
+PROJECT
+MODULE
+TASK
+SESSION
 ```
 
-Esta taxonomía es conceptual para Scope, no nuevos Memory Types.
+Esta dimensión se denomina:
+
+```text
+MEMORY RETRIEVAL SCOPE
+```
+
+y describe únicamente dónde una Memory puede resultar elegible para retrieval.
+
+Ejemplo:
+
+```text
+memory_type: SEMANTIC
+memory_retrieval_scope: PROJECT
+project_id: ROBERT_MASTER_SYSTEM
+```
 
 ---
 
-# 80. Scope ≠ Memory Type
+# 80. Memory Retrieval Scope ≠ Authorized Scope
+
+Se formaliza:
 
 ```text
-MEMORY SCOPE ≠ MEMORY TYPE
+MEMORY RETRIEVAL SCOPE
+        ≠
+AUTHORIZED OPERATIONAL SCOPE
+```
+
+El `Scope` autorizado continúa gobernado por:
+
+```text
+ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2
+```
+
+Memory Retrieval Scope no puede:
+
+```text
+expand authorized Scope
+create Permission
+grant access
+override Phase
+override Security
+authorize disclosure
+authorize write
 ```
 
 Ejemplo:
 
 ```text
-SEMANTIC
-+
-PROJECT SCOPE
+Memory Retrieval Scope:
+PROJECT
 ```
 
-es válido.
+no significa:
+
+```text
+Authorized Scope:
+ALL PROJECT DATA
+```
+
+El flujo correcto es:
+
+```text
+MEMORY CANDIDATE
+      ↓
+MEMORY RETRIEVAL SCOPE MATCH
+      ↓
+PERMISSION / AUTHORIZED SCOPE CHECK
+      ↓
+SENSITIVITY CHECK
+      ↓
+RETRIEVAL ELIGIBLE
+```
+
+Por tanto:
+
+```text
+MEMORY RETRIEVAL SCOPE MATCH
+        ≠
+MEMORY ACCESS AUTHORIZATION
+```
+
+Y:
+
+```text
+MEMORY TYPE ≠ MEMORY RETRIEVAL SCOPE
+```
 
 ---
 
@@ -1683,6 +1811,30 @@ DELETE MEMORY ≠ DELETE GOVERNANCE RECORD
 ---
 
 # 90. Audit
+Memory Architecture reutiliza el sistema conceptual de trazabilidad definido por:
+
+```text
+ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2
+```
+
+No crea:
+
+```text
+MemoryAuditRecord
+MemoryAuditTrail
+AuditTrailEntry
+```
+
+como nuevos modelos técnicos oficiales.
+
+```text
+MEMORY AUDIT REQUIREMENT
+        ≠
+NEW AUDIT SYSTEM
+```
+
+Las operaciones de Memory deberán integrarse en la arquitectura de Audit existente cuando dicha capacidad sea técnicamente definida.
+
 
 Memory operations futuras deberían poder registrar:
 
