@@ -2383,56 +2383,53 @@ Nivel de autonomía:
 **Nivel 0 — Sin autonomía ejecutiva**
 
 ---
+# ESTADO DE APROBACIÓN
 
-# DECISIÓN PENDIENTE
+Este documento está formalmente:
 
-Este documento queda como:
+```text
+APPROVED
+INTEGRATED
+```
 
-**Propuesta corregida pendiente de revisión**
+La trazabilidad correspondiente se encuentra registrada en:
 
-Para aprobarlo formalmente, el usuario deberá escribir:
+```text
+ROBERT_DECISIONS_LOG
+ROBERT_CONTROL_DE_CAMBIOS
+```
 
-**APRUEBO ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC v0.2**
-
----
-
-# EFECTO DE UNA APROBACIÓN FUTURA
-
-Si se aprueba este documento, se deberá:
-
-1. Registrar decisión formal en ROBERT_DECISIONS_LOG.
-2. Registrar cambio en ROBERT_CONTROL_DE_CAMBIOS.
-3. Actualizar ROBERT_HOME.
-4. Actualizar README si aplica.
-5. Mantenerlo como base para futuras especificaciones técnicas.
-6. No crear memoria real automática.
-7. No crear sistema real de sesiones.
-8. No crear base de datos real.
-9. No pasar automáticamente a programación.
-10. No avanzar automáticamente a Fase 11.
+No requiere nueva aprobación para reconocer su estado vigente.
 
 ---
 
-# PRÓXIMO PASO RECOMENDADO
+# RESTRICCIONES
 
-Después de revisar este documento, el siguiente documento posible sería:
+La aprobación documental no autoriza:
 
-**ROBERT_TECHNICAL_DOCUMENT_LIFECYCLE_SPEC**
+```text
+PROGRAMMING
+AUTOMATIC EXECUTION
+EXTERNAL CONNECTIONS
+AUTONOMOUS AGENTS
+AUTOMATIC PHASE TRANSITION
+PHASE 11
+```
 
-Ese documento definiría el ciclo de vida de documentos: borrador, propuesta, corrección, revisión, aprobación, integración, actualización, depreciación y reemplazo.
+Se mantiene:
 
-No debe crearse hasta revisar o aprobar SESSION_AND_CONTEXT_SPEC.
+```text
+AUTONOMY_LEVEL = 0
+EXECUTION_AUTHORITY = NONE
+```
 
 ---
 
 # CIERRE
 
-ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC v0.2 define sesión, contexto activo, continuidad, pausa, reanudación, interpretación de confirmaciones cortas, recuperación del hilo y cierre de bloques dentro del MVP técnico básico de Robert.
+El documento permanece como especificación técnica documental aprobada dentro de Fase 10.
 
-Este documento conecta sesión y contexto con DATA_MODEL_SPEC v0.1, COMPONENTS_SPEC v0.2, USER_ACTIONS_SPEC v0.2, ERROR_AND_BLOCKING_SPEC v0.2, PERMISSIONS_AND_SCOPES_SPEC v0.2, AUDIT_TRAIL_SPEC v0.2 y NOTIFICATION_AND_ALERTS_SPEC v0.2.
-
-Este documento mantiene a Robert en modo documental, manual y supervisado.
+Su aprobación no implica implementación técnica productiva.
 
 El usuario mantiene control total.
 
-Robert no ejecuta acciones importantes sin permiso.
