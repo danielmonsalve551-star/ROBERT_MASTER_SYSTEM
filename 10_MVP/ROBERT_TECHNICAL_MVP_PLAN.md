@@ -5,6 +5,29 @@ Proyecto: Robert
 Tipo de documento: Plan del MVP técnico básico  
 Versión: 0.1  
 Estado: APROBADO — base vigente del MVP técnico básico
+Trazabilidad de aprobación:
+
+```text
+DECISIÓN #005 — ROBERT_TECHNICAL_MVP_PLAN v0.1 aprobado
+```
+
+El pendiente histórico de crear el wireframe quedó resuelto posteriormente mediante la aprobación de:
+
+```text
+ROBERT_TECHNICAL_MVP_WIREFRAME v0.3
+```
+
+Por tanto:
+
+```text
+MVP PLAN APPROVED
+WIREFRAME APPROVED
+CORE ARCHITECTURE APPROVED
+IMPLEMENTATION AUTHORIZATION = NONE
+```
+
+La aprobación del plan continúa sin autorizar programación real.
+
 Fecha: 26/06/2026
 
 ---
