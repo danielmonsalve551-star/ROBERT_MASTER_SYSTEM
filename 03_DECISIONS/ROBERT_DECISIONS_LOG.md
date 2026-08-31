@@ -5049,3 +5049,206 @@ Operational Execution Authority: NONE
 3. Preparar `ROBERT_MEMORY_ARCHITECTURE v0.1`.
 
 ---
+# DECISIÓN #035 — Aprobación de ROBERT_MEMORY_ARCHITECTURE v0.1
+
+**Fecha:** 31/08/2026
+**Tipo:** Arquitectónica / documental
+**Estado:** APROBADA
+**Fase:** 10
+**Documento relacionado:** `09_ARCHITECTURE/ROBERT_MEMORY_ARCHITECTURE.md`
+**Versión:** v0.1
+**Cambio relacionado:** CAMBIO #060
+
+## Decisión
+
+Se aprueba formalmente:
+
+```text
+ROBERT_MEMORY_ARCHITECTURE v0.1
+```
+
+como especificación arquitectónica vigente para Memory dentro de Robert.
+
+La arquitectura establece formalmente:
+
+```text
+RETENTION:
+- ACTIVE
+- TEMPORARY
+- PERSISTENT
+
+MEMORY_TYPE:
+- CORE
+- SEMANTIC
+- EPISODIC
+- DECISIONAL
+- PROCEDURAL
+```
+
+y mantiene separadas las dimensiones:
+
+```text
+RETENTION ≠ MEMORY_TYPE
+```
+
+También formaliza:
+
+```text
+MEMORY CANDIDATE
+MEMORY ELIGIBILITY
+MEMORY RETRIEVAL
+MEMORY RETRIEVAL SCOPE
+MEMORY AUTHORITY METADATA
+PROVENANCE
+CONFIDENCE
+FRESHNESS
+CONFLICT HANDLING
+SUPERSESSION
+EXPIRATION
+FORGET / DELETE
+```
+
+## Invariantes aprobadas
+
+```text
+CONTEXT ≠ MEMORY
+
+SOURCE ≠ MEMORY
+
+EVIDENCE ≠ MEMORY
+
+MODEL OUTPUT ≠ MEMORY WRITE
+
+AGENT OUTPUT ≠ MEMORY WRITE
+
+SKILL OUTPUT ≠ MEMORY WRITE
+
+MEMORY CANDIDATE ≠ MEMORY
+
+MEMORY ≠ CANONICAL SOURCE
+
+MEMORY RETRIEVAL SCOPE ≠ AUTHORIZED OPERATIONAL SCOPE
+
+MEMORY AUTHORITY METADATA ≠ GLOBAL SOURCE PRECEDENCE
+
+MEMORY ACCESS ≠ MEMORY OWNERSHIP
+
+RETRIEVED MEMORY ≠ VERIFIED TRUTH
+
+PERSISTENT ≠ IMMUTABLE
+```
+
+## Memory Resolver
+
+Se aprueba `MEMORY RESOLVER` únicamente como responsabilidad conceptual subordinada al Orchestrator.
+
+```text
+ORCHESTRATOR
+  ↓
+MEMORY RESOLVER
+```
+
+No constituye:
+
+```text
+NEW ORCHESTRATOR
+INDEPENDENT AUTHORITY
+AUTONOMOUS MEMORY SYSTEM
+```
+
+## ROBERT_MEMORY
+
+`ROBERT_MEMORY` continúa siendo el Agent previamente aprobado en `ROBERT_AGENT_ARCHITECTURE v0.1`.
+
+Memory Architecture no crea un Agent nuevo.
+
+Su función en esta arquitectura es analizar y recomendar sobre:
+
+```text
+memory classification
+memory eligibility
+retention
+provenance
+conflicts
+memory recommendations
+```
+
+sin adquirir Memory Write Authority.
+
+## Integración con arquitectura vigente
+
+La arquitectura queda alineada con:
+
+```text
+ROBERT_CANONICAL_MODEL v0.2
+ROBERT_ORCHESTRATOR_SPEC v0.1
+ROBERT_AGENT_ARCHITECTURE v0.1
+ROBERT_SKILL_ARCHITECTURE v0.1
+ROBERT_MODEL_INTERFACE_SPEC v0.1
+```
+
+Memory retrieval y write continúan sujetas a:
+
+```text
+PERMISSION
+SCOPE
+SECURITY
+AUTHORITY
+SENSITIVITY
+VALIDATION
+APPROVAL WHEN REQUIRED
+```
+
+La precedencia global entre fuentes no pertenece a Memory Architecture y continúa gobernada por la arquitectura de consistencia y resolución de conflictos vigente.
+
+## Fase 10
+
+La aprobación es exclusivamente:
+
+```text
+DOCUMENTAL
+CONCEPTUAL
+MANUAL
+SUPERVISED
+```
+
+Se mantiene:
+
+```text
+AUTONOMY_LEVEL = 0
+EXECUTION_AUTHORITY = NONE
+```
+
+Esta decisión no autoriza:
+
+* Memory Store productivo;
+* Vector Database productiva;
+* Memory writes automáticos;
+* Memory retrieval automático productivo;
+* acceso directo de Models a Memory;
+* acceso directo de Agents a Memory;
+* resolución automática de conflictos;
+* eliminación automática;
+* consolidación automática;
+* ejecución externa;
+* agentes autónomos;
+* avance automático a Fase 11.
+
+## Resultado
+
+`ROBERT_MEMORY_ARCHITECTURE v0.1` queda:
+
+```text
+APPROVED
+ARCHITECTURAL
+PHASE 10
+IMPLEMENTATION: NONE
+```
+
+## Siguiente paso
+
+El siguiente bloque arquitectónico será:
+
+```text
+ROBERT_VALIDATION_ARCHITECTURE v0.1
+```
