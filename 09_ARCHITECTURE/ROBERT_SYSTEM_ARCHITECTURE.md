@@ -4,7 +4,7 @@ Proyecto: Robert
 Tipo de documento: Arquitectura conceptual del sistema  
 Versión: v0.2  
 Estado: Base actualizada pendiente de aprobación  
-Última actualización: Junio 2026
+Última actualización: 31/08/2026
 
 Uso principal:  
 Definir cómo funciona Robert por dentro mediante capas, flujos, módulos, reglas, memoria, control, capacidades, gobierno, autonomía controlada y presentación visual.
@@ -152,82 +152,158 @@ Si la identidad crece demasiado, se debe crear ROBERT_CORE como documento espec�
 ---
 
 3. CAPA 1 — MEMORIA
-    
 
-Qué es:  
-La Capa 1 define lo que Robert sabe, recuerda y conserva.
+Qué es:
+La Capa 1 define cómo Robert conserva, clasifica, recupera y gobierna información que debe permanecer disponible más allá del Context inmediato.
 
-La memoria de Robert tiene tres tiempos:
+La arquitectura vigente de esta capa es:
 
-1. Contexto activo  
-    Información de la sesión actual.
-    
-2. Contexto maestro  
-    Información permanente y estructural del sistema.
-    
-3. Historial de decisiones  
-    Registro de qué se decidió, cuándo, por qué y qué documento afecta.
-    
+```text
+ROBERT_MEMORY_ARCHITECTURE v0.1
+DECISIÓN #035
+CAMBIO #060
+```
 
-Dónde vive:
-
-- ROBERT_CONTEXT_MASTER;
-    
-- ROBERT_DECISIONS_LOG;
-    
-- futuras notas de contexto activo si se decide crearlas.
-    
-
-Estado actual:
-
-Es una de las capas más maduras del sistema.
-
-Riesgo principal:
-
-Mezclar contexto activo con contexto maestro.
-
-Si todo lo que ocurre en una sesión se guarda como permanente, Robert se contamina y pierde claridad.
+Memory no debe confundirse con Context.
 
 Regla:
 
-Robert debe distinguir entre:
-
-- información temporal;
-    
-- información permanente;
-    
-- decisión;
-    
-- idea;
-    
-- tarea;
-    
-- referencia visual;
-    
-- regla;
-    
-- documento maestro;
-    
-- acción autorizada;
-    
-- acción pendiente;
-    
-- acción ejecutada;
-    
-- acción bloqueada.
-    
-
-Pregunta pendiente:
-
-¿Debe existir una nota separada llamada ROBERT_ACTIVE_CONTEXT?
-
-Recomendación:
-
-Sí, pero no todavía como prioridad.
-
-Primero debe completarse Capa 2 — Control.
+```text
+CONTEXT ≠ MEMORY
+```
 
 ---
+
+## Dimensiones canónicas
+
+Memory utiliza dos dimensiones principales separadas:
+
+```text
+RETENTION
+```
+
+con:
+
+```text
+ACTIVE
+TEMPORARY
+PERSISTENT
+```
+
+y:
+
+```text
+MEMORY_TYPE
+```
+
+con:
+
+```text
+CORE
+SEMANTIC
+EPISODIC
+DECISIONAL
+PROCEDURAL
+```
+
+Se formaliza:
+
+```text
+RETENTION ≠ MEMORY_TYPE
+```
+
+---
+
+## Memory Retrieval Scope
+
+Memory puede además utilizar:
+
+```text
+MEMORY RETRIEVAL SCOPE
+```
+
+para determinar dónde una Memory puede ser elegible para recuperación.
+
+Pero:
+
+```text
+MEMORY RETRIEVAL SCOPE
+≠
+AUTHORIZED OPERATIONAL SCOPE
+```
+
+---
+
+## Memory Resolver
+
+La responsabilidad especializada para resolver necesidades de Memory pertenece conceptualmente al Orchestrator:
+
+```text
+ORCHESTRATOR
+  ↓
+MEMORY RESOLVER
+```
+
+`MEMORY RESOLVER` no es una autoridad independiente.
+
+---
+
+## ROBERT_MEMORY
+
+`ROBERT_MEMORY` ya existe como Agent aprobado dentro de:
+
+```text
+ROBERT_AGENT_ARCHITECTURE v0.1
+```
+
+Puede analizar y recomendar sobre Memory, pero no posee autoridad automática de escritura.
+
+Se mantienen:
+
+```text
+ROBERT_MEMORY ≠ MEMORY AUTHORITY
+
+AGENT OUTPUT ≠ MEMORY WRITE
+```
+
+---
+
+## Reglas principales
+
+```text
+MEMORY CANDIDATE ≠ MEMORY
+
+MODEL OUTPUT ≠ MEMORY WRITE
+
+SKILL OUTPUT ≠ MEMORY WRITE
+
+MEMORY ≠ CANONICAL SOURCE
+
+MEMORY AUTHORITY METADATA
+≠
+GLOBAL SOURCE PRECEDENCE
+```
+
+La precedencia general entre fuentes continúa perteneciendo al sistema de Data Consistency and Conflict Resolution.
+
+---
+
+## Estado actual
+
+```text
+MEMORY ARCHITECTURE = APPROVED
+MEMORY STORE = NOT IMPLEMENTED
+AUTOMATIC MEMORY WRITE = DISABLED
+AUTOMATIC MEMORY RETRIEVAL = NOT IMPLEMENTED
+
+AUTONOMY_LEVEL = 0
+EXECUTION_AUTHORITY = NONE
+```
+
+La Capa 1 está arquitectónicamente definida, pero todavía no implementada técnicamente.
+
+---
+
 
 4. CAPA 2 — CONTROL
     
@@ -377,7 +453,7 @@ Robert no debe tener múltiples protocolos de control diferentes.
 
 Este protocolo es la referencia canónica.
 
-La futura `ROBERT_ORCHESTRATOR_SPEC` deberá especializar esta Capa 2 y este Protocolo Canónico de Control.
+`ROBERT_ORCHESTRATOR_SPEC v0.1`, aprobada mediante DECISIÓN #031 / CAMBIO #054, especializa esta Capa 2 y este Protocolo Canónico de Control.
 
 No podrá crear un segundo protocolo de control paralelo.
 
@@ -385,11 +461,11 @@ No podrá crear un segundo protocolo de control paralelo.
 
 ### Evolución hacia Orchestration
 
-La futura `ROBERT_ORCHESTRATOR_SPEC` será una especialización y evolución técnica de la Capa 2 — Control y del Protocolo Canónico de Control existente.
+`ROBERT_ORCHESTRATOR_SPEC v0.1` constituye la especialización arquitectónica vigente de la Capa 2 — Control y del Protocolo Canónico de Control existente.
 
 No deberá crear un segundo sistema de control paralelo.
 
-La futura especificación podrá formalizar responsabilidades como:
+La especificación vigente formaliza responsabilidades como:
 
 - Intent Router;
 - Context Resolver;
@@ -568,133 +644,162 @@ Respuesta correcta:
 ---
 
 8. CAPA 3 — CAPACIDADES
-    
 
-Qué es:  
-La Capa 3 define qué puede hacer Robert.
+Qué es:
+La Capa 3 define qué capacidades puede utilizar Robert para realizar trabajo.
 
-Incluye:
+Incluye conceptualmente:
 
-- módulos;
-    
-- herramientas;
-    
-- agentes futuros;
-    
-- integraciones;
-    
-- automatizaciones;
-    
-- funciones internas;
-    
-- capacidades de análisis;
-    
-- capacidades visuales;
-    
-- capacidades documentales;
-    
-- capacidades de autonomía;
-    
-- capacidades de ejecución futura.
-    
+* Modules;
+* Agents;
+* Skills;
+* Models;
+* Tools;
+* integraciones;
+* automatizaciones futuras;
+* capacidades de análisis;
+* capacidades documentales;
+* capacidades visuales;
+* capacidades de ejecución futura.
 
-Dónde vive:
+---
 
-- ROBERT_MODULES;
-    
-- ROBERT_SYSTEM_ARCHITECTURE;
-    
-- futuros documentos como ROBERT_TOOLS, ROBERT_AGENTS o ROBERT_AUTOMATIONS.
-    
+## Arquitectura vigente
 
-Estado actual:
+Esta capa actualmente se apoya en:
 
-Parcial.
+```text
+ROBERT_MODULES
+ROBERT_AGENT_ARCHITECTURE v0.1
+ROBERT_SKILL_ARCHITECTURE v0.1
+ROBERT_MODEL_INTERFACE_SPEC v0.1
+ROBERT_ORCHESTRATOR_SPEC v0.1
+```
 
-Robert tiene módulos definidos y ahora cuenta con un modelo inicial de autonomía controlada.
+Además, `Tool` ya está definido canónicamente como una categoría distinta.
 
-Decisión estratégica:
+---
 
-Robert será copiloto ahora y ejecutor controlado después.
+## Estado de Agents
 
-Esto significa:
+Agents ya no son una capacidad meramente futura.
 
-En la etapa actual, Robert puede:
+Existe:
 
-- analizar;
-    
-- organizar;
-    
-- proponer;
-    
-- preparar;
-    
-- resumir;
-    
-- clasificar;
-    
-- crear borradores;
-    
-- preparar prompts;
-    
-- estructurar documentos;
-    
-- diseñar flujos;
-    
-- simular acciones;
-    
-- preparar automatizaciones conceptuales;
-    
-- operar con autonomía de borrador;
-    
-- operar con autonomía documental interna cuando el usuario lo autorice.
-    
+```text
+ROBERT_AGENT_ARCHITECTURE v0.1
+DECISIÓN #032
+CAMBIO #055
+CAMBIO #056
+```
 
-Robert todavía no debe ejecutar sin condiciones:
+con Agents documentales aprobados.
 
-- conectar apps reales;
-    
-- ejecutar acciones externas;
-    
-- enviar correos;
-    
-- crear eventos;
-    
-- borrar archivos;
-    
-- mover documentos reales;
-    
-- publicar contenido;
-    
-- activar agentes autónomos;
-    
-- automatizar procesos reales;
-    
-- ejecutar código operativo sin validación.
-    
+Esto no significa que existan Agents autónomos productivos.
 
-En el futuro, Robert podrá ejecutar, pero solo cuando existan:
+```text
+AGENT ARCHITECTURE = APPROVED
+AUTONOMOUS AGENTS = NOT ACTIVE
+```
 
-- arquitectura definida;
-    
-- permisos claros;
-    
-- gobierno operativo;
-    
-- pruebas;
-    
-- modo sandbox;
-    
-- autorización del usuario;
-    
-- trazabilidad;
-    
-- reversibilidad;
-    
-- límites por herramienta;
-    
-- agentes bien definidos.
-    
+---
+
+## Estado de Skills
+
+Existe:
+
+```text
+ROBERT_SKILL_ARCHITECTURE v0.1
+DECISIÓN #033
+CAMBIO #057
+CAMBIO #058
+```
+
+Skills representan procedimientos reutilizables.
+
+```text
+SKILL ≠ AGENT
+SKILL ≠ AUTONOMOUS ACTOR
+```
+
+---
+
+## Estado de Models
+
+Existe:
+
+```text
+ROBERT_MODEL_INTERFACE_SPEC v0.1
+DECISIÓN #034
+CAMBIO #059
+```
+
+Models son proveedores de inteligencia.
+
+```text
+MODEL ≠ TOOL
+MODEL ≠ AGENT
+MODEL ≠ SKILL
+```
+
+---
+
+## Estado de Tools
+
+Tool ya existe como concepto canónico y como destino de routing dentro del Orchestrator.
+
+Sin embargo, todavía no existe una especificación arquitectónica independiente equivalente a:
+
+```text
+ROBERT_TOOL_ARCHITECTURE
+```
+
+Por tanto:
+
+```text
+TOOL CONCEPT = DEFINED
+
+TOOL RESOLUTION = ARCHITECTURALLY REFERENCED
+
+TOOL EXECUTION = NOT IMPLEMENTED
+
+TOOL ARCHITECTURE = GAP UNDER REVIEW
+```
+
+---
+
+## Estado actual de la Capa 3
+
+Robert puede actualmente:
+
+* analizar;
+* organizar;
+* proponer;
+* preparar;
+* resumir;
+* clasificar;
+* generar borradores;
+* diseñar Agent work;
+* diseñar Skill execution;
+* utilizar Models manualmente;
+* diseñar Tool Requests;
+* simular routing;
+* validar outputs manualmente.
+
+Robert no puede todavía:
+
+* ejecutar Tools automáticamente;
+* permitir Agents autónomos;
+* ejecutar integraciones externas productivas;
+* operar workflows autónomos;
+* ejecutar acciones reales fuera de autorización.
+
+Se mantiene:
+
+```text
+AUTONOMY_LEVEL = 0
+EXECUTION_AUTHORITY = NONE
+```
 
 ---
 
@@ -818,125 +923,200 @@ Este nivel nunca debe activarse por defecto.
 ---
 
 10. TAXONOMÍA DE CAPACIDADES
-    
 
-La arquitectura distingue entre MODULES, TOOLS, AGENTS y LAYERS.
+La arquitectura canónica distingue:
 
-MODULES
+```text
+ROBERT
+MODEL
+AGENT
+SKILL
+TOOL
+MODULE
+LAYER
+```
 
-Son áreas funcionales de Robert.
+Cada concepto tiene una responsabilidad diferente.
 
-Ejemplos:
+---
 
-- Ideas;
-    
-- Finance;
-    
-- Documents;
-    
-- Marketing;
-    
-- Security;
-    
-- Automation;
-    
-- Design;
-    
-- Research;
-    
-- Projects;
-    
-- Business Builder.
-    
+## ROBERT
 
-TOOLS
+Robert es el sistema completo.
 
-Son herramientas externas que Robert puede usar o conectar.
+```text
+ROBERT ≠ MODEL
+ROBERT ≠ AGENT
+ROBERT ≠ SKILL
+ROBERT ≠ TOOL
+```
 
-Ejemplos:
+---
 
-- Gmail;
-    
-- Calendar;
-    
-- Obsidian;
-    
-- Notion;
-    
-- Google Drive;
-    
-- Figma;
+## MODULES
 
-
-    ### MODELS
-
-Los Models son proveedores de inteligencia utilizados por Robert para razonamiento, análisis, generación y evaluación.
+Modules representan áreas funcionales del sistema.
 
 Ejemplos:
 
-- Claude;
-- ChatGPT.
+* Ideas;
+* Finance;
+* Documents;
+* Marketing;
+* Security;
+* Automation;
+* Design;
+* Research;
+* Projects;
+* Business Builder.
 
-Regla canónica:
+Un Module organiza trabajo.
 
-`MODEL ≠ TOOL`
+No es un actor autónomo.
 
-Los Models pueden utilizar Tools autorizadas y colaborar con Agents, Skills y Modules, pero no adquieren autoridad ni permisos por existir.
-AGENTS
+---
 
-Son especialistas futuros que pueden operar dentro de un módulo.
+## MODELS
 
-Ejemplos:
+Models son proveedores de inteligencia.
 
-- Agente financiero;
-    
-- agente documental;
-    
-- agente de marketing;
-    
-- agente fiscal;
-    
-- agente visual;
-    
-- agente de investigación.
-    
+Ejemplos actuales:
 
-LAYERS
+* ChatGPT;
+* Claude.
 
-Son subsistemas internos de arquitectura.
+Pueden utilizarse para:
 
-Ejemplos:
+* razonamiento;
+* análisis;
+* generación;
+* revisión;
+* clasificación;
+* evaluación.
 
-- Identidad;
-    
-- Memoria;
-    
-- Control;
-    
-- Capacidades;
-    
-- Gobierno;
-    
-- Presentación.
-    
+Se mantiene:
 
-Regla de taxonomía:
+```text
+MODEL ≠ TOOL
+MODEL ≠ AGENT
+MODEL ≠ SKILL
+```
 
-Los subsistemas internos reales, como el motor de memoria, el procesador de comandos o el gobierno de seguridad, no deben tratarse como MODULES funcionales.
+Models no adquieren Permission, Scope o Execution Authority por existir.
 
-Pertenecen a las capas internas de arquitectura.
+---
 
-MODULES son áreas funcionales.
+## AGENTS
 
-LAYERS son estructura interna.
+Agents son especialistas que trabajan dentro de un Scope y Role definidos.
 
-TOOLS son herramientas externas.
+La arquitectura vigente está en:
 
-AGENTS son operadores especializados futuros.
+```text
+ROBERT_AGENT_ARCHITECTURE v0.1
+```
 
-Regla:
+Agents pueden utilizar Skills y solicitar capacidades mediante el Orchestrator.
 
-No crear agentes ejecutores hasta que exista arquitectura, gobierno, permisos y autorización clara.
+No poseen routing authority independiente.
+
+```text
+AGENT ≠ ORCHESTRATOR
+AGENT ≠ SKILL
+```
+
+---
+
+## SKILLS
+
+Skills describen cómo realizar procedimientos reutilizables.
+
+La arquitectura vigente está en:
+
+```text
+ROBERT_SKILL_ARCHITECTURE v0.1
+```
+
+Se mantiene:
+
+```text
+SKILL ≠ AGENT
+SKILL ≠ TOOL
+SKILL ≠ AUTONOMOUS ACTOR
+```
+
+---
+
+## TOOLS
+
+Tools son capacidades externas o técnicas mediante las cuales Robert interactúa con sistemas, datos o entornos.
+
+Ejemplos conceptuales:
+
+* Gmail;
+* Calendar;
+* filesystem;
+* web;
+* GitHub;
+* Google Drive;
+* databases;
+* APIs;
+* code execution environments.
+
+Se mantiene:
+
+```text
+MODEL ≠ TOOL
+AGENT ≠ TOOL
+SKILL ≠ TOOL
+```
+
+Tool requirement no significa Tool authorization.
+
+```text
+TOOL REQUIREMENT
+≠
+TOOL AUTHORIZATION
+```
+
+---
+
+## LAYERS
+
+Layers son subsistemas internos de la arquitectura.
+
+Las seis capas vigentes son:
+
+```text
+0. Identity / Kernel
+1. Memory
+2. Control
+3. Capabilities
+4. Governance
+5. Presentation
+```
+
+Layers no son Modules ni Agents.
+
+---
+
+## Regla general
+
+```text
+MODULE = WHERE WORK BELONGS
+
+AGENT = WHO WORKS
+
+SKILL = HOW WORK IS DONE
+
+MODEL = WHO PROCESSES INTELLIGENCE
+
+TOOL = WHAT ROBERT INTERACTS WITH
+
+LAYER = WHERE THE SYSTEM RESPONSIBILITY LIVES
+```
+
+El Orchestrator coordina estas capacidades sin convertirlas en un único tipo de entidad.
 
 ---
 
@@ -1364,88 +1544,143 @@ Si existe Autonomía Controlada, el HUD debe mostrar:
 ---
 
 16. MAPA DE CAPAS A DOCUMENTOS
-    
 
-Capa 0 — Identidad / Kernel
-
-Documento principal:
-
-- ROBERT_CONTEXT_MASTER.
-    
-
-Documento futuro posible:
-
-- ROBERT_CORE.
-    
-
-Capa 1 — Memoria
+## Capa 0 — Identidad / Kernel
 
 Documentos principales:
 
-- ROBERT_CONTEXT_MASTER;
-    
-- ROBERT_DECISIONS_LOG.
-    
+```text
+ROBERT_CONTEXT_MASTER
+ROBERT_CANONICAL_MODEL
+```
 
 Documento futuro posible:
 
-- ROBERT_ACTIVE_CONTEXT.
-    
+```text
+ROBERT_CORE
+```
 
-Capa 2 — Control
+solo si la identidad requiere una separación adicional.
 
-Documentos principales:
+---
 
-- ROBERT_COMMANDS;
-    
-- ROBERT_SYSTEM_ARCHITECTURE.
-    
+## Capa 1 — Memory
+
+Documento arquitectónico principal:
+
+```text
+ROBERT_MEMORY_ARCHITECTURE
+```
 
 Documentos relacionados:
 
-- ROBERT_DECISIONS_LOG;
-    
-- ROBERT_SECURITY_RULES.
-    
+```text
+ROBERT_CONTEXT_MASTER
+ROBERT_DECISIONS_LOG
+ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC
+```
 
-Capa 3 — Capacidades
+---
 
-Documento principal:
-
-- ROBERT_MODULES.
-    
-
-Documentos futuros posibles:
-
-- ROBERT_TOOLS;
-    
-- ROBERT_AGENTS;
-    
-- ROBERT_AUTOMATIONS.
-    
-
-Capa 4 — Gobierno
+## Capa 2 — Control
 
 Documentos principales:
 
-- ROBERT_SECURITY_RULES;
-    
-- ROBERT_PHASES.
-    
+```text
+ROBERT_COMMANDS
+ROBERT_SYSTEM_ARCHITECTURE
+ROBERT_ORCHESTRATOR_SPEC
+```
 
-Documento relacionado:
+Documentos relacionados:
 
-- ROBERT_DECISIONS_LOG.
-    
-
-Capa 5 — Presentación
-
-Documento principal:
-
-- ROBERT_VISUAL_REFERENCE.
-    
+```text
+ROBERT_DECISIONS_LOG
+ROBERT_SECURITY_RULES
+ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC
+ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC
+ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC
+```
 
 ---
+
+## Capa 3 — Capacidades
+
+Documentos principales:
+
+```text
+ROBERT_MODULES
+ROBERT_AGENT_ARCHITECTURE
+ROBERT_SKILL_ARCHITECTURE
+ROBERT_MODEL_INTERFACE_SPEC
+```
+
+Gap arquitectónico bajo revisión:
+
+```text
+ROBERT_TOOL_ARCHITECTURE
+```
+
+Documento futuro posible:
+
+```text
+ROBERT_AUTOMATIONS
+```
+
+cuando la fase correspondiente lo permita.
+
+---
+
+## Capa 4 — Gobierno
+
+Documentos principales:
+
+```text
+ROBERT_SECURITY_RULES
+ROBERT_PHASES
+ROBERT_VALIDATION_ARCHITECTURE
+```
+
+Documentos relacionados:
+
+```text
+ROBERT_DECISIONS_LOG
+ROBERT_CONTROL_DE_CAMBIOS
+ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC
+ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC
+ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC
+ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC
+```
+
+---
+
+## Capa 5 — Presentación
+
+Documentos principales:
+
+```text
+ROBERT_VISUAL_REFERENCE
+ROBERT_TECHNICAL_MVP_WIREFRAME
+ROBERT_TECHNICAL_COMPONENTS_SPEC
+ROBERT_TECHNICAL_SCREEN_STATE_SPEC
+```
+
+---
+
+## Estado general
+
+```text
+CORE ARCHITECTURE = APPROVED
+
+SYSTEM ARCHITECTURE v0.2 =
+REANCHORED / PENDING ITS OWN FORMAL APPROVAL
+
+TOOL ARCHITECTURE =
+ARCHITECTURAL GAP UNDER REVIEW
+```
+
+---
+
 
 17. LECTURA ACTUAL DEL SISTEMA
     
