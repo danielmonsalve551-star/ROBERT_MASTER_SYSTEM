@@ -54,37 +54,35 @@ Este documento no ejecuta acciones reales.
 
 ---
 
-# ESTADO DEL DOCUMENTO
+**# ESTADO DEL DOCUMENTO
 
 Este documento queda como:
 
-**Propuesta corregida — pendiente de revisión**
+**APROBADO E INTEGRADO — v0.2**
 
-No está aprobado todavía.
+Trazabilidad formal:
 
-No reemplaza a ningún documento maestro.
+```text
+DECISIÓN #020
+CAMBIO #033 — Corrección
+CAMBIO #034 — Aprobación e integración
+```
 
-No autoriza programación.
+Estado operativo:
 
-No autoriza prototipo funcional.
+```text
+STATUS: APPROVED / INTEGRATED
+PHASE: 10
+IMPLEMENTATION: NONE
+AUDIT_SYSTEM: NOT_IMPLEMENTED
+AUTONOMY_LEVEL: 0
+EXECUTION_AUTHORITY: NONE
+```
 
-No autoriza base de datos real.
-
-No autoriza logs reales.
-
-No autoriza sistema real de auditoría.
-
-No autoriza conexiones externas.
-
-No autoriza automatizaciones.
-
-No autoriza agentes autónomos.
-
-No autoriza ejecución real.
-
-No autoriza avanzar a Fase 11.
+No crea logs reales, base de datos real ni sistema automático de auditoría.
 
 ---
+**
 
 # CORRECCIONES DE LA VERSIÓN v0.2
 
