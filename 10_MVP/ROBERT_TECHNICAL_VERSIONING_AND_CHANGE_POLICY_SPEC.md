@@ -1,7 +1,7 @@
 # ROBERT_TECHNICAL_VERSIONING_AND_CHANGE_POLICY_SPEC
 
 Versión: 0.1  
-Estado: Borrador técnico documental nuevo — pendiente de revisión  
+Estado: APROBADA
 Fecha: 06/07/2026  
 Ubicación: 10_MVP  
 Fase relacionada: Fase 10 — MVP técnico básico en preparación  
