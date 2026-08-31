@@ -1,7 +1,7 @@
 # ROBERT_VALIDATION_ARCHITECTURE
 
 **Versión:** 0.1
-**Estado:** PROPUESTA — pendiente de revisión y aprobación
+**Estado:** APROBADA — integrada arquitectónicamente
 **Tipo:** Especificación arquitectónica de Validation
 **Ubicación propuesta:** `09_ARCHITECTURE/ROBERT_VALIDATION_ARCHITECTURE.md`
 **Fase relacionada:** Fase 10 — MVP técnico básico en preparación
@@ -2605,8 +2605,11 @@ Deben resolverse:
 ```text
 DOCUMENT: ROBERT_VALIDATION_ARCHITECTURE
 VERSION: 0.1
-STATUS: PROPOSED
-AUTHORITY: NON-CANONICAL
+STATUS: APPROVED
+AUTHORITY: ARCHITECTURAL
+
+DECISION: #036
+CHANGE: #061
 
 PHASE: 10
 IMPLEMENTATION: NONE
@@ -2619,8 +2622,6 @@ AUTOMATED_VALIDATION_ENGINE: NOT_IMPLEMENTED
 AUTONOMY_LEVEL: 0
 EXECUTION_AUTHORITY: NONE
 ```
-
----
 
 # 136. Criterios de aprobación
 
