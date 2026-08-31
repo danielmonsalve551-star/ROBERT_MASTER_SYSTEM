@@ -2,7 +2,7 @@ ROBERT_CONTEXT_MASTER
 
 Versión: 0.5  
 Estado: Contexto maestro reanclado al estado actual del proyecto  
-Última actualización: 30/06/2026
+Última actualización: 31/08/2026
 
 Uso principal:  
 Servir como contexto base para ChatGPT, Claude, Obsidian, la bóveda documental de Robert y futuras herramientas de IA, manteniendo clara la identidad, propósito, estructura, documentos, comandos, reglas, fases, decisiones, autonomía controlada y estado actual del proyecto.
@@ -665,156 +665,262 @@ En el futuro, Robert podrá ejecutar, pero solo cuando existan:
     
 
 ---
-
 13. DOCUMENTOS PRINCIPALES DE ROBERT
-
 
 Los documentos principales actuales de Robert se organizan por función.
 
-## Núcleo documental
+## Núcleo y gobierno
 
-1. ROBERT_HOME  
-   Página principal, centro visual de navegación y estado general.
+1. ROBERT_HOME
+   Punto central de navegación y estado actual.
 
-2. ROBERT_CONTEXT_MASTER  
-   Contexto maestro, identidad, propósito, estado actual y fuente conceptual del sistema.
+2. ROBERT_CONTEXT_MASTER
+   Contexto maestro de identidad, propósito, reglas base y continuidad.
 
-3. ROBERT_COMMANDS  
-   Catálogo de comandos, comandos activos, comandos en prueba y reglas de uso.
+3. ROBERT_COMMANDS
+   Catálogo vigente de comandos.
 
-4. ROBERT_DECISIONS_LOG  
-   Registro oficial de decisiones aprobadas, pendientes, reemplazadas o pausadas.
+4. ROBERT_DECISIONS_LOG
+   Registro oficial de decisiones.
 
-5. ROBERT_SECURITY_RULES  
-   Reglas de seguridad, autorización, límites, niveles de riesgo y control del usuario.
+5. ROBERT_CONTROL_DE_CAMBIOS
+   Registro oficial de cambios y trazabilidad documental.
 
-6. ROBERT_CONTROL_DE_CAMBIOS  
-   Registro de cambios, versiones, dependencias, conflictos y modificaciones documentales.
+6. ROBERT_SECURITY_RULES
+   Reglas de seguridad y límites operativos.
 
-7. ROBERT_PHASES  
+7. ROBERT_PHASES
    Ruta oficial de construcción por fases.
 
-8. ROBERT_MODULES  
-   Catálogo de capacidades funcionales del sistema.
+8. ROBERT_MODULES
+   Catálogo de módulos y capacidades funcionales.
 
-9. ROBERT_SYSTEM_ARCHITECTURE  
-   Arquitectura conceptual del sistema por capas.
+9. ROBERT_SYSTEM_ARCHITECTURE
+   Arquitectura conceptual general por capas.
 
-10. ROBERT_VISUAL  
-   Referencia visual, experiencia deseada, convención visual de Obsidian y dirección de interfaz.
+10. ROBERT_VISUAL
+    Referencia visual y dirección de interfaz.
 
-11. ROBERT_PROMPTS  
-   Prompts oficiales y plantillas para operar Robert con ChatGPT, Claude y futuras herramientas.
+11. ROBERT_PROMPTS
+    Prompts y plantillas operativas.
 
-## MVP y sandbox
+---
 
-12. ROBERT_MVP_PLAN  
-    Plan del MVP manual, sandbox manual y transición al MVP técnico.
+## Arquitectura principal aprobada
 
-13. ROBERT_TECHNICAL_MVP_PLAN  
-    Plan técnico básico del MVP.
+12. ROBERT_CANONICAL_MODEL v0.2
+    DECISIÓN #030 / CAMBIO #053.
 
-14. ROBERT_TECHNICAL_MVP_WIREFRAME  
-    Wireframe técnico oficial del MVP básico.
+13. ROBERT_ORCHESTRATOR_SPEC v0.1
+    DECISIÓN #031 / CAMBIO #054.
 
-15. ROBERT_TECHNICAL_COMPONENTS_SPEC  
-    Especificación técnica de componentes, actualmente en revisión.
+14. ROBERT_AGENT_ARCHITECTURE v0.1
+    DECISIÓN #032 / CAMBIO #055.
+    Corrección de consistencia: CAMBIO #056.
 
-16. ROBERT_TECHNICAL_COMPONENTS_SPEC_v0.2_PROPUESTA  
-    Propuesta corregida pendiente de revisión.
+15. ROBERT_SKILL_ARCHITECTURE v0.1
+    DECISIÓN #033 / CAMBIO #057.
+    Corrección de consistencia: CAMBIO #058.
 
-17. ROBERT_SANDBOX  
-    Documento base del sandbox manual.
+16. ROBERT_MODEL_INTERFACE_SPEC v0.1
+    DECISIÓN #034 / CAMBIO #059.
 
-18. SANDBOX_RULES  
-    Reglas del sandbox.
+17. ROBERT_MEMORY_ARCHITECTURE v0.1
+    DECISIÓN #035 / CAMBIO #060.
 
-19. SANDBOX_TESTS  
-    Pruebas del sandbox.
+18. ROBERT_VALIDATION_ARCHITECTURE v0.1
+    DECISIÓN #036 / CAMBIO #061.
 
-20. SANDBOX_RESULTS  
-    Resultados del sandbox.
+Cadena principal:
 
+```text
+CANONICAL MODEL
+      ↓
+ORCHESTRATOR
+      ↓
+AGENTS
+      ↓
+SKILLS
+      ↓
+MODEL INTERFACE
+      ↓
+MEMORY
+      ↓
+VALIDATION
+```
+
+Estado:
+
+```text
+CORE_ARCHITECTURE = APPROVED
+IMPLEMENTATION = NONE
+```
+
+---
+
+## MVP técnico
+
+19. ROBERT_MVP_PLAN
+    Base del MVP manual y transición técnica.
+
+20. ROBERT_TECHNICAL_MVP_PLAN
+    Plan aprobado del MVP técnico básico.
+
+21. ROBERT_TECHNICAL_MVP_WIREFRAME v0.3
+    Wireframe técnico aprobado.
+
+22. ROBERT_TECHNICAL_COMPONENTS_SPEC
+    Especificación de componentes vigente.
+
+23. ROBERT_TECHNICAL_DATA_MODEL_SPEC
+    Modelo técnico documental vigente.
+
+24. ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC
+    Flujo técnico documental aprobado.
+
+25. ROBERT_TECHNICAL_SCREEN_STATE_SPEC
+    Estados de pantalla aprobados.
+
+26. ROBERT_TECHNICAL_USER_ACTIONS_SPEC
+    Acciones de usuario aprobadas.
+
+27. ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC
+    Errores y bloqueos aprobados.
+
+28. ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC
+    Permisos y Scope conceptuales aprobados.
+
+29. ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC
+    Trazabilidad conceptual aprobada.
+
+30. ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC
+    Notificaciones y alertas conceptuales aprobadas.
+
+31. ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC
+    Session y Context aprobados.
+
+32. ROBERT_TECHNICAL_DOCUMENT_LIFECYCLE_SPEC
+    Lifecycle documental aprobado.
+
+33. ROBERT_TECHNICAL_VERSIONING_AND_CHANGE_POLICY_SPEC
+    Versioning y Change Policy aprobados.
+
+34. ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC
+    Consistencia y Conflict Resolution aprobados.
+
+35. ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC
+    Approval y Authorization Gate aprobados.
+
+---
+
+## Sandbox
+
+36. ROBERT_SANDBOX
+
+37. SANDBOX_RULES
+
+38. SANDBOX_TESTS
+
+39. SANDBOX_RESULTS
+
+El sandbox actual continúa siendo:
+
+```text
+MANUAL
+DOCUMENTAL
+SUPERVISED
+```
 
 ---
 
 14. ESTADO ACTUAL DE DOCUMENTOS
 
+El estado documental debe interpretarse utilizando:
 
-Este estado reemplaza la lista anterior que marcaba algunos documentos como no creados.
+```text
+ROBERT_DECISIONS_LOG
+ROBERT_CONTROL_DE_CAMBIOS
+```
 
-## Documentos base
+como trazabilidad formal de aprobaciones y cambios.
 
-ROBERT_HOME  
-Estado: Actualizado post-GitHub, wireframe v0.3 y convención visual de Obsidian.
+ROBERT_HOME y README sirven como resumen operativo, pero no reemplazan esos registros.
 
-ROBERT_CONTEXT_MASTER  
-Versión actual: v0.5  
-Estado: Reanclado al estado actual del proyecto — pendiente de aprobación formal si el usuario lo requiere.
+## Estado resumido
 
-ROBERT_COMMANDS  
-Estado: Documento maestro activo. Debe mantenerse alineado con SECURITY_RULES y CONTEXT_MASTER.
+```text
+CORE DOCUMENTS = ACTIVE
 
-ROBERT_DECISIONS_LOG  
-Estado: Documento oficial activo. Incluye decisiones recientes sobre GitHub, checkpoint documental y wireframe v0.3.
+PHASE 10 TECHNICAL SPECS = DOCUMENTALLY DEFINED
 
-ROBERT_SECURITY_RULES  
-Estado: Documento de máxima prioridad. Toda acción sensible debe respetarlo.
+CORE ARCHITECTURE = APPROVED
 
-ROBERT_CONTROL_DE_CAMBIOS  
-Estado: Registro activo de cambios. Incluye cambios recientes del wireframe, components spec y convención visual de Obsidian.
+MEMORY ARCHITECTURE = APPROVED
 
-ROBERT_PHASES  
-Estado: Documento de fases activo. La fase operativa actual es Fase 10 — MVP técnico básico en preparación.
+VALIDATION ARCHITECTURE = APPROVED
 
-ROBERT_MODULES  
-Estado: Estructura inicial aprobada y usada como referencia de capacidades.
+TECHNICAL IMPLEMENTATION = NONE
+```
 
-ROBERT_SYSTEM_ARCHITECTURE  
-Estado: Arquitectura conceptual de referencia. Mantiene las 6 capas del sistema.
+La existencia de una especificación aprobada significa:
 
-ROBERT_VISUAL  
-Estado: Actualizado con convención visual validada para Obsidian Graph View.
+```text
+DOCUMENTED / ARCHITECTURALLY DEFINED
+```
 
-ROBERT_PROMPTS  
-Estado: Documento creado y activo como apoyo operativo.
+y no:
 
-## Documentos MVP
-
-ROBERT_MVP_PLAN  
-Estado: Creado y activo como base del MVP manual, sandbox manual y transición técnica.
-
-ROBERT_TECHNICAL_MVP_PLAN  
-Estado: Aprobado como base del MVP técnico básico.
-
-ROBERT_TECHNICAL_MVP_WIREFRAME  
-Versión actual: v0.3  
-Estado: Aprobado como wireframe técnico oficial actualizado.
-
-ROBERT_TECHNICAL_COMPONENTS_SPEC  
-Versión actual: v0.1  
-Estado: Borrador técnico inicial creado — no aprobado.
-
-ROBERT_TECHNICAL_COMPONENTS_SPEC_v0.2_PROPUESTA  
-Versión actual: v0.2  
-Estado: Propuesta corregida pendiente de revisión.
-
-## Sandbox
-
-ROBERT_SANDBOX  
-Estado: Validado documentalmente como sandbox manual.
-
-SANDBOX_RULES  
-Estado: Documento de reglas sandbox creado.
-
-SANDBOX_TESTS  
-Estado: Documento de pruebas sandbox creado.
-
-SANDBOX_RESULTS  
-Estado: Documento de resultados sandbox creado.
-
+```text
+IMPLEMENTED / EXECUTABLE
+```
 
 ---
+
+## Distinciones actuales
+
+Se mantienen:
+
+```text
+ROBERT ≠ MODEL
+ROBERT ≠ AGENT
+AGENT ≠ SKILL
+MODEL ≠ TOOL
+SKILL ≠ TOOL
+
+CONTEXT ≠ MEMORY
+MEMORY_TYPE ≠ RETENTION
+
+VALIDATION ≠ AUTHORIZATION
+VALIDATION ≠ APPROVAL
+
+RISK ≠ PERMISSION
+PERMISSION ≠ EXECUTION AUTHORITY
+```
+
+---
+
+## Estado físico del repositorio
+
+Durante el proceso de Implementation Readiness se está normalizando la copia física del repositorio para que los encabezados y referencias coincidan con:
+
+```text
+DECISIONS_LOG
+CONTROL_DE_CAMBIOS
+```
+
+Regla:
+
+```text
+PHYSICAL FILE STATUS
+MUST MATCH
+FORMAL GOVERNANCE STATUS
+```
+
+sin inventar aprobaciones o contenido histórico no disponible.
+
+---
+
+
 
 15. COMANDOS PRINCIPALES DE ROBERT
     
@@ -1047,151 +1153,309 @@ Cuando un documento técnico cite cambios, debe apoyarse en ROBERT_CONTROL_DE_CA
 
 18. ESTADO ACTUAL DEL PROYECTO
 
-
 Robert se encuentra actualmente en:
 
 **Fase 10 — MVP técnico básico en preparación**
 
-Este estado se declara porque Robert ya completó y validó documentalmente el MVP manual y el sandbox manual, y ya cuenta con documentos técnicos iniciales para preparar el MVP básico.
+El MVP manual y el sandbox manual ya fueron validados documentalmente.
 
-## Estado operativo actual
+La arquitectura principal también fue definida y aprobada.
 
-Robert cuenta con:
+---
 
-- MVP manual validado;
+## Estado operativo
 
-- Sandbox manual validado;
+```text
+MODE = DOCUMENTAL / CONCEPTUAL / MANUAL / SUPERVISED
 
-- GitHub configurado como respaldo documental privado y manual;
+AUTONOMY_LEVEL = 0
 
-- checkpoint documental en GitHub completado;
+EXECUTION_AUTHORITY = NONE
+```
 
-- ROBERT_HOME actualizado;
+Robert cuenta actualmente con:
 
-- ROBERT_TECHNICAL_MVP_PLAN aprobado;
+* MVP manual validado;
+* Sandbox manual validado;
+* GitHub usado como respaldo documental manual;
+* ROBERT_HOME actualizado;
+* README actualizado;
+* MVP Plan aprobado;
+* Technical MVP Plan aprobado;
+* Wireframe v0.3 aprobado;
+* especificaciones técnicas principales de Fase 10 documentadas;
+* Canonical Model aprobado;
+* Orchestrator aprobado;
+* Agent Architecture aprobada;
+* Skill Architecture aprobada;
+* Model Interface aprobada;
+* Memory Architecture aprobada;
+* Validation Architecture aprobada.
 
-- ROBERT_TECHNICAL_MVP_WIREFRAME v0.3 aprobado como wireframe oficial;
+---
 
-- ROBERT_TECHNICAL_COMPONENTS_SPEC v0.1 creado como borrador técnico inicial;
+## Cadena arquitectónica vigente
 
-- ROBERT_TECHNICAL_COMPONENTS_SPEC_v0.2_PROPUESTA en revisión;
+```text
+ROBERT_CANONICAL_MODEL v0.2
+#030 / #053
 
-- convención visual de Obsidian validada;
+        ↓
 
-- README actualizado;
+ROBERT_ORCHESTRATOR_SPEC v0.1
+#031 / #054
 
-- documentos sandbox creados y organizados;
+        ↓
 
-- estructura documental respaldada manualmente en GitHub.
+ROBERT_AGENT_ARCHITECTURE v0.1
+#032 / #055 / #056
 
+        ↓
+
+ROBERT_SKILL_ARCHITECTURE v0.1
+#033 / #057 / #058
+
+        ↓
+
+ROBERT_MODEL_INTERFACE_SPEC v0.1
+#034 / #059
+
+        ↓
+
+ROBERT_MEMORY_ARCHITECTURE v0.1
+#035 / #060
+
+        ↓
+
+ROBERT_VALIDATION_ARCHITECTURE v0.1
+#036 / #061
+```
+
+Por tanto:
+
+```text
+CORE_ARCHITECTURE = CLOSED
+```
+
+para el alcance arquitectónico principal definido hasta Validation.
+
+Esto no significa:
+
+```text
+READY_FOR_CODE = YES
+```
+
+---
+
+## Estado no implementado
+
+Actualmente no existe implementación productiva de:
+
+```text
+ORCHESTRATOR ENGINE
+AUTOMATED ROUTING
+MODEL ADAPTERS
+TOOL EXECUTION
+MEMORY STORE
+AUTOMATIC MEMORY RETRIEVAL
+AUTOMATIC MEMORY WRITE
+VALIDATION ENGINE
+AUTONOMOUS AGENTS
+EXTERNAL EXECUTION
+```
+
+---
 
 ## Estado no autorizado
 
 Robert todavía no tiene autorización para:
 
-- programar la app;
+* iniciar programación productiva;
+* conectar APIs reales como parte de Robert;
+* activar Tool execution automática;
+* conectar GitHub automáticamente;
+* conectar Gmail automáticamente;
+* conectar Calendar automáticamente;
+* realizar Memory writes automáticos;
+* activar un Validation Engine autónomo;
+* activar Agents autónomos;
+* ejecutar acciones externas;
+* avanzar automáticamente a Fase 11.
 
-- conectar APIs reales;
-
-- conectar GitHub automáticamente;
-
-- conectar Gmail;
-
-- conectar Google Calendar;
-
-- automatizar acciones reales;
-
-- activar agentes autónomos;
-
-- ejecutar acciones externas;
-
-- tomar decisiones legales, fiscales, contables o financieras definitivas.
-
+---
 
 ## Prioridad actual
 
-La prioridad actual es corregir y revisar:
+La prioridad actual es:
 
-**ROBERT_TECHNICAL_COMPONENTS_SPEC_v0.2_PROPUESTA**
+```text
+IMPLEMENTATION READINESS
+```
 
-antes de aprobar la especificación técnica de componentes o avanzar hacia modelos de datos.
+Orden:
 
+```text
+1. Normalizar estado físico del repositorio
+2. Revisar gaps arquitectónicos
+3. Resolver Tool Architecture
+4. Normalizar referencias cruzadas
+5. Revisar contratos técnicos de implementación
+6. Definir Phase 10 Exit Criteria
+7. Definir Build Order
+8. Solo después evaluar autorización para código
+```
+
+Regla:
+
+```text
+ARCHITECTURE APPROVED
+≠
+IMPLEMENTATION AUTHORIZED
+```
 
 ---
 
 19. DECISIONES PRINCIPALES REGISTRADAS O EN PROCESO
 
+Las decisiones completas viven en:
 
-Las decisiones principales del proyecto son:
+```text
+ROBERT_DECISIONS_LOG
+```
+
+Este documento conserva únicamente un resumen contextual.
+
+## Decisiones estructurales vigentes
 
 1. El proyecto se llama Robert.
 
-2. Robert es un sistema operativo personal de IA.
+2. Robert es un sistema operativo personal de inteligencia artificial tipo AI Command Center.
 
-3. Robert funcionará como AI Command Center.
+3. Robert es el sistema completo; no se identifica con un Model, Agent, Skill o Tool.
 
-4. La bóveda documental será fuente central de verdad.
+4. El usuario conserva la autoridad humana superior.
 
-5. Obsidian está en prueba como bóveda documental inicial.
+5. Robert se construye por fases.
 
-6. Obsidian no es herramienta final obligatoria todavía.
+6. Obsidian y GitHub continúan siendo herramientas documentales/manuales y no Robert mismo.
 
-7. Robert tendrá una interfaz visual tipo Command Center.
+7. ChatGPT y Claude son Models proveedores de inteligencia, no el sistema Robert.
 
-8. Robert será modular.
+8. Robert puede utilizar Agents especializados dentro de la arquitectura aprobada.
 
-9. Robert no debe avanzar ni ejecutar acciones importantes fuera de autorización.
+9. Agents no poseen routing authority independiente.
 
-10. Robert se construirá por fases.
+10. Skills representan procedimientos reutilizables y no actores autónomos.
 
-11. ChatGPT y Claude serán Models conectados conceptualmente al sistema Robert como proveedores de inteligencia.
+11. Models no poseen Tool execution authority.
 
-12. Claude no reemplaza a Robert.
+12. El Orchestrator conserva routing authority.
 
-13. ChatGPT no reemplaza a Robert.
+13. Memory está separada de Context.
 
-14. Los comandos RESUMEN, CONCLUSION y CONCLUCION son comandos base.
+14. Validation está separada de Approval y Authorization.
 
-15. Robert tendrá Autonomía Controlada.
+15. Execution Authority permanece separada de Risk, Permission y Validation.
 
-16. Robert será copiloto ahora y ejecutor controlado después.
-
-17. La acción ejecutada no pertenece al propósito raíz; pertenece a Capa 3 — Capacidades como evolución futura.
-
-18. La prioridad actual es mantener coherencia entre documentos antes de programar o automatizar.
-
-
-## Decisiones recientes relevantes
-
-- DECISIÓN #004 — Sandbox manual validado.
-
-- DECISIÓN #008 — GitHub como respaldo documental manual.
-
-- DECISIÓN #009 — Checkpoint documental GitHub completado.
-
-- DECISIÓN #010 — Aprobación de ROBERT_TECHNICAL_MVP_WIREFRAME v0.3.
-
-
-## Cambios recientes relevantes
-
-- CAMBIO #010 — Actualización del wireframe técnico a v0.3.
-
-- CAMBIO #011 — Creación de ROBERT_TECHNICAL_COMPONENTS_SPEC v0.1.
-
-- CAMBIO #012 — Convención visual del grafo en Obsidian.
-
-
-## Decisiones pendientes
-
-- Revisar y decidir si se aprueba ROBERT_TECHNICAL_COMPONENTS_SPEC_v0.2_PROPUESTA.
-
-- No crear ROBERT_TECHNICAL_DATA_MODEL_SPEC hasta cerrar la especificación de componentes.
-
-- No iniciar programación hasta que el usuario lo autorice formalmente.
-
-
+16. La arquitectura aprobada no implica implementación automática.
 
 ---
+
+## Últimas decisiones arquitectónicas
+
+```text
+DECISIÓN #030
+ROBERT_CANONICAL_MODEL v0.2
+
+DECISIÓN #031
+ROBERT_ORCHESTRATOR_SPEC v0.1
+
+DECISIÓN #032
+ROBERT_AGENT_ARCHITECTURE v0.1
+
+DECISIÓN #033
+ROBERT_SKILL_ARCHITECTURE v0.1
+
+DECISIÓN #034
+ROBERT_MODEL_INTERFACE_SPEC v0.1
+
+DECISIÓN #035
+ROBERT_MEMORY_ARCHITECTURE v0.1
+
+DECISIÓN #036
+ROBERT_VALIDATION_ARCHITECTURE v0.1
+```
+
+---
+
+## Últimos cambios arquitectónicos
+
+```text
+CAMBIO #053
+Canonical Model
+
+CAMBIO #054
+Orchestrator
+
+CAMBIO #055
+Agent Architecture
+
+CAMBIO #056
+Agent Architecture consistency correction
+
+CAMBIO #057
+Skill Architecture
+
+CAMBIO #058
+Skill Architecture consistency correction
+
+CAMBIO #059
+Model Interface
+
+CAMBIO #060
+Memory Architecture
+
+CAMBIO #061
+Validation Architecture
+```
+
+---
+
+## Pendiente actual
+
+Ya no están pendientes:
+
+```text
+COMPONENTS SPEC
+DATA MODEL
+MEMORY ARCHITECTURE
+VALIDATION ARCHITECTURE
+```
+
+como siguiente bloque inmediato.
+
+La pregunta vigente es:
+
+```text
+WHAT IS STILL REQUIRED
+BEFORE IMPLEMENTATION?
+```
+
+Pendientes principales:
+
+```text
+DOCUMENT NORMALIZATION
+TOOL ARCHITECTURE DECISION
+CROSS-REFERENCE NORMALIZATION
+IMPLEMENTATION CONTRACT REVIEW
+PHASE 10 EXIT CRITERIA
+BUILD ORDER
+```
+
+Programación continúa no autorizada hasta decisión formal correspondiente.
+
+---
+
 
 20. USO POR CHATGPT
     
@@ -1348,141 +1612,152 @@ Se evaluará junto con:
     
 
 ---
-
 23. QUÉ PUEDE HACER ROBERT ACTUALMENTE
-    
 
-En la etapa actual, Robert puede:
+En Fase 10, Robert puede funcionar de manera:
 
-- organizar ideas;
-    
-- crear documentos maestros;
-    
-- registrar decisiones como borrador;
-    
-- crear prompts claros para ChatGPT y Claude;
-    
-- resumir conversaciones sin perder contexto;
-    
-- convertir conversaciones en documentos útiles;
-    
-- clasificar información nueva;
-    
-- separar ideas, decisiones, acciones y automatizaciones;
-    
-- analizar opciones antes de tomar decisiones;
-    
-- coordinar herramientas de IA;
-    
-- mantener una fuente central de verdad;
-    
-- preparar futuras automatizaciones como diseño;
-    
-- planear agentes especializados;
-    
-- mantener memoria operativa;
-    
-- operar con autonomía de borrador;
-    
-- operar con autonomía documental interna si el usuario autoriza alcance;
-    
-- evolucionar hacia un command center visual y operativo.
-    
+```text
+DOCUMENTAL
+CONCEPTUAL
+MANUAL
+SUPERVISADA
+```
+
+Puede:
+
+* organizar ideas;
+* estructurar información;
+* generar documentos y borradores;
+* revisar documentos;
+* detectar contradicciones;
+* preparar propuestas;
+* registrar decisiones cuando el usuario las apruebe;
+* registrar cambios autorizados;
+* crear prompts para Models;
+* coordinar manualmente trabajo entre Models;
+* utilizar conceptualmente Agents y Skills;
+* diseñar routing;
+* diseñar Model Requests y Responses;
+* diseñar Tool Requests;
+* clasificar Memory Candidates;
+* diseñar Memory retrieval;
+* realizar Validation manual;
+* comparar resultados de Models;
+* realizar revisión adversarial;
+* mantener contexto documental;
+* diseñar tests;
+* simular comportamientos dentro del sandbox manual;
+* preparar la futura implementación.
+
+Actualmente:
+
+```text
+ROBERT MAY DESIGN
+ROBERT MAY ANALYZE
+ROBERT MAY DOCUMENT
+ROBERT MAY RECOMMEND
+```
+
+pero:
+
+```text
+ROBERT DOES NOT POSSESS
+OPERATIONAL EXECUTION AUTHORITY
+```
 
 ---
 
 24. QUÉ NO DEBE HACER ROBERT TODAVÍA
-    
 
-En esta etapa, Robert no debe:
+Robert no debe:
 
-- programarse completamente;
-    
-- conectar apps reales sin seguridad;
-    
-- enviar correos automáticamente;
-    
-- mover archivos automáticamente;
-    
-- borrar documentos;
-    
-- crear eventos sin autorización;
-    
-- ejecutar automatizaciones reales;
-    
-- manejar dinero;
-    
-- ejecutar operaciones financieras;
-    
-- tomar decisiones legales, fiscales o contables definitivas;
-    
-- activar agentes autónomos;
-    
-- sustituir a profesionales;
-    
-- publicar contenido sin aprobación;
-    
-- cambiar documentos oficiales sin autorización;
-    
-- avanzar fases sin validación;
-    
-- ejecutar acciones externas fuera de alcance autorizado.
-    
+* ejecutar acciones externas automáticamente;
+* operar con autonomía ejecutiva;
+* programar el sistema productivo sin autorización de fase;
+* activar Agents autónomos;
+* permitir comunicación autónoma Agent-to-Agent;
+* ejecutar Tools automáticamente;
+* realizar Memory writes automáticos;
+* realizar Memory retrieval productivo automático;
+* tratar Model output como Decision;
+* tratar Model output como Truth;
+* convertir Validation PASS en Approval automático;
+* convertir bajo Risk en Permission;
+* ampliar Scope por inferencia;
+* crear permisos por cuenta propia;
+* conectar servicios externos automáticamente;
+* modificar fuentes canónicas sin gobernanza;
+* avanzar de fase automáticamente;
+* ejecutar operaciones financieras;
+* tomar decisiones legales, fiscales o contables definitivas;
+* sustituir profesionales donde corresponda.
+
+Se mantiene:
+
+```text
+AUTONOMY_LEVEL = 0
+EXECUTION_AUTHORITY = NONE
+```
 
 ---
 
 25. MVP MANUAL
-    
 
-Antes del MVP técnico, Robert debe probarse como MVP manual o semi-manual.
+El MVP manual ya fue utilizado para validar la lógica documental inicial de Robert.
 
-El MVP manual puede funcionar usando:
+Actualmente funciona como antecedente y entorno de referencia para Fase 10.
 
-- ChatGPT;
-    
-- Claude;
-    
-- documentos maestros;
-    
-- prompts;
-    
-- carpeta central;
-    
-- comandos;
-    
-- documentos actualizados manualmente;
-    
-- plantillas;
-    
-- reglas de seguridad;
-    
-- Decisions Log;
-    
-- Autonomía Controlada en modo documental.
-    
+Utiliza principalmente:
 
-El objetivo del MVP manual es comprobar:
+* ChatGPT;
+* Claude;
+* documentos maestros;
+* prompts;
+* comandos;
+* reglas de seguridad;
+* Decisions Log;
+* Control de Cambios;
+* sandbox manual;
+* revisión humana.
 
-- si los comandos sirven;
-    
-- si los documentos son suficientes;
-    
-- si los módulos están bien definidos;
-    
-- si el usuario puede trabajar con Robert;
-    
-- si Robert mantiene contexto;
-    
-- si la seguridad funciona;
-    
-- si Claude puede apoyar correctamente;
-    
-- si se pueden crear proyectos reales con este flujo;
-    
-- si la autonomía documental ayuda sin generar desorden.
-    
+Su función actual es permitir:
+
+* probar reglas;
+* probar prompts;
+* revisar arquitectura;
+* simular routing;
+* simular Agents;
+* simular Skills;
+* comparar Models;
+* validar Memory conceptualmente;
+* validar outputs manualmente;
+* detectar problemas antes de programar.
+
+El MVP manual:
+
+```text
+DOES NOT PROVIDE
+AUTONOMOUS EXECUTION
+```
+
+y:
+
+```text
+DOES NOT CHANGE
+AUTONOMY_LEVEL = 0
+```
+
+Su siguiente función es apoyar:
+
+```text
+IMPLEMENTATION READINESS
+```
+
+antes de cualquier transición hacia implementación técnica real.
 
 ---
+
+
 
 26. CUÁNDO DEBE ACTUALIZARSE ESTE DOCUMENTO
     
