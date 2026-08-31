@@ -1,16 +1,20 @@
 # ROBERT_SKILL_ARCHITECTURE
 
 **Versión:** 0.1
-**Estado:** APROBADA
+**Estado:** APROBADA — integrada y corregida
 **Tipo:** Especificación arquitectónica de Skills
-**Ubicación propuesta:** `09_ARCHITECTURE/ROBERT_SKILL_ARCHITECTURE.md`
+**Ubicación:** `09_ARCHITECTURE/ROBERT_SKILL_ARCHITECTURE.md`
 **Fase relacionada:** Fase 10 — MVP técnico básico en preparación
+**Decisión de aprobación:** DECISIÓN #033
+**Cambio de integración:** CAMBIO #057
+**Corrección de consistencia:** CAMBIO #058
 
 **Dependencias principales:**
 
 * `ROBERT_CANONICAL_MODEL v0.2`
 * `ROBERT_ORCHESTRATOR_SPEC v0.1`
 * `ROBERT_AGENT_ARCHITECTURE v0.1`
+* `ROBERT_MODEL_INTERFACE_SPEC v0.1`
 * `ROBERT_SYSTEM_ARCHITECTURE`
 * `ROBERT_MODULES`
 * `ROBERT_SECURITY_RULES`
@@ -18,6 +22,10 @@
 * `ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC`
 * `ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC`
 * `ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC`
+* `ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC`
+
+---
+
 
 ---
 
@@ -93,31 +101,63 @@ salvo que exista un Adapter específico autorizado.
 
 # 4. Posición arquitectónica
 
+Una Skill debe utilizarse mediante routing autorizado.
+
+Flujo general:
+
 ```text
-USER
-  ↓
-ROBERT
-  ↓
+AUTHORIZED REQUESTER
+        ↓
+CAPABILITY REQUEST
+        ↓
 ORCHESTRATOR
-  ↓
+        ↓
+SKILL RESOLVER
+        ↓
+SKILL
+        ↓
+MODEL / TOOL WHEN REQUIRED
+        ↓
+VALIDATION
+        ↓
+OUTPUT
+```
+
+Conceptualmente, un `AUTHORIZED REQUESTER` puede ser:
+
+```text
+AGENT
+VALIDATOR
+AUTHORIZED ROBERT COMPONENT
+```
+
+según el contexto operativo y la arquitectura vigente.
+
+Caso específico de Agent:
+
+```text
 AGENT
   ↓
 CAPABILITY REQUEST
   ↓
+ORCHESTRATOR
+  ↓
 SKILL RESOLVER
   ↓
 SKILL
-  ↓
-MODEL / TOOL WHEN REQUIRED
-  ↓
-VALIDATION
-  ↓
-OUTPUT
+```
+
+Se mantienen:
+
+```text
+AUTHORIZED REQUESTER ≠ ROUTING AUTHORITY
+
+SKILL REQUEST ≠ DIRECT SKILL INVOCATION
 ```
 
 Una Skill no se autoejecuta.
 
-Debe ser seleccionada dentro de routing autorizado.
+El Orchestrator conserva la autoridad de routing.
 
 ---
 
@@ -765,21 +805,55 @@ Una Skill no posee Autonomy.
 ```text
 SKILL ≠ AUTONOMOUS ACTOR
 SKILL DOES NOT OWN AUTONOMY
----
+```
 
-# 30. Execution Authority
-
-Una Skill no puede concederse Execution Authority.
+Autonomy pertenece al contexto operativo autorizado del sistema y, cuando corresponda, al actor operativo que participa en una Task.
 
 Durante Fase 10:
 
 ```text
+PHASE 10 OPERATIONAL CONTEXT:
+
+AUTONOMY_LEVEL = 0
+```
+
+Esto no constituye una propiedad interna de la Skill.
+
+---
+
+# 30. Execution Authority
+
+Una Skill no posee ni concede Execution Authority.
+
+```text
+SKILL DOES NOT OWN EXECUTION AUTHORITY
+```
+
+Una Skill únicamente puede describir procedimientos que potencialmente requieran una Action o efecto externo.
+
+La autorización de ejecución pertenece al contexto operativo y debe resolverse mediante:
+
+```text
+PERMISSION
++
+SCOPE
++
+EXECUTION AUTHORITY
++
+RISK EVALUATION
++
+APPROVAL WHEN REQUIRED
+```
+
+Durante Fase 10:
+
+```text
+PHASE 10 OPERATIONAL CONTEXT:
+
 EXECUTION_AUTHORITY = NONE
 ```
 
-para cualquier uso operativo de Skills.
-
-Una Skill puede describir una Action futura sin autorizarla.
+Por tanto:
 
 ```text
 ACTION PROCEDURE ≠ AUTHORIZED ACTION
@@ -1927,42 +2001,191 @@ Deben resolverse:
 15. políticas definitivas de Evidence;
 16. políticas definitivas de Sources.
 
----
-
 # 81. Estado actual
 
 ```text
 DOCUMENT: ROBERT_SKILL_ARCHITECTURE
 VERSION: 0.1
-STATUS: PROPOSED
-AUTHORITY: NON-CANONICAL
+STATUS: APPROVED
+AUTHORITY: ARCHITECTURAL
+
+DECISION: #033
+INTEGRATION_CHANGE: #057
+CONSISTENCY_CHANGE: #058
+
+MODEL_INTERFACE:
+VERSION: 0.1
+STATUS: APPROVED
+DECISION: #034
+CHANGE: #059
+
 PHASE: 10
 IMPLEMENTATION: NONE
-AUTONOMY_LEVEL: 0
-EXECUTION_AUTHORITY: NONE
+
+PHASE_10_OPERATIONAL_AUTONOMY: 0
+PHASE_10_OPERATIONAL_EXECUTION_AUTHORITY: NONE
 ```
 
 ---
 
-# 82. Criterios de aprobación
+# 82. Invariantes vigentes
 
-Esta propuesta puede aprobarse cuando:
+La arquitectura aprobada mantiene:
 
-1. el User la apruebe explícitamente;
-2. se registre la Decision correspondiente;
-3. se registre el Change correspondiente;
-4. se integre como documento arquitectónico;
-5. se actualicen referencias mínimas;
-6. se confirme que no crea routing paralelo al Orchestrator.
+```text
+SKILL ≠ AGENT
+SKILL ≠ MODEL
+SKILL ≠ TOOL
+SKILL ≠ MODULE
+SKILL ≠ COMMAND
+SKILL ≠ ROBERT
+SKILL ≠ AUTONOMOUS ACTOR
+
+SKILL REQUIREMENT ≠ PERMISSION
+SKILL REQUIREMENT ≠ SCOPE
+
+SKILL DOES NOT OWN AUTONOMY
+SKILL DOES NOT OWN EXECUTION AUTHORITY
+
+AUTHORIZED REQUESTER ≠ ROUTING AUTHORITY
+SKILL REQUEST ≠ DIRECT SKILL INVOCATION
+
+COMPOSITION ≠ ROUTING AUTHORITY
+COMPOSITE SKILL ≠ ORCHESTRATOR
+
+MODEL USE ≠ SKILL REQUIRED
+SKILL MAY REQUIRE MODEL
+
+MODEL REQUIREMENT ≠ MODEL SELECTION AUTHORITY
+TOOL REQUIREMENT ≠ TOOL AUTHORIZATION
+
+MODEL OUTPUT ≠ DECISION
+MODEL OUTPUT ≠ TRUTH
+
+PROVIDER CHANGE ≠ SKILL REWRITE
+
+RISK ≠ PERMISSION
+RISK ≠ AUTONOMY
+RISK ≠ EXECUTION AUTHORITY
+PERMISSION ≠ EXECUTION AUTHORITY
+```
 
 ---
 
-# 83. Próximo paso recomendado
+# 83. Estado operativo en Fase 10
 
-Después de aprobar `ROBERT_SKILL_ARCHITECTURE v0.1`, el siguiente documento será:
+Durante Fase 10 las Skills permanecen:
 
 ```text
+DOCUMENTAL
+CONCEPTUAL
+MANUAL
+SUPERVISED
+```
+
+El contexto operativo mantiene:
+
+```text
+AUTONOMY_LEVEL = 0
+EXECUTION_AUTHORITY = NONE
+```
+
+La aprobación de Skill Architecture y Model Interface no autoriza:
+
+* ejecución autónoma de Skills;
+* routing productivo automático;
+* Model invocation autónoma;
+* Tool invocation automática;
+* Memory writes automáticos;
+* loops autónomos;
+* ejecución externa;
+* self-modification;
+* creación autónoma de Permissions;
+* creación autónoma de Scope;
+* creación autónoma de Autonomy;
+* creación autónoma de Execution Authority;
+* avance automático a Fase 11.
+
+---
+
+# 84. Orden arquitectónico vigente
+
+```text
+CANONICAL MODEL
+      ↓
+ORCHESTRATOR
+      ↓
+AGENT ARCHITECTURE
+      ↓
+SKILL ARCHITECTURE
+      ↓
+MODEL INTERFACE
+      ↓
+MEMORY ARCHITECTURE
+      ↓
+VALIDATION ARCHITECTURE
+```
+
+Estado:
+
+```text
+CANONICAL MODEL        → APPROVED
+ORCHESTRATOR           → APPROVED
+AGENT ARCHITECTURE     → APPROVED
+SKILL ARCHITECTURE     → APPROVED
+MODEL INTERFACE        → APPROVED
+MEMORY ARCHITECTURE    → NEXT
+VALIDATION ARCHITECTURE → PENDING
+```
+
+---
+
+# 85. Próximo paso recomendado
+
+`ROBERT_SKILL_ARCHITECTURE v0.1` queda cerrada y alineada con:
+
+```text
+ROBERT_CANONICAL_MODEL v0.2
+ROBERT_ORCHESTRATOR_SPEC v0.1
+ROBERT_AGENT_ARCHITECTURE v0.1
 ROBERT_MODEL_INTERFACE_SPEC v0.1
 ```
 
-Ese documento definirá cómo Claude, ChatGPT y futuros Models reciben Tasks, Context, Constraints y requisitos de Robert, y cómo devuelven resultados estructurados sin que cada Agent dependa de prompts propietarios distintos.
+El siguiente bloque arquitectónico es:
+
+```text
+ROBERT_MEMORY_ARCHITECTURE v0.1
+```
+
+Su objetivo será formalizar:
+
+```text
+MEMORY TYPES
+RETENTION
+ELIGIBILITY
+WRITE
+RETRIEVAL
+PROVENANCE
+AUTHORITY
+CONFIDENCE
+CONFLICTS
+UPDATES
+EXPIRATION
+AGENT ACCESS
+MODEL ACCESS
+```
+
+manteniendo separadas:
+
+```text
+CONTEXT
+MEMORY
+SOURCE
+MODEL OUTPUT
+AGENT OUTPUT
+PROPOSAL
+DECISION
+```
+
+
+---
