@@ -5,7 +5,6 @@ Repositorio privado del Proyecto Robert.
 Este repositorio funciona como respaldo documental, control de versiones manual y base futura para el MVP técnico de Robert.
 
 ---
-
 ## Estado actual
 
 Robert se encuentra en:
@@ -18,35 +17,40 @@ Estado operativo actual:
 * Sandbox manual validado.
 * GitHub configurado como respaldo documental privado y manual.
 * Obsidian usado como cerebro documental manual.
-* Documentos principales respaldados manualmente.
-* `ROBERT_HOME v0.12` aprobado e integrado.
-* `ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2` aprobado, integrado y auditado voluntariamente.
-* `ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3` aprobado e integrado.
-* `ROBERT_TECHNICAL_MVP_WIREFRAME.md` reconocido como fuente física oficial vigente del wireframe v0.3.
-* `ROBERT_TECHNICAL_MVP_WIREFRAME_v0.3_PROPUESTA.md` reconocido como eliminado previamente / no vigente / no requerido.
-* `ROBERT_VISUAL_REFERENCE` reconocido como documento visual correcto.
+* Arquitectura principal aprobada hasta Validation Architecture.
+* `ROBERT_HOME v0.13` normalizado como punto central de estado.
+* Sin implementación productiva de la arquitectura.
+* Sin Fase 11 autorizada.
 
 Arquitectura vigente:
 
-* `ROBERT_CANONICAL_MODEL v0.2` aprobado e integrado mediante DECISIÓN #030 y CAMBIO #053.
-* `ROBERT_ORCHESTRATOR_SPEC v0.1` aprobado e integrado mediante DECISIÓN #031 y CAMBIO #054.
-* `ROBERT_AGENT_ARCHITECTURE v0.1` aprobado e integrado mediante DECISIÓN #032 y CAMBIO #055.
-* `CAMBIO #056` registrado como corrección de consistencia de Agent Architecture.
-* `ROBERT_SKILL_ARCHITECTURE v0.1` aprobado e integrado mediante DECISIÓN #033 y CAMBIO #057.
-* `CAMBIO #058` registrado como corrección de consistencia de Skill Architecture.
-* `ROBERT_MODEL_INTERFACE_SPEC v0.1` aprobado e integrado mediante DECISIÓN #034 y CAMBIO #059.
+* `ROBERT_CANONICAL_MODEL v0.2` — DECISIÓN #030 / CAMBIO #053.
+* `ROBERT_ORCHESTRATOR_SPEC v0.1` — DECISIÓN #031 / CAMBIO #054.
+* `ROBERT_AGENT_ARCHITECTURE v0.1` — DECISIÓN #032 / CAMBIO #055.
+* `CAMBIO #056` — corrección de consistencia de Agent Architecture.
+* `ROBERT_SKILL_ARCHITECTURE v0.1` — DECISIÓN #033 / CAMBIO #057.
+* `CAMBIO #058` — corrección de consistencia de Skill Architecture.
+* `ROBERT_MODEL_INTERFACE_SPEC v0.1` — DECISIÓN #034 / CAMBIO #059.
+* `ROBERT_MEMORY_ARCHITECTURE v0.1` — DECISIÓN #035 / CAMBIO #060.
+* `ROBERT_VALIDATION_ARCHITECTURE v0.1` — DECISIÓN #036 / CAMBIO #061.
 
 Estado técnico:
 
-* Sin implementación productiva de estas arquitecturas.
-* Sin routing autónomo productivo.
-* Sin Model Router automático productivo.
-* Sin Model Adapters productivos.
-* Sin Tool execution automática.
-* Sin Memory automática.
-* Sin agentes autónomos activos.
-* Sin ejecución externa autónoma.
-* Sin Fase 11 autorizada.
+```text
+CORE_ARCHITECTURE = APPROVED
+
+IMPLEMENTATION = NONE
+
+AUTOMATED_ROUTING = NOT_IMPLEMENTED
+MODEL_ADAPTERS = NOT_IMPLEMENTED
+AUTOMATIC_TOOL_EXECUTION = NOT_IMPLEMENTED
+MEMORY_STORE = NOT_IMPLEMENTED
+AUTOMATIC_MEMORY_WRITE = DISABLED
+AUTOMATIC_MEMORY_RETRIEVAL = NOT_IMPLEMENTED
+AUTOMATED_VALIDATION_ENGINE = NOT_IMPLEMENTED
+AUTONOMOUS_AGENTS = NOT_ACTIVE
+EXTERNAL_EXECUTION = NONE
+```
 
 Contexto operativo:
 
@@ -60,7 +64,6 @@ Robert continúa en modo:
 **Documental, conceptual, manual y supervisado**
 
 ---
-
 
 ## Regla central
 
@@ -97,14 +100,11 @@ Este repositorio no autoriza:
 * Avanzar automáticamente a Fase 11.
 
 ---
-
-## Documentos maestros principales
-
-Los documentos maestros principales del sistema Robert son:
-
 ## Documentos maestros y arquitectónicos principales
 
 Los documentos principales del sistema Robert son:
+
+### Gobierno y estado
 
 * `ROBERT_HOME`
 * `ROBERT_CONTEXT_MASTER`
@@ -116,23 +116,58 @@ Los documentos principales del sistema Robert son:
 * `ROBERT_MODULES`
 * `ROBERT_VISUAL_REFERENCE`
 * `ROBERT_SYSTEM_ARCHITECTURE`
+
+### Arquitectura principal aprobada
+
 * `ROBERT_CANONICAL_MODEL v0.2`
 * `ROBERT_ORCHESTRATOR_SPEC v0.1`
 * `ROBERT_AGENT_ARCHITECTURE v0.1`
 * `ROBERT_SKILL_ARCHITECTURE v0.1`
 * `ROBERT_MODEL_INTERFACE_SPEC v0.1`
-
-Arquitectura pendiente siguiente:
-
 * `ROBERT_MEMORY_ARCHITECTURE v0.1`
+* `ROBERT_VALIDATION_ARCHITECTURE v0.1`
 
-Arquitectura posterior prevista:
+La cadena principal aprobada es:
 
-* `ROBERT_VALIDATION_ARCHITECTURE`
+```text
+CANONICAL MODEL
+      ↓
+ORCHESTRATOR
+      ↓
+AGENTS
+      ↓
+SKILLS
+      ↓
+MODEL INTERFACE
+      ↓
+MEMORY
+      ↓
+VALIDATION
+```
+
+Estado:
+
+```text
+CORE ARCHITECTURE = APPROVED
+```
+
+Ya no existe como pendiente:
+
+```text
+ROBERT_MEMORY_ARCHITECTURE
+ROBERT_VALIDATION_ARCHITECTURE
+```
+
+El siguiente trabajo corresponde a:
+
+```text
+IMPLEMENTATION READINESS
+```
+
+incluyendo revisión de gaps arquitectónicos y normalización física del repositorio.
 
 ---
 
----
 
 ## Documentos técnicos principales de Fase 10
 
@@ -666,13 +701,9 @@ Este cambio no autoriza:
 
 `ROBERT_CANONICAL_MODEL v0.2`
 
-Estado:
+**Estado:** APROBADO / CANONICAL
 
-**APROBADO / CANONICAL**
-
-Función:
-
-Define las distinciones conceptuales fundamentales de Robert.
+Formaliza el modelo conceptual canónico de Robert y las distinciones entre Robert, Model, Agent, Skill y Tool.
 
 ---
 
@@ -680,13 +711,9 @@ Define las distinciones conceptuales fundamentales de Robert.
 
 `ROBERT_ORCHESTRATOR_SPEC v0.1`
 
-Estado:
+**Estado:** APROBADO
 
-**APROBADO**
-
-Función:
-
-Formaliza la especialización de Capa 2 — Control y el routing conceptual del sistema.
+Formaliza la especialización de Capa 2 — Control y mantiene en el Orchestrator la autoridad de routing.
 
 ---
 
@@ -694,17 +721,15 @@ Formaliza la especialización de Capa 2 — Control y el routing conceptual del 
 
 `ROBERT_AGENT_ARCHITECTURE v0.1`
 
-Estado:
-
-**APROBADO**
+**Estado:** APROBADO
 
 Corrección relacionada:
 
-`CAMBIO #056`
+```text
+CAMBIO #056
+```
 
-Función:
-
-Define Agents, ownership, Capability Requests, límites de Autonomy, Execution Authority, Collaboration y Handoff.
+Formaliza Agents, Capability Requests, Handoff y límites de autoridad.
 
 ---
 
@@ -712,17 +737,15 @@ Define Agents, ownership, Capability Requests, límites de Autonomy, Execution A
 
 `ROBERT_SKILL_ARCHITECTURE v0.1`
 
-Estado:
-
-**APROBADO**
+**Estado:** APROBADO
 
 Corrección relacionada:
 
-`CAMBIO #058`
+```text
+CAMBIO #058
+```
 
-Función:
-
-Define Skills reutilizables, Skill Contract, Skill Registry, composición y separación entre requisitos y autorización.
+Formaliza Skills, Skill Contracts, Skill Registry y procedimientos reutilizables.
 
 ---
 
@@ -730,45 +753,122 @@ Define Skills reutilizables, Skill Contract, Skill Registry, composición y sepa
 
 `ROBERT_MODEL_INTERFACE_SPEC v0.1`
 
-Estado:
+**Estado:** APROBADO
 
-**APROBADO**
-
-Función:
-
-Define:
+Formaliza:
 
 ```text
 MODEL ROUTER
 MODEL INTERFACE
 MODEL ADAPTER
 MODEL REGISTRY
-MODEL PROFILE
-MODEL RUNTIME STATE
 MODEL REQUEST
 MODEL RESPONSE
-MULTI-MODEL MEDIATION
 ```
 
-Principios centrales:
+y mantiene:
 
 ```text
 MODEL ≠ AGENT
 MODEL ≠ SKILL
 MODEL ≠ TOOL
 
-MODEL USE ≠ SKILL REQUIRED
-
 MODEL OUTPUT ≠ DECISION
 MODEL OUTPUT ≠ TRUTH
+```
 
-MODEL TOOL REQUEST ≠ TOOL AUTHORIZATION
+---
 
-MODEL-TO-MODEL TRANSFER
-MUST BE MEDIATED BY ROBERT
+### DECISIÓN #035 / CAMBIO #060
 
-PROVIDER CHANGE ≠ AGENT REWRITE
-PROVIDER CHANGE ≠ SKILL REWRITE
+`ROBERT_MEMORY_ARCHITECTURE v0.1`
+
+**Estado:** APROBADO
+
+Formaliza:
+
+```text
+MEMORY_TYPE
+RETENTION
+MEMORY CANDIDATE
+MEMORY RETRIEVAL
+MEMORY RETRIEVAL SCOPE
+PROVENANCE
+FRESHNESS
+CONFLICT HANDLING
+```
+
+Mantiene:
+
+```text
+CONTEXT ≠ MEMORY
+
+MEMORY_TYPE ≠ RETENTION
+
+MEMORY CANDIDATE ≠ MEMORY
+
+MODEL OUTPUT ≠ MEMORY WRITE
+
+MEMORY RETRIEVAL SCOPE ≠ AUTHORIZED OPERATIONAL SCOPE
+```
+
+---
+
+### DECISIÓN #036 / CAMBIO #061
+
+`ROBERT_VALIDATION_ARCHITECTURE v0.1`
+
+**Estado:** APROBADO
+
+Formaliza:
+
+```text
+VALIDATION_TYPE
+REVIEWER_ROLE
+VALIDATION_REQUEST
+VALIDATION_RESULT
+VALIDATION_RESOLVER
+VALIDATION_POLICY
+VALIDATION REGISTRY
+MULTI-VALIDATOR REVIEW
+VALIDATION ESCALATION
+```
+
+Mantiene:
+
+```text
+VALIDATION_TYPE ≠ REVIEWER_ROLE
+
+VALIDATION ≠ AUTHORIZATION
+
+VALIDATION ≠ APPROVAL
+
+VALIDATION ≠ EXECUTION AUTHORITY
+
+VALIDATED OUTPUT ≠ AUTHORIZED ACTION
+
+CONSENSUS ≠ TRUTH
+
+CONFIDENCE ≠ TRUTH
+```
+
+---
+
+## Estado de la cadena arquitectónica
+
+```text
+CANONICAL MODEL         APPROVED
+ORCHESTRATOR            APPROVED
+AGENT ARCHITECTURE      APPROVED
+SKILL ARCHITECTURE      APPROVED
+MODEL INTERFACE         APPROVED
+MEMORY ARCHITECTURE     APPROVED
+VALIDATION ARCHITECTURE APPROVED
+```
+
+```text
+CORE ARCHITECTURE = CLOSED
+IMPLEMENTATION = NONE
 ```
 
 ---
@@ -907,49 +1007,47 @@ En esta fase no está autorizado:
 * Ejecutar acciones reales.
 * Avanzar automáticamente a Fase 11.
 
----
-
 ## Estado final del README
 
 Este README refleja actualmente:
 
 * Fase 10 activa.
 * Modo documental, conceptual, manual y supervisado.
-* `ROBERT_HOME v0.12` aprobado e integrado.
-* Wireframe v0.3 normalizado.
-* `ROBERT_TECHNICAL_MVP_WIREFRAME.md` como fuente física oficial vigente.
-* `ROBERT_VISUAL_REFERENCE` como documento visual correcto.
-* `USER_ACTIONS_SPEC v0.2` aprobado, integrado y auditado.
-* `APPROVAL_GATE v0.3` aprobado e integrado como especificación conceptual.
-* `ROBERT_CANONICAL_MODEL v0.2` aprobado mediante DECISIÓN #030 / CAMBIO #053.
-* `ROBERT_ORCHESTRATOR_SPEC v0.1` aprobado mediante DECISIÓN #031 / CAMBIO #054.
-* `ROBERT_AGENT_ARCHITECTURE v0.1` aprobado mediante DECISIÓN #032 / CAMBIO #055.
-* `CAMBIO #056` registrado.
-* `ROBERT_SKILL_ARCHITECTURE v0.1` aprobado mediante DECISIÓN #033 / CAMBIO #057.
-* `CAMBIO #058` registrado.
-* `ROBERT_MODEL_INTERFACE_SPEC v0.1` aprobado mediante DECISIÓN #034 / CAMBIO #059.
-* Model Interface establecida como contrato independiente de proveedor.
-* Claude y ChatGPT clasificados conceptualmente como Models, no Tools.
-* Orchestrator mantiene autoridad de routing.
+* `ROBERT_HOME v0.13` como estado maestro normalizado.
+* Wireframe v0.3 reconocido como fuente vigente.
+* Arquitectura principal aprobada hasta Validation.
+* `ROBERT_CANONICAL_MODEL v0.2` — #030 / #053.
+* `ROBERT_ORCHESTRATOR_SPEC v0.1` — #031 / #054.
+* `ROBERT_AGENT_ARCHITECTURE v0.1` — #032 / #055 / #056.
+* `ROBERT_SKILL_ARCHITECTURE v0.1` — #033 / #057 / #058.
+* `ROBERT_MODEL_INTERFACE_SPEC v0.1` — #034 / #059.
+* `ROBERT_MEMORY_ARCHITECTURE v0.1` — #035 / #060.
+* `ROBERT_VALIDATION_ARCHITECTURE v0.1` — #036 / #061.
+* Orchestrator mantiene routing authority.
 * Agents no poseen routing authority independiente.
 * Skills no poseen routing authority independiente.
 * Models no poseen Tool execution authority.
-* Model outputs no son Decisions ni Truth automáticamente.
+* Memory no posee autoridad independiente.
+* Validation no equivale a Approval ni Authorization.
 * Sin ejecución autónoma.
-* Sin Tool Calling automático autorizado.
 * Sin Memory writes automáticos.
+* Sin Validation Engine autónomo.
+* Sin Tool execution automática.
 * Sin agentes autónomos productivos.
-* Sin avance a Fase 11.
+* Sin avance autorizado a Fase 11.
 
-Contexto operativo vigente:
+Contexto operativo:
 
 ```text
 AUTONOMY_LEVEL = 0
 EXECUTION_AUTHORITY = NONE
 ```
+
+---
+
 ## Siguiente paso recomendado
 
-Los siguientes bloques arquitectónicos ya están cerrados documentalmente:
+La cadena arquitectónica principal ya está cerrada:
 
 ```text
 ROBERT_CANONICAL_MODEL v0.2
@@ -957,21 +1055,44 @@ ROBERT_ORCHESTRATOR_SPEC v0.1
 ROBERT_AGENT_ARCHITECTURE v0.1
 ROBERT_SKILL_ARCHITECTURE v0.1
 ROBERT_MODEL_INTERFACE_SPEC v0.1
-```
-
-El siguiente pendiente arquitectónico real es:
-
-```text
 ROBERT_MEMORY_ARCHITECTURE v0.1
+ROBERT_VALIDATION_ARCHITECTURE v0.1
 ```
 
-Después:
+El siguiente bloque real es:
 
 ```text
-ROBERT_VALIDATION_ARCHITECTURE
+IMPLEMENTATION READINESS
 ```
 
-No debe avanzarse automáticamente fuera de Fase 10.
+Orden actual:
+
+```text
+1. Normalizar documentos físicos desactualizados
+2. Resolver gaps arquitectónicos restantes
+3. Evaluar necesidad de Tool Architecture
+4. Normalizar referencias cruzadas
+5. Revisar contratos necesarios para implementación
+6. Definir Phase 10 Exit Criteria
+7. Definir Build Order
+8. Solo después evaluar autorización para programación
+```
+
+Pendientes físicos prioritarios detectados:
+
+```text
+ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC
+
+ROBERT_TECHNICAL_VERSIONING_AND_CHANGE_POLICY_SPEC
+```
+
+Regla:
+
+```text
+CORE ARCHITECTURE APPROVED
+        ≠
+READY FOR CODE
+```
 
 ---
 
@@ -983,22 +1104,22 @@ Robert continúa en:
 
 Modo actual:
 
-**Documental, manual y supervisado**
+**Documental, conceptual, manual y supervisado**
+
+Estado:
+
+```text
+CORE_ARCHITECTURE = CLOSED
+DOCUMENT_NORMALIZATION = IN_PROGRESS
+IMPLEMENTATION_READINESS = IN_PROGRESS
+READY_FOR_CODE = NO
+```
 
 Regla central:
 
 **El usuario manda. Robert no ejecuta acciones importantes sin permiso.**
 
-`ROBERT_HOME v0.12` queda aprobado e integrado.
+No debe avanzarse automáticamente fuera de Fase 10.
 
-`ROBERT_TECHNICAL_MVP_WIREFRAME.md` queda como fuente física oficial vigente del wireframe v0.3.
+---
 
-`ROBERT_TECHNICAL_MVP_WIREFRAME_v0.3_PROPUESTA.md` queda como eliminado previamente / no vigente / no requerido.
-
-`APPROVAL_GATE v0.3` queda aprobado e integrado como especificación técnica documental conceptual.
-
-`ROBERT_VISUAL_REFERENCE` queda reconocido como documento visual correcto.
-
-Robert no ejecuta acciones importantes sin permiso.
-
-* ROBERT_ORCHESTRATOR_SPEC v0.1 aprobado e integrado mediante DECISIÓN #031 y CAMBIO #054.
