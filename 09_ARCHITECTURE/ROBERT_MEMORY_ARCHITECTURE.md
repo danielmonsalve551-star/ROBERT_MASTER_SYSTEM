@@ -1,7 +1,7 @@
 # ROBERT_MEMORY_ARCHITECTURE
 
 **Versión:** 0.1
-**Estado:** PROPUESTA — pendiente de revisión y aprobación
+**Estado:** APROBADA
 **Tipo:** Especificación arquitectónica de Memory
 **Ubicación propuesta:** `09_ARCHITECTURE/ROBERT_MEMORY_ARCHITECTURE.md`
 **Fase relacionada:** Fase 10 — MVP técnico básico en preparación
