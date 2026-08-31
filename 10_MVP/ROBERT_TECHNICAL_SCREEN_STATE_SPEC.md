@@ -1195,52 +1195,55 @@ Nivel de autonomía:
 
 ---
 
-# DECISIÓN PENDIENTE
+# ESTADO DE APROBACIÓN
 
-Este documento queda como:
+Este documento está formalmente:
 
-**Propuesta corregida pendiente de revisión**
+```text
+APPROVED
+INTEGRATED
+```
 
-Para aprobarlo formalmente, el usuario deberá escribir:
+La trazabilidad correspondiente se encuentra registrada en:
 
-**APRUEBO ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2**
+```text
+ROBERT_DECISIONS_LOG
+ROBERT_CONTROL_DE_CAMBIOS
+```
 
----
-
-# EFECTO DE UNA APROBACIÓN FUTURA
-
-Si se aprueba este documento, se deberá:
-
-1. Registrar decisión formal en ROBERT_DECISIONS_LOG.
-2. Registrar cambio en ROBERT_CONTROL_DE_CAMBIOS.
-3. Actualizar ROBERT_HOME.
-4. Actualizar README si aplica.
-5. Mantenerlo como base para futuras especificaciones técnicas.
-6. No pasar automáticamente a programación.
-7. No avanzar automáticamente a Fase 11.
+No requiere nueva aprobación para reconocer su estado vigente.
 
 ---
 
-# PRÓXIMO PASO RECOMENDADO
+# RESTRICCIONES
 
-Después de revisar este documento, el siguiente documento posible sería:
+La aprobación documental no autoriza:
 
-**ROBERT_TECHNICAL_USER_ACTIONS_SPEC**
+```text
+PROGRAMMING
+AUTOMATIC EXECUTION
+EXTERNAL CONNECTIONS
+AUTONOMOUS AGENTS
+AUTOMATIC PHASE TRANSITION
+PHASE 11
+```
 
-Ese documento definiría qué acciones puede intentar el usuario desde cada pantalla y qué ocurre con cada una.
+Se mantiene:
 
-No debe crearse hasta revisar o aprobar SCREEN_STATE_SPEC.
+```text
+AUTONOMY_LEVEL = 0
+EXECUTION_AUTHORITY = NONE
+```
 
 ---
 
 # CIERRE
 
-ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2 define los estados conceptuales de pantalla del MVP técnico básico de Robert.
+El documento permanece como especificación técnica documental aprobada dentro de Fase 10.
 
-Esta versión corrige inconsistencias de datos frente a INTERACTION_FLOW_SPEC v0.2.
-
-Robert sigue en modo documental, manual y supervisado.
+Su aprobación no implica implementación técnica productiva.
 
 El usuario mantiene control total.
+
 
 Robert no ejecuta acciones importantes sin permiso.
