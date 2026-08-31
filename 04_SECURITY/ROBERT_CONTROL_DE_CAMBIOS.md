@@ -10208,3 +10208,468 @@ futuros Models
 
 sin acoplar Agents o Skills directamente a un proveedor.
 
+CAMBIO #059 — Integración de ROBERT_MODEL_INTERFACE_SPEC v0.1
+
+Fecha: 25/08/2026
+Tipo de cambio: Arquitectónico documental / formalización de Model Interface
+Documento afectado: `ROBERT_MODEL_INTERFACE_SPEC.md`
+Versión afectada: v0.1
+Estado: APROBADO E INTEGRADO
+Decisión relacionada: DECISIÓN #034 — Aprobación de `ROBERT_MODEL_INTERFACE_SPEC v0.1`
+Fase relacionada: Fase 10 — MVP técnico básico en preparación
+
+---
+
+### Descripción del cambio
+
+Se integra `09_ARCHITECTURE/ROBERT_MODEL_INTERFACE_SPEC.md` como arquitectura documental vigente para la relación entre Robert y Models.
+
+La integración formaliza:
+
+```text
+MODEL ROUTER
+MODEL INTERFACE
+MODEL ADAPTER
+MODEL REGISTRY
+MODEL PROFILE
+MODEL RUNTIME STATE
+MODEL REQUEST
+MODEL RESPONSE
+MODEL FALLBACK
+MULTI-MODEL MEDIATION
+```
+
+---
+
+### Alcance autorizado
+
+Este cambio autoriza documentalmente:
+
+* integrar `ROBERT_MODEL_INTERFACE_SPEC v0.1`;
+* reconocerla como `APPROVED`;
+* formalizar Model Router;
+* formalizar Model Interface;
+* formalizar Provider Adapters;
+* formalizar Model Registry;
+* formalizar Model Profile;
+* formalizar Model Runtime State;
+* formalizar contratos Model Request / Response;
+* formalizar capability-based Model selection;
+* formalizar fallback conceptual;
+* formalizar multi-model mediation;
+* formalizar Tool boundaries;
+* formalizar Provider Independence;
+* preparar `ROBERT_MEMORY_ARCHITECTURE v0.1`.
+
+---
+
+### Separación integrada
+
+Se formaliza:
+
+```text
+ORCHESTRATOR
+= routing authority
+
+MODEL ROUTER
+= model selection
+
+MODEL INTERFACE
+= common contract
+
+MODEL ADAPTER
+= provider translation
+
+MODEL
+= intelligence processing
+```
+
+---
+
+### Distinciones
+
+Se integran:
+
+```text
+MODEL ≠ AGENT
+MODEL ≠ SKILL
+MODEL ≠ TOOL
+MODEL ≠ MODULE
+MODEL ≠ ORCHESTRATOR
+MODEL ≠ ROBERT
+```
+
+---
+
+### Routing
+
+Se integra:
+
+```text
+MODEL USE ≠ SKILL REQUIRED
+```
+
+y:
+
+```text
+SKILL MAY REQUIRE MODEL
+```
+
+El Orchestrator mantiene la resolución global de capacidades.
+
+---
+
+### Model Selection
+
+Se integra:
+
+```text
+MODEL PREFERENCE ≠ MODEL SELECTION AUTHORITY
+```
+
+Agents y Skills podrán expresar requisitos o preferencias.
+
+Model Router conserva la selección efectiva bajo el Orchestrator.
+
+---
+
+### Model Request / Response
+
+Se reconoce conceptualmente:
+
+```text
+MODEL_REQUEST
+MODEL_RESPONSE
+```
+
+como contrato común independiente de proveedor.
+
+Model Response podrá incluir:
+
+```text
+result
+rationale_summary
+evidence
+sources
+risks
+conflicts
+confidence
+confidence_source
+limitations
+assumptions
+tool_requests
+validation_notes
+usage
+errors
+```
+
+---
+
+### Reasoning Boundary
+
+Se formaliza:
+
+```text
+RATIONALE SUMMARY ≠ PRIVATE REASONING TRACE
+```
+
+y:
+
+```text
+MODEL INTERFACE MUST NOT REQUIRE PRIVATE CHAIN OF THOUGHT
+```
+
+La arquitectura no dependerá de razonamiento interno privado de los Models.
+
+---
+
+### Adapter Boundary
+
+Se formaliza:
+
+```text
+ADAPTER TOOL SUPPORT
+≠
+TOOL EXECUTION AUTHORITY
+```
+
+Los Adapters pueden traducir:
+
+* mensajes;
+* roles;
+* Tool schemas;
+* Tool Requests;
+* responses;
+* errors;
+* usage.
+
+No pueden conceder autoridad.
+
+---
+
+### Tool Boundary
+
+Se integran:
+
+```text
+MODEL TOOL REQUEST ≠ TOOL AUTHORIZATION
+
+MODEL TOOL CAPABILITY
+≠
+ROBERT TOOL AUTHORIZATION
+```
+
+Flujo:
+
+```text
+MODEL
+  ↓
+TOOL REQUEST
+  ↓
+MODEL INTERFACE
+  ↓
+ORCHESTRATOR
+  ↓
+TOOL RESOLVER
+  ↓
+AUTHORIZATION
+  ↓
+TOOL
+```
+
+---
+
+### Model Output
+
+Se formaliza:
+
+```text
+MODEL OUTPUT ≠ DECISION
+MODEL OUTPUT ≠ TRUTH
+```
+
+Los resultados de un Model pueden requerir Validation, Review o Approval.
+
+---
+
+### Multi-Model
+
+Se formaliza:
+
+```text
+MODEL-TO-MODEL TRANSFER
+MUST BE MEDIATED BY ROBERT
+```
+
+y:
+
+```text
+MODEL A ≠ AUTHORITY OVER MODEL B
+
+PRIMARY MODEL ≠ ROUTING AUTHORITY
+
+CONSENSUS ≠ TRUTH
+
+CONSENSUS ≠ AUTHORIZATION
+```
+
+---
+
+### Model Registry
+
+Se integra conceptualmente:
+
+```text
+ROBERT_MODEL_REGISTRY
+```
+
+con separación entre:
+
+```text
+MODEL PROFILE
+```
+
+y:
+
+```text
+MODEL RUNTIME STATE
+```
+
+Profile puede contener:
+
+```text
+identity
+provider
+family
+version
+capabilities
+limitations
+modalities
+adapter
+```
+
+Runtime State puede contener:
+
+```text
+availability
+health
+latency
+cost information
+rate limitations
+```
+
+---
+
+### Memory Boundary
+
+Se mantiene:
+
+```text
+MODEL OUTPUT ≠ MEMORY WRITE
+```
+
+Los outputs pueden convertirse en candidatos para evaluación posterior, pero no en Memory persistente automáticamente.
+
+---
+
+### Provider Independence
+
+Se integran:
+
+```text
+PROVIDER CHANGE ≠ AGENT REWRITE
+
+PROVIDER CHANGE ≠ SKILL REWRITE
+```
+
+Las particularidades del proveedor deben mantenerse contenidas en Model Adapter o metadata cuando sea posible.
+
+---
+
+### Security Invariants
+
+Se integran:
+
+```text
+MODEL CANNOT CREATE PERMISSIONS
+MODEL CANNOT EXPAND SCOPE
+MODEL CANNOT SELF-APPROVE
+MODEL CANNOT ALTER PHASE
+MODEL CANNOT ALTER CANONICAL MODEL
+MODEL CANNOT CREATE AUTONOMY
+MODEL CANNOT CREATE EXECUTION AUTHORITY
+
+MODEL TOOL REQUEST ≠ TOOL AUTHORIZATION
+MODEL OUTPUT ≠ DECISION
+MODEL OUTPUT ≠ TRUTH
+```
+
+---
+
+### Fase 10
+
+Durante Fase 10:
+
+```text
+MODEL INTERFACE = DOCUMENTAL
+MODEL ROUTER = CONCEPTUAL
+MODEL REGISTRY = CONCEPTUAL
+MODEL RUNTIME STATE = CONCEPTUAL
+MODEL ADAPTERS = DESIGN ONLY
+```
+
+Contexto operativo:
+
+```text
+AUTONOMY_LEVEL = 0
+EXECUTION_AUTHORITY = NONE
+```
+
+---
+
+### Alcance no autorizado
+
+Este cambio no autoriza:
+
+* routing autónomo productivo;
+* Model loops persistentes;
+* llamadas API autónomas persistentes;
+* Tool execution automática;
+* Memory writes automáticos;
+* Model-to-Model communication autónoma;
+* creación de Permissions;
+* creación o expansión de Scope;
+* creación de Autonomy;
+* creación de Execution Authority;
+* self-modification;
+* avance automático a Fase 11.
+
+---
+
+### Riesgo
+
+Nivel de riesgo inicial:
+
+```text
+Nivel 3 — Arquitectónico
+```
+
+Nivel residual:
+
+```text
+Nivel 2 — Documental
+```
+
+Contexto operativo:
+
+```text
+AUTONOMY_LEVEL = 0
+EXECUTION_AUTHORITY = NONE
+```
+
+---
+
+### Estado final
+
+```text
+ROBERT_MODEL_INTERFACE_SPEC
+Version: 0.1
+Status: APPROVED
+Decision: #034
+Change: #059
+Phase: 10
+Implementation: NONE
+Operational Autonomy: 0
+Operational Execution Authority: NONE
+```
+
+---
+
+### Siguiente paso
+
+Con `ROBERT_MODEL_INTERFACE_SPEC v0.1` integrado, el siguiente bloque arquitectónico es:
+
+```text
+ROBERT_MEMORY_ARCHITECTURE v0.1
+```
+
+para formalizar:
+
+```text
+MEMORY CLASSIFICATION
+RETENTION
+WRITE ELIGIBILITY
+RETRIEVAL
+PROVENANCE
+AUTHORITY
+CONFIDENCE
+CONFLICTS
+UPDATES
+EXPIRATION
+MODEL ACCESS
+AGENT ACCESS
+```
+
+---
+
+
