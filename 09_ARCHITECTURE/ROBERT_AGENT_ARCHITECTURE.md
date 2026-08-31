@@ -23,7 +23,8 @@ CONSISTENCY_CORRECTION: #056
 * `ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC`
 * `ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC`
 * `ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC`
-* ROBERT_SKILL_ARCHITECTURE v0.1
+* `ROBERT_SKILL_ARCHITECTURE v0.1`
+* `ROBERT_MODEL_INTERFACE_SPEC v0.1`
 
 ---
 
@@ -1984,9 +1985,15 @@ unauthorized_execution_attempts
 
 # 61. Skill Architecture vigente
 
-`ROBERT_SKILL_ARCHITECTURE v0.1` está aprobada mediante DECISIÓN #033 y CAMBIO #057.
+`ROBERT_SKILL_ARCHITECTURE v0.1` está aprobada e integrada mediante:
 
-Los Agents deberán solicitar capacidades mediante:
+* DECISIÓN #033
+* CAMBIO #057
+* CAMBIO #058 — corrección de consistencia
+
+Los Agents deberán solicitar capacidades mediante el Orchestrator.
+
+Caso específico mediante Skill:
 
 ```text
 AGENT
@@ -1998,29 +2005,300 @@ ORCHESTRATOR
 SKILL RESOLVER
   ↓
 SKILL
+```
+
+Los Agents no deberán duplicar procedimientos cuando exista una Skill reutilizable adecuada.
+
+Se mantienen:
+
+```text
+AGENT ≠ SKILL
+
+AGENT REQUEST ≠ SKILL EXECUTION AUTHORITY
+
+SKILL REQUIREMENT ≠ PERMISSION
+
+SKILL REQUIREMENT ≠ SCOPE
+
+COMPOSITION ≠ ROUTING AUTHORITY
+```
+
+Una Skill define cómo realizar una capacidad reutilizable.
+
+El Agent define quién realiza trabajo especializado.
+
+El Orchestrator conserva la autoridad de routing.
+
 ---
 
-# 62. Dependencia con Model Interface
+# 62. Model Interface vigente
 
-Los Agents no deberán invocar Claude o ChatGPT directamente mediante lógica propietaria.
+`ROBERT_MODEL_INTERFACE_SPEC v0.1` está aprobada e integrada mediante:
 
-La relación futura será:
+* DECISIÓN #034
+* CAMBIO #059
+
+Los Agents no deben depender directamente de lógica propietaria de Claude, ChatGPT u otro proveedor.
+
+La separación arquitectónica vigente es:
+
+```text
+ORCHESTRATOR
+  ↓
+MODEL ROUTER
+  ↓
+MODEL INTERFACE
+  ↓
+MODEL ADAPTER
+  ↓
+MODEL
+```
+
+Cuando un Agent requiera directamente capacidad de Model:
 
 ```text
 AGENT
   ↓
 CAPABILITY REQUEST
   ↓
-SKILL
+ORCHESTRATOR
+  ↓
+MODEL ROUTER
   ↓
 MODEL INTERFACE
+  ↓
+MODEL ADAPTER
   ↓
 MODEL
 ```
 
+Cuando la capacidad de Model sea requerida por una Skill:
+
+```text
+AGENT
+  ↓
+CAPABILITY REQUEST
+  ↓
+ORCHESTRATOR
+  ↓
+SKILL RESOLVER
+  ↓
+SKILL
+  ↓
+MODEL REQUIREMENTS
+  ↓
+MODEL ROUTER
+  ↓
+MODEL INTERFACE
+  ↓
+MODEL ADAPTER
+  ↓
+MODEL
+```
+
+Por tanto:
+
+```text
+MODEL USE ≠ SKILL REQUIRED
+
+SKILL MAY REQUIRE MODEL
+
+AGENT ≠ MODEL
+
+MODEL PREFERENCE ≠ MODEL SELECTION AUTHORITY
+
+MODEL OUTPUT ≠ DECISION
+
+MODEL OUTPUT ≠ TRUTH
+
+MODEL TOOL REQUEST ≠ TOOL AUTHORIZATION
+
+PROVIDER CHANGE ≠ AGENT REWRITE
+```
+
+El Agent puede expresar:
+
+```text
+required_capabilities
+preferred_capabilities
+model_requirements
+```
+
+pero no selecciona unilateralmente el Model.
+
+La selección corresponde al Model Router bajo autoridad del Orchestrator.
+
 ---
 
-# 63. Dependencia con Memory Architecture
+# 63. Model Independence
+
+Los Agents deben permanecer independientes del proveedor siempre que sea razonablemente posible.
+
+Preferencia:
+
+```text
+AGENT
+  ↓
+CAPABILITY REQUEST
+  ↓
+ORCHESTRATOR
+  ↓
+MODEL ROUTER
+  ↓
+MODEL INTERFACE
+  ↓
+MODEL ADAPTER
+  ↓
+MODEL
+```
+
+No:
+
+```text
+AGENT
+  ↓
+CLAUDE-SPECIFIC LOGIC
+```
+
+ni:
+
+```text
+AGENT
+  ↓
+CHATGPT-SPECIFIC LOGIC
+```
+
+Las diferencias específicas entre proveedores deben permanecer preferentemente dentro de:
+
+```text
+MODEL ADAPTER
+MODEL PROFILE
+MODEL RUNTIME STATE
+```
+
+Regla:
+
+```text
+PROVIDER CHANGE ≠ AGENT REWRITE
+```
+
+---
+
+# 64. Model Output Boundary
+
+El resultado producido por un Model no obtiene autoridad por el hecho de provenir de un Model.
+
+Se mantienen:
+
+```text
+MODEL OUTPUT ≠ DECISION
+MODEL OUTPUT ≠ TRUTH
+MODEL OUTPUT ≠ APPROVAL
+MODEL OUTPUT ≠ EXECUTION AUTHORITY
+```
+
+Un Agent puede utilizar Model output como:
+
+```text
+ANALYSIS
+EVIDENCE
+PROPOSAL
+RECOMMENDATION
+CODE
+PLAN
+```
+
+según la Task.
+
+Pero deberá conservar las reglas de:
+
+```text
+VALIDATION
+SECURITY
+PERMISSION
+SCOPE
+RISK
+APPROVAL
+```
+
+cuando correspondan.
+
+---
+
+# 65. Model Tool Boundary
+
+Un Agent puede utilizar un Model que soporte Tool Calling.
+
+Esto no concede acceso automático a Tools.
+
+```text
+MODEL TOOL CAPABILITY
+        ≠
+ROBERT TOOL AUTHORIZATION
+```
+
+Si un Model solicita una Tool:
+
+```text
+MODEL
+  ↓
+TOOL REQUEST
+  ↓
+MODEL ADAPTER
+  ↓
+MODEL INTERFACE
+  ↓
+ORCHESTRATOR
+  ↓
+TOOL RESOLVER
+  ↓
+AUTHORIZATION CHECK
+  ↓
+TOOL
+```
+
+El Agent no puede utilizar native Tool Calling del proveedor como bypass del sistema de autorización de Robert.
+
+---
+
+# 66. Multi-Model Boundary
+
+Un Agent puede participar en workflows donde Robert utilice más de un Model.
+
+Ejemplos:
+
+```text
+PRIMARY + REVIEWER
+PARALLEL ANALYSIS
+ADVERSARIAL REVIEW
+SPECIALIST MODELS
+FALLBACK
+```
+
+Pero:
+
+```text
+MODEL-TO-MODEL TRANSFER
+MUST BE MEDIATED BY ROBERT
+```
+
+Y:
+
+```text
+PRIMARY MODEL ≠ ROUTING AUTHORITY
+
+MODEL A ≠ AUTHORITY OVER MODEL B
+
+CONSENSUS ≠ TRUTH
+
+CONSENSUS ≠ AUTHORIZATION
+```
+
+El Agent tampoco obtiene autoridad adicional porque varios Models coincidan.
+
+---
+
+# 67. Dependencia con Memory Architecture
 
 El acceso de cada Agent a Memory deberá definirse en:
 
@@ -2028,15 +2306,45 @@ El acceso de cada Agent a Memory deberá definirse en:
 ROBERT_MEMORY_ARCHITECTURE
 ```
 
-Agent Architecture únicamente establece:
+Agent Architecture establece únicamente principios generales:
 
 ```text
 MINIMUM NECESSARY MEMORY ACCESS
+
+AGENT ACCESS ≠ MEMORY OWNERSHIP
+
+MODEL OUTPUT ≠ MEMORY WRITE
 ```
+
+Cada Agent podrá requerir diferentes tipos de Memory según su función.
+
+Ejemplo conceptual:
+
+```text
+ROBERT_ARCHITECT
+
+memory_access:
+- CORE
+- SEMANTIC
+- DECISIONAL
+```
+
+La futura Memory Architecture deberá definir:
+
+* eligibility;
+* retrieval;
+* retention;
+* provenance;
+* authority;
+* confidence;
+* conflicts;
+* updates;
+* expiration;
+* write authorization.
 
 ---
 
-# 64. Dependencia con Validation Architecture
+# 68. Dependencia con Validation Architecture
 
 Las políticas comunes de evaluación de outputs deberán formalizarse posteriormente en:
 
@@ -2044,15 +2352,40 @@ Las políticas comunes de evaluación de outputs deberán formalizarse posterior
 ROBERT_VALIDATION_ARCHITECTURE
 ```
 
-Los Agents únicamente declaran qué tipo de validación requieren.
+Agent Architecture únicamente define que un Agent puede requerir:
+
+```text
+SELF_VALIDATION
+RULE_VALIDATION
+AGENT_REVIEW
+MODEL_REVIEW
+SECURITY_REVIEW
+USER_REVIEW
+```
+
+Se mantiene:
+
+```text
+VALIDATION ≠ AUTHORIZATION
+```
+
+y:
+
+```text
+VALID MODEL OUTPUT ≠ AUTHORIZED ACTION
+```
 
 ---
 
-# 65. Orden de construcción
+# 69. Orden arquitectónico vigente
 
-Después de cerrar este documento:
+El orden de construcción arquitectónica queda actualizado:
 
 ```text
+CANONICAL MODEL
+      ↓
+ORCHESTRATOR
+      ↓
 AGENT ARCHITECTURE
       ↓
 SKILL ARCHITECTURE
@@ -2064,40 +2397,73 @@ MEMORY ARCHITECTURE
 VALIDATION ARCHITECTURE
 ```
 
+Estado:
+
+```text
+CANONICAL MODEL       → APPROVED
+ORCHESTRATOR          → APPROVED
+AGENT ARCHITECTURE    → APPROVED
+SKILL ARCHITECTURE    → APPROVED
+MODEL INTERFACE       → APPROVED
+MEMORY ARCHITECTURE   → NEXT
+VALIDATION ARCHITECTURE → PENDING
+```
+
 ---
 
-# 66. Decisiones pendientes antes de v1.0
+# 70. Decisiones pendientes antes de v1.0
 
 Todavía deberán resolverse:
 
 1. criterios exactos de Agent Router;
 2. estructura final de Agent Manifest;
 3. lifecycle técnico;
-4. reglas de multi-Agent parallelism;
+4. reglas de Multi-Agent parallelism;
 5. reglas técnicas de Handoff;
 6. límite de Agents simultáneos;
 7. políticas definitivas de Memory Access;
 8. políticas definitivas de Tool Access;
 9. Model preferences;
-10. fallback behavior;
-11. auditoría técnica;
-12. formato técnico de Capability Request;
-13. ownership rules completas;
-14. política futura de Autonomy;
-15. política futura de Execution Authority.
+10. Model capability requirements;
+11. fallback behavior;
+12. auditoría técnica;
+13. formato técnico de Capability Request;
+14. ownership rules completas;
+15. política futura de Autonomy;
+16. política futura de Execution Authority;
+17. integración técnica con Model Registry;
+18. integración técnica con Model Runtime State;
+19. políticas de Validation;
+20. políticas de Memory write / retrieval.
 
 ---
 
-# 67. Estado actual
+# 71. Estado actual
 
 ```text
 DOCUMENT: ROBERT_AGENT_ARCHITECTURE
 VERSION: 0.1
 STATUS: APPROVED
 AUTHORITY: ARCHITECTURAL
+
 DECISION: #032
-CHANGE: #055
-CONSISTENCY_CORRECTION: #056_PENDING_REGISTRATION
+
+INTEGRATION_CHANGE: #055
+CONSISTENCY_CORRECTION: #056
+
+SKILL_ARCHITECTURE:
+VERSION: 0.1
+STATUS: APPROVED
+DECISION: #033
+INTEGRATION_CHANGE: #057
+CONSISTENCY_CHANGE: #058
+
+MODEL_INTERFACE:
+VERSION: 0.1
+STATUS: APPROVED
+DECISION: #034
+CHANGE: #059
+
 PHASE: 10
 IMPLEMENTATION: NONE
 AUTONOMY_LEVEL: 0
@@ -2106,9 +2472,9 @@ EXECUTION_AUTHORITY: NONE
 
 ---
 
-# 68. Corrección de consistencia incorporada
+# 72. Correcciones de consistencia vigentes
 
-Esta versión incorpora la separación formal entre:
+Agent Architecture incorpora formalmente la separación:
 
 ```text
 RISK
@@ -2116,38 +2482,131 @@ AUTONOMY
 EXECUTION AUTHORITY
 ```
 
-Reglas resultantes:
+mediante CAMBIO #056.
+
+Se mantienen:
 
 ```text
 RISK ≠ AUTONOMY
+
 RISK ≠ EXECUTION AUTHORITY
+
 PERMISSION ≠ EXECUTION AUTHORITY
+
 LOW RISK ≠ AUTHORIZED EXECUTION
+
+HIGH RISK ≠ INABILITY TO ANALYZE
 ```
 
-La corrección deberá registrarse formalmente como:
+Además, después de la integración de Skill Architecture y Model Interface se mantienen:
 
 ```text
-CAMBIO #056 — Separación de Risk, Autonomy y Execution Authority en Agent Architecture
+AGENT ≠ SKILL
+
+AGENT ≠ MODEL
+
+SKILL ≠ MODEL
+
+MODEL USE ≠ SKILL REQUIRED
+
+SKILL MAY REQUIRE MODEL
+
+MODEL PREFERENCE ≠ MODEL SELECTION AUTHORITY
+
+MODEL TOOL REQUEST ≠ TOOL AUTHORIZATION
+
+MODEL OUTPUT ≠ DECISION
+
+MODEL OUTPUT ≠ TRUTH
+
+PROVIDER CHANGE ≠ AGENT REWRITE
 ```
 
 ---
 
-# 69. Próximo paso recomendado
+# 73. Estado operativo de Agents
 
-Después de registrar CAMBIO #056, el siguiente documento será:
+Durante Fase 10 todos los Agents continúan:
+
+```text
+DOCUMENTAL
+CONCEPTUAL
+MANUAL
+SUPERVISED
+```
+
+Y:
+
+```text
+AUTONOMY_LEVEL = 0
+EXECUTION_AUTHORITY = NONE
+```
+
+La aprobación de:
 
 ```text
 ROBERT_SKILL_ARCHITECTURE v0.1
+ROBERT_MODEL_INTERFACE_SPEC v0.1
 ```
 
-Esto permitirá mantener explícitamente:
+no cambia este estado operativo.
+
+No activa:
+
+* Agents autónomos;
+* Model Router automático;
+* Model Adapters productivos;
+* Tool Calling automático;
+* Memory automática;
+* ejecución externa;
+* routing productivo.
+
+---
+
+# 74. Próximo paso recomendado
+
+Agent Architecture queda alineada con:
 
 ```text
-AGENT = quién trabaja
-SKILL = cómo trabaja
-MODEL = quién procesa
-TOOL = con qué interactúa
-ORCHESTRATOR = quién coordina
-ROBERT = quién gobierna el sistema
+ROBERT_CANONICAL_MODEL v0.2
+ROBERT_ORCHESTRATOR_SPEC v0.1
+ROBERT_SKILL_ARCHITECTURE v0.1
+ROBERT_MODEL_INTERFACE_SPEC v0.1
 ```
+
+El siguiente bloque arquitectónico es:
+
+```text
+ROBERT_MEMORY_ARCHITECTURE v0.1
+```
+
+Su objetivo será formalizar:
+
+```text
+MEMORY TYPES
+RETENTION
+ELIGIBILITY
+WRITE
+RETRIEVAL
+PROVENANCE
+AUTHORITY
+CONFIDENCE
+CONFLICTS
+UPDATES
+EXPIRATION
+AGENT ACCESS
+MODEL ACCESS
+```
+
+manteniendo separadas:
+
+```text
+CONTEXT
+MEMORY
+SOURCE
+MODEL OUTPUT
+AGENT OUTPUT
+PROPOSAL
+DECISION
+```
+
