@@ -1,7 +1,7 @@
 # ROBERT_TECHNICAL_VERSIONING_AND_CHANGE_POLICY_SPEC
 
-Versión: 0.1  
-Estado: APROBADA
+Versión: 0.2  
+Estado: APROBADO E INTEGRADO
 Fecha: 06/07/2026  
 Ubicación: 10_MVP  
 Fase relacionada: Fase 10 — MVP técnico básico en preparación  
@@ -60,31 +60,55 @@ Este documento no ejecuta acciones reales.
 
 Este documento queda como:
 
-**Borrador técnico documental nuevo — pendiente de revisión**
+**APROBADO E INTEGRADO — v0.2**
 
-No está aprobado todavía.
+Trazabilidad formal:
 
-No reemplaza a ningún documento maestro.
+```text
+CAMBIO #041 — Corrección de v0.1 a v0.2
+DECISIÓN #024 — Aprobación de v0.2
+CAMBIO #042 — Aprobación e integración de v0.2
+```
 
-No autoriza programación.
+Estado:
 
-No autoriza código real.
+```text
+DOCUMENT:
+ROBERT_TECHNICAL_VERSIONING_AND_CHANGE_POLICY_SPEC
 
-No autoriza sistema real de control de versiones.
+VERSION:
+0.2
 
-No autoriza base de datos real.
+STATUS:
+APPROVED / INTEGRATED
 
-No autoriza versionado automático.
+PHASE:
+10
 
-No autoriza commits automáticos.
+IMPLEMENTATION:
+NONE
 
-No autoriza sincronización automática con GitHub.
+AUTONOMY_LEVEL:
+0
 
-No autoriza sincronización automática con Obsidian.
+EXECUTION_AUTHORITY:
+NONE
+```
 
-No autoriza agentes autónomos.
+Esta aprobación es documental y conceptual.
 
-No autoriza avanzar a Fase 11.
+No autoriza:
+
+* programación;
+* código real;
+* control automático de versiones;
+* commits automáticos;
+* sincronización automática con GitHub;
+* sincronización automática con Obsidian;
+* base de datos real;
+* agentes autónomos;
+* ejecución real;
+* avance automático a Fase 11.
 
 ---
 
@@ -147,7 +171,7 @@ Estado operativo actual:
 - ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC v0.2 aprobado.
 - ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC v0.2 aprobado.
 - ROBERT_TECHNICAL_DOCUMENT_LIFECYCLE_SPEC v0.2 aprobado.
-- ROBERT_TECHNICAL_VERSIONING_AND_CHANGE_POLICY_SPEC v0.1 creado como borrador.
+- ROBERT_TECHNICAL_VERSIONING_AND_CHANGE_POLICY_SPEC v0.2 aprobado e integrado mediante DECISIÓN #024, CAMBIO #041 y CAMBIO #042.
 - Sin programación autorizada.
 - Sin código real.
 - Sin sistema real de control de versiones.
@@ -501,6 +525,115 @@ Restricción:
 ```
 
 ---
+# RELACIÓN ENTRE NÚMERO DE VERSIÓN Y ESTADO DOCUMENTAL
+
+`ROBERT_TECHNICAL_VERSIONING_AND_CHANGE_POLICY_SPEC` y `ROBERT_TECHNICAL_DOCUMENT_LIFECYCLE_SPEC` describen dimensiones distintas.
+
+Se formaliza:
+
+```text
+VERSION NUMBER ≠ DOCUMENT LIFECYCLE STATE
+```
+
+El número de versión indica:
+
+```text
+EVOLUTION
+ITERATION
+VERSIONING
+```
+
+El estado documental indica:
+
+```text
+POSITION WITHIN DOCUMENT LIFECYCLE
+```
+
+Por tanto, una misma versión puede pasar por distintos estados documentales sin cambiar obligatoriamente su número de versión.
+
+Ejemplo:
+
+```text
+v0.2
+↓
+PROPUESTA CORREGIDA
+↓
+EN REVISIÓN
+↓
+APROBADO
+↓
+INTEGRADO
+```
+
+puede continuar siendo:
+
+```text
+v0.2
+```
+
+si no ocurre un cambio que requiera nueva versión.
+
+Reglas:
+
+```text
+DOCUMENT STATE CHANGE
+≠
+AUTOMATIC VERSION CHANGE
+
+VERSION CHANGE
+≠
+AUTOMATIC DOCUMENT APPROVAL
+```
+
+---
+
+# CORRESPONDENCIA ENTRE DOCUMENT LIFECYCLE Y VERSIONING
+
+Los 12 estados documentales definidos por `ROBERT_TECHNICAL_DOCUMENT_LIFECYCLE_SPEC v0.2` pueden relacionarse conceptualmente con los niveles de versión de esta especificación.
+
+| Estado documental   | Versiones compatibles conceptualmente               | Regla                                           |
+| ------------------- | --------------------------------------------------- | ----------------------------------------------- |
+| Idea documental     | v0.0                                                | Todavía no existe documento formal              |
+| Borrador            | v0.1 o iteración nueva aún no revisada              | Primera materialización documental              |
+| Propuesta           | v0.x                                                | Documento presentado para evaluación            |
+| Propuesta corregida | v0.2+                                               | Existe al menos una corrección formal           |
+| En revisión         | Cualquier v0.x o versión posterior aplicable        | Revisión no implica cambio automático de número |
+| Aprobado            | v0.x aprobado, v1.0, v1.x o versión futura aprobada | Aprobación es estado, no número                 |
+| Integrado           | Versión aprobada vigente                            | Integración no exige por sí sola nueva versión  |
+| Actualizado         | v0.x+1, v1.x o versión aplicable                    | Depende de la magnitud del cambio               |
+| Depreciado          | Cualquier versión anteriormente vigente             | La versión deja de recomendarse como principal  |
+| Reemplazado         | Cualquier versión sustituida por otra               | Debe existir trazabilidad del reemplazo         |
+| Bloqueado           | Cualquier nivel de versión                          | Bloqueo es independiente del número de versión  |
+| Archivado           | Cualquier versión histórica                         | Archivo no cambia automáticamente el número     |
+
+Regla principal:
+
+```text
+ANY VERSION LEVEL
+CAN ENTER
+BLOCKED
+```
+
+cuando exista:
+
+```text
+RISK
+CONTRADICTION
+MISSING PERMISSION
+MISSING INFORMATION
+WRONG PHASE
+UNAUTHORIZED EXECUTION ATTEMPT
+```
+
+La salida desde `BLOQUEADO` se rige por:
+
+```text
+ROBERT_TECHNICAL_DOCUMENT_LIFECYCLE_SPEC v0.2
+```
+
+y no por una transición inventada dentro de Versioning.
+
+---
 
 # NIVEL 1 — v0.0 IDEA O PLACEHOLDER
 
@@ -539,6 +672,8 @@ TIPO 17 — Aviso de siguiente paso.
 ## Transición siguiente permitida
 
 v0.0 → v0.1 cuando el usuario autoriza crear el documento.
+
+v0.0 → Bloqueado si existe una condición de bloqueo válida según DOCUMENT_LIFECYCLE_SPEC.
 
 ## Restricción
 
@@ -583,6 +718,8 @@ TIPO 2 — Notificación de estado.
 v0.1 → v0.2 si requiere corrección.
 
 v0.1 → Aprobado si el documento es correcto y el usuario lo aprueba.
+
+v0.1 → Bloqueado si existe una condición de bloqueo válida según DOCUMENT_LIFECYCLE_SPEC.
 
 ## Restricción
 
@@ -629,6 +766,8 @@ TIPO 13 — Aviso de cambio registrado.
 v0.2 → Aprobado si el usuario aprueba.
 
 v0.2 → v0.3 si requiere nueva corrección.
+
+v0.2 → Bloqueado si existe una condición de bloqueo válida según DOCUMENT_LIFECYCLE_SPEC.
 
 ## Restricción
 
@@ -680,6 +819,8 @@ v0.3+ → Aprobado si el usuario aprueba.
 
 v0.3+ → v0.4+ si requiere nueva corrección.
 
+v0.3+ → Bloqueado si existe una condición de bloqueo válida según DOCUMENT_LIFECYCLE_SPEC.
+
 ## Restricción
 
 No debe usarse para esconder cambios mayores sin registrarlos.
@@ -727,6 +868,8 @@ TIPO 13 — Aviso de cambio registrado.
 v0.x aprobado → v0.x+1 si requiere corrección controlada.
 
 v0.x aprobado → v1.0 si el conjunto documental está estable y el usuario lo aprueba formalmente.
+
+v0.x aprobado → Bloqueado si existe una condición de bloqueo válida según DOCUMENT_LIFECYCLE_SPEC.
 
 ## Restricción
 
@@ -782,6 +925,8 @@ v1.0 → v1.1 para actualización menor.
 
 v1.0 → v2.0 para cambio mayor futuro.
 
+v1.0 → Bloqueado si existe una condición de bloqueo válida según DOCUMENT_LIFECYCLE_SPEC.
+
 ## Restricción
 
 v1.0 no autoriza programación por sí mismo.
@@ -829,6 +974,8 @@ TIPO 13 — Aviso de cambio registrado.
 v1.x → v1.x+1 si hay otra actualización menor.
 
 v1.x → v2.0 si el cambio altera estructura, alcance o regla central.
+
+v1.x → Bloqueado si existe una condición de bloqueo válida según DOCUMENT_LIFECYCLE_SPEC.
 
 ## Restricción
 
@@ -879,8 +1026,9 @@ TIPO 6 — Confirmación requerida.
 TIPO 9 — Mensaje de bloqueo si falta permiso.
 
 ## Transición siguiente permitida
-
 v2.0 solo puede activarse con aprobación formal y registro completo.
+
+v2.0 → Bloqueado si existe una condición de bloqueo válida según DOCUMENT_LIFECYCLE_SPEC.
 
 ## Restricción
 
@@ -2040,6 +2188,19 @@ Restricción: Sin programación, sin Fase 11
 
 # CRITERIOS DE ACEPTACIÓN
 
+La versión v0.2 debe además cumplir:
+
+* separar explícitamente `VERSION NUMBER` de `DOCUMENT LIFECYCLE STATE`;
+* establecer que estado documental y número de versión son dimensiones distintas;
+* establecer que una misma versión puede adoptar distintos estados durante su ciclo de vida;
+* incluir correspondencia entre los 12 estados de `DOCUMENT_LIFECYCLE_SPEC v0.2` y los niveles de versión;
+* permitir transición hacia `Bloqueado` desde los 8 niveles de versión;
+* establecer que cualquier nivel de versión puede bloquearse por riesgo, contradicción, falta de permiso, falta de información, fase incorrecta o ejecución no autorizada;
+* delegar la salida desde `Bloqueado` a `ROBERT_TECHNICAL_DOCUMENT_LIFECYCLE_SPEC v0.2`.
+
+---
+
+
 Este documento podrá considerarse listo para aprobación si:
 
 - Define reglas de versionamiento.
@@ -2119,57 +2280,110 @@ Nivel de autonomía:
 
 **Nivel 0 — Sin autonomía ejecutiva**
 
----
+# ESTADO DE APROBACIÓN
 
-# DECISIÓN PENDIENTE
+`ROBERT_TECHNICAL_VERSIONING_AND_CHANGE_POLICY_SPEC v0.2` está:
 
-Este documento queda como:
+```text
+APPROVED
+INTEGRATED
+```
 
-**Borrador técnico documental pendiente de revisión**
+Trazabilidad:
 
-Para aprobarlo formalmente, el usuario deberá escribir:
+```text
+CAMBIO #041 — Corrección de v0.1 a v0.2
+DECISIÓN #024 — Aprobación formal de v0.2
+CAMBIO #042 — Aprobación e integración de v0.2
+```
 
-**APRUEBO ROBERT_TECHNICAL_VERSIONING_AND_CHANGE_POLICY_SPEC v0.1**
-
----
-
-# EFECTO DE UNA APROBACIÓN FUTURA
-
-Si se aprueba este documento, se deberá:
-
-1. Registrar decisión formal en ROBERT_DECISIONS_LOG.
-2. Registrar cambio en ROBERT_CONTROL_DE_CAMBIOS.
-3. Actualizar ROBERT_HOME.
-4. Actualizar README si aplica.
-5. Mantenerlo como base para futuras especificaciones técnicas.
-6. No crear sistema real de control de versiones.
-7. No crear base de datos real.
-8. No crear control automático de versiones.
-9. No conectar GitHub automáticamente.
-10. No conectar Obsidian automáticamente.
-11. No pasar automáticamente a programación.
-12. No avanzar automáticamente a Fase 11.
+No requiere una nueva aprobación para reconocer su estado vigente.
 
 ---
 
-# PRÓXIMO PASO RECOMENDADO
+# CORRECCIONES INTEGRADAS EN v0.2
 
-Después de revisar este documento, el siguiente documento posible sería:
+La versión vigente incorpora:
 
-**ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC**
+```text
+VERSION NUMBER ≠ DOCUMENT LIFECYCLE STATE
+```
 
-Ese documento definiría cómo Robert detecta contradicciones entre documentos, qué documento gana en caso de conflicto, cómo se resuelven inconsistencias y cómo se bloquea una acción cuando hay información contradictoria.
+y formaliza:
 
-No debe crearse hasta revisar o aprobar VERSIONING_AND_CHANGE_POLICY_SPEC.
+* tabla de correspondencia entre los 12 estados documentales y los 8 niveles de versión;
+* separación entre evolución/versionado y lifecycle state;
+* posibilidad de múltiples estados documentales para una misma versión;
+* transición hacia `Bloqueado` desde todos los niveles de versión;
+* delegación de las salidas desde `Bloqueado` a `DOCUMENT_LIFECYCLE_SPEC v0.2`.
+
+---
+
+# RESTRICCIONES
+
+Esta aprobación no autoriza:
+
+```text
+REAL VERSION CONTROL ENGINE
+AUTOMATIC VERSION CHANGES
+AUTOMATIC COMMITS
+AUTOMATIC GITHUB SYNC
+AUTOMATIC OBSIDIAN SYNC
+REAL DATABASE
+AUTONOMOUS AGENTS
+REAL EXECUTION
+PHASE 11
+```
+
+Se mantiene:
+
+```text
+AUTONOMY_LEVEL = 0
+EXECUTION_AUTHORITY = NONE
+```
+
+---
+
+# RELACIÓN CON EL ESTADO ACTUAL
+
+Esta especificación continúa siendo la base documental vigente de versionamiento.
+
+Los documentos arquitectónicos creados posteriormente deben respetar sus principios, pero su aprobación no convierte esta especificación en un sistema técnico implementado.
 
 ---
 
 # CIERRE
 
-ROBERT_TECHNICAL_VERSIONING_AND_CHANGE_POLICY_SPEC v0.1 define las reglas conceptuales de versiones, cambios, compatibilidad, reemplazos, correcciones, parches, versiones vigentes y versiones históricas de Robert.
+`ROBERT_TECHNICAL_VERSIONING_AND_CHANGE_POLICY_SPEC v0.2` define la política documental vigente de:
 
-Este documento mantiene a Robert en modo documental, manual y supervisado.
+* versiones;
+* iteraciones;
+* cambios;
+* compatibilidad;
+* reemplazos;
+* versiones vigentes;
+* versiones históricas;
+* relación entre Versioning y Document Lifecycle.
+
+Estado:
+
+```text
+VERSION: 0.2
+STATUS: APPROVED / INTEGRATED
+DECISION: #024
+CHANGE_CORRECTION: #041
+CHANGE_APPROVAL: #042
+
+PHASE: 10
+IMPLEMENTATION: NONE
+AUTONOMY_LEVEL: 0
+EXECUTION_AUTHORITY: NONE
+```
+
+Robert permanece en Fase 10.
 
 El usuario mantiene control total.
 
-Robert no ejecuta acciones importantes sin permiso.
+
+---
+
