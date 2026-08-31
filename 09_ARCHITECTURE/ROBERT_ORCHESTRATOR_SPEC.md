@@ -436,6 +436,31 @@ Puede existir:
 primary_module
 supporting_modules[]
 ```
+### Model Interface vigente
+
+La interfaz arquitectónica vigente para Models es:
+
+`ROBERT_MODEL_INTERFACE_SPEC v0.1`
+
+Aprobada mediante:
+
+- DECISIÓN #034
+- CAMBIO #059
+
+El Model Router deberá utilizar la Model Interface como contrato común para Models actuales y futuros.
+
+La separación vigente es:
+
+```text
+ORCHESTRATOR
+  ↓
+MODEL ROUTER
+  ↓
+MODEL INTERFACE
+  ↓
+MODEL ADAPTER
+  ↓
+MODEL
 
 ---
 
