@@ -1,14 +1,16 @@
 # ROBERT_HOME
 
-Versión: 0.12
-Estado: APROBADA
-Fecha: 09/07/2026
+Versión: 0.13
+Estado: APROBADO E INTEGRADO
+Fecha: 31/08/2026
 Ubicación: 00_HOME
 Función: Punto central de navegación, estado, núcleo visual y control del sistema Robert
 Fase actual: Fase 10 — MVP técnico básico en preparación
-Cambio relacionado: CAMBIO #051 — Normalización de fuente física vigente de ROBERT_TECHNICAL_MVP_WIREFRAME v0.3
-Decisión relacionada: Sin nueva decisión formal para esta versión
-Estado de aprobación de esta versión: Pendiente de revisión del usuario
+Última decisión arquitectónica registrada: DECISIÓN #036
+Último cambio arquitectónico registrado: CAMBIO #061
+Estado operativo: Documental / conceptual / manual / supervisado
+Autonomía operativa: 0
+Execution Authority: NONE
 
 Tags: #robert/home #robert/nucleo #robert/estado-actual #robert/navegacion #robert/fase-10
 
@@ -20,96 +22,372 @@ ROBERT_HOME es la entrada principal del sistema Robert.
 
 Su función es mostrar de forma rápida:
 
-* Qué es Robert.
-* Estado real del proyecto.
-* Fase actual.
-* Documentos maestros disponibles.
-* Documentos técnicos disponibles.
-* Documentos aprobados.
-* Documentos pendientes.
-* Documento vigente cuando existan versiones previas.
-* Prioridades actuales.
-* Próximos pasos.
-* Reglas principales.
-* Restricciones activas.
-* Dirección general del sistema.
-* Núcleo visual del sistema dentro de la navegación documental.
+* qué es Robert;
+* estado real del proyecto;
+* fase actual;
+* arquitectura vigente;
+* documentos maestros disponibles;
+* documentos técnicos disponibles;
+* decisiones y cambios recientes;
+* prioridades actuales;
+* pendientes reales;
+* restricciones activas;
+* próximo bloque de trabajo.
 
 Este documento funciona como el punto central de navegación del proyecto.
 
 ---
 
-# CORRECCIÓN PRINCIPAL DE v0.12
+# ESTADO MAESTRO ACTUAL
 
-ROBERT_HOME v0.12 actualiza el estado documental posterior a:
+Robert se encuentra en:
 
 ```text
-CAMBIO #051 — Normalización de fuente física vigente de ROBERT_TECHNICAL_MVP_WIREFRAME v0.3
+FASE 10
+MVP TÉCNICO BÁSICO EN PREPARACIÓN
 ```
 
-Problema que corrige esta versión:
+Estado operativo:
 
 ```text
-ROBERT_HOME v0.11 todavía mostraba la fuente física del wireframe v0.3 como pendiente de normalización manual.
+DOCUMENTAL
+CONCEPTUAL
+MANUAL
+SUPERVISED
 ```
 
-Nuevo estado real:
+Se mantiene:
 
 ```text
-ROBERT_TECHNICAL_MVP_WIREFRAME.md
-Estado: Fuente física oficial vigente
-Versión: v0.3
-Estado documental: Aprobado e integrado
+AUTONOMY_LEVEL = 0
+EXECUTION_AUTHORITY = NONE
 ```
 
-Archivo propuesta:
+No existe todavía autorización para:
 
 ```text
-ROBERT_TECHNICAL_MVP_WIREFRAME_v0.3_PROPUESTA.md
-Estado: Eliminado previamente / no vigente / no fuente oficial / no requerido
-```
-
-Resultado:
-
-```text
-ROBERT_HOME v0.12 elimina la pendiente de normalización física del wireframe v0.3.
+PROGRAMMING
+REAL TOOL EXECUTION
+AUTOMATIC MEMORY
+AUTONOMOUS AGENTS
+AUTONOMOUS VALIDATION
+EXTERNAL EXECUTION
+PHASE 11
 ```
 
 ---
 
-# TRAZABILIDAD DE ESTA VERSIÓN
+# ARQUITECTURA PRINCIPAL APROBADA
 
-Esta versión se apoya en:
-
-```text
-CAMBIO #051 — Normalización de fuente física vigente de ROBERT_TECHNICAL_MVP_WIREFRAME v0.3
-```
-
-Estado del cambio:
+La cadena arquitectónica principal vigente es:
 
 ```text
-Registrado
+ROBERT_CANONICAL_MODEL v0.2
+DECISIÓN #030
+CAMBIO #053
+
+        ↓
+
+ROBERT_ORCHESTRATOR_SPEC v0.1
+DECISIÓN #031
+CAMBIO #054
+
+        ↓
+
+ROBERT_AGENT_ARCHITECTURE v0.1
+DECISIÓN #032
+CAMBIO #055
+Corrección: CAMBIO #056
+
+        ↓
+
+ROBERT_SKILL_ARCHITECTURE v0.1
+DECISIÓN #033
+CAMBIO #057
+Corrección: CAMBIO #058
+
+        ↓
+
+ROBERT_MODEL_INTERFACE_SPEC v0.1
+DECISIÓN #034
+CAMBIO #059
+
+        ↓
+
+ROBERT_MEMORY_ARCHITECTURE v0.1
+DECISIÓN #035
+CAMBIO #060
+
+        ↓
+
+ROBERT_VALIDATION_ARCHITECTURE v0.1
+DECISIÓN #036
+CAMBIO #061
 ```
 
-Función del cambio:
+Estado:
 
 ```text
-Confirmar que ROBERT_TECHNICAL_MVP_WIREFRAME.md es la fuente física oficial vigente del wireframe v0.3 y que la propuesta eliminada no debe recrearse.
+CORE ARCHITECTURE = APPROVED
+IMPLEMENTATION = NONE
 ```
 
-Restricción:
+---
+
+# DISTINCIONES CANÓNICAS ACTIVAS
+
+Robert mantiene:
 
 ```text
-CAMBIO #051 no cambia el contenido aprobado del wireframe.
-CAMBIO #051 no autoriza programación.
-CAMBIO #051 no autoriza código real.
-CAMBIO #051 no autoriza pantallas reales.
-CAMBIO #051 no autoriza prototipo funcional.
-CAMBIO #051 no autoriza conexiones externas.
-CAMBIO #051 no autoriza automatizaciones.
-CAMBIO #051 no autoriza agentes autónomos.
-CAMBIO #051 no autoriza avanzar a Fase 11.
+ROBERT ≠ MODEL
+
+ROBERT ≠ AGENT
+
+AGENT ≠ SKILL
+
+MODEL ≠ TOOL
+
+SKILL ≠ TOOL
+
+PERMISSION ≠ SCOPE
+
+RISK ≠ PERMISSION
+
+RISK ≠ EXECUTION AUTHORITY
+
+VALIDATION ≠ AUTHORIZATION
+
+VALIDATION ≠ APPROVAL
+
+VALIDATION ≠ EXECUTION AUTHORITY
+
+CONTEXT ≠ MEMORY
+
+MEMORY_TYPE ≠ RETENTION
+
+MEMORY RETRIEVAL SCOPE ≠ AUTHORIZED OPERATIONAL SCOPE
 ```
+
+---
+
+# ROUTING AUTHORITY
+
+La autoridad de routing pertenece al:
+
+```text
+ROBERT_ORCHESTRATOR
+```
+
+El Orchestrator puede coordinar conceptualmente:
+
+```text
+Intent Router
+Context Resolver
+Module Router
+Agent Router
+Skill Resolver
+Model Router
+Tool Resolver
+Memory Resolver
+Validation Resolver
+Permission / Scope Check
+Risk Check
+Conflict Check
+Approval Gate
+```
+
+Las responsabilidades especializadas no crean Orchestrators paralelos.
+
+---
+
+# MEMORY
+
+Arquitectura vigente:
+
+```text
+ROBERT_MEMORY_ARCHITECTURE v0.1
+STATUS: APPROVED
+DECISION: #035
+CHANGE: #060
+```
+
+Dimensiones canónicas:
+
+```text
+RETENTION:
+ACTIVE
+TEMPORARY
+PERSISTENT
+
+MEMORY_TYPE:
+CORE
+SEMANTIC
+EPISODIC
+DECISIONAL
+PROCEDURAL
+```
+
+Se mantiene:
+
+```text
+MEMORY CANDIDATE ≠ MEMORY
+
+MODEL OUTPUT ≠ MEMORY WRITE
+
+AGENT OUTPUT ≠ MEMORY WRITE
+
+SKILL OUTPUT ≠ MEMORY WRITE
+
+MEMORY AUTHORITY METADATA ≠ GLOBAL SOURCE PRECEDENCE
+```
+
+Memory automática no está implementada.
+
+---
+
+# VALIDATION
+
+Arquitectura vigente:
+
+```text
+ROBERT_VALIDATION_ARCHITECTURE v0.1
+STATUS: APPROVED
+DECISION: #036
+CHANGE: #061
+```
+
+Dimensiones principales:
+
+```text
+VALIDATION_TYPE
+REVIEWER_ROLE
+```
+
+Se mantiene:
+
+```text
+VALIDATION_TYPE ≠ REVIEWER_ROLE
+
+VALIDATOR ≠ NEW CANONICAL ENTITY TYPE
+
+VALIDATOR ≠ ROUTING AUTHORITY
+
+VALIDATED OUTPUT ≠ AUTHORIZED ACTION
+
+CONSENSUS ≠ TRUTH
+
+CONFIDENCE ≠ TRUTH
+```
+
+Validation automática productiva no está implementada.
+
+---
+
+# ESTADO DE IMPLEMENTACIÓN
+
+Actualmente:
+
+```text
+CORE ARCHITECTURE: APPROVED
+
+MEMORY STORE: NOT IMPLEMENTED
+
+AUTOMATED VALIDATION ENGINE: NOT IMPLEMENTED
+
+AUTOMATIC TOOL EXECUTION: NOT IMPLEMENTED
+
+AUTONOMOUS AGENTS: NOT ACTIVE
+
+AUTOMATIC MEMORY WRITE: DISABLED
+
+AUTOMATIC MEMORY RETRIEVAL: NOT IMPLEMENTED
+
+EXTERNAL EXECUTION: NONE
+```
+
+---
+
+# PENDIENTE REAL ACTUAL
+
+La prioridad ya no es seguir creando arquitectura principal sin revisión.
+
+El bloque actual es:
+
+```text
+IMPLEMENTATION READINESS
+```
+
+Debe completar:
+
+```text
+1. DOCUMENT NORMALIZATION
+2. ARCHITECTURE GAP REVIEW
+3. TOOL ARCHITECTURE DECISION
+4. CROSS-REFERENCE NORMALIZATION
+5. IMPLEMENTATION CONTRACT REVIEW
+6. PHASE 10 EXIT CRITERIA
+7. BUILD ORDER
+```
+
+Regla:
+
+```text
+ARCHITECTURE APPROVED
+        ≠
+READY FOR CODE
+```
+
+---
+
+# TRAZABILIDAD RECIENTE
+
+Últimas aprobaciones arquitectónicas:
+
+```text
+DECISIÓN #035
+ROBERT_MEMORY_ARCHITECTURE v0.1
+
+DECISIÓN #036
+ROBERT_VALIDATION_ARCHITECTURE v0.1
+```
+
+Últimos cambios arquitectónicos:
+
+```text
+CAMBIO #060
+Aprobación e integración de Memory Architecture
+
+CAMBIO #061
+Aprobación e integración de Validation Architecture
+```
+
+---
+
+# ESTADO DE ROBERT_HOME
+
+`ROBERT_HOME` funciona como resumen vivo del estado del sistema.
+
+Esta versión normaliza el HOME para reflejar la arquitectura vigente hasta:
+
+```text
+DECISIÓN #036
+CAMBIO #061
+```
+
+y elimina del encabezado principal el estado antiguo:
+
+```text
+Propuesta corregida — pendiente de revisión
+```
+
+La historia detallada de versiones, decisiones y cambios permanece en:
+
+```text
+ROBERT_DECISIONS_LOG
+ROBERT_CONTROL_DE_CAMBIOS
+```
+
+HOME no sustituye esos registros.
 
 ---
 
@@ -1251,118 +1529,99 @@ Solo elimina la ambigüedad física entre archivo oficial y archivo propuesta.
 
 ---
 
-# CRITERIOS PARA REVISAR ROBERT_HOME v0.12
-
-ROBERT_HOME v0.12 podrá considerarse correcto si:
-
-* Refleja Fase 10 como fase activa.
-* Reconoce ROBERT_HOME v0.11 como aprobado e integrado.
-* Reconoce ROBERT_HOME v0.12 como propuesta corregida pendiente de revisión.
-* Reconoce CAMBIO #051.
-* Elimina la pendiente de normalización física del wireframe.
-* Reconoce ROBERT_TECHNICAL_MVP_WIREFRAME.md como fuente física oficial vigente.
-* Reconoce ROBERT_TECHNICAL_MVP_WIREFRAME_v0.3_PROPUESTA.md como eliminado previamente / no vigente / no requerido.
-* Indica que la propuesta no debe recrearse.
-* Mantiene APPROVAL_GATE v0.3 como aprobado e integrado.
-* Mantiene ROBERT_VISUAL_REFERENCE como documento visual correcto.
-* Mantiene USER_ACTIONS_SPEC v0.2 como aprobado, integrado y auditado.
-* Reconoce CAMBIO #047 como antecedente de trazabilidad.
-* Mantiene AppShell como componente canónico.
-* Excluye MainCanvas como componente canónico.
-* Mantiene ApprovalGate como especificación conceptual.
-* No convierte ApprovalGate en gate real.
-* Actualiza prioridades actuales.
-* Actualiza próximos pasos.
-* Mantiene restricciones de Fase 10.
-* No autoriza programación.
-* No autoriza código real.
-* No autoriza gate real.
-* No autoriza conexiones externas.
-* No autoriza automatizaciones.
-* No autoriza agentes autónomos.
-* No autoriza Fase 11.
-* Mantiene control total del usuario.
-
----
-
-# DECISIÓN PENDIENTE SOBRE ROBERT_HOME v0.12
-
-Este documento queda como:
+# ESTADO FINAL DE ROBERT_HOME
 
 ```text
-ROBERT_HOME v0.12
-Estado: Propuesta corregida — pendiente de revisión
-Cambio relacionado: CAMBIO #051
-```
+DOCUMENT: ROBERT_HOME
+VERSION: 0.13
+STATUS: APPROVED / INTEGRATED
 
-Para aprobarlo formalmente como nueva versión integrada, el usuario deberá escribir:
+PHASE: 10
 
-```text
-APRUEBO ROBERT_HOME v0.12
-```
+LATEST_ARCHITECTURAL_DECISION: #036
+LATEST_ARCHITECTURAL_CHANGE: #061
 
-Mientras eso no ocurra:
+CORE_ARCHITECTURE: APPROVED
+IMPLEMENTATION_READINESS: IN PROGRESS
 
-```text
-ROBERT_HOME v0.12 no queda aprobado.
-ROBERT_HOME v0.12 no queda integrado.
-ROBERT_HOME v0.11 sigue siendo la última versión aprobada e integrada.
+AUTONOMY_LEVEL: 0
+EXECUTION_AUTHORITY: NONE
 ```
 
 ---
 
-# EFECTO DE UNA APROBACIÓN FUTURA DE HOME v0.12
+# PRIORIDAD ACTUAL
 
-Si se aprueba ROBERT_HOME v0.12:
+```text
+NORMALIZE PHYSICAL DOCUMENT STATE
+        ↓
+RESOLVE ARCHITECTURE GAPS
+        ↓
+DEFINE IMPLEMENTATION READINESS
+        ↓
+DECIDE PHASE 10 EXIT
+        ↓
+ONLY THEN CONSIDER CODE
+```
 
-1. Registrar decisión formal en `ROBERT_DECISIONS_LOG`.
-2. Registrar cambio de aprobación e integración en `ROBERT_CONTROL_DE_CAMBIOS`.
-3. Actualizar README.
-4. Mantener wireframe v0.3 como fuente física oficial vigente.
-5. Mantener el archivo propuesta como eliminado previamente / no vigente / no requerido.
-6. Mantener APPROVAL_GATE v0.3 como aprobado e integrado.
-7. Mantener ROBERT_VISUAL_REFERENCE como documento visual correcto.
-8. Mantener Robert en Fase 10.
-9. No programar.
-10. No conectar apps.
-11. No automatizar.
-12. No activar agentes.
-13. No avanzar a Fase 11.
+---
+
+# RESTRICCIONES ACTIVAS
+
+No autorizado actualmente:
+
+```text
+REAL PROGRAMMING
+REAL DATABASE
+REAL MEMORY STORE
+AUTONOMOUS MEMORY
+AUTONOMOUS VALIDATION
+REAL TOOL EXECUTION
+AUTONOMOUS AGENTS
+EXTERNAL AUTOMATION
+AUTOMATIC PHASE TRANSITION
+```
+
+---
+
+# SIGUIENTE PASO
+
+El siguiente documento a normalizar es:
+
+```text
+README.md
+```
+
+Después:
+
+```text
+ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC
+```
+
+y:
+
+```text
+ROBERT_TECHNICAL_VERSIONING_AND_CHANGE_POLICY_SPEC
+```
 
 ---
 
 # CIERRE
 
-ROBERT_HOME v0.12 actualiza el punto central de navegación del sistema Robert después de la normalización física del wireframe v0.3.
+Robert mantiene una arquitectura principal formalmente aprobada hasta Validation Architecture.
 
-El HOME ahora refleja el estado real:
+El sistema continúa en Fase 10.
+
+La prioridad actual es asegurar que los archivos físicos, estados documentales, referencias cruzadas y contratos de implementación coincidan con la gobernanza ya aprobada.
 
 ```text
-Fase 10 — MVP técnico básico en preparación
-Modo documental, manual y supervisado
-ROBERT_HOME v0.11 aprobado e integrado
-ROBERT_HOME v0.12 como propuesta corregida pendiente de revisión
-CAMBIO #051 registrado
-Wireframe v0.3 aprobado e integrado
-ROBERT_TECHNICAL_MVP_WIREFRAME.md como fuente física oficial vigente
-ROBERT_TECHNICAL_MVP_WIREFRAME_v0.3_PROPUESTA.md eliminado previamente / no vigente / no requerido
-No recrear la propuesta
-USER_ACTIONS_SPEC v0.2 aprobado, integrado y auditado voluntariamente
-APPROVAL_GATE v0.3 aprobado e integrado
-ROBERT_VISUAL_REFERENCE como documento visual correcto
-AppShell como componente canónico
-MainCanvas excluido como componente canónico
-ApprovalGate como especificación conceptual
-Sin programación autorizada
-Sin código real
-Sin gate real
-Sin ejecución real
-Sin conexiones externas
-Sin automatizaciones reales
-Sin agentes autónomos
-Sin Fase 11
+ARCHITECTURE CORE = CLOSED
+
+DOCUMENT NORMALIZATION = IN PROGRESS
+
+READY FOR CODE = NO
 ```
 
-Robert continúa bajo control total del usuario.
+El usuario mantiene control total.
 
 Robert no ejecuta acciones importantes sin permiso.
