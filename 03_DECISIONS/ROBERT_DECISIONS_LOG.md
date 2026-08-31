@@ -5252,3 +5252,254 @@ El siguiente bloque arquitectónico será:
 ```text
 ROBERT_VALIDATION_ARCHITECTURE v0.1
 ```
+
+# DECISIÓN #036 — Aprobación de ROBERT_VALIDATION_ARCHITECTURE v0.1
+
+**Fecha:** 31/08/2026
+**Tipo:** Arquitectónica / documental
+**Estado:** APROBADA
+**Fase:** 10
+**Documento relacionado:** `09_ARCHITECTURE/ROBERT_VALIDATION_ARCHITECTURE.md`
+**Versión:** v0.1
+**Cambio relacionado:** CAMBIO #061
+
+## Decisión
+
+Se aprueba formalmente:
+
+```text
+ROBERT_VALIDATION_ARCHITECTURE v0.1
+```
+
+como arquitectura vigente para Validation dentro de Robert.
+
+## Elementos formalizados
+
+La arquitectura define:
+
+```text
+VALIDATION_TYPE
+REVIEWER_ROLE
+VALIDATION_REQUEST
+VALIDATION_RESULT
+VALIDATION_STATUS
+VALIDATION_RESOLVER
+VALIDATION_POLICY
+VALIDATION_REGISTRY
+VALIDATION DEPTH
+MULTI-VALIDATOR REVIEW
+VALIDATION CONFLICT
+VALIDATION ESCALATION
+```
+
+Se establece formalmente la separación:
+
+```text
+VALIDATION_TYPE ≠ REVIEWER_ROLE
+```
+
+donde:
+
+```text
+VALIDATION_TYPE = qué se verifica
+REVIEWER_ROLE = quién o qué realiza la verificación
+```
+
+## Validation Types
+
+Los tipos conceptuales iniciales incluyen:
+
+```text
+RULE
+CANONICAL
+STRUCTURE
+COMPLETENESS
+CONSISTENCY
+EVIDENCE
+SOURCE
+SECURITY
+SCOPE
+PERMISSION
+MEMORY
+MODEL_OUTPUT
+```
+
+## Reviewer Roles
+
+Los roles funcionales iniciales incluyen:
+
+```text
+RULE_SYSTEM
+AGENT
+MODEL
+USER
+AUTHORIZED ROBERT FUNCTION
+```
+
+`Reviewer Role` no crea una nueva categoría canónica de primer nivel.
+
+## Invariantes aprobadas
+
+```text
+VALIDATION ≠ AUTHORIZATION
+
+VALIDATION ≠ APPROVAL
+
+VALIDATION ≠ EXECUTION AUTHORITY
+
+VALIDATION ≠ TRUTH
+
+VALIDATED OUTPUT ≠ AUTHORIZED ACTION
+
+VALIDATION RECOMMENDATION ≠ DECISION
+
+VALIDATION_TYPE ≠ REVIEWER_ROLE
+
+VALIDATOR ≠ NEW CANONICAL ENTITY TYPE
+
+VALIDATOR ≠ ROUTING AUTHORITY
+
+VALIDATOR ≠ APPROVAL AUTHORITY
+
+MODEL REVIEW ≠ APPROVAL
+
+AGENT REVIEW ≠ APPROVAL
+
+SELF VALIDATION ≠ INDEPENDENT VALIDATION
+
+CONSENSUS ≠ TRUTH
+
+CONSENSUS ≠ AUTHORIZATION
+
+CONFIDENCE ≠ TRUTH
+```
+
+## Validation Resolver
+
+`VALIDATION RESOLVER` queda aprobado únicamente como responsabilidad conceptual subordinada al Orchestrator.
+
+```text
+ORCHESTRATOR
+  ↓
+VALIDATION RESOLVER
+```
+
+No constituye:
+
+```text
+NEW ORCHESTRATOR
+INDEPENDENT ROUTING AUTHORITY
+APPROVAL AUTHORITY
+EXECUTION AUTHORITY
+```
+
+## Validation Registry
+
+`VALIDATION REGISTRY` queda conceptual y documental.
+
+Su función es evitar duplicación de Validation capabilities.
+
+No puede:
+
+```text
+ROUTE
+EXECUTE
+SELECT REVIEWERS INDEPENDENTLY
+CREATE AUTHORITY
+```
+
+Se mantiene:
+
+```text
+VALIDATION REGISTRY ≠ VALIDATION RESOLVER
+VALIDATION REGISTRY ≠ ROUTING AUTHORITY
+VALIDATION REGISTRY ≠ EXECUTION ENGINE
+```
+
+## Reutilización de arquitectura existente
+
+Validation reutiliza cuando corresponda:
+
+```text
+ROBERT_CRITIC
+ROBERT_SECURITY
+ROBERT_TESTER
+ROBERT_ARCHITECT
+ROBERT_RESEARCHER
+ROBERT_MEMORY
+```
+
+además de Skills, Models, Rule Validation y User Review.
+
+No se crea por defecto:
+
+```text
+ROBERT_VALIDATOR
+```
+
+como nuevo Agent.
+
+## Relación con Approval y Authorization
+
+El flujo mantiene:
+
+```text
+OUTPUT
+  ↓
+VALIDATION
+  ↓
+PASS
+  ↓
+APPROVAL REQUIRED?
+  ├── NO → CONTINUE
+  └── YES → APPROVAL GATE
+```
+
+Nunca:
+
+```text
+VALIDATION PASS
+  ↓
+AUTOMATIC APPROVAL
+```
+
+## Fase 10
+
+Esta aprobación es exclusivamente:
+
+```text
+DOCUMENTAL
+CONCEPTUAL
+MANUAL
+SUPERVISED
+```
+
+Se mantiene:
+
+```text
+AUTONOMY_LEVEL = 0
+EXECUTION_AUTHORITY = NONE
+```
+
+No se autoriza:
+
+* Validation Engine autónomo;
+* aprobación automática;
+* autorización automática;
+* Tool execution automática;
+* Memory write automático;
+* autonomous reviewer loops;
+* autonomous Model-to-Model validation loops;
+* self-approval;
+* ejecución externa;
+* avance automático a Fase 11.
+
+## Resultado
+
+```text
+ROBERT_VALIDATION_ARCHITECTURE v0.1
+STATUS: APPROVED
+AUTHORITY: ARCHITECTURAL
+PHASE: 10
+IMPLEMENTATION: NONE
+```
