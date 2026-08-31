@@ -321,7 +321,7 @@ Ejemplo:
 
 ```text
 ROBERT_ARCHITECT
-status: DOCUMENTED
+STATUS: APPROVED
 ```
 
 no significa:
