@@ -1,7 +1,7 @@
 # ROBERT_TOOL_ARCHITECTURE
 
 **Versión:** 0.1
-**Estado:** PROPUESTA — pendiente de revisión y aprobación
+**Estado:** APROBADA — integrada arquitectónicamente
 **Tipo:** Especificación arquitectónica de Tools
 **Ubicación propuesta:** `09_ARCHITECTURE/ROBERT_TOOL_ARCHITECTURE.md`
 **Fase relacionada:** Fase 10 — MVP técnico básico en preparación
@@ -2610,13 +2610,14 @@ Deben definirse posteriormente:
 
 ---
 
-# 145. Estado actual
-
 ```text
 DOCUMENT: ROBERT_TOOL_ARCHITECTURE
 VERSION: 0.1
-STATUS: PROPOSED
-AUTHORITY: NON-CANONICAL
+STATUS: APPROVED
+AUTHORITY: ARCHITECTURAL
+
+DECISION: #037
+CHANGE: #062
 
 PHASE: 10
 IMPLEMENTATION: NONE
@@ -2633,67 +2634,3 @@ REAL_TOOL_EXECUTION: DISABLED
 AUTONOMY_LEVEL: 0
 EXECUTION_AUTHORITY: NONE
 ```
-
----
-
-# 146. Criterios de aprobación
-
-Esta propuesta podrá aprobarse cuando:
-
-1. sea revisada contra Canonical Model;
-2. sea revisada contra Orchestrator;
-3. sea revisada contra Agent Architecture;
-4. sea revisada contra Skill Architecture;
-5. sea revisada contra Model Interface;
-6. sea revisada contra Memory Architecture;
-7. sea revisada contra Validation Architecture;
-8. sea revisada contra Permissions and Scopes;
-9. sea revisada contra Approval Gate;
-10. sea revisada contra Audit;
-11. sea revisada contra Data Consistency;
-12. no cree routing authority paralela;
-13. no conceda Permission;
-14. no conceda Execution Authority;
-15. no permita direct Model-to-Tool execution;
-16. no permita direct Agent-to-Tool execution;
-17. no permita automatic Skill-to-Tool execution;
-18. no confunda Tool Result con Truth;
-19. no habilite Tool execution real en Fase 10;
-20. el usuario la apruebe explícitamente.
-
----
-
-# 147. Próximo paso recomendado
-
-Antes de aprobar:
-
-```text
-REVIEW ROBERT_TOOL_ARCHITECTURE v0.1
-```
-
-La revisión debe buscar especialmente:
-
-```text
-TOOL AUTHORITY LEAKAGE
-DIRECT TOOL INVOCATION
-PERMISSION BYPASS
-SCOPE BYPASS
-APPROVAL BYPASS
-EXECUTION AUTHORITY CONFUSION
-SIDE EFFECT HANDLING
-READ/WRITE CONFUSION
-RETRY DUPLICATION
-TOOL RESULT → TRUTH
-TOOL RESULT → MEMORY WRITE
-REGISTRY ROUTING AUTHORITY
-TOOL POLICY AUTHORITY
-PROVIDER COUPLING
-```
-
-Después de aprobación, deberá retomarse:
-
-```text
-IMPLEMENTATION READINESS
-```
-
-para determinar si queda alguna brecha arquitectónica real antes de definir el Build Order.
