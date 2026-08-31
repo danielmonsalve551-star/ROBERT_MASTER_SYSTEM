@@ -4,7 +4,7 @@
 Proyecto: Robert  
 Tipo de documento: Plan del MVP técnico básico  
 Versión: 0.1  
-Estado: Aprobado como base del MVP técnico básico — pendiente de wireframe
+Estado: APROBADO — base vigente del MVP técnico básico
 Fecha: 26/06/2026
 
 ---
