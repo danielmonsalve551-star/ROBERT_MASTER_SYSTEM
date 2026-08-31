@@ -3463,106 +3463,52 @@ Nivel de autonomía:
 
   
 
-# DECISIÓN PENDIENTE
+# ESTADO DE APROBACIÓN
 
-  
+Este documento está formalmente:
 
-Este documento queda como:
+```text
+APPROVED
+INTEGRATED
+```
 
-  
+La trazabilidad correspondiente se encuentra registrada en:
 
-**Propuesta corregida pendiente de revisión**
+```text
+ROBERT_DECISIONS_LOG
+ROBERT_CONTROL_DE_CAMBIOS
+```
 
-  
-
-Para aprobarlo formalmente, el usuario deberá escribir:
-
-  
-
-**APRUEBO ROBERT_TECHNICAL_DOCUMENT_LIFECYCLE_SPEC v0.2**
-
-  
+No requiere nueva aprobación para reconocer su estado vigente.
 
 ---
 
-  
+# RESTRICCIONES
 
-# EFECTO DE UNA APROBACIÓN FUTURA
+La aprobación documental no autoriza:
 
-  
+```text
+PROGRAMMING
+AUTOMATIC EXECUTION
+EXTERNAL CONNECTIONS
+AUTONOMOUS AGENTS
+AUTOMATIC PHASE TRANSITION
+PHASE 11
+```
 
-Si se aprueba este documento, se deberá:
+Se mantiene:
 
-  
-
-1. Registrar decisión formal en ROBERT_DECISIONS_LOG.
-
-2. Registrar cambio en ROBERT_CONTROL_DE_CAMBIOS.
-
-3. Actualizar ROBERT_HOME.
-
-4. Actualizar README si aplica.
-
-5. Mantenerlo como base para futuras especificaciones técnicas.
-
-6. No crear sistema real de gestión documental.
-
-7. No crear base de datos real.
-
-8. No crear control automático de versiones.
-
-9. No conectar GitHub automáticamente.
-
-10. No conectar Obsidian automáticamente.
-
-11. No pasar automáticamente a programación.
-
-12. No avanzar automáticamente a Fase 11.
-
-  
+```text
+AUTONOMY_LEVEL = 0
+EXECUTION_AUTHORITY = NONE
+```
 
 ---
-
-  
-
-# PRÓXIMO PASO RECOMENDADO
-
-  
-
-Después de revisar este documento, el siguiente documento posible sería:
-
-  
-
-**ROBERT_TECHNICAL_VERSIONING_AND_CHANGE_POLICY_SPEC**
-
-  
-
-Ese documento definiría reglas de versiones, numeración, cambios mayores, cambios menores, parches, reemplazos y consistencia entre documentos.
-
-  
-
-No debe crearse hasta revisar o aprobar DOCUMENT_LIFECYCLE_SPEC.
-
-  
-
----
-
-  
 
 # CIERRE
 
-  
+El documento permanece como especificación técnica documental aprobada dentro de Fase 10.
 
-ROBERT_TECHNICAL_DOCUMENT_LIFECYCLE_SPEC v0.2 define el ciclo de vida documental de Robert: idea, borrador, propuesta, propuesta corregida, revisión, aprobación, integración, actualización, depreciación, reemplazo, bloqueo y archivo.
-
-  
-
-Este documento mantiene a Robert en modo documental, manual y supervisado.
-
-  
+Su aprobación no implica implementación técnica productiva.
 
 El usuario mantiene control total.
-
-  
-
-Robert no ejecuta acciones importantes sin permiso.
