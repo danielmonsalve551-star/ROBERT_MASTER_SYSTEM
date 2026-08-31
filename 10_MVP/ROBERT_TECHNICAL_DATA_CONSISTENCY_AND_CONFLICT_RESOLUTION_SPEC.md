@@ -60,31 +60,55 @@ Este documento no ejecuta acciones reales.
 
 Este documento queda como:
 
-**Borrador técnico documental nuevo — pendiente de revisión**
+**APROBADO E INTEGRADO — v0.3**
 
-No está aprobado todavía.
+Relación formal:
 
-No reemplaza a ningún documento maestro.
+```text
+DECISIÓN #025
+CAMBIO #043
+CAMBIO #044
+```
 
-No autoriza programación.
+Estado:
 
-No autoriza código real.
+```text
+DOCUMENT:
+ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC
 
-No autoriza sistema real de consistencia.
+VERSION:
+0.3
 
-No autoriza base de datos real.
+STATUS:
+APPROVED / INTEGRATED
 
-No autoriza verificación automática.
+PHASE:
+10
 
-No autoriza resolución automática de conflictos.
+IMPLEMENTATION:
+NONE
 
-No autoriza sincronización automática con GitHub.
+AUTONOMY_LEVEL:
+0
 
-No autoriza sincronización automática con Obsidian.
+EXECUTION_AUTHORITY:
+NONE
+```
 
-No autoriza agentes autónomos.
+La aprobación es exclusivamente documental y conceptual.
 
-No autoriza avanzar a Fase 11.
+No autoriza:
+
+* programación;
+* código real;
+* motor automático de consistencia;
+* resolución automática de conflictos;
+* base de datos real;
+* sincronización automática;
+* conexiones externas;
+* agentes autónomos;
+* ejecución real;
+* avance automático a Fase 11.
 
 ---
 
@@ -137,7 +161,7 @@ Estado operativo actual:
 - ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC v0.2 aprobado.
 - ROBERT_TECHNICAL_DOCUMENT_LIFECYCLE_SPEC v0.2 aprobado.
 - ROBERT_TECHNICAL_VERSIONING_AND_CHANGE_POLICY_SPEC v0.2 aprobado.
-- ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.1 creado como borrador.
+- ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3 aprobado e integrado mediante DECISIÓN #025, CAMBIO #043 y CAMBIO #044.
 - Sin programación autorizada.
 - Sin código real.
 - Sin sistema real de consistencia documental.
@@ -297,6 +321,68 @@ Inconsistencia mayor afecta interpretación, flujo, estado, aprobación, versió
 ## Conflicto crítico
 
 Conflicto crítico afecta seguridad, permisos, autonomía, ejecución real, conexiones, agentes, automatizaciones, fase o aprobación formal.
+
+---
+# CORRECCIONES INTEGRADAS EN v0.3
+
+La versión v0.3 fue aprobada mediante:
+
+```text
+DECISIÓN #025
+```
+
+con trazabilidad previa y posterior:
+
+```text
+CAMBIO #043 — Corrección de v0.3
+CAMBIO #044 — Aprobación e integración de v0.3
+```
+
+La versión aprobada incorpora como principios formales:
+
+* jerarquía conceptual general de fuentes;
+* documentos técnicos aprobados dentro de la posición 9 de dicha jerarquía;
+* subjerarquía temática entre documentos técnicos aprobados;
+* distinción entre regla general y regla temática;
+* 17 tipos de conflicto documental;
+* precedencia entre tipos de conflicto;
+* una fuente única oficial para el orden completo de precedencia;
+* orden de conflictos secundarios;
+* regla de tipo más específico disponible;
+* resolución paso a paso;
+* relación con versionamiento, lifecycle, session/context, auditoría, permisos, eventos, notificaciones, modelos, componentes y flujos.
+
+Regla central de v0.3:
+
+```text
+THE MASTER CONFLICT PRECEDENCE TABLE
+IS THE ONLY OFFICIAL SOURCE
+OF THE COMPLETE CONFLICT PRECEDENCE ORDER
+```
+
+Las secciones individuales de cada tipo de conflicto:
+
+```text
+DO NOT REPLACE
+DO NOT DUPLICATE
+DO NOT OVERRIDE
+```
+
+la tabla maestra de precedencia.
+
+Los conflictos secundarios deben listarse según el orden de precedencia definido por esa tabla.
+
+Se mantiene:
+
+```text
+GENERAL CATEGORY
++
+SPECIFIC SUBTYPE
++
+MOST SPECIFIC AVAILABLE TYPE
+```
+
+como principio conceptual de clasificación.
 
 ---
 
@@ -1977,57 +2063,102 @@ Nivel de autonomía:
 
 **Nivel 0 — Sin autonomía ejecutiva**
 
----
+# ESTADO DE APROBACIÓN
 
-# DECISIÓN PENDIENTE
+`ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3` está:
 
-Este documento queda como:
+```text
+APPROVED
+INTEGRATED
+```
 
-**Borrador técnico documental pendiente de revisión**
+Relación formal:
 
-Para aprobarlo formalmente, el usuario deberá escribir:
+```text
+DECISIÓN #025
+CAMBIO #043
+CAMBIO #044
+```
 
-**APRUEBO ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.1**
-
----
-
-# EFECTO DE UNA APROBACIÓN FUTURA
-
-Si se aprueba este documento, se deberá:
-
-1. Registrar decisión formal en ROBERT_DECISIONS_LOG.
-2. Registrar cambio en ROBERT_CONTROL_DE_CAMBIOS.
-3. Actualizar ROBERT_HOME.
-4. Actualizar README si aplica.
-5. Mantenerlo como base para futuras especificaciones técnicas.
-6. No crear sistema real de consistencia documental.
-7. No crear base de datos real.
-8. No crear resolución automática de conflictos.
-9. No conectar GitHub automáticamente.
-10. No conectar Obsidian automáticamente.
-11. No pasar automáticamente a programación.
-12. No avanzar automáticamente a Fase 11.
+No requiere una nueva aprobación para reconocer su estado vigente.
 
 ---
 
-# PRÓXIMO PASO RECOMENDADO
+# RESTRICCIONES
 
-Después de revisar este documento, el siguiente documento posible sería:
+La aprobación de este documento no autoriza:
 
-**ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC**
+```text
+REAL CONSISTENCY ENGINE
+AUTOMATIC CONFLICT RESOLUTION
+AUTOMATIC VALIDATION
+REAL DATABASE
+AUTOMATIC GITHUB SYNC
+AUTOMATIC OBSIDIAN SYNC
+AUTOMATIC CORRECTIONS
+AUTONOMOUS AGENTS
+REAL EXECUTION
+PHASE 11
+```
 
-Ese documento definiría con más precisión cómo Robert bloquea acciones que requieren aprobación, cómo se valida autorización explícita y qué pasa cuando una aprobación es parcial, ambigua o revocada.
+Se mantiene:
 
-No debe crearse hasta revisar o aprobar DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC.
+```text
+AUTONOMY_LEVEL = 0
+EXECUTION_AUTHORITY = NONE
+```
+
+---
+
+# ESTADO FÍSICO DEL DOCUMENTO
+
+Esta copia física fue normalizada para reconocer la trazabilidad formal de v0.3.
+
+Sin embargo, debido a que la copia encontrada en el repositorio correspondía físicamente a v0.1, no deben inventarse ni reconstruirse silenciosamente bloques de detalle de v0.2/v0.3 cuyo texto exacto no esté disponible.
+
+La fuente formal para confirmar qué correcciones fueron aprobadas sigue siendo:
+
+```text
+ROBERT_DECISIONS_LOG
+ROBERT_CONTROL_DE_CAMBIOS
+```
+
+hasta completar la reconstrucción documental verificable de todos los bloques de v0.3.
+
+Regla:
+
+```text
+MISSING HISTORICAL BODY
+≠
+PERMISSION TO INVENT CONTENT
+```
 
 ---
 
 # CIERRE
 
-ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.1 define reglas conceptuales para consistencia documental, contradicciones, conflictos, prioridad entre fuentes, resolución de inconsistencias y bloqueos por información contradictoria.
+`ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3` es la especificación técnica documental aprobada para:
 
-Este documento mantiene a Robert en modo documental, manual y supervisado.
+* consistencia documental;
+* contradicciones;
+* prioridad entre fuentes;
+* clasificación de conflictos;
+* precedencia de conflictos;
+* resolución conceptual;
+* bloqueo por información contradictoria.
+
+Robert continúa en:
+
+**Fase 10 — MVP técnico básico en preparación**
+
+```text
+STATUS = APPROVED / INTEGRATED
+IMPLEMENTATION = NONE
+AUTONOMY_LEVEL = 0
+EXECUTION_AUTHORITY = NONE
+```
 
 El usuario mantiene control total.
 
-Robert no ejecuta acciones importantes sin permiso.
+---
+
