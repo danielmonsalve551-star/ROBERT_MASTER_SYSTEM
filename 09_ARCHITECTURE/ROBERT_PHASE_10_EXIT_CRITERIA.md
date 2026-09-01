@@ -1689,9 +1689,13 @@ IMPLEMENTATION_AUTHORIZATION: NOT_GRANTED
 
 PHASE_10_EXIT_AUDIT: PASS
 
-READY_FOR_PHASE_10_CLOSURE_PROPOSAL: YES
+PHASE_10_CLOSED: YES — DECISIÓN #041 / CAMBIO #067
 
-PHASE_10_CLOSED: NO — REQUIRES EXPLICIT HUMAN DECISION
+READY_FOR_IMPLEMENTATION_AUTHORIZATION: YES
+
+IMPLEMENTATION_AUTHORIZATION: NOT_GRANTED
+
+PHASE_11: NOT_STARTED
 
 AUTONOMY_LEVEL: 0
 
@@ -1807,9 +1811,9 @@ NOT GRANTED
 AUTONOMY_LEVEL: 0
 
 EXECUTION_AUTHORITY: NONE
-# 89. Próximo paso
+# 89. Resultado posterior al audit
 
-Después de la aprobación de estos criterios:
+Después de la aprobación de estos criterios se ejecutó:
 
 ```text
 RUN
@@ -1825,19 +1829,19 @@ PER CRITERION
 
 Después deberá resolverse cualquier `FAIL`.
 
-Cuando:
+El resultado registrado fue:
 
 ```text
 ALL BLOCKING CRITERIA = PASS
 ```
 
-se podrá proponer:
+seguido por:
 
 ```text
-PHASE 10 CLOSURE
+PHASE 10 CLOSURE — DECISIÓN #041
 ```
 
-`ROBERT_BUILD_ORDER v0.1` ya fue aprobado mediante DECISIÓN #040 / CAMBIO #065. El audit no autoriza su ejecución.
+`ROBERT_BUILD_ORDER v0.1` fue aprobado mediante DECISIÓN #040 / CAMBIO #065. Ni el audit ni el cierre de Fase 10 autorizan su ejecución.
 
 Finalmente:
 

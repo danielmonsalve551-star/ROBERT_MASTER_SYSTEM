@@ -439,7 +439,7 @@ El sandbox manual fue validado documentalmente y no autorizó ejecución real.
 
 ## Estado
 
-Implementation Readiness / lista para propuesta de cierre, pendiente de decisión humana explícita.
+Cerrada mediante DECISIÓN #041 / CAMBIO #067.
 
 ## Objetivo
 
@@ -467,11 +467,12 @@ Convertir Robert de sistema documental/manual a una primera especificación téc
 * Phase 10 Exit Criteria aprobados
 * Build Order aprobado
 * Audit físico final registrado con resultado PASS
+* Cierre formal autorizado mediante DECISIÓN #041
 * Sin programación autorizada todavía
 
 ## Criterio para cerrar la fase
 
-El audit físico final debe resultar `PASS` y el usuario debe emitir una decisión explícita de cierre. El resultado del audit no autoriza programación ni transición automática.
+Cumplido: el audit físico final resultó `PASS` y el usuario emitió la DECISIÓN #041 de cierre. El cierre no autoriza programación ni transición automática.
 
 ## No autorizado en esta fase todavía
 
