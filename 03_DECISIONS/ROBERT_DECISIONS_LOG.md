@@ -5800,3 +5800,106 @@ ROBERT_IMPLEMENTATION_CONTRACTS v0.1
 STATUS: APPROVED
 DECISION: #038
 CHANGE: #063
+
+# DECISIÓN #039 — Aprobación de ROBERT_PHASE_10_EXIT_CRITERIA v0.1
+
+**Fecha:** 31/08/2026
+**Tipo:** Arquitectónica / Governance / Implementation Readiness
+**Estado:** APROBADA
+**Fase:** 10
+**Documento relacionado:** `09_ARCHITECTURE/ROBERT_PHASE_10_EXIT_CRITERIA.md`
+**Versión:** v0.1
+**Cambio relacionado:** CAMBIO #064
+
+## Decisión
+
+Se aprueba formalmente:
+
+ROBERT_PHASE_10_EXIT_CRITERIA v0.1
+
+como especificación vigente para determinar de forma verificable cuándo Fase 10 puede considerarse lista para cierre.
+
+## Regla principal
+
+PHASE 10 COMPLETE
+≠
+AUTOMATIC PERMISSION TO CODE
+
+y:
+
+PHASE EXIT READINESS
+≠
+PHASE TRANSITION AUTHORIZATION
+
+## Criterios aprobados
+
+La evaluación de salida cubre:
+
+A. CORE ARCHITECTURE
+B. GOVERNANCE
+C. IMPLEMENTATION CONTRACTS
+D. DOCUMENT CONSISTENCY
+E. SECURITY / PERMISSIONS / SCOPE
+F. ERROR / BLOCKING
+G. VALIDATION / TESTING
+H. IMPLEMENTATION BOUNDARIES
+I. BUILD ORDER
+J. FINAL READINESS
+
+## Estados permitidos
+
+PASS
+FAIL
+NOT_APPLICABLE
+
+UNKNOWN
+≠
+PASS
+
+## Condición de cierre
+
+Todos los criterios marcados:
+
+BLOCKING = YES
+
+deben estar en:
+
+PASS
+
+antes de proponer cierre de Fase 10.
+
+## Evidencia
+
+Todo PASS debe estar respaldado por evidencia verificable como:
+
+approved document
+Decision ID
+Change ID
+specific section
+repository verification
+test result
+
+## Readiness final
+
+El resultado final permitido es:
+
+NOT_READY
+
+o:
+
+READY_FOR_IMPLEMENTATION_AUTHORIZATION
+
+No constituye autorización automática para programar.
+
+## Implementación
+
+Incluso después de cerrar Fase 10 deberá existir una decisión humana separada para:
+
+AUTHORIZE INITIAL IMPLEMENTATION
+
+## Estado
+
+AUTONOMY_LEVEL = 0
+EXECUTION_AUTHORITY = NONE
+
+Esta decisión no autoriza código, ejecución externa ni transición automática de fase.
