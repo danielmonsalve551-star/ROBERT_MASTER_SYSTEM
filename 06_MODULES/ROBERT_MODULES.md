@@ -17,7 +17,7 @@ Tags: #robert/orbita-4 #capa/3 #tipo/maestro #robert/modulos #robert/capacidades
 [[ROBERT_MODEL_INTERFACE_SPEC]]
 [[ROBERT_TOOL_ARCHITECTURE]]
 [[ROBERT_TECHNICAL_COMPONENTS_SPEC]]
-[[ROBERT_VISUAL]]
+[[ROBERT_VISUAL_REFERENCE]]
 
 # OBJETIVO
 

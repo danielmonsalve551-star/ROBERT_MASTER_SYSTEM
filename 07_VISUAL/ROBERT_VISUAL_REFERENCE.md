@@ -1,4 +1,4 @@
-# ROBERT_VISUAL — DIRECCIÓN VISUAL DEL SISTEMA
+# ROBERT_VISUAL_REFERENCE — DIRECCIÓN VISUAL DEL SISTEMA
 
 Versión: 0.2  
 Estado: Documento visual en revisión — CONVENCIÓN VISUAL v0.2 aprobada e integrada  
@@ -1459,7 +1459,7 @@ ROBERT_VISUAL
 
 el enlace correcto es:
 
-[[ROBERT_VISUAL]]
+[[ROBERT_VISUAL_REFERENCE]]
 
 No usar nombres antiguos o variantes con espacios si el archivo real ya fue renombrado con guion bajo.
 

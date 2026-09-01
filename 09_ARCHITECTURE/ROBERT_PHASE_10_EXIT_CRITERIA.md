@@ -1613,7 +1613,7 @@ BUILD ORDER
 
 ---
 
-# 82. Current Preliminary Evaluation
+# 82. Current Evaluation State
 
 Con la arquitectura actualmente aprobada:
 
@@ -1646,9 +1646,15 @@ EVIDENCE: DECISIÓN #038 / CAMBIO #063
 NOTE: adversarial contract divergences reconciled before approval
 
 
-Todavía no debe marcarse automáticamente el resto.
+Los criterios restantes deben evaluarse mediante el audit físico final registrado; no se consideran aprobados por inferencia.
 
-Especialmente permanecen bajo revisión:
+La evaluación completa se registra en:
+
+```text
+09_ARCHITECTURE/ROBERT_PHASE_10_EXIT_AUDIT.md
+```
+
+Antes de ese registro permanecían bajo revisión:
 
 ```text
 A9
@@ -1673,13 +1679,19 @@ TOOL_ARCHITECTURE: CLOSED
 
 IMPLEMENTATION_CONTRACTS: CLOSED
 
-DOCUMENT_NORMALIZATION: IN_PROGRESS
+DOCUMENT_NORMALIZATION: COMPLETE
 
-PHASE_10_EXIT_CRITERIA: PROPOSED
+PHASE_10_EXIT_CRITERIA: APPROVED
 
-BUILD_ORDER: NOT_DEFINED
+BUILD_ORDER: APPROVED
 
 IMPLEMENTATION_AUTHORIZATION: NOT_GRANTED
+
+PHASE_10_EXIT_AUDIT: PASS
+
+READY_FOR_PHASE_10_CLOSURE_PROPOSAL: YES
+
+PHASE_10_CLOSED: NO — REQUIRES EXPLICIT HUMAN DECISION
 
 AUTONOMY_LEVEL: 0
 
@@ -1797,7 +1809,7 @@ AUTONOMY_LEVEL: 0
 EXECUTION_AUTHORITY: NONE
 # 89. Próximo paso
 
-Después de revisión adversarial y aprobación:
+Después de la aprobación de estos criterios:
 
 ```text
 RUN
@@ -1825,13 +1837,7 @@ se podrá proponer:
 PHASE 10 CLOSURE
 ```
 
-Después, y solo después:
-
-```text
-DEFINE / APPROVE BUILD ORDER
-```
-
-si no se hubiera aprobado previamente.
+`ROBERT_BUILD_ORDER v0.1` ya fue aprobado mediante DECISIÓN #040 / CAMBIO #065. El audit no autoriza su ejecución.
 
 Finalmente:
 
