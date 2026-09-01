@@ -1,0 +1,144 @@
+{
+  "$defs": {
+    "ContractName": {
+      "enum": [
+        "CONTRACT_ENVELOPE",
+        "TASK",
+        "REQUEST_CONTEXT",
+        "ORCHESTRATOR_REQUEST",
+        "ORCHESTRATOR_RESULT",
+        "ROUTE",
+        "AGENT_REQUEST",
+        "AGENT_RESULT",
+        "SKILL_INVOCATION",
+        "SKILL_RESULT",
+        "MODEL_REQUEST",
+        "MODEL_RESPONSE",
+        "TOOL_REQUEST",
+        "TOOL_RESULT",
+        "MEMORY_CANDIDATE",
+        "MEMORY_RECORD",
+        "MEMORY_RETRIEVAL_REQUEST",
+        "MEMORY_RETRIEVAL_RESULT",
+        "VALIDATION_REQUEST",
+        "VALIDATION_RESULT",
+        "PERMISSION_CHECK",
+        "SCOPE_CHECK",
+        "RISK_ASSESSMENT",
+        "APPROVAL_REQUEST",
+        "APPROVAL_RESULT",
+        "ERROR",
+        "BLOCK",
+        "AUDIT_EVENT",
+        "EVIDENCE_REF"
+      ],
+      "title": "ContractName",
+      "type": "string"
+    },
+    "JsonValue": {}
+  },
+  "$id": "schemas/contracts/transport/contract_envelope.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "contract_version": {
+      "const": "0.1",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "correlation_id": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Correlation Id",
+      "type": "string"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "message_id": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Message Id",
+      "type": "string"
+    },
+    "message_type": {
+      "$ref": "#/$defs/ContractName"
+    },
+    "metadata": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Metadata",
+      "type": "object"
+    },
+    "parent_id": {
+      "anyOf": [
+        {
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Parent Id"
+    },
+    "payload": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Payload",
+      "type": "object"
+    },
+    "phase": {
+      "minLength": 1,
+      "title": "Phase",
+      "type": "string"
+    },
+    "scope": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Scope",
+      "type": "object"
+    },
+    "source_component": {
+      "minLength": 1,
+      "title": "Source Component",
+      "type": "string"
+    },
+    "target_component": {
+      "minLength": 1,
+      "title": "Target Component",
+      "type": "string"
+    },
+    "task_id": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Task Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "contract_version",
+    "message_id",
+    "message_type",
+    "task_id",
+    "parent_id",
+    "correlation_id",
+    "created_at",
+    "source_component",
+    "target_component",
+    "phase",
+    "scope",
+    "metadata",
+    "payload"
+  ],
+  "title": "ContractEnvelope",
+  "type": "object",
+  "x-robert-contract-name": "CONTRACT_ENVELOPE",
+  "x-robert-contract-owner": "transport"
+}

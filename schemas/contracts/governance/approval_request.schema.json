@@ -1,0 +1,107 @@
+{
+  "$defs": {
+    "JsonValue": {}
+  },
+  "$id": "schemas/contracts/governance/approval_request.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "approval_id": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Approval Id",
+      "type": "string"
+    },
+    "context_summary": {
+      "minLength": 1,
+      "title": "Context Summary",
+      "type": "string"
+    },
+    "contract_version": {
+      "const": "0.1",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "expires_at": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Expires At"
+    },
+    "operation": {
+      "minLength": 1,
+      "title": "Operation",
+      "type": "string"
+    },
+    "purpose": {
+      "minLength": 1,
+      "title": "Purpose",
+      "type": "string"
+    },
+    "requested_by": {
+      "minLength": 1,
+      "title": "Requested By",
+      "type": "string"
+    },
+    "required_approver": {
+      "minLength": 1,
+      "title": "Required Approver",
+      "type": "string"
+    },
+    "risk": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Risk",
+      "type": "object"
+    },
+    "scope": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Scope",
+      "type": "object"
+    },
+    "side_effects": {
+      "items": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Side Effects",
+      "type": "array"
+    },
+    "target": {
+      "$ref": "#/$defs/JsonValue"
+    },
+    "task_id": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Task Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "contract_version",
+    "approval_id",
+    "task_id",
+    "operation",
+    "target",
+    "purpose",
+    "scope",
+    "risk",
+    "side_effects",
+    "requested_by",
+    "required_approver",
+    "expires_at",
+    "context_summary"
+  ],
+  "title": "ApprovalRequest",
+  "type": "object",
+  "x-robert-contract-name": "APPROVAL_REQUEST",
+  "x-robert-contract-owner": "governance"
+}

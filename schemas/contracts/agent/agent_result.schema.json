@@ -1,0 +1,144 @@
+{
+  "$defs": {
+    "JsonValue": {}
+  },
+  "$id": "schemas/contracts/agent/agent_result.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "agent_id": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Agent Id",
+      "type": "string"
+    },
+    "analysis": {
+      "$ref": "#/$defs/JsonValue"
+    },
+    "audit_refs": {
+      "items": {
+        "minLength": 1,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+        "type": "string"
+      },
+      "title": "Audit Refs",
+      "type": "array"
+    },
+    "contract_version": {
+      "const": "0.1",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "errors": {
+      "items": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Errors",
+      "type": "array"
+    },
+    "evidence_refs": {
+      "items": {
+        "minLength": 1,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+        "type": "string"
+      },
+      "title": "Evidence Refs",
+      "type": "array"
+    },
+    "memory_candidates": {
+      "items": {
+        "minLength": 1,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+        "type": "string"
+      },
+      "title": "Memory Candidates",
+      "type": "array"
+    },
+    "model_refs": {
+      "items": {
+        "minLength": 1,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+        "type": "string"
+      },
+      "title": "Model Refs",
+      "type": "array"
+    },
+    "output": {
+      "$ref": "#/$defs/JsonValue"
+    },
+    "recommendations": {
+      "items": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Recommendations",
+      "type": "array"
+    },
+    "skill_results": {
+      "items": {
+        "minLength": 1,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+        "type": "string"
+      },
+      "title": "Skill Results",
+      "type": "array"
+    },
+    "status": {
+      "minLength": 1,
+      "title": "Status",
+      "type": "string"
+    },
+    "task_id": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Task Id",
+      "type": "string"
+    },
+    "tool_requests": {
+      "items": {
+        "minLength": 1,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+        "type": "string"
+      },
+      "title": "Tool Requests",
+      "type": "array"
+    },
+    "validation_requests": {
+      "items": {
+        "minLength": 1,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+        "type": "string"
+      },
+      "title": "Validation Requests",
+      "type": "array"
+    },
+    "warnings": {
+      "items": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Warnings",
+      "type": "array"
+    }
+  },
+  "required": [
+    "contract_version",
+    "task_id",
+    "agent_id",
+    "status",
+    "analysis",
+    "output",
+    "recommendations",
+    "skill_results",
+    "model_refs",
+    "tool_requests",
+    "memory_candidates",
+    "validation_requests",
+    "warnings",
+    "errors",
+    "evidence_refs",
+    "audit_refs"
+  ],
+  "title": "AgentResult",
+  "type": "object",
+  "x-robert-contract-name": "AGENT_RESULT",
+  "x-robert-contract-owner": "agent"
+}

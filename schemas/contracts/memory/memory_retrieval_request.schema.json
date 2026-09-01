@@ -1,0 +1,134 @@
+{
+  "$defs": {
+    "JsonValue": {},
+    "MemoryType": {
+      "enum": [
+        "CORE",
+        "SEMANTIC",
+        "EPISODIC",
+        "DECISIONAL",
+        "PROCEDURAL"
+      ],
+      "title": "MemoryType",
+      "type": "string"
+    },
+    "Retention": {
+      "enum": [
+        "ACTIVE",
+        "TEMPORARY",
+        "PERSISTENT"
+      ],
+      "title": "Retention",
+      "type": "string"
+    }
+  },
+  "$id": "schemas/contracts/memory/memory_retrieval_request.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "confidence_requirement": {
+      "anyOf": [
+        {
+          "maximum": 1.0,
+          "minimum": 0.0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Confidence Requirement"
+    },
+    "contract_version": {
+      "const": "0.1",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "freshness_requirement": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Freshness Requirement",
+      "type": "object"
+    },
+    "max_results": {
+      "minimum": 1,
+      "title": "Max Results",
+      "type": "integer"
+    },
+    "memory_types": {
+      "items": {
+        "$ref": "#/$defs/MemoryType"
+      },
+      "title": "Memory Types",
+      "type": "array"
+    },
+    "purpose": {
+      "minLength": 1,
+      "title": "Purpose",
+      "type": "string"
+    },
+    "query": {
+      "minLength": 1,
+      "title": "Query",
+      "type": "string"
+    },
+    "request_id": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Request Id",
+      "type": "string"
+    },
+    "requester": {
+      "minLength": 1,
+      "title": "Requester",
+      "type": "string"
+    },
+    "retention_classes": {
+      "items": {
+        "$ref": "#/$defs/Retention"
+      },
+      "title": "Retention Classes",
+      "type": "array"
+    },
+    "scope": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Scope",
+      "type": "object"
+    },
+    "sensitivity_constraints": {
+      "items": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Sensitivity Constraints",
+      "type": "array"
+    },
+    "task_id": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Task Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "contract_version",
+    "request_id",
+    "task_id",
+    "requester",
+    "query",
+    "memory_types",
+    "retention_classes",
+    "scope",
+    "freshness_requirement",
+    "confidence_requirement",
+    "sensitivity_constraints",
+    "max_results",
+    "purpose"
+  ],
+  "title": "MemoryRetrievalRequest",
+  "type": "object",
+  "x-robert-contract-name": "MEMORY_RETRIEVAL_REQUEST",
+  "x-robert-contract-owner": "memory"
+}

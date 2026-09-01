@@ -1,0 +1,134 @@
+{
+  "$defs": {
+    "JsonValue": {}
+  },
+  "$id": "schemas/contracts/orchestration/route.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "agent": {
+      "anyOf": [
+        {
+          "minLength": 1,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Agent"
+    },
+    "constraints": {
+      "items": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Constraints",
+      "type": "array"
+    },
+    "contract_version": {
+      "const": "0.1",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "fallbacks": {
+      "items": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Fallbacks",
+      "type": "array"
+    },
+    "memory_requirements": {
+      "items": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Memory Requirements",
+      "type": "array"
+    },
+    "model": {
+      "anyOf": [
+        {
+          "minLength": 1,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Model"
+    },
+    "module": {
+      "anyOf": [
+        {
+          "minLength": 1,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Module"
+    },
+    "route_id": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Route Id",
+      "type": "string"
+    },
+    "sequence": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "title": "Sequence",
+      "type": "array"
+    },
+    "skills": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "title": "Skills",
+      "type": "array"
+    },
+    "task_id": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Task Id",
+      "type": "string"
+    },
+    "tool_capabilities": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "title": "Tool Capabilities",
+      "type": "array"
+    },
+    "validation_requirements": {
+      "items": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Validation Requirements",
+      "type": "array"
+    }
+  },
+  "required": [
+    "contract_version",
+    "route_id",
+    "task_id",
+    "module",
+    "agent",
+    "skills",
+    "model",
+    "tool_capabilities",
+    "memory_requirements",
+    "validation_requirements",
+    "sequence",
+    "fallbacks",
+    "constraints"
+  ],
+  "title": "Route",
+  "type": "object",
+  "x-robert-contract-name": "ROUTE",
+  "x-robert-contract-owner": "orchestration"
+}

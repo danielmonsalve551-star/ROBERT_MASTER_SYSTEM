@@ -1,0 +1,56 @@
+{
+  "$id": "schemas/contracts/audit/evidence_ref.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "contract_version": {
+      "const": "0.1",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "freshness": {
+      "minLength": 1,
+      "title": "Freshness",
+      "type": "string"
+    },
+    "ref_id": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Ref Id",
+      "type": "string"
+    },
+    "source_authority": {
+      "minLength": 1,
+      "title": "Source Authority",
+      "type": "string"
+    },
+    "source_location": {
+      "minLength": 1,
+      "title": "Source Location",
+      "type": "string"
+    },
+    "source_type": {
+      "minLength": 1,
+      "title": "Source Type",
+      "type": "string"
+    }
+  },
+  "required": [
+    "contract_version",
+    "ref_id",
+    "source_type",
+    "source_location",
+    "source_authority",
+    "created_at",
+    "freshness"
+  ],
+  "title": "EvidenceRef",
+  "type": "object",
+  "x-robert-contract-name": "EVIDENCE_REF",
+  "x-robert-contract-owner": "audit"
+}

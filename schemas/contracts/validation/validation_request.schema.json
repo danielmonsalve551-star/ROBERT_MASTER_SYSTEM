@@ -1,0 +1,194 @@
+{
+  "$defs": {
+    "JsonValue": {},
+    "ReviewerRole": {
+      "enum": [
+        "RULE_SYSTEM",
+        "AGENT",
+        "MODEL",
+        "USER",
+        "AUTHORIZED_ROBERT_FUNCTION"
+      ],
+      "title": "ReviewerRole",
+      "type": "string"
+    },
+    "ValidationType": {
+      "enum": [
+        "RULE",
+        "CANONICAL",
+        "STRUCTURE",
+        "COMPLETENESS",
+        "CONSISTENCY",
+        "EVIDENCE",
+        "SOURCE",
+        "SECURITY",
+        "SCOPE",
+        "PERMISSION",
+        "MEMORY",
+        "MODEL_OUTPUT"
+      ],
+      "title": "ValidationType",
+      "type": "string"
+    }
+  },
+  "$id": "schemas/contracts/validation/validation_request.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "blocking_policy": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Blocking Policy",
+      "type": "object"
+    },
+    "canonical_requirements": {
+      "items": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Canonical Requirements",
+      "type": "array"
+    },
+    "constraints": {
+      "items": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Constraints",
+      "type": "array"
+    },
+    "contract_version": {
+      "const": "0.1",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "criteria": {
+      "items": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Criteria",
+      "type": "array"
+    },
+    "evidence_requirements": {
+      "items": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Evidence Requirements",
+      "type": "array"
+    },
+    "expected_contract": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Expected Contract",
+      "type": "object"
+    },
+    "permission_context": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Permission Context",
+      "type": "object"
+    },
+    "requester": {
+      "minLength": 1,
+      "title": "Requester",
+      "type": "string"
+    },
+    "reviewer_roles": {
+      "items": {
+        "$ref": "#/$defs/ReviewerRole"
+      },
+      "title": "Reviewer Roles",
+      "type": "array"
+    },
+    "risk_context": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Risk Context",
+      "type": "object"
+    },
+    "scope_context": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Scope Context",
+      "type": "object"
+    },
+    "security_requirements": {
+      "items": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Security Requirements",
+      "type": "array"
+    },
+    "severity": {
+      "minLength": 1,
+      "title": "Severity",
+      "type": "string"
+    },
+    "source_requirements": {
+      "items": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Source Requirements",
+      "type": "array"
+    },
+    "target_ref": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Target Ref",
+      "type": "string"
+    },
+    "target_type": {
+      "minLength": 1,
+      "title": "Target Type",
+      "type": "string"
+    },
+    "task_id": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Task Id",
+      "type": "string"
+    },
+    "validation_id": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Validation Id",
+      "type": "string"
+    },
+    "validation_types": {
+      "items": {
+        "$ref": "#/$defs/ValidationType"
+      },
+      "title": "Validation Types",
+      "type": "array"
+    }
+  },
+  "required": [
+    "contract_version",
+    "validation_id",
+    "task_id",
+    "requester",
+    "target_type",
+    "target_ref",
+    "validation_types",
+    "reviewer_roles",
+    "criteria",
+    "constraints",
+    "evidence_requirements",
+    "source_requirements",
+    "canonical_requirements",
+    "security_requirements",
+    "risk_context",
+    "permission_context",
+    "scope_context",
+    "expected_contract",
+    "severity",
+    "blocking_policy"
+  ],
+  "title": "ValidationRequest",
+  "type": "object",
+  "x-robert-contract-name": "VALIDATION_REQUEST",
+  "x-robert-contract-owner": "validation"
+}

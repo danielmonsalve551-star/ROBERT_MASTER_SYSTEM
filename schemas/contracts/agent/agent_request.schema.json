@@ -1,0 +1,123 @@
+{
+  "$defs": {
+    "JsonValue": {}
+  },
+  "$id": "schemas/contracts/agent/agent_request.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "agent_id": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Agent Id",
+      "type": "string"
+    },
+    "allowed_model_capabilities": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "title": "Allowed Model Capabilities",
+      "type": "array"
+    },
+    "allowed_skills": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "title": "Allowed Skills",
+      "type": "array"
+    },
+    "allowed_tool_requirements": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "title": "Allowed Tool Requirements",
+      "type": "array"
+    },
+    "authorized_scope": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Authorized Scope",
+      "type": "object"
+    },
+    "constraints": {
+      "items": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Constraints",
+      "type": "array"
+    },
+    "context": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Context",
+      "type": "object"
+    },
+    "contract_version": {
+      "const": "0.1",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "expected_output": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Expected Output",
+      "type": "object"
+    },
+    "memory_context": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Memory Context",
+      "type": "object"
+    },
+    "objective": {
+      "minLength": 1,
+      "title": "Objective",
+      "type": "string"
+    },
+    "role": {
+      "minLength": 1,
+      "title": "Role",
+      "type": "string"
+    },
+    "task_id": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Task Id",
+      "type": "string"
+    },
+    "validation_requirements": {
+      "items": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Validation Requirements",
+      "type": "array"
+    }
+  },
+  "required": [
+    "contract_version",
+    "task_id",
+    "agent_id",
+    "role",
+    "objective",
+    "authorized_scope",
+    "context",
+    "constraints",
+    "allowed_skills",
+    "allowed_model_capabilities",
+    "allowed_tool_requirements",
+    "memory_context",
+    "validation_requirements",
+    "expected_output"
+  ],
+  "title": "AgentRequest",
+  "type": "object",
+  "x-robert-contract-name": "AGENT_REQUEST",
+  "x-robert-contract-owner": "agent"
+}

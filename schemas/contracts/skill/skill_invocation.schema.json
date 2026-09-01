@@ -1,0 +1,122 @@
+{
+  "$defs": {
+    "JsonValue": {}
+  },
+  "$id": "schemas/contracts/skill/skill_invocation.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "constraints": {
+      "items": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Constraints",
+      "type": "array"
+    },
+    "context": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Context",
+      "type": "object"
+    },
+    "contract_version": {
+      "const": "0.1",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "expected_output": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Expected Output",
+      "type": "object"
+    },
+    "inputs": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Inputs",
+      "type": "object"
+    },
+    "memory_requirements": {
+      "items": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Memory Requirements",
+      "type": "array"
+    },
+    "model_requirements": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "title": "Model Requirements",
+      "type": "array"
+    },
+    "objective": {
+      "minLength": 1,
+      "title": "Objective",
+      "type": "string"
+    },
+    "preconditions": {
+      "items": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Preconditions",
+      "type": "array"
+    },
+    "skill_id": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Skill Id",
+      "type": "string"
+    },
+    "skill_version": {
+      "minLength": 1,
+      "title": "Skill Version",
+      "type": "string"
+    },
+    "task_id": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Task Id",
+      "type": "string"
+    },
+    "tool_requirements": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "title": "Tool Requirements",
+      "type": "array"
+    },
+    "validation_requirements": {
+      "items": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Validation Requirements",
+      "type": "array"
+    }
+  },
+  "required": [
+    "contract_version",
+    "task_id",
+    "skill_id",
+    "skill_version",
+    "objective",
+    "inputs",
+    "context",
+    "preconditions",
+    "constraints",
+    "tool_requirements",
+    "model_requirements",
+    "memory_requirements",
+    "expected_output",
+    "validation_requirements"
+  ],
+  "title": "SkillInvocation",
+  "type": "object",
+  "x-robert-contract-name": "SKILL_INVOCATION",
+  "x-robert-contract-owner": "skill"
+}

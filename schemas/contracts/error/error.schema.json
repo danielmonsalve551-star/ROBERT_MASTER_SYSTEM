@@ -1,0 +1,109 @@
+{
+  "$defs": {
+    "JsonValue": {}
+  },
+  "$id": "schemas/contracts/error/error.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "code": {
+      "minLength": 1,
+      "title": "Code",
+      "type": "string"
+    },
+    "contract_version": {
+      "const": "0.1",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "details": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Details",
+      "type": "object"
+    },
+    "error_id": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Error Id",
+      "type": "string"
+    },
+    "error_type": {
+      "minLength": 1,
+      "title": "Error Type",
+      "type": "string"
+    },
+    "fallback_allowed": {
+      "title": "Fallback Allowed",
+      "type": "boolean"
+    },
+    "message": {
+      "minLength": 1,
+      "title": "Message",
+      "type": "string"
+    },
+    "recoverable": {
+      "title": "Recoverable",
+      "type": "boolean"
+    },
+    "related_ref": {
+      "anyOf": [
+        {
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Related Ref"
+    },
+    "retry_allowed": {
+      "title": "Retry Allowed",
+      "type": "boolean"
+    },
+    "severity": {
+      "minLength": 1,
+      "title": "Severity",
+      "type": "string"
+    },
+    "source_component": {
+      "minLength": 1,
+      "title": "Source Component",
+      "type": "string"
+    },
+    "task_id": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Task Id",
+      "type": "string"
+    },
+    "timestamp": {
+      "format": "date-time",
+      "title": "Timestamp",
+      "type": "string"
+    }
+  },
+  "required": [
+    "contract_version",
+    "error_id",
+    "task_id",
+    "source_component",
+    "error_type",
+    "code",
+    "message",
+    "severity",
+    "recoverable",
+    "retry_allowed",
+    "fallback_allowed",
+    "details",
+    "related_ref",
+    "timestamp"
+  ],
+  "title": "Error",
+  "type": "object",
+  "x-robert-contract-name": "ERROR",
+  "x-robert-contract-owner": "error"
+}

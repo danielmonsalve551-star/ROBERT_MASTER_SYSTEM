@@ -1,0 +1,127 @@
+{
+  "$defs": {
+    "JsonValue": {},
+    "MemoryType": {
+      "enum": [
+        "CORE",
+        "SEMANTIC",
+        "EPISODIC",
+        "DECISIONAL",
+        "PROCEDURAL"
+      ],
+      "title": "MemoryType",
+      "type": "string"
+    },
+    "Retention": {
+      "enum": [
+        "ACTIVE",
+        "TEMPORARY",
+        "PERSISTENT"
+      ],
+      "title": "Retention",
+      "type": "string"
+    }
+  },
+  "$id": "schemas/contracts/memory/memory_candidate.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "candidate_id": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Candidate Id",
+      "type": "string"
+    },
+    "confidence": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "title": "Confidence",
+      "type": "number"
+    },
+    "conflict_state": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Conflict State",
+      "type": "object"
+    },
+    "content": {
+      "$ref": "#/$defs/JsonValue"
+    },
+    "contract_version": {
+      "const": "0.1",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "evidence_refs": {
+      "items": {
+        "minLength": 1,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+        "type": "string"
+      },
+      "title": "Evidence Refs",
+      "type": "array"
+    },
+    "memory_type": {
+      "$ref": "#/$defs/MemoryType"
+    },
+    "proposed_retention": {
+      "$ref": "#/$defs/Retention"
+    },
+    "reason": {
+      "minLength": 1,
+      "title": "Reason",
+      "type": "string"
+    },
+    "scope": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Scope",
+      "type": "object"
+    },
+    "sensitivity": {
+      "minLength": 1,
+      "title": "Sensitivity",
+      "type": "string"
+    },
+    "source": {
+      "minLength": 1,
+      "title": "Source",
+      "type": "string"
+    },
+    "task_id": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Task Id",
+      "type": "string"
+    },
+    "validation_state": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Validation State",
+      "type": "object"
+    }
+  },
+  "required": [
+    "contract_version",
+    "candidate_id",
+    "task_id",
+    "source",
+    "content",
+    "memory_type",
+    "proposed_retention",
+    "reason",
+    "confidence",
+    "sensitivity",
+    "scope",
+    "evidence_refs",
+    "conflict_state",
+    "validation_state"
+  ],
+  "title": "MemoryCandidate",
+  "type": "object",
+  "x-robert-contract-name": "MEMORY_CANDIDATE",
+  "x-robert-contract-owner": "memory"
+}

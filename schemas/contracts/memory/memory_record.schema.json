@@ -1,0 +1,135 @@
+{
+  "$defs": {
+    "JsonValue": {},
+    "MemoryType": {
+      "enum": [
+        "CORE",
+        "SEMANTIC",
+        "EPISODIC",
+        "DECISIONAL",
+        "PROCEDURAL"
+      ],
+      "title": "MemoryType",
+      "type": "string"
+    },
+    "Retention": {
+      "enum": [
+        "ACTIVE",
+        "TEMPORARY",
+        "PERSISTENT"
+      ],
+      "title": "Retention",
+      "type": "string"
+    }
+  },
+  "$id": "schemas/contracts/memory/memory_record.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "authority_metadata": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Authority Metadata",
+      "type": "object"
+    },
+    "content": {
+      "$ref": "#/$defs/JsonValue"
+    },
+    "contract_version": {
+      "const": "0.1",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "decision_refs": {
+      "items": {
+        "minLength": 1,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+        "type": "string"
+      },
+      "title": "Decision Refs",
+      "type": "array"
+    },
+    "evidence_refs": {
+      "items": {
+        "minLength": 1,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+        "type": "string"
+      },
+      "title": "Evidence Refs",
+      "type": "array"
+    },
+    "memory_id": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Memory Id",
+      "type": "string"
+    },
+    "memory_type": {
+      "$ref": "#/$defs/MemoryType"
+    },
+    "retention": {
+      "$ref": "#/$defs/Retention"
+    },
+    "scope": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Scope",
+      "type": "object"
+    },
+    "sensitivity": {
+      "minLength": 1,
+      "title": "Sensitivity",
+      "type": "string"
+    },
+    "source": {
+      "minLength": 1,
+      "title": "Source",
+      "type": "string"
+    },
+    "status": {
+      "minLength": 1,
+      "title": "Status",
+      "type": "string"
+    },
+    "updated_at": {
+      "format": "date-time",
+      "title": "Updated At",
+      "type": "string"
+    },
+    "validation_state": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Validation State",
+      "type": "object"
+    }
+  },
+  "required": [
+    "contract_version",
+    "memory_id",
+    "content",
+    "memory_type",
+    "retention",
+    "created_at",
+    "updated_at",
+    "source",
+    "authority_metadata",
+    "scope",
+    "sensitivity",
+    "evidence_refs",
+    "decision_refs",
+    "validation_state",
+    "status"
+  ],
+  "title": "MemoryRecord",
+  "type": "object",
+  "x-robert-contract-name": "MEMORY_RECORD",
+  "x-robert-contract-owner": "memory"
+}

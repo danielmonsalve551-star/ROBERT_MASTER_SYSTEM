@@ -5,7 +5,7 @@
 **Tipo:** Especificación de orden de construcción / Implementation Readiness
 **Ubicación propuesta:** `09_ARCHITECTURE/ROBERT_BUILD_ORDER.md`
 **Fase relacionada:** Fase 10 — Implementation Readiness
-**Implementación:** STAGE 0 COMPLETE / STAGE 1 NOT AUTHORIZED
+**Implementación:** STAGES 0–1 COMPLETE / STAGE 2 NOT AUTHORIZED
 **Autonomy Level:** 0
 **Execution Authority:** NONE
 
@@ -2415,13 +2415,13 @@ PHASE: 10
 
 BUILD_ORDER: APPROVED
 
-IMPLEMENTATION: STAGE 0 COMPLETE
+IMPLEMENTATION: STAGES 0–1 COMPLETE
 
-IMPLEMENTATION_AUTHORIZATION: GRANTED — STAGE 0 ONLY
+IMPLEMENTATION_AUTHORIZATION: GRANTED — STAGES 0–1 ONLY
 
-AUTHORIZED_BUILD_BOUNDARY: STAGE 0 ONLY
+AUTHORIZED_BUILD_BOUNDARY: STAGE 1
 
-STAGE_1: NOT AUTHORIZED
+STAGE_2: NOT AUTHORIZED
 
 REAL_TOOL_EXECUTION: DISABLED
 
@@ -2429,7 +2429,7 @@ AUTONOMY_LEVEL: 0
 
 EXECUTION_AUTHORITY: NONE
 
-# 127. Estado posterior a la autorización inicial
+# 127. Estado posterior a las autorizaciones iniciales
 
 Stage 0 fue autorizado mediante:
 
@@ -2442,13 +2442,21 @@ Resultado:
 
 ```text
 STAGE_0 = COMPLETE
-STAGE_1 = NOT AUTHORIZED
+STAGE_1 = COMPLETE
+STAGE_2 = NOT AUTHORIZED
+```
+
+Stage 1 fue autorizado e implementado mediante:
+
+```text
+DECISIÓN #043
+CAMBIO #069
 ```
 
 La siguiente transición permitida es una decisión humana separada sobre:
 
 ```text
-AUTHORIZE STAGE 1 — CANONICAL CONTRACTS?
+AUTHORIZE STAGE 2?
 ```
 
-Hasta entonces, el límite obligatorio es `STAGE 0 ONLY`.
+Hasta entonces, el límite obligatorio es `STAGE 1`.

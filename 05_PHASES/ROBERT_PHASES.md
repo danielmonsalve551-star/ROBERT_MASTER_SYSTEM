@@ -470,7 +470,9 @@ Convertir Robert de sistema documental/manual a una primera especificación téc
 * Cierre formal autorizado mediante DECISIÓN #041
 * Stage 0 autorizado mediante DECISIÓN #042
 * Stage 0 implementado y verificado mediante CAMBIO #068
-* Stage 1 y cualquier alcance adicional no autorizados
+* Stage 1 autorizado mediante DECISIÓN #043
+* Stage 1 implementado y verificado mediante CAMBIO #069
+* Stage 2 y cualquier alcance adicional no autorizados
 
 ## Criterio para cerrar la fase
 

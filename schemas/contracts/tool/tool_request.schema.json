@@ -1,0 +1,148 @@
+{
+  "$defs": {
+    "JsonValue": {}
+  },
+  "$id": "schemas/contracts/tool/tool_request.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "approval_requirements": {
+      "items": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Approval Requirements",
+      "type": "array"
+    },
+    "contract_version": {
+      "const": "0.1",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "data_sensitivity": {
+      "minLength": 1,
+      "title": "Data Sensitivity",
+      "type": "string"
+    },
+    "expected_result": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Expected Result",
+      "type": "object"
+    },
+    "inputs": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Inputs",
+      "type": "object"
+    },
+    "operation": {
+      "minLength": 1,
+      "title": "Operation",
+      "type": "string"
+    },
+    "permission_requirements": {
+      "items": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Permission Requirements",
+      "type": "array"
+    },
+    "purpose": {
+      "minLength": 1,
+      "title": "Purpose",
+      "type": "string"
+    },
+    "request_id": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Request Id",
+      "type": "string"
+    },
+    "requester": {
+      "minLength": 1,
+      "title": "Requester",
+      "type": "string"
+    },
+    "retry_policy": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Retry Policy",
+      "type": "object"
+    },
+    "risk_context": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Risk Context",
+      "type": "object"
+    },
+    "scope_requirements": {
+      "items": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Scope Requirements",
+      "type": "array"
+    },
+    "side_effect_class": {
+      "minLength": 1,
+      "title": "Side Effect Class",
+      "type": "string"
+    },
+    "target": {
+      "$ref": "#/$defs/JsonValue"
+    },
+    "task_id": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Task Id",
+      "type": "string"
+    },
+    "timeout_policy": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Timeout Policy",
+      "type": "object"
+    },
+    "tool_capability": {
+      "minLength": 1,
+      "title": "Tool Capability",
+      "type": "string"
+    },
+    "validation_requirements": {
+      "items": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Validation Requirements",
+      "type": "array"
+    }
+  },
+  "required": [
+    "contract_version",
+    "request_id",
+    "task_id",
+    "requester",
+    "tool_capability",
+    "operation",
+    "target",
+    "inputs",
+    "purpose",
+    "expected_result",
+    "permission_requirements",
+    "scope_requirements",
+    "risk_context",
+    "approval_requirements",
+    "side_effect_class",
+    "data_sensitivity",
+    "timeout_policy",
+    "retry_policy",
+    "validation_requirements"
+  ],
+  "title": "ToolRequest",
+  "type": "object",
+  "x-robert-contract-name": "TOOL_REQUEST",
+  "x-robert-contract-owner": "tool"
+}

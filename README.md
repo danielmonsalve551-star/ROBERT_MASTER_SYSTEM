@@ -29,14 +29,14 @@ BUILD_ORDER: APPROVED
 
 LATEST_ARCHITECTURAL_DECISION: #040
 LATEST_GOVERNANCE_DECISION: #041
-LATEST_IMPLEMENTATION_DECISION: #042
-LATEST_CHANGE: #068
+LATEST_IMPLEMENTATION_DECISION: #043
+LATEST_CHANGE: #069
 
 KNOWN_ARCHITECTURAL_BLOCKERS: 0
 
-TECHNICAL_IMPLEMENTATION: STAGE 0 COMPLETE
-AUTHORIZED_BUILD_BOUNDARY: STAGE 0 ONLY
-STAGE_1: NOT AUTHORIZED
+TECHNICAL_IMPLEMENTATION: STAGES 0–1 COMPLETE
+AUTHORIZED_BUILD_BOUNDARY: STAGE 1
+STAGE_2: NOT AUTHORIZED
 
 PHASE_10_EXIT_AUDIT: PASS
 
@@ -46,7 +46,7 @@ READY_FOR_IMPLEMENTATION_AUTHORIZATION:
 YES
 
 IMPLEMENTATION_AUTHORIZATION:
-GRANTED — STAGE 0 ONLY
+GRANTED — STAGES 0–1 ONLY
 
 AUTONOMY_LEVEL: 0
 EXECUTION_AUTHORITY: NONE
@@ -102,6 +102,37 @@ GET /health
 ```
 
 Este endpoint solo verifica que la foundation pueda arrancar. No concede Execution Authority ni implementa lógica autónoma.
+
+---
+
+# CANONICAL CONTRACTS — STAGE 1
+
+Stage 1 fue autorizado mediante DECISIÓN #043 y verificado mediante CAMBIO #069.
+
+La implementación incluye:
+
+* 29 contratos canónicos Pydantic v2 organizados por dominio;
+* un registro único de contratos y propietarios de esquema;
+* 29 JSON Schemas generados en `schemas/contracts/`;
+* validación estricta, modelos inmutables, versión contractual obligatoria y fechas UTC;
+* pruebas de registro, validación y compatibilidad especializada.
+
+Rutas principales:
+
+```text
+src/robert/contracts/     SOURCE OF TRUTH
+schemas/contracts/        GENERATED JSON SCHEMAS
+tests/contracts/          CONTRACT TESTS
+```
+
+Generación y verificación:
+
+```bash
+uv run python scripts/export_contract_schemas.py
+uv run pytest tests/contracts
+```
+
+La convención aplicable está definida en `09_ARCHITECTURE/ROBERT_CODEBASE_NAMING_AND_ORGANIZATION_STANDARD.md`.
 
 ---
 
@@ -1061,18 +1092,18 @@ PRODUCTION EXECUTION
 
 ```text
 TECHNICAL_IMPLEMENTATION:
-STAGE 0 COMPLETE
+STAGES 0–1 COMPLETE
 
 INITIAL_BUILD_ORDER:
 APPROVED
 
 IMPLEMENTATION_AUTHORIZATION:
-GRANTED — STAGE 0 ONLY
+GRANTED — STAGES 0–1 ONLY
 
 AUTHORIZED_BUILD_BOUNDARY:
-STAGE 0 ONLY
+STAGE 1
 
-STAGE_1:
+STAGE_2:
 NOT AUTHORIZED
 
 REAL_TOOL_EXECUTION:
@@ -1140,12 +1171,12 @@ READY_FOR_IMPLEMENTATION_AUTHORIZATION:
 YES
 
 IMPLEMENTATION_AUTHORIZATION:
-GRANTED — STAGE 0 ONLY
+GRANTED — STAGES 0–1 ONLY
 
-STAGE_0:
+STAGES_0_1:
 COMPLETE
 
-STAGE_1:
+STAGE_2:
 NOT AUTHORIZED
 ```
 
@@ -1284,10 +1315,10 @@ LATEST_GOVERNANCE_DECISION:
 #041
 
 LATEST_IMPLEMENTATION_DECISION:
-#042
+#043
 
 LATEST_CHANGE:
-#068
+#069
 
 CORE_ARCHITECTURE:
 CLOSED
@@ -1308,7 +1339,7 @@ KNOWN_ARCHITECTURAL_BLOCKERS:
 0
 
 TECHNICAL_IMPLEMENTATION:
-STAGE 0 COMPLETE
+STAGES 0–1 COMPLETE
 
 PHASE_10_EXIT_AUDIT:
 PASS
@@ -1320,12 +1351,12 @@ READY_FOR_IMPLEMENTATION_AUTHORIZATION:
 YES
 
 IMPLEMENTATION_AUTHORIZATION:
-GRANTED — STAGE 0 ONLY
+GRANTED — STAGES 0–1 ONLY
 
 AUTHORIZED_BUILD_BOUNDARY:
-STAGE 0 ONLY
+STAGE 1
 
-STAGE_1:
+STAGE_2:
 NOT AUTHORIZED
 
 REAL_TOOL_EXECUTION:
@@ -1352,20 +1383,20 @@ NONE
 
 El proyecto completó la verificación física de Fase 10 con resultado `PASS`.
 
-El cierre quedó autorizado mediante DECISIÓN #041 y Stage 0 mediante DECISIÓN #042. La siguiente transición requiere otra decisión humana explícita y separada:
+El cierre quedó autorizado mediante DECISIÓN #041, Stage 0 mediante DECISIÓN #042 y Stage 1 mediante DECISIÓN #043. La siguiente transición requiere otra decisión humana explícita y separada:
 
 ```text
-AUTHORIZE STAGE 1
+AUTHORIZE STAGE 2
 =
 SEPARATE HUMAN DECISION REQUIRED
 ```
 
-Hasta una decisión separada para Stage 1:
+Hasta una decisión separada para Stage 2:
 
 ```text
 NO AUTOMATIC PHASE TRANSITION
 
-NO AUTHORIZATION BEYOND STAGE 0
+NO AUTHORIZATION BEYOND STAGE 1
 
 NO REAL TOOL EXECUTION
 

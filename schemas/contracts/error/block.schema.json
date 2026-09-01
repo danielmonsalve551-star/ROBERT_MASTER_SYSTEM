@@ -1,0 +1,95 @@
+{
+  "$id": "schemas/contracts/error/block.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "approval_required": {
+      "title": "Approval Required",
+      "type": "boolean"
+    },
+    "block_id": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Block Id",
+      "type": "string"
+    },
+    "block_type": {
+      "minLength": 1,
+      "title": "Block Type",
+      "type": "string"
+    },
+    "contract_version": {
+      "const": "0.1",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "reason": {
+      "minLength": 1,
+      "title": "Reason",
+      "type": "string"
+    },
+    "related_refs": {
+      "items": {
+        "minLength": 1,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+        "type": "string"
+      },
+      "title": "Related Refs",
+      "type": "array"
+    },
+    "required_resolution": {
+      "minLength": 1,
+      "title": "Required Resolution",
+      "type": "string"
+    },
+    "severity": {
+      "minLength": 1,
+      "title": "Severity",
+      "type": "string"
+    },
+    "source_component": {
+      "minLength": 1,
+      "title": "Source Component",
+      "type": "string"
+    },
+    "status": {
+      "minLength": 1,
+      "title": "Status",
+      "type": "string"
+    },
+    "task_id": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Task Id",
+      "type": "string"
+    },
+    "user_action_required": {
+      "title": "User Action Required",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "contract_version",
+    "block_id",
+    "task_id",
+    "block_type",
+    "source_component",
+    "reason",
+    "severity",
+    "required_resolution",
+    "user_action_required",
+    "approval_required",
+    "related_refs",
+    "created_at",
+    "status"
+  ],
+  "title": "Block",
+  "type": "object",
+  "x-robert-contract-name": "BLOCK",
+  "x-robert-contract-owner": "error"
+}

@@ -82,21 +82,21 @@ LATEST_GOVERNANCE_DECISION:
 #041
 
 LATEST_IMPLEMENTATION_DECISION:
-#042
+#043
 
 LATEST_CHANGE:
-#068
+#069
 
 KNOWN_ARCHITECTURAL_BLOCKERS:
 0
 
 TECHNICAL_IMPLEMENTATION:
-STAGE 0 COMPLETE
+STAGES 0–1 COMPLETE
 
 AUTHORIZED_BUILD_BOUNDARY:
-STAGE 0 ONLY
+STAGE 1
 
-STAGE_1:
+STAGE_2:
 NOT AUTHORIZED
 
 REAL_TOOL_EXECUTION:
@@ -136,10 +136,10 @@ READY_FOR_IMPLEMENTATION_AUTHORIZATION:
 YES
 
 IMPLEMENTATION_AUTHORIZATION:
-GRANTED — STAGE 0 ONLY
+GRANTED — STAGES 0–1 ONLY
 ```
 
-La DECISIÓN #042 autoriza únicamente Stage 0, ya completado. Stage 1 y cualquier alcance adicional requieren otra decisión humana.
+Las DECISIONES #042 y #043 autorizan únicamente Stages 0–1, ya completados. Stage 2 y cualquier alcance adicional requieren otra decisión humana.
 
 ---
 
@@ -773,7 +773,7 @@ La normalización canónica de `ROBERT_MODULES` no implica aprobación formal au
 ROBERT_HOME.md
 
 VERSION:
-0.13
+0.16
 
 STATUS:
 APPROVED / INTEGRATED / CANONICALLY SYNCHRONIZED
@@ -1274,7 +1274,7 @@ AUTONOMOUS_AGENTS = DISABLED
 
 ```text
 TECHNICAL_IMPLEMENTATION:
-STAGE 0 COMPLETE
+STAGES 0–1 COMPLETE
 
 ORCHESTRATOR_RUNTIME:
 NOT IMPLEMENTED
@@ -1568,10 +1568,10 @@ LATEST_GOVERNANCE_DECISION:
 #041
 
 LATEST_IMPLEMENTATION_DECISION:
-#042
+#043
 
 LATEST_CHANGE:
-#068
+#069
 
 CORE_ARCHITECTURE:
 CLOSED
@@ -1592,7 +1592,7 @@ KNOWN_ARCHITECTURAL_BLOCKERS:
 0
 
 TECHNICAL_IMPLEMENTATION:
-STAGE 0 COMPLETE
+STAGES 0–1 COMPLETE
 
 PHASE_10_EXIT_AUDIT:
 PASS
@@ -1604,12 +1604,12 @@ READY_FOR_IMPLEMENTATION_AUTHORIZATION:
 YES
 
 IMPLEMENTATION_AUTHORIZATION:
-GRANTED — STAGE 0 ONLY
+GRANTED — STAGES 0–1 ONLY
 
 AUTHORIZED_BUILD_BOUNDARY:
-STAGE 0 ONLY
+STAGE 1
 
-STAGE_1:
+STAGE_2:
 NOT AUTHORIZED
 
 REAL_TOOL_EXECUTION:
@@ -1632,11 +1632,11 @@ NONE
 
 # CIERRE
 
-`ROBERT_HOME v0.15` representa el estado vigente de Robert después del cierre formal de Fase 10 y la implementación verificada de Stage 0.
+`ROBERT_HOME v0.16` representa el estado vigente de Robert después del cierre formal de Fase 10 y la implementación verificada de Stages 0–1.
 
 La arquitectura principal está cerrada.
 
-La implementación técnica comenzó y Stage 0 quedó completado. No existe autorización para Stage 1 ni para capacidades externas.
+La implementación técnica comenzó y Stages 0–1 quedaron completados. No existe autorización para Stage 2 ni para capacidades externas.
 
 La auditoría y la decisión de cierre quedaron completadas:
 
@@ -1646,12 +1646,12 @@ PHASE_10_CLOSURE_DECISION = #041
 PHASE_10_CLOSED = YES
 ```
 
-La próxima transición depende de una decisión humana separada para autorizar Stage 1. Hasta entonces:
+La próxima transición depende de una decisión humana separada para autorizar Stage 2. Hasta entonces:
 
 ```text
 NO AUTOMATIC PHASE TRANSITION
 
-NO AUTHORIZATION BEYOND STAGE 0
+NO AUTHORIZATION BEYOND STAGE 1
 
 NO REAL TOOL EXECUTION
 

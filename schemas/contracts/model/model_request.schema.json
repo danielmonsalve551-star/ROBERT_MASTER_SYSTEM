@@ -1,0 +1,126 @@
+{
+  "$defs": {
+    "JsonValue": {}
+  },
+  "$id": "schemas/contracts/model/model_request.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "constraints": {
+      "items": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Constraints",
+      "type": "array"
+    },
+    "context": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Context",
+      "type": "object"
+    },
+    "contract_version": {
+      "const": "0.1",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "inputs": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Inputs",
+      "type": "object"
+    },
+    "instructions": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "title": "Instructions",
+      "type": "array"
+    },
+    "memory_write_allowed": {
+      "default": false,
+      "title": "Memory Write Allowed",
+      "type": "boolean"
+    },
+    "model_role": {
+      "minLength": 1,
+      "title": "Model Role",
+      "type": "string"
+    },
+    "objective": {
+      "minLength": 1,
+      "title": "Objective",
+      "type": "string"
+    },
+    "output_contract": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Output Contract",
+      "type": "object"
+    },
+    "provider_requirement": {
+      "anyOf": [
+        {
+          "minLength": 1,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Provider Requirement"
+    },
+    "request_id": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Request Id",
+      "type": "string"
+    },
+    "sensitivity": {
+      "minLength": 1,
+      "title": "Sensitivity",
+      "type": "string"
+    },
+    "task_id": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Task Id",
+      "type": "string"
+    },
+    "tool_request_allowed": {
+      "default": false,
+      "title": "Tool Request Allowed",
+      "type": "boolean"
+    },
+    "validation_requirements": {
+      "items": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Validation Requirements",
+      "type": "array"
+    }
+  },
+  "required": [
+    "contract_version",
+    "request_id",
+    "task_id",
+    "model_role",
+    "provider_requirement",
+    "objective",
+    "instructions",
+    "context",
+    "inputs",
+    "constraints",
+    "output_contract",
+    "validation_requirements",
+    "sensitivity"
+  ],
+  "title": "ModelRequest",
+  "type": "object",
+  "x-robert-contract-name": "MODEL_REQUEST",
+  "x-robert-contract-owner": "model"
+}

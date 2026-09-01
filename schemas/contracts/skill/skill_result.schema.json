@@ -1,0 +1,126 @@
+{
+  "$defs": {
+    "JsonValue": {}
+  },
+  "$id": "schemas/contracts/skill/skill_result.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "audit_refs": {
+      "items": {
+        "minLength": 1,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+        "type": "string"
+      },
+      "title": "Audit Refs",
+      "type": "array"
+    },
+    "contract_version": {
+      "const": "0.1",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "derived_data": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Derived Data",
+      "type": "object"
+    },
+    "errors": {
+      "items": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Errors",
+      "type": "array"
+    },
+    "memory_candidates": {
+      "items": {
+        "minLength": 1,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+        "type": "string"
+      },
+      "title": "Memory Candidates",
+      "type": "array"
+    },
+    "model_requests": {
+      "items": {
+        "minLength": 1,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+        "type": "string"
+      },
+      "title": "Model Requests",
+      "type": "array"
+    },
+    "output": {
+      "$ref": "#/$defs/JsonValue"
+    },
+    "skill_id": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Skill Id",
+      "type": "string"
+    },
+    "skill_version": {
+      "minLength": 1,
+      "title": "Skill Version",
+      "type": "string"
+    },
+    "status": {
+      "minLength": 1,
+      "title": "Status",
+      "type": "string"
+    },
+    "task_id": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Task Id",
+      "type": "string"
+    },
+    "tool_requests": {
+      "items": {
+        "minLength": 1,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+        "type": "string"
+      },
+      "title": "Tool Requests",
+      "type": "array"
+    },
+    "validation_requests": {
+      "items": {
+        "minLength": 1,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+        "type": "string"
+      },
+      "title": "Validation Requests",
+      "type": "array"
+    },
+    "warnings": {
+      "items": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Warnings",
+      "type": "array"
+    }
+  },
+  "required": [
+    "contract_version",
+    "task_id",
+    "skill_id",
+    "skill_version",
+    "status",
+    "output",
+    "derived_data",
+    "tool_requests",
+    "model_requests",
+    "memory_candidates",
+    "validation_requests",
+    "warnings",
+    "errors",
+    "audit_refs"
+  ],
+  "title": "SkillResult",
+  "type": "object",
+  "x-robert-contract-name": "SKILL_RESULT",
+  "x-robert-contract-owner": "skill"
+}

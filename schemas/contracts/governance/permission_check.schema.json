@@ -1,0 +1,101 @@
+{
+  "$defs": {
+    "JsonValue": {},
+    "PermissionStatus": {
+      "enum": [
+        "ALLOWED",
+        "DENIED",
+        "NOT_FOUND",
+        "EXPIRED",
+        "CONDITIONAL"
+      ],
+      "title": "PermissionStatus",
+      "type": "string"
+    }
+  },
+  "$id": "schemas/contracts/governance/permission_check.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "check_id": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Check Id",
+      "type": "string"
+    },
+    "contract_version": {
+      "const": "0.1",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "existing_permissions": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "title": "Existing Permissions",
+      "type": "array"
+    },
+    "expires_at": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Expires At"
+    },
+    "operation": {
+      "minLength": 1,
+      "title": "Operation",
+      "type": "string"
+    },
+    "reason": {
+      "minLength": 1,
+      "title": "Reason",
+      "type": "string"
+    },
+    "requester": {
+      "minLength": 1,
+      "title": "Requester",
+      "type": "string"
+    },
+    "required_permission": {
+      "minLength": 1,
+      "title": "Required Permission",
+      "type": "string"
+    },
+    "resource": {
+      "$ref": "#/$defs/JsonValue"
+    },
+    "status": {
+      "$ref": "#/$defs/PermissionStatus"
+    },
+    "task_id": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Task Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "contract_version",
+    "check_id",
+    "task_id",
+    "requester",
+    "operation",
+    "resource",
+    "required_permission",
+    "existing_permissions",
+    "status",
+    "reason",
+    "expires_at"
+  ],
+  "title": "PermissionCheck",
+  "type": "object",
+  "x-robert-contract-name": "PERMISSION_CHECK",
+  "x-robert-contract-owner": "governance"
+}

@@ -1,0 +1,123 @@
+{
+  "$defs": {
+    "JsonValue": {}
+  },
+  "$id": "schemas/contracts/task/request_context.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "authorized_context": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Authorized Context",
+      "type": "object"
+    },
+    "contract_version": {
+      "const": "0.1",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "conversation_context": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Conversation Context",
+      "type": "object"
+    },
+    "document_context": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Document Context",
+      "type": "object"
+    },
+    "memory_context": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Memory Context",
+      "type": "object"
+    },
+    "permission_context": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Permission Context",
+      "type": "object"
+    },
+    "phase_constraints": {
+      "items": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Phase Constraints",
+      "type": "array"
+    },
+    "risk_context": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Risk Context",
+      "type": "object"
+    },
+    "scope_context": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Scope Context",
+      "type": "object"
+    },
+    "security_context": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Security Context",
+      "type": "object"
+    },
+    "system_constraints": {
+      "items": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "System Constraints",
+      "type": "array"
+    },
+    "task_id": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Task Id",
+      "type": "string"
+    },
+    "user_constraints": {
+      "items": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "User Constraints",
+      "type": "array"
+    },
+    "user_request": {
+      "minLength": 1,
+      "title": "User Request",
+      "type": "string"
+    }
+  },
+  "required": [
+    "contract_version",
+    "task_id",
+    "user_request",
+    "conversation_context",
+    "authorized_context",
+    "memory_context",
+    "document_context",
+    "system_constraints",
+    "user_constraints",
+    "phase_constraints",
+    "permission_context",
+    "scope_context",
+    "risk_context",
+    "security_context"
+  ],
+  "title": "RequestContext",
+  "type": "object",
+  "x-robert-contract-name": "REQUEST_CONTEXT",
+  "x-robert-contract-owner": "task"
+}

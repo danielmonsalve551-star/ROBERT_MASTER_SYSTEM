@@ -1,0 +1,82 @@
+{
+  "$defs": {
+    "JsonValue": {},
+    "ScopeStatus": {
+      "enum": [
+        "WITHIN_SCOPE",
+        "OUT_OF_SCOPE",
+        "PARTIAL",
+        "UNKNOWN"
+      ],
+      "title": "ScopeStatus",
+      "type": "string"
+    }
+  },
+  "$id": "schemas/contracts/governance/scope_check.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "authorized_scope": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Authorized Scope",
+      "type": "object"
+    },
+    "check_id": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Check Id",
+      "type": "string"
+    },
+    "constraints": {
+      "items": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Constraints",
+      "type": "array"
+    },
+    "contract_version": {
+      "const": "0.1",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "requested_scope": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Requested Scope",
+      "type": "object"
+    },
+    "status": {
+      "$ref": "#/$defs/ScopeStatus"
+    },
+    "task_id": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Task Id",
+      "type": "string"
+    },
+    "violations": {
+      "items": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Violations",
+      "type": "array"
+    }
+  },
+  "required": [
+    "contract_version",
+    "check_id",
+    "task_id",
+    "requested_scope",
+    "authorized_scope",
+    "status",
+    "violations",
+    "constraints"
+  ],
+  "title": "ScopeCheck",
+  "type": "object",
+  "x-robert-contract-name": "SCOPE_CHECK",
+  "x-robert-contract-owner": "governance"
+}

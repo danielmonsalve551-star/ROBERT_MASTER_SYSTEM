@@ -1,0 +1,222 @@
+{
+  "$defs": {
+    "JsonValue": {},
+    "TaskStatus": {
+      "enum": [
+        "CREATED",
+        "NORMALIZED",
+        "ROUTED",
+        "IN_PROGRESS",
+        "WAITING_INPUT",
+        "WAITING_APPROVAL",
+        "WAITING_TOOL",
+        "WAITING_VALIDATION",
+        "BLOCKED",
+        "COMPLETED",
+        "FAILED",
+        "CANCELLED"
+      ],
+      "title": "TaskStatus",
+      "type": "string"
+    }
+  },
+  "$id": "schemas/contracts/task/task.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "approval_state": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Approval State",
+      "type": "object"
+    },
+    "assigned_route": {
+      "anyOf": [
+        {
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Assigned Route"
+    },
+    "audit_refs": {
+      "items": {
+        "minLength": 1,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+        "type": "string"
+      },
+      "title": "Audit Refs",
+      "type": "array"
+    },
+    "authorized_scope": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Authorized Scope",
+      "type": "object"
+    },
+    "constraints": {
+      "items": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Constraints",
+      "type": "array"
+    },
+    "context_refs": {
+      "items": {
+        "minLength": 1,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+        "type": "string"
+      },
+      "title": "Context Refs",
+      "type": "array"
+    },
+    "contract_version": {
+      "const": "0.1",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "created_by": {
+      "minLength": 1,
+      "title": "Created By",
+      "type": "string"
+    },
+    "current_step": {
+      "anyOf": [
+        {
+          "minLength": 1,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Current Step"
+    },
+    "dependencies": {
+      "items": {
+        "minLength": 1,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+        "type": "string"
+      },
+      "title": "Dependencies",
+      "type": "array"
+    },
+    "memory_refs": {
+      "items": {
+        "minLength": 1,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+        "type": "string"
+      },
+      "title": "Memory Refs",
+      "type": "array"
+    },
+    "normalized_intent": {
+      "minLength": 1,
+      "title": "Normalized Intent",
+      "type": "string"
+    },
+    "objective": {
+      "minLength": 1,
+      "title": "Objective",
+      "type": "string"
+    },
+    "original_request": {
+      "minLength": 1,
+      "title": "Original Request",
+      "type": "string"
+    },
+    "phase": {
+      "minLength": 1,
+      "title": "Phase",
+      "type": "string"
+    },
+    "priority": {
+      "minLength": 1,
+      "title": "Priority",
+      "type": "string"
+    },
+    "required_outputs": {
+      "items": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Required Outputs",
+      "type": "array"
+    },
+    "result_ref": {
+      "anyOf": [
+        {
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Result Ref"
+    },
+    "risk_context": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Risk Context",
+      "type": "object"
+    },
+    "status": {
+      "$ref": "#/$defs/TaskStatus"
+    },
+    "task_id": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Task Id",
+      "type": "string"
+    },
+    "validation_state": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Validation State",
+      "type": "object"
+    }
+  },
+  "required": [
+    "contract_version",
+    "task_id",
+    "created_at",
+    "created_by",
+    "original_request",
+    "normalized_intent",
+    "objective",
+    "status",
+    "priority",
+    "phase",
+    "authorized_scope",
+    "constraints",
+    "risk_context",
+    "required_outputs",
+    "context_refs",
+    "memory_refs",
+    "dependencies",
+    "current_step",
+    "assigned_route",
+    "approval_state",
+    "validation_state",
+    "audit_refs",
+    "result_ref"
+  ],
+  "title": "Task",
+  "type": "object",
+  "x-robert-contract-name": "TASK",
+  "x-robert-contract-owner": "task"
+}

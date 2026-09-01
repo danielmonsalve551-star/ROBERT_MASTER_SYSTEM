@@ -1,0 +1,109 @@
+{
+  "$defs": {
+    "JsonValue": {},
+    "RiskLevel": {
+      "enum": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "title": "RiskLevel",
+      "type": "integer"
+    }
+  },
+  "$id": "schemas/contracts/governance/risk_assessment.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "assessment_id": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Assessment Id",
+      "type": "string"
+    },
+    "contract_version": {
+      "const": "0.1",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "external_impact": {
+      "additionalProperties": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "External Impact",
+      "type": "object"
+    },
+    "mitigations": {
+      "items": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Mitigations",
+      "type": "array"
+    },
+    "operation": {
+      "minLength": 1,
+      "title": "Operation",
+      "type": "string"
+    },
+    "reversibility": {
+      "minLength": 1,
+      "title": "Reversibility",
+      "type": "string"
+    },
+    "risk_factors": {
+      "items": {
+        "$ref": "#/$defs/JsonValue"
+      },
+      "title": "Risk Factors",
+      "type": "array"
+    },
+    "risk_level": {
+      "$ref": "#/$defs/RiskLevel"
+    },
+    "sensitivity": {
+      "minLength": 1,
+      "title": "Sensitivity",
+      "type": "string"
+    },
+    "side_effect_class": {
+      "minLength": 1,
+      "title": "Side Effect Class",
+      "type": "string"
+    },
+    "status": {
+      "minLength": 1,
+      "title": "Status",
+      "type": "string"
+    },
+    "target": {
+      "$ref": "#/$defs/JsonValue"
+    },
+    "task_id": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+      "title": "Task Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "contract_version",
+    "assessment_id",
+    "task_id",
+    "operation",
+    "target",
+    "risk_level",
+    "risk_factors",
+    "side_effect_class",
+    "reversibility",
+    "sensitivity",
+    "external_impact",
+    "mitigations",
+    "status"
+  ],
+  "title": "RiskAssessment",
+  "type": "object",
+  "x-robert-contract-name": "RISK_ASSESSMENT",
+  "x-robert-contract-owner": "governance"
+}
