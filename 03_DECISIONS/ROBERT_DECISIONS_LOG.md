@@ -6123,3 +6123,93 @@ EXECUTION_AUTHORITY = NONE
 ## Próximo paso
 
 Preparar, revisar y decidir por separado si se autoriza la implementación inicial, especificando alcance, Stages permitidos, repositorio, tecnologías, integraciones y límites de ejecución.
+
+# DECISIÓN #042 — Autorización de implementación para Stage 0
+
+**Fecha:** 01/09/2026
+**Tipo:** Implementation Authorization / Technical Foundation
+**Estado:** APROBADA
+**Fase documental previa:** 10 — CLOSED
+**Build Stage autorizado:** 0 — TECHNICAL FOUNDATION
+**Repositorio autorizado:** `danielmonsalve551-star/ROBERT_MASTER_SYSTEM`
+**Documento técnico:** `09_ARCHITECTURE/ROBERT_TECHNICAL_FOUNDATION_DECISIONS.md`
+**Cambio relacionado:** CAMBIO #068
+
+## Decisión
+
+El usuario autoriza explícitamente la implementación de:
+
+```text
+STAGE 0 — TECHNICAL FOUNDATION
+```
+
+con el siguiente stack:
+
+```text
+PYTHON 3.12
+FASTAPI
+PYDANTIC v2 / JSON SCHEMA
+UV
+PYTEST
+RUFF
+GITHUB ACTIONS CI
+```
+
+## Alcance autorizado
+
+```text
+REPOSITORY STRUCTURE
+PACKAGE MANAGEMENT
+CONFIGURATION
+ENVIRONMENT HANDLING
+TEST FOUNDATION
+LINTING
+FORMATTING
+CI BASICS
+BOOTABLE HEALTH ENDPOINT
+EMPTY CONTRACT PACKAGE BOUNDARY
+```
+
+## Fuera de alcance
+
+```text
+STAGE 1+
+CANONICAL DOMAIN CONTRACT IMPLEMENTATION
+DATABASE
+MODEL CONNECTIONS
+MEMORY ENGINE
+AGENTS
+SKILLS
+TOOLS
+ORCHESTRATOR
+EXTERNAL INTEGRATIONS
+REAL SIDE EFFECTS
+AUTONOMOUS LOGIC
+```
+
+## Límites
+
+```text
+AUTHORIZED_BUILD_BOUNDARY: STAGE 0 ONLY
+AUTONOMY_LEVEL: 0
+EXECUTION_AUTHORITY: NONE
+REAL_TOOL_EXECUTION: DISABLED
+PHASE_11: NOT STARTED
+```
+
+## Resultado registrado
+
+Stage 0 fue implementado y verificado:
+
+```text
+PROJECT BOOTS: PASS
+CONFIG CAN LOAD: PASS
+CONTRACT PACKAGE CAN EXIST: PASS
+RUFF CHECK: PASS
+RUFF FORMAT CHECK: PASS
+PYTEST: 4 PASSED
+```
+
+## Próximo paso
+
+Stage 1 permanece sin autorización. Requiere una decisión humana separada.

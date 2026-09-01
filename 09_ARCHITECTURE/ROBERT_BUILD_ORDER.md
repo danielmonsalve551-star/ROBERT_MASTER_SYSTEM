@@ -5,7 +5,7 @@
 **Tipo:** Especificación de orden de construcción / Implementation Readiness
 **Ubicación propuesta:** `09_ARCHITECTURE/ROBERT_BUILD_ORDER.md`
 **Fase relacionada:** Fase 10 — Implementation Readiness
-**Implementación:** NONE
+**Implementación:** STAGE 0 COMPLETE / STAGE 1 NOT AUTHORIZED
 **Autonomy Level:** 0
 **Execution Authority:** NONE
 
@@ -2415,9 +2415,13 @@ PHASE: 10
 
 BUILD_ORDER: APPROVED
 
-IMPLEMENTATION: NOT STARTED
+IMPLEMENTATION: STAGE 0 COMPLETE
 
-IMPLEMENTATION_AUTHORIZATION: NOT GRANTED
+IMPLEMENTATION_AUTHORIZATION: GRANTED — STAGE 0 ONLY
+
+AUTHORIZED_BUILD_BOUNDARY: STAGE 0 ONLY
+
+STAGE_1: NOT AUTHORIZED
 
 REAL_TOOL_EXECUTION: DISABLED
 
@@ -2425,44 +2429,26 @@ AUTONOMY_LEVEL: 0
 
 EXECUTION_AUTHORITY: NONE
 
-# 127. Próximo paso
+# 127. Estado posterior a la autorización inicial
 
-Después de revisión adversarial:
-
-```text
-APPROVE / CORRECT
-ROBERT_BUILD_ORDER v0.1
-```
-
-Una vez aprobado:
+Stage 0 fue autorizado mediante:
 
 ```text
-RUN
-PHASE 10 EXIT AUDIT
+DECISIÓN #042
+CAMBIO #068
 ```
 
-El audit deberá evaluar todos los criterios de:
+Resultado:
 
 ```text
-ROBERT_PHASE_10_EXIT_CRITERIA v0.1
+STAGE_0 = COMPLETE
+STAGE_1 = NOT AUTHORIZED
 ```
 
-Si:
+La siguiente transición permitida es una decisión humana separada sobre:
 
 ```text
-ALL BLOCKING CRITERIA = PASS
+AUTHORIZE STAGE 1 — CANONICAL CONTRACTS?
 ```
 
-se podrá proponer:
-
-```text
-PHASE 10 CLOSURE
-```
-
-Después:
-
-```text
-EXPLICIT USER DECISION
-→
-AUTHORIZE INITIAL IMPLEMENTATION?
-```
+Hasta entonces, el límite obligatorio es `STAGE 0 ONLY`.

@@ -11356,3 +11356,58 @@ AUTONOMOUS_AGENTS = DISABLED
 ```
 
 El cierre de Fase 10 no constituye autorización de implementación ni transición automática a Fase 11.
+
+# CAMBIO #068 — Implementación y verificación de Stage 0
+
+**Fecha:** 01/09/2026
+**Tipo:** Implementación técnica / Technical Foundation
+**Estado:** IMPLEMENTADO Y VERIFICADO
+**Decisión relacionada:** DECISIÓN #042
+**Build Stage:** 0
+
+## Descripción
+
+Se implementa la base técnica mínima autorizada para Robert usando Python 3.12, FastAPI, Pydantic, uv, pytest, Ruff y GitHub Actions.
+
+## Artefactos integrados
+
+* `pyproject.toml`;
+* `uv.lock`;
+* `.python-version`;
+* `.env.example`;
+* `.gitignore`;
+* `.github/workflows/ci.yml`;
+* `src/robert/__init__.py`;
+* `src/robert/app.py`;
+* `src/robert/config.py`;
+* `src/robert/contracts/__init__.py`;
+* `tests/test_config.py`;
+* `tests/test_health.py`;
+* `09_ARCHITECTURE/ROBERT_TECHNICAL_FOUNDATION_DECISIONS.md`.
+
+## Verificación
+
+```text
+PROJECT BOOTS: PASS
+CONFIG CAN LOAD: PASS
+CONTRACT PACKAGE CAN EXIST: PASS
+RUFF CHECK: PASS
+RUFF FORMAT CHECK: PASS
+PYTEST: 4 PASSED
+```
+
+## Estado resultante
+
+```text
+TECHNICAL_IMPLEMENTATION: STARTED
+STAGE_0: COMPLETE
+AUTHORIZED_BUILD_BOUNDARY: STAGE 0 ONLY
+STAGE_1: NOT AUTHORIZED
+IMPLEMENTATION_AUTHORIZATION: GRANTED — STAGE 0 ONLY
+AUTONOMY_LEVEL: 0
+EXECUTION_AUTHORITY: NONE
+REAL_TOOL_EXECUTION: DISABLED
+PHASE_11: NOT STARTED
+```
+
+No se implementó lógica de negocio, contratos de dominio, Agents, Skills, Tools, Orchestrator, Memory Engine ni conexiones externas.

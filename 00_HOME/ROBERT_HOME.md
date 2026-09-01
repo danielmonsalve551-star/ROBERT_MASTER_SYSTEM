@@ -1,6 +1,6 @@
 # ROBERT_HOME
 
-**Versión:** 0.14
+**Versión:** 0.15
 **Estado:** APROBADO E INTEGRADO / CANÓNICAMENTE SINCRONIZADO
 **Fecha:** 01/09/2026
 **Ubicación:** `00_HOME`
@@ -8,7 +8,8 @@
 **Fase actual:** Fase 10 — CLOSED
 **Última decisión arquitectónica registrada:** DECISIÓN #040
 **Última decisión de Governance registrada:** DECISIÓN #041
-**Último cambio registrado:** CAMBIO #067
+**Última decisión de implementación registrada:** DECISIÓN #042
+**Último cambio registrado:** CAMBIO #068
 **Estado operativo:** Documental / conceptual / manual / supervisado
 **Autonomía operativa:** 0
 **Execution Authority:** NONE
@@ -80,14 +81,23 @@ LATEST_ARCHITECTURAL_DECISION:
 LATEST_GOVERNANCE_DECISION:
 #041
 
+LATEST_IMPLEMENTATION_DECISION:
+#042
+
 LATEST_CHANGE:
-#067
+#068
 
 KNOWN_ARCHITECTURAL_BLOCKERS:
 0
 
 TECHNICAL_IMPLEMENTATION:
-NOT STARTED
+STAGE 0 COMPLETE
+
+AUTHORIZED_BUILD_BOUNDARY:
+STAGE 0 ONLY
+
+STAGE_1:
+NOT AUTHORIZED
 
 REAL_TOOL_EXECUTION:
 DISABLED
@@ -126,10 +136,10 @@ READY_FOR_IMPLEMENTATION_AUTHORIZATION:
 YES
 
 IMPLEMENTATION_AUTHORIZATION:
-NOT GRANTED
+GRANTED — STAGE 0 ONLY
 ```
 
-El cierre no autoriza implementación. `IMPLEMENTATION_AUTHORIZATION` permanece en `NOT GRANTED` hasta una decisión humana separada.
+La DECISIÓN #042 autoriza únicamente Stage 0, ya completado. Stage 1 y cualquier alcance adicional requieren otra decisión humana.
 
 ---
 
@@ -1264,7 +1274,7 @@ AUTONOMOUS_AGENTS = DISABLED
 
 ```text
 TECHNICAL_IMPLEMENTATION:
-NOT STARTED
+STAGE 0 COMPLETE
 
 ORCHESTRATOR_RUNTIME:
 NOT IMPLEMENTED
@@ -1440,7 +1450,7 @@ CAMBIO #065
 
 ```text
 CURRENT PRIORITY:
-SEPARATE INITIAL IMPLEMENTATION AUTHORIZATION DECISION
+SEPARATE STAGE 1 AUTHORIZATION DECISION
 ```
 
 Estado del cleanup:
@@ -1557,8 +1567,11 @@ LATEST_ARCHITECTURAL_DECISION:
 LATEST_GOVERNANCE_DECISION:
 #041
 
+LATEST_IMPLEMENTATION_DECISION:
+#042
+
 LATEST_CHANGE:
-#067
+#068
 
 CORE_ARCHITECTURE:
 CLOSED
@@ -1579,7 +1592,7 @@ KNOWN_ARCHITECTURAL_BLOCKERS:
 0
 
 TECHNICAL_IMPLEMENTATION:
-NOT STARTED
+STAGE 0 COMPLETE
 
 PHASE_10_EXIT_AUDIT:
 PASS
@@ -1591,7 +1604,13 @@ READY_FOR_IMPLEMENTATION_AUTHORIZATION:
 YES
 
 IMPLEMENTATION_AUTHORIZATION:
-NOT GRANTED
+GRANTED — STAGE 0 ONLY
+
+AUTHORIZED_BUILD_BOUNDARY:
+STAGE 0 ONLY
+
+STAGE_1:
+NOT AUTHORIZED
 
 REAL_TOOL_EXECUTION:
 DISABLED
@@ -1613,11 +1632,11 @@ NONE
 
 # CIERRE
 
-`ROBERT_HOME v0.14` representa el estado vigente de Robert después del cierre formal de Fase 10.
+`ROBERT_HOME v0.15` representa el estado vigente de Robert después del cierre formal de Fase 10 y la implementación verificada de Stage 0.
 
 La arquitectura principal está cerrada.
 
-La implementación técnica todavía no ha comenzado.
+La implementación técnica comenzó y Stage 0 quedó completado. No existe autorización para Stage 1 ni para capacidades externas.
 
 La auditoría y la decisión de cierre quedaron completadas:
 
@@ -1627,12 +1646,12 @@ PHASE_10_CLOSURE_DECISION = #041
 PHASE_10_CLOSED = YES
 ```
 
-La próxima transición depende de una decisión humana separada de autorización de implementación. Hasta entonces:
+La próxima transición depende de una decisión humana separada para autorizar Stage 1. Hasta entonces:
 
 ```text
 NO AUTOMATIC PHASE TRANSITION
 
-NO IMPLEMENTATION AUTHORIZATION
+NO AUTHORIZATION BEYOND STAGE 0
 
 NO REAL TOOL EXECUTION
 

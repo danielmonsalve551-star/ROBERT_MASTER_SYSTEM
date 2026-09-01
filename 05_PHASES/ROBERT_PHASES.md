@@ -468,7 +468,9 @@ Convertir Robert de sistema documental/manual a una primera especificación téc
 * Build Order aprobado
 * Audit físico final registrado con resultado PASS
 * Cierre formal autorizado mediante DECISIÓN #041
-* Sin programación autorizada todavía
+* Stage 0 autorizado mediante DECISIÓN #042
+* Stage 0 implementado y verificado mediante CAMBIO #068
+* Stage 1 y cualquier alcance adicional no autorizados
 
 ## Criterio para cerrar la fase
 
