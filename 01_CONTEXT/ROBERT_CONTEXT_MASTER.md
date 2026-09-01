@@ -729,7 +729,26 @@ Los documentos principales actuales de Robert se organizan por función.
     DECISIÓN #035 / CAMBIO #060.
 
 18. ROBERT_VALIDATION_ARCHITECTURE v0.1
-    DECISIÓN #036 / CAMBIO #061.
+    DECISIÓN #040 / CAMBIO #065.
+
+    ROBERT_TOOL_ARCHITECTURE v0.1
+DECISIÓN #037 / CAMBIO #062
+Arquitectura vigente de Tools, Tool Requests, Tool Results,
+Tool Interface, Tool Registry, Tool Policy y límites de ejecución.
+
+ROBERT_IMPLEMENTATION_CONTRACTS v0.1
+DECISIÓN #038 / CAMBIO #063
+Contratos conceptuales aprobados que sirven como puente
+entre arquitectura y futura implementación técnica.
+
+ROBERT_PHASE_10_EXIT_CRITERIA v0.1
+DECISIÓN #039 / CAMBIO #064
+Criterios verificables para determinar si Fase 10 puede
+considerarse lista para cierre.
+
+ROBERT_BUILD_ORDER v0.1
+DECISIÓN #040 / CAMBIO #065
+Orden aprobado de construcción para la futura implementación inicial.
 
 Cadena principal:
 
@@ -1196,75 +1215,106 @@ Robert cuenta actualmente con:
 
 ## Cadena arquitectónica vigente
 
-```text
 ROBERT_CANONICAL_MODEL v0.2
-#030 / #053
+DECISIÓN #030
+CAMBIO #053
 
         ↓
 
 ROBERT_ORCHESTRATOR_SPEC v0.1
-#031 / #054
+DECISIÓN #031
+CAMBIO #054
 
         ↓
 
 ROBERT_AGENT_ARCHITECTURE v0.1
-#032 / #055 / #056
+DECISIÓN #032
+CAMBIO #055
+CAMBIO #056
 
         ↓
 
 ROBERT_SKILL_ARCHITECTURE v0.1
-#033 / #057 / #058
+DECISIÓN #033
+CAMBIO #057
+CAMBIO #058
 
         ↓
 
 ROBERT_MODEL_INTERFACE_SPEC v0.1
-#034 / #059
+DECISIÓN #034
+CAMBIO #059
 
         ↓
 
 ROBERT_MEMORY_ARCHITECTURE v0.1
-#035 / #060
+DECISIÓN #035
+CAMBIO #060
 
         ↓
 
 ROBERT_VALIDATION_ARCHITECTURE v0.1
-#036 / #061
-```
+DECISIÓN #036
+CAMBIO #061
 
-Por tanto:
+        ↓
 
-```text
+ROBERT_TOOL_ARCHITECTURE v0.1
+DECISIÓN #037
+CAMBIO #062
+
+        ↓
+
+ROBERT_IMPLEMENTATION_CONTRACTS v0.1
+DECISIÓN #038
+CAMBIO #063
+
+        ↓
+
+ROBERT_PHASE_10_EXIT_CRITERIA v0.1
+DECISIÓN #039
+CAMBIO #064
+
+        ↓
+
+ROBERT_BUILD_ORDER v0.1
+DECISIÓN #040
+CAMBIO #065
+
 CORE_ARCHITECTURE = CLOSED
-```
-
-para el alcance arquitectónico principal definido hasta Validation.
-
-Esto no significa:
-
-```text
-READY_FOR_CODE = YES
-```
-
----
+TOOL_ARCHITECTURE = CLOSED
+IMPLEMENTATION_CONTRACTS = CLOSED
+PHASE_10_EXIT_CRITERIA = CLOSED
+BUILD_ORDER = CLOSED
 
 ## Estado no implementado
 
 Actualmente no existe implementación productiva de:
 
-```text
 ORCHESTRATOR ENGINE
 AUTOMATED ROUTING
-MODEL ADAPTERS
-TOOL EXECUTION
-MEMORY STORE
-AUTOMATIC MEMORY RETRIEVAL
+AGENT RUNNERS
+SKILL RUNNERS
+MODEL PROVIDER ADAPTERS
+TOOL ADAPTERS
+TOOL EXECUTION ENGINE
+REAL TOOL EXECUTION
+MEMORY STORE PRODUCTIVO
 AUTOMATIC MEMORY WRITE
-VALIDATION ENGINE
-AUTONOMOUS AGENTS
-EXTERNAL EXECUTION
-```
+AUTOMATIC MEMORY RETRIEVAL
+VALIDATION ENGINE PRODUCTIVO
+APPLICATION API
+PRODUCTION UI
+EXTERNAL INTEGRATIONS
 
----
+Los contratos y Build Order ya están definidos arquitectónicamente.
+
+Se mantiene:
+
+TECHNICAL_IMPLEMENTATION = NOT STARTED
+
+AUTONOMY_LEVEL = 0
+EXECUTION_AUTHORITY = NONE
 
 ## Estado no autorizado
 
@@ -1283,47 +1333,38 @@ Robert todavía no tiene autorización para:
 * avanzar automáticamente a Fase 11.
 
 ---
-
 ## Prioridad actual
 
 La prioridad actual es:
 
-```text
-IMPLEMENTATION READINESS
-```
+PHASE 10 EXIT REMEDIATION
 
-Orden:
+El primer Phase 10 Exit Audit produjo:
 
-```text
-1. Normalizar estado físico del repositorio
-2. Revisar gaps arquitectónicos
-3. Resolver Tool Architecture
-4. Normalizar referencias cruzadas
-5. Revisar contratos técnicos de implementación
-6. Definir Phase 10 Exit Criteria
-7. Definir Build Order
-8. Solo después evaluar autorización para código
-```
+PHASE_10_EXIT_AUDIT = FAIL
+
+pero:
+
+KNOWN_ARCHITECTURAL_BLOCKERS = 0
+
+Los pendientes actuales son de normalización e integración documental.
+
+Orden vigente:
+
+1. ROBERT_HOME final sync — COMPLETED
+2. README final sync — COMPLETED
+3. ROBERT_CONTEXT_MASTER final sync — CURRENT
+4. cerrar referencias antiguas de Tool Architecture en ROBERT_SYSTEM_ARCHITECTURE
+5. normalizar ROBERT_MODULES contra Canonical Model
+6. integrar referencias canónicas en ROBERT_TECHNICAL_DATA_MODEL_SPEC
+7. integrar referencias canónicas en ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC
+8. integrar referencias canónicas en ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC
+9. ejecutar nuevamente PHASE 10 EXIT AUDIT
 
 Regla:
 
-```text
-ARCHITECTURE APPROVED
-≠
-IMPLEMENTATION AUTHORIZED
-```
-
----
-
-19. DECISIONES PRINCIPALES REGISTRADAS O EN PROCESO
-
-Las decisiones completas viven en:
-
-```text
-ROBERT_DECISIONS_LOG
-```
-
-Este documento conserva únicamente un resumen contextual.
+NO NEW CORE ARCHITECTURE
+IS CURRENTLY REQUIRED
 
 ## Decisiones estructurales vigentes
 
@@ -1363,7 +1404,6 @@ Este documento conserva únicamente un resumen contextual.
 
 ## Últimas decisiones arquitectónicas
 
-```text
 DECISIÓN #030
 ROBERT_CANONICAL_MODEL v0.2
 
@@ -1384,13 +1424,21 @@ ROBERT_MEMORY_ARCHITECTURE v0.1
 
 DECISIÓN #036
 ROBERT_VALIDATION_ARCHITECTURE v0.1
-```
 
----
+DECISIÓN #037
+ROBERT_TOOL_ARCHITECTURE v0.1
+
+DECISIÓN #038
+ROBERT_IMPLEMENTATION_CONTRACTS v0.1
+
+DECISIÓN #039
+ROBERT_PHASE_10_EXIT_CRITERIA v0.1
+
+DECISIÓN #040
+ROBERT_BUILD_ORDER v0.1
 
 ## Últimos cambios arquitectónicos
 
-```text
 CAMBIO #053
 Canonical Model
 
@@ -1417,45 +1465,58 @@ Memory Architecture
 
 CAMBIO #061
 Validation Architecture
-```
 
----
+CAMBIO #062
+Tool Architecture
+
+CAMBIO #063
+Implementation Contracts
+
+CAMBIO #064
+Phase 10 Exit Criteria
+
+CAMBIO #065
+Build Order
 
 ## Pendiente actual
 
-Ya no están pendientes:
+La arquitectura requerida para comenzar preparación de implementación
+ya está cerrada.
 
-```text
-COMPONENTS SPEC
-DATA MODEL
-MEMORY ARCHITECTURE
-VALIDATION ARCHITECTURE
-```
+Actualmente:
 
-como siguiente bloque inmediato.
+CORE_ARCHITECTURE = CLOSED
+TOOL_ARCHITECTURE = CLOSED
+IMPLEMENTATION_CONTRACTS = APPROVED
+PHASE_10_EXIT_CRITERIA = APPROVED
+BUILD_ORDER = APPROVED
 
-La pregunta vigente es:
+Sin embargo:
 
-```text
-WHAT IS STILL REQUIRED
-BEFORE IMPLEMENTATION?
-```
+PHASE_10_EXIT_AUDIT = FAIL
 
-Pendientes principales:
+por inconsistencias documentales heredadas todavía pendientes.
 
-```text
-DOCUMENT NORMALIZATION
-TOOL ARCHITECTURE DECISION
-CROSS-REFERENCE NORMALIZATION
-IMPLEMENTATION CONTRACT REVIEW
-PHASE 10 EXIT CRITERIA
-BUILD ORDER
-```
+Pendientes restantes:
 
-Programación continúa no autorizada hasta decisión formal correspondiente.
+ROBERT_SYSTEM_ARCHITECTURE
+→ cerrar referencias antiguas donde Tool Architecture todavía aparece como gap.
 
----
+ROBERT_MODULES
+→ reconciliar taxonomía con Canonical Model.
 
+ROBERT_TECHNICAL_DATA_MODEL_SPEC
+→ añadir integración con Canonical Model e Implementation Contracts.
+
+ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC
+→ añadir integración con arquitectura vigente.
+
+ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC
+→ confirmar subordinación al Orchestrator.
+
+Después:
+
+RUN PHASE 10 EXIT AUDIT AGAIN
 
 20. USO POR CHATGPT
     
@@ -2333,46 +2394,7 @@ Aunque el sandbox manual fue validado, Robert todavía no tiene autorización pa
 
 ---
 
-# ESTADO ACTUAL DEL PROYECTO
 
-Robert se encuentra en etapa post-sandbox manual.
-
-La fase documental inicial ya fue validada.
-
-El sistema cuenta con:
-
-- documentos maestros;
-    
-- comandos;
-    
-- reglas de seguridad;
-    
-- módulos;
-    
-- arquitectura conceptual;
-    
-- MVP manual;
-    
-- sandbox manual;
-    
-- resultados de pruebas;
-    
-- decisiones registradas;
-    
-- caso comercial de prueba;
-    
-- reglas de no ejecución real.
-    
-
-Robert todavía no es una app técnica.
-
-Robert todavía no tiene conexiones externas.
-
-Robert todavía no tiene automatizaciones reales.
-
-Robert todavía no tiene agentes autónomos.
-
----
 
 # SIGUIENTE ETAPA ACTUALIZADA
 
@@ -2446,27 +2468,30 @@ Robert debe convertir información dispersa en estructura útil, manteniendo con
 
 # ACTUALIZACIÓN CORRECTIVA — 30/06/2026
 
-Estado:
+DOCUMENT: ROBERT_CONTEXT_MASTER
 
-ROBERT_CONTEXT_MASTER queda reanclado al estado actual del Proyecto Robert.
+STATUS: CURRENT / REANCHORED
 
-Corrección principal:
+PHASE: 10
 
-El estado actual ya no debe leerse como “pendiente de preparar ROBERT_TECHNICAL_MVP_PLAN”.
+LATEST_ARCHITECTURAL_DECISION: #040
+LATEST_CHANGE: #065
 
-Ese documento ya existe.
+CORE_ARCHITECTURE: CLOSED
+TOOL_ARCHITECTURE: CLOSED
+IMPLEMENTATION_CONTRACTS: APPROVED
+PHASE_10_EXIT_CRITERIA: APPROVED
+BUILD_ORDER: APPROVED
 
-El estado actual correcto es:
+TECHNICAL_IMPLEMENTATION: NOT STARTED
 
-**Fase 10 — MVP técnico básico en preparación**
+PHASE_10_EXIT_AUDIT: FAIL
 
-Pendiente principal:
+KNOWN_ARCHITECTURAL_BLOCKERS: 0
+DOCUMENT_NORMALIZATION_BLOCKERS: 3
 
-**Revisar y corregir ROBERT_TECHNICAL_COMPONENTS_SPEC_v0.2_PROPUESTA**
+READY_FOR_PHASE_10_CLOSURE: NO
+READY_FOR_IMPLEMENTATION_AUTHORIZATION: NO
 
-Regla:
-
-Ninguna especificación técnica puede declarar un estado del proyecto que contradiga a ROBERT_CONTEXT_MASTER.
-
-Si existe contradicción entre una especificación técnica y este documento, prevalece ROBERT_CONTEXT_MASTER, salvo que ROBERT_SECURITY_RULES establezca una regla superior.
-
+AUTONOMY_LEVEL: 0
+EXECUTION_AUTHORITY: NONE
