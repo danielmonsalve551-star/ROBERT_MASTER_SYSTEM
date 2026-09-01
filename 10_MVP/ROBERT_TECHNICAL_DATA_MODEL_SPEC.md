@@ -1,82 +1,284 @@
 # ROBERT_TECHNICAL_DATA_MODEL_SPEC
 
-Versión: 0.1  
-Estado: Aprobado  
-Fecha: 02/07/2026  
-Ubicación: 10_MVP  
-Fase relacionada: Fase 10 — MVP técnico básico en preparación  
-Documento base relacionado: ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2  
-Fuente de verdad actual: ROBERT_CONTEXT_MASTER v0.5  
-Decisión relacionada: DECISIÓN #012 — Aprobación de ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1  
-Cambio relacionado: CAMBIO #016 — Creación de ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1  
+**Versión:** 0.1
+**Estado:** APROBADO E INTEGRADO
+**Fecha original:** 02/07/2026
+**Última normalización:** 31/08/2026
+**Ubicación:** `10_MVP`
+**Fase relacionada:** Fase 10 — Implementation Readiness
+**Documento base relacionado:** `ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2`
+**Decisión relacionada:** DECISIÓN #012 — Aprobación de ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1
+**Cambio relacionado:** CAMBIO #016 — Creación de ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1
 
 ---
+
 Tags: #robert/orbita-3 #capa/5 #tipo/tecnico #robert/mvp #robert/data-model
 
 [[ROBERT_HOME]]
+[[ROBERT_CONTEXT_MASTER]]
+[[ROBERT_CANONICAL_MODEL]]
+[[ROBERT_IMPLEMENTATION_CONTRACTS]]
+[[ROBERT_MEMORY_ARCHITECTURE]]
+[[ROBERT_VALIDATION_ARCHITECTURE]]
+[[ROBERT_TOOL_ARCHITECTURE]]
 [[ROBERT_TECHNICAL_COMPONENTS_SPEC]]
 [[ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC]]
+[[ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC]]
 [[ROBERT_SECURITY_RULES]]
 [[ROBERT_SYSTEM_ARCHITECTURE]]
 
+---
 
 # OBJETIVO
 
-ROBERT_TECHNICAL_DATA_MODEL_SPEC define los modelos de datos conceptuales que Robert necesitaría para operar el MVP técnico básico.
+`ROBERT_TECHNICAL_DATA_MODEL_SPEC` define representaciones técnicas conceptuales de información utilizadas por Robert.
 
-Su objetivo es establecer, de forma clara y controlada, qué información debe existir dentro del sistema para que los componentes puedan mostrar estado, decisiones, riesgos, documentos, comandos y cambios.
+Su objetivo es establecer, de forma clara y controlada:
 
-Este documento responde preguntas como:
+* qué información necesita el sistema;
+* qué campos conceptuales existen;
+* cómo se relacionan documentos, Decisions, Changes, Risks, Commands y componentes;
+* qué información puede representarse técnicamente;
+* qué información sigue siendo manual, documental y supervisada;
+* cómo evitar que el Data Model redefina arquitectura ya aprobada.
 
-- Qué datos necesita Robert para mostrar su estado actual.
-- Qué información necesita cada componente del MVP.
-- Qué campos deben existir para documentos, decisiones, cambios y riesgos.
-- Cómo se relacionan los datos entre sí.
-- Qué datos están permitidos en esta etapa.
-- Qué datos están prohibidos.
-- Qué información sigue siendo manual, documental y supervisada.
+Este documento:
 
-Este documento no crea una base de datos real.
+```text
+DOES NOT CREATE
+A REAL DATABASE
 
-Este documento no programa la app.
+DOES NOT IMPLEMENT
+RUNTIME SCHEMAS
 
-Este documento no conecta herramientas externas.
+DOES NOT PROGRAM
+THE APPLICATION
 
-Este documento no automatiza acciones.
+DOES NOT CONNECT
+EXTERNAL TOOLS
 
-Este documento solo define una estructura conceptual de información para una futura implementación técnica controlada.
+DOES NOT AUTHORIZE
+EXECUTION
+```
+
+---
+
+# CANONICAL ARCHITECTURE ALIGNMENT
+
+Este documento define **representaciones técnicas de datos**.
+
+No redefine el significado canónico de las entidades.
+
+La autoridad semántica pertenece a:
+
+```text
+ROBERT_CANONICAL_MODEL v0.2
+DECISIÓN #030
+CAMBIO #053
+```
+
+Los contratos entre componentes pertenecen a:
+
+```text
+ROBERT_IMPLEMENTATION_CONTRACTS v0.1
+DECISIÓN #038
+CAMBIO #063
+```
+
+Las arquitecturas especializadas conservan autoridad sobre sus respectivos dominios.
+
+Regla:
+
+```text
+CANONICAL MODEL
+=
+WHAT AN ENTITY MEANS
+
+IMPLEMENTATION CONTRACTS
+=
+WHAT COMPONENTS EXCHANGE
+
+TECHNICAL DATA MODEL
+=
+HOW APPROVED INFORMATION MAY BE REPRESENTED TECHNICALLY
+```
+
+Se formaliza:
+
+```text
+TECHNICAL REPRESENTATION
+≠
+NEW CANONICAL DEFINITION
+```
 
 ---
 
 # ESTADO DEL DOCUMENTO
 
-Este documento queda aprobado como:
+Este documento permanece aprobado mediante:
 
-**Especificación técnica documental inicial de modelos de datos conceptuales para el MVP técnico básico de Robert.**
+```text
+DECISIÓN #012
+CAMBIO #016
+```
 
-Su aprobación permite usarlo como base para futuras especificaciones técnicas, pero no autoriza construcción, programación ni ejecución real.
+La normalización actual no crea una nueva aprobación.
 
-Este documento no reemplaza a ningún documento maestro.
+Su función es reconciliar el documento físico con la arquitectura aprobada posteriormente.
+
+Estado:
+
+```text
+DOCUMENT:
+ROBERT_TECHNICAL_DATA_MODEL_SPEC
+
+VERSION:
+0.1
+
+STATUS:
+APPROVED / CANONICALLY INTEGRATED
+
+TECHNICAL IMPLEMENTATION:
+NOT STARTED
+```
+
+---
+
+# DOCUMENTOS DE AUTORIDAD RELACIONADOS
 
 Debe mantenerse alineado con:
 
-- ROBERT_CONTEXT_MASTER v0.5
-- ROBERT_SECURITY_RULES
-- ROBERT_COMMANDS
-- ROBERT_DECISIONS_LOG
-- ROBERT_CONTROL_DE_CAMBIOS
-- ROBERT_PHASES v0.5
-- ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2
+* `ROBERT_CONTEXT_MASTER`;
+* `ROBERT_CANONICAL_MODEL v0.2`;
+* `ROBERT_ORCHESTRATOR_SPEC v0.1`;
+* `ROBERT_AGENT_ARCHITECTURE v0.1`;
+* `ROBERT_SKILL_ARCHITECTURE v0.1`;
+* `ROBERT_MODEL_INTERFACE_SPEC v0.1`;
+* `ROBERT_MEMORY_ARCHITECTURE v0.1`;
+* `ROBERT_VALIDATION_ARCHITECTURE v0.1`;
+* `ROBERT_TOOL_ARCHITECTURE v0.1`;
+* `ROBERT_IMPLEMENTATION_CONTRACTS v0.1`;
+* `ROBERT_SECURITY_RULES`;
+* `ROBERT_COMMANDS`;
+* `ROBERT_DECISIONS_LOG`;
+* `ROBERT_CONTROL_DE_CAMBIOS`;
+* `ROBERT_PHASES`;
+* `ROBERT_TECHNICAL_COMPONENTS_SPEC`;
+* `ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC`;
+* `ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC`.
 
 ---
 
 # REGLA CENTRAL
 
-El usuario manda.
+El usuario mantiene la autoridad humana superior.
 
-Robert no ejecuta acciones importantes sin permiso.
+Todo dato que Robert:
 
-Todo dato que Robert muestre, guarde, procese o relacione debe respetar las reglas de seguridad, autorización y control definidas en los documentos maestros del sistema.
+```text
+DISPLAYS
+STORES
+PROCESSES
+RELATES
+TRANSFERS
+```
+
+debe respetar:
+
+```text
+CANONICAL MODEL
+CONTRACTS
+SECURITY
+PERMISSION
+SCOPE
+RISK
+APPROVAL
+VALIDATION
+EXECUTION AUTHORITY
+```
+
+---
+
+# CONTRACT PRECEDENCE
+
+Cuando una entidad cruza límites entre componentes, su contrato debe derivarse de:
+
+```text
+ROBERT_IMPLEMENTATION_CONTRACTS v0.1
+DECISIÓN #038
+CAMBIO #063
+```
+
+Ejemplos:
+
+```text
+TASK
+REQUEST_CONTEXT
+
+ORCHESTRATOR_REQUEST
+ORCHESTRATOR_RESULT
+ROUTE
+
+AGENT_REQUEST
+AGENT_RESULT
+
+SKILL_INVOCATION
+SKILL_RESULT
+
+MODEL_REQUEST
+MODEL_RESPONSE
+
+TOOL_REQUEST
+TOOL_RESULT
+
+MEMORY_CANDIDATE
+MEMORY_RECORD
+MEMORY_RETRIEVAL_REQUEST
+MEMORY_RETRIEVAL_RESULT
+
+VALIDATION_REQUEST
+VALIDATION_RESULT
+
+PERMISSION_CHECK
+SCOPE_CHECK
+RISK_ASSESSMENT
+
+APPROVAL_REQUEST
+APPROVAL_RESULT
+
+ERROR
+BLOCK
+AUDIT_EVENT
+```
+
+El Data Model puede definir:
+
+```text
+PERSISTENCE
+INDEXING
+RELATIONSHIPS
+TECHNICAL STORAGE REPRESENTATION
+QUERY REPRESENTATION
+```
+
+pero no puede eliminar silenciosamente campos aprobados.
+
+Se formaliza:
+
+```text
+DATA MODEL FIELD SET
+MUST BE COMPATIBLE WITH
+APPROVED CONTRACT FIELD SET
+```
+
+Si existe conflicto:
+
+```text
+SPECIALIZED APPROVED ARCHITECTURE
+TAKES DOMAIN PRECEDENCE
+```
+
+sujeto a Data Consistency.
 
 ---
 
@@ -84,41 +286,49 @@ Todo dato que Robert muestre, guarde, procese o relacione debe respetar las regl
 
 Robert se encuentra en:
 
-**Fase 10 — MVP técnico básico en preparación**
+```text
+PHASE: 10
+```
 
-Estado operativo actual:
+Estado vigente:
 
-- MVP manual validado.
-- Sandbox manual validado.
-- GitHub configurado como respaldo documental privado y manual.
-- ROBERT_CONTEXT_MASTER v0.5 reanclado.
-- ROBERT_PHASES v0.5 reconciliado.
-- Escala de riesgo y autonomía unificada.
-- ROBERT_TECHNICAL_MVP_PLAN aprobado.
-- ROBERT_TECHNICAL_MVP_WIREFRAME v0.3 aprobado.
-- ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2 aprobado.
-- ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1 aprobado.
-- Convención visual de Obsidian validada.
-- Sin programación autorizada.
-- Sin base de datos real autorizada.
-- Sin conexiones externas autorizadas.
-- Sin automatizaciones reales autorizadas.
-- Sin agentes autónomos activos.
+```text
+CORE_ARCHITECTURE = CLOSED
+
+TOOL_ARCHITECTURE = CLOSED
+
+IMPLEMENTATION_CONTRACTS = APPROVED
+
+PHASE_10_EXIT_CRITERIA = APPROVED
+
+BUILD_ORDER = APPROVED
+
+TECHNICAL_IMPLEMENTATION = NOT STARTED
+
+REAL_TOOL_EXECUTION = DISABLED
+
+AUTONOMY_LEVEL = 0
+
+EXECUTION_AUTHORITY = NONE
+```
+
+Este documento continúa siendo conceptual/documental.
 
 ---
 
 # ALCANCE AUTORIZADO
 
-Este documento autoriza únicamente:
+Este documento permite:
 
-- Definir modelos de datos conceptuales.
-- Definir campos internos simulados.
-- Definir relaciones entre documentos, decisiones, cambios, riesgos y comandos.
-- Definir estados permitidos.
-- Definir datos permitidos y prohibidos.
-- Servir como base documental para futuras especificaciones técnicas.
-- Explicar qué datos podrían alimentar los componentes del MVP técnico básico.
-- Mantener el proyecto en modo documental, manual y supervisado.
+* definir modelos conceptuales;
+* documentar fields;
+* diseñar relaciones;
+* representar estados;
+* preparar futura persistencia;
+* preparar futuros runtime schemas;
+* documentar datos permitidos y restringidos;
+* servir de referencia para implementación posterior;
+* mapear contracts hacia futura representación técnica.
 
 ---
 
@@ -126,20 +336,18 @@ Este documento autoriza únicamente:
 
 Este documento no autoriza:
 
-- Programar la app.
-- Crear una base de datos real.
-- Crear tablas reales.
-- Crear código.
-- Conectar Supabase.
-- Conectar Firebase.
-- Conectar GitHub automáticamente.
-- Conectar Gmail.
-- Conectar Google Calendar.
-- Conectar APIs externas.
-- Automatizar acciones.
-- Activar agentes autónomos.
-- Ejecutar acciones reales.
-- Avanzar automáticamente a Fase 11.
+* comenzar programación por sí mismo;
+* crear Production Database;
+* conectar Supabase;
+* conectar Firebase;
+* conectar GitHub automáticamente;
+* conectar Gmail;
+* conectar Calendar;
+* ejecutar APIs externas;
+* activar Agents autónomos;
+* realizar Tool execution real;
+* realizar Automatic Memory Write;
+* avanzar automáticamente a Phase 11.
 
 ---
 
@@ -147,74 +355,424 @@ Este documento no autoriza:
 
 Los datos de Robert deben ser:
 
-- Claros.
-- Mínimos.
-- Auditables.
-- Ordenados.
-- Controlados por el usuario.
-- Separados por función.
-- No sensibles por defecto.
-- Simulados en esta etapa.
-- Reversibles cuando aplique.
-- Alineados con documentos maestros.
+* claros;
+* mínimos;
+* auditables;
+* versionables cuando aplique;
+* trazables;
+* separados por dominio;
+* sujetos a Scope;
+* sujetos a Security;
+* compatibles con Contracts;
+* no sensibles por defecto;
+* minimizados cuando crucen boundaries.
 
-Regla principal:
+Regla:
 
-**Datos mínimos, control máximo.**
-
-Robert no debe guardar información innecesaria solo porque puede hacerlo.
-
-Robert solo debe manejar datos que tengan una función clara dentro del sistema.
+```text
+MINIMUM NECESSARY DATA
++
+MAXIMUM REQUIRED CONTROL
+```
 
 ---
 
 # CONCEPTOS QUE NO DEBEN MEZCLARSE
 
-Robert debe separar siempre los siguientes conceptos:
+Se mantienen separadas:
 
-- Tipo de cambio.
-- Nivel de riesgo.
-- Nivel de autonomía.
-- Estado documental.
-- Estado operativo.
-- Modo activo.
-- Decisión formal.
-- Cambio registrado.
+```text
+CHANGE TYPE
+RISK LEVEL
+AUTONOMY LEVEL
+DOCUMENT LIFECYCLE STATE
+TASK STATUS
+OPERATIONAL MODE
+DECISION
+CHANGE RECORD
+PERMISSION
+SCOPE
+APPROVAL
+EXECUTION AUTHORITY
+VALIDATION
+```
 
-Ejemplo correcto:
+Ejemplo:
 
-- Tipo de cambio: Cambio técnico documental.
-- Nivel de riesgo: Nivel 3 — Alto.
-- Nivel de autonomía: Nivel 0 — Sin autonomía ejecutiva.
-- Estado documental: Aprobado.
-- Modo activo: Supervisado.
-- Ejecución real: No autorizada.
+```text
+RISK LEVEL
+≠
+AUTONOMY LEVEL
+
+PERMISSION
+≠
+EXECUTION AUTHORITY
+
+VALIDATION
+≠
+APPROVAL
+
+DECISION
+≠
+CHANGE
+```
 
 ---
 
-# ESCALA OFICIAL DE RIESGO
+# ESCALA OFICIAL DE RISK
 
-La escala oficial de riesgo de Robert es:
+El Data Model referencia la escala vigente de Robert:
 
-- Nivel 0 — Informativo.
-- Nivel 1 — Bajo.
-- Nivel 2 — Medio.
-- Nivel 3 — Alto.
-- Nivel 4 — Crítico.
+```text
+Nivel 0 — Informativo
+Nivel 1 — Bajo
+Nivel 2 — Medio
+Nivel 3 — Alto
+Nivel 4 — Crítico
+```
 
-No existe Nivel 5 como riesgo.
+Regla:
 
-Nivel 5 solo puede existir como autonomía si así se define en ROBERT_SECURITY_RULES.
+```text
+RISK_LEVEL ∈ {0,1,2,3,4}
+```
 
-Actualmente Robert no tiene autonomía ejecutiva activa.
+No existe Nivel 5 como Risk.
+
+Este documento no crea una escala nueva.
 
 ---
 
-# MODELOS PRINCIPALES DE DATOS
+# CANONICAL ENTITY REPRESENTATION RULE
 
-Esta versión define los modelos conceptuales mínimos para el MVP técnico básico.
+Cuando este documento represente:
 
-Modelos incluidos:
+```text
+MODEL
+AGENT
+SKILL
+TOOL
+MEMORY
+VALIDATION
+TASK
+ROUTE
+```
+
+debe conservar sus definiciones aprobadas.
+
+```text
+TECHNICAL REPRESENTATION
+≠
+CANONICAL REDEFINITION
+```
+
+En particular:
+
+```text
+MODEL ≠ TOOL
+
+AGENT ≠ SKILL
+
+AGENT ≠ ORCHESTRATOR
+
+SKILL ≠ TOOL
+
+CONTEXT ≠ MEMORY
+
+VALIDATION ≠ APPROVAL
+
+TOOL REQUEST ≠ TOOL AUTHORIZATION
+```
+
+---
+
+# MEMORY DATA ALIGNMENT
+
+La autoridad del dominio pertenece a:
+
+```text
+ROBERT_MEMORY_ARCHITECTURE v0.1
+DECISIÓN #035
+CAMBIO #060
+```
+
+Memory debe preservar dos dimensiones independientes.
+
+## MEMORY_TYPE
+
+```text
+CORE
+SEMANTIC
+EPISODIC
+DECISIONAL
+PROCEDURAL
+```
+
+## RETENTION
+
+```text
+ACTIVE
+TEMPORARY
+PERSISTENT
+```
+
+Se mantiene:
+
+```text
+MEMORY_TYPE ≠ RETENTION
+
+MEMORY_CANDIDATE ≠ MEMORY_RECORD
+
+CONTEXT ≠ MEMORY
+
+MODEL RESPONSE ≠ MEMORY WRITE
+
+TOOL RESULT ≠ MEMORY WRITE
+```
+
+---
+
+# MEMORY RETRIEVAL ALIGNMENT
+
+Una futura representación de `MEMORY_RETRIEVAL_REQUEST` debe preservar como mínimo la semántica aprobada de:
+
+```text
+request_id
+task_id
+requester
+query
+memory_types
+retention_classes
+scope
+freshness_requirement
+confidence_requirement
+sensitivity_constraints
+max_results
+purpose
+```
+
+Se mantiene:
+
+```text
+MEMORY RETRIEVAL SCOPE
+≠
+AUTHORIZED OPERATIONAL SCOPE
+```
+
+---
+
+# VALIDATION DATA ALIGNMENT
+
+La autoridad pertenece a:
+
+```text
+ROBERT_VALIDATION_ARCHITECTURE v0.1
+DECISIÓN #036
+CAMBIO #061
+```
+
+Debe preservarse:
+
+```text
+VALIDATION_TYPE
+≠
+REVIEWER_ROLE
+```
+
+## VALIDATION_TYPE
+
+```text
+RULE
+CANONICAL
+STRUCTURE
+COMPLETENESS
+CONSISTENCY
+EVIDENCE
+SOURCE
+SECURITY
+SCOPE
+PERMISSION
+MEMORY
+MODEL_OUTPUT
+```
+
+## REVIEWER_ROLE
+
+```text
+RULE_SYSTEM
+AGENT
+MODEL
+USER
+AUTHORIZED ROBERT FUNCTION
+```
+
+`VALIDATION_RESULT` debe poder representar explícitamente:
+
+```text
+passed_checks
+failed_checks
+warnings
+conflicts
+confidence
+limitations
+evidence
+sources
+recommendations
+recommended_next_step
+blocking
+```
+
+Reglas:
+
+```text
+VALIDATION PASS ≠ TRUTH
+
+VALIDATION PASS ≠ APPROVAL
+
+VALIDATION PASS ≠ EXECUTION AUTHORITY
+```
+
+---
+
+# TOOL DATA ALIGNMENT
+
+La autoridad pertenece a:
+
+```text
+ROBERT_TOOL_ARCHITECTURE v0.1
+DECISIÓN #037
+CAMBIO #062
+```
+
+Debe preservarse:
+
+```text
+TOOL REQUEST ≠ TOOL AUTHORIZATION
+
+TOOL AVAILABLE ≠ TOOL ALLOWED
+
+TOOL RESULT ≠ TRUTH
+
+TOOL RESULT ≠ DECISION
+
+TOOL RESULT ≠ APPROVAL
+
+TOOL RESULT ≠ MEMORY WRITE
+
+MODEL TOOL REQUEST ≠ DIRECT TOOL EXECUTION
+
+AGENT TOOL REQUEST ≠ DIRECT TOOL EXECUTION
+
+SKILL TOOL REQUIREMENT ≠ DIRECT TOOL EXECUTION
+```
+
+Un futuro `TOOL_RESULT` debe poder preservar:
+
+```text
+request_id
+task_id
+tool_id
+operation
+status
+result
+metadata
+source
+timestamp
+side_effects
+warnings
+errors
+confidence_if_applicable
+validation_required
+audit_reference
+```
+
+---
+
+# MODEL DATA ALIGNMENT
+
+La autoridad pertenece a:
+
+```text
+ROBERT_MODEL_INTERFACE_SPEC v0.1
+DECISIÓN #034
+CAMBIO #059
+```
+
+Se mantiene:
+
+```text
+MODEL RESPONSE ≠ TRUTH
+
+MODEL RESPONSE ≠ DECISION
+
+MODEL RESPONSE ≠ MEMORY WRITE
+
+MODEL RESPONSE ≠ TOOL EXECUTION
+```
+
+Claude y ChatGPT deben representarse como:
+
+```text
+MODEL
+```
+
+no como Tool.
+
+---
+
+# AGENT DATA ALIGNMENT
+
+La autoridad pertenece a:
+
+```text
+ROBERT_AGENT_ARCHITECTURE v0.1
+DECISIÓN #032
+CAMBIO #055
+CAMBIO #056
+```
+
+Se mantiene:
+
+```text
+AGENT ≠ ORCHESTRATOR
+
+AGENT RESULT ≠ DECISION
+
+AGENT RESULT ≠ AUTHORIZATION
+
+AGENT TOOL REQUEST ≠ DIRECT TOOL EXECUTION
+```
+
+---
+
+# SKILL DATA ALIGNMENT
+
+La autoridad pertenece a:
+
+```text
+ROBERT_SKILL_ARCHITECTURE v0.1
+DECISIÓN #033
+CAMBIO #057
+CAMBIO #058
+```
+
+Se mantiene:
+
+```text
+SKILL ≠ AGENT
+
+SKILL ≠ TOOL
+
+SKILL RESULT ≠ DECISION
+
+SKILL RESULT ≠ TOOL AUTHORIZATION
+```
+
+---
+
+# MODELOS LEGACY PRINCIPALES DEL MVP
+
+La versión original de este documento definió los siguientes modelos conceptuales:
 
 1. SystemState
 2. RobertDocument
@@ -228,808 +786,856 @@ Modelos incluidos:
 10. GitHubBackupStatus
 11. ObsidianGraphStatus
 
+Estos modelos se conservan como:
+
+```text
+LEGACY MVP VIEW / DOCUMENT MODELS
+```
+
+No sustituyen los contratos canónicos aprobados posteriormente.
+
+Regla:
+
+```text
+LEGACY VIEW MODEL
+≠
+CORE IMPLEMENTATION CONTRACT
+```
+
 ---
 
-# 1. MODELO — SystemState
+# 1. MODELO LEGACY — SystemState
 
 ## Función
 
-SystemState representa el estado general actual de Robert.
+Representa una vista agregada del estado general de Robert.
 
-Este modelo sirve para que el sistema pueda mostrar en qué fase se encuentra, qué modo está activo, qué documentos están aprobados y qué acciones siguen prohibidas.
+Puede alimentar:
 
-Alimenta principalmente:
+* TopBar;
+* CurrentStatePanel;
+* DocumentStatusMap;
+* DecisionInbox.
 
-- TopBar
-- CurrentStatePanel
-- DocumentStatusMap
-- DecisionInbox
+## Campos conceptuales
 
-## Campos sugeridos
+* project_name
+* current_phase
+* current_phase_status
+* active_mode
+* execution_status
+* last_decision
+* last_change
+* current_source_of_truth
+* github_status
+* obsidian_visual_status
+* programming_authorized
+* database_authorized
+* external_connections_authorized
+* automations_authorized
+* agents_authorized
 
-- project_name
-- current_phase
-- current_phase_status
-- active_mode
-- execution_status
-- last_decision
-- last_change
-- current_source_of_truth
-- github_status
-- obsidian_visual_status
-- programming_authorized
-- database_authorized
-- external_connections_authorized
-- automations_authorized
-- agents_authorized
+## Regla
 
-## Ejemplo conceptual
+`SystemState` es un View/Aggregate Model.
 
-- project_name: Robert
-- current_phase: Fase 10 — MVP técnico básico
-- current_phase_status: En preparación
-- active_mode: Supervisado
-- execution_status: Sin ejecución real autorizada
-- last_decision: DECISIÓN #012
-- last_change: CAMBIO #016
-- current_source_of_truth: ROBERT_CONTEXT_MASTER v0.5
-- github_status: Respaldo documental manual
-- obsidian_visual_status: Convención visual validada
-- programming_authorized: No
-- database_authorized: No
-- external_connections_authorized: No
-- automations_authorized: No
-- agents_authorized: No
+No reemplaza:
+
+```text
+TASK
+ORCHESTRATOR_RESULT
+PERMISSION_CHECK
+SCOPE_CHECK
+RISK_ASSESSMENT
+APPROVAL_RESULT
+```
 
 ---
 
-# 2. MODELO — RobertDocument
+# 2. MODELO LEGACY — RobertDocument
 
-## Función
+Representa documentos del sistema.
 
-RobertDocument representa cualquier documento oficial, borrador, histórico o técnico dentro del sistema Robert.
+Campos:
 
-Permite saber qué documento existe, en qué carpeta está, qué versión tiene, cuál es su estado y con qué decisión o cambio está relacionado.
+* document_id
+* document_name
+* folder
+* version
+* document_status
+* document_type
+* phase_related
+* layer_related
+* tags
+* source_of_truth_level
+* decision_related
+* change_related
+* risk_level
+* last_updated
+* is_official
+* is_draft
+* is_historical
+* notes
 
-Alimenta principalmente:
+`document_status` debe mantenerse compatible con:
 
-- DocumentStatusMap
-- CurrentStatePanel
-- DecisionInbox
-- LeftSidebar
+```text
+ROBERT_TECHNICAL_DOCUMENT_LIFECYCLE_SPEC
+```
 
-## Campos sugeridos
-
-- document_id
-- document_name
-- folder
-- version
-- document_status
-- document_type
-- phase_related
-- layer_related
-- tags
-- source_of_truth_level
-- decision_related
-- change_related
-- risk_level
-- last_updated
-- is_official
-- is_draft
-- is_historical
-- notes
-
-## Estados permitidos
-
-- Borrador
-- En revisión
-- Pendiente de aprobación
-- Aprobado
-- Rechazado
-- Pausado
-- Reemplazado
-- Archivado
-- Histórico
-
-## Ejemplo conceptual
-
-- document_id: robert_technical_data_model_spec
-- document_name: ROBERT_TECHNICAL_DATA_MODEL_SPEC
-- folder: 10_MVP
-- version: 0.1
-- document_status: Aprobado
-- document_type: Especificación técnica documental / modelo de datos conceptual
-- phase_related: Fase 10
-- layer_related: Capa 5
-- tags: #robert/orbita-2 #robert/mvp #capa/5 #tipo/tecnico
-- decision_related: DECISIÓN #012
-- change_related: CAMBIO #016
-- risk_level: Nivel 2 — Medio
-- is_official: Sí
-- is_draft: No
-- is_historical: No
+y no redefinir una segunda lifecycle taxonomy.
 
 ---
 
-# 3. MODELO — DecisionRecord
+# 3. MODELO LEGACY — DecisionRecord
 
-## Función
+Representa una Decision formal.
 
-DecisionRecord representa una decisión formal tomada por el usuario dentro del proyecto Robert.
+Debe alinearse con:
 
-Debe alinearse con ROBERT_DECISIONS_LOG.
+```text
+ROBERT_DECISIONS_LOG
+```
 
-Sirve para saber qué decidió el usuario, cuándo lo decidió, qué documento afecta, qué alcance autoriza y qué alcance sigue prohibido.
+Campos:
 
-Alimenta principalmente:
+* decision_number
+* decision_title
+* date
+* status
+* decision_type
+* documents_affected
+* decision_summary
+* reason
+* authorized_scope
+* unauthorized_scope
+* initial_risk_level
+* final_risk_level
+* autonomy_level
+* active_rule
+* closing_note
 
-- DecisionInbox
-- CurrentStatePanel
-- DocumentStatusMap
-- Historial futuro
+Regla:
 
-## Campos sugeridos
-
-- decision_number
-- decision_title
-- date
-- status
-- decision_type
-- documents_affected
-- decision_summary
-- reason
-- authorized_scope
-- unauthorized_scope
-- initial_risk_level
-- final_risk_level
-- autonomy_level
-- active_rule
-- closing_note
-
-## Estados permitidos
-
-- Aprobada
-- Pendiente
-- En revisión
-- Rechazada
-- Pausada
-- Reemplazada
-- Archivada
-
-## Ejemplo conceptual
-
-- decision_number: 012
-- decision_title: Aprobación de ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1
-- date: 02/07/2026
-- status: Aprobada
-- decision_type: Aprobación de especificación técnica documental
-- documents_affected: ROBERT_TECHNICAL_DATA_MODEL_SPEC
-- initial_risk_level: Nivel 3 — Alto
-- final_risk_level: Nivel 2 — Medio
-- autonomy_level: Nivel 0 — Sin autonomía ejecutiva
+```text
+PROPOSAL ≠ DECISION
+```
 
 ---
 
-# 4. MODELO — ChangeRecord
+# 4. MODELO LEGACY — ChangeRecord
 
-## Función
+Representa un Change registrado.
 
-ChangeRecord representa un cambio registrado dentro de ROBERT_CONTROL_DE_CAMBIOS.
+Debe alinearse con:
 
-Sirve para mantener historial, trazabilidad y control sobre qué documento cambió, por qué cambió y qué riesgo tuvo ese cambio.
+```text
+ROBERT_CONTROL_DE_CAMBIOS
+```
 
-Alimenta principalmente:
+Campos:
 
-- CurrentStatePanel
-- DocumentStatusMap
-- DecisionInbox
-- Historial futuro
+* change_number
+* change_title
+* date
+* status
+* document_affected
+* change_type
+* initial_risk_level
+* final_risk_level
+* autonomy_level
+* reason
+* correction_applied
+* dependencies
+* conflicts
+* authorized_scope
+* unauthorized_scope
+* final_state
+* decision_related
 
-## Campos sugeridos
+Regla:
 
-- change_number
-- change_title
-- date
-- status
-- document_affected
-- change_type
-- initial_risk_level
-- final_risk_level
-- autonomy_level
-- reason
-- correction_applied
-- dependencies
-- conflicts
-- authorized_scope
-- unauthorized_scope
-- final_state
-- decision_related
-
-## Estados permitidos
-
-- Borrador
-- En revisión
-- Pendiente de aprobación
-- Aprobado
-- Actualizado
-- Aprobado e integrado
-- Pausado
-- Rechazado
-- Archivado
-- Reemplazado
-
-## Ejemplo conceptual
-
-- change_number: 016
-- change_title: Creación de ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1
-- status: Borrador creado / pendiente de aprobación inicial
-- document_affected: ROBERT_TECHNICAL_DATA_MODEL_SPEC
-- change_type: Cambio técnico documental / modelo de datos conceptual
-- initial_risk_level: Nivel 3 — Alto
-- final_risk_level: Nivel 2 — Medio
-- autonomy_level: Nivel 0 — Sin autonomía ejecutiva
-- decision_related: DECISIÓN #012
+```text
+DECISION ≠ CHANGE
+```
 
 ---
 
-# 5. MODELO — RiskRecord
+# 5. MODELO LEGACY — RiskRecord
 
-## Función
+Representa una evaluación o referencia de Risk.
 
-RiskRecord representa un riesgo detectado dentro de una acción, documento, decisión, cambio o comando.
+Campos:
 
-Sirve para explicar por qué algo requiere aprobación, por qué debe bloquearse o por qué puede continuar solo como borrador.
+* risk_id
+* risk_level
+* risk_name
+* risk_reason
+* document_or_module_affected
+* mode_active
+* requires_approval
+* approval_status
+* recommended_action
+* blocking_required
+* related_decision
+* related_change
 
-Alimenta principalmente:
+La representación futura debe reconciliarse con:
 
-- RiskBadge
-- ApprovalGate
-- DecisionInbox
-- CurrentStatePanel
+```text
+RISK_ASSESSMENT
+```
 
-## Campos sugeridos
-
-- risk_id
-- risk_level
-- risk_name
-- risk_reason
-- document_or_module_affected
-- mode_active
-- requires_approval
-- approval_status
-- recommended_action
-- blocking_required
-- related_decision
-- related_change
-
-## Niveles permitidos
-
-- Nivel 0 — Informativo
-- Nivel 1 — Bajo
-- Nivel 2 — Medio
-- Nivel 3 — Alto
-- Nivel 4 — Crítico
-
-## Ejemplo conceptual
-
-- risk_id: risk_data_model_spec_v01
-- risk_level: Nivel 2 — Medio
-- risk_name: Modelo de datos conceptual aprobado
-- risk_reason: Define datos conceptuales, pero no crea una base de datos real.
-- document_or_module_affected: ROBERT_TECHNICAL_DATA_MODEL_SPEC
-- mode_active: Supervisado
-- requires_approval: Sí
-- approval_status: Aprobado por DECISIÓN #012
-- recommended_action: Mantener como base documental sin ejecución real.
-- blocking_required: No
+de Implementation Contracts.
 
 ---
 
-# 6. MODELO — CommandRequest
+# 6. MODELO LEGACY — CommandRequest
 
-## Función
+Representa una solicitud recibida mediante Commands.
 
-CommandRequest representa una solicitud o comando hecho por el usuario dentro de Robert.
+Campos originales:
 
-Sirve para clasificar la intención del usuario, detectar riesgo, determinar si requiere aprobación y decidir si Robert puede preparar una respuesta, pausar o bloquear.
+* command_id
+* user_input
+* recognized_command
+* mode_requested
+* active_mode
+* document_affected
+* module_affected
+* classified_intent
+* change_type
+* risk_level
+* autonomy_level
+* requires_approval
+* status
+* prepared_output
+* result
+* timestamp
 
-Alimenta principalmente:
+En futura implementación:
 
-- CommandCenter
-- ModeSelector
-- RiskBadge
-- ApprovalGate
-- DecisionInbox
+```text
+CommandRequest
+```
 
-## Campos sugeridos
+no debe crear un pipeline paralelo al Orchestrator.
 
-- command_id
-- user_input
-- recognized_command
-- mode_requested
-- active_mode
-- document_affected
-- module_affected
-- classified_intent
-- change_type
-- risk_level
-- autonomy_level
-- requires_approval
-- status
-- prepared_output
-- result
-- timestamp
+Debe alimentar:
 
-## Estados permitidos
+```text
+TASK
+REQUEST_CONTEXT
+ORCHESTRATOR_REQUEST
+```
 
-- Recibido
-- Clasificado
-- En revisión
-- Borrador preparado
-- Requiere aprobación
-- Aprobado
-- Pausado
-- Bloqueado
-- No permitido
-- Completado
-
-## Ejemplo conceptual
-
-- command_id: cmd_001
-- user_input: crea ROBERT_TECHNICAL_DATA_MODEL_SPEC
-- recognized_command: CREA
-- active_mode: Supervisado
-- document_affected: ROBERT_TECHNICAL_DATA_MODEL_SPEC
-- classified_intent: Crear documento técnico documental
-- change_type: Cambio técnico documental
-- risk_level: Nivel 3 — Alto
-- autonomy_level: Nivel 0 — Sin autonomía ejecutiva
-- requires_approval: Sí
-- status: Completado documentalmente
+según corresponda.
 
 ---
 
-# 7. MODELO — PendingDecision
+# 7. MODELO LEGACY — PendingDecision
 
-## Función
+Representa elementos que requieren intervención humana.
 
-PendingDecision representa una decisión pendiente que requiere intervención del usuario.
+Campos:
 
-Sirve para que Robert no avance automáticamente cuando algo necesita revisión, aprobación, corrección o pausa.
+* pending_id
+* title
+* reason
+* document_affected
+* change_type
+* risk_level
+* autonomy_level
+* current_status
+* options_available
+* recommended_option
+* created_date
+* decision_required
+* blocking_status
 
-Alimenta principalmente:
+En implementación futura debe reconciliarse con:
 
-- DecisionInbox
-- ApprovalGate
-- CurrentStatePanel
+```text
+APPROVAL_REQUEST
+APPROVAL_RESULT
+BLOCK
+```
 
-## Campos sugeridos
-
-- pending_id
-- title
-- reason
-- document_affected
-- change_type
-- risk_level
-- autonomy_level
-- current_status
-- options_available
-- recommended_option
-- created_date
-- decision_required
-- blocking_status
-
-## Opciones permitidas
-
-- Aprobar
-- Rechazar
-- Pausar
-- Corregir
-- Enviar a revisión
-- Enviar a sandbox
-- Archivar
-
-## Ejemplo conceptual
-
-- pending_id: pending_interaction_flow_spec
-- title: Decidir si se crea ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC
-- reason: DATA_MODEL_SPEC v0.1 ya fue aprobado
-- document_affected: ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC
-- risk_level: Nivel 3 — Alto
-- autonomy_level: Nivel 0 — Sin autonomía ejecutiva
-- current_status: Pendiente
-- recommended_option: Revisar antes de crear
-- decision_required: Sí
-- blocking_status: No bloquea, pero requiere autorización
+sin crear una Approval Authority paralela.
 
 ---
 
-# 8. MODELO — ModeState
+# 8. MODELO LEGACY — ModeState
 
-## Función
+Representa una vista del modo operativo.
 
-ModeState representa el modo operativo actual de Robert.
+Campos:
 
-Sirve para saber si Robert está trabajando en modo manual, supervisado o sandbox, y qué acciones están bloqueadas en ese modo.
+* active_mode
+* available_modes
+* restricted_modes
+* execution_allowed
+* external_actions_allowed
+* automation_allowed
+* agent_autonomy_allowed
+* reason_for_restriction
 
-Alimenta principalmente:
+Durante Fase 10:
 
-- ModeSelector
-- TopBar
-- CurrentStatePanel
-- CommandCenter
-
-## Campos sugeridos
-
-- active_mode
-- available_modes
-- restricted_modes
-- execution_allowed
-- external_actions_allowed
-- automation_allowed
-- agent_autonomy_allowed
-- reason_for_restriction
-
-## Modos activos permitidos en MVP básico
-
-- Manual
-- Supervisado
-- Sandbox
-
-## Modos no activos todavía
-
-- Autónomo limitado
-- Ejecución limitada
-- Modo crítico
-
-## Ejemplo conceptual
-
-- active_mode: Supervisado
-- available_modes: Manual, Supervisado, Sandbox
-- restricted_modes: Autónomo limitado, Ejecución limitada, Modo crítico
-- execution_allowed: No
-- external_actions_allowed: No
-- automation_allowed: No
-- agent_autonomy_allowed: No
-- reason_for_restriction: Fase 10 documental, sin programación autorizada
+```text
+AUTONOMY_LEVEL = 0
+EXECUTION_AUTHORITY = NONE
+REAL_EXTERNAL_EXECUTION = DISABLED
+```
 
 ---
 
-# 9. MODELO — ComponentState
+# 9. MODELO LEGACY — ComponentState
 
-## Función
+Representa estado documental/técnico de componentes.
 
-ComponentState representa el estado de cada componente del MVP técnico básico.
+Campos:
 
-Sirve para saber qué componente existe documentalmente, qué datos necesita, qué documento lo define y qué riesgo tiene.
+* component_id
+* component_name
+* component_status
+* component_priority
+* layer_main
+* layer_represented
+* related_document
+* requires_data_model
+* requires_approval_gate
+* risk_level
+* notes
 
-Alimenta principalmente:
-
-- DocumentStatusMap
-- CurrentStatePanel
-- Futuras vistas técnicas
-
-## Campos sugeridos
-
-- component_id
-- component_name
-- component_status
-- component_priority
-- layer_main
-- layer_represented
-- related_document
-- requires_data_model
-- requires_approval_gate
-- risk_level
-- notes
-
-## Componentes prioritarios
-
-- AppShell
-- TopBar
-- LeftSidebar
-- CommandCenter
-- ModeSelector
-- RiskBadge
-- ApprovalGate
-- DecisionInbox
-- DocumentStatusMap
-- CurrentStatePanel
-
-## Ejemplo conceptual
-
-- component_id: risk_badge
-- component_name: RiskBadge
-- component_status: Definido documentalmente
-- component_priority: Prioritario
-- layer_main: Capa 5 — Presentación
-- layer_represented: Capa 4 — Gobierno / Seguridad
-- related_document: ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2
-- requires_data_model: Sí
-- requires_approval_gate: Sí
-- risk_level: Nivel 2 — Medio
+ComponentState no crea componentes nuevos ni Authority.
 
 ---
 
-# 10. MODELO — GitHubBackupStatus
+# 10. MODELO LEGACY — GitHubBackupStatus
 
-## Función
+Representa estado documental de GitHub.
 
-GitHubBackupStatus representa el estado del respaldo manual de Robert en GitHub.
+Campos:
 
-Sirve para mostrar si el repositorio existe, si es privado, si el respaldo es manual y si hay sincronización automática activa.
+* repository_name
+* repository_status
+* backup_mode
+* last_checkpoint
+* manual_update_required
+* automatic_sync_enabled
+* external_connection_status
+* risk_level
+* notes
 
-Alimenta principalmente:
+Regla:
 
-- CurrentStatePanel
-- TopBar
-- DocumentStatusMap
-
-## Campos sugeridos
-
-- repository_name
-- repository_status
-- backup_mode
-- last_checkpoint
-- manual_update_required
-- automatic_sync_enabled
-- external_connection_status
-- risk_level
-- notes
-
-## Ejemplo conceptual
-
-- repository_name: ROBERT_MASTER_SYSTEM
-- repository_status: Privado
-- backup_mode: Manual
-- last_checkpoint: Checkpoint documental GitHub completado
-- manual_update_required: Sí
-- automatic_sync_enabled: No
-- external_connection_status: No conectado automáticamente
-- risk_level: Nivel 2 — Medio
-- notes: GitHub funciona solo como respaldo documental manual.
+```text
+GITHUB AVAILABLE
+≠
+GITHUB AUTOMATION AUTHORIZED
+```
 
 ---
 
-# 11. MODELO — ObsidianGraphStatus
+# 11. MODELO LEGACY — ObsidianGraphStatus
 
-## Función
+Representa estado visual/documental de Obsidian.
 
-ObsidianGraphStatus representa el estado de la convención visual de Obsidian.
+Campos:
 
-Sirve para mostrar si el grafo documental está organizado, qué nodo funciona como centro visual, qué nodo funciona como centro conceptual y qué reglas de color se están usando.
+* graph_status
+* visual_center
+* conceptual_center
+* orbit_rule
+* color_rule
+* tags_enabled
+* wikilinks_enabled
+* official_convention
+* related_document
+* risk_level
+* notes
 
-Alimenta principalmente:
+Regla:
 
-- DocumentStatusMap
-- CurrentStatePanel
-- Futuras vistas visuales
-
-## Campos sugeridos
-
-- graph_status
-- visual_center
-- conceptual_center
-- orbit_rule
-- color_rule
-- tags_enabled
-- wikilinks_enabled
-- official_convention
-- related_document
-- risk_level
-- notes
-
-## Ejemplo conceptual
-
-- graph_status: Convención visual validada
-- visual_center: ROBERT_HOME
-- conceptual_center: ROBERT_CONTEXT_MASTER
-- orbit_rule: Órbita = posición / cercanía al núcleo
-- color_rule: Capa o función = color visual
-- tags_enabled: Sí
-- wikilinks_enabled: Sí
-- official_convention: Sí
-- related_document: ROBERT_VISUAL
-- risk_level: Nivel 2 — Medio
-- notes: Obsidian Graph View funciona como navegación documental, no como HUD final.
+```text
+VISUAL GRAPH
+≠
+SYSTEM AUTHORITY
+```
 
 ---
 
-# RELACIONES ENTRE MODELOS
+# RELACIÓN ENTRE LEGACY MODELS Y CONTRACTS
 
-Los modelos se relacionan de la siguiente manera:
+La relación correcta es:
 
-SystemState muestra el estado general del sistema.
+```text
+CANONICAL CONTRACTS
+→ SYSTEM BEHAVIOR
 
-RobertDocument representa los documentos que forman parte del sistema.
+LEGACY MVP MODELS
+→ VIEW / DOCUMENT REPRESENTATION
+```
 
-DecisionRecord registra las decisiones formales tomadas por el usuario.
+Ejemplo:
 
-ChangeRecord registra los cambios documentales realizados.
+```text
+TASK
+ORCHESTRATOR_RESULT
+AUDIT_EVENT
+```
 
-RiskRecord explica los riesgos asociados a documentos, comandos, cambios o decisiones.
+pueden alimentar una futura vista:
 
-CommandRequest interpreta solicitudes del usuario y puede generar riesgos o decisiones pendientes.
+```text
+SystemState
+```
 
-PendingDecision guarda elementos que no deben avanzar sin aprobación.
-
-ModeState define el modo operativo actual de Robert.
-
-ComponentState indica qué componentes existen documentalmente y qué datos necesitan.
-
-GitHubBackupStatus muestra el estado del respaldo manual en GitHub.
-
-ObsidianGraphStatus muestra el estado de la organización visual en Obsidian.
-
----
-
-# FLUJO CONCEPTUAL DE DATOS
-
-El flujo conceptual de información del MVP técnico básico es:
-
-1. El usuario da una instrucción.
-2. Robert la interpreta como CommandRequest.
-3. Robert identifica el modo activo mediante ModeState.
-4. Robert evalúa el riesgo mediante RiskRecord.
-5. Si la instrucción requiere aprobación, se crea una PendingDecision.
-6. Si el usuario aprueba, se registra una DecisionRecord.
-7. Si la aprobación genera cambios, se registra un ChangeRecord.
-8. Los documentos afectados se actualizan como RobertDocument.
-9. SystemState refleja el nuevo estado general.
-10. CurrentStatePanel y DocumentStatusMap muestran el estado actualizado.
-
-Este flujo es conceptual.
-
-No implica programación ni ejecución real en esta etapa.
+pero `SystemState` no reemplaza esos Contracts.
 
 ---
 
-# DATOS PROHIBIDOS EN ESTA ETAPA
+# FLUJO CONCEPTUAL ACTUALIZADO
 
-En esta fase no deben guardarse datos sensibles reales como:
+El flujo original del documento se conserva como antecedente, pero la arquitectura vigente exige:
 
-- Contraseñas.
-- API keys.
-- Tokens.
-- Datos bancarios.
-- Datos fiscales reales.
-- Datos legales confidenciales.
-- Correos privados.
-- Teléfonos de clientes reales.
-- Información personal sensible.
-- Listas reales de clientes.
-- Credenciales de herramientas.
-- Datos médicos.
-- Datos financieros operativos.
-- Documentos privados de terceros sin autorización.
+```text
+USER INPUT
+↓
+TASK
+↓
+REQUEST_CONTEXT
+↓
+ORCHESTRATOR_REQUEST
+↓
+ROUTING / RESOLUTION
+↓
+AGENT / SKILL / MODEL / TOOL REQUEST AS NEEDED
+↓
+VALIDATION
+↓
+ORCHESTRATOR_RESULT
+↓
+AUDIT
+↓
+VIEW MODELS / UI STATE
+```
 
----
+No:
 
-# DATOS PERMITIDOS EN ESTA ETAPA
-
-Se permiten datos documentales y simulados como:
-
-- Nombre del documento.
-- Estado del documento.
-- Versión.
-- Fase relacionada.
-- Cambio relacionado.
-- Decisión relacionada.
-- Riesgo conceptual.
-- Modo activo.
-- Componente relacionado.
-- Estado de GitHub manual.
-- Estado de Obsidian Graph.
-- Notas de revisión.
-- Campos simulados.
-- Ejemplos ficticios.
-- Datos de prueba no sensibles.
+```text
+COMMAND REQUEST
+→ DIRECT SYSTEM MUTATION
+```
 
 ---
 
-# REGLAS DE VALIDACIÓN
+# AUDIT DATA ALIGNMENT
 
-Antes de usar un dato dentro de Robert, debe revisarse:
+Todo dato crítico debe poder relacionarse con:
 
-- ¿Este dato es necesario?
-- ¿Este dato es sensible?
-- ¿Este dato está autorizado?
-- ¿Este dato es real o simulado?
-- ¿Este dato pertenece a un documento oficial?
-- ¿Este dato debe mostrarse en el MVP?
-- ¿Este dato requiere aprobación?
-- ¿Este dato debe bloquearse?
+```text
+AUDIT_EVENT
+```
 
-Si existe duda, Robert debe pausar y pedir autorización.
+según:
 
----
+```text
+ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC
+ROBERT_IMPLEMENTATION_CONTRACTS v0.1
+```
 
-# CRITERIOS DE ACEPTACIÓN
+Referencia preferida:
 
-Este documento se considera aprobado porque:
+```text
+event_id
+task_id
+timestamp
+event_type
+actor
+component
+action
+target
+input_refs
+output_refs
+permission_state
+scope_state
+risk_state
+approval_state
+validation_state
+result
+error_ref
+metadata
+```
 
-- No autoriza programación.
-- No autoriza base de datos real.
-- No autoriza conexiones externas.
-- No autoriza automatizaciones.
-- No autoriza agentes autónomos.
-- Define modelos conceptuales claros.
-- Se alinea con COMPONENTS_SPEC v0.2.
-- Respeta CONTEXT_MASTER v0.5.
-- Respeta PHASES v0.5.
-- Respeta SECURITY_RULES.
-- Usa la escala oficial de riesgo.
-- Separa riesgo, autonomía, tipo de cambio y estado.
-- Define datos permitidos y prohibidos.
-- Mantiene a Robert en Fase 10.
-
----
-
-# RIESGO DEL DOCUMENTO
-
-Tipo de cambio:
-
-**Aprobación técnica documental / modelo de datos conceptual**
-
-Nivel de riesgo inicial:
-
-**Nivel 3 — Alto**
-
-Motivo:
-
-Este documento define la estructura conceptual de datos que podría alimentar el MVP técnico básico. Aunque no implementa nada, acerca el proyecto a una futura construcción técnica.
-
-Nivel de riesgo final:
-
-**Nivel 2 — Medio**
-
-Motivo de reducción:
-
-El documento es conceptual, no crea una base de datos real, no programa, no conecta herramientas externas y no autoriza ejecución.
-
-Nivel de autonomía:
-
-**Nivel 0 — Sin autonomía ejecutiva**
+Este documento no crea un Audit System paralelo.
 
 ---
 
-# EFECTO DE LA APROBACIÓN
+# ERROR / BLOCKING ALIGNMENT
 
-Con esta aprobación:
+Las clasificaciones de Error y Block deben provenir de:
 
-- ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1 queda aprobado.
-- Puede usarse como base para futuras especificaciones técnicas.
-- Puede relacionarse con COMPONENTS_SPEC v0.2.
-- Puede ayudar a definir qué datos necesitarán los componentes del MVP.
-- No autoriza programación.
-- No autoriza base de datos real.
-- No autoriza conexiones externas.
-- No autoriza automatizaciones.
-- No autoriza agentes autónomos.
-- No autoriza ejecución real.
+```text
+ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC
+```
+
+El Data Model puede representar:
+
+```text
+error_ref
+block_ref
+technical_error_code
+```
+
+pero:
+
+```text
+TECHNICAL ERROR CODE
+≠
+NEW ROBERT ERROR TAXONOMY
+```
 
 ---
 
-# PRÓXIMO PASO RECOMENDADO
+# DATA MINIMIZATION
 
-Después de este documento, el siguiente documento posible es:
+Cuando información cruce boundaries:
 
-**ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC**
+```text
+SEND ONLY
+MINIMUM NECESSARY DATA
+```
 
-Ese documento definiría cómo interactúan los componentes entre sí usando los modelos de datos conceptuales aprobados aquí.
+No debe enviarse automáticamente:
 
-No debe crearse sin autorización del usuario.
+```text
+FULL MEMORY
+FULL SESSION
+FULL USER PROFILE
+FULL REPOSITORY
+```
+
+cuando una operación necesite solo una parte.
+
+---
+
+# SENSITIVE DATA BOUNDARY
+
+Credenciales y secretos no deben representarse como payload general.
+
+```text
+SECRET
+≠
+GENERAL CONTRACT PAYLOAD
+```
+
+La futura implementación deberá manejar:
+
+```text
+API KEYS
+TOKENS
+CREDENTIALS
+PRIVATE CONNECTION SECRETS
+```
+
+mediante infraestructura especializada.
+
+---
+
+# DATOS RESTRINGIDOS EN FASE 10
+
+No deben almacenarse como parte de pruebas generales innecesariamente:
+
+* passwords;
+* API keys;
+* tokens;
+* datos bancarios reales;
+* datos fiscales reales;
+* credenciales;
+* correos privados innecesarios;
+* información personal sensible;
+* datos médicos;
+* información privada de terceros;
+* secretos de providers.
+
+---
+
+# DATOS PERMITIDOS EN FASE 10
+
+Se permiten:
+
+* nombres de documentos;
+* status;
+* versiones;
+* Phase;
+* Decision refs;
+* Change refs;
+* Risk conceptual;
+* Contract examples;
+* synthetic test data;
+* campos ficticios;
+* referencias documentales;
+* sandbox data no sensible;
+* Audit examples sin secretos.
+
+---
+
+# CONTRACT VALIDATION REQUIREMENTS
+
+Antes de consumir un Contract futuro debe poder verificarse:
+
+```text
+SCHEMA VALID?
+REQUIRED FIELDS PRESENT?
+ENUM VALUES VALID?
+REFERENCES VALID?
+SCOPE VALID?
+SECURITY VALID?
+```
+
+Regla:
+
+```text
+MISSING REQUIRED FIELD
+=
+CONTRACT FAILURE
+```
+
+---
+
+# FIELD DISCIPLINE
+
+Debe distinguirse:
+
+```text
+FIELD MISSING
+```
+
+de:
+
+```text
+FIELD PRESENT = NULL
+```
+
+cuando la semántica lo requiera.
+
+---
+
+# ENUM DISCIPLINE
+
+Conceptos estructurales deben utilizar enums controlados cuando corresponda.
+
+Ejemplos:
+
+```text
+MEMORY_TYPE
+RETENTION
+VALIDATION_TYPE
+TASK_STATUS
+APPROVAL_STATUS
+RISK_LEVEL
+```
+
+No utilizar strings libres incompatibles para el mismo concepto canónico.
+
+---
+
+# DATA REFERENCES
+
+Preferencia arquitectónica:
+
+```text
+REFERENCE
+OVER
+UNNECESSARY DUPLICATION
+```
+
+cuando aplique a:
+
+* documentos;
+* Memory;
+* Audit;
+* Tool Results;
+* Model Responses;
+* Evidence;
+* Decisions;
+* Changes.
+
+---
+
+# PROVIDER DATA
+
+Metadata específica de providers puede existir bajo:
+
+```text
+provider_metadata
+```
+
+sin contaminar el contrato canónico.
+
+Regla:
+
+```text
+CANONICAL CONTRACT
+↓
+ADAPTER
+↓
+PROVIDER-SPECIFIC REPRESENTATION
+```
+
+---
+
+# IMPLEMENTATION BOUNDARY
+
+Este documento no determina:
+
+```text
+DATABASE ENGINE
+ORM
+DOCUMENT DATABASE
+SQL VS NOSQL
+VECTOR DATABASE
+SCHEMA LIBRARY
+PROGRAMMING LANGUAGE
+```
+
+Estas Decisions pertenecen a implementación posterior.
+
+---
+
+# DATABASE PRINCIPLE
+
+No elegir base de datos antes de definir interfaces de acceso necesarias.
+
+Preferencia:
+
+```text
+DATA ACCESS INTERFACE
+BEFORE
+DATABASE IMPLEMENTATION
+```
+
+---
+
+# CURRENT ARCHITECTURAL INTEGRATION STATE
+
+```text
+DOCUMENT:
+ROBERT_TECHNICAL_DATA_MODEL_SPEC
+
+VERSION:
+0.1
+
+STATUS:
+APPROVED / CANONICALLY INTEGRATED
+
+ORIGINAL DECISION:
+#012
+
+ORIGINAL CHANGE:
+#016
+
+CANONICAL_MODEL:
+INTEGRATED
+
+IMPLEMENTATION_CONTRACTS:
+INTEGRATED
+
+MODEL_INTERFACE:
+INTEGRATED
+
+MEMORY_ARCHITECTURE:
+INTEGRATED
+
+VALIDATION_ARCHITECTURE:
+INTEGRATED
+
+TOOL_ARCHITECTURE:
+INTEGRATED
+
+ERROR_BLOCKING:
+REFERENCED AS DOMAIN AUTHORITY
+
+AUDIT_TRAIL:
+REFERENCED AS DOMAIN AUTHORITY
+
+TECHNICAL_IMPLEMENTATION:
+NOT STARTED
+
+DATABASE:
+NOT IMPLEMENTED
+
+REAL_TOOL_EXECUTION:
+DISABLED
+
+AUTONOMY_LEVEL:
+0
+
+EXECUTION_AUTHORITY:
+NONE
+```
+
+---
+
+# EFECTO DE ESTA NORMALIZACIÓN
+
+Esta normalización:
+
+* no modifica DECISIÓN #012;
+* no crea una nueva aprobación;
+* no autoriza programación;
+* no autoriza Database;
+* no autoriza external connections;
+* no autoriza Agents autónomos;
+* no autoriza Tool execution;
+* no sustituye Implementation Contracts.
+
+Sí:
+
+* alinea Data Model con Canonical Model;
+* integra Implementation Contracts;
+* incorpora Memory;
+* incorpora Validation;
+* incorpora Tool Architecture;
+* convierte los modelos originales en Legacy/View Models;
+* elimina riesgo de que CommandRequest actúe como Orchestrator paralelo;
+* preserva Error/Blocking y Audit como autoridades especializadas.
 
 ---
 
 # CIERRE
 
-ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1 define los modelos de datos conceptuales iniciales para el MVP técnico básico de Robert.
+`ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1` continúa siendo la especificación aprobada de representación conceptual de datos para el MVP técnico.
 
-Este documento organiza la información que Robert necesitaría para mostrar estado, documentos, decisiones, cambios, riesgos, comandos y componentes.
+Su función actual dentro de Implementation Readiness es:
 
-Robert sigue en modo documental y supervisado.
+```text
+REPRESENT APPROVED INFORMATION
+WITHOUT REDEFINING
+APPROVED ARCHITECTURE
+```
 
-El usuario mantiene control total.
+Regla final:
 
-Robert no ejecuta acciones importantes sin permiso.
+```text
+CANONICAL MODEL
+DEFINES MEANING
+
+IMPLEMENTATION CONTRACTS
+DEFINE EXCHANGE
+
+DATA MODEL
+DEFINES REPRESENTATION
+```
+
+Se mantiene:
+
+```text
+TECHNICAL_IMPLEMENTATION = NOT STARTED
+
+AUTONOMY_LEVEL = 0
+
+EXECUTION_AUTHORITY = NONE
+```
