@@ -11175,3 +11175,81 @@ Se mantiene:
 
 AUTONOMY_LEVEL = 0
 EXECUTION_AUTHORITY = NONE
+
+# CAMBIO #065 — Aprobación e integración de ROBERT_BUILD_ORDER v0.1
+
+**Fecha:** 31/08/2026
+**Tipo:** Arquitectónico documental / Build Sequencing
+**Estado:** APROBADO E INTEGRADO
+**Decisión relacionada:** DECISIÓN #040
+**Documento relacionado:** `09_ARCHITECTURE/ROBERT_BUILD_ORDER.md`
+**Versión:** v0.1
+**Fase:** 10
+
+## Descripción
+
+Se aprueba e integra formalmente:
+
+ROBERT_BUILD_ORDER v0.1
+
+como secuencia vigente para construir la implementación inicial de Robert.
+
+## Elementos integrados
+
+- orden por dependencias;
+- Technical Foundation;
+- Canonical Contracts;
+- Error / Audit;
+- Governance;
+- Validation;
+- Context / Memory;
+- Model Interface;
+- Skills;
+- Agents;
+- Tool Abstraction;
+- Orchestrator;
+- Application API;
+- Basic UI;
+- Sandbox;
+- gates de implementación;
+- stop conditions;
+- prioridades P0-P3;
+- milestones;
+- separación entre Initial Build, External Capabilities y Autonomy.
+
+## Correcciones incorporadas
+
+La versión aprobada incluye:
+
+1. Stage 1 condicionado a Implementation Contracts reconciliados y aprobados.
+2. Architectural Growth Check para Audit Writer.
+3. Architectural Growth Check para Skill Runner.
+4. Architectural Growth Check para Agent Runner.
+5. `ROBERT_RESEARCHER` y `ROBERT_CRITIC` confirmados como Agents del catálogo aprobado.
+6. Invariantes Globales consolidadas.
+7. mapeo explícito entre prioridades P0-P3 y Stages.
+8. limpieza de artefactos de formato.
+
+## Restricciones
+
+Esta aprobación no autoriza:
+
+CODE IMPLEMENTATION
+REAL TOOL EXECUTION
+EXTERNAL WRITE ACTIONS
+AUTOMATIC MEMORY WRITE
+AUTONOMOUS AGENTS
+AUTONOMY EVOLUTION
+PHASE 11
+
+Se mantiene:
+
+AUTONOMY_LEVEL = 0
+EXECUTION_AUTHORITY = NONE
+
+## Resultado
+
+ROBERT_BUILD_ORDER v0.1
+STATUS: APPROVED
+DECISION: #040
+CHANGE: #065
