@@ -5655,3 +5655,148 @@ AUTHORITY: ARCHITECTURAL
 PHASE: 10
 IMPLEMENTATION: NONE
 ```
+# DECISIÓN #038 — Aprobación de ROBERT_IMPLEMENTATION_CONTRACTS v0.1
+
+**Fecha:** 31/08/2026
+**Tipo:** Arquitectónica / Implementation Readiness
+**Estado:** APROBADA
+**Fase:** 10
+**Documento relacionado:** `09_ARCHITECTURE/ROBERT_IMPLEMENTATION_CONTRACTS.md`
+**Versión:** v0.1
+**Cambio relacionado:** CAMBIO #063
+
+## Decisión
+
+Se aprueba formalmente:
+
+ROBERT_IMPLEMENTATION_CONTRACTS v0.1
+
+como especificación arquitectónica vigente de contratos de implementación para Robert.
+
+## Alcance aprobado
+
+Se aprueban los contratos conceptuales para:
+
+TASK
+REQUEST_CONTEXT
+ORCHESTRATOR_REQUEST
+ORCHESTRATOR_RESULT
+ROUTE
+
+AGENT_REQUEST
+AGENT_RESULT
+
+SKILL_INVOCATION
+SKILL_RESULT
+
+MODEL_REQUEST
+MODEL_RESPONSE
+
+TOOL_REQUEST
+TOOL_RESULT
+
+MEMORY_CANDIDATE
+MEMORY_RECORD
+MEMORY_RETRIEVAL_REQUEST
+MEMORY_RETRIEVAL_RESULT
+
+VALIDATION_REQUEST
+VALIDATION_RESULT
+
+PERMISSION_CHECK
+SCOPE_CHECK
+RISK_ASSESSMENT
+
+APPROVAL_REQUEST
+APPROVAL_RESULT
+
+ERROR
+BLOCK
+AUDIT_EVENT
+
+## Reglas principales
+
+IMPLEMENTATION CONTRACT
+≠
+IMPLEMENTATION
+
+ROUTE
+≠
+ROUTING AUTHORITY
+
+MODEL RESPONSE
+≠
+TRUTH
+
+MODEL RESPONSE
+≠
+MEMORY WRITE
+
+MODEL TOOL REQUEST
+≠
+DIRECT TOOL EXECUTION
+
+TOOL REQUEST
+≠
+TOOL AUTHORIZATION
+
+TOOL RESULT
+≠
+TRUTH
+
+TOOL RESULT
+≠
+MEMORY WRITE
+
+MEMORY CANDIDATE
+≠
+MEMORY
+
+VALIDATION PASS
+≠
+APPROVAL
+
+PERMISSION
+≠
+EXECUTION AUTHORITY
+
+LOW RISK
+≠
+EXECUTION AUTHORITY
+
+APPROVAL
+≠
+EXECUTION
+
+## Reconciliaciones incorporadas
+
+La versión aprobada preserva compatibilidad con las arquitecturas especializadas vigentes.
+
+Incluye:
+
+1. `confidence_if_applicable` preservado en `TOOL_RESULT`.
+2. `MEMORY_RETRIEVAL_REQUEST` reconciliado con Memory Architecture.
+3. `VALIDATION_REQUEST` y `VALIDATION_RESULT` reconciliados con Validation Architecture.
+4. no se crea una nueva state machine independiente de Execution Authority.
+5. `ROUTE` queda definido como contrato técnico conceptual sin routing authority.
+6. `risk_level` utiliza la escala oficial de Robert de Nivel 0 a Nivel 4.
+7. Error y Blocking continúan subordinados a `ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC`.
+8. `tool_request_allowed = false` por defecto y solo puede habilitarse explícitamente para producir solicitudes estructuradas.
+
+## Fase 10
+
+Se mantiene:
+
+IMPLEMENTATION CONTRACTS = DOCUMENTAL
+RUNTIME SCHEMAS = NOT IMPLEMENTED
+CODE = NOT AUTHORIZED BY THIS DOCUMENT
+
+AUTONOMY_LEVEL = 0
+EXECUTION_AUTHORITY = NONE
+
+## Resultado
+
+ROBERT_IMPLEMENTATION_CONTRACTS v0.1
+STATUS: APPROVED
+DECISION: #038
+CHANGE: #063
