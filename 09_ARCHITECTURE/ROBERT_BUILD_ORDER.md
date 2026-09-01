@@ -1,7 +1,7 @@
 # ROBERT_BUILD_ORDER
 
 **Versión:** 0.1
-**Estado:** PROPUESTA — pendiente de revisión y aprobación
+**Estado:** APROBADA — integrada arquitectónicamente
 **Tipo:** Especificación de orden de construcción / Implementation Readiness
 **Ubicación propuesta:** `09_ARCHITECTURE/ROBERT_BUILD_ORDER.md`
 **Fase relacionada:** Fase 10 — Implementation Readiness
@@ -2400,18 +2400,20 @@ PHASE 10 COMPLETE
 IMPLEMENTATION AUTHORIZED**
 # 126. Current Status
 
-```text
 DOCUMENT: ROBERT_BUILD_ORDER
 
 VERSION: 0.1
 
-STATUS: PROPOSED
+STATUS: APPROVED
 
-AUTHORITY: NON-CANONICAL
+AUTHORITY: ARCHITECTURAL
+
+DECISION: #040
+CHANGE: #065
 
 PHASE: 10
 
-BUILD_ORDER: DEFINED
+BUILD_ORDER: APPROVED
 
 IMPLEMENTATION: NOT STARTED
 
@@ -2422,9 +2424,6 @@ REAL_TOOL_EXECUTION: DISABLED
 AUTONOMY_LEVEL: 0
 
 EXECUTION_AUTHORITY: NONE
-```
-
----
 
 # 127. Próximo paso
 
