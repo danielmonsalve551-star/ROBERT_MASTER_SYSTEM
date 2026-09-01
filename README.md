@@ -1,18 +1,28 @@
 # ROBERT_MASTER_SYSTEM
 
-Repositorio privado del Proyecto Robert.
+Repositorio principal del Proyecto Robert.
 
-Este repositorio funciona como respaldo documental, control de versiones manual y base futura para el MVP técnico de Robert.
+Este repositorio funciona como:
+
+* fuente documental del sistema;
+* control de versiones;
+* historial de decisiones y cambios;
+* base arquitectónica;
+* base de preparación para implementación;
+* referencia para el futuro MVP técnico.
 
 ---
-## Estado actual
 
-Robert se encuentra en:
+# ESTADO ACTUAL
+
+```text
+PROJECT: ROBERT_MASTER_SYSTEM
 
 PHASE: 10
 
 CORE_ARCHITECTURE: CLOSED
 TOOL_ARCHITECTURE: CLOSED
+
 IMPLEMENTATION_CONTRACTS: APPROVED
 PHASE_10_EXIT_CRITERIA: APPROVED
 BUILD_ORDER: APPROVED
@@ -20,1020 +30,1261 @@ BUILD_ORDER: APPROVED
 LATEST_ARCHITECTURAL_DECISION: #040
 LATEST_CHANGE: #065
 
-PHASE_10_EXIT_AUDIT: FAIL
-
 KNOWN_ARCHITECTURAL_BLOCKERS: 0
-DOCUMENT_NORMALIZATION_BLOCKERS: 5
 
-READY_FOR_PHASE_10_CLOSURE: NO
-READY_FOR_IMPLEMENTATION_AUTHORIZATION: NO
+TECHNICAL_IMPLEMENTATION: NOT STARTED
+
+READY_FOR_PHASE_10_CLOSURE:
+NO — FINAL EXIT AUDIT IN PROGRESS
+
+READY_FOR_IMPLEMENTATION_AUTHORIZATION:
+NO
 
 AUTONOMY_LEVEL: 0
 EXECUTION_AUTHORITY: NONE
+```
 
-La arquitectura principal requerida antes de implementación ya está cerrada.
+La arquitectura principal requerida antes de implementación está cerrada.
 
-El trabajo pendiente se concentra en normalización documental y verificación final del repositorio.
+Robert se encuentra actualmente en:
 
-## Regla central
-
-El usuario manda.
-
-Robert no ejecuta acciones importantes sin permiso.
-
-Intentar una acción no significa ejecutarla.
-
-Robert continúa en modo:
-
-**Documental, manual y supervisado**
+```text
+PHASE 10 EXIT REMEDIATION
++
+FINAL REPOSITORY CONSISTENCY VERIFICATION
+```
 
 ---
 
-## Alcance actual del repositorio
+# REGLA CENTRAL
 
-Este repositorio funciona únicamente como:
+El usuario mantiene la autoridad humana superior.
 
-* Respaldo documental privado.
-* Control de versiones manual.
-* Historial de cambios.
-* Base organizada para futura fase técnica.
-* Fuente de consulta para documentos maestros, técnicos y de control.
+```text
+USER
+=
+HIGHEST HUMAN AUTHORITY
+```
 
-Este repositorio no autoriza:
+Robert no debe ejecutar acciones fuera de:
 
-* Programación.
-* Automatizaciones.
-* Conexiones externas.
-* Base de datos real.
-* Ejecución real.
-* Agentes autónomos.
-* Avanzar automáticamente a Fase 11.
+* Permission;
+* Scope;
+* Security;
+* Approval;
+* Phase;
+* Execution Authority.
+
+Reglas fundamentales:
+
+```text
+PROPOSAL ≠ DECISION
+
+DECISION ≠ CHANGE
+
+CHANGE ≠ ACTION
+
+CONTEXT ≠ MEMORY
+
+RISK ≠ PERMISSION
+
+RISK ≠ AUTONOMY
+
+RISK ≠ EXECUTION AUTHORITY
+
+PERMISSION ≠ SCOPE
+
+PERMISSION ≠ EXECUTION AUTHORITY
+
+VALIDATION ≠ APPROVAL
+
+VALIDATION ≠ AUTHORIZATION
+
+MODEL OUTPUT ≠ DECISION
+
+TOOL REQUEST ≠ TOOL AUTHORIZATION
+
+IMPLEMENTED CAPABILITY ≠ AUTONOMY AUTHORIZATION
+```
 
 ---
-## Documentos maestros y arquitectónicos principales
 
-Los documentos principales del sistema Robert son:
+# ALCANCE ACTUAL DEL REPOSITORIO
 
-### Gobierno y estado
+El repositorio contiene:
 
-* `ROBERT_HOME`
-* `ROBERT_CONTEXT_MASTER`
-* `ROBERT_COMMANDS`
-* `ROBERT_DECISIONS_LOG`
-* `ROBERT_CONTROL_DE_CAMBIOS`
-* `ROBERT_SECURITY_RULES`
-* `ROBERT_PHASES`
-* `ROBERT_MODULES`
-* `ROBERT_VISUAL_REFERENCE`
-* `ROBERT_SYSTEM_ARCHITECTURE`
+* Governance;
+* Architecture;
+* Context;
+* Commands;
+* Decisions;
+* Change Control;
+* Security;
+* Phases;
+* Modules;
+* Visual References;
+* Technical MVP Specifications;
+* Sandbox documentation;
+* Implementation Contracts;
+* Build Order.
 
-### Arquitectura principal aprobada
+La existencia de estos documentos no autoriza automáticamente:
 
-* `ROBERT_CANONICAL_MODEL v0.2`
-* `ROBERT_ORCHESTRATOR_SPEC v0.1`
-* `ROBERT_AGENT_ARCHITECTURE v0.1`
-* `ROBERT_SKILL_ARCHITECTURE v0.1`
-* `ROBERT_MODEL_INTERFACE_SPEC v0.1`
-* `ROBERT_MEMORY_ARCHITECTURE v0.1`
-* `ROBERT_VALIDATION_ARCHITECTURE v0.1`
+```text
+PROGRAMMING
+REAL TOOL EXECUTION
+AUTOMATIC MEMORY WRITE
+AUTONOMOUS AGENTS
+EXTERNAL SIDE EFFECTS
+PHASE 11
+```
 
-La cadena principal aprobada es:
+---
 
-CANONICAL MODEL
-↓
+# MODELO CANÓNICO
+
+La taxonomía vigente está definida por:
+
+```text
+ROBERT_CANONICAL_MODEL v0.2
+DECISIÓN #030
+CAMBIO #053
+```
+
+Separaciones principales:
+
+```text
+ROBERT ≠ MODEL
+
+ROBERT ≠ AGENT
+
+ROBERT ≠ SKILL
+
+ROBERT ≠ TOOL
+```
+
+Definiciones resumidas:
+
+```text
+ROBERT
+=
+SYSTEM / GOVERNOR
+
 ORCHESTRATOR
-↓
-AGENTS
-↓
-SKILLS
-↓
-MODEL INTERFACE
-↓
-MEMORY
-↓
-VALIDATION
-↓
-TOOLS
-↓
-IMPLEMENTATION CONTRACTS
-↓
-PHASE 10 EXIT CRITERIA
-↓
-BUILD ORDER
+=
+COORDINATOR / ROUTING AUTHORITY
 
-Estado:
+AGENT
+=
+SPECIALIST
 
-```text
-CORE ARCHITECTURE = APPROVED
+SKILL
+=
+REUSABLE PROCEDURE
+
+MODEL
+=
+INTELLIGENCE PROVIDER
+
+TOOL
+=
+TECHNICAL / EXTERNAL CAPABILITY
+
+MODULE
+=
+FUNCTIONAL DOMAIN
 ```
 
-Ya no existe como pendiente:
+---
+
+# ARQUITECTURA PRINCIPAL APROBADA
+
+## 1. Canonical Model
 
 ```text
-ROBERT_MEMORY_ARCHITECTURE
-ROBERT_VALIDATION_ARCHITECTURE
-```
-
-El siguiente trabajo corresponde a:
-
-```text
-IMPLEMENTATION READINESS
-```
-
-incluyendo revisión de gaps arquitectónicos y normalización física del repositorio.
-
----
-
-
-## Documentos técnicos principales de Fase 10
-
-Robert cuenta actualmente con los siguientes documentos técnicos del MVP básico:
-
-* ROBERT_TECHNICAL_MVP_PLAN
-* ROBERT_TECHNICAL_MVP_WIREFRAME v0.3
-* ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2
-* ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1
-* ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2
-* ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2
-* ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2
-* ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2
-* ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2
-* ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2
-* ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC v0.2
-* ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC v0.2
-* ROBERT_TECHNICAL_DOCUMENT_LIFECYCLE_SPEC v0.2
-* ROBERT_TECHNICAL_VERSIONING_AND_CHANGE_POLICY_SPEC v0.2
-* ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3
-* ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3
-
----
-
-## Estado de ROBERT_HOME
-
-### ROBERT_HOME v0.11
-
-Estado:
-
-**Aprobado e integrado**
-
-Relación documental:
-
-* DECISIÓN #028 — Aprobación de ROBERT_HOME v0.11.
-* CAMBIO #050 — Aprobación e integración de ROBERT_HOME v0.11.
-* CAMBIO #047 — Reconocido como antecedente de trazabilidad de USER_ACTIONS_SPEC v0.2.
-* DECISIÓN #027 — Aprobación de APPROVAL_GATE v0.3.
-* CAMBIO #049 — Aprobación e integración de APPROVAL_GATE v0.3.
-
-Función:
-
-ROBERT_HOME v0.11 fue la versión aprobada e integrada del punto central de navegación, estado, núcleo visual y control documental del sistema Robert antes de la normalización física del wireframe v0.3.
-
----
-
-### ROBERT_HOME v0.12
-
-Estado:
-
-**Aprobado e integrado**
-
-Relación documental:
-
-* CAMBIO #051 — Normalización de fuente física vigente de ROBERT_TECHNICAL_MVP_WIREFRAME v0.3.
-* DECISIÓN #029 — Aprobación de ROBERT_HOME v0.12.
-* CAMBIO #052 — Aprobación e integración de ROBERT_HOME v0.12.
-
-Función:
-
-ROBERT_HOME v0.12 queda como versión aprobada e integrada del punto central de navegación, estado, núcleo visual y control documental del sistema Robert.
-
-Qué corrige:
-
-* Reconoce `CAMBIO #051`.
-* Elimina la pendiente de normalización física del wireframe v0.3.
-* Reconoce `ROBERT_TECHNICAL_MVP_WIREFRAME.md` como fuente física oficial vigente.
-* Reconoce `ROBERT_TECHNICAL_MVP_WIREFRAME_v0.3_PROPUESTA.md` como eliminado previamente / no vigente / no requerido.
-* Aclara que no se debe recrear la propuesta.
-* Mantiene `APPROVAL_GATE v0.3` como aprobado e integrado.
-* Mantiene `ROBERT_VISUAL_REFERENCE` como documento visual correcto.
-* Mantiene `USER_ACTIONS_SPEC v0.2` como fuente canónica aprobada, integrada y auditada voluntariamente.
-
-Restricción:
-
-ROBERT_HOME v0.12 no autoriza:
-
-* Programación.
-* Código real.
-* Base de datos real.
-* Gate real.
-* Sistema real de autorización.
-* Conexiones externas.
-* Automatizaciones reales.
-* Agentes autónomos.
-* Avanzar a Fase 11.
-
----
-
-## WIREFRAME v0.3 — Fuente física normalizada
-
-Documento oficial vigente:
-
-**ROBERT_TECHNICAL_MVP_WIREFRAME.md**
-
-Versión:
-
-**v0.3**
-
-Estado:
-
-**Aprobado e integrado**
-
-Fuente física oficial vigente:
-
-**Sí**
-
-Cambio de normalización:
-
-**CAMBIO #051 — Normalización de fuente física vigente de ROBERT_TECHNICAL_MVP_WIREFRAME v0.3**
-
-Relación documental:
-
-* DECISIÓN #010 — Aprobación de ROBERT_TECHNICAL_MVP_WIREFRAME v0.3.
-* CAMBIO #010 — Actualización del wireframe técnico a v0.3.
-* CAMBIO #051 — Normalización de fuente física vigente de ROBERT_TECHNICAL_MVP_WIREFRAME v0.3.
-
----
-
-### Archivo propuesta
-
-Archivo:
-
-**ROBERT_TECHNICAL_MVP_WIREFRAME_v0.3_PROPUESTA.md**
-
-Estado:
-
-**Eliminado previamente / no vigente / no fuente oficial / no requerido**
-
-Regla:
-
-* No recrear la propuesta.
-* No restaurar el archivo eliminado.
-* No mantener dos fuentes físicas paralelas.
-* Usar `ROBERT_TECHNICAL_MVP_WIREFRAME.md` como fuente física oficial vigente.
-
----
-
-### Alcance de CAMBIO #051
-
-CAMBIO #051 autoriza únicamente:
-
-* Confirmar `ROBERT_TECHNICAL_MVP_WIREFRAME.md` como fuente física oficial vigente.
-* Registrar que la propuesta v0.3 ya no existe como archivo físico activo.
-* Eliminar la ambigüedad entre archivo oficial y archivo propuesta.
-* Actualizar `ROBERT_HOME` y `README` para reflejar que la normalización física del wireframe v0.3 quedó completada.
-
-CAMBIO #051 no autoriza:
-
-* Programación.
-* Código real.
-* Pantallas reales.
-* Prototipo funcional.
-* Base de datos real.
-* Gate real.
-* Sistema real de autorización.
-* Conexiones externas.
-* Automatizaciones reales.
-* Agentes autónomos.
-* Ejecución real.
-* Avanzar a Fase 11.
-
----
-
-## ROBERT_VISUAL_REFERENCE
-
-Documento visual correcto:
-
-**ROBERT_VISUAL_REFERENCE**
-
-Estado:
-
-**En desarrollo conceptual**
-
-Función:
-
-Definir la dirección visual de Robert, incluyendo núcleo, galaxias, paneles, experiencia visual, estética, jerarquía y navegación conceptual.
-
-Regla de nomenclatura:
-
-* Usar `ROBERT_VISUAL_REFERENCE`.
-* Usar `[[ROBERT_VISUAL_REFERENCE]]`.
-* No usar `ROBERT_VISUAL` como documento visual oficial si la fuente vigente confirmada es `ROBERT_VISUAL_REFERENCE`.
-
-Restricción:
-
-ROBERT_VISUAL_REFERENCE no autoriza:
-
-* Programar el HUD final.
-* Crear interfaz real.
-* Conectar Obsidian automáticamente.
-* Automatizar cambios documentales.
-* Crear agentes visuales.
-* Activar apps externas.
-* Ejecutar acciones reales.
-
----
-
-## USER_ACTIONS_SPEC v0.2 aprobado, integrado y auditado
-
-Documento:
-
-**ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2**
-
-Estado:
-
-**Aprobado e integrado — auditoría voluntaria completada sin cambios de fondo**
-
-Relación documental:
-
-* DECISIÓN #017.
-* CAMBIO #028.
-* CAMBIO #047 como antecedente de trazabilidad.
-* Auditoría voluntaria completada el 07/07/2026.
-
-Resultado de la auditoría:
-
-* No se encontraron errores de contenido.
-* No se reabre su aprobación.
-* No se requiere nueva decisión formal.
-* No se requiere nuevo cambio formal porque no hubo corrección sustantiva de contenido.
-* Se confirma como fuente canónica usada para corregir y aprobar `APPROVAL_GATE v0.3`.
-
-Nota sobre CAMBIO #047:
-
-`CAMBIO #047` existe y corresponde a la corrección/trazabilidad de `ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2`.
-
-Debe reconocerse como antecedente documental para evitar un hueco aparente de numeración.
-
-Lista canónica de 20 acciones:
-
-1. Escribir comando.
-2. Seleccionar documento.
-3. Revisar estado general.
-4. Crear documento técnico.
-5. Corregir documento técnico.
-6. Aprobar documento.
-7. Registrar decisión.
-8. Registrar cambio.
-9. Actualizar HOME.
-10. Actualizar README.
-11. Cambiar modo.
-12. Activar sandbox manual.
-13. Pausar avance.
-14. Bloquear acción.
-15. Ver decisiones pendientes.
-16. Resolver decisión pendiente.
-17. Ver mapa documental.
-18. Marcar respaldo manual en GitHub.
-19. Solicitar revisión crítica.
-20. Pedir siguiente paso.
-
-Componentes canónicos confirmados:
-
-1. AppShell.
-2. TopBar.
-3. LeftSidebar.
-4. CommandCenter.
-5. ModeSelector.
-6. RiskBadge.
-7. ApprovalGate.
-8. DecisionInbox.
-9. DocumentStatusMap.
-10. CurrentStatePanel.
-
-Regla:
-
-`MainCanvas` no forma parte de la lista canónica de componentes aprobados y no debe usarse como componente oficial.
-
----
-
-## APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3 aprobado e integrado
-
-Documento:
-
-**ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC**
-
-Versión actual:
-
-**v0.3**
-
-Estado actual:
-
-**Aprobado e integrado**
-
-Relación formal:
-
-* CAMBIO #048 — Corrección de ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3.
-* DECISIÓN #027 — Aprobación de ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3.
-* CAMBIO #049 — Aprobación e integración de ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3.
-
-Fuente canónica:
-
-**ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2 auditado**
-
----
-
-### Qué define APPROVAL_GATE v0.3
-
-`APPROVAL_GATE v0.3` define de forma conceptual y documental cómo Robert debe decidir si una acción del usuario:
-
-* Puede continuar.
-* Requiere confirmación simple.
-* Requiere autorización documental.
-* Requiere aprobación formal.
-* Requiere integración documental.
-* Debe bloquearse por ser sensible en Fase 10.
-* Es una acción futura no disponible.
-* Debe pausarse o revocarse por control manual del usuario.
-
----
-
-### Correcciones integradas en APPROVAL_GATE v0.3
-
-`APPROVAL_GATE v0.3` corrige errores reales detectados en versiones anteriores.
-
-Correcciones principales:
-
-1. Reemplaza `MainCanvas` por `AppShell`.
-2. Corrige la lista de componentes participantes.
-3. Corrige la tabla de mapeo entre Gates y componentes.
-4. Corrige la tabla de dónde se muestra cada elemento.
-5. Corrige la tabla de correspondencia con `USER_ACTIONS_SPEC v0.2`.
-6. Usa las 20 acciones canónicas de `USER_ACTIONS_SPEC v0.2` auditado.
-7. Mantiene `ApprovalGate` como especificación conceptual, no como gate real.
-8. Confirma ACCIÓN 12 — Activar sandbox manual como `Gate 2 / Gate 7`.
-9. Alinea el documento con los 10 componentes canónicos aprobados.
-10. Excluye `MainCanvas` como componente oficial.
-
----
-
-### Estado de aprobación
-
-`APPROVAL_GATE v0.3` queda:
-
-**Aprobado e integrado**
-
-Esto significa que puede usarse como documento técnico conceptual dentro de Fase 10.
-
-No significa que exista un gate real.
-
-No significa que Robert pueda ejecutar acciones.
-
-No significa que se autorice programación.
-
-No significa que se autorice Fase 11.
-
----
-
-### Restricción
-
-Aprobar `APPROVAL_GATE v0.3` no autoriza:
-
-* Gate real.
-* Sistema real de autorización.
-* Programación.
-* Código real.
-* Pantallas reales.
-* Base de datos real.
-* Conexiones externas.
-* Automatizaciones.
-* Agentes autónomos.
-* Ejecución real.
-* Avanzar a Fase 11.
-
----
-
-## Cambios y decisiones recientes
-
-### CAMBIO #047
-
-**CAMBIO #047 — Corrección de ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2**
-
-Estado:
-
-**Registrado como antecedente de trazabilidad**
-
-Función:
-
-Reconocer la corrección/trazabilidad de `USER_ACTIONS_SPEC v0.2` frente al conflicto de versión, fuente vigente y trazabilidad.
-
----
-
-### CAMBIO #048
-
-**CAMBIO #048 — Corrección de ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3**
-
-Estado:
-
-**Registrado**
-
-Función:
-
-Registrar la creación/corrección de `APPROVAL_GATE v0.3` como propuesta corregida pendiente de revisión.
-
----
-
-### DECISIÓN #027
-
-**DECISIÓN #027 — Aprobación de ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3**
-
-Estado:
-
-**Aprobada**
-
-Función:
-
-Aprobar formalmente `APPROVAL_GATE v0.3` como especificación técnica documental conceptual del MVP técnico básico de Robert.
-
----
-
-### CAMBIO #049
-
-**CAMBIO #049 — Aprobación e integración de ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3**
-
-Estado:
-
-**Aprobado e integrado**
-
-Función:
-
-Registrar la aprobación formal e integración documental de `APPROVAL_GATE v0.3`.
-
----
-
-### DECISIÓN #028
-
-**DECISIÓN #028 — Aprobación de ROBERT_HOME v0.11**
-
-Estado:
-
-**Aprobada**
-
-Función:
-
-Aprobar formalmente `ROBERT_HOME v0.11`.
-
----
-
-### CAMBIO #050
-
-**CAMBIO #050 — Aprobación e integración de ROBERT_HOME v0.11**
-
-Estado:
-
-**Aprobado e integrado**
-
-Función:
-
-Registrar la aprobación formal e integración documental de `ROBERT_HOME v0.11`.
-
----
-
-### CAMBIO #051
-
-**CAMBIO #051 — Normalización de fuente física vigente de ROBERT_TECHNICAL_MVP_WIREFRAME v0.3**
-
-Estado:
-
-**Registrado**
-
-Función:
-
-Confirmar `ROBERT_TECHNICAL_MVP_WIREFRAME.md` como fuente física oficial vigente y aclarar que la propuesta eliminada no debe recrearse.
-
----
-
-### DECISIÓN #029
-
-**DECISIÓN #029 — Aprobación de ROBERT_HOME v0.12**
-
-Estado:
-
-**Aprobada**
-
-Función:
-
-Aprobar formalmente `ROBERT_HOME v0.12` como versión corregida del punto central de navegación, estado, núcleo visual y control documental del sistema Robert.
-
-Restricción:
-
-Esta decisión no autoriza programación, código real, conexiones externas, automatizaciones, agentes autónomos, ejecución real ni Fase 11.
-
----
-
-### CAMBIO #052
-
-**CAMBIO #052 — Aprobación e integración de ROBERT_HOME v0.12**
-
-Estado:
-
-**Aprobado e integrado**
-
-Función:
-
-Registrar la aprobación formal e integración documental de `ROBERT_HOME v0.12`.
-
-Este cambio autoriza únicamente:
-
-* Marcar `ROBERT_HOME v0.12` como aprobado e integrado.
-* Integrarlo al estado documental actual de Robert.
-* Usarlo como punto central vigente de navegación, estado y control documental.
-* Reconocer `CAMBIO #051` dentro del HOME.
-* Reconocer `ROBERT_TECHNICAL_MVP_WIREFRAME.md` como fuente física oficial vigente.
-* Reconocer que la propuesta v0.3 fue eliminada previamente y no debe recrearse.
-* Actualizar `README` para reflejar el nuevo estado de `ROBERT_HOME v0.12`.
-
-Este cambio no autoriza:
-
-* Programar Robert.
-* Crear código real.
-* Crear pantallas reales.
-* Crear prototipo funcional.
-* Crear base de datos real.
-* Crear gate real.
-* Crear sistema real de autorización.
-* Conectar GitHub automáticamente.
-* Conectar Obsidian automáticamente.
-* Conectar Gmail.
-* Conectar Google Calendar.
-* Conectar APIs externas.
-* Automatizar acciones.
-* Activar agentes autónomos.
-* Ejecutar acciones reales.
-* Avanzar automáticamente a Fase 11.
-
----
-## Arquitectura aprobada reciente
-
-### ROBERT_CANONICAL_MODEL v0.2
+ROBERT_CANONICAL_MODEL v0.2
 
 DECISIÓN #030
 CAMBIO #053
+```
 
-### ROBERT_ORCHESTRATOR_SPEC v0.1
+## 2. Orchestrator
+
+```text
+ROBERT_ORCHESTRATOR_SPEC v0.1
 
 DECISIÓN #031
 CAMBIO #054
+```
 
-### ROBERT_AGENT_ARCHITECTURE v0.1
+El Orchestrator es una especialización de:
+
+```text
+CAPA 2 — CONTROL
+```
+
+No constituye un segundo sistema de control.
+
+---
+
+## 3. Agent Architecture
+
+```text
+ROBERT_AGENT_ARCHITECTURE v0.1
 
 DECISIÓN #032
 CAMBIO #055
 CAMBIO #056
+```
 
-### ROBERT_SKILL_ARCHITECTURE v0.1
+Catálogo inicial aprobado:
+
+```text
+ROBERT_ARCHITECT
+ROBERT_RESEARCHER
+ROBERT_CRITIC
+ROBERT_SECURITY
+ROBERT_MEMORY
+ROBERT_CODER
+ROBERT_TESTER
+ROBERT_STRATEGIST
+```
+
+Agent Architecture aprobada no significa Agent autonomy activa.
+
+---
+
+## 4. Skill Architecture
+
+```text
+ROBERT_SKILL_ARCHITECTURE v0.1
 
 DECISIÓN #033
 CAMBIO #057
 CAMBIO #058
+```
 
-### ROBERT_MODEL_INTERFACE_SPEC v0.1
+```text
+SKILL ≠ AGENT
+SKILL ≠ TOOL
+```
+
+---
+
+## 5. Model Interface
+
+```text
+ROBERT_MODEL_INTERFACE_SPEC v0.1
 
 DECISIÓN #034
 CAMBIO #059
+```
 
-### ROBERT_MEMORY_ARCHITECTURE v0.1
+Claude y ChatGPT pertenecen a:
+
+```text
+MODELS
+```
+
+No a Tools.
+
+```text
+MODEL ≠ TOOL
+```
+
+---
+
+## 6. Memory Architecture
+
+```text
+ROBERT_MEMORY_ARCHITECTURE v0.1
 
 DECISIÓN #035
 CAMBIO #060
+```
 
-### ROBERT_VALIDATION_ARCHITECTURE v0.1
+### MEMORY_TYPE
+
+```text
+CORE
+SEMANTIC
+EPISODIC
+DECISIONAL
+PROCEDURAL
+```
+
+### RETENTION
+
+```text
+ACTIVE
+TEMPORARY
+PERSISTENT
+```
+
+Regla:
+
+```text
+MEMORY_TYPE ≠ RETENTION
+```
+
+Durante Fase 10:
+
+```text
+AUTOMATIC_MEMORY_WRITE = DISABLED
+```
+
+---
+
+## 7. Validation Architecture
+
+```text
+ROBERT_VALIDATION_ARCHITECTURE v0.1
 
 DECISIÓN #036
 CAMBIO #061
+```
 
-### ROBERT_TOOL_ARCHITECTURE v0.1
+Se mantiene:
+
+```text
+VALIDATION_TYPE ≠ REVIEWER_ROLE
+
+VALIDATION ≠ APPROVAL
+
+VALIDATION PASS ≠ TRUTH
+
+MULTI-VALIDATOR CONSENSUS ≠ TRUTH
+```
+
+---
+
+## 8. Tool Architecture
+
+```text
+ROBERT_TOOL_ARCHITECTURE v0.1
 
 DECISIÓN #037
 CAMBIO #062
+```
 
-### ROBERT_IMPLEMENTATION_CONTRACTS v0.1
+Define:
+
+* Tool;
+* Tool Request;
+* Tool Result;
+* Tool Interface;
+* Tool Resolver;
+* Tool Registry;
+* Tool Policy;
+* Tool Adapter / Connector;
+* Permission / Scope / Security boundaries;
+* side effects;
+* retries;
+* idempotency;
+* provider independence.
+
+Se mantiene:
+
+```text
+TOOL AVAILABLE ≠ TOOL ALLOWED
+
+TOOL REQUEST ≠ TOOL AUTHORIZATION
+
+REAL_TOOL_EXECUTION = DISABLED
+```
+
+---
+
+## 9. Implementation Contracts
+
+```text
+ROBERT_IMPLEMENTATION_CONTRACTS v0.1
 
 DECISIÓN #038
 CAMBIO #063
+```
 
-### ROBERT_PHASE_10_EXIT_CRITERIA v0.1
+Contracts principales:
+
+```text
+ContractEnvelope
+
+Task
+RequestContext
+
+OrchestratorRequest
+OrchestratorResult
+Route
+
+AgentRequest
+AgentResult
+
+SkillInvocation
+SkillResult
+
+ModelRequest
+ModelResponse
+
+ToolRequest
+ToolResult
+
+MemoryCandidate
+MemoryRecord
+MemoryRetrievalRequest
+MemoryRetrievalResult
+
+ValidationRequest
+ValidationResult
+
+PermissionCheck
+ScopeCheck
+RiskAssessment
+
+ApprovalRequest
+ApprovalResult
+
+Error
+Block
+AuditEvent
+EvidenceRef
+```
+
+Regla:
+
+```text
+CONTRACT
+≠
+IMPLEMENTATION
+```
+
+---
+
+## 10. Phase 10 Exit Criteria
+
+```text
+ROBERT_PHASE_10_EXIT_CRITERIA v0.1
 
 DECISIÓN #039
 CAMBIO #064
+```
 
-### ROBERT_BUILD_ORDER v0.1
+Define criterios verificables para determinar si Fase 10 puede cerrarse.
+
+Estados de criterios:
+
+```text
+PASS
+FAIL
+NOT_APPLICABLE
+```
+
+```text
+UNKNOWN ≠ PASS
+```
+
+La aprobación del documento no significa que los criterios hayan pasado automáticamente.
+
+---
+
+## 11. Build Order
+
+```text
+ROBERT_BUILD_ORDER v0.1
 
 DECISIÓN #040
 CAMBIO #065
-
-## Estado de la cadena arquitectónica
-
-```text
-CANONICAL MODEL         APPROVED
-ORCHESTRATOR            APPROVED
-AGENT ARCHITECTURE      APPROVED
-SKILL ARCHITECTURE      APPROVED
-MODEL INTERFACE         APPROVED
-MEMORY ARCHITECTURE     APPROVED
-VALIDATION ARCHITECTURE APPROVED
 ```
 
-```text
-CORE ARCHITECTURE = CLOSED
-## Estado de implementación
-
-TECHNICAL IMPLEMENTATION: NOT STARTED
-
-INITIAL BUILD ORDER: APPROVED
-IMPLEMENTATION AUTHORIZATION: NOT GRANTED
-
-REAL TOOL EXECUTION: DISABLED
-AUTOMATIC MEMORY WRITE: DISABLED
-AUTONOMOUS AGENTS: DISABLED
-
-AUTONOMY_LEVEL: 0
-EXECUTION_AUTHORITY: NONE
-
-La aprobación de arquitectura, contratos y Build Order no autoriza código automáticamente.
----
-
-## Convención visual de Obsidian
-
-Robert cuenta con una convención visual validada para representar su estructura documental dentro de Obsidian Graph View.
-
-Esta convención usa:
-
-* Órbitas.
-* Capas.
-* Colores semánticos.
-* Wikilinks.
-* Etiquetas.
-* Grupos visuales.
-
-### Regla visual principal
-
-**Órbita = posición / cercanía al núcleo**
-
-**Capa o función = color visual**
-
-### Centro visual
-
-El centro visual del grafo es:
-
-**ROBERT_HOME**
-
-### Centro conceptual
-
-El centro conceptual del sistema es:
-
-**ROBERT_CONTEXT_MASTER**
-
-### Documento visual correcto
-
-El documento visual correcto es:
-
-**ROBERT_VISUAL_REFERENCE**
-
-### Estado de ROBERT_CORE
-
-No se crea todavía un archivo llamado ROBERT_CORE.
-
-Robert Core se mantiene como idea abstracta del sistema, no como documento activo.
-
-### Alcance
-
-Esta convención aplica únicamente a la navegación visual documental dentro de Obsidian.
-
-No autoriza:
-
-* Programar el HUD final.
-* Conectar Obsidian automáticamente con GitHub.
-* Automatizar cambios documentales.
-* Crear agentes visuales.
-* Activar apps externas.
-* Ejecutar acciones reales.
-
----
-
-## Escala oficial de riesgo
-
-Robert usa la escala oficial:
+Orden aprobado:
 
 ```text
-Nivel 0 — Informativo
-Nivel 1 — Bajo
-Nivel 2 — Medio
-Nivel 3 — Alto
-Nivel 4 — Crítico
+STAGE 0  — TECHNICAL FOUNDATION
+STAGE 1  — CANONICAL CONTRACTS
+STAGE 2  — ERROR / AUDIT FOUNDATION
+STAGE 3  — GOVERNANCE CORE
+STAGE 4  — VALIDATION CORE
+STAGE 5  — CONTEXT / MEMORY INTERFACES
+STAGE 6  — MODEL INTERFACE
+STAGE 7  — SKILL LAYER
+STAGE 8  — AGENT LAYER
+STAGE 9  — TOOL ABSTRACTION
+STAGE 10 — ORCHESTRATOR
+STAGE 11 — APPLICATION API
+STAGE 12 — BASIC UI
+STAGE 13 — SANDBOX INTEGRATION
+STAGE 14 — EXTERNAL CAPABILITIES
+STAGE 15 — AUTONOMY EVOLUTION
 ```
+
+Initial Build Boundary:
+
+```text
+STAGE 0 → STAGE 13
+```
+
+Stage 14 y Stage 15 requieren autorización posterior.
 
 Regla:
 
 ```text
-No existe Nivel 5 como riesgo.
-Nivel 5 solo puede existir como autonomía, no como riesgo.
+BUILD ORDER
+≠
+IMPLEMENTATION AUTHORIZATION
 ```
 
 ---
 
-## Acciones de control fuera de la escala de riesgo
-
-Las acciones de control no se clasifican como riesgo cuando funcionan para proteger al usuario o detener avance.
-
-Ejemplos:
-
-* DETENTE
-* PAUSA
-* NO_AVANCES
-* SOLO_BORRADOR
-* BLOQUEA
-* CANCELA
-* NO_EJECUTES
-* REVOCA_AUTONOMIA
-* VOLVER_A_MANUAL
-
-Regla:
+# CADENA ARQUITECTÓNICA VIGENTE
 
 ```text
-Las acciones de control están fuera de la escala de riesgo.
-El riesgo pertenece a la acción original que se intenta detener, bloquear o limitar.
+CANONICAL MODEL
+        ↓
+ORCHESTRATOR
+        ↓
+AGENTS
+        ↓
+SKILLS
+        ↓
+MODEL INTERFACE
+        ↓
+MEMORY
+        ↓
+VALIDATION
+        ↓
+TOOLS
+        ↓
+IMPLEMENTATION CONTRACTS
+        ↓
+PHASE 10 EXIT CRITERIA
+        ↓
+BUILD ORDER
 ```
-
----
-
-## Restricciones activas de Fase 10
-
-Robert permanece en:
-
-**Fase 10 — MVP técnico básico en preparación**
-
-En esta fase no está autorizado:
-
-* Programar.
-* Crear código real.
-* Crear pantallas reales.
-* Crear base de datos real.
-* Crear sistema real de autorización.
-* Crear gate real.
-* Conectar GitHub automáticamente.
-* Conectar Obsidian automáticamente.
-* Conectar Gmail.
-* Conectar Google Calendar.
-* Conectar Drive.
-* Conectar WhatsApp.
-* Conectar CRM.
-* Conectar APIs externas.
-* Automatizar flujos.
-* Enviar correos reales.
-* Crear eventos reales.
-* Contactar clientes reales.
-* Activar agentes autónomos.
-* Ejecutar acciones reales.
-* Avanzar automáticamente a Fase 11.
-
-## Estado final del README
-
-Este README refleja actualmente:
-
-* Fase 10 activa.
-* Modo documental, conceptual, manual y supervisado.
-* `ROBERT_HOME v0.13` como estado maestro normalizado.
-* Wireframe v0.3 reconocido como fuente vigente.
-* Arquitectura principal aprobada hasta Validation.
-* `ROBERT_CANONICAL_MODEL v0.2` — #030 / #053.
-* `ROBERT_ORCHESTRATOR_SPEC v0.1` — #031 / #054.
-* `ROBERT_AGENT_ARCHITECTURE v0.1` — #032 / #055 / #056.
-* `ROBERT_SKILL_ARCHITECTURE v0.1` — #033 / #057 / #058.
-* `ROBERT_MODEL_INTERFACE_SPEC v0.1` — #034 / #059.
-* `ROBERT_MEMORY_ARCHITECTURE v0.1` — #035 / #060.
-* `ROBERT_VALIDATION_ARCHITECTURE v0.1` — #036 / #061.
-* Orchestrator mantiene routing authority.
-* Agents no poseen routing authority independiente.
-* Skills no poseen routing authority independiente.
-* Models no poseen Tool execution authority.
-* Memory no posee autoridad independiente.
-* Validation no equivale a Approval ni Authorization.
-* Sin ejecución autónoma.
-* Sin Memory writes automáticos.
-* Sin Validation Engine autónomo.
-* Sin Tool execution automática.
-* Sin agentes autónomos productivos.
-* Sin avance autorizado a Fase 11.
-
-Contexto operativo:
-
-```text
-AUTONOMY_LEVEL = 0
-EXECUTION_AUTHORITY = NONE
-```
-
----
-
-## Siguiente paso recomendado
-
-La cadena arquitectónica principal ya está cerrada:
-
-```text
-ROBERT_CANONICAL_MODEL v0.2
-ROBERT_ORCHESTRATOR_SPEC v0.1
-ROBERT_AGENT_ARCHITECTURE v0.1
-ROBERT_SKILL_ARCHITECTURE v0.1
-ROBERT_MODEL_INTERFACE_SPEC v0.1
-ROBERT_MEMORY_ARCHITECTURE v0.1
-ROBERT_VALIDATION_ARCHITECTURE v0.1
-```
-
-El siguiente bloque real es:
-
-```text
-IMPLEMENTATION READINESS
-```
-
-Orden actual:
-
-```text
-1. Normalizar documentos físicos desactualizados
-2. Resolver gaps arquitectónicos restantes
-3. Evaluar necesidad de Tool Architecture
-4. Normalizar referencias cruzadas
-5. Revisar contratos necesarios para implementación
-6. Definir Phase 10 Exit Criteria
-7. Definir Build Order
-8. Solo después evaluar autorización para programación
-```
-
-Pendientes físicos prioritarios detectados:
-
-```text
-ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC
-
-ROBERT_TECHNICAL_VERSIONING_AND_CHANGE_POLICY_SPEC
-```
-
-Regla:
-
-```text
-CORE ARCHITECTURE APPROVED
-        ≠
-READY FOR CODE
-```
-
----
-
-## Cierre
-
-Robert continúa en:
-
-**Fase 10 — MVP técnico básico en preparación**
-
-Modo actual:
-
-**Documental, conceptual, manual y supervisado**
 
 Estado:
 
 ```text
 CORE_ARCHITECTURE = CLOSED
-DOCUMENT_NORMALIZATION = IN_PROGRESS
-IMPLEMENTATION_READINESS = IN_PROGRESS
-READY_FOR_CODE = NO
+
+TOOL_ARCHITECTURE = CLOSED
+
+IMPLEMENTATION_CONTRACTS = CLOSED
+
+PHASE_10_EXIT_CRITERIA = CLOSED
+
+BUILD_ORDER = CLOSED
 ```
 
-Regla central:
+`CLOSED` en este contexto significa que el bloque arquitectónico ya fue definido y aprobado.
 
-**El usuario manda. Robert no ejecuta acciones importantes sin permiso.**
-
-No debe avanzarse automáticamente fuera de Fase 10.
+No significa implementación terminada.
 
 ---
-## Estado final del README
 
-DOCUMENT: README
+# SYSTEM ARCHITECTURE
 
-PHASE: 10
+Documento:
 
-LATEST_ARCHITECTURAL_DECISION: #040
-LATEST_CHANGE: #065
+```text
+09_ARCHITECTURE/ROBERT_SYSTEM_ARCHITECTURE.md
+```
 
-CORE_ARCHITECTURE: CLOSED
-TOOL_ARCHITECTURE: CLOSED
-IMPLEMENTATION_CONTRACTS: CLOSED
-PHASE_10_EXIT_CRITERIA: CLOSED
-BUILD_ORDER: CLOSED
+El sistema mantiene 6 capas principales:
 
-PHASE_10_EXIT_AUDIT: FAIL
+```text
+CAPA 0 — IDENTIDAD / KERNEL
+CAPA 1 — MEMORY
+CAPA 2 — CONTROL
+CAPA 3 — CAPABILITIES
+CAPA 4 — GOVERNANCE
+CAPA 5 — PRESENTATION
+```
 
-KNOWN_ARCHITECTURAL_BLOCKERS: 0
-DOCUMENT_NORMALIZATION_BLOCKERS: 5
+El Orchestrator pertenece a la lógica de Capa 2 — Control.
 
-READY_FOR_PHASE_10_CLOSURE: NO
-READY_FOR_IMPLEMENTATION_AUTHORIZATION: NO
+Agents, Skills, Models y Tools participan principalmente en Capa 3 — Capabilities, bajo Governance y Control.
 
-TECHNICAL_IMPLEMENTATION: NOT STARTED
+---
 
-AUTONOMY_LEVEL: 0
-EXECUTION_AUTHORITY: NONE
+# MODULES
+
+Documento:
+
+```text
+06_MODULES/ROBERT_MODULES.md
+```
+
+Los Modules representan dominios funcionales.
+
+```text
+MODULE ≠ AGENT
+MODULE ≠ MODEL
+MODULE ≠ SKILL
+MODULE ≠ TOOL
+```
+
+Business Builder mantiene su aprobación específica mediante:
+
+```text
+DECISIÓN #001
+```
+
+La normalización canónica de `ROBERT_MODULES` no implica aprobación formal automática de los 30 Modules como conjunto.
+
+---
+
+# DOCUMENTOS TÉCNICOS PRINCIPALES DE FASE 10
+
+Robert cuenta con:
+
+```text
+ROBERT_TECHNICAL_MVP_PLAN
+ROBERT_TECHNICAL_MVP_WIREFRAME v0.3
+ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2
+ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1
+ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2
+ROBERT_TECHNICAL_SCREEN_STATE_SPEC v0.2
+ROBERT_TECHNICAL_USER_ACTIONS_SPEC v0.2
+ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2
+ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC v0.2
+ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2
+ROBERT_TECHNICAL_NOTIFICATION_AND_ALERTS_SPEC v0.2
+ROBERT_TECHNICAL_SESSION_AND_CONTEXT_SPEC v0.2
+ROBERT_TECHNICAL_DOCUMENT_LIFECYCLE_SPEC v0.2
+ROBERT_TECHNICAL_VERSIONING_AND_CHANGE_POLICY_SPEC v0.2
+ROBERT_TECHNICAL_DATA_CONSISTENCY_AND_CONFLICT_RESOLUTION_SPEC v0.3
+ROBERT_TECHNICAL_APPROVAL_AND_AUTHORIZATION_GATE_SPEC v0.3
+```
+
+---
+
+# TECHNICAL DATA MODEL
+
+`ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1` está alineado con:
+
+```text
+CANONICAL MODEL
+IMPLEMENTATION CONTRACTS
+MEMORY ARCHITECTURE
+VALIDATION ARCHITECTURE
+TOOL ARCHITECTURE
+AUDIT
+ERROR / BLOCKING
+```
+
+Regla:
+
+```text
+CANONICAL MODEL
+=
+WHAT AN ENTITY MEANS
+
+IMPLEMENTATION CONTRACTS
+=
+WHAT COMPONENTS EXCHANGE
+
+DATA MODEL
+=
+HOW APPROVED INFORMATION MAY BE REPRESENTED
+```
+
+Los 11 modelos originales del MVP se conservan como:
+
+```text
+LEGACY MVP VIEW / DOCUMENT MODELS
+```
+
+y no sustituyen Contracts canónicos.
+
+---
+
+# INTERACTION FLOW
+
+`ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2` está subordinado al Orchestrator.
+
+Flujo interno:
+
+```text
+USER
+↓
+TASK
+↓
+REQUEST_CONTEXT
+↓
+ORCHESTRATOR
+↓
+ROUTING / RESOLUTION
+↓
+SPECIALIZED CAPABILITIES
+↓
+VALIDATION
+↓
+GOVERNANCE
+↓
+ORCHESTRATOR_RESULT
+↓
+AUDIT
+↓
+PRESENTATION
+↓
+USER
+```
+
+Regla:
+
+```text
+INTERACTION FLOW ≠ ROUTING AUTHORITY
+```
+
+Los componentes UI no son autoridades de backend.
+
+---
+
+# AUDIT TRAIL
+
+`ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC v0.2` utiliza:
+
+```text
+AUDIT_EVENT
+```
+
+como Contract aprobado mediante Implementation Contracts.
+
+Audit registra.
+
+Audit no autoriza.
+
+```text
+AUDIT
+≠
+AUTHORITY
+```
+
+---
+
+# ERROR AND BLOCKING
+
+La taxonomía especializada pertenece a:
+
+```text
+ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2
+```
+
+Otros documentos pueden referenciar Error / Block.
+
+No deben crear taxonomías paralelas.
+
+---
+
+# PERMISSION, SCOPE Y EXECUTION AUTHORITY
+
+Se mantienen separados:
+
+```text
+PERMISSION
+≠
+SCOPE
+
+PERMISSION
+≠
+EXECUTION AUTHORITY
+
+SCOPE
+≠
+EXECUTION AUTHORITY
+```
+
+Durante Fase 10:
+
+```text
+EXECUTION_AUTHORITY = NONE
+```
+
+---
+
+# RISK
+
+Escala oficial:
+
+```text
+0 — INFORMATIONAL
+1 — LOW
+2 — MEDIUM
+3 — HIGH
+4 — CRITICAL
+```
+
+No existe:
+
+```text
+RISK LEVEL 5
+```
+
+Reglas:
+
+```text
+RISK ≠ PERMISSION
+RISK ≠ AUTONOMY
+RISK ≠ EXECUTION AUTHORITY
+```
+
+---
+
+# AUTONOMY
+
+Estado vigente:
+
+```text
+AUTONOMY_LEVEL = 0
+```
+
+Esto implica que no existe autonomía ejecutiva activa.
+
+```text
+AUTONOMOUS AGENTS = DISABLED
+```
+
+---
+
+# WIREFRAME v0.3
+
+Fuente física oficial:
+
+```text
+10_MVP/ROBERT_TECHNICAL_MVP_WIREFRAME.md
+```
+
+Versión:
+
+```text
+v0.3
+```
+
+Trazabilidad:
+
+```text
+DECISIÓN #010
+CAMBIO #010
+CAMBIO #051
+```
+
+El archivo:
+
+```text
+ROBERT_TECHNICAL_MVP_WIREFRAME_v0.3_PROPUESTA.md
+```
+
+está:
+
+```text
+DELETED
+NON-CURRENT
+NOT AN OFFICIAL SOURCE
+```
+
+Regla:
+
+```text
+DO NOT RECREATE
+```
+
+Debe existir una sola fuente física vigente del Wireframe.
+
+---
+
+# ROBERT_VISUAL_REFERENCE
+
+Documento visual principal:
+
+```text
+ROBERT_VISUAL_REFERENCE
+```
+
+Función:
+
+Definir dirección conceptual de:
+
+* núcleo;
+* galaxias;
+* panels;
+* jerarquía visual;
+* navegación;
+* experiencia visual.
+
+No autoriza implementar una UI productiva por sí mismo.
+
+---
+
+# COMPONENTES UI DOCUMENTADOS
+
+La lista técnica canónica del MVP documental incluye:
+
+```text
+AppShell
+TopBar
+LeftSidebar
+CommandCenter
+ModeSelector
+RiskBadge
+ApprovalGate
+DecisionInbox
+DocumentStatusMap
+CurrentStatePanel
+```
+
+`MainCanvas` no pertenece a esta lista.
+
+Importante:
+
+```text
+UI COMPONENT
+≠
+SYSTEM AUTHORITY
+```
+
+---
+
+# GITHUB
+
+GitHub funciona actualmente como:
+
+```text
+REPOSITORY
+VERSION CONTROL
+DOCUMENT HISTORY
+```
+
+La presencia del repositorio no concede a Robert Tool execution ni write authority automáticamente.
+
+```text
+CONNECTED
+≠
+AUTHORIZED
+```
+
+---
+
+# OBSIDIAN
+
+Obsidian continúa siendo útil para:
+
+* navegación;
+* Wikilinks;
+* Graph View;
+* relaciones documentales;
+* visualización conceptual.
+
+Reglas:
+
+```text
+ROBERT_HOME
+=
+VISUAL NAVIGATION CENTER
+
+ROBERT_CONTEXT_MASTER
+=
+CONCEPTUAL CONTEXT CENTER
+```
+
+Obsidian Graph View no es runtime de Robert.
+
+---
+
+# SANDBOX
+
+Robert cuenta con documentación de Sandbox.
+
+Sandbox sirve para:
+
+* pruebas;
+* simulaciones;
+* Validation;
+* escenarios controlados.
+
+```text
+SANDBOX
+≠
+PRODUCTION EXECUTION
+```
+
+---
+
+# ESTADO DE IMPLEMENTACIÓN
+
+```text
+TECHNICAL_IMPLEMENTATION:
+NOT STARTED
+
+INITIAL_BUILD_ORDER:
+APPROVED
+
+IMPLEMENTATION_AUTHORIZATION:
+NOT GRANTED
+
+REAL_TOOL_EXECUTION:
+DISABLED
+
+AUTOMATIC_MEMORY_WRITE:
+DISABLED
+
+AUTONOMOUS_AGENTS:
+DISABLED
+
+AUTONOMY_LEVEL:
+0
+
+EXECUTION_AUTHORITY:
+NONE
+```
+
+La aprobación de Architecture, Contracts y Build Order no autoriza automáticamente código.
+
+---
+
+# PHASE 10 EXIT STATUS
+
+El primer Exit Audit identificó inconsistencias documentales.
+
+Durante Exit Remediation se corrigieron o normalizaron:
+
+```text
+ROBERT_HOME
+README
+ROBERT_CONTEXT_MASTER
+ROBERT_SYSTEM_ARCHITECTURE
+ROBERT_MODULES
+ROBERT_TECHNICAL_DATA_MODEL_SPEC
+ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC
+ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC
+WIREFRAME DUPLICATE
+```
+
+Estado actual:
+
+```text
+KNOWN_ARCHITECTURAL_BLOCKERS = 0
+```
+
+El cierre definitivo de Fase 10 depende de completar y aprobar el:
+
+```text
+FINAL PHYSICAL REPOSITORY AUDIT
+```
+
+Hasta entonces:
+
+```text
+PHASE_10_EXIT_AUDIT:
+IN FINAL VERIFICATION
+
+READY_FOR_PHASE_10_CLOSURE:
+NO
+
+READY_FOR_IMPLEMENTATION_AUTHORIZATION:
+NO
+```
+
+---
+
+# ÚLTIMAS DECISIONES ARQUITECTÓNICAS
+
+```text
+#030 — Canonical Model
+#031 — Orchestrator
+#032 — Agent Architecture
+#033 — Skill Architecture
+#034 — Model Interface
+#035 — Memory Architecture
+#036 — Validation Architecture
+#037 — Tool Architecture
+#038 — Implementation Contracts
+#039 — Phase 10 Exit Criteria
+#040 — Build Order
+```
+
+---
+
+# ÚLTIMOS CAMBIOS ARQUITECTÓNICOS
+
+```text
+#053 — Canonical Model
+#054 — Orchestrator
+#055 — Agent Architecture
+#056 — Agent Architecture consistency correction
+#057 — Skill Architecture
+#058 — Skill Architecture consistency correction
+#059 — Model Interface
+#060 — Memory Architecture
+#061 — Validation Architecture
+#062 — Tool Architecture
+#063 — Implementation Contracts
+#064 — Phase 10 Exit Criteria
+#065 — Build Order
+```
+
+---
+
+# PRIORIDAD ACTUAL
+
+```text
+PHASE 10
+FINAL EXIT REMEDIATION
+```
+
+Pendiente inmediato:
+
+```text
+1. FINAL README CLEANUP — CURRENT
+2. FINAL ROBERT_HOME CLEANUP
+3. FIX ROBERT_CONTEXT_MASTER REFERENCE ERROR
+4. FINAL ROBERT_SYSTEM_ARCHITECTURE CLEANUP
+5. RUN FINAL PHYSICAL REPOSITORY AUDIT
+```
+
+No se conoce actualmente ningún gap nuevo de Core Architecture.
+
+---
+
+# REGLAS DE AVANCE
+
+Robert no debe:
+
+* crear nuevas arquitecturas sin necesidad;
+* reabrir Decisions aprobadas sin motivo;
+* interpretar una Validation como Approval;
+* ampliar Scope silenciosamente;
+* utilizar Tool availability como autorización;
+* iniciar implementación porque Build Order exista;
+* avanzar automáticamente a Phase 11;
+* activar Autonomy por inferencia.
+
+---
+
+# INVARIANTES DE IMPLEMENTATION READINESS
+
+```text
+BUILD ORDER ≠ IMPLEMENTATION AUTHORIZATION
+
+ARCHITECTURALLY CENTRAL ≠ FIRST TO CODE
+
+CONTRACT ≠ IMPLEMENTATION
+
+ROUTE ≠ ROUTING AUTHORITY
+
+AUDIT WRITER ≠ AUDIT AUTHORITY
+
+SKILL RUNNER ≠ EXECUTION AUTHORITY
+
+AGENT RUNNER ≠ ROUTING AUTHORITY
+
+MODEL OUTPUT ≠ ROUTING AUTHORITY
+
+MODEL TOOL REQUEST ≠ TOOL EXECUTION
+
+TOOL ABSTRACTION ≠ REAL TOOL EXECUTION
+
+CONNECTED ≠ AUTHORIZED
+
+IMPLEMENTED CAPABILITY ≠ AUTONOMY AUTHORIZATION
+
+IMPLEMENTATION AUTHORIZED ≠ AUTONOMY AUTHORIZED
+
+CODE AUTHORIZATION ≠ TOOL AUTHORIZATION
+
+PHASE 10 COMPLETE ≠ IMPLEMENTATION AUTHORIZED
+```
+
+---
+
+# ESTADO FINAL DEL README
+
+```text
+DOCUMENT:
+README
+
+STATUS:
+CURRENT / CANONICALLY SYNCHRONIZED
+
+PHASE:
+10
+
+LATEST_ARCHITECTURAL_DECISION:
+#040
+
+LATEST_CHANGE:
+#065
+
+CORE_ARCHITECTURE:
+CLOSED
+
+TOOL_ARCHITECTURE:
+CLOSED
+
+IMPLEMENTATION_CONTRACTS:
+APPROVED
+
+PHASE_10_EXIT_CRITERIA:
+APPROVED
+
+BUILD_ORDER:
+APPROVED
+
+KNOWN_ARCHITECTURAL_BLOCKERS:
+0
+
+TECHNICAL_IMPLEMENTATION:
+NOT STARTED
+
+PHASE_10_EXIT_AUDIT:
+IN FINAL VERIFICATION
+
+READY_FOR_PHASE_10_CLOSURE:
+NO
+
+READY_FOR_IMPLEMENTATION_AUTHORIZATION:
+NO
+
+REAL_TOOL_EXECUTION:
+DISABLED
+
+AUTOMATIC_MEMORY_WRITE:
+DISABLED
+
+AUTONOMOUS_AGENTS:
+DISABLED
+
+AUTONOMY_LEVEL:
+0
+
+EXECUTION_AUTHORITY:
+NONE
+```
+
+---
+
+# CIERRE
+
+`ROBERT_MASTER_SYSTEM` tiene actualmente cerrada su arquitectura principal previa a implementación.
+
+El proyecto está terminando la verificación física de Fase 10.
+
+La siguiente transición solo podrá ocurrir después de:
+
+```text
+FINAL PHYSICAL REPOSITORY AUDIT
+=
+PASS
+```
+
+y de una Decision humana posterior correspondiente.
+
+Hasta entonces:
+
+```text
+NO AUTOMATIC PHASE TRANSITION
+
+NO IMPLEMENTATION AUTHORIZATION
+
+NO REAL TOOL EXECUTION
+
+NO AUTONOMOUS AGENTS
+```
