@@ -729,30 +729,29 @@ Los documentos principales actuales de Robert se organizan por función.
     DECISIÓN #035 / CAMBIO #060.
 
 18. ROBERT_VALIDATION_ARCHITECTURE v0.1
+    DECISIÓN #036 / CAMBIO #061.
+
+19. ROBERT_TOOL_ARCHITECTURE v0.1
+    DECISIÓN #037 / CAMBIO #062.
+    Arquitectura vigente de Tools, Tool Requests, Tool Results,
+    Tool Interface, Tool Registry, Tool Policy y límites de ejecución.
+
+20. ROBERT_IMPLEMENTATION_CONTRACTS v0.1
+    DECISIÓN #038 / CAMBIO #063.
+    Contratos conceptuales aprobados que sirven como puente
+    entre arquitectura y futura implementación técnica.
+
+21. ROBERT_PHASE_10_EXIT_CRITERIA v0.1
+    DECISIÓN #039 / CAMBIO #064.
+    Criterios verificables para determinar si Fase 10 puede
+    considerarse lista para cierre.
+
+22. ROBERT_BUILD_ORDER v0.1
     DECISIÓN #040 / CAMBIO #065.
-
-    ROBERT_TOOL_ARCHITECTURE v0.1
-DECISIÓN #037 / CAMBIO #062
-Arquitectura vigente de Tools, Tool Requests, Tool Results,
-Tool Interface, Tool Registry, Tool Policy y límites de ejecución.
-
-ROBERT_IMPLEMENTATION_CONTRACTS v0.1
-DECISIÓN #038 / CAMBIO #063
-Contratos conceptuales aprobados que sirven como puente
-entre arquitectura y futura implementación técnica.
-
-ROBERT_PHASE_10_EXIT_CRITERIA v0.1
-DECISIÓN #039 / CAMBIO #064
-Criterios verificables para determinar si Fase 10 puede
-considerarse lista para cierre.
-
-ROBERT_BUILD_ORDER v0.1
-DECISIÓN #040 / CAMBIO #065
-Orden aprobado de construcción para la futura implementación inicial.
+    Orden aprobado de construcción para la futura implementación inicial.
 
 Cadena principal:
 
-```text
 CANONICAL MODEL
       ↓
 ORCHESTRATOR
@@ -766,15 +765,23 @@ MODEL INTERFACE
 MEMORY
       ↓
 VALIDATION
-```
-
+      ↓
+TOOLS
+      ↓
+IMPLEMENTATION CONTRACTS
+      ↓
+      
+PHASE 10 EXIT CRITERIA
+      ↓
+BUILD ORDER
 Estado:
 
-```text
-CORE_ARCHITECTURE = APPROVED
-IMPLEMENTATION = NONE
-```
-
+CORE_ARCHITECTURE = CLOSED
+TOOL_ARCHITECTURE = CLOSED
+IMPLEMENTATION_CONTRACTS = APPROVED
+PHASE_10_EXIT_CRITERIA = APPROVED
+BUILD_ORDER = APPROVED
+TECHNICAL_IMPLEMENTATION = NOT STARTED
 ---
 
 ## MVP técnico
