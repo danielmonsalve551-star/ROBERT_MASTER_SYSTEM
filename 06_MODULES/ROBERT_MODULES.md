@@ -1,16 +1,21 @@
-#ROBERT_MODULES — MAPA DE MÓDULOS DEL SISTEMA
+# ROBERT_MODULES — MAPA DE MÓDULOS DEL SISTEMA
 
-Versión: 0.1  
-Estado: Base inicial con Business Builder aprobado por el usuario
-Última actualización: Junio 2026
+**Versión:** 0.1
+**Estado:** Base funcional con Business Builder aprobado; normalizada contra arquitectura canónica vigente
+**Última actualización:** 31/08/2026
 
 ---
+
 Tags: #robert/orbita-4 #capa/3 #tipo/maestro #robert/modulos #robert/capacidades
 
 [[ROBERT_HOME]]
 [[ROBERT_CONTEXT_MASTER]]
 [[ROBERT_SYSTEM_ARCHITECTURE]]
 [[ROBERT_CANONICAL_MODEL]]
+[[ROBERT_AGENT_ARCHITECTURE]]
+[[ROBERT_SKILL_ARCHITECTURE]]
+[[ROBERT_MODEL_INTERFACE_SPEC]]
+[[ROBERT_TOOL_ARCHITECTURE]]
 [[ROBERT_TECHNICAL_COMPONENTS_SPEC]]
 [[ROBERT_VISUAL]]
 
@@ -24,28 +29,105 @@ Un módulo es un área funcional de Robert.
 
 Un módulo no es lo mismo que:
 
-- una capa interna;
-    
-- un comando;
-    
-- una herramienta externa;
-    
-- un agente;
-    
-- una automatización;
-    
-- una app conectada.
-    
+* una capa interna;
+* un comando;
+* un Model;
+* una Tool;
+* un Agent;
+* un Skill;
+* una automatización;
+* una app conectada.
 
-Los módulos representan **qué áreas puede trabajar Robert**.
+Los Modules representan **qué áreas funcionales puede trabajar Robert**.
 
-Las capas explican **cómo funciona Robert por dentro**.
+Las Layers explican **cómo funciona Robert por dentro**.
 
-Los comandos explican **cómo el usuario activa funciones**.
+Los Commands explican **cómo el usuario activa funciones**.
 
-Las herramientas explican **qué apps externas puede usar Robert**.
+Los Models aportan **capacidad de inteligencia**.
 
-Los agentes explican **especialistas futuros dentro de módulos**.
+Los Agents representan **especialistas lógicos**.
+
+Los Skills representan **procedimientos reutilizables**.
+
+Las Tools representan **capacidades técnicas o externas**.
+
+---
+
+# CANONICAL ARCHITECTURE ALIGNMENT
+
+`ROBERT_MODULES` conserva su función como mapa de dominios y capacidades funcionales.
+
+La semántica de sus entidades queda subordinada a:
+
+```text
+ROBERT_CANONICAL_MODEL v0.2
+DECISIÓN #030
+CAMBIO #053
+```
+
+y a las arquitecturas especializadas posteriormente aprobadas:
+
+```text
+ROBERT_ORCHESTRATOR_SPEC v0.1
+DECISIÓN #031
+CAMBIO #054
+
+ROBERT_AGENT_ARCHITECTURE v0.1
+DECISIÓN #032
+CAMBIO #055
+CAMBIO #056
+
+ROBERT_SKILL_ARCHITECTURE v0.1
+DECISIÓN #033
+CAMBIO #057
+CAMBIO #058
+
+ROBERT_MODEL_INTERFACE_SPEC v0.1
+DECISIÓN #034
+CAMBIO #059
+
+ROBERT_MEMORY_ARCHITECTURE v0.1
+DECISIÓN #035
+CAMBIO #060
+
+ROBERT_VALIDATION_ARCHITECTURE v0.1
+DECISIÓN #036
+CAMBIO #061
+
+ROBERT_TOOL_ARCHITECTURE v0.1
+DECISIÓN #037
+CAMBIO #062
+```
+
+Se formaliza:
+
+```text
+MODULE ≠ AGENT
+
+MODULE ≠ MODEL
+
+MODULE ≠ SKILL
+
+MODULE ≠ TOOL
+
+MODULE ≠ LAYER
+```
+
+Un Module representa un dominio funcional.
+
+Puede relacionarse con:
+
+```text
+AGENTS
+SKILLS
+MODELS
+TOOLS
+COMMANDS
+DOCUMENTS
+```
+
+pero no se convierte en ninguno de ellos.
 
 ---
 
@@ -59,109 +141,104 @@ Primero se definen.
 
 Después se prueban manualmente.
 
-Después se conectan con comandos.
+Después se conectan con Commands y documentos.
 
-Después se integran al MVP.
+Después se integran al MVP correspondiente.
 
-Después pueden conectarse con herramientas.
+Después pueden relacionarse con Skills, Agents, Models y Tool requirements.
 
-Después pueden tener agentes especializados.
+Las conexiones o ejecuciones técnicas reales requieren la fase, Permission, Scope, Security, Approval y Execution Authority correspondientes.
 
 Regla:
 
-Primero claridad. Después capacidad. Después automatización.
+```text
+PRIMERO CLARIDAD
+DESPUÉS CAPACIDAD
+DESPUÉS IMPLEMENTACIÓN CONTROLADA
+DESPUÉS AUTOMATIZACIÓN AUTORIZADA
+```
 
 ---
 
 # RELACIÓN CON LA ARQUITECTURA
 
-ROBERT_SYSTEM_ARCHITECTURE define 6 capas:
+`ROBERT_SYSTEM_ARCHITECTURE` define 6 Layers:
 
 0. Identidad / Kernel
-    
-1. Memoria
-    
+1. Memory
 2. Control
-    
-3. Capacidades
-    
-4. Gobierno
-    
-5. Presentación
-    
+3. Capabilities
+4. Governance
+5. Presentation
 
-Los módulos viven principalmente dentro de:
+Los Modules viven principalmente dentro de:
 
-Capa 3 — Capacidades.
+```text
+CAPA 3 — CAPABILITIES
+```
 
-Los módulos deben respetar:
+Los Modules deben respetar:
 
-- Capa 2 — Control;
-    
-- Capa 4 — Gobierno;
-    
-- ROBERT_SECURITY_RULES;
-    
-- ROBERT_COMMANDS;
-    
-- ROBERT_CONTEXT_MASTER;
-    
-- ROBERT_PHASES.
-    
+* Capa 2 — Control;
+* Capa 4 — Governance;
+* `ROBERT_CANONICAL_MODEL`;
+* `ROBERT_ORCHESTRATOR_SPEC`;
+* `ROBERT_AGENT_ARCHITECTURE`;
+* `ROBERT_SKILL_ARCHITECTURE`;
+* `ROBERT_MODEL_INTERFACE_SPEC`;
+* `ROBERT_TOOL_ARCHITECTURE`;
+* `ROBERT_SECURITY_RULES`;
+* `ROBERT_COMMANDS`;
+* `ROBERT_CONTEXT_MASTER`;
+* `ROBERT_PHASES`.
 
 Regla:
 
-Ningún módulo puede ejecutar acciones fuera de autorización.
+```text
+NO MODULE
+MAY BYPASS
+ROBERT GOVERNANCE
+```
+
+Ningún Module puede ejecutar acciones fuera de autorización.
 
 ---
 
 # DEFINICIÓN DE MÓDULO
 
-Un módulo es una capacidad funcional de Robert.
+Un Module es una capacidad o dominio funcional de Robert.
 
-Ejemplo:
+Ejemplos:
 
-- Ideas;
-    
-- Projects;
-    
-- Documents;
-    
-- Finance;
-    
-- Marketing;
-    
-- Security.
-    
+* Ideas;
+* Projects;
+* Documents;
+* Finance;
+* Marketing;
+* Security.
 
-Un módulo sirve para organizar trabajo dentro de un área.
+Un Module sirve para organizar trabajo dentro de un área.
 
-Cada módulo debe tener:
+Cada Module debe poder declarar:
 
-- nombre;
-    
-- propósito;
-    
-- función;
-    
-- estado;
-    
-- prioridad;
-    
-- comandos relacionados;
-    
-- documentos relacionados;
-    
-- nivel de riesgo;
-    
-- límites;
-    
-- posible evolución futura.
-    
+* nombre;
+* propósito;
+* función;
+* estado;
+* prioridad;
+* Commands relacionados;
+* documentos relacionados;
+* Agents relacionados;
+* Skills relacionados;
+* Model requirements;
+* Tool requirements;
+* nivel de Risk;
+* límites;
+* posible evolución futura.
 
 ---
 
-# DIFERENCIA ENTRE MODULES, LAYERS, TOOLS Y AGENTS
+# DIFERENCIA ENTRE MODULES, LAYERS, MODELS, AGENTS, SKILLS Y TOOLS
 
 ## MODULES
 
@@ -169,18 +246,20 @@ Son áreas funcionales de Robert.
 
 Ejemplos:
 
-- Ideas;
-    
-- Projects;
-    
-- Finance;
-    
-- Marketing;
-    
-- Documents;
-    
-- Security.
-    
+* Ideas;
+* Projects;
+* Finance;
+* Marketing;
+* Documents;
+* Security.
+
+```text
+MODULE
+=
+WHERE FUNCTIONAL WORK BELONGS
+```
+
+---
 
 ## LAYERS
 
@@ -188,153 +267,335 @@ Son capas internas de arquitectura.
 
 Ejemplos:
 
-- Identidad;
-    
-- Memoria;
-    
-- Control;
-    
-- Capacidades;
-    
-- Gobierno;
-    
-- Presentación.
-    
+* Identidad;
+* Memory;
+* Control;
+* Capabilities;
+* Governance;
+* Presentation.
+
+```text
+LAYER
+≠
+MODULE
+```
+
+---
+
 ## MODELS
 
-Son proveedores de inteligencia que Robert puede utilizar para razonamiento, análisis y generación.
+Son proveedores de inteligencia que Robert puede utilizar para:
 
-Ejemplos:
+* razonamiento;
+* análisis;
+* generación;
+* clasificación;
+* revisión;
+* evaluación.
 
-- Claude;
-- ChatGPT.
+Ejemplos actuales:
 
-Regla canónica:
+* Claude;
+* ChatGPT.
 
-`MODEL ≠ TOOL`
+Referencia:
 
-Fuente conceptual: `ROBERT_CANONICAL_MODEL v0.2`.
+```text
+ROBERT_MODEL_INTERFACE_SPEC v0.1
+DECISIÓN #034
+CAMBIO #059
+```
 
-Los Models pueden colaborar con Agents, Skills, Modules y Tools, pero no adquieren autoridad propia ni permisos de ejecución por existir.
+Reglas canónicas:
+
+```text
+MODEL ≠ TOOL
+
+MODEL ≠ AGENT
+
+MODEL ≠ SKILL
+
+MODEL ≠ MODULE
+```
+
+Claude y ChatGPT son Models.
+
+No son Tools.
+
+Los Models pueden colaborar con Agents, Skills, Modules y Tool Requests, pero no adquieren Permission, Scope, Routing Authority o Execution Authority por existir.
+
+---
+
+## AGENTS
+
+Agents ya forman parte de la arquitectura aprobada de Robert.
+
+Referencia:
+
+```text
+ROBERT_AGENT_ARCHITECTURE v0.1
+DECISIÓN #032
+CAMBIO #055
+CAMBIO #056
+```
+
+Un Agent es un especialista lógico que puede operar dentro de uno o más Modules para cumplir un objetivo definido.
+
+Ejemplos del catálogo arquitectónico aprobado:
+
+* ROBERT_ARCHITECT;
+* ROBERT_RESEARCHER;
+* ROBERT_CRITIC;
+* ROBERT_SECURITY;
+* ROBERT_MEMORY;
+* ROBERT_CODER;
+* ROBERT_TESTER;
+* ROBERT_STRATEGIST.
+
+Se formaliza:
+
+```text
+AGENT ≠ MODULE
+
+AGENT ≠ MODEL
+
+AGENT ≠ SKILL
+
+AGENT ≠ TOOL
+
+AGENT ≠ ORCHESTRATOR
+```
+
+Un Agent puede participar en uno o más Modules.
+
+Los Agents no están implementados como actores autónomos en Fase 10.
+
+Por tanto:
+
+```text
+AGENT_ARCHITECTURE = APPROVED
+
+AUTONOMOUS_AGENTS = NOT ACTIVE
+
+AUTONOMY_LEVEL = 0
+
+EXECUTION_AUTHORITY = NONE
+```
+
+---
+
+## SKILLS
+
+Skills representan procedimientos reutilizables.
+
+Referencia:
+
+```text
+ROBERT_SKILL_ARCHITECTURE v0.1
+DECISIÓN #033
+CAMBIO #057
+CAMBIO #058
+```
+
+Se formaliza:
+
+```text
+SKILL ≠ AGENT
+
+SKILL ≠ MODULE
+
+SKILL ≠ TOOL
+
+SKILL ≠ AUTONOMOUS ACTOR
+```
+
+Relación:
+
+```text
+MODULE
+=
+WHERE FUNCTIONAL WORK BELONGS
+
+AGENT
+=
+WHO SPECIALIZES IN THE WORK
+
+SKILL
+=
+HOW A REUSABLE PROCEDURE IS PERFORMED
+```
+
+---
 
 ## TOOLS
 
-Son herramientas externas o capacidades técnicas que Robert puede usar o conectar.
+Tools son capacidades externas o técnicas mediante las cuales Robert puede interactuar con recursos, servicios o entornos.
 
-Ejemplos:
+Referencia:
 
-- Gmail;
-    
-- Google Calendar;
-    
-- Obsidian;
-    
-- Notion;
-    
-- Google Drive;
-    
-- Figma;
-    
-- GitHub;
+```text
+ROBERT_TOOL_ARCHITECTURE v0.1
+DECISIÓN #037
+CAMBIO #062
+```
 
-- filesystem;
+Ejemplos conceptuales:
 
-- web.
+* filesystem;
+* GitHub;
+* web;
+* databases;
+* terminal / code execution environment;
+* Gmail;
+* Calendar;
+* Google Drive;
+* APIs;
+* otras integraciones.
 
-  
-## AGENTS
+Se formaliza:
 
-Son especialistas futuros que pueden operar dentro de un módulo.
+```text
+TOOL ≠ MODEL
 
-Ejemplos:
+TOOL ≠ AGENT
 
-- Agente financiero;
-    
-- Agente documental;
-    
-- Agente de marketing;
-    
-- Agente fiscal;
-    
-- Agente visual;
-    
-- Agente de investigación.
-    
+TOOL ≠ SKILL
+
+TOOL ≠ MODULE
+
+TOOL AVAILABLE
+≠
+TOOL ALLOWED
+
+TOOL REQUEST
+≠
+TOOL AUTHORIZATION
+```
+
+Durante Fase 10:
+
+```text
+REAL_TOOL_EXECUTION = DISABLED
+
+AUTONOMY_LEVEL = 0
+
+EXECUTION_AUTHORITY = NONE
+```
+
+---
+
+# CAPABILITY PROVIDERS
+
+La clasificación vigente es:
+
+```text
+CAPABILITY PROVIDERS
+│
+├── MODELS
+│   ├── Claude
+│   ├── ChatGPT
+│   └── future_model
+│
+└── TOOLS
+    ├── filesystem
+    ├── GitHub
+    ├── web
+    ├── database
+    ├── code execution environment
+    ├── Gmail
+    ├── Calendar
+    ├── Google Drive
+    └── otras integraciones
+```
 
 Regla:
 
-No confundir módulos con agentes.
+```text
+MODELS ≠ TOOLS
+```
 
-Un módulo es un área.
+Un Model puede producir un Tool Request mediante la arquitectura correspondiente.
 
-Un agente es un operador especializado futuro dentro de un área.
+Eso no convierte al Model en Tool.
+
+---
+
+# MODULE ROUTING
+
+Modules no se seleccionan autónomamente.
+
+La autoridad de routing pertenece al Orchestrator.
+
+Referencia:
+
+```text
+ROBERT_ORCHESTRATOR_SPEC v0.1
+DECISIÓN #031
+CAMBIO #054
+```
+
+Flujo conceptual:
+
+```text
+TASK
+  ↓
+ORCHESTRATOR
+  ↓
+MODULE ROUTING
+  ↓
+AGENT / SKILL / MODEL / TOOL RESOLUTION
+```
+
+Se formaliza:
+
+```text
+MODULE ≠ ROUTER
+
+AGENT ≠ MODULE ROUTER
+
+MODEL ≠ MODULE ROUTER
+
+ORCHESTRATOR
+=
+ROUTING AUTHORITY
+```
 
 ---
 
 # MAPA GENERAL DE MÓDULOS
 
-Los módulos principales de Robert son:
+Los Modules principales de Robert son:
 
 1. Robert Core
-    
 2. Command Center
-    
 3. Memory
-    
 4. Ideas
-    
 5. Projects
-    
 6. Business Builder
-    
 7. Administration
-    
 8. Finance
-    
 9. Accounting
-    
 10. Tax / Fiscal
-    
 11. Marketing
-    
 12. Design
-    
 13. Sales
-    
 14. Operations
-    
 15. Legal Reference
-    
 16. Documents
-    
 17. Research
-    
 18. Analytics
-    
 19. Automation
-    
 20. Apps Connector
-    
 21. Calendar
-    
 22. Email
-    
 23. Tasks
-    
 24. Voice
-    
 25. Code / Development
-    
 26. Knowledge Base
-    
 27. Security
-    
 28. Decisions Log
-    
 29. Learning System
-    
 30. Visual Projection
-    
 
 ---
 
@@ -342,92 +603,89 @@ Los módulos principales de Robert son:
 
 Estado actual:
 
-Base inicial pendiente de aprobación.
+```text
+BASE FUNCTIONAL MAP
+CANONICALLY NORMALIZED
+```
 
-Los módulos todavía no están implementados.
+Business Builder posee aprobación específica.
 
-Los módulos existen como mapa funcional inicial.
+El mapa completo de 30 Modules no se marca automáticamente como formalmente aprobado mediante esta normalización.
 
-La prioridad actual no es programar módulos.
+Los Modules todavía no están implementados técnicamente.
 
-La prioridad actual es:
+La prioridad actual ya no es diseñar el MVP manual.
 
-1. definir módulos;
-    
-2. conectarlos con documentos;
-    
-3. conectarlos con comandos;
-    
-4. priorizar módulos para MVP manual;
-    
-5. probarlos en sesiones reales;
-    
-6. después diseñar MVP técnico.
-    
+Robert se encuentra en Fase 10 / Implementation Readiness.
+
+La prioridad vigente es:
+
+1. mantener el mapa funcional alineado al Canonical Model;
+2. definir relaciones Module → Command;
+3. definir relaciones Module → Agent;
+4. definir relaciones Module → Skill;
+5. definir relaciones Module → Model requirement;
+6. definir relaciones Module → Tool requirement;
+7. utilizar el Build Order aprobado para futura implementación;
+8. evitar activación o ejecución real sin autorización.
 
 ---
 
-# MÓDULOS PRIORITARIOS PARA MVP MANUAL
+# MÓDULOS RELEVANTES PARA EL MVP MANUAL
 
-Los módulos prioritarios para la etapa actual son:
+El MVP manual utilizó principalmente:
 
 1. Robert Core
-    
 2. Command Center
-    
 3. Memory
-    
 4. Ideas
-    
 5. Projects
-    
 6. Documents
-    
 7. Knowledge Base
-    
 8. Security
-    
 9. Decisions Log
-    
 10. Visual Projection
-    
 11. Tasks
-    
 12. Research
-    
 
-Estos módulos permiten probar Robert sin programación.
+Estos Modules permitieron probar Robert sin programación productiva.
 
 ---
 
-# MÓDULOS PRIORITARIOS PARA MVP TÉCNICO
+# MÓDULOS RELEVANTES PARA EL MVP TÉCNICO INICIAL
 
-Los módulos prioritarios para una primera app técnica son:
+La priorización funcional puede considerar:
 
 1. Robert Core
-    
 2. Command Center
-    
 3. Memory
-    
 4. Documents
-    
 5. Projects
-    
 6. Tasks
-    
 7. Decisions Log
-    
 8. Security
-    
 9. Visual Projection
-    
 10. Apps Connector básico
-    
 
-Estos módulos deben aparecer primero en interfaz.
+Sin embargo, la secuencia técnica de implementación no la gobierna este listado.
 
-No se recomienda empezar con módulos complejos como Finance, Tax, Agents o Automation avanzada.
+La secuencia oficial debe seguir:
+
+```text
+ROBERT_BUILD_ORDER v0.1
+DECISIÓN #040
+CAMBIO #065
+```
+
+Regla:
+
+```text
+MODULE PRIORITY
+≠
+BUILD ORDER
+```
+
+No se recomienda comenzar con áreas sensibles o ejecución externa antes de que existan sus dependencias de Governance, Contracts, Audit y Validation.
 
 ---
 
@@ -435,30 +693,36 @@ No se recomienda empezar con módulos complejos como Finance, Tax, Agents o Auto
 
 Propósito:
 
-Representar el núcleo lógico de Robert.
+Representar el núcleo lógico funcional de Robert.
 
 Función:
 
-Conectar contexto, memoria, comandos, documentos, decisiones, módulos, seguridad, autonomía y presentación visual.
+Relacionar conceptualmente:
 
-Debe coordinar:
+* contexto;
+* memoria;
+* Commands;
+* documentos;
+* Decisions;
+* Modules;
+* Security;
+* Governance;
+* Presentation.
 
-- intención del usuario;
-    
-- contexto;
-    
-- documento relacionado;
-    
-- comando detectado;
-    
-- módulo activo;
-    
-- riesgo;
-    
-- autorización;
-    
-- salida esperada.
-    
+El routing técnico pertenece al Orchestrator.
+
+Debe considerar:
+
+* intención del usuario;
+* Context autorizado;
+* documento relacionado;
+* Command detectado;
+* Module requerido;
+* Risk;
+* Permission;
+* Scope;
+* Approval;
+* salida esperada.
 
 Estado:
 
@@ -468,26 +732,24 @@ Prioridad:
 
 Crítica.
 
-Riesgo:
+Risk:
 
 Alto si se define mal.
 
 Límites:
 
-Robert Core no debe convertirse en un módulo gigante donde todo se mezcle.
+Robert Core no debe convertirse en un Module gigante donde todo se mezcle.
 
-Debe coordinar, no reemplazar todos los módulos.
+Debe representar núcleo funcional sin sustituir al Orchestrator ni a las Layers especializadas.
 
 Documentos relacionados:
 
-- ROBERT_CONTEXT_MASTER;
-    
-- ROBERT_SYSTEM_ARCHITECTURE;
-    
-- ROBERT_SECURITY_RULES;
-    
-- ROBERT_COMMANDS.
-    
+* ROBERT_CONTEXT_MASTER;
+* ROBERT_CANONICAL_MODEL;
+* ROBERT_SYSTEM_ARCHITECTURE;
+* ROBERT_ORCHESTRATOR_SPEC;
+* ROBERT_SECURITY_RULES;
+* ROBERT_COMMANDS.
 
 ---
 
@@ -495,26 +757,20 @@ Documentos relacionados:
 
 Propósito:
 
-Ser el centro de control operativo de Robert.
+Ser el centro de control operativo visible de Robert.
 
 Función:
 
-Mostrar y coordinar:
+Mostrar y coordinar conceptualmente:
 
-- comandos;
-    
-- estados;
-    
-- autorizaciones;
-    
-- modo activo;
-    
-- autonomía;
-    
-- riesgo;
-    
-- siguiente paso.
-    
+* Commands;
+* estados;
+* Approval;
+* modo activo;
+* Autonomy;
+* Risk;
+* bloqueos;
+* siguiente paso.
 
 Debe permitir que el usuario controle Robert de forma clara.
 
@@ -526,24 +782,23 @@ Prioridad:
 
 Crítica.
 
-Riesgo:
+Risk:
 
 Medio.
 
 Límites:
 
-No debe ejecutar acciones sin pasar por Security Rules.
+Command Center no posee Execution Authority.
+
+No debe ejecutar acciones saltándose Governance.
 
 Documentos relacionados:
 
-- ROBERT_COMMANDS;
-    
-- ROBERT_SECURITY_RULES;
-    
-- ROBERT_SYSTEM_ARCHITECTURE;
-    
-- ROBERT_VISUAL_REFERENCE.
-    
+* ROBERT_COMMANDS;
+* ROBERT_SECURITY_RULES;
+* ROBERT_SYSTEM_ARCHITECTURE;
+* ROBERT_ORCHESTRATOR_SPEC;
+* ROBERT_VISUAL_REFERENCE.
 
 ---
 
@@ -551,40 +806,57 @@ Documentos relacionados:
 
 Propósito:
 
-Conservar contexto útil.
+Organizar funcionalmente el uso de Memory.
+
+La arquitectura formal de Memory pertenece a:
+
+```text
+ROBERT_MEMORY_ARCHITECTURE v0.1
+DECISIÓN #035
+CAMBIO #060
+```
 
 Función:
 
-Distinguir entre:
+Trabajar con:
 
-- contexto activo;
-    
-- contexto maestro;
-    
-- decisiones;
-    
-- información temporal;
-    
-- información permanente;
-    
-- ideas;
-    
-- tareas;
-    
-- referencias;
-    
-- reglas.
-    
+```text
+MEMORY_TYPE:
+CORE
+SEMANTIC
+EPISODIC
+DECISIONAL
+PROCEDURAL
+```
+
+y:
+
+```text
+RETENTION:
+ACTIVE
+TEMPORARY
+PERSISTENT
+```
+
+Se mantiene:
+
+```text
+CONTEXT ≠ MEMORY
+
+MEMORY_TYPE ≠ RETENTION
+
+MEMORY CANDIDATE ≠ MEMORY
+```
 
 Estado:
 
-Base inicial.
+Arquitectura aprobada / implementación no iniciada.
 
 Prioridad:
 
 Crítica.
 
-Riesgo:
+Risk:
 
 Medio.
 
@@ -594,14 +866,14 @@ No debe guardar todo.
 
 No debe guardar información sensible innecesaria.
 
+No existe Automatic Memory Write autorizado.
+
 Documentos relacionados:
 
-- ROBERT_CONTEXT_MASTER;
-    
-- ROBERT_DECISIONS_LOG;
-    
-- ROBERT_SECURITY_RULES.
-    
+* ROBERT_MEMORY_ARCHITECTURE;
+* ROBERT_CONTEXT_MASTER;
+* ROBERT_DECISIONS_LOG;
+* ROBERT_SECURITY_RULES.
 
 ---
 
@@ -615,20 +887,14 @@ Función:
 
 Convertir ideas sueltas en:
 
-- conceptos;
-    
-- proyectos;
-    
-- documentos;
-    
-- decisiones;
-    
-- planes;
-    
-- empresas;
-    
-- sistemas.
-    
+* conceptos;
+* Projects;
+* documentos;
+* propuestas;
+* Decisions;
+* planes;
+* empresas;
+* sistemas.
 
 Estado:
 
@@ -638,24 +904,17 @@ Prioridad:
 
 Alta.
 
-Riesgo:
+Risk:
 
 Bajo.
 
 Límites:
 
-No toda idea es decisión.
+```text
+IDEA ≠ DECISION
+```
 
-No toda idea debe guardarse permanentemente.
-
-Documentos relacionados:
-
-- ROBERT_CONTEXT_MASTER;
-    
-- ROBERT_DECISIONS_LOG;
-    
-- ROBERT_MODULES.
-    
+No toda idea debe convertirse en Memory persistente.
 
 ---
 
@@ -663,30 +922,21 @@ Documentos relacionados:
 
 Propósito:
 
-Organizar proyectos.
+Organizar Projects.
 
 Función:
 
-Convertir ideas o trabajos en proyectos con:
+Convertir ideas o trabajos en Projects con:
 
-- objetivo;
-    
-- estado;
-    
-- tareas;
-    
-- documentos;
-    
-- decisiones;
-    
-- fases;
-    
-- responsables;
-    
-- riesgos;
-    
-- próximos pasos.
-    
+* objetivo;
+* estado;
+* Tasks;
+* documentos;
+* Decisions;
+* fases;
+* responsables;
+* riesgos;
+* próximos pasos.
 
 Estado:
 
@@ -696,32 +946,79 @@ Prioridad:
 
 Alta.
 
-Riesgo:
+Risk:
 
 Bajo a medio.
 
 Límites:
 
-No debe cerrar fases ni proyectos sin autorización.
+No debe cerrar fases ni Projects sin la gobernanza correspondiente.
 
 Documentos relacionados:
 
-- ROBERT_PHASES;
-    
-- ROBERT_DECISIONS_LOG;
-    
-- ROBERT_CONTEXT_MASTER.
-    
+* ROBERT_PHASES;
+* ROBERT_DECISIONS_LOG;
+* ROBERT_CONTEXT_MASTER.
 
 ---
 
-# # MÓDULO 6 — BUSINESS BUILDER
+# MÓDULO 6 — BUSINESS BUILDER
 
-Propósito:
+## Business Builder — Canonical Alignment
+
+Business Builder conserva su estado como capacidad funcional aprobada mediante:
+
+```text
+DECISIÓN #001
+```
+
+Esta normalización no modifica su aprobación ni alcance.
+
+Business Builder puede relacionarse con:
+
+```text
+AGENTS
+SKILLS
+MODELS
+TOOLS
+```
+
+pero:
+
+```text
+BUSINESS BUILDER ≠ AGENT
+
+BUSINESS BUILDER ≠ MODEL
+
+BUSINESS BUILDER ≠ TOOL
+```
+
+Durante Fase 10 continúa limitado a:
+
+```text
+PLANNING
+ANALYSIS
+DOCUMENTATION
+SIMULATION
+DRAFTING
+```
+
+No autoriza:
+
+```text
+REAL BUSINESS EXECUTION
+EXTERNAL TOOL EXECUTION
+AUTONOMOUS AGENTS
+LEGAL / FISCAL / FINANCIAL FINAL DECISIONS
+```
+
+---
+
+## Propósito
 
 Ayudar al usuario a transformar ideas de negocio en estructuras empresariales completas, ordenadas y controladas.
 
-Business Builder es el módulo de Robert encargado de apoyar la creación, desarrollo y organización de empresas desde una idea inicial hasta una estructura funcional por áreas.
+Business Builder es el Module de Robert encargado de apoyar la creación, desarrollo y organización conceptual de empresas desde una idea inicial hasta una estructura funcional por áreas.
 
 ---
 
@@ -735,6 +1032,10 @@ Fecha de aprobación: 22/06/2026
 
 Decisión relacionada:
 
+```text
+DECISIÓN #001
+```
+
 Business Builder — Empresas completas fue aprobado como capacidad de Robert para estructurar empresas completas por áreas funcionales.
 
 ---
@@ -743,68 +1044,59 @@ Business Builder — Empresas completas fue aprobado como capacidad de Robert pa
 
 Business Builder ayuda a convertir una idea de negocio en:
 
-- modelo de negocio;
-    
-- estructura administrativa;
-    
-- plan financiero;
-    
-- estructura contable;
-    
-- análisis fiscal;
-    
-- estrategia de marketing;
-    
-- identidad de diseño;
-    
-- sistema de ventas;
-    
-- operación interna;
-    
-- documentos base;
-    
-- decisiones estratégicas;
-    
-- procesos organizados;
-    
-- plan de crecimiento;
-    
-- sistema empresarial estructurado.
-    
+* modelo de negocio;
+* estructura administrativa;
+* plan financiero;
+* estructura contable;
+* análisis fiscal;
+* estrategia de marketing;
+* identidad de diseño;
+* sistema de ventas;
+* operación interna;
+* documentos base;
+* decisiones estratégicas;
+* procesos organizados;
+* plan de crecimiento;
+* sistema empresarial estructurado.
 
 ---
 
 ## Definición
 
-Business Builder no es una automatización empresarial completa todavía.
+Business Builder no es una automatización empresarial completa.
 
-En la etapa actual, Business Builder funciona como una capacidad de planeación, estructura, documentación, simulación y análisis.
+Actualmente funciona como capacidad de:
 
-Robert puede ayudar a construir una empresa por áreas, pero no debe ejecutar acciones reales sin autorización, seguridad, revisión y fase correspondiente.
+* Planning;
+* análisis;
+* estructura;
+* documentación;
+* simulación;
+* Drafting.
+
+Robert puede ayudar a construir conceptualmente una empresa por áreas, pero no debe ejecutar acciones reales sin la autorización, Governance y fase correspondientes.
 
 ---
 
 ## Áreas que puede estructurar
 
-Business Builder puede dividir una empresa en áreas funcionales como:
+### 1. Administration
 
-### 1. Administración
+Organización general, estructura interna, roles, procesos, responsabilidades, políticas, Tasks y operación administrativa.
 
-Organización general, estructura interna, roles, procesos, responsabilidades, políticas, tareas y operación administrativa.
-
-### 2. Finanzas
+### 2. Finance
 
 Presupuestos, proyecciones, costos, ingresos, flujo de efectivo, rentabilidad, escenarios, análisis financiero y planeación de recursos.
 
-### 3. Contabilidad
+### 3. Accounting
 
 Catálogo conceptual de cuentas, registros, reportes, organización de información contable y estructura documental.
 
 Robert no sustituye a un contador.
 
-### 4. Fiscal
+### 4. Tax / Fiscal
 
-Identificación de temas fiscales, obligaciones posibles, riesgos, preguntas para revisar con especialista y organización de información.
+Identificación de temas fiscales, obligaciones posibles, Risks, preguntas para revisar con especialista y organización de información.
 
 Robert no sustituye a un asesor fiscal.
 
@@ -812,154 +1104,104 @@ Robert no sustituye a un asesor fiscal.
 
 Estrategia de mercado, cliente ideal, propuesta de valor, posicionamiento, campañas, contenido y comunicación.
 
-### 6. Diseño
+### 6. Design
 
 Identidad visual, estilo, marca, presentación, materiales, experiencia visual y coherencia gráfica.
 
-### 7. Ventas
+### 7. Sales
 
 Proceso comercial, canales, guiones, seguimiento, embudo, CRM conceptual, precios, promociones y cierre.
 
-### 8. Operaciones
+### 8. Operations
 
 Procesos internos, logística, entregas, proveedores, calidad, recursos, ejecución diaria y mejora continua.
 
-### 9. Investigación
+### 9. Research
 
-Análisis de mercado, competencia, tendencias, referencias, oportunidades, riesgos y validación de ideas.
+Análisis de mercado, competencia, tendencias, referencias, oportunidades, Risks y validación de ideas.
 
-### 10. Documentos
+### 10. Documents
 
 Creación de documentos base, planes, reportes, propuestas, presentaciones, manuales, checklists y estructuras internas.
 
-### 11. Procesos
+### 11. Processes
 
-Diseño de procesos, flujos de trabajo, SOPs, responsabilidades, tareas repetitivas y mejora operativa.
+Diseño de procesos, workflows, SOPs, responsabilidades, Tasks repetitivas y mejora operativa.
 
-### 12. Sistemas
+### 12. Systems
 
 Diseño conceptual de sistemas internos para operar, vender, organizar, medir y escalar una empresa.
 
 ---
 
-## Qué puede hacer en el MVP manual
+## Qué puede hacer actualmente
 
-Durante el MVP manual, Business Builder puede:
+Business Builder puede:
 
-- ordenar ideas de negocio;
-    
-- crear estructuras de empresa;
-    
-- preparar documentos base;
-    
-- proponer áreas funcionales;
-    
-- crear planes iniciales;
-    
-- simular escenarios;
-    
-- generar preguntas estratégicas;
-    
-- preparar prompts para Claude;
-    
-- crear borradores de procesos;
-    
-- detectar riesgos;
-    
-- separar decisiones importantes;
-    
-- preparar registros para Decisions Log;
-    
-- crear mapas de áreas;
-    
-- crear checklists;
-    
-- crear planes por etapas;
-    
-- preparar propuestas de estrategia;
-    
-- identificar qué información falta.
-    
+* ordenar ideas de negocio;
+* crear estructuras de empresa;
+* preparar documentos base;
+* proponer áreas funcionales;
+* crear planes iniciales;
+* simular escenarios;
+* generar preguntas estratégicas;
+* preparar Model Requests;
+* crear borradores de procesos;
+* detectar Risks;
+* separar Decisions importantes;
+* preparar registros para Decisions Log;
+* crear mapas de áreas;
+* crear checklists;
+* crear planes por etapas;
+* preparar propuestas de estrategia;
+* identificar qué información falta.
 
 ---
 
 ## Qué no puede hacer todavía
 
-Durante el MVP manual, Business Builder no puede:
+Business Builder no puede:
 
-- crear empresas legalmente;
-    
-- hacer trámites reales;
-    
-- presentar declaraciones fiscales;
-    
-- tomar decisiones fiscales definitivas;
-    
-- tomar decisiones legales definitivas;
-    
-- tomar decisiones contables definitivas;
-    
-- tomar decisiones financieras definitivas;
-    
-- mover dinero;
-    
-- hacer pagos;
-    
-- contratar personas;
-    
-- enviar correos reales;
-    
-- publicar campañas reales;
-    
-- conectar herramientas externas;
-    
-- automatizar procesos reales;
-    
-- ejecutar acciones sin autorización;
-    
-- sustituir abogados, contadores, asesores fiscales o asesores financieros.
-    
+* crear empresas legalmente;
+* hacer trámites reales;
+* presentar declaraciones fiscales;
+* tomar decisiones fiscales definitivas;
+* tomar decisiones legales definitivas;
+* tomar decisiones contables definitivas;
+* tomar decisiones financieras definitivas;
+* mover dinero;
+* hacer pagos;
+* contratar personas;
+* enviar correos reales automáticamente;
+* publicar campañas reales automáticamente;
+* ejecutar Tools externas sin autorización;
+* automatizar procesos reales;
+* ejecutar acciones sin autorización;
+* sustituir abogados, contadores, asesores fiscales o asesores financieros.
 
 ---
 
-## Relación con otros módulos
+## Relación con otros Modules
 
-Business Builder se conecta con:
+Business Builder se relaciona con:
 
-- Administration;
-    
-- Finance;
-    
-- Accounting;
-    
-- Tax / Fiscal;
-    
-- Marketing;
-    
-- Design;
-    
-- Sales;
-    
-- Operations;
-    
-- Documents;
-    
-- Research;
-    
-- Analytics;
-    
-- Legal Reference;
-    
-- Decisions Log;
-    
-- Security;
-    
-- Automation futura;
-    
-- Apps Connector futuro;
-    
-- Visual Projection.
-    
+* Administration;
+* Finance;
+* Accounting;
+* Tax / Fiscal;
+* Marketing;
+* Design;
+* Sales;
+* Operations;
+* Documents;
+* Research;
+* Analytics;
+* Legal Reference;
+* Decisions Log;
+* Security;
+* Automation;
+* Apps Connector;
+* Visual Projection.
 
 ---
 
@@ -967,99 +1209,98 @@ Business Builder se conecta con:
 
 Business Builder debe respetar siempre:
 
-1. El usuario manda.
-    
-2. Robert no ejecuta acciones importantes sin autorización.
-    
+1. El usuario mantiene la autoridad humana superior.
+2. Robert no ejecuta acciones importantes sin la autorización correspondiente.
 3. Robert no sustituye a profesionales legales, fiscales, contables o financieros.
-    
 4. Robert puede preparar, ordenar, simular y proponer.
-    
-5. Robert no debe ejecutar acciones externas sin alcance autorizado.
-    
-6. Robert debe separar sugerir, preparar y ejecutar.
-    
-7. Robert debe registrar decisiones importantes cuando afecten estructura, estrategia, módulos o fases.
-    
-8. Robert debe pedir confirmación reforzada cuando exista riesgo legal, fiscal, financiero, contable o de ejecución externa.
-    
+5. Robert no debe ejecutar acciones externas fuera del Scope autorizado.
+6. Robert debe separar propuesta, preparación, Approval y ejecución.
+7. Decisions importantes deben seguir la gobernanza documental vigente.
+8. Risk no equivale a Permission ni Execution Authority.
 
 ---
 
 ## Relación con ROBERT_PHASES
 
-Business Builder existe como capacidad aprobada dentro de módulos, pero su desarrollo avanzado pertenece a una fase futura.
+Business Builder existe como capacidad aprobada dentro del mapa funcional.
 
-En la etapa actual:
+En Fase 10:
 
-- se puede definir;
-    
-- se puede probar manualmente;
-    
-- se puede usar para crear borradores;
-    
-- se puede conectar con prompts;
-    
-- se puede simular en sandbox;
-    
-- se puede usar como estructura estratégica.
-    
+* puede definirse;
+* puede revisarse;
+* puede probarse documentalmente;
+* puede usarse para Drafting;
+* puede simularse en Sandbox;
+* puede utilizarse como estructura estratégica.
 
-No debe convertirse todavía en automatización, agente autónomo o app operativa completa.
+No debe convertirse todavía en:
+
+```text
+AUTONOMOUS BUSINESS AGENT SYSTEM
+REAL EXTERNAL EXECUTION
+AUTOMATIC TOOL WORKFLOW
+```
 
 ---
 
-## Relación con el MVP manual
+## Relación con Sandbox
 
-En el MVP manual, Business Builder debe probarse con casos simples.
+Business Builder puede probarse con casos reales o simulados dentro de límites seguros.
 
-Ejemplo de prueba:
+Ejemplo:
 
-Idea de negocio  
-↓  
-Clasificación  
-↓  
-Áreas funcionales  
-↓  
-Documentos necesarios  
-↓  
-Riesgos  
-↓  
-Decisiones pendientes  
-↓  
-Siguiente paso
+```text
+BUSINESS IDEA
+↓
+CLASSIFICATION
+↓
+FUNCTIONAL AREAS
+↓
+REQUIRED DOCUMENTS
+↓
+RISKS
+↓
+PENDING DECISIONS
+↓
+NEXT STEP
+```
 
 El objetivo no es ejecutar la empresa.
 
-El objetivo es comprobar que Robert puede estructurar la empresa de forma clara, segura y útil.
+El objetivo es comprobar que Robert puede estructurarla de forma clara, segura y útil.
 
 ---
 
-## Riesgo
+## Risk
 
-Nivel de riesgo:
+Nivel general:
 
-Medio a alto.
+Medio a alto según operación.
 
-Motivo:
+Business Builder puede tocar áreas sensibles como:
 
-Business Builder puede tocar áreas sensibles como finanzas, fiscal, contabilidad, legal, operaciones y decisiones empresariales importantes.
+* Finance;
+* Tax;
+* Accounting;
+* Legal;
+* Operations;
+* decisiones empresariales importantes.
 
 Regla:
 
-Mientras Robert esté en MVP manual, Business Builder solo puede operar como apoyo estratégico, documental y de simulación.
+Las operaciones concretas deben utilizar la escala y gobernanza de Risk vigente.
 
 ---
 
 ## Prioridad
 
-Alta a futuro.
-
 Alta para la visión general de Robert.
 
-Media para el MVP manual.
+La prioridad técnica exacta debe subordinarse a:
 
-No debe adelantarse sobre seguridad, comandos, documentos maestros, sandbox ni MVP técnico.
+```text
+ROBERT_BUILD_ORDER v0.1
+```
 
 ---
 
@@ -1067,51 +1308,20 @@ No debe adelantarse sobre seguridad, comandos, documentos maestros, sandbox ni M
 
 Business Builder no debe:
 
-- automatizar empresas todavía;
-    
-- activar agentes empresariales autónomos;
-    
-- conectar herramientas reales sin autorización;
-    
-- ejecutar procesos reales;
-    
-- tomar decisiones críticas por el usuario;
-    
-- presentar información sensible como definitiva;
-    
-- sustituir revisión profesional;
-    
-- avanzar a fases futuras sin aprobación.
-    
+* automatizar empresas sin autorización;
+* activar Agents autónomos;
+* ejecutar Tools reales sin autorización;
+* ejecutar procesos reales por sí mismo;
+* tomar Decisions críticas por el usuario;
+* presentar información sensible como verdad definitiva;
+* sustituir revisión profesional;
+* avanzar de fase automáticamente.
 
 ---
 
 ## Criterio de éxito
 
-Business Builder funciona correctamente si Robert puede tomar una idea de negocio y convertirla en una estructura clara por áreas, documentos, decisiones, riesgos y siguientes pasos, sin ejecutar acciones reales ni quitarle control al usuario.
-
----
-
-## Próximo paso recomendado
-
-Probar Business Builder dentro del MVP manual con una idea de negocio real o simulada.
-
-La prueba debe medir si Robert puede:
-
-1. entender la idea;
-    
-2. dividirla por áreas;
-    
-3. identificar documentos necesarios;
-    
-4. detectar riesgos;
-    
-5. preparar decisiones;
-    
-6. proponer siguientes pasos;
-    
-7. mantenerse dentro de modo borrador o sandbox.
-
+Business Builder funciona correctamente si Robert puede tomar una idea de negocio y convertirla en una estructura clara por áreas, documentos, Decisions, Risks y siguientes pasos sin quitar control al usuario ni ejecutar acciones reales no autorizadas.
 
 ---
 
@@ -1119,42 +1329,35 @@ La prueba debe medir si Robert puede:
 
 Propósito:
 
-Organizar tareas administrativas.
+Organizar Tasks administrativas.
 
 Función:
 
 Ayudar con:
 
-- procesos;
-    
-- documentos;
-    
-- organización;
-    
-- seguimiento;
-    
-- tareas;
-    
-- archivos;
-    
-- estructura operativa.
-    
+* procesos;
+* documentos;
+* organización;
+* seguimiento;
+* Tasks;
+* archivos;
+* estructura operativa.
 
 Estado:
 
-Futuro.
+Conceptual / futuro para implementación.
 
 Prioridad:
 
 Media.
 
-Riesgo:
+Risk:
 
 Medio.
 
 Límites:
 
-No debe modificar documentos reales sin autorización.
+No debe modificar recursos externos reales sin autorización.
 
 ---
 
@@ -1168,32 +1371,24 @@ Función:
 
 Puede ayudar con:
 
-- presupuestos;
-    
-- escenarios;
-    
-- modelos;
-    
-- riesgos;
-    
-- reportes;
-    
-- análisis;
-    
-- preguntas para asesores;
-    
-- organización financiera.
-    
+* presupuestos;
+* escenarios;
+* modelos;
+* Risks;
+* reportes;
+* análisis;
+* preguntas para asesores;
+* organización financiera.
 
 Estado:
 
-Futuro.
+Conceptual / futuro para implementación.
 
 Prioridad:
 
 Alta a futuro.
 
-Riesgo:
+Risk:
 
 Alto.
 
@@ -1202,13 +1397,6 @@ Límites:
 No debe ejecutar compras, pagos, inversiones, apuestas u operaciones financieras.
 
 No sustituye a asesor financiero.
-
-Documentos relacionados:
-
-- ROBERT_SECURITY_RULES;
-    
-- ROBERT_CONTEXT_MASTER.
-    
 
 ---
 
@@ -1222,28 +1410,22 @@ Función:
 
 Puede ayudar con:
 
-- clasificación de información;
-    
-- reportes;
-    
-- estructura de documentos;
-    
-- revisión conceptual;
-    
-- preparación de preguntas;
-    
-- borradores.
-    
+* clasificación de información;
+* reportes;
+* estructura de documentos;
+* revisión conceptual;
+* preparación de preguntas;
+* Drafting.
 
 Estado:
 
-Futuro.
+Conceptual / futuro para implementación.
 
 Prioridad:
 
 Media a alta.
 
-Riesgo:
+Risk:
 
 Alto.
 
@@ -1263,34 +1445,28 @@ Función:
 
 Puede ayudar con:
 
-- conceptos fiscales;
-    
-- checklists;
-    
-- organización de documentos;
-    
-- preguntas para asesores;
-    
-- escenarios;
-    
-- borradores.
-    
+* conceptos fiscales;
+* checklists;
+* organización de documentos;
+* preguntas para asesores;
+* escenarios;
+* Drafting.
 
 Estado:
 
-Futuro.
+Conceptual / futuro para implementación.
 
 Prioridad:
 
 Media a alta.
 
-Riesgo:
+Risk:
 
 Alto.
 
 Límites:
 
-No debe tomar decisiones fiscales definitivas.
+No debe tomar Decisions fiscales definitivas.
 
 No sustituye a contador o asesor fiscal.
 
@@ -1300,44 +1476,36 @@ No sustituye a contador o asesor fiscal.
 
 Propósito:
 
-Crear y organizar estrategias de marketing.
+Crear y organizar estrategias de Marketing.
 
 Función:
 
 Puede ayudar con:
 
-- campañas;
-    
-- branding;
-    
-- contenido;
-    
-- audiencia;
-    
-- posicionamiento;
-    
-- mensajes;
-    
-- estrategia comercial;
-    
-- calendario de contenido.
-    
+* campañas;
+* branding;
+* contenido;
+* audiencia;
+* posicionamiento;
+* mensajes;
+* estrategia comercial;
+* calendario de contenido.
 
 Estado:
 
-Futuro.
+Conceptual / futuro para implementación.
 
 Prioridad:
 
 Alta para Business Builder.
 
-Riesgo:
+Risk:
 
 Medio.
 
 Límites:
 
-No debe publicar contenido sin autorización.
+No debe publicar contenido externamente sin autorización.
 
 ---
 
@@ -1351,22 +1519,14 @@ Función:
 
 Puede ayudar con:
 
-- identidad visual;
-    
-- interfaz;
-    
-- renders;
-    
-- presentaciones;
-    
-- materiales;
-    
-- conceptos;
-    
-- UX;
-    
-- referencias visuales.
-    
+* identidad visual;
+* interfaz;
+* renders;
+* presentaciones;
+* materiales;
+* conceptos;
+* UX;
+* referencias visuales.
 
 Estado:
 
@@ -1376,13 +1536,13 @@ Prioridad:
 
 Alta.
 
-Riesgo:
+Risk:
 
 Bajo a medio.
 
 Límites:
 
-No debe cambiar ROBERT_VISUAL_REFERENCE oficial sin aprobación.
+No debe cambiar una referencia visual canónica sin la gobernanza correspondiente.
 
 ---
 
@@ -1396,36 +1556,29 @@ Función:
 
 Puede ayudar con:
 
-- argumentos de venta;
-    
-- propuestas;
-    
-- scripts;
-    
-- CRM futuro;
-    
-- seguimiento;
-    
-- segmentación;
-    
-- estrategias.
-    
+* argumentos de venta;
+* propuestas;
+* scripts;
+* CRM conceptual;
+* seguimiento;
+* segmentación;
+* estrategias.
 
 Estado:
 
-Futuro.
+Conceptual / futuro para implementación.
 
 Prioridad:
 
 Media.
 
-Riesgo:
+Risk:
 
 Medio.
 
 Límites:
 
-No debe contactar clientes sin autorización.
+No debe contactar clientes automáticamente sin autorización.
 
 ---
 
@@ -1433,40 +1586,34 @@ No debe contactar clientes sin autorización.
 
 Propósito:
 
-Organizar operaciones y procesos.
+Organizar Operations y procesos.
 
 Función:
 
 Puede ayudar con:
 
-- procesos internos;
-    
-- flujos;
-    
-- SOPs;
-    
-- tareas repetitivas;
-    
-- organización;
-    
-- mejora operativa.
-    
+* procesos internos;
+* flows;
+* SOPs;
+* Tasks repetitivas;
+* organización;
+* mejora operativa.
 
 Estado:
 
-Futuro.
+Conceptual / futuro para implementación.
 
 Prioridad:
 
 Media.
 
-Riesgo:
+Risk:
 
 Medio.
 
 Límites:
 
-No debe automatizar operaciones reales sin validación.
+No debe automatizar Operations reales sin autorización.
 
 ---
 
@@ -1480,28 +1627,22 @@ Función:
 
 Puede ayudar con:
 
-- conceptos;
-    
-- checklists;
-    
-- preguntas para abogados;
-    
-- organización de contratos;
-    
-- revisión de riesgos;
-    
-- borradores.
-    
+* conceptos;
+* checklists;
+* preguntas para abogados;
+* organización de contratos;
+* revisión de Risks;
+* Drafting.
 
 Estado:
 
-Futuro.
+Conceptual / futuro para implementación.
 
 Prioridad:
 
 Media.
 
-Riesgo:
+Risk:
 
 Alto.
 
@@ -1509,7 +1650,7 @@ Límites:
 
 No sustituye a abogado.
 
-No debe tomar decisiones legales definitivas.
+No debe tomar Decisions legales definitivas.
 
 ---
 
@@ -1523,22 +1664,14 @@ Función:
 
 Puede ayudar con:
 
-- documentos maestros;
-    
-- versiones;
-    
-- borradores;
-    
-- estructura;
-    
-- formato;
-    
-- actualizaciones;
-    
-- referencias;
-    
-- exportación.
-    
+* documentos maestros;
+* versiones;
+* Drafting;
+* estructura;
+* formato;
+* actualizaciones;
+* referencias;
+* exportación.
 
 Estado:
 
@@ -1548,18 +1681,13 @@ Prioridad:
 
 Crítica.
 
-Riesgo:
+Risk:
 
 Medio.
 
 Límites:
 
-No debe modificar documentos oficiales sin autorización.
-
-Documentos relacionados:
-
-- Todos los documentos maestros.
-    
+No debe modificar documentos oficiales fuera de Change Control cuando corresponda.
 
 ---
 
@@ -1573,38 +1701,38 @@ Función:
 
 Puede ayudar con:
 
-- preguntas;
-    
-- fuentes;
-    
-- comparaciones;
-    
-- análisis;
-    
-- reportes;
-    
-- resúmenes;
-    
-- búsqueda de información.
-    
+* preguntas;
+* fuentes;
+* comparaciones;
+* análisis;
+* reportes;
+* resúmenes;
+* búsqueda de información.
 
 Estado:
 
-Futuro.
+Conceptual / futuro para implementación técnica.
 
 Prioridad:
 
 Alta.
 
-Riesgo:
+Risk:
 
 Medio.
 
 Límites:
 
-Debe citar cuando use información externa.
+Debe mantener evidencia cuando corresponda.
 
-Debe distinguir hechos, opiniones e inferencias.
+Debe distinguir:
+
+```text
+FACT
+OPINION
+INFERENCE
+MODEL OUTPUT
+```
 
 ---
 
@@ -1618,36 +1746,29 @@ Función:
 
 Puede ayudar con:
 
-- tablas;
-    
-- métricas;
-    
-- reportes;
-    
-- dashboards;
-    
-- interpretaciones;
-    
-- escenarios;
-    
-- comparaciones.
-    
+* tablas;
+* métricas;
+* reportes;
+* dashboards;
+* interpretaciones;
+* escenarios;
+* comparaciones.
 
 Estado:
 
-Futuro.
+Conceptual / futuro para implementación.
 
 Prioridad:
 
 Media.
 
-Riesgo:
+Risk:
 
 Medio.
 
 Límites:
 
-No debe interpretar datos críticos sin contexto.
+No debe interpretar datos críticos sin Context suficiente.
 
 ---
 
@@ -1655,44 +1776,42 @@ No debe interpretar datos críticos sin contexto.
 
 Propósito:
 
-Diseñar automatizaciones futuras.
+Diseñar Automation futura.
 
 Función:
 
 Puede ayudar con:
 
-- flujos;
-    
-- triggers;
-    
-- acciones;
-    
-- permisos;
-    
-- riesgos;
-    
-- herramientas;
-    
-- pruebas;
-    
-- logs.
-    
+* workflows;
+* triggers;
+* acciones;
+* Permissions;
+* Risks;
+* Tools;
+* tests;
+* logs.
 
 Estado:
 
-Futuro.
+Conceptual / futuro.
 
 Prioridad:
 
 Alta a futuro.
 
-Riesgo:
+Risk:
 
 Alto.
 
 Límites:
 
-No debe activar automatizaciones reales sin autorización y sandbox.
+```text
+AUTOMATION DESIGN
+≠
+AUTOMATION AUTHORIZATION
+```
+
+No debe activar Automation real sin Governance, Sandbox y autorización correspondiente.
 
 ---
 
@@ -1700,44 +1819,44 @@ No debe activar automatizaciones reales sin autorización y sandbox.
 
 Propósito:
 
-Gestionar conexión futura con herramientas externas.
+Representar funcionalmente conexiones con Tools externas.
 
 Función:
 
 Puede ayudar con:
 
-- mapa de apps;
-    
-- permisos;
-    
-- estados de conexión;
-    
-- lectura;
-    
-- escritura;
-    
-- riesgos;
-    
-- desconexión;
-    
-- sandbox.
-    
+* mapa de providers;
+* Permissions;
+* estados de conexión;
+* lectura;
+* escritura;
+* Risks;
+* desconexión;
+* Sandbox.
 
 Estado:
 
-Futuro.
+Conceptual / futuro para implementación.
 
 Prioridad:
 
 Alta a futuro.
 
-Riesgo:
+Risk:
 
 Alto.
 
 Límites:
 
-No debe conectar apps reales sin autorización.
+```text
+CONNECTED
+≠
+AUTHORIZED
+```
+
+No debe conectar o utilizar servicios externos fuera del Scope autorizado.
+
+La arquitectura técnica de Tools pertenece a `ROBERT_TOOL_ARCHITECTURE`.
 
 ---
 
@@ -1745,40 +1864,34 @@ No debe conectar apps reales sin autorización.
 
 Propósito:
 
-Gestionar calendario futuro.
+Representar capacidades relacionadas con Calendar.
 
 Función:
 
 Puede ayudar con:
 
-- eventos;
-    
-- agenda;
-    
-- recordatorios;
-    
-- planeación;
-    
-- disponibilidad;
-    
-- reuniones.
-    
+* eventos;
+* agenda;
+* recordatorios;
+* Planning;
+* disponibilidad;
+* reuniones.
 
 Estado:
 
-Futuro.
+Conceptual / futuro para ejecución.
 
 Prioridad:
 
 Media.
 
-Riesgo:
+Risk:
 
-Alto si crea o modifica eventos.
+Alto cuando crea o modifica eventos.
 
 Límites:
 
-No debe crear, mover o cancelar eventos sin autorización.
+Las operaciones de escritura requieren Governance y autorización correspondiente.
 
 ---
 
@@ -1786,40 +1899,40 @@ No debe crear, mover o cancelar eventos sin autorización.
 
 Propósito:
 
-Gestionar correo futuro.
+Representar capacidades relacionadas con Email.
 
 Función:
 
 Puede ayudar con:
 
-- borradores;
-    
-- resúmenes;
-    
-- clasificación;
-    
-- respuestas propuestas;
-    
-- seguimiento;
-    
-- búsqueda.
-    
+* Drafts;
+* resúmenes;
+* clasificación;
+* respuestas propuestas;
+* seguimiento;
+* búsqueda.
 
 Estado:
 
-Futuro.
+Conceptual / futuro para ejecución.
 
 Prioridad:
 
 Media.
 
-Riesgo:
+Risk:
 
-Alto.
+Alto para acciones externas.
 
 Límites:
 
-No debe enviar correos sin autorización.
+Preparar un Email no equivale a enviarlo.
+
+```text
+DRAFT
+≠
+SEND
+```
 
 ---
 
@@ -1827,26 +1940,19 @@ No debe enviar correos sin autorización.
 
 Propósito:
 
-Gestionar tareas.
+Gestionar Tasks.
 
 Función:
 
 Puede ayudar con:
 
-- pendientes;
-    
-- prioridades;
-    
-- fechas;
-    
-- responsables;
-    
-- seguimiento;
-    
-- next steps;
-    
-- checklist.
-    
+* pendientes;
+* prioridades;
+* fechas;
+* responsables;
+* seguimiento;
+* Next Steps;
+* checklists.
 
 Estado:
 
@@ -1854,15 +1960,15 @@ Base inicial.
 
 Prioridad:
 
-Alta para MVP manual.
+Alta.
 
-Riesgo:
+Risk:
 
 Bajo a medio.
 
 Límites:
 
-No debe crear tareas en apps externas sin autorización.
+Una Task interna no autoriza automáticamente una acción externa.
 
 ---
 
@@ -1870,22 +1976,17 @@ No debe crear tareas en apps externas sin autorización.
 
 Propósito:
 
-Permitir interacción por voz en el futuro.
+Permitir interacción por Voice en el futuro.
 
 Función:
 
 Puede ayudar con:
 
-- comandos por voz;
-    
-- dictado;
-    
-- respuesta hablada;
-    
-- confirmación de acciones;
-    
-- control manos libres.
-    
+* Commands por voz;
+* dictado;
+* respuesta hablada;
+* confirmación de acciones;
+* control manos libres.
 
 Estado:
 
@@ -1895,13 +1996,15 @@ Prioridad:
 
 Media.
 
-Riesgo:
+Risk:
 
 Medio a alto.
 
 Límites:
 
-Los comandos de voz críticos deben confirmarse.
+Voice input no crea autoridad adicional.
+
+Las acciones críticas deben seguir Governance normal.
 
 ---
 
@@ -1915,36 +2018,39 @@ Función:
 
 Puede ayudar con:
 
-- arquitectura técnica;
-    
-- código;
-    
-- repositorios;
-    
-- debugging;
-    
-- prototipos;
-    
-- despliegue;
-    
-- documentación técnica.
-    
+* arquitectura técnica;
+* Code;
+* repositories;
+* debugging;
+* prototipos;
+* Deployment;
+* documentación técnica.
 
 Estado:
 
-Futuro.
+Conceptual / implementación futura.
 
 Prioridad:
 
-Alta para MVP técnico.
+Alta para implementación técnica.
 
-Riesgo:
+Risk:
 
 Alto.
 
 Límites:
 
-No debe ejecutar, borrar, sobrescribir o desplegar código sin autorización.
+```text
+CODE GENERATION
+≠
+CODE EXECUTION
+
+CODE IMPLEMENTATION
+≠
+EXTERNAL EXECUTION AUTHORITY
+```
+
+Debe seguir `ROBERT_BUILD_ORDER` y la futura autorización explícita de implementación.
 
 ---
 
@@ -1958,20 +2064,13 @@ Función:
 
 Puede ayudar con:
 
-- notas;
-    
-- referencias;
-    
-- aprendizaje;
-    
-- documentos;
-    
-- conceptos;
-    
-- resúmenes;
-    
-- relaciones.
-    
+* notas;
+* referencias;
+* aprendizaje;
+* documentos;
+* conceptos;
+* resúmenes;
+* relaciones.
 
 Estado:
 
@@ -1981,13 +2080,13 @@ Prioridad:
 
 Alta.
 
-Riesgo:
+Risk:
 
 Bajo a medio.
 
 Límites:
 
-No debe guardar todo sin criterio.
+Knowledge Base no equivale automáticamente a Memory persistente ni a fuente canónica.
 
 ---
 
@@ -1995,46 +2094,42 @@ No debe guardar todo sin criterio.
 
 Propósito:
 
-Proteger el sistema.
+Representar funcionalmente capacidades de Security.
 
 Función:
 
-Debe revisar:
+Debe considerar:
 
-- riesgos;
-    
-- permisos;
-    
-- autorización;
-    
-- privacidad;
-    
-- credenciales;
-    
-- acciones críticas;
-    
-- fases;
-    
-- autonomía;
-    
-- herramientas.
-    
+* Risks;
+* Permissions;
+* Scope;
+* Approval;
+* privacidad;
+* credenciales;
+* acciones críticas;
+* fases;
+* Autonomy;
+* Tools.
 
 Estado:
 
-Base inicial.
+Base conceptual crítica.
 
 Prioridad:
 
 Crítica.
 
-Riesgo:
+Risk:
 
 Crítico si falla.
 
 Límites:
 
-Security tiene prioridad sobre velocidad, diseño, autonomía, automatización o conveniencia.
+Security no debe confundirse con una nueva autoridad humana.
+
+Opera dentro de la gobernanza aprobada.
+
+Security tiene prioridad sobre velocidad, diseño, Automation o conveniencia cuando exista conflicto de seguridad.
 
 ---
 
@@ -2042,28 +2137,20 @@ Security tiene prioridad sobre velocidad, diseño, autonomía, automatización o
 
 Propósito:
 
-Registrar decisiones.
+Registrar Decisions.
 
 Función:
 
 Puede ayudar con:
 
-- decisiones propuestas;
-    
-- decisiones pendientes;
-    
-- decisiones aprobadas;
-    
-- motivo;
-    
-- impacto;
-    
-- fecha;
-    
-- documentos relacionados;
-    
-- siguiente paso.
-    
+* propuestas;
+* Decisions pendientes;
+* Decisions aprobadas;
+* motivo;
+* impacto;
+* fecha;
+* documentos relacionados;
+* Next Step.
 
 Estado:
 
@@ -2073,13 +2160,19 @@ Prioridad:
 
 Crítica.
 
-Riesgo:
+Risk:
 
 Medio.
 
 Límites:
 
-No debe registrar decisiones como aprobadas sin confirmación del usuario.
+```text
+PROPOSAL
+≠
+DECISION
+```
+
+No debe registrar una Decision como aprobada sin autoridad humana válida.
 
 ---
 
@@ -2087,26 +2180,19 @@ No debe registrar decisiones como aprobadas sin confirmación del usuario.
 
 Propósito:
 
-Permitir que Robert mejore con el uso.
+Permitir evolución futura basada en aprendizaje controlado.
 
 Función:
 
 Puede ayudar con:
 
-- patrones;
-    
-- preferencias;
-    
-- aprendizajes;
-    
-- mejoras;
-    
-- ajustes;
-    
-- retroalimentación;
-    
-- evolución del sistema.
-    
+* patrones;
+* preferencias;
+* aprendizajes;
+* mejoras;
+* ajustes;
+* feedback;
+* evolución del sistema.
 
 Estado:
 
@@ -2116,13 +2202,13 @@ Prioridad:
 
 Media.
 
-Riesgo:
+Risk:
 
 Medio.
 
 Límites:
 
-No debe guardar información sensible innecesaria.
+No debe crear Automatic Memory Write ni modificar comportamiento canónico sin Governance.
 
 ---
 
@@ -2136,28 +2222,17 @@ Función:
 
 Puede ayudar con:
 
-- mapas;
-    
-- dashboards;
-    
-- nodos;
-    
-- módulos;
-    
-- documentos;
-    
-- comandos;
-    
-- decisiones;
-    
-- apps;
-    
-- autonomía;
-    
-- seguridad;
-    
-- flujos.
-    
+* mapas;
+* dashboards;
+* nodos;
+* Modules;
+* documentos;
+* Commands;
+* Decisions;
+* Apps;
+* Autonomy;
+* Security;
+* flows.
 
 Estado:
 
@@ -2167,11 +2242,17 @@ Prioridad:
 
 Alta.
 
-Riesgo:
+Risk:
 
 Medio.
 
 Límites:
+
+```text
+VISUAL REPRESENTATION
+≠
+ARCHITECTURAL AUTHORITY
+```
 
 No debe inventar capacidades que no existan en arquitectura.
 
@@ -2179,413 +2260,553 @@ No debe inventar capacidades que no existan en arquitectura.
 
 # RELACIÓN ENTRE MÓDULOS Y COMANDOS
 
-Los comandos activan funciones dentro de módulos.
+Los Commands pueden solicitar funciones relacionadas con Modules.
 
-Ejemplos:
+La resolución final pertenece al Orchestrator.
 
-RESUMEN:
+Ejemplos funcionales:
 
-- Memory;
-    
-- Knowledge Base;
-    
-- Documents.
-    
+## RESUMEN
 
-CONCLUSION:
+Puede involucrar:
 
-- Prompts;
-    
-- Knowledge Base;
-    
-- Documents.
-    
+* Memory;
+* Knowledge Base;
+* Documents.
 
-DETENTE:
+## CONCLUSION
 
-- Security;
-    
-- Command Center;
-    
-- Robert Core.
-    
+Puede involucrar:
 
-MODO_SANDBOX:
+* Knowledge Base;
+* Documents;
+* Model capabilities.
 
-- Security;
-    
-- Automation;
-    
-- Apps Connector;
-    
-- Code / Development.
-    
+## DETENTE
 
-INFORME_ACCIONES:
+Puede involucrar:
 
-- Decisions Log;
-    
-- Security;
-    
-- Memory.
-    
+* Security;
+* Command Center;
+* Robert Core.
 
-CLASIFICAR:
+## MODO_SANDBOX
 
-- Knowledge Base;
-    
-- Documents;
-    
-- Memory.
-    
+Puede involucrar:
 
-ACTUALIZA:
+* Security;
+* Automation;
+* Apps Connector;
+* Code / Development.
 
-- Documents;
-    
-- Security;
-    
-- Decisions Log.
-    
+## INFORME_ACCIONES
+
+Puede involucrar:
+
+* Decisions Log;
+* Security;
+* Audit;
+* Memory.
+
+## CLASIFICAR
+
+Puede involucrar:
+
+* Knowledge Base;
+* Documents;
+* Memory.
+
+## ACTUALIZA
+
+Puede involucrar:
+
+* Documents;
+* Security;
+* Decisions Log.
+
+Regla:
+
+```text
+COMMAND
+≠
+DIRECT MODULE EXECUTION
+
+COMMAND
+→
+ORCHESTRATOR
+→
+ROUTING
+```
 
 ---
 
 # RELACIÓN ENTRE MÓDULOS Y AUTONOMÍA
 
-La autonomía no es un módulo único.
+Autonomy no es un Module.
 
-La autonomía vive entre:
+Autonomy es una propiedad gobernada del sistema.
 
-- Control;
-    
-- Capacidades;
-    
-- Gobierno.
-    
+Puede afectar:
 
-Pero algunos módulos participan directamente:
+* Control;
+* Capabilities;
+* Governance.
 
-Security:
+Modules relacionados funcionalmente pueden incluir:
 
-- verifica riesgo y autorización.
-    
+## Security
 
-Command Center:
+Evalúa condiciones de seguridad según arquitectura vigente.
 
-- muestra modo activo y comandos.
-    
+## Command Center
 
-Documents:
+Muestra estado, Commands y controles.
 
-- permite autonomía documental.
-    
+## Documents
 
-Automation:
+Gestiona capacidades documentales.
 
-- diseña automatizaciones futuras.
-    
+## Automation
 
-Apps Connector:
+Representa Automation futura.
 
-- controla conexión con herramientas.
-    
+## Apps Connector
 
-Decisions Log:
+Representa conexiones con Tools.
 
-- registra acciones importantes.
-    
+## Decisions Log
 
-Visual Projection:
+Registra Decisions.
 
-- muestra estado de autonomía.
-    
+## Visual Projection
+
+Muestra estados relevantes.
+
+Se formaliza:
+
+```text
+MODULE
+≠
+AUTONOMY AUTHORITY
+```
+
+Durante Fase 10:
+
+```text
+AUTONOMY_LEVEL = 0
+
+EXECUTION_AUTHORITY = NONE
+```
+
+---
+
+# RISK POR MÓDULO
+
+Los siguientes grupos son referencias funcionales iniciales.
+
+No reemplazan la evaluación de Risk por operación.
+
+## Generalmente bajo
+
+* Ideas;
+* Knowledge Base;
+* Visual Projection;
+* Research básico;
+* Design conceptual.
+
+## Generalmente medio
+
+* Projects;
+* Documents;
+* Tasks;
+* Decisions Log;
+* Analytics;
+* Marketing;
+* Operations.
+
+## Generalmente alto
+
+* Finance;
+* Accounting;
+* Tax / Fiscal;
+* Legal Reference;
+* Email con acciones externas;
+* Calendar con acciones externas;
+* Apps Connector;
+* Automation;
+* Code / Development con ejecución.
+
+## Puede llegar a crítico
+
+* Security failure;
+* credenciales;
+* datos sensibles;
+* operaciones financieras;
+* decisiones legales/fiscales de alto impacto;
+* ejecución externa no autorizada.
 
 Regla:
 
-La autonomía debe pasar por Security antes de cualquier acción importante.
+```text
+MODULE RISK PROFILE
+≠
+OPERATION RISK ASSESSMENT
+```
+
+La evaluación concreta usa la escala de Risk vigente de Robert.
 
 ---
 
-# NIVELES DE RIESGO POR MÓDULO
+# PRIORIDAD FUNCIONAL DE MÓDULOS
 
-Nivel bajo:
+Esta prioridad describe importancia funcional.
 
-- Ideas;
-    
-- Knowledge Base;
-    
-- Visual Projection;
-    
-- Research básico;
-    
-- Design conceptual.
-    
+No sustituye `ROBERT_BUILD_ORDER`.
 
-Nivel medio:
+## Prioridad funcional 1 — Core
 
-- Projects;
-    
-- Documents;
-    
-- Tasks;
-    
-- Decisions Log;
-    
-- Analytics;
-    
-- Marketing;
-    
-- Operations.
-    
+* Robert Core
+* Command Center
+* Memory
+* Documents
+* Knowledge Base
+* Security
+* Decisions Log
+* Ideas
+* Projects
+* Tasks
 
-Nivel alto:
+## Prioridad funcional 2 — Visual y organización
 
-- Finance;
-    
-- Accounting;
-    
-- Tax / Fiscal;
-    
-- Legal Reference;
-    
-- Email;
-    
-- Calendar;
-    
-- Apps Connector;
-    
-- Automation;
-    
-- Code / Development.
-    
+* Visual Projection
+* Design
+* Research
+* Analytics
 
-Nivel crítico:
+## Prioridad funcional 3 — Business Builder
 
-- Security si falla;
-    
-- cualquier módulo usando credenciales;
-    
-- cualquier módulo ejecutando acciones externas;
-    
-- cualquier módulo manejando dinero, datos sensibles o decisiones legales/fiscales.
-    
+* Business Builder
+* Administration
+* Marketing
+* Sales
+* Operations
 
----
+## Prioridad funcional 4 — Áreas sensibles
 
-# PRIORIDAD DE IMPLEMENTACIÓN
+* Finance
+* Accounting
+* Tax / Fiscal
+* Legal Reference
 
-## Prioridad 1 — Base manual
+## Prioridad funcional 5 — Integraciones futuras
 
-- Robert Core
-    
-- Command Center
-    
-- Memory
-    
-- Documents
-    
-- Knowledge Base
-    
-- Security
-    
-- Decisions Log
-    
-- Ideas
-    
-- Projects
-    
-- Tasks
-    
+* Apps Connector
+* Email
+* Calendar
+* Automation
+* Voice
+* Code / Development
 
-## Prioridad 2 — Visual y organización
+## Prioridad funcional 6 — Expansión
 
-- Visual Projection
-    
-- Design
-    
-- Research
-    
-- Analytics
-    
+* Learning System
+* evolución de Agents dentro de Modules según arquitectura vigente
 
-## Prioridad 3 — Business Builder
+Regla:
 
-- Business Builder
-    
-- Administration
-    
-- Marketing
-    
-- Sales
-    
-- Operations
-    
+```text
+FUNCTIONAL PRIORITY
+≠
+TECHNICAL BUILD STAGE
+```
 
-## Prioridad 4 — Áreas sensibles
+La secuencia técnica oficial pertenece a:
 
-- Finance
-    
-- Accounting
-    
-- Tax / Fiscal
-    
-- Legal Reference
-    
-
-## Prioridad 5 — Integraciones y ejecución futura
-
-- Apps Connector
-    
-- Email
-    
-- Calendar
-    
-- Automation
-    
-- Voice
-    
-- Code / Development
-    
-
-## Prioridad 6 — Aprendizaje y expansión
-
-- Learning System
-    
-- agentes futuros dentro de módulos
-    
+```text
+ROBERT_BUILD_ORDER v0.1
+DECISIÓN #040
+CAMBIO #065
+```
 
 ---
 
 # REGLAS MAESTRAS DE MÓDULOS
 
-1. Ningún módulo puede saltarse Security Rules.
-    
-2. Ningún módulo puede ejecutar acciones externas sin autorización.
-    
-3. Ningún módulo puede modificar documentos oficiales sin aprobación.
-    
-4. Ningún módulo puede registrar decisiones aprobadas sin confirmación.
-    
-5. Ningún módulo puede conectarse a herramientas reales sin permiso.
-    
-6. Ningún módulo puede activar automatizaciones reales antes de sandbox.
-    
-7. Ningún módulo sensible puede operar sin revisión.
-    
-8. Los módulos deben crecer por fases.
-    
-9. Los módulos deben conectarse con comandos.
-    
-10. Los módulos deben respetar la arquitectura de 6 capas.
-    
-11. Los módulos deben distinguir preparación, simulación y ejecución.
-    
-12. Los módulos deben mostrar riesgo cuando aplique.
-    
-13. Los módulos deben registrar acciones importantes.
-    
-14. Los módulos no deben duplicarse innecesariamente.
-    
-15. Los módulos deben servir al usuario, no complicar el sistema.
-    
+1. Ningún Module puede saltarse Security Rules.
+2. Ningún Module puede crear Permission por sí mismo.
+3. Ningún Module puede ampliar Scope por inferencia.
+4. Ningún Module puede obtener Execution Authority por existir.
+5. Ningún Module puede ejecutar acciones externas sin autorización correspondiente.
+6. Ningún Module puede modificar documentos canónicos fuera de Governance.
+7. Ningún Module puede registrar Decisions aprobadas sin autoridad válida.
+8. Ningún Module puede utilizar Tools reales solo porque estén disponibles.
+9. Ningún Module puede activar Automation real antes de los gates correspondientes.
+10. Los Modules deben crecer por fases.
+11. Los Modules pueden relacionarse con Commands, Agents, Skills, Models y Tools.
+12. Los Modules deben respetar la arquitectura de 6 Layers.
+13. Los Modules deben distinguir propuesta, preparación, simulación y ejecución.
+14. Los Modules deben utilizar Risk cuando aplique.
+15. Los Modules deben producir trazabilidad cuando aplique.
+16. Los Modules no deben duplicarse innecesariamente.
+17. Los Modules deben servir al usuario sin complicar innecesariamente el sistema.
+18. Module routing pertenece al Orchestrator.
+19. Agent Architecture aprobada no significa Autonomous Agents activos.
+20. Tool Architecture aprobada no significa Tool execution autorizada.
+
+---
+
+# INVARIANTES CANÓNICAS
+
+```text
+MODULE ≠ LAYER
+
+MODULE ≠ AGENT
+
+MODULE ≠ MODEL
+
+MODULE ≠ SKILL
+
+MODULE ≠ TOOL
+
+MODEL ≠ TOOL
+
+AGENT ≠ SKILL
+
+SKILL ≠ TOOL
+
+MODULE ≠ ROUTER
+
+AGENT ≠ ORCHESTRATOR
+
+TOOL AVAILABLE ≠ TOOL ALLOWED
+
+TOOL REQUEST ≠ TOOL AUTHORIZATION
+
+RISK ≠ PERMISSION
+
+PERMISSION ≠ EXECUTION AUTHORITY
+
+VALIDATION ≠ APPROVAL
+
+IMPLEMENTED CAPABILITY ≠ AUTONOMY AUTHORIZATION
+```
 
 ---
 
 # PENDIENTES
 
-Pendientes principales:
+Pendientes funcionales principales:
 
-1. Revisar si los 30 módulos son necesarios.
-    
-2. Definir módulos del MVP manual.
-    
-3. Definir módulos del MVP técnico.
-    
-4. Crear relación módulo → comando.
-    
-5. Crear relación módulo → documento.
-    
-6. Crear relación módulo → fase.
-    
-7. Definir qué módulos aparecen en el dashboard inicial.
-    
-8. Definir qué módulos pueden tener agentes futuros.
-    
-9. Definir qué módulos pueden usar herramientas externas.
-    
-10. Definir criterios de activación por módulo.
-    
+1. revisar si los 30 Modules siguen siendo necesarios;
+2. detectar posibles duplicados funcionales;
+3. completar matriz Module → Command;
+4. completar matriz Module → Agent;
+5. completar matriz Module → Skill;
+6. completar matriz Module → Model requirement;
+7. completar matriz Module → Tool requirement;
+8. completar matriz Module → Phase;
+9. definir qué Modules aparecerán en la primera UI;
+10. definir criterios de activación por Module;
+11. reconciliar futuras modificaciones con `ROBERT_BUILD_ORDER`;
+12. revisar este mapa durante implementación sin alterar silenciosamente la arquitectura canónica.
+
+Estos pendientes no constituyen un gap arquitectónico Core por sí mismos.
 
 ---
 
 # CONTROL DE VERSIONES
 
-Versión: 0.1  
-Fecha: Junio 2026  
-Cambio principal: Creación inicial del mapa de módulos de Robert con 30 módulos principales, prioridades, riesgos y relación con comandos, autonomía y arquitectura.  
-Estado: Base inicial pendiente de aprobación.
+**Versión:** 0.1
+**Fecha original:** Junio 2026
+**Última normalización:** 31/08/2026
+
+Cambio original:
+
+Creación inicial del mapa de Modules de Robert con 30 Modules principales, prioridades, Risks y relación con Commands, Autonomy y arquitectura.
+
+Normalización actual:
+
+* alineación con `ROBERT_CANONICAL_MODEL v0.2`;
+* Claude y ChatGPT clasificados exclusivamente como Models;
+* Agents reconocidos como arquitectura aprobada;
+* Skills incorporados como categoría independiente;
+* Tools reconciliadas con `ROBERT_TOOL_ARCHITECTURE`;
+* Module Routing subordinado al Orchestrator;
+* Business Builder preservado bajo `DECISIÓN #001`;
+* eliminación del concepto vigente de “Agents futuros”;
+* separación entre prioridad funcional y Build Order;
+* preservación de `AUTONOMY_LEVEL = 0`;
+* preservación de `EXECUTION_AUTHORITY = NONE`.
 
 ---
 
-# DECISIÓN PENDIENTE
+# ESTADO DE APROBACIÓN
 
-Decisión pendiente:
+`ROBERT_MODULES v0.1` conserva naturaleza de mapa funcional base.
 
-Aprobar ROBERT_MODULES v0.1 como mapa inicial de módulos de Robert.
+No se declara mediante esta normalización que los 30 Modules hayan recibido aprobación formal individual o colectiva.
 
-Motivo:
+Aprobación formal confirmada dentro de este documento:
 
-Robert necesita un mapa funcional claro para organizar capacidades, conectar comandos, definir MVP manual, preparar MVP técnico y evitar confundir módulos con capas, herramientas o agentes.
+```text
+BUSINESS BUILDER — EMPRESAS COMPLETAS
+DECISIÓN #001
+```
 
-Estado:
+La normalización canónica actual:
 
-Pendiente de aprobación.
+```text
+DOES NOT CREATE
+A NEW APPROVAL
+```
 
-Próximo paso sugerido:
+y:
 
-Revisar si los módulos actuales son suficientes, eliminar duplicados, priorizar los módulos del MVP manual y confirmar si ROBERT_MODULES v0.1 queda aprobado como base inicial.
+```text
+DOES NOT CHANGE
+THE SCOPE OF DECISIÓN #001
+```
 
 ---
 
 # RESUMEN EJECUTIVO
 
-ROBERT_MODULES v0.1 define el mapa inicial de módulos funcionales de Robert.
+`ROBERT_MODULES v0.1` define el mapa funcional de Modules de Robert.
 
-Los módulos representan áreas de capacidad.
+Los Modules representan áreas de capacidad.
 
-No son capas internas, comandos, herramientas externas ni agentes.
+No son:
 
-Robert tiene 30 módulos iniciales.
+* Layers;
+* Models;
+* Agents;
+* Skills;
+* Tools;
+* Commands.
 
-Los módulos prioritarios para MVP manual son:
+Robert mantiene 30 Modules iniciales como mapa funcional.
 
-- Robert Core;
-    
-- Command Center;
-    
-- Memory;
-    
-- Ideas;
-    
-- Projects;
-    
-- Documents;
-    
-- Knowledge Base;
-    
-- Security;
-    
-- Decisions Log;
-    
-- Tasks.
-    
+La taxonomía vigente distingue:
 
-La regla central es:
+```text
+MODULE
+=
+FUNCTIONAL DOMAIN
 
-Los módulos deben crecer por fases y siempre respetar Security Rules.
+AGENT
+=
+SPECIALIST
 
-Ningún módulo puede ejecutar acciones importantes sin autorización.
+SKILL
+=
+REUSABLE PROCEDURE
 
-La autonomía controlada no es un módulo aislado.
+MODEL
+=
+INTELLIGENCE PROVIDER
 
-La autonomía vive entre Control, Capacidades y Gobierno, y se expresa a través de módulos como Security, Command Center, Documents, Automation, Apps Connector, Decisions Log y Visual Projection.
+TOOL
+=
+TECHNICAL / EXTERNAL CAPABILITY
+
+ORCHESTRATOR
+=
+ROUTING AUTHORITY
+```
+
+Claude y ChatGPT se clasifican exclusivamente como Models.
+
+Agents ya están definidos arquitectónicamente y no deben describirse como una capacidad arquitectónica futura.
+
+Lo que continúa siendo futuro es su implementación autónoma.
+
+Business Builder conserva su aprobación mediante:
+
+```text
+DECISIÓN #001
+```
+
+Los Modules deben crecer por fases y respetar siempre:
+
+```text
+CANONICAL MODEL
+ORCHESTRATOR
+SECURITY
+PERMISSIONS
+SCOPE
+RISK
+APPROVAL
+VALIDATION
+EXECUTION AUTHORITY
+```
+
+Estado técnico:
+
+```text
+TECHNICAL_IMPLEMENTATION = NOT STARTED
+
+AUTONOMOUS_AGENTS = DISABLED
+
+REAL_TOOL_EXECUTION = DISABLED
+
+AUTONOMY_LEVEL = 0
+
+EXECUTION_AUTHORITY = NONE
+```
+
+---
+
+# ESTADO ACTUAL
+
+```text
+DOCUMENT: ROBERT_MODULES
+
+VERSION: v0.1
+
+STATUS:
+BASE FUNCTIONAL MAP / CANONICALLY NORMALIZED
+
+BUSINESS_BUILDER:
+APPROVED THROUGH DECISIÓN #001
+
+CANONICAL_ALIGNMENT:
+ROBERT_CANONICAL_MODEL v0.2
+DECISIÓN #030
+CAMBIO #053
+
+ORCHESTRATOR:
+APPROVED
+
+AGENT_ARCHITECTURE:
+APPROVED
+
+SKILL_ARCHITECTURE:
+APPROVED
+
+MODEL_INTERFACE:
+APPROVED
+
+MEMORY_ARCHITECTURE:
+APPROVED
+
+VALIDATION_ARCHITECTURE:
+APPROVED
+
+TOOL_ARCHITECTURE:
+APPROVED
+
+TECHNICAL_IMPLEMENTATION:
+NOT STARTED
+
+AUTONOMOUS_AGENTS:
+DISABLED
+
+REAL_TOOL_EXECUTION:
+DISABLED
+
+AUTONOMY_LEVEL:
+0
+
+EXECUTION_AUTHORITY:
+NONE
+```
