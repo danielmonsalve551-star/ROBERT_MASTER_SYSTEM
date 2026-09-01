@@ -11009,3 +11009,97 @@ STATUS: APPROVED
 DECISION: #037
 CHANGE: #062
 ```
+# CAMBIO #063 — Aprobación e integración de ROBERT_IMPLEMENTATION_CONTRACTS v0.1
+
+**Fecha:** 31/08/2026
+**Tipo:** Arquitectónico documental / Implementation Readiness
+**Estado:** APROBADO E INTEGRADO
+**Decisión relacionada:** DECISIÓN #038
+**Documento relacionado:** `09_ARCHITECTURE/ROBERT_IMPLEMENTATION_CONTRACTS.md`
+**Versión:** v0.1
+**Fase:** 10
+
+## Descripción
+
+Se aprueba e integra formalmente:
+
+ROBERT_IMPLEMENTATION_CONTRACTS v0.1
+
+como capa contractual entre la arquitectura aprobada y la futura implementación técnica de Robert.
+
+## Contratos integrados
+
+TASK
+REQUEST_CONTEXT
+ORCHESTRATOR_REQUEST
+ORCHESTRATOR_RESULT
+ROUTE
+
+AGENT_REQUEST
+AGENT_RESULT
+
+SKILL_INVOCATION
+SKILL_RESULT
+
+MODEL_REQUEST
+MODEL_RESPONSE
+
+TOOL_REQUEST
+TOOL_RESULT
+
+MEMORY_CANDIDATE
+MEMORY_RECORD
+MEMORY_RETRIEVAL_REQUEST
+MEMORY_RETRIEVAL_RESULT
+
+VALIDATION_REQUEST
+VALIDATION_RESULT
+
+PERMISSION_CHECK
+SCOPE_CHECK
+RISK_ASSESSMENT
+
+APPROVAL_REQUEST
+APPROVAL_RESULT
+
+ERROR
+BLOCK
+AUDIT_EVENT
+
+## Correcciones integradas
+
+Se incorporan las correcciones de revisión adversarial relativas a:
+
+- compatibilidad con Tool Architecture;
+- compatibilidad con Memory Architecture;
+- compatibilidad con Validation Architecture;
+- Execution Authority;
+- Route Contract;
+- escala oficial de Risk;
+- Error and Blocking;
+- política de Model Tool Requests.
+
+## Restricciones
+
+Esta aprobación no autoriza:
+
+CODE IMPLEMENTATION
+PRODUCTION DATABASE
+MODEL API CONNECTION
+REAL TOOL EXECUTION
+AUTOMATIC MEMORY
+AUTONOMOUS AGENTS
+AUTOMATIC VALIDATION ENGINE
+PHASE 11
+
+Se mantiene:
+
+AUTONOMY_LEVEL = 0
+EXECUTION_AUTHORITY = NONE
+
+## Resultado
+
+ROBERT_IMPLEMENTATION_CONTRACTS v0.1
+STATUS: APPROVED
+DECISION: #038
+CHANGE: #063
