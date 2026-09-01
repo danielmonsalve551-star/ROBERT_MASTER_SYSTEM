@@ -5903,3 +5903,159 @@ AUTONOMY_LEVEL = 0
 EXECUTION_AUTHORITY = NONE
 
 Esta decisión no autoriza código, ejecución externa ni transición automática de fase.
+
+# DECISIÓN #040 — Aprobación de ROBERT_BUILD_ORDER v0.1
+
+**Fecha:** 31/08/2026
+**Tipo:** Arquitectónica / Implementation Readiness / Build Sequencing
+**Estado:** APROBADA
+**Fase:** 10
+**Documento relacionado:** `09_ARCHITECTURE/ROBERT_BUILD_ORDER.md`
+**Versión:** v0.1
+**Cambio relacionado:** CAMBIO #065
+
+## Decisión
+
+Se aprueba formalmente:
+
+ROBERT_BUILD_ORDER v0.1
+
+como orden arquitectónico vigente para la futura implementación inicial de Robert.
+
+## Secuencia aprobada
+
+STAGE 0 — TECHNICAL FOUNDATION
+
+STAGE 1 — CANONICAL CONTRACTS
+
+STAGE 2 — ERROR / AUDIT FOUNDATION
+
+STAGE 3 — GOVERNANCE CORE
+
+STAGE 4 — VALIDATION CORE
+
+STAGE 5 — CONTEXT / MEMORY INTERFACES
+
+STAGE 6 — MODEL INTERFACE
+
+STAGE 7 — SKILL LAYER
+
+STAGE 8 — AGENT LAYER
+
+STAGE 9 — TOOL ABSTRACTION
+
+STAGE 10 — ORCHESTRATOR
+
+STAGE 11 — APPLICATION API
+
+STAGE 12 — BASIC UI
+
+STAGE 13 — SANDBOX INTEGRATION
+
+STAGE 14 — EXTERNAL CAPABILITIES
+
+STAGE 15 — AUTONOMY EVOLUTION
+
+## Initial Implementation Boundary
+
+La implementación inicial recomendada queda limitada a:
+
+STAGE 0 → STAGE 13
+
+Stage 14 y Stage 15 requieren autorización posterior.
+
+## Reglas aprobadas
+
+BUILD ORDER
+≠
+IMPLEMENTATION AUTHORIZATION
+
+CONTRACT
+≠
+IMPLEMENTATION
+
+ROUTE
+≠
+ROUTING AUTHORITY
+
+AUDIT WRITER
+≠
+AUDIT AUTHORITY
+
+SKILL RUNNER
+≠
+EXECUTION AUTHORITY
+
+AGENT RUNNER
+≠
+ROUTING AUTHORITY
+
+MODEL OUTPUT
+≠
+ROUTING AUTHORITY
+
+TOOL ABSTRACTION
+≠
+REAL TOOL EXECUTION
+
+CONNECTED
+≠
+AUTHORIZED
+
+IMPLEMENTED CAPABILITY
+≠
+AUTONOMY AUTHORIZATION
+
+IMPLEMENTATION AUTHORIZED
+≠
+AUTONOMY AUTHORIZED
+
+CODE AUTHORIZATION
+≠
+TOOL AUTHORIZATION
+
+## Dependencia de Contracts
+
+Stage 1 solo podrá derivar schemas técnicos desde:
+
+ROBERT_IMPLEMENTATION_CONTRACTS v0.1
+
+en su versión aprobada y reconciliada mediante:
+
+DECISIÓN #038
+CAMBIO #063
+
+## Primera implementación
+
+El primer build debe priorizar:
+
+CONTRACTS
+AUDIT
+GOVERNANCE
+VALIDATION
+CONTEXT
+MEMORY INTERFACES
+MODEL INTERFACE
+SKILLS
+AGENTS
+TOOL ABSTRACTION
+ORCHESTRATOR
+API
+UI
+SANDBOX
+
+sin ejecución externa real.
+
+## Restricciones
+
+Se mantiene:
+
+AUTONOMY_LEVEL = 0
+EXECUTION_AUTHORITY = NONE
+REAL_TOOL_EXECUTION = DISABLED
+
+La aprobación de este Build Order no autoriza comenzar código.
+
+## Próximo paso
+
+RUN PHASE 10 EXIT AUDIT
