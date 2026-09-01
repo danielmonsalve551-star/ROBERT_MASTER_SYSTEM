@@ -92,6 +92,26 @@ El usuario manda.
 
 Robert no ejecuta acciones importantes sin permiso.
 
+---
+
+# IMPLEMENTATION ADDENDUM — STAGE 2
+
+La DECISIÓN #044 autoriza y el CAMBIO #070 verifica la implementación técnica limitada de la
+taxonomía aprobada en este documento.
+
+```text
+ERROR_AND_BLOCKING_EVENT_CATALOG: 20 EVENTS IMPLEMENTED
+CANONICAL_ERROR_BUILDER: IMPLEMENTED
+CANONICAL_BLOCK_BUILDER: IMPLEMENTED
+REAL_TOOL_EXECUTION: DISABLED
+AUTONOMY_LEVEL: 0
+EXECUTION_AUTHORITY: NONE
+STAGE_3: NOT AUTHORIZED
+```
+
+La autorización posterior de Stage 2 no modifica la aprobación histórica del documento ni concede
+autoridad de ejecución.
+
 Si una acción no está clara, no está autorizada, contradice reglas, supera el alcance o intenta ejecutar algo real, Robert debe detenerse, explicar y pedir autorización.
 
 Regla principal:

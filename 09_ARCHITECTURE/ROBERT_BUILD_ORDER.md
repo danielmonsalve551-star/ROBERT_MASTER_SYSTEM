@@ -5,7 +5,7 @@
 **Tipo:** Especificación de orden de construcción / Implementation Readiness
 **Ubicación propuesta:** `09_ARCHITECTURE/ROBERT_BUILD_ORDER.md`
 **Fase relacionada:** Fase 10 — Implementation Readiness
-**Implementación:** STAGES 0–1 COMPLETE / STAGE 2 NOT AUTHORIZED
+**Implementación:** STAGES 0–2 COMPLETE / STAGE 3 NOT AUTHORIZED
 **Autonomy Level:** 0
 **Execution Authority:** NONE
 
@@ -2415,13 +2415,13 @@ PHASE: 10
 
 BUILD_ORDER: APPROVED
 
-IMPLEMENTATION: STAGES 0–1 COMPLETE
+IMPLEMENTATION: STAGES 0–2 COMPLETE
 
-IMPLEMENTATION_AUTHORIZATION: GRANTED — STAGES 0–1 ONLY
+IMPLEMENTATION_AUTHORIZATION: GRANTED — STAGES 0–2 ONLY
 
-AUTHORIZED_BUILD_BOUNDARY: STAGE 1
+AUTHORIZED_BUILD_BOUNDARY: STAGE 2
 
-STAGE_2: NOT AUTHORIZED
+STAGE_3: NOT AUTHORIZED
 
 REAL_TOOL_EXECUTION: DISABLED
 
@@ -2443,7 +2443,8 @@ Resultado:
 ```text
 STAGE_0 = COMPLETE
 STAGE_1 = COMPLETE
-STAGE_2 = NOT AUTHORIZED
+STAGE_2 = COMPLETE
+STAGE_3 = NOT AUTHORIZED
 ```
 
 Stage 1 fue autorizado e implementado mediante:
@@ -2453,10 +2454,17 @@ DECISIÓN #043
 CAMBIO #069
 ```
 
+Stage 2 fue autorizado e implementado mediante:
+
+```text
+DECISIÓN #044
+CAMBIO #070
+```
+
 La siguiente transición permitida es una decisión humana separada sobre:
 
 ```text
-AUTHORIZE STAGE 2?
+AUTHORIZE STAGE 3 — GOVERNANCE CORE?
 ```
 
-Hasta entonces, el límite obligatorio es `STAGE 1`.
+Hasta entonces, el límite obligatorio es `STAGE 2`.

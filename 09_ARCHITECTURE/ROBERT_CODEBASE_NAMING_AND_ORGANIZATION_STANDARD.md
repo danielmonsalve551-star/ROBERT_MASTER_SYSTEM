@@ -1,10 +1,10 @@
 # ROBERT_CODEBASE_NAMING_AND_ORGANIZATION_STANDARD
 
-**Versión:** 0.1
+**Versión:** 0.2
 **Estado:** APPROVED / ACTIVE
 **Fecha:** 01/09/2026
-**Decisión:** #043
-**Cambio:** #069
+**Decisiones:** #043 / #044
+**Cambios:** #069 / #070
 
 ---
 
@@ -35,6 +35,13 @@ Mantener nombres claros, ubicación predecible y responsabilidades separadas en 
 src/robert/
 ├── app.py
 ├── config.py
+├── audit/
+│   ├── catalog.py
+│   ├── outcome_builder.py
+│   ├── event_builder.py
+│   ├── redaction.py
+│   ├── storage.py
+│   └── writer.py
 └── contracts/
     ├── base.py
     ├── envelope.py
@@ -53,8 +60,11 @@ src/robert/
 
 schemas/contracts/<owner>/<contract_name>.schema.json
 tests/contracts/
+tests/audit/
 scripts/export_contract_schemas.py
 ```
+
+Stage 2 extiende este estándar mediante DECISIÓN #044 y CAMBIO #070 sin cambiar sus reglas.
 
 ---
 
