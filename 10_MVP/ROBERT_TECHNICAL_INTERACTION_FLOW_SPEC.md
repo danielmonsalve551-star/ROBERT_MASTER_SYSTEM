@@ -1,169 +1,386 @@
 # ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC
 
-Versión: 0.2  
-Estado: APROBADO E INTEGRADO
-Fecha: 03/07/2026  
-Ubicación: 10_MVP  
-Fase relacionada: Fase 10 — MVP técnico básico en preparación  
-Documento base relacionado: ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1  
-Documento relacionado: ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2  
-Fuente de verdad actual: ROBERT_CONTEXT_MASTER v0.5  
-Cambio relacionado previo: CAMBIO #021 — Creación de ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.1  
+**Versión:** 0.2
+**Estado:** APROBADO E INTEGRADO / CANÓNICAMENTE NORMALIZADO
+**Fecha original:** 03/07/2026
+**Última normalización:** 31/08/2026
+**Ubicación:** `10_MVP`
+**Fase relacionada:** Fase 10 — Implementation Readiness
+**Documento base relacionado:** `ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1`
+**Documento relacionado:** `ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2`
+
+**Decisión relacionada:** DECISIÓN #014
+**Cambios relacionados:** CAMBIO #022 / CAMBIO #023
+
+---
 
 Tags: #robert/orbita-3 #capa/5 #tipo/tecnico #robert/mvp #robert/interaction-flow
+
+[[ROBERT_HOME]]
+[[ROBERT_CONTEXT_MASTER]]
+[[ROBERT_CANONICAL_MODEL]]
+[[ROBERT_ORCHESTRATOR_SPEC]]
+[[ROBERT_AGENT_ARCHITECTURE]]
+[[ROBERT_SKILL_ARCHITECTURE]]
+[[ROBERT_MODEL_INTERFACE_SPEC]]
+[[ROBERT_MEMORY_ARCHITECTURE]]
+[[ROBERT_VALIDATION_ARCHITECTURE]]
+[[ROBERT_TOOL_ARCHITECTURE]]
+[[ROBERT_IMPLEMENTATION_CONTRACTS]]
+[[ROBERT_TECHNICAL_DATA_MODEL_SPEC]]
+[[ROBERT_TECHNICAL_COMPONENTS_SPEC]]
+[[ROBERT_TECHNICAL_SCREEN_STATE_SPEC]]
+[[ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC]]
+[[ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC]]
+[[ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC]]
+[[ROBERT_SECURITY_RULES]]
+[[ROBERT_PHASES]]
 
 ---
 
 # OBJETIVO
 
-ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC define cómo interactúan conceptualmente los componentes del MVP técnico básico de Robert.
+`ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC` define cómo fluye conceptualmente la información entre el usuario, la interfaz y los componentes internos de Robert durante una futura implementación controlada.
 
-Su objetivo es explicar, de forma ordenada, cómo fluye la información entre el usuario, los componentes visuales, los modelos de datos y las reglas de seguridad del sistema.
+Su función es describir:
 
-Este documento define la interacción conceptual entre:
+* cómo entra una solicitud;
+* cómo se convierte en Task;
+* cómo recibe Context;
+* cómo llega al Orchestrator;
+* cómo se resuelve el trabajo;
+* cómo participan Agents;
+* cómo participan Skills;
+* cómo participan Models;
+* cómo se representan Tool Requests;
+* cómo participa Memory;
+* cómo se realiza Validation;
+* cómo intervienen Permission, Scope, Risk y Approval;
+* cómo se generan Results;
+* cómo se registra Audit;
+* cómo se proyecta el estado hacia UI.
 
-- Usuario
-- AppShell
-- TopBar
-- LeftSidebar
-- CommandCenter
-- ModeSelector
-- RiskBadge
-- ApprovalGate
-- DecisionInbox
-- DocumentStatusMap
-- CurrentStatePanel
+Este documento describe **movimiento e interacción**.
 
-Este documento usa como base los modelos definidos en:
+No redefine Routing Authority.
 
-**ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1**
+No redefine Governance.
 
-También se relaciona con:
-
-**ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2**
-
-Este documento no programa la app.
-
-Este documento no crea código.
-
-Este documento no crea flujos automáticos reales.
-
-Este documento no conecta herramientas externas.
-
-Este documento no ejecuta acciones reales.
-
-Este documento solo define flujos conceptuales de interacción para una futura implementación técnica controlada.
+No crea Execution Authority.
 
 ---
 
 # ESTADO DEL DOCUMENTO
 
-Este documento queda como:
+Este documento está formalmente:
 
-**APROBADO E INTEGRADO — v0.2**
+```text
+APPROVED
+INTEGRATED
+```
 
-Trazabilidad formal:
+Trazabilidad:
 
 ```text
 DECISIÓN #014
-CAMBIO #022 — Corrección
-CAMBIO #023 — Aprobación e integración
+
+CAMBIO #022
+CORRECTION
+
+CAMBIO #023
+APPROVAL / INTEGRATION
 ```
 
-Estado operativo:
+La normalización actual no crea una nueva aprobación.
+
+Estado:
 
 ```text
-STATUS: APPROVED / INTEGRATED
-PHASE: 10
-IMPLEMENTATION: NONE
-AUTONOMY_LEVEL: 0
-EXECUTION_AUTHORITY: NONE
+DOCUMENT:
+ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC
+
+VERSION:
+0.2
+
+STATUS:
+APPROVED / INTEGRATED / CANONICALLY NORMALIZED
+
+PHASE:
+10
+
+TECHNICAL_IMPLEMENTATION:
+NOT STARTED
+
+REAL_TOOL_EXECUTION:
+DISABLED
+
+AUTONOMY_LEVEL:
+0
+
+EXECUTION_AUTHORITY:
+NONE
 ```
-
-La aprobación es documental y conceptual.
-
-No autoriza programación, automatización, conexiones externas, ejecución real ni avance automático a Fase 11.
 
 ---
 
-# CAMBIOS DE v0.2 RESPECTO A v0.1
+# CANONICAL ARCHITECTURE ALIGNMENT
 
-Esta versión corrige puntos detectados durante la revisión de v0.1:
+La autoridad semántica pertenece a:
 
-1. Aclara el rol de AppShell como contenedor raíz.
-2. Define qué datos reciben TopBar y LeftSidebar.
-3. Integra ComponentState dentro de un flujo propio.
-4. Integra GitHubBackupStatus y ObsidianGraphStatus dentro de los datos que fluyen.
-5. Define mejor qué ocurre con riesgo Nivel 2.
-6. Aclara cuándo una respuesta simple actualiza SystemState y cuándo no.
-7. Añade FLUJO 13 — Estado de componentes.
-8. Añade una sección completa de datos recibidos y enviados por todos los componentes principales.
+```text
+ROBERT_CANONICAL_MODEL v0.2
+DECISIÓN #030
+CAMBIO #053
+```
+
+La autoridad de coordinación y Routing pertenece a:
+
+```text
+ROBERT_ORCHESTRATOR_SPEC v0.1
+DECISIÓN #031
+CAMBIO #054
+```
+
+Los Contracts entre componentes pertenecen a:
+
+```text
+ROBERT_IMPLEMENTATION_CONTRACTS v0.1
+DECISIÓN #038
+CAMBIO #063
+```
+
+Este documento solo especifica:
+
+```text
+HOW INFORMATION MOVES
+BETWEEN APPROVED COMPONENTS
+```
+
+Se formaliza:
+
+```text
+INTERACTION FLOW
+≠
+ORCHESTRATOR
+
+INTERACTION FLOW
+≠
+ROUTING AUTHORITY
+
+INTERACTION FLOW
+≠
+APPROVAL AUTHORITY
+
+INTERACTION FLOW
+≠
+EXECUTION AUTHORITY
+```
 
 ---
 
 # REGLA CENTRAL
 
-El usuario manda.
+El flujo maestro de Robert debe seguir la arquitectura aprobada.
 
-Robert no ejecuta acciones importantes sin permiso.
+```text
+USER
+↓
+TASK
+↓
+REQUEST_CONTEXT
+↓
+ORCHESTRATOR
+↓
+ROUTING / RESOLUTION
+↓
+AGENT / SKILL / MODEL / MEMORY / TOOL REQUEST AS NEEDED
+↓
+VALIDATION
+↓
+GOVERNANCE CHECKS
+↓
+ORCHESTRATOR_RESULT
+↓
+AUDIT
+↓
+UI / OUTPUT
+```
 
-Todo flujo de interacción debe respetar:
+No debe existir un segundo flujo independiente que compita con el Orchestrator.
 
-- ROBERT_SECURITY_RULES
-- ROBERT_CONTEXT_MASTER v0.5
-- ROBERT_COMMANDS
-- ROBERT_DECISIONS_LOG
-- ROBERT_CONTROL_DE_CAMBIOS
-- ROBERT_PHASES v0.5
-- ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2
-- ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1
+---
+
+# ORCHESTRATOR AS MASTER FLOW COORDINATOR
+
+El Orchestrator es el coordinador arquitectónico principal.
+
+Referencia:
+
+```text
+ROBERT_ORCHESTRATOR_SPEC v0.1
+DECISIÓN #031
+CAMBIO #054
+```
+
+Responsabilidades relacionadas:
+
+* Task intake;
+* Context coordination;
+* Module Routing;
+* Agent Routing;
+* Skill Resolution;
+* Model Routing;
+* Tool Resolution;
+* Memory Resolution;
+* Validation coordination;
+* next-step coordination;
+* result assembly.
+
+Regla:
+
+```text
+ORCHESTRATOR
+=
+MASTER ROUTING AUTHORITY
+```
+
+Por tanto:
+
+```text
+COMMAND CENTER
+≠
+ROUTER
+
+RISK BADGE
+≠
+RISK AUTHORITY
+
+APPROVAL GATE
+≠
+APPROVAL AUTHORITY
+
+DECISION INBOX
+≠
+DECISION AUTHORITY
+
+UI
+≠
+SYSTEM GOVERNOR
+```
+
+---
+
+# IMPLEMENTATION CONTRACT ALIGNMENT
+
+Los intercambios entre componentes deben derivarse de:
+
+```text
+ROBERT_IMPLEMENTATION_CONTRACTS v0.1
+```
+
+Contracts relevantes:
+
+```text
+TASK
+REQUEST_CONTEXT
+
+ORCHESTRATOR_REQUEST
+ORCHESTRATOR_RESULT
+ROUTE
+
+AGENT_REQUEST
+AGENT_RESULT
+
+SKILL_INVOCATION
+SKILL_RESULT
+
+MODEL_REQUEST
+MODEL_RESPONSE
+
+TOOL_REQUEST
+TOOL_RESULT
+
+MEMORY_CANDIDATE
+MEMORY_RECORD
+MEMORY_RETRIEVAL_REQUEST
+MEMORY_RETRIEVAL_RESULT
+
+VALIDATION_REQUEST
+VALIDATION_RESULT
+
+PERMISSION_CHECK
+SCOPE_CHECK
+RISK_ASSESSMENT
+
+APPROVAL_REQUEST
+APPROVAL_RESULT
+
+ERROR
+BLOCK
+AUDIT_EVENT
+```
+
+Regla:
+
+```text
+INTERACTION FLOW
+MUST USE
+APPROVED CONTRACT BOUNDARIES
+```
 
 ---
 
 # ESTADO ACTUAL DE ROBERT
 
-Robert se encuentra en:
+```text
+PHASE = 10
+```
 
-**Fase 10 — MVP técnico básico en preparación**
+Estado vigente:
 
-Estado operativo actual:
+```text
+CORE_ARCHITECTURE = CLOSED
 
-- MVP manual validado.
-- Sandbox manual validado.
-- GitHub configurado como respaldo documental privado y manual.
-- ROBERT_CONTEXT_MASTER v0.5 reanclado.
-- ROBERT_PHASES v0.5 reconciliado.
-- Escala de riesgo y autonomía unificada.
-- ROBERT_TECHNICAL_MVP_PLAN aprobado.
-- ROBERT_TECHNICAL_MVP_WIREFRAME v0.3 aprobado.
-- ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2 aprobado.
-- ROBERT_TECHNICAL_DATA_MODEL_SPEC v0.1 aprobado e integrado.
-- ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.1 creado como borrador.
-- ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2 preparado como propuesta corregida.
-- Convención visual de Obsidian v0.2 aprobada e integrada.
-- Sin programación autorizada.
-- Sin base de datos real.
-- Sin conexiones externas.
-- Sin automatizaciones reales.
-- Sin agentes autónomos activos.
+TOOL_ARCHITECTURE = CLOSED
+
+IMPLEMENTATION_CONTRACTS = APPROVED
+
+PHASE_10_EXIT_CRITERIA = APPROVED
+
+BUILD_ORDER = APPROVED
+
+TECHNICAL_IMPLEMENTATION = NOT STARTED
+
+REAL_TOOL_EXECUTION = DISABLED
+
+AUTOMATIC_MEMORY_WRITE = DISABLED
+
+AUTONOMOUS_AGENTS = DISABLED
+
+AUTONOMY_LEVEL = 0
+
+EXECUTION_AUTHORITY = NONE
+```
 
 ---
 
 # ALCANCE AUTORIZADO
 
-Este documento autoriza únicamente:
+Este documento puede:
 
-- Definir flujos conceptuales entre componentes.
-- Explicar cómo se mueve la información dentro del MVP.
-- Relacionar componentes con modelos de datos.
-- Definir cuándo un flujo debe continuar.
-- Definir cuándo un flujo debe pausar.
-- Definir cuándo un flujo debe pedir aprobación.
-- Definir cuándo un flujo debe bloquearse.
-- Definir qué datos recibe cada componente.
-- Definir qué modelos alimentan cada flujo.
-- Preparar base documental para futuras especificaciones técnicas.
-- Mantener a Robert en modo documental, manual y supervisado.
+* definir flujos conceptuales;
+* mapear componentes;
+* mapear Contracts;
+* definir puntos de pausa;
+* definir puntos de Validation;
+* definir interacción con Approval;
+* definir interacción con Memory;
+* definir interacción con Models;
+* definir interacción con Agents;
+* definir interacción con Skills;
+* definir interacción con Tool Requests;
+* definir proyección hacia UI;
+* definir Audit points.
 
 ---
 
@@ -171,48 +388,47 @@ Este documento autoriza únicamente:
 
 Este documento no autoriza:
 
-- Programar la app.
-- Crear código.
-- Crear una base de datos real.
-- Crear tablas reales.
-- Crear endpoints.
-- Conectar Supabase.
-- Conectar Firebase.
-- Conectar GitHub automáticamente.
-- Conectar Gmail.
-- Conectar Google Calendar.
-- Conectar APIs externas.
-- Automatizar acciones.
-- Activar agentes autónomos.
-- Ejecutar acciones reales.
-- Avanzar automáticamente a Fase 11.
+* programación por sí mismo;
+* ejecución real;
+* Tool execution real;
+* base de datos productiva;
+* Automatic Memory Write;
+* Agent autonomy;
+* conexiones externas;
+* Automation real;
+* Phase 11;
+* aumento de Autonomy;
+* aumento de Execution Authority.
 
 ---
 
-# PRINCIPIO GENERAL DE INTERACCIÓN
+# PRINCIPIO DE SEPARACIÓN ENTRE UI Y CONTROL
 
-Todo flujo dentro de Robert debe seguir esta lógica:
+Los componentes visuales representan estado e interacción humana.
 
-1. El usuario da una instrucción.
-2. Robert interpreta la instrucción.
-3. Robert identifica el modo activo.
-4. Robert evalúa el nivel de riesgo.
-5. Robert determina si necesita aprobación.
-6. Robert prepara un resultado, borrador o respuesta.
-7. Robert espera autorización si la acción lo requiere.
-8. Robert registra decisiones y cambios cuando aplique.
-9. Robert actualiza el estado documental cuando exista un cambio real de estado.
-10. Robert no ejecuta acciones reales sin permiso.
+No deben convertirse en autoridades de backend.
 
-Regla principal:
+Se formaliza:
 
-**Primero interpretar. Después clasificar. Después evaluar riesgo. Después pedir aprobación si aplica. Después preparar. Nunca ejecutar sin permiso.**
+```text
+UI COMPONENT
+≠
+GOVERNANCE AUTHORITY
+```
+
+y:
+
+```text
+DISPLAY
+≠
+DECISION
+```
 
 ---
 
-# COMPONENTES INVOLUCRADOS
+# COMPONENTES VISUALES PRINCIPALES
 
-Los componentes principales del MVP técnico básico son:
+Se conservan los 10 componentes principales definidos en `ROBERT_TECHNICAL_COMPONENTS_SPEC v0.2`:
 
 1. AppShell
 2. TopBar
@@ -225,129 +441,242 @@ Los componentes principales del MVP técnico básico son:
 9. DocumentStatusMap
 10. CurrentStatePanel
 
----
+Estos componentes pertenecen principalmente a Presentation.
 
-# ACLARACIÓN DE ROLES DE COMPONENTES
-
-## AppShell
-
-AppShell es el contenedor raíz del MVP técnico básico.
-
-Su función es alojar, ordenar y mostrar los componentes principales.
-
-AppShell no toma decisiones.
-
-AppShell no evalúa riesgo.
-
-AppShell no aprueba acciones.
-
-AppShell no ejecuta acciones.
-
-AppShell no modifica documentos.
-
-AppShell solo recibe estado general para organizar la pantalla.
+No sustituyen las arquitecturas internas.
 
 ---
 
-## TopBar
+# APPSHELL
 
-TopBar es la barra superior de estado.
+AppShell es el contenedor raíz de Presentation.
 
-Su función es mostrar información resumida del sistema.
+Puede:
 
-TopBar no toma decisiones.
+* alojar componentes;
+* recibir UI State;
+* organizar layout;
+* mostrar navegación.
 
-TopBar no ejecuta acciones.
+No puede:
 
-TopBar no modifica documentos.
-
-TopBar solo muestra datos relevantes como fase, modo, estado de ejecución y última actualización.
-
----
-
-## LeftSidebar
-
-LeftSidebar es la navegación lateral documental.
-
-Su función es permitir moverse entre documentos, áreas, módulos o secciones.
-
-LeftSidebar no toma decisiones.
-
-LeftSidebar no evalúa riesgo.
-
-LeftSidebar no aprueba acciones.
-
-LeftSidebar no ejecuta acciones.
-
-LeftSidebar solo muestra navegación, documentos y estructura.
+```text
+ROUTE TASKS
+APPROVE
+ASSESS RISK
+GRANT PERMISSION
+EXPAND SCOPE
+EXECUTE TOOLS
+WRITE MEMORY
+```
 
 ---
 
-## CommandCenter
+# TOPBAR
 
-CommandCenter es el punto donde el usuario da instrucciones.
+TopBar muestra estado resumido.
 
-Su función es recibir, clasificar y preparar solicitudes.
+Puede recibir:
 
-CommandCenter no ejecuta acciones reales por sí solo.
+```text
+current_phase
+active_mode
+execution_status
+risk_summary
+last_decision
+last_change
+pending_count
+system_health
+```
 
----
-
-## ModeSelector
-
-ModeSelector identifica el modo activo de Robert.
-
-Su función es limitar o permitir flujos según el modo operativo.
-
----
-
-## RiskBadge
-
-RiskBadge muestra el nivel de riesgo y la razón del riesgo.
-
-Su función es hacer visible el riesgo antes de avanzar.
+No toma Decisions ni modifica estado canónico.
 
 ---
 
-## ApprovalGate
+# LEFTSIDEBAR
 
-ApprovalGate decide si una acción requiere autorización, pausa o bloqueo.
+LeftSidebar representa navegación.
 
-No aprueba por sí solo.
+Puede enviar:
 
-Solo aplica las reglas de seguridad.
+```text
+navigation_target
+selected_document
+selected_module
+```
 
----
+La navegación no equivale a Routing arquitectónico.
 
-## DecisionInbox
-
-DecisionInbox muestra elementos pendientes de decisión del usuario.
-
-No resuelve decisiones automáticamente.
-
----
-
-## DocumentStatusMap
-
-DocumentStatusMap muestra estado, versión, fase y relación entre documentos.
-
-No modifica documentos por sí solo.
+```text
+UI NAVIGATION
+≠
+ORCHESTRATOR ROUTING
+```
 
 ---
 
-## CurrentStatePanel
+# COMMANDCENTER
 
-CurrentStatePanel muestra el estado general actualizado de Robert.
+CommandCenter es el punto visual de entrada de una instrucción.
 
-No ejecuta acciones.
+Su función correcta es:
 
-Solo refleja cambios documentales, decisiones, riesgos o modos.
+```text
+USER INPUT
+↓
+COMMAND CENTER
+↓
+TASK CREATION / REQUEST PREPARATION
+↓
+ORCHESTRATOR
+```
+
+CommandCenter no debe:
+
+* decidir Routing;
+* seleccionar Agent por autoridad propia;
+* seleccionar Tool por autoridad propia;
+* ejecutar;
+* aprobar;
+* otorgar Permission.
 
 ---
 
-# MODELOS DE DATOS UTILIZADOS
+# MODESELECTOR
 
-Este documento se apoya en los modelos definidos en DATA_MODEL_SPEC v0.1:
+ModeSelector representa el Mode seleccionado o disponible.
+
+Puede producir una solicitud de cambio de Mode.
+
+No puede alterar Autonomy o Execution Authority por sí solo.
+
+```text
+SELECTED MODE
+≠
+AUTHORIZED AUTONOMY
+```
+
+---
+
+# RISKBADGE
+
+RiskBadge es un componente visual.
+
+Muestra resultados de:
+
+```text
+RISK_ASSESSMENT
+```
+
+No calcula necesariamente el Risk por sí mismo.
+
+No tiene autoridad para autorizar o bloquear.
+
+```text
+RISK BADGE
+=
+DISPLAY OF RISK STATE
+```
+
+No:
+
+```text
+RISK BADGE
+=
+RISK GOVERNOR
+```
+
+---
+
+# APPROVALGATE
+
+ApprovalGate representa visualmente el estado de Approval.
+
+Puede mostrar:
+
+```text
+APPROVAL REQUIRED
+APPROVAL PENDING
+APPROVED
+REJECTED
+BLOCKED
+```
+
+No aprueba por sí mismo.
+
+La Approval válida debe provenir de la autoridad autorizada.
+
+```text
+APPROVAL GATE
+≠
+APPROVAL AUTHORITY
+```
+
+---
+
+# DECISIONINBOX
+
+DecisionInbox muestra Decisions pendientes o resueltas.
+
+No crea Decisions.
+
+```text
+DECISION INBOX
+≠
+DECISION AUTHORITY
+```
+
+---
+
+# DOCUMENTSTATUSMAP
+
+DocumentStatusMap representa estado documental.
+
+No modifica documentos por sí mismo.
+
+Puede visualizar:
+
+* Document status;
+* version;
+* Decision refs;
+* Change refs;
+* lifecycle;
+* relationships.
+
+---
+
+# CURRENTSTATEPANEL
+
+CurrentStatePanel representa el estado consolidado visible.
+
+Puede mostrar:
+
+* Phase;
+* Mode;
+* active Task;
+* Risk;
+* Permission;
+* Scope;
+* Approval;
+* Validation;
+* last Decision;
+* last Change;
+* Blocks;
+* next allowed step.
+
+No constituye Source of Truth por sí mismo.
+
+```text
+UI STATE
+≠
+CANONICAL STATE AUTHORITY
+```
+
+---
+
+# MODELOS LEGACY DEL DATA MODEL
+
+Los 11 modelos originales continúan disponibles como View / Document Models:
 
 1. SystemState
 2. RobertDocument
@@ -361,1191 +690,2138 @@ Este documento se apoya en los modelos definidos en DATA_MODEL_SPEC v0.1:
 10. GitHubBackupStatus
 11. ObsidianGraphStatus
 
----
+Se formaliza:
 
-# FLUJO GENERAL DEL MVP TÉCNICO BÁSICO
+```text
+LEGACY MVP VIEW MODEL
+≠
+CORE IMPLEMENTATION CONTRACT
+```
 
-El flujo general del MVP técnico básico es:
+Estos modelos pueden alimentar UI.
 
-Usuario  
-↓  
-AppShell aloja la interfaz  
-↓  
-CommandCenter recibe la instrucción  
-↓  
-ModeSelector identifica modo activo  
-↓  
-RiskBadge evalúa riesgo  
-↓  
-ApprovalGate determina si puede continuar  
-↓  
-DecisionInbox muestra pendientes si aplica  
-↓  
-Robert prepara respuesta o borrador  
-↓  
-Usuario aprueba, corrige, pausa o rechaza  
-↓  
-DecisionRecord si aplica  
-↓  
-ChangeRecord si aplica  
-↓  
-RobertDocument se actualiza si aplica  
-↓  
-SystemState se actualiza si aplica  
-↓  
-CurrentStatePanel, TopBar, LeftSidebar y DocumentStatusMap muestran estado actualizado  
-
-Este flujo es conceptual.
-
-No implica programación ni ejecución real en esta etapa.
+Los Contracts gobiernan interacción entre runtime components.
 
 ---
 
-# FLUJO 1 — INSTRUCCIÓN DEL USUARIO
+# FLUJO MAESTRO
+
+El flujo maestro aprobado para futura implementación es:
+
+```text
+USER
+↓
+INPUT
+↓
+TASK
+↓
+REQUEST_CONTEXT
+↓
+ORCHESTRATOR_REQUEST
+↓
+ORCHESTRATOR
+↓
+ROUTE
+↓
+RESOLVERS / SPECIALIZED COMPONENTS
+↓
+VALIDATION
+↓
+GOVERNANCE
+↓
+ORCHESTRATOR_RESULT
+↓
+AUDIT_EVENT
+↓
+PRESENTATION
+↓
+USER
+```
+
+---
+
+# FLUJO 1 — USER INPUT → TASK
 
 ## Objetivo
 
-Definir qué pasa cuando el usuario escribe una instrucción dentro de Robert.
-
-## Flujo conceptual
-
-1. El usuario escribe una instrucción.
-2. AppShell mantiene visible la interfaz general.
-3. CommandCenter recibe la instrucción.
-4. CommandCenter crea un CommandRequest.
-5. ModeSelector identifica el modo activo.
-6. RiskBadge evalúa el nivel de riesgo.
-7. ApprovalGate determina si se necesita autorización.
-8. Si no requiere aprobación, Robert puede preparar una respuesta.
-9. Si requiere aprobación, se crea una PendingDecision.
-10. DecisionInbox muestra la decisión pendiente.
-11. Robert espera instrucción del usuario cuando el flujo requiera autorización.
-
-## Componentes involucrados
-
-- AppShell
-- CommandCenter
-- ModeSelector
-- RiskBadge
-- ApprovalGate
-- DecisionInbox
-- CurrentStatePanel
-- TopBar
-
-## Modelos utilizados
-
-- CommandRequest
-- ModeState
-- RiskRecord
-- PendingDecision
-- SystemState
-
-## Regla de actualización de estado
-
-Una instrucción simple no siempre actualiza SystemState.
-
-Solo actualiza SystemState o CurrentStatePanel si cambia alguno de estos elementos:
-
-- Documento activo.
-- Modo activo.
-- Riesgo relevante.
-- Decisión pendiente.
-- Cambio documental.
-- Decisión formal.
-- Estado de ejecución.
-- Estado de respaldo.
-- Estado visual del grafo.
-
-Si la respuesta es solo explicativa y no cambia nada, no se registra como cambio formal.
-
-## Regla de seguridad
-
-Si la instrucción implica riesgo medio, alto o crítico, Robert debe aplicar las reglas de riesgo definidas en este documento.
-
----
-
-# FLUJO 2 — COMANDO DOCUMENTAL SIMPLE
-
-## Objetivo
-
-Definir qué pasa cuando el usuario pide crear, revisar o actualizar un documento sin ejecución real.
-
-## Ejemplo de instrucción
-
-crea un documento técnico
-
-## Flujo conceptual
-
-1. CommandCenter recibe la instrucción.
-2. Robert clasifica la intención como cambio documental.
-3. ModeSelector confirma que el modo activo permite preparación documental.
-4. RiskBadge asigna nivel de riesgo.
-5. ApprovalGate revisa si el cambio requiere aprobación.
-6. Robert prepara el documento como borrador.
-7. El documento queda representado como RobertDocument.
-8. Si el usuario confirma que lo creó, se registra ChangeRecord.
-9. CurrentStatePanel actualiza el estado.
-10. DocumentStatusMap refleja el nuevo documento.
-11. TopBar puede mostrar última actualización.
-12. LeftSidebar puede mostrar el nuevo documento si ya existe.
-
-## Componentes involucrados
-
-- CommandCenter
-- ModeSelector
-- RiskBadge
-- ApprovalGate
-- CurrentStatePanel
-- DocumentStatusMap
-- TopBar
-- LeftSidebar
-
-## Modelos utilizados
-
-- CommandRequest
-- RiskRecord
-- RobertDocument
-- ChangeRecord
-- SystemState
-
-## Regla de seguridad
-
-Crear un documento no significa aprobarlo.
-
-Preparar un documento no significa integrarlo.
-
-Integrar un documento no significa ejecutar acciones reales.
-
----
-
-# FLUJO 3 — APROBACIÓN FORMAL DE DOCUMENTO
-
-## Objetivo
-
-Definir qué pasa cuando el usuario aprueba formalmente un documento.
-
-## Ejemplo de instrucción
-
-la apruebo
-
-## Flujo conceptual
-
-1. CommandCenter recibe la aprobación del usuario.
-2. Robert identifica qué documento está siendo aprobado.
-3. RiskBadge evalúa el riesgo de aprobación.
-4. ApprovalGate confirma que la aprobación viene del usuario.
-5. Robert prepara una DecisionRecord.
-6. El usuario registra la decisión en ROBERT_DECISIONS_LOG.
-7. Robert prepara un ChangeRecord de aprobación e integración.
-8. El usuario registra el cambio en ROBERT_CONTROL_DE_CAMBIOS.
-9. Robert actualiza el estado del documento como aprobado.
-10. SystemState actualiza última decisión y último cambio.
-11. CurrentStatePanel y DocumentStatusMap reflejan el nuevo estado.
-12. TopBar puede mostrar última decisión.
-13. LeftSidebar puede mantener visible el documento aprobado.
-
-## Componentes involucrados
-
-- CommandCenter
-- RiskBadge
-- ApprovalGate
-- DecisionInbox
-- CurrentStatePanel
-- DocumentStatusMap
-- TopBar
-- LeftSidebar
-
-## Modelos utilizados
-
-- CommandRequest
-- RiskRecord
-- DecisionRecord
-- ChangeRecord
-- RobertDocument
-- SystemState
-
-## Regla de seguridad
-
-Aprobar un documento técnico no autoriza programación.
-
-Aprobar un documento técnico no autoriza conexiones.
-
-Aprobar un documento técnico no autoriza automatizaciones.
-
----
-
-# FLUJO 4 — DETECCIÓN DE RIESGO
-
-## Objetivo
-
-Definir qué pasa cuando Robert detecta riesgo en una instrucción.
-
-## Flujo conceptual
-
-1. CommandCenter recibe una instrucción.
-2. RiskBadge analiza el tipo de acción.
-3. RiskBadge asigna un nivel de riesgo.
-4. Si el riesgo es Nivel 0 o Nivel 1, Robert puede responder o preparar borrador.
-5. Si el riesgo es Nivel 2, Robert debe mostrar advertencia y confirmar alcance.
-6. Si el riesgo es Nivel 3, Robert debe pedir autorización explícita.
-7. Si el riesgo es Nivel 4, Robert debe bloquear o pausar.
-8. ApprovalGate decide si el flujo puede continuar.
-9. DecisionInbox muestra lo pendiente si hay decisión requerida.
-10. CurrentStatePanel puede reflejar el riesgo si afecta estado relevante.
-
-## Componentes involucrados
-
-- CommandCenter
-- RiskBadge
-- ApprovalGate
-- DecisionInbox
-- CurrentStatePanel
-- TopBar
-
-## Modelos utilizados
-
-- CommandRequest
-- RiskRecord
-- PendingDecision
-- ModeState
-- SystemState
-
-## Escala aplicada
-
-- Nivel 0 — Informativo
-- Nivel 1 — Bajo
-- Nivel 2 — Medio
-- Nivel 3 — Alto
-- Nivel 4 — Crítico
-
-## Regla específica para Nivel 2
-
-Nivel 2 significa riesgo medio.
-
-Por defecto, Nivel 2 genera:
-
-- Advertencia visible.
-- Confirmación de alcance.
-- Revisión antes de continuar.
-
-Nivel 2 no siempre genera una PendingDecision formal.
-
-Nivel 2 sí debe generar PendingDecision cuando afecta cualquiera de estos elementos:
-
-- Documento maestro.
-- Seguridad.
-- Fuente de verdad.
-- Fases.
-- Control de cambios.
-- Decisión formal.
-- Datos sensibles.
-- Acción externa.
-- Preparación de conexión real.
-- Avance hacia programación.
-- Avance hacia Fase 11.
-
-Si Nivel 2 no afecta esos elementos, puede manejarse como confirmación inline sin registro formal.
-
-## Regla de seguridad
-
-No existe Nivel 5 como riesgo.
-
-Nivel 5 solo puede existir como autonomía si está definido en SECURITY_RULES.
-
----
-
-# FLUJO 5 — BLOQUEO POR ACCIÓN NO AUTORIZADA
-
-## Objetivo
-
-Definir qué pasa cuando el usuario o el sistema intenta avanzar a una acción no autorizada.
-
-## Ejemplos de acciones no autorizadas
-
-- Programar la app.
-- Crear base de datos real.
-- Conectar Gmail.
-- Conectar Google Calendar.
-- Conectar GitHub automáticamente.
-- Activar agentes.
-- Ejecutar acciones externas.
-- Automatizar decisiones.
-- Avanzar a Fase 11 sin aprobación formal.
-
-## Flujo conceptual
-
-1. CommandCenter recibe la instrucción.
-2. ModeSelector identifica que el modo actual no permite ejecución real.
-3. RiskBadge marca riesgo alto o crítico.
-4. ApprovalGate bloquea la acción.
-5. Robert explica el motivo del bloqueo.
-6. DecisionInbox puede crear una decisión pendiente si aplica.
-7. CurrentStatePanel mantiene el estado sin cambios ejecutivos.
-8. TopBar puede mostrar estado bloqueado si el bloqueo es relevante.
-9. SystemState no cambia a ejecución real.
-
-## Componentes involucrados
-
-- CommandCenter
-- ModeSelector
-- RiskBadge
-- ApprovalGate
-- DecisionInbox
-- CurrentStatePanel
-- TopBar
-
-## Modelos utilizados
-
-- CommandRequest
-- ModeState
-- RiskRecord
-- PendingDecision
-- SystemState
-
-## Regla de seguridad
-
-Robert puede explicar, preparar o simular.
-
-Robert no debe ejecutar.
-
----
-
-# FLUJO 6 — ACTUALIZACIÓN DEL ESTADO GENERAL
-
-## Objetivo
-
-Definir cómo Robert actualiza su estado después de una decisión o cambio documental.
-
-## Flujo conceptual
-
-1. Se registra una DecisionRecord o ChangeRecord.
-2. RobertDocument actualiza el estado del documento afectado.
-3. SystemState actualiza la última decisión y el último cambio.
-4. CurrentStatePanel muestra el estado actualizado.
-5. DocumentStatusMap refleja el cambio visualmente.
-6. TopBar muestra la fase, modo y última actualización.
-7. LeftSidebar mantiene navegación documental.
-8. AppShell mantiene la estructura visual general.
-
-## Componentes involucrados
-
-- AppShell
-- CurrentStatePanel
-- DocumentStatusMap
-- TopBar
-- LeftSidebar
-
-## Modelos utilizados
-
-- SystemState
-- RobertDocument
-- DecisionRecord
-- ChangeRecord
-- ComponentState
-
-## Regla de seguridad
-
-Actualizar estado documental no significa ejecutar acciones reales.
-
----
-
-# FLUJO 7 — DECISIONES PENDIENTES
-
-## Objetivo
-
-Definir cómo Robert maneja elementos que requieren aprobación del usuario.
-
-## Flujo conceptual
-
-1. Una instrucción genera una acción pendiente.
-2. ApprovalGate determina que no debe avanzar sin autorización.
-3. Se crea una PendingDecision.
-4. DecisionInbox muestra la decisión pendiente.
-5. El usuario puede aprobar, rechazar, corregir, pausar o archivar.
-6. Robert actúa únicamente dentro del alcance autorizado.
-7. Si se aprueba, se registra DecisionRecord.
-8. Si genera cambio documental, se registra ChangeRecord.
-9. CurrentStatePanel actualiza el estado pendiente o resuelto.
-10. TopBar puede mostrar que existe una decisión pendiente.
-
-## Componentes involucrados
-
-- ApprovalGate
-- DecisionInbox
-- CommandCenter
-- CurrentStatePanel
-- TopBar
-
-## Modelos utilizados
-
-- PendingDecision
-- DecisionRecord
-- ChangeRecord
-- RiskRecord
-- SystemState
-
-## Regla de seguridad
-
-Una decisión pendiente no debe resolverse automáticamente.
-
----
-
-# FLUJO 8 — MAPA DE DOCUMENTOS
-
-## Objetivo
-
-Definir cómo Robert muestra el estado de sus documentos.
-
-## Flujo conceptual
-
-1. RobertDocument contiene información de cada documento.
-2. DocumentStatusMap lee estado, versión, fase, tags y riesgo.
-3. CurrentStatePanel resume documentos principales.
-4. LeftSidebar permite navegación por áreas.
-5. TopBar muestra el estado general de la fase.
-6. AppShell mantiene visible la estructura general.
-
-## Componentes involucrados
-
-- AppShell
-- DocumentStatusMap
-- CurrentStatePanel
-- LeftSidebar
-- TopBar
-
-## Modelos utilizados
-
-- RobertDocument
-- SystemState
-- ChangeRecord
-- DecisionRecord
-- ObsidianGraphStatus
-
-## Estados posibles
-
-- Borrador
-- En revisión
-- Pendiente de aprobación
-- Aprobado
-- Rechazado
-- Pausado
-- Reemplazado
-- Archivado
-- Histórico
-
----
-
-# FLUJO 9 — MODO ACTIVO
-
-## Objetivo
-
-Definir cómo Robert interpreta el modo operativo actual.
-
-## Modos permitidos en esta etapa
-
-- Manual
-- Supervisado
-- Sandbox
-
-## Flujo conceptual
-
-1. ModeSelector identifica el modo activo.
-2. CommandCenter interpreta la instrucción dentro de ese modo.
-3. RiskBadge ajusta el nivel de riesgo según el modo.
-4. ApprovalGate bloquea acciones que el modo no permita.
-5. CurrentStatePanel muestra el modo actual.
-6. TopBar muestra el modo activo.
-7. AppShell mantiene la interfaz dentro de los límites del modo.
-
-## Componentes involucrados
-
-- AppShell
-- ModeSelector
-- CommandCenter
-- RiskBadge
-- ApprovalGate
-- CurrentStatePanel
-- TopBar
-
-## Modelos utilizados
-
-- ModeState
-- CommandRequest
-- RiskRecord
-- SystemState
-
-## Regla de seguridad
-
-El modo activo nunca debe permitir más autonomía de la autorizada por SECURITY_RULES.
-
----
-
-# FLUJO 10 — RESPUESTA DE ROBERT
-
-## Objetivo
-
-Definir cómo Robert responde después de interpretar una instrucción.
-
-## Tipos de respuesta permitidos
-
-- Explicación.
-- Resumen.
-- Borrador.
-- Documento para copiar.
-- Revisión.
-- Corrección.
-- Clasificación.
-- Simulación.
-- Recomendación.
-- Solicitud de aprobación.
-- Bloqueo justificado.
-
-## Flujo conceptual
-
-1. CommandCenter interpreta la solicitud.
-2. RiskBadge evalúa el riesgo.
-3. ApprovalGate define si puede responder.
-4. Robert prepara la respuesta dentro del alcance permitido.
-5. Si requiere aprobación, Robert se detiene.
-6. Si no requiere aprobación, Robert entrega el resultado.
-7. Si la respuesta no cambia estado documental, no se registra ChangeRecord.
-8. Si la respuesta cambia estado documental, se actualiza SystemState.
-9. Robert no ejecuta acciones externas.
-
-## Componentes involucrados
-
-- CommandCenter
-- RiskBadge
-- ApprovalGate
-- CurrentStatePanel
-- TopBar
-
-## Modelos utilizados
-
-- CommandRequest
-- RiskRecord
-- ModeState
-- SystemState
-
-## Regla de actualización
-
-Una respuesta simple no genera cambio formal.
-
-Una respuesta genera actualización formal solo si:
-
-- Crea documento.
-- Modifica documento.
-- Cambia estado.
-- Registra decisión.
-- Registra cambio.
-- Cambia modo.
-- Crea decisión pendiente.
-- Bloquea una acción relevante.
-
----
-
-# FLUJO 11 — RESPALDO MANUAL EN GITHUB
-
-## Objetivo
-
-Definir cómo Robert interpreta el estado del respaldo documental manual en GitHub.
-
-## Flujo conceptual
-
-1. El usuario actualiza un documento en Obsidian.
-2. El usuario actualiza manualmente GitHub.
-3. GitHubBackupStatus refleja que el respaldo sigue siendo manual.
-4. CurrentStatePanel puede mostrar el estado de respaldo.
-5. DocumentStatusMap puede mostrar qué documentos están actualizados.
-6. TopBar puede mostrar última actualización manual si aplica.
-7. Robert no sincroniza automáticamente.
-
-## Componentes involucrados
-
-- CurrentStatePanel
-- DocumentStatusMap
-- TopBar
-
-## Modelos utilizados
-
-- GitHubBackupStatus
-- RobertDocument
-- SystemState
-
-## Regla de seguridad
-
-GitHub funciona solo como respaldo documental manual.
-
-No hay sincronización automática autorizada.
-
----
-
-# FLUJO 12 — GRAFO VISUAL DE OBSIDIAN
-
-## Objetivo
-
-Definir cómo Robert interpreta la organización visual de Obsidian.
-
-## Flujo conceptual
-
-1. ObsidianGraphStatus guarda la convención visual.
-2. ROBERT_HOME funciona como centro visual.
-3. ROBERT_CONTEXT_MASTER funciona como centro conceptual.
-4. Las órbitas representan función arquitectónica.
-5. Los colores representan capa o función visual.
-6. DocumentStatusMap puede usar esta lógica como referencia visual.
-7. CurrentStatePanel puede mostrar si la convención visual está actualizada.
-8. Robert no depende del grafo para ejecutar acciones.
-
-## Componentes involucrados
-
-- DocumentStatusMap
-- CurrentStatePanel
-- LeftSidebar
-- TopBar
-
-## Modelos utilizados
-
-- ObsidianGraphStatus
-- RobertDocument
-- SystemState
-
-## Regla de seguridad
-
-Obsidian Graph View funciona como navegación documental.
-
-No es el HUD final de Robert.
-
-No ejecuta acciones.
-
----
-
-# FLUJO 13 — ESTADO DE COMPONENTES
-
-## Objetivo
-
-Definir cómo Robert representa el estado de sus componentes principales.
-
-Este flujo corrige la ausencia de uso explícito del modelo ComponentState.
-
-## Flujo conceptual
-
-1. ComponentState representa cada componente del MVP técnico básico.
-2. AppShell recibe la lista de componentes disponibles.
-3. AppShell organiza visualmente los componentes.
-4. CurrentStatePanel muestra qué componentes están definidos documentalmente.
-5. DocumentStatusMap relaciona componentes con documentos técnicos.
-6. TopBar puede mostrar si el MVP técnico sigue en preparación.
-7. Robert no activa componentes reales porque no hay programación autorizada.
-
-## Componentes involucrados
-
-- AppShell
-- CurrentStatePanel
-- DocumentStatusMap
-- TopBar
-- LeftSidebar
-
-## Modelos utilizados
-
-- ComponentState
-- SystemState
-- RobertDocument
-
-## Componentes representados
-
-- AppShell
-- TopBar
-- LeftSidebar
-- CommandCenter
-- ModeSelector
-- RiskBadge
-- ApprovalGate
-- DecisionInbox
-- DocumentStatusMap
-- CurrentStatePanel
-
-## Estados posibles de componente
-
-- Definido documentalmente.
-- Pendiente de diseño.
-- Pendiente de revisión.
-- Pendiente de aprobación.
-- Aprobado documentalmente.
-- No implementado.
-- Bloqueado.
-- Futuro.
-
-## Regla de seguridad
-
-Que un componente esté definido documentalmente no significa que exista técnicamente.
-
-Definir un componente no autoriza programarlo.
-
----
-
-# DATOS QUE FLUYEN ENTRE COMPONENTES
-
-## AppShell recibe
-
-- system_state
-- component_list
-- active_mode
-- current_phase
-- active_document
-- layout_status
-
-## AppShell envía
-
-- No envía datos operativos.
-- No toma decisiones.
-- No ejecuta acciones.
-- Solo aloja y organiza componentes.
-
----
-
-## TopBar recibe
-
-- current_phase
-- active_mode
-- execution_status
-- risk_summary
-- last_decision
-- last_change
-- last_update
-- backup_status
-- pending_decision_count
-
-## TopBar envía
-
-- No envía decisiones.
-- No ejecuta acciones.
-- Solo muestra estado resumido.
-
----
-
-## LeftSidebar recibe
-
-- document_list
-- folder_structure
-- active_document
-- document_status
-- document_type
-- orbit_tag
-- module_list
-
-## LeftSidebar envía
-
-- selected_document
-- navigation_target
+Convertir una interacción del usuario en una unidad de trabajo estructurada.
+
+## Flujo
+
+```text
+USER
+↓
+COMMAND CENTER
+↓
+INPUT NORMALIZATION
+↓
+TASK
+```
+
+Task debe representar la intención de trabajo sin otorgarle Authority adicional.
 
 ## Regla
 
-LeftSidebar solo navega.
-
-No aprueba, no bloquea y no ejecuta.
-
----
-
-## CommandCenter envía
-
-- user_input
-- recognized_command
-- classified_intent
-- document_affected
-- module_affected
-- risk_level_preliminar
-
-## CommandCenter recibe
-
-- active_mode
-- allowed_actions
-- restricted_actions
-- current_context
-- active_document
+```text
+USER INPUT
+≠
+DIRECT EXECUTION
+```
 
 ---
 
-## ModeSelector envía
+# FLUJO 2 — TASK → REQUEST_CONTEXT
 
-- active_mode
-- restricted_modes
-- execution_allowed
-- automation_allowed
-- external_actions_allowed
-- agent_autonomy_allowed
+## Objetivo
 
-## ModeSelector recibe
+Construir Context suficiente y autorizado para procesar la Task.
 
-- mode_request
-- current_security_rules
-- user_confirmation_if_required
+Puede incluir:
 
----
+* current Phase;
+* active Mode;
+* selected Module;
+* relevant document refs;
+* Permission context;
+* Scope context;
+* relevant prior state.
 
-## RiskBadge envía
+Reglas:
 
-- risk_level
-- risk_reason
-- recommended_action
-- blocking_required
-- approval_recommended
+```text
+CONTEXT
+≠
+MEMORY
 
-## RiskBadge recibe
+REQUEST CONTEXT
+≠
+FULL USER CONTEXT
+```
 
-- command_request
-- active_mode
-- document_affected
-- action_type
-- security_rules
+Solo debe transferirse información necesaria.
 
 ---
 
-## ApprovalGate envía
+# FLUJO 3 — REQUEST_CONTEXT → ORCHESTRATOR
 
-- approval_required
-- approval_status
-- blocked_reason
-- next_allowed_action
-- pending_decision_required
+La Task y RequestContext se encapsulan en:
 
-## ApprovalGate recibe
+```text
+ORCHESTRATOR_REQUEST
+```
 
-- risk_record
-- command_request
-- mode_state
-- user_approval_if_available
+El Orchestrator recibe la solicitud.
+
+A partir de este punto la coordinación de Routing pertenece al Orchestrator.
 
 ---
 
-## DecisionInbox envía
+# FLUJO 4 — ROUTE RESOLUTION
 
-- pending_id
-- title
-- options_available
-- recommended_option
-- current_status
-- decision_required
+El Orchestrator determina qué capabilities son necesarias.
 
-## DecisionInbox recibe
+Puede resolver:
 
-- pending_decision
-- risk_record
-- approval_gate_result
-- related_document
-- related_change
+```text
+MODULE
+AGENT
+SKILL
+MODEL
+MEMORY
+VALIDATION
+TOOL
+```
 
----
+según la Task.
 
-## DocumentStatusMap envía
+Resultado conceptual:
 
-- document_name
-- document_status
-- version
-- decision_related
-- change_related
-- orbit_tag
-- document_type
-- risk_level_if_relevant
+```text
+ROUTE
+```
 
-## DocumentStatusMap recibe
+Reglas:
 
-- robert_document
-- decision_record
-- change_record
-- obsidian_graph_status
-- github_backup_status
+```text
+ROUTE
+≠
+ROUTING AUTHORITY
+
+ROUTE
+=
+OUTPUT OF ROUTING AUTHORITY
+```
 
 ---
 
-## CurrentStatePanel envía
+# FLUJO 5 — AGENT INTERACTION
 
-- current_phase
-- active_mode
-- last_decision
-- last_change
-- execution_status
-- programming_authorized
-- database_authorized
-- external_connections_authorized
-- automations_authorized
-- agents_authorized
+Cuando se requiera un Agent:
 
-## CurrentStatePanel recibe
+```text
+ORCHESTRATOR
+↓
+AGENT_REQUEST
+↓
+AGENT
+↓
+AGENT_RESULT
+↓
+ORCHESTRATOR
+```
 
-- system_state
-- decision_record
-- change_record
-- risk_record
-- pending_decision
-- github_backup_status
-- obsidian_graph_status
-- component_state
+El Agent:
 
----
+* recibe Scope limitado;
+* realiza trabajo especializado;
+* devuelve Result.
 
-## GitHubBackupStatus envía
+No puede ampliar su Scope.
 
-- repository_name
-- repository_status
-- backup_mode
-- last_checkpoint
-- manual_update_required
-- automatic_sync_enabled
-- external_connection_status
-- backup_risk_level
+No puede convertirse en Orchestrator.
 
-## GitHubBackupStatus recibe
-
-- manual_update_confirmation
-- document_updated
-- checkpoint_note
-
-## Regla
-
-GitHubBackupStatus solo representa respaldo manual.
-
-No sincroniza automáticamente.
+```text
+AGENT
+≠
+ORCHESTRATOR
+```
 
 ---
 
-## ObsidianGraphStatus envía
+# FLUJO 6 — SKILL INTERACTION
 
-- graph_status
-- visual_center
-- conceptual_center
-- orbit_rule
-- color_rule
-- tags_enabled
-- wikilinks_enabled
-- official_convention
+Cuando se requiera una Skill:
 
-## ObsidianGraphStatus recibe
+```text
+ORCHESTRATOR / AUTHORIZED AGENT CONTEXT
+↓
+SKILL_INVOCATION
+↓
+SKILL
+↓
+SKILL_RESULT
+```
 
-- visual_convention_update
-- tag_cleanup_status
-- graph_review_note
+La ejecución técnica futura puede utilizar Skill Runner.
 
-## Regla
+Pero:
 
-ObsidianGraphStatus representa navegación documental.
-
-No ejecuta acciones.
-
----
-
-## ComponentState envía
-
-- component_id
-- component_name
-- component_status
-- component_priority
-- layer_main
-- related_document
-- requires_data_model
-- requires_approval_gate
-- risk_level_if_relevant
-
-## ComponentState recibe
-
-- component_definition
-- related_spec_document
-- approval_status
-- review_status
-
-## Regla
-
-ComponentState representa componentes conceptuales.
-
-No significa que el componente ya exista como código.
+```text
+SKILL RUNNER
+≠
+EXECUTION AUTHORITY
+```
 
 ---
 
-# DATOS PROHIBIDOS EN LOS FLUJOS
+# FLUJO 7 — MODEL INTERACTION
 
-En esta etapa, ningún flujo debe mover, guardar o procesar:
+Cuando se requiera un Model:
 
-- Contraseñas.
-- API keys.
-- Tokens.
-- Datos bancarios.
-- Datos fiscales reales.
-- Datos legales confidenciales.
-- Correos privados.
-- Teléfonos de clientes reales.
-- Información personal sensible.
-- Listas reales de clientes.
-- Credenciales de herramientas.
-- Datos médicos.
-- Datos financieros operativos.
-- Documentos privados de terceros sin autorización.
+```text
+ORCHESTRATOR
+↓
+MODEL_REQUEST
+↓
+MODEL INTERFACE
+↓
+MODEL
+↓
+MODEL_RESPONSE
+↓
+ORCHESTRATOR
+```
 
----
+Los Models pueden incluir:
 
-# DATOS PERMITIDOS EN LOS FLUJOS
+* Claude;
+* ChatGPT;
+* future Models.
 
-Los flujos pueden usar únicamente datos documentales y simulados como:
+Reglas:
 
-- Nombre de documento.
-- Estado de documento.
-- Versión.
-- Fase relacionada.
-- Cambio relacionado.
-- Decisión relacionada.
-- Riesgo conceptual.
-- Modo activo.
-- Componente relacionado.
-- Estado de GitHub manual.
-- Estado de Obsidian Graph.
-- Notas de revisión.
-- Datos ficticios.
-- Datos de prueba no sensibles.
+```text
+MODEL ≠ TOOL
+
+MODEL OUTPUT ≠ DECISION
+
+MODEL OUTPUT ≠ TRUTH
+
+MODEL OUTPUT ≠ ROUTING AUTHORITY
+
+MODEL OUTPUT ≠ MEMORY WRITE
+```
 
 ---
 
-# REGLAS DE PAUSA
+# FLUJO 8 — MEMORY RETRIEVAL
 
-Robert debe pausar cuando:
+Cuando se requiera Memory:
 
-- Falte información importante.
-- Exista ambigüedad de alcance.
-- El usuario pida una acción real.
-- El usuario pida conectar herramientas.
-- El usuario pida automatizar.
-- El usuario pida programar sin aprobación formal.
-- El riesgo sea Nivel 3 o Nivel 4.
-- Nivel 2 afecte documento maestro, seguridad, fuente de verdad o fase.
-- La instrucción pueda afectar documentos maestros.
-- La instrucción contradiga SECURITY_RULES.
-- La instrucción pueda avanzar de fase sin aprobación.
+```text
+ORCHESTRATOR
+↓
+MEMORY RETRIEVAL REQUEST
+↓
+MEMORY RESOLVER
+↓
+AUTHORIZED MEMORY SOURCES
+↓
+MEMORY RETRIEVAL RESULT
+↓
+ORCHESTRATOR
+```
+
+La Request debe poder incluir:
+
+```text
+requester
+query
+memory_types
+retention_classes
+scope
+freshness_requirement
+confidence_requirement
+sensitivity_constraints
+max_results
+purpose
+```
+
+Reglas:
+
+```text
+CONTEXT ≠ MEMORY
+
+MEMORY RETRIEVAL SCOPE
+≠
+AUTHORIZED OPERATIONAL SCOPE
+```
 
 ---
 
-# REGLAS DE BLOQUEO
+# FLUJO 9 — MEMORY CANDIDATE
 
-Robert debe bloquear cuando:
+Cuando una salida pueda convertirse en candidato de Memory:
 
-- Se intente ejecutar una acción externa sin permiso.
-- Se pidan credenciales, tokens o contraseñas.
-- Se intente conectar apps reales sin fase autorizada.
-- Se intente activar agentes autónomos.
-- Se intente automatizar decisiones importantes.
-- Se intente modificar documentos maestros sin autorización.
-- Se intente avanzar a Fase 11 sin aprobación formal.
-- Se intente usar datos sensibles reales sin control.
+```text
+RESULT
+↓
+MEMORY_CANDIDATE
+↓
+MEMORY GOVERNANCE
+↓
+POTENTIAL FUTURE MEMORY_RECORD
+```
+
+Durante Fase 10:
+
+```text
+AUTOMATIC_MEMORY_WRITE = DISABLED
+```
+
+Por tanto:
+
+```text
+MEMORY_CANDIDATE
+≠
+AUTOMATIC MEMORY WRITE
+```
 
 ---
 
-# REGLAS DE APROBACIÓN
+# FLUJO 10 — TOOL REQUEST
 
-Robert debe pedir aprobación explícita cuando:
+Cuando una capability técnica requiera una Tool:
 
-- Se crea un documento técnico nuevo.
-- Se aprueba un documento.
-- Se integra un documento al estado oficial.
-- Se modifica una regla de seguridad.
-- Se modifica la fuente de verdad.
-- Se registra una decisión formal.
-- Se registra un cambio relevante.
-- Se cambia de fase.
-- Se prepara una futura conexión real.
-- Se acerca el proyecto a programación o ejecución.
-- Un riesgo Nivel 2 afecta documentos maestros, seguridad, fases o fuente de verdad.
+```text
+ORCHESTRATOR
+↓
+TOOL RESOLUTION
+↓
+TOOL_REQUEST
+↓
+PERMISSION / SCOPE / SECURITY / APPROVAL CHECK
+↓
+TOOL INTERFACE
+```
+
+Durante Fase 10 el flujo termina antes de ejecución real:
+
+```text
+REAL_TOOL_EXECUTION = DISABLED
+```
+
+Reglas:
+
+```text
+TOOL REQUEST
+≠
+TOOL AUTHORIZATION
+
+TOOL AVAILABLE
+≠
+TOOL ALLOWED
+
+MODEL TOOL REQUEST
+≠
+DIRECT TOOL EXECUTION
+
+AGENT TOOL REQUEST
+≠
+DIRECT TOOL EXECUTION
+```
+
+---
+
+# FLUJO 11 — FUTURE TOOL RESULT
+
+En una fase futura autorizada:
+
+```text
+TOOL INTERFACE
+↓
+TOOL ADAPTER
+↓
+PROVIDER
+↓
+TOOL_RESULT
+↓
+VALIDATION
+↓
+ORCHESTRATOR
+```
+
+Tool Result no es verdad automática.
+
+```text
+TOOL RESULT
+≠
+TRUTH
+
+TOOL RESULT
+≠
+MEMORY WRITE
+```
+
+---
+
+# FLUJO 12 — VALIDATION
+
+Validation puede aplicarse en distintos puntos.
+
+Flujo conceptual:
+
+```text
+TARGET
+↓
+VALIDATION_REQUEST
+↓
+VALIDATION RESOLVER
+↓
+VALIDATOR ROLE / RULE SYSTEM
+↓
+VALIDATION_RESULT
+↓
+ORCHESTRATOR
+```
+
+La arquitectura reconoce:
+
+```text
+VALIDATION_TYPE
+≠
+REVIEWER_ROLE
+```
+
+Validation no autoriza.
+
+```text
+VALIDATION
+≠
+APPROVAL
+
+VALIDATION
+≠
+EXECUTION AUTHORITY
+
+VALIDATION PASS
+≠
+TRUTH
+```
+
+---
+
+# FLUJO 13 — PERMISSION CHECK
+
+Cuando una operación requiera Permission:
+
+```text
+REQUEST
+↓
+PERMISSION_CHECK
+↓
+ALLOW / DENY / REQUIRED STATE
+```
+
+Regla:
+
+```text
+PERMISSION
+≠
+SCOPE
+
+PERMISSION
+≠
+EXECUTION AUTHORITY
+```
+
+---
+
+# FLUJO 14 — SCOPE CHECK
+
+```text
+REQUESTED OPERATION
+↓
+SCOPE_CHECK
+↓
+WITHIN SCOPE / OUTSIDE SCOPE
+```
+
+Regla:
+
+```text
+REQUESTED SCOPE
+≠
+AUTHORIZED SCOPE
+```
+
+Una operación fuera de Scope debe producir Block o safe failure según Governance.
+
+---
+
+# FLUJO 15 — RISK ASSESSMENT
+
+```text
+TASK / OPERATION
+↓
+RISK_ASSESSMENT
+↓
+RISK STATE
+```
+
+Escala oficial:
+
+```text
+0 — INFORMATIONAL
+1 — LOW
+2 — MEDIUM
+3 — HIGH
+4 — CRITICAL
+```
+
+Reglas:
+
+```text
+RISK
+≠
+PERMISSION
+
+RISK
+≠
+AUTONOMY
+
+RISK
+≠
+EXECUTION AUTHORITY
+```
+
+Importante:
+
+El Risk Level por sí mismo no define automáticamente el comportamiento completo.
+
+La respuesta depende también de:
+
+* Permission;
+* Scope;
+* Security;
+* Approval requirements;
+* Phase;
+* operation type;
+* side effects;
+* specialized policies.
+
+---
+
+# FLUJO 16 — APPROVAL
+
+Cuando una operación requiere Approval:
+
+```text
+ACTION PROPOSAL
+↓
+APPROVAL_REQUEST
+↓
+AUTHORIZED HUMAN / AUTHORITY
+↓
+APPROVAL_RESULT
+↓
+ORCHESTRATOR
+```
+
+La UI puede representar este estado con ApprovalGate.
+
+Pero:
+
+```text
+APPROVAL GATE
+≠
+APPROVAL AUTHORITY
+```
+
+---
+
+# FLUJO 17 — BLOCK
+
+Si una condición bloqueante existe:
+
+```text
+REQUEST
+↓
+CHECK
+↓
+BLOCK
+↓
+AUDIT_EVENT
+↓
+SAFE RESPONSE
+```
+
+El Block debe expresar:
+
+* reason;
+* relevant policy;
+* affected operation;
+* next allowed step cuando aplique.
+
+---
+
+# FLUJO 18 — ERROR
+
+Cuando ocurre un Error:
+
+```text
+COMPONENT
+↓
+ERROR
+↓
+ERROR / BLOCKING HANDLING
+↓
+AUDIT
+↓
+SAFE RESULT / RETRY / STOP
+```
+
+La taxonomía principal pertenece a:
+
+```text
+ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC v0.2
+```
+
+Interaction Flow no crea una segunda taxonomía.
+
+---
+
+# FLUJO 19 — ORCHESTRATOR RESULT
+
+Después de coordinar trabajo y checks:
+
+```text
+ORCHESTRATOR
+↓
+ORCHESTRATOR_RESULT
+```
+
+El Result puede contener:
+
+* status;
+* output;
+* references;
+* Validation state;
+* Risk state;
+* Approval state;
+* Block;
+* next step.
+
+El Orchestrator Result no autoriza por sí mismo acciones futuras.
+
+---
+
+# FLUJO 20 — AUDIT
+
+Actividad relevante produce:
+
+```text
+AUDIT_EVENT
+```
+
+El Audit debe permitir reconstruir:
+
+* Task;
+* Actor;
+* component;
+* action;
+* Permission state;
+* Scope state;
+* Risk state;
+* Approval state;
+* Validation state;
+* Result;
+* evidence.
+
+Regla:
+
+```text
+AUDIT
+≠
+AUTHORITY
+```
+
+---
+
+# FLUJO 21 — PRESENTATION
+
+Los resultados autorizados llegan a Presentation.
+
+```text
+ORCHESTRATOR_RESULT
++
+SYSTEM STATE
++
+AUDITABLE STATUS
+↓
+UI STATE
+↓
+USER
+```
+
+Los componentes UI pueden mostrar información.
+
+No crean estado canónico solo por mostrarlo.
+
+---
+
+# FLUJO 22 — DOCUMENT DRAFT
+
+Para una solicitud documental:
+
+```text
+USER
+↓
+TASK
+↓
+ORCHESTRATOR
+↓
+DOCUMENT-RELATED CAPABILITY
+↓
+DRAFT
+↓
+VALIDATION
+↓
+USER
+```
+
+Regla:
+
+```text
+DRAFT
+≠
+APPROVAL
+```
+
+---
+
+# FLUJO 23 — DOCUMENT APPROVAL
+
+Cuando el usuario aprueba explícitamente un documento:
+
+```text
+USER APPROVAL
+↓
+APPROVAL_RESULT
+↓
+DECISION
+↓
+CHANGE IF APPLIED
+↓
+DOCUMENT STATE UPDATE
+↓
+AUDIT
+↓
+UI STATE UPDATE
+```
+
+Reglas:
+
+```text
+APPROVAL
+≠
+CHANGE
+
+DECISION
+≠
+CHANGE
+
+DOCUMENT APPROVAL
+≠
+CODE AUTHORIZATION
+```
+
+---
+
+# FLUJO 24 — DOCUMENT CHANGE
+
+Cuando una corrección es aplicada:
+
+```text
+AUTHORIZED CHANGE REQUEST
+↓
+CHANGE
+↓
+DOCUMENT UPDATE
+↓
+AUDIT
+↓
+STATE UPDATE
+```
+
+No debe registrarse un Change que no haya ocurrido realmente.
+
+---
+
+# FLUJO 25 — PENDING DECISION
+
+Cuando se requiere intervención humana:
+
+```text
+TASK
+↓
+APPROVAL / DECISION REQUIRED
+↓
+PENDING STATE
+↓
+DECISION INBOX
+↓
+USER
+```
+
+No se resuelve automáticamente.
+
+---
+
+# FLUJO 26 — SYSTEM STATE UPDATE
+
+`SystemState` puede utilizarse como View Model agregado.
+
+Debe actualizarse cuando exista un cambio material como:
+
+* Phase;
+* Mode;
+* Decision;
+* Change;
+* Block;
+* Approval state relevante;
+* implementation state;
+* current capability state.
+
+No toda respuesta requiere SystemState mutation.
+
+```text
+RESPONSE
+≠
+STATE CHANGE
+```
+
+---
+
+# FLUJO 27 — SIMPLE INFORMATION RESPONSE
+
+Para una consulta puramente informativa:
+
+```text
+USER
+↓
+TASK
+↓
+ORCHESTRATOR
+↓
+RELEVANT CAPABILITY
+↓
+RESULT
+↓
+USER
+```
+
+No necesita crear:
+
+```text
+DECISION
+CHANGE
+MEMORY WRITE
+FORMAL AUDIT RECORD
+```
+
+salvo que alguna política específica lo requiera.
+
+---
+
+# FLUJO 28 — MANUAL GITHUB BACKUP
+
+Durante Fase 10:
+
+```text
+LOCAL DOCUMENT CHANGE
+↓
+USER MANUAL ACTION
+↓
+GITHUB
+↓
+USER CONFIRMATION
+↓
+GitHubBackupStatus VIEW UPDATE
+```
+
+Robert no debe afirmar que GitHub fue actualizado sin evidencia o confirmación.
+
+```text
+SUGGESTED COMMIT
+≠
+COMPLETED COMMIT
+```
+
+---
+
+# FLUJO 29 — OBSIDIAN GRAPH VIEW
+
+```text
+DOCUMENT METADATA
+↓
+ObsidianGraphStatus
+↓
+VISUAL REPRESENTATION
+```
+
+Regla:
+
+```text
+GRAPH VIEW
+≠
+SYSTEM EXECUTION
+```
+
+---
+
+# FLUJO 30 — COMPONENT STATE
+
+`ComponentState` representa estado de componentes.
+
+Puede alimentar UI.
+
+Estados conceptuales pueden incluir:
+
+* Defined;
+* Approved;
+* Not implemented;
+* Blocked;
+* Future;
+* Deprecated.
+
+Pero:
+
+```text
+COMPONENT DEFINED
+≠
+COMPONENT IMPLEMENTED
+```
+
+---
+
+# RELACIÓN CON AGENT RUNNER
+
+Durante futura implementación puede existir un `Agent Runner`.
+
+Flujo:
+
+```text
+ORCHESTRATOR
+↓
+AGENT_REQUEST
+↓
+AGENT_RUNNER
+↓
+SELECTED AGENT
+↓
+AGENT_RESULT
+```
+
+Architectural Growth Check:
+
+```text
+ENTITY:
+AGENT RUNNER
+
+TYPE:
+TECHNICAL RUNTIME COMPONENT
+
+NEW CANONICAL AUTHORITY:
+NO
+
+ROUTING AUTHORITY:
+NO
+
+PERMISSION AUTHORITY:
+NO
+
+EXECUTION AUTHORITY:
+NO
+```
+
+Regla:
+
+```text
+AGENT RUNNER
+≠
+ROUTING AUTHORITY
+```
+
+---
+
+# RELACIÓN CON SKILL RUNNER
+
+Futuro flujo:
+
+```text
+SKILL_INVOCATION
+↓
+SKILL_RUNNER
+↓
+SKILL
+↓
+SKILL_RESULT
+```
+
+Architectural Growth Check:
+
+```text
+ENTITY:
+SKILL RUNNER
+
+TYPE:
+TECHNICAL RUNTIME COMPONENT
+
+NEW CANONICAL AUTHORITY:
+NO
+
+ROUTING AUTHORITY:
+NO
+
+TOOL AUTHORIZATION:
+NO
+
+EXECUTION AUTHORITY:
+NO
+```
+
+---
+
+# RELACIÓN CON AUDIT WRITER
+
+Futuro flujo:
+
+```text
+AUDITABLE EVENT
+↓
+AUDIT WRITER
+↓
+AUDIT_EVENT
+↓
+AUDIT STORAGE
+```
+
+Architectural Growth Check:
+
+```text
+ENTITY:
+AUDIT WRITER
+
+TYPE:
+TECHNICAL RUNTIME COMPONENT
+
+NEW CANONICAL AUTHORITY:
+NO
+
+ROUTING AUTHORITY:
+NO
+
+APPROVAL AUTHORITY:
+NO
+
+EXECUTION AUTHORITY:
+NO
+```
+
+---
+
+# DATA MINIMIZATION DURING FLOW
+
+Los componentes solo deben recibir la información mínima necesaria.
+
+Regla:
+
+```text
+COMPONENT INPUT
+=
+MINIMUM NECESSARY DATA
+```
+
+No enviar automáticamente:
+
+```text
+FULL MEMORY
+FULL SESSION
+FULL USER PROFILE
+FULL DOCUMENT STORE
+FULL MODEL HISTORY
+```
+
+a cada componente.
+
+---
+
+# SENSITIVE DATA FLOW
+
+Credenciales y secretos no deben circular como payload general.
+
+```text
+SECRET
+≠
+GENERAL CONTEXT FIELD
+```
+
+Ejemplos:
+
+* API keys;
+* tokens;
+* passwords;
+* provider secrets;
+* private credentials.
+
+La futura implementación deberá usar infraestructura segura especializada.
+
+---
+
+# VALIDATION POINTS
+
+Validation puede ocurrir:
+
+1. después de input normalization;
+2. después de Context retrieval;
+3. después de Model Response;
+4. después de Agent Result;
+5. después de Skill Result;
+6. después de Tool Result;
+7. antes de final Result;
+8. antes de Memory Candidate acceptance;
+9. antes de side effects futuros cuando aplique.
+
+Validation exacta depende del Route y del Risk.
+
+---
+
+# APPROVAL POINTS
+
+Approval puede requerirse antes de:
+
+* modificar estado oficial;
+* integrar documentos;
+* ejecutar side effects;
+* utilizar Tools de escritura;
+* operaciones externas;
+* operaciones sensibles;
+* avanzar de Phase;
+* cambios de Governance;
+* cambios de Autonomy.
+
+Approval requirements no son definidos únicamente por este documento.
+
+---
+
+# AUDIT POINTS
+
+Audit puede producirse en:
+
+```text
+TASK CREATED
+ROUTE SELECTED
+AGENT INVOKED
+SKILL INVOKED
+MODEL CALLED
+MEMORY RETRIEVED
+TOOL REQUESTED
+TOOL RESULT RECEIVED
+VALIDATION COMPLETED
+PERMISSION CHECKED
+SCOPE CHECKED
+RISK ASSESSED
+APPROVAL REQUESTED
+APPROVAL RESOLVED
+BLOCK CREATED
+ERROR CREATED
+DECISION CREATED
+CHANGE APPLIED
+RESULT RETURNED
+```
+
+según relevancia.
+
+---
+
+# ERROR PROPAGATION
+
+Errors no deben perderse silenciosamente entre componentes.
+
+Flujo:
+
+```text
+LOWER COMPONENT ERROR
+↓
+STANDARD ERROR CONTRACT
+↓
+ORCHESTRATOR
+↓
+POLICY
+↓
+RETRY / BLOCK / SAFE FAILURE
+↓
+AUDIT
+↓
+USER-FACING STATE
+```
+
+---
+
+# RETRY FLOW
+
+Cuando Retry esté permitido:
+
+```text
+ERROR
+↓
+RETRY POLICY CHECK
+↓
+RETRY
+↓
+RESULT
+```
+
+Cada intento debe conservar correlación.
+
+Retry no debe duplicar side effects.
+
+---
+
+# IDEMPOTENCY FLOW
+
+Para futuras operaciones con side effects:
+
+```text
+REQUEST
+↓
+IDEMPOTENCY CHECK
+↓
+EXECUTION
+↓
+RESULT
+```
+
+El Contract o Tool Policy correspondiente definirá detalles.
+
+---
+
+# TIMEOUT FLOW
+
+Una futura integración debe poder manejar:
+
+```text
+REQUEST
+↓
+TIMEOUT
+↓
+ERROR
+↓
+RETRY / BLOCK / FALLBACK
+```
+
+según política.
+
+---
+
+# FALLBACK FLOW
+
+Fallback solo puede utilizarse si está autorizado.
+
+```text
+PRIMARY CAPABILITY FAILED
+↓
+FALLBACK POLICY
+↓
+AUTHORIZED ALTERNATIVE
+```
+
+Regla:
+
+```text
+FALLBACK
+≠
+SILENT PROVIDER SWITCH WITH NEW AUTHORITY
+```
+
+---
+
+# PROVIDER INDEPENDENCE
+
+El flujo debe depender de interfaces canónicas.
+
+```text
+ROBERT
+↓
+MODEL INTERFACE / TOOL INTERFACE
+↓
+ADAPTER
+↓
+PROVIDER
+```
+
+No:
+
+```text
+CORE LOGIC
+→
+DIRECT PROVIDER DEPENDENCY
+```
+
+---
+
+# FLOW AND BUILD ORDER
+
+La implementación debe respetar:
+
+```text
+ROBERT_BUILD_ORDER v0.1
+DECISIÓN #040
+CAMBIO #065
+```
+
+Este Interaction Flow no modifica el orden de construcción.
+
+```text
+INTERACTION FLOW
+≠
+BUILD ORDER
+```
+
+---
+
+# COMPONENT DATA FLOW — APPSHELL
+
+Recibe:
+
+```text
+ui_state
+system_state
+component_state
+active_document
+navigation_state
+```
+
+Produce:
+
+```text
+layout rendering
+user interaction surfaces
+```
+
+No produce Routing Decisions.
+
+---
+
+# COMPONENT DATA FLOW — TOPBAR
+
+Recibe:
+
+```text
+current_phase
+active_mode
+execution_state
+risk_summary
+last_decision
+last_change
+pending_count
+```
+
+Produce:
+
+```text
+visual state
+```
+
+---
+
+# COMPONENT DATA FLOW — LEFTSIDEBAR
+
+Recibe:
+
+```text
+document_list
+module_list
+navigation_structure
+active_document
+```
+
+Produce:
+
+```text
+navigation_selection
+```
+
+Navigation selection se convierte en Context input.
+
+No en Routing Authority.
+
+---
+
+# COMPONENT DATA FLOW — COMMANDCENTER
+
+Recibe:
+
+```text
+user_input
+active_ui_context
+```
+
+Produce:
+
+```text
+task_input
+```
+
+La creación técnica final de Task debe seguir Implementation Contracts.
+
+---
+
+# COMPONENT DATA FLOW — MODESELECTOR
+
+Recibe:
+
+```text
+available_modes
+active_mode
+mode_constraints
+```
+
+Produce:
+
+```text
+mode_change_request
+```
+
+No modifica Governance directamente.
+
+---
+
+# COMPONENT DATA FLOW — RISKBADGE
+
+Recibe:
+
+```text
+risk_assessment
+```
+
+Produce:
+
+```text
+risk_display
+```
+
+---
+
+# COMPONENT DATA FLOW — APPROVALGATE
+
+Recibe:
+
+```text
+approval_request
+approval_result
+block_state
+```
+
+Produce:
+
+```text
+approval_ui_state
+user_approval_input
+```
+
+User input debe regresar a Governance/Orchestrator.
+
+No resolverse dentro del UI.
+
+---
+
+# COMPONENT DATA FLOW — DECISIONINBOX
+
+Recibe:
+
+```text
+pending_decisions
+decision_status
+```
+
+Produce:
+
+```text
+user_decision_input
+```
+
+---
+
+# COMPONENT DATA FLOW — DOCUMENTSTATUSMAP
+
+Recibe:
+
+```text
+document_state
+decision_refs
+change_refs
+lifecycle_state
+```
+
+Produce:
+
+```text
+document_selection
+visual_document_map
+```
+
+---
+
+# COMPONENT DATA FLOW — CURRENTSTATEPANEL
+
+Recibe:
+
+```text
+system_state
+task_state
+risk_state
+permission_state
+scope_state
+approval_state
+validation_state
+audit_summary
+```
+
+Produce:
+
+```text
+human-readable system status
+```
+
+---
+
+# LEGACY FLOW RECONCILIATION
+
+El flujo histórico:
+
+```text
+CommandCenter
+→
+ModeSelector
+→
+RiskBadge
+→
+ApprovalGate
+→
+DecisionInbox
+→
+Robert prepares response
+```
+
+se conserva únicamente como:
+
+```text
+UI REPRESENTATION OF
+THE INTERNAL FLOW
+```
+
+No como backend architecture.
+
+El flujo interno correcto es:
+
+```text
+TASK
+→
+ORCHESTRATOR
+→
+GOVERNED ROUTING
+→
+RESULT
+```
+
+---
+
+# RISK LEVEL 2 CORRECTION
+
+La versión original establecía un comportamiento demasiado rígido para Risk 2.
+
+La arquitectura actual establece:
+
+```text
+RISK LEVEL
+ALONE
+DOES NOT DETERMINE
+APPROVAL REQUIREMENT
+```
+
+Risk 2 puede requerir:
+
+* warning;
+* Validation;
+* Scope Check;
+* Approval;
+
+o simplemente continuar,
+
+dependiendo de la política de la operación.
+
+Por tanto, se elimina la regla global:
+
+```text
+RISK 2
+=
+ALWAYS CONFIRM SCOPE
+```
+
+como obligación universal.
+
+---
+
+# RISK LEVEL 3 AND 4
+
+Tampoco deben interpretarse exclusivamente por una tabla UI.
+
+La política específica puede bloquear, requerir Approval o limitar acción.
+
+La escala permanece:
+
+```text
+0–4
+```
+
+pero:
+
+```text
+RISK
+≠
+PERMISSION
+
+RISK
+≠
+EXECUTION AUTHORITY
+```
+
+---
+
+# RULES FOR PAUSE
+
+Una operación puede pausar cuando:
+
+* falta información requerida;
+* falta Approval;
+* Scope es ambiguo;
+* existe Validation incompleta;
+* existe Conflict;
+* existe una dependencia faltante;
+* una política obliga a esperar input humano.
+
+Pausa no implica automáticamente Error.
+
+---
+
+# RULES FOR BLOCK
+
+Una operación debe Block cuando una política vinculante lo requiera.
+
+Ejemplos:
+
+* Permission denied;
+* Scope exceeded;
+* prohibited operation;
+* unauthorized Tool execution;
+* unauthorized Agent autonomy;
+* incorrect Phase;
+* Critical security conflict.
+
+El tipo exacto debe seguir Error & Blocking Spec.
+
+---
+
+# RULES FOR APPROVAL
+
+Approval debe basarse en:
+
+* operation type;
+* policy;
+* Scope;
+* Risk;
+* side effects;
+* document authority;
+* Phase;
+* user authority.
+
+No debe basarse únicamente en el componente visual ApprovalGate.
+
+---
+
+# DATA PROTECTION
+
+Los flujos deben minimizar exposición de:
+
+* sensitive data;
+* credentials;
+* private documents;
+* external provider secrets.
+
+Cuando sea posible:
+
+```text
+REFERENCE
+OVER
+FULL PAYLOAD
+```
+
+---
+
+# SYSTEM STATE UPDATE RULE
+
+Actualizar SystemState únicamente cuando exista estado material nuevo.
+
+Ejemplos:
+
+* Phase;
+* implementation status;
+* Mode;
+* active Block;
+* Decision;
+* Change;
+* significant capability state.
+
+No actualizarlo solo porque:
+
+* se explicó algo;
+* se generó texto;
+* se hizo análisis;
+* se consultó información.
+
+---
+
+# UI STATE UPDATE RULE
+
+UI State sí puede cambiar sin que cambie SystemState.
+
+Ejemplos:
+
+* selected tab;
+* selected document;
+* expanded panel;
+* temporary loading state;
+* temporary Validation display.
+
+Se formaliza:
+
+```text
+UI STATE
+≠
+SYSTEM STATE
+```
+
+---
+
+# CONTRACT FAILURE
+
+Si un componente recibe un Contract inválido:
+
+```text
+CONTRACT VALIDATION FAIL
+↓
+ERROR
+↓
+BLOCK / SAFE FAILURE
+↓
+AUDIT
+```
+
+No debe continuar con campos críticos faltantes mediante inferencia silenciosa.
+
+---
+
+# MISSING DATA
+
+Debe distinguirse:
+
+```text
+MISSING
+```
+
+de:
+
+```text
+NULL
+```
+
+cuando la semántica del Contract lo requiera.
+
+---
+
+# FLOW OBSERVABILITY
+
+Una futura implementación debe permitir correlación mediante:
+
+```text
+task_id
+request_id
+route_id
+audit_event_id
+```
+
+cuando aplique.
+
+Esto permite reconstruir el recorrido de una Task.
+
+---
+
+# NO AUTONOMOUS AGENT-TO-AGENT MESSAGING
+
+Agents no deben crear una red autónoma de mensajes directos.
+
+Comunicación conceptual:
+
+```text
+AGENT A
+↓
+ORCHESTRATOR / CONTROLLED CONTEXT TRANSFER
+↓
+AGENT B
+```
+
+No:
+
+```text
+AGENT A
+↔
+AGENT B
+AUTONOMOUSLY
+```
+
+---
+
+# CONTEXT TRANSFER
+
+Todo Context Transfer debe:
+
+* tener propósito;
+* limitar contenido;
+* respetar Scope;
+* minimizar datos;
+* evitar secretos innecesarios;
+* ser mediado por Orchestrator cuando atraviese componentes especializados.
+
+---
+
+# TOOL FLOW BOUNDARY IN PHASE 10
+
+Aunque Tool Architecture está aprobada:
+
+```text
+TOOL REQUEST
+CAN BE REPRESENTED
+```
+
+pero:
+
+```text
+REAL TOOL EXECUTION
+=
+DISABLED
+```
+
+Este documento no debe mostrar un Tool Result real como si hubiese ocurrido.
+
+---
+
+# MEMORY FLOW BOUNDARY IN PHASE 10
+
+Memory Architecture está aprobada.
+
+Pero:
+
+```text
+AUTOMATIC MEMORY WRITE
+=
+DISABLED
+```
+
+Por tanto:
+
+```text
+RESULT
+→
+MEMORY_CANDIDATE
+```
+
+puede representarse conceptualmente.
+
+No:
+
+```text
+RESULT
+→
+AUTOMATIC MEMORY_RECORD
+```
+
+---
+
+# AGENT FLOW BOUNDARY IN PHASE 10
+
+Agent Architecture está aprobada.
+
+Pero:
+
+```text
+AUTONOMOUS AGENTS
+=
+DISABLED
+```
+
+Agent flows pueden diseñarse.
+
+No deben interpretarse como runtime activo actual.
 
 ---
 
 # CRITERIOS DE ACEPTACIÓN
 
-Este documento podrá considerarse listo para aprobación si:
+Este documento cumple cuando:
 
-- Define flujos claros entre componentes.
-- Usa los modelos de DATA_MODEL_SPEC v0.1.
-- Respeta COMPONENTS_SPEC v0.2.
-- Respeta SECURITY_RULES.
-- Respeta CONTEXT_MASTER v0.5.
-- Respeta PHASES v0.5.
-- Mantiene a Robert en Fase 10.
-- No autoriza programación.
-- No autoriza base de datos real.
-- No autoriza conexiones externas.
-- No autoriza automatizaciones.
-- No autoriza agentes autónomos.
-- Incluye reglas de pausa, bloqueo y aprobación.
-- Aclara el rol de AppShell.
-- Declara qué reciben TopBar y LeftSidebar.
-- Usa ComponentState en un flujo explícito.
-- Integra GitHubBackupStatus y ObsidianGraphStatus en datos que fluyen.
-- Define cómo manejar riesgo Nivel 2.
-- Define cuándo SystemState debe actualizarse.
-- Mantiene control total del usuario.
-
----
-
-# RIESGO DEL DOCUMENTO
-
-Tipo de cambio:
-
-**Cambio técnico documental / flujo conceptual de interacción**
-
-Nivel de riesgo inicial:
-
-**Nivel 3 — Alto**
-
-Motivo:
-
-Este documento define cómo interactuarían conceptualmente los componentes del MVP técnico básico. Aunque no programa nada, acerca el proyecto a una futura implementación técnica.
-
-Nivel de riesgo final esperado:
-
-**Nivel 2 — Medio**
-
-Motivo de reducción:
-
-El documento es conceptual, no crea código, no conecta herramientas externas, no automatiza acciones y no ejecuta nada.
-
-Nivel de autonomía:
-
-**Nivel 0 — Sin autonomía ejecutiva**
+* el Orchestrator es Routing Authority;
+* Interaction Flow no crea Routing paralelo;
+* UI components no se presentan como Authorities;
+* `TASK` inicia el flujo técnico;
+* `REQUEST_CONTEXT` está integrado;
+* `ORCHESTRATOR_REQUEST` está integrado;
+* `ROUTE` está integrado;
+* Agent flow está integrado;
+* Skill flow está integrado;
+* Model flow está integrado;
+* Memory Retrieval está integrado;
+* Memory Candidate está integrado;
+* Tool Request está integrado;
+* Validation está integrada;
+* Permission Check está integrado;
+* Scope Check está integrado;
+* Risk Assessment está integrado;
+* Approval Request / Result están integrados;
+* Error y Block están integrados;
+* Orchestrator Result está integrado;
+* Audit Event está integrado;
+* Presentation recibe estado sin gobernarlo;
+* Legacy Data Models quedan como View Models;
+* Risk no se confunde con Permission;
+* ApprovalGate no es Approval Authority;
+* RiskBadge no es Risk Authority;
+* CommandCenter no es Router;
+* Data Minimization está incorporada;
+* provider independence está incorporada;
+* no existe Agent-to-Agent messaging autónomo;
+* Fase 10 continúa sin ejecución real.
 
 ---
 
-# ESTADO DE APROBACIÓN
+# RISK DEL DOCUMENTO
 
-Este documento está formalmente:
+Tipo:
 
 ```text
-APPROVED
+TECHNICAL DOCUMENTATION /
+INTERACTION FLOW
+```
+
+Risk histórico:
+
+```text
+INITIAL = 3
+FINAL = 2
+```
+
+Esta normalización no altera la evaluación histórica.
+
+Escala vigente:
+
+```text
+0–4
+```
+
+---
+
+# CURRENT ARCHITECTURAL INTEGRATION STATE
+
+```text
+DOCUMENT:
+ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC
+
+VERSION:
+0.2
+
+STATUS:
+APPROVED / INTEGRATED / CANONICALLY NORMALIZED
+
+ORIGINAL DECISION:
+#014
+
+ORIGINAL CHANGES:
+#022
+#023
+
+CANONICAL_MODEL:
 INTEGRATED
+
+ORCHESTRATOR:
+MASTER ROUTING AUTHORITY
+
+IMPLEMENTATION_CONTRACTS:
+INTEGRATED
+
+AGENT_ARCHITECTURE:
+INTEGRATED
+
+SKILL_ARCHITECTURE:
+INTEGRATED
+
+MODEL_INTERFACE:
+INTEGRATED
+
+MEMORY_ARCHITECTURE:
+INTEGRATED
+
+VALIDATION_ARCHITECTURE:
+INTEGRATED
+
+TOOL_ARCHITECTURE:
+INTEGRATED
+
+DATA_MODEL:
+INTEGRATED
+
+ERROR_BLOCKING:
+INTEGRATED
+
+AUDIT_TRAIL:
+INTEGRATED
+
+UI_COMPONENTS:
+PRESENTATION ONLY
+
+TECHNICAL_IMPLEMENTATION:
+NOT STARTED
+
+REAL_TOOL_EXECUTION:
+DISABLED
+
+AUTOMATIC_MEMORY_WRITE:
+DISABLED
+
+AUTONOMOUS_AGENTS:
+DISABLED
+
+AUTONOMY_LEVEL:
+0
+
+EXECUTION_AUTHORITY:
+NONE
 ```
 
-La trazabilidad correspondiente se encuentra registrada en:
+---
+
+# EFECTO DE ESTA NORMALIZACIÓN
+
+Esta normalización:
 
 ```text
-ROBERT_DECISIONS_LOG
-ROBERT_CONTROL_DE_CAMBIOS
+DOES NOT CREATE
+A NEW DECISION
+
+DOES NOT CREATE
+A NEW APPROVAL
+
+DOES NOT AUTHORIZE
+IMPLEMENTATION
+
+DOES NOT AUTHORIZE
+TOOL EXECUTION
+
+DOES NOT AUTHORIZE
+AUTONOMOUS AGENTS
 ```
 
-No requiere nueva aprobación para reconocer su estado vigente.
+Sí:
+
+* subordina Interaction Flow al Orchestrator;
+* integra Implementation Contracts;
+* convierte el flujo UI antiguo en representación visual del flujo interno;
+* elimina `RiskBadge` como pseudo Risk evaluator con autoridad;
+* elimina `ApprovalGate` como pseudo Approval authority;
+* elimina `CommandCenter` como pseudo Router;
+* integra Agents;
+* integra Skills;
+* integra Models;
+* integra Memory;
+* integra Tools;
+* integra Validation;
+* integra Permission;
+* integra Scope;
+* integra Audit;
+* integra Error / Blocking;
+* añade Data Minimization;
+* añade Context Transfer controlado;
+* añade contract validation;
+* añade observability;
+* mantiene límites estrictos de Fase 10.
 
 ---
 
 # RESTRICCIONES
 
-La aprobación documental no autoriza:
-
-```text
-PROGRAMMING
-AUTOMATIC EXECUTION
-EXTERNAL CONNECTIONS
-AUTONOMOUS AGENTS
-AUTOMATIC PHASE TRANSITION
-PHASE 11
-```
-
 Se mantiene:
 
 ```text
+TECHNICAL_IMPLEMENTATION = NOT STARTED
+
+REAL_TOOL_EXECUTION = DISABLED
+
+AUTOMATIC_MEMORY_WRITE = DISABLED
+
+AUTONOMOUS_AGENTS = DISABLED
+
 AUTONOMY_LEVEL = 0
+
 EXECUTION_AUTHORITY = NONE
 ```
 
@@ -1553,8 +2829,58 @@ EXECUTION_AUTHORITY = NONE
 
 # CIERRE
 
-El documento permanece como especificación técnica documental aprobada dentro de Fase 10.
+`ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC v0.2` permanece como la especificación técnica aprobada de interacción de Robert.
 
-Su aprobación no implica implementación técnica productiva.
+Su función actual es:
 
-El usuario mantiene control total.
+```text
+DEFINE
+HOW INFORMATION MOVES
+WITHOUT REDEFINING
+WHO HAS AUTHORITY
+```
+
+Regla final:
+
+```text
+USER
+SETS AUTHORIZED INTENT
+
+ORCHESTRATOR
+COORDINATES AND ROUTES
+
+AGENTS
+SPECIALIZE
+
+SKILLS
+PROVIDE PROCEDURES
+
+MODELS
+PROVIDE INTELLIGENCE
+
+TOOLS
+PROVIDE TECHNICAL CAPABILITY
+
+MEMORY
+PROVIDES AUTHORIZED CONTEXTUAL RETRIEVAL
+
+VALIDATION
+CHECKS
+
+GOVERNANCE
+CONTROLS
+
+AUDIT
+RECORDS
+
+UI
+PRESENTS
+```
+
+Y siempre:
+
+```text
+INTERACTION FLOW
+≠
+ROUTING AUTHORITY
+```
