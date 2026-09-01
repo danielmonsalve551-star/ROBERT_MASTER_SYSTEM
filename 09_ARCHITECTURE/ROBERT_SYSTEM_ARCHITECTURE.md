@@ -3,7 +3,7 @@
 Proyecto: Robert  
 Tipo de documento: Arquitectura conceptual del sistema  
 Versión: v0.2  
-Estado: Base actualizada pendiente de aprobación  
+Estado: APROBADO / INTEGRADO / CANÓNICAMENTE SINCRONIZADO
 Última actualización: 31/08/2026
 
 Uso principal:  
@@ -746,36 +746,29 @@ MODEL ≠ SKILL
 
 ## Estado de Tools
 
-Tool ya existe como concepto canónico y como destino de routing dentro del Orchestrator.
+La arquitectura vigente de Tools está definida por:
 
-Sin embargo, todavía no existe una especificación arquitectónica independiente equivalente a:
+`ROBERT_TOOL_ARCHITECTURE v0.1`
+
+Aprobada mediante:
+
+- DECISIÓN #037
+- CAMBIO #062
+
+Tool existe como categoría canónica distinta y como destino de resolución dentro del Orchestrator.
+
+Se mantiene:
 
 ```text
-ROBERT_TOOL_ARCHITECTURE
-```
+TOOL ≠ MODEL
+TOOL ≠ AGENT
+TOOL ≠ SKILL
 
-Por tanto:
+TOOL AVAILABLE ≠ TOOL ALLOWED
 
-TOOL CONCEPT = DEFINED
+TOOL REQUEST ≠ TOOL AUTHORIZATION
 
-TOOL RESOLUTION = APPROVED THROUGH ORCHESTRATOR
-
-TOOL ARCHITECTURE = APPROVED
-
-TOOL INTERFACE = ARCHITECTURALLY DEFINED
-
-TOOL REGISTRY = ARCHITECTURALLY DEFINED
-
-TOOL POLICY = ARCHITECTURALLY DEFINED
-
-TOOL ADAPTERS = NOT IMPLEMENTED
-
-TOOL EXECUTION ENGINE = NOT IMPLEMENTED
-
-REAL TOOL EXECUTION = DISABLED
-
----
-
+TOOL ARCHITECTURE ≠ REAL TOOL EXECUTION
 ## Estado actual de la Capa 3
 
 Robert puede actualmente:
@@ -1678,49 +1671,66 @@ ROBERT_TECHNICAL_SCREEN_STATE_SPEC
 ## Estado general
 
 ```text
-CORE ARCHITECTURE = APPROVED
+CORE ARCHITECTURE = CLOSED
 
 SYSTEM ARCHITECTURE v0.2 =
-REANCHORED / PENDING ITS OWN FORMAL APPROVAL
-
-ROBERT_TOOL_ARCHITECTURE v0.1
-DECISIÓN #037
-CAMBIO #062
-
-Estado:
-
-TECTURE = APPROVED
-
-TOOL RESOLVER = PREEXISTING ORCHESTRATOR RESPONSIBILITY
-
-TOOL INTERFACE = ARCHITECTURALLY DEFINED
-
-TOOL REGISTRY = ARCHITECTURALLY DEFINED
-
-TOOL POLICY = ARCHITECTURALLY DEFINED
-
-TOOL ADAPTER / CONNECTOR = ARCHITECTURALLY DEFINED
-
-TOOL EXECUTION ENGINE = NOT IMPLEMENTED
-
-REAL TOOL EXECUTION = DISABLED
-
-AUTONOMY_LEVEL = 0
-EXECUTION_AUTHORITY = NONE
+APPROVED / INTEGRATED / CANONICALLY SYNCHRONIZED
 
 ROBERT_TOOL_ARCHITECTURE v0.1
 DECISIÓN #037 / CAMBIO #062
 
+TOOL ARCHITECTURE = APPROVED
+
+TOOL RESOLVER =
+PREEXISTING ORCHESTRATOR RESPONSIBILITY
+
+TOOL INTERFACE =
+ARCHITECTURALLY DEFINED
+
+TOOL REGISTRY =
+ARCHITECTURALLY DEFINED
+
+TOOL POLICY =
+ARCHITECTURALLY DEFINED
+
+TOOL ADAPTER / CONNECTOR =
+ARCHITECTURALLY DEFINED
+
+TOOL EXECUTION ENGINE =
+NOT IMPLEMENTED
+
+REAL TOOL EXECUTION =
+DISABLED
+
 ROBERT_IMPLEMENTATION_CONTRACTS v0.1
 DECISIÓN #038 / CAMBIO #063
+
+IMPLEMENTATION CONTRACTS =
+APPROVED
 
 ROBERT_PHASE_10_EXIT_CRITERIA v0.1
 DECISIÓN #039 / CAMBIO #064
 
+PHASE 10 EXIT CRITERIA =
+APPROVED
+
 ROBERT_BUILD_ORDER v0.1
 DECISIÓN #040 / CAMBIO #065
----
 
+BUILD ORDER =
+APPROVED
+
+KNOWN ARCHITECTURAL BLOCKERS =
+0
+
+TECHNICAL IMPLEMENTATION =
+NOT STARTED
+
+AUTONOMY_LEVEL =
+0
+
+EXECUTION_AUTHORITY =
+NONE
 
 17. LECTURA ACTUAL DEL SISTEMA
     
@@ -2130,26 +2140,16 @@ Este documento puede:
 
 ---
 
-26. DECISIÓN PENDIENTE
-    
+26. ESTADO DE APROBACIÓN
 
-Decisión pendiente:
-
-Aprobar ROBERT_SYSTEM_ARCHITECTURE v0.2 como arquitectura conceptual actualizada de Robert.
-
-Motivo:
-
-Robert necesita una arquitectura que explique cómo funciona internamente la Autonomía Controlada, dónde viven el control, las capacidades y el gobierno del sistema, y cómo se separa el propósito raíz de la ejecución futura.
+`ROBERT_SYSTEM_ARCHITECTURE v0.2` forma parte de la arquitectura conceptual vigente de Robert.
 
 Estado:
 
-Pendiente de aprobación.
-
-Próximo paso sugerido:
-
-Revisar esta versión y confirmar si ROBERT_SYSTEM_ARCHITECTURE v0.2 queda aprobado como base actualizada.
-
----
+```text
+APPROVED
+INTEGRATED
+CANONICALLY SYNCHRONIZED
 
 27. RESUMEN EJECUTIVO
     
