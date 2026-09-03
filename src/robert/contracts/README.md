@@ -27,7 +27,8 @@ This package is the single technical source of truth for Stage 1 contracts.
 2. Every contract inherits `CanonicalContract`.
 3. Unknown fields are rejected.
 4. Every payload must include `contract_version="0.1"`.
-5. Contract instances are immutable.
+5. Field reassignment is frozen; nested lists/dicts remain mutable. Runtime boundaries must copy and
+   revalidate input data rather than assuming deep immutability.
 6. Timestamps are timezone-aware and normalized to UTC.
 7. Generated schemas are outputs; edit the Pydantic source instead.
 8. Stage 1 contracts contain no routing, approval or execution engine.

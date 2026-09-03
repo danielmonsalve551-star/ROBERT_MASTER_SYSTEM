@@ -1,5 +1,6 @@
 """Minimum-necessary redaction before audit persistence."""
 
+import re
 from collections.abc import Mapping, Sequence
 from typing import Any
 
@@ -38,19 +39,38 @@ def redact_sensitive_values(value: Any) -> Any:
         return {str(key): _protected_value(str(key), item) for key, item in value.items()}
     if isinstance(value, Sequence) and not isinstance(value, (str, bytes, bytearray)):
         return [redact_sensitive_values(item) for item in value]
+    if isinstance(value, str):
+        value = re.sub(
+            r"-----BEGIN [^-]*PRIVATE KEY-----.*?-----END [^-]*PRIVATE KEY-----",
+            REDACTED_VALUE,
+            value,
+            flags=re.DOTALL,
+        )
+        return re.sub(r"(?i)\bBearer\s+[A-Za-z0-9._~+/=-]+", "Bearer [REDACTED]", value)
     return value
 
 
 def _is_sensitive_key(key: str) -> bool:
-    normalized = key.casefold().replace("-", "_").replace(" ", "_")
+    normalized = _normalize_key(key)
     sensitive_suffixes = ("_credential", "_key", "_password", "_secret", "_token")
-    return normalized in _SENSITIVE_KEYS or normalized.endswith(sensitive_suffixes)
+    compact = normalized.replace("_", "")
+    return (
+        normalized in _SENSITIVE_KEYS
+        or normalized.endswith(sensitive_suffixes)
+        or compact in {"apikey", "privatekey", "accesstoken", "refreshtoken", "credentials"}
+    )
 
 
 def _protected_value(key: str, value: Any) -> Any:
-    normalized = key.casefold().replace("-", "_").replace(" ", "_")
+    normalized = _normalize_key(key)
     if _is_sensitive_key(key):
         return REDACTED_VALUE
     if normalized in _FULL_PAYLOAD_KEYS:
         return OMITTED_VALUE
     return redact_sensitive_values(value)
+
+
+def _normalize_key(key: str) -> str:
+    return (
+        re.sub(r"([a-z0-9])([A-Z])", r"\1_\2", key).casefold().replace("-", "_").replace(" ", "_")
+    )

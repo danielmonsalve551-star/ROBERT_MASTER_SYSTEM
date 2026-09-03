@@ -1,5 +1,9 @@
 # ROBERT_TECHNICAL_ERROR_AND_BLOCKING_SPEC
 
+> Estado de implementación (03/09/2026): catálogo y constructores de Stage 2 implementados y
+> endurecidos; Governance Core de Stage 3 genera bloqueos auditados según DECISIÓN #045 / CAMBIO #071.
+> Las descripciones de la etapa documental se conservan como historia del diseño.
+
 Versión: 0.2  
 Estado: APROBADO E INTEGRADO
 Fecha: 04/07/2026  

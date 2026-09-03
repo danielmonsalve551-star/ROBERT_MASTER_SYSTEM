@@ -11510,3 +11510,51 @@ REAL_TOOL_EXECUTION: DISABLED
 ```
 
 No se implementó Governance Core, lógica autónoma ni conexiones externas.
+
+# CAMBIO #071 — Chequeo general, correcciones y Governance Core verificado
+
+**Fecha:** 03/09/2026
+**Estado:** IMPLEMENTADO Y VERIFICADO
+**Decisión relacionada:** #045
+**Build Stage:** 3 — GOVERNANCE CORE
+
+## Cambios
+
+- Corrección de redacción de secretos, validación del almacén, protección de historia y concurrencia
+  dentro de un proceso; rechazo de IDs duplicados y archivos de auditoría enlazados simbólicamente.
+- Catálogo de eventos de solo lectura y resolución explícita de subtipo frente al evento general.
+- Governance Core organizado en inputs, policy, checks y engine, sin duplicar contratos canónicos.
+- Controles de expiración, revocación, alcance, riesgo, seguridad y aprobaciones vinculadas.
+- Copia y revalidación de entradas para aislar colecciones mutables; documentación de frozen corregida.
+- Cabeceras y estados activos de HOME/CONTEXT/README/BUILD_ORDER reconciliados.
+- Prueba de schemas completos y regresiones de seguridad y consistencia documental.
+
+## Evidencia
+
+```text
+BASELINE_TESTS: 115 PASSED
+CANONICAL_CONTRACTS: 29 UNCHANGED
+GENERATED_SCHEMAS: 29 UNCHANGED
+PERMISSION_SCOPE_RISK_SECURITY_APPROVAL_EXECUTION: PASS
+AUDIT_WRITE_FAILURE_FAILS_CLOSED: PASS
+EXTERNAL_EXECUTION_WITH_APPROVAL: BLOCKED
+LOCAL_FULL_SUITE: 199 PASSED (WARNINGS AS ERRORS)
+UV_LOCK_CHECK: PASS
+RUFF_CHECK: PASS
+RUFF_FORMAT_CHECK: PASS
+SCHEMA_FULL_COMPARISON: PASS
+GIT_DIFF_CHECK: PASS
+```
+
+Los resultados detallados están en `ROBERT_STAGE_3_PREIMPLEMENTATION_AUDIT` y
+`ROBERT_GOVERNANCE_CORE_IMPLEMENTATION`. El chequeo no certifica producción ni cubre un análisis de
+vulnerabilidades de dependencias externas.
+
+```text
+TECHNICAL_IMPLEMENTATION: STAGES 0–3 COMPLETE
+AUTHORIZED_BUILD_BOUNDARY: STAGE 3
+STAGE_4: NOT AUTHORIZED
+AUTONOMY_LEVEL: 0
+EXECUTION_AUTHORITY: NONE
+REAL_TOOL_EXECUTION: DISABLED
+```

@@ -29,7 +29,7 @@ Los JSON Schemas en `schemas/contracts` son outputs generados y no fuentes paral
 | Schema output | JSON Schema Draft 2020-12 |
 | Unknown fields | Strict rejection mediante `extra="forbid"` |
 | Contract version | Campo obligatorio `contract_version="0.1"` |
-| Mutation | Contratos inmutables mediante `frozen=True` |
+| Mutation | `frozen=True` impide reasignar campos, no mutar listas/dicts internos. Aclaración de CAMBIO #071: copiar y revalidar en límites de confianza |
 | IDs | Strings estables, no vacíos y con patrón controlado |
 | Timestamps | Obligatoriamente timezone-aware y normalizados a UTC |
 | Optionality | Campos ausentes se rechazan; campos nullable deben estar presentes salvo defaults canónicos explícitos |

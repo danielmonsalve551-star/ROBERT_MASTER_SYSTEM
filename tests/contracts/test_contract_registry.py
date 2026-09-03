@@ -29,3 +29,12 @@ def test_generated_schemas_match_registered_models() -> None:
         assert committed_schema["$id"] == registration.schema_path
         assert committed_schema["properties"] == generated_schema["properties"]
         assert committed_schema["required"] == generated_schema["required"]
+        generated_schema.update(
+            {
+                "$schema": "https://json-schema.org/draft/2020-12/schema",
+                "$id": registration.schema_path,
+                "x-robert-contract-name": registration.name.value,
+                "x-robert-contract-owner": registration.owner,
+            }
+        )
+        assert committed_schema == generated_schema

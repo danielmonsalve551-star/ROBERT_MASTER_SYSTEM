@@ -1,5 +1,10 @@
 # ROBERT_TECHNICAL_PERMISSIONS_AND_SCOPES_SPEC
 
+> Estado de implementación (03/09/2026): Governance Core de Stage 3 implementado mediante
+> DECISIÓN #045 / CAMBIO #071. El alcance técnico vigente se documenta en
+> `09_ARCHITECTURE/ROBERT_GOVERNANCE_CORE_IMPLEMENTATION.md`. Los ejemplos originales son
+> diseño histórico; no conceden ejecución externa ni autorización para Stage 4.
+
 Versión: 0.2  
 Estado: APROBADA  
 Fecha: 04/07/2026  

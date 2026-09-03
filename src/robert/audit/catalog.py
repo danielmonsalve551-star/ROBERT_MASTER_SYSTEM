@@ -2,6 +2,7 @@
 
 from dataclasses import dataclass
 from enum import IntEnum
+from types import MappingProxyType
 
 from robert.contracts.base import RiskLevel
 
@@ -65,128 +66,140 @@ def _definition(
 
 _AUTOMATIC_BLOCK = ErrorAndBlockingEvent.AUTOMATIC_BLOCK
 
-ERROR_AND_BLOCKING_EVENT_CATALOG = {
-    ErrorAndBlockingEvent.WARNING: _definition(
-        ErrorAndBlockingEvent.WARNING, "Advertencia", RiskLevel.MEDIUM, blocks_action=False
-    ),
-    ErrorAndBlockingEvent.CONFIRMATION_REQUIRED: _definition(
-        ErrorAndBlockingEvent.CONFIRMATION_REQUIRED,
-        "Confirmación requerida",
-        RiskLevel.MEDIUM,
-        blocks_action=False,
-    ),
-    ErrorAndBlockingEvent.FORMAL_APPROVAL_REQUIRED: _definition(
-        ErrorAndBlockingEvent.FORMAL_APPROVAL_REQUIRED,
-        "Aprobación formal requerida",
-        RiskLevel.HIGH,
-        blocks_action=True,
-    ),
-    ErrorAndBlockingEvent.MANDATORY_PAUSE: _definition(
-        ErrorAndBlockingEvent.MANDATORY_PAUSE,
-        "Pausa obligatoria",
-        None,
-        blocks_action=True,
-    ),
-    ErrorAndBlockingEvent.AUTOMATIC_BLOCK: _definition(
-        ErrorAndBlockingEvent.AUTOMATIC_BLOCK,
-        "Bloqueo automático",
-        RiskLevel.CRITICAL,
-        blocks_action=True,
-    ),
-    ErrorAndBlockingEvent.USER_REQUESTED_BLOCK: _definition(
-        ErrorAndBlockingEvent.USER_REQUESTED_BLOCK,
-        "Bloqueo manual solicitado",
-        None,
-        blocks_action=True,
-    ),
-    ErrorAndBlockingEvent.PROHIBITED_ACTION: _definition(
-        ErrorAndBlockingEvent.PROHIBITED_ACTION,
-        "Acción prohibida",
-        RiskLevel.CRITICAL,
-        blocks_action=True,
-    ),
-    ErrorAndBlockingEvent.FUTURE_CAPABILITY_UNAVAILABLE: _definition(
-        ErrorAndBlockingEvent.FUTURE_CAPABILITY_UNAVAILABLE,
-        "Capacidad futura no disponible",
-        RiskLevel.MEDIUM,
-        blocks_action=True,
-    ),
-    ErrorAndBlockingEvent.MISSING_INFORMATION: _definition(
-        ErrorAndBlockingEvent.MISSING_INFORMATION,
-        "Falta de información",
-        RiskLevel.MEDIUM,
-        blocks_action=True,
-    ),
-    ErrorAndBlockingEvent.DOCUMENT_CONTRADICTION: _definition(
-        ErrorAndBlockingEvent.DOCUMENT_CONTRADICTION,
-        "Contradicción documental",
-        RiskLevel.HIGH,
-        blocks_action=True,
-    ),
-    ErrorAndBlockingEvent.CRITICAL_RISK: _definition(
-        ErrorAndBlockingEvent.CRITICAL_RISK,
-        "Riesgo crítico",
-        RiskLevel.CRITICAL,
-        blocks_action=True,
-    ),
-    ErrorAndBlockingEvent.OUT_OF_SCOPE: _definition(
-        ErrorAndBlockingEvent.OUT_OF_SCOPE,
-        "Fuera de alcance",
-        RiskLevel.HIGH,
-        blocks_action=True,
-    ),
-    ErrorAndBlockingEvent.SANDBOX_REQUIRED: _definition(
-        ErrorAndBlockingEvent.SANDBOX_REQUIRED,
-        "Sandbox requerido",
-        RiskLevel.HIGH,
-        blocks_action=True,
-    ),
-    ErrorAndBlockingEvent.SANDBOX_LIMIT_EXCEEDED: _definition(
-        ErrorAndBlockingEvent.SANDBOX_LIMIT_EXCEEDED,
-        "Sandbox excedido",
-        RiskLevel.CRITICAL,
-        blocks_action=True,
-    ),
-    ErrorAndBlockingEvent.UNAUTHORIZED_EXECUTION: _definition(
-        ErrorAndBlockingEvent.UNAUTHORIZED_EXECUTION,
-        "Ejecución no autorizada",
-        RiskLevel.CRITICAL,
-        blocks_action=True,
-        parent_event=_AUTOMATIC_BLOCK,
-    ),
-    ErrorAndBlockingEvent.UNAUTHORIZED_CONNECTION: _definition(
-        ErrorAndBlockingEvent.UNAUTHORIZED_CONNECTION,
-        "Conexión no autorizada",
-        RiskLevel.CRITICAL,
-        blocks_action=True,
-        parent_event=_AUTOMATIC_BLOCK,
-    ),
-    ErrorAndBlockingEvent.UNAUTHORIZED_AUTOMATION: _definition(
-        ErrorAndBlockingEvent.UNAUTHORIZED_AUTOMATION,
-        "Automatización no autorizada",
-        RiskLevel.CRITICAL,
-        blocks_action=True,
-        parent_event=_AUTOMATIC_BLOCK,
-    ),
-    ErrorAndBlockingEvent.UNAUTHORIZED_AGENT: _definition(
-        ErrorAndBlockingEvent.UNAUTHORIZED_AGENT,
-        "Agente no autorizado",
-        RiskLevel.CRITICAL,
-        blocks_action=True,
-        parent_event=_AUTOMATIC_BLOCK,
-    ),
-    ErrorAndBlockingEvent.SENSITIVE_DATA_DETECTED: _definition(
-        ErrorAndBlockingEvent.SENSITIVE_DATA_DETECTED,
-        "Dato sensible detectado",
-        RiskLevel.CRITICAL,
-        blocks_action=True,
-        parent_event=_AUTOMATIC_BLOCK,
-    ),
-    ErrorAndBlockingEvent.INCORRECT_PHASE: _definition(
-        ErrorAndBlockingEvent.INCORRECT_PHASE,
-        "Fase incorrecta",
-        RiskLevel.CRITICAL,
-        blocks_action=True,
-        parent_event=_AUTOMATIC_BLOCK,
-    ),
-}
+ERROR_AND_BLOCKING_EVENT_CATALOG = MappingProxyType(
+    {
+        ErrorAndBlockingEvent.WARNING: _definition(
+            ErrorAndBlockingEvent.WARNING, "Advertencia", RiskLevel.MEDIUM, blocks_action=False
+        ),
+        ErrorAndBlockingEvent.CONFIRMATION_REQUIRED: _definition(
+            ErrorAndBlockingEvent.CONFIRMATION_REQUIRED,
+            "Confirmación requerida",
+            RiskLevel.MEDIUM,
+            blocks_action=False,
+        ),
+        ErrorAndBlockingEvent.FORMAL_APPROVAL_REQUIRED: _definition(
+            ErrorAndBlockingEvent.FORMAL_APPROVAL_REQUIRED,
+            "Aprobación formal requerida",
+            RiskLevel.HIGH,
+            blocks_action=True,
+        ),
+        ErrorAndBlockingEvent.MANDATORY_PAUSE: _definition(
+            ErrorAndBlockingEvent.MANDATORY_PAUSE,
+            "Pausa obligatoria",
+            None,
+            blocks_action=True,
+        ),
+        ErrorAndBlockingEvent.AUTOMATIC_BLOCK: _definition(
+            ErrorAndBlockingEvent.AUTOMATIC_BLOCK,
+            "Bloqueo automático",
+            RiskLevel.CRITICAL,
+            blocks_action=True,
+        ),
+        ErrorAndBlockingEvent.USER_REQUESTED_BLOCK: _definition(
+            ErrorAndBlockingEvent.USER_REQUESTED_BLOCK,
+            "Bloqueo manual solicitado",
+            None,
+            blocks_action=True,
+        ),
+        ErrorAndBlockingEvent.PROHIBITED_ACTION: _definition(
+            ErrorAndBlockingEvent.PROHIBITED_ACTION,
+            "Acción prohibida",
+            RiskLevel.CRITICAL,
+            blocks_action=True,
+        ),
+        ErrorAndBlockingEvent.FUTURE_CAPABILITY_UNAVAILABLE: _definition(
+            ErrorAndBlockingEvent.FUTURE_CAPABILITY_UNAVAILABLE,
+            "Capacidad futura no disponible",
+            RiskLevel.MEDIUM,
+            blocks_action=True,
+        ),
+        ErrorAndBlockingEvent.MISSING_INFORMATION: _definition(
+            ErrorAndBlockingEvent.MISSING_INFORMATION,
+            "Falta de información",
+            RiskLevel.MEDIUM,
+            blocks_action=True,
+        ),
+        ErrorAndBlockingEvent.DOCUMENT_CONTRADICTION: _definition(
+            ErrorAndBlockingEvent.DOCUMENT_CONTRADICTION,
+            "Contradicción documental",
+            RiskLevel.HIGH,
+            blocks_action=True,
+        ),
+        ErrorAndBlockingEvent.CRITICAL_RISK: _definition(
+            ErrorAndBlockingEvent.CRITICAL_RISK,
+            "Riesgo crítico",
+            RiskLevel.CRITICAL,
+            blocks_action=True,
+        ),
+        ErrorAndBlockingEvent.OUT_OF_SCOPE: _definition(
+            ErrorAndBlockingEvent.OUT_OF_SCOPE,
+            "Fuera de alcance",
+            RiskLevel.HIGH,
+            blocks_action=True,
+        ),
+        ErrorAndBlockingEvent.SANDBOX_REQUIRED: _definition(
+            ErrorAndBlockingEvent.SANDBOX_REQUIRED,
+            "Sandbox requerido",
+            RiskLevel.HIGH,
+            blocks_action=True,
+        ),
+        ErrorAndBlockingEvent.SANDBOX_LIMIT_EXCEEDED: _definition(
+            ErrorAndBlockingEvent.SANDBOX_LIMIT_EXCEEDED,
+            "Sandbox excedido",
+            RiskLevel.CRITICAL,
+            blocks_action=True,
+        ),
+        ErrorAndBlockingEvent.UNAUTHORIZED_EXECUTION: _definition(
+            ErrorAndBlockingEvent.UNAUTHORIZED_EXECUTION,
+            "Ejecución no autorizada",
+            RiskLevel.CRITICAL,
+            blocks_action=True,
+            parent_event=_AUTOMATIC_BLOCK,
+        ),
+        ErrorAndBlockingEvent.UNAUTHORIZED_CONNECTION: _definition(
+            ErrorAndBlockingEvent.UNAUTHORIZED_CONNECTION,
+            "Conexión no autorizada",
+            RiskLevel.CRITICAL,
+            blocks_action=True,
+            parent_event=_AUTOMATIC_BLOCK,
+        ),
+        ErrorAndBlockingEvent.UNAUTHORIZED_AUTOMATION: _definition(
+            ErrorAndBlockingEvent.UNAUTHORIZED_AUTOMATION,
+            "Automatización no autorizada",
+            RiskLevel.CRITICAL,
+            blocks_action=True,
+            parent_event=_AUTOMATIC_BLOCK,
+        ),
+        ErrorAndBlockingEvent.UNAUTHORIZED_AGENT: _definition(
+            ErrorAndBlockingEvent.UNAUTHORIZED_AGENT,
+            "Agente no autorizado",
+            RiskLevel.CRITICAL,
+            blocks_action=True,
+            parent_event=_AUTOMATIC_BLOCK,
+        ),
+        ErrorAndBlockingEvent.SENSITIVE_DATA_DETECTED: _definition(
+            ErrorAndBlockingEvent.SENSITIVE_DATA_DETECTED,
+            "Dato sensible detectado",
+            RiskLevel.CRITICAL,
+            blocks_action=True,
+            parent_event=_AUTOMATIC_BLOCK,
+        ),
+        ErrorAndBlockingEvent.INCORRECT_PHASE: _definition(
+            ErrorAndBlockingEvent.INCORRECT_PHASE,
+            "Fase incorrecta",
+            RiskLevel.CRITICAL,
+            blocks_action=True,
+            parent_event=_AUTOMATIC_BLOCK,
+        ),
+    }
+)
+
+
+def select_specific_event(events: set[ErrorAndBlockingEvent]) -> ErrorAndBlockingEvent:
+    """Remove only the approved general parent; reject unresolved ambiguity."""
+    selected = set(events)
+    if any(ERROR_AND_BLOCKING_EVENT_CATALOG[event].parent_event for event in selected):
+        selected.discard(ErrorAndBlockingEvent.AUTOMATIC_BLOCK)
+    if len(selected) != 1:
+        raise ValueError("one unambiguous error/block event is required")
+    return selected.pop()

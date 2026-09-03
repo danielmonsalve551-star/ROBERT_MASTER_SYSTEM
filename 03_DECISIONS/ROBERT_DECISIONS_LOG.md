@@ -6324,3 +6324,48 @@ AUTONOMY_LEVEL = 0
 EXECUTION_AUTHORITY = NONE
 REAL_TOOL_EXECUTION = DISABLED
 ```
+
+# DECISIÓN #045 — Chequeo general, correcciones y Stage 3 Governance Core
+
+**Fecha:** 03/09/2026
+**Estado:** APROBADA
+**Tipo:** Revisión e implementación técnica limitada
+**Cambio relacionado:** CAMBIO #071
+
+## Autorización recibida
+
+El usuario autorizó implementar Stage 3 y publicarlo en main, solicitando primero un chequeo general
+y autorizando las correcciones necesarias. Se conserva su requisito de nombres claros y organización
+predecible. La autorización amplia de corrección se aplica al repositorio y este trabajo, no a activar
+capacidades externas ni a empezar otra etapa.
+
+## Alcance
+
+Revisar código, pruebas, documentación y controles locales. Corregir hallazgos reproducibles.
+Implementar Permission, Scope, Risk, Security, Approval y Execution Authority en ese orden.
+Reutilizar contratos canónicos y emitir Block más AuditEvent ante un gate fallido.
+Publicar código, pruebas, documentación y registros en un cambio coherente.
+
+## Decisiones técnicas
+
+Se aprueba la política inicial conservadora descrita en `ROBERT_GOVERNANCE_CORE_IMPLEMENTATION`:
+operaciones cerradas, mínimos de riesgo que no pueden reducirse, bloqueo de riesgo crítico,
+aprobaciones humanas vinculadas y con caducidad, rechazo de condiciones no evaluables, seguridad
+desconocida bloqueante y auditoría obligatoria antes de devolver un resultado permitido.
+
+Las clases internas no son fuentes de identidad: permisos y estados de seguridad deben provenir de
+un adaptador de confianza. No se crea autenticación ni un endpoint público de autorización.
+
+## Límite resultante
+
+```text
+TECHNICAL_IMPLEMENTATION: STAGES 0–3 COMPLETE
+AUTHORIZED_BUILD_BOUNDARY: STAGE 3
+STAGE_4: NOT AUTHORIZED
+AUTONOMY_LEVEL: 0
+EXECUTION_AUTHORITY: NONE
+REAL_TOOL_EXECUTION: DISABLED
+PHASE_11: NOT STARTED
+```
+
+Se mantiene Fase 10 cerrada. Stage 4 — Validation Core requiere una decisión separada.

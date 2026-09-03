@@ -1,10 +1,10 @@
 # ROBERT_CODEBASE_NAMING_AND_ORGANIZATION_STANDARD
 
-**Versión:** 0.2
+**Versión:** 0.3
 **Estado:** APPROVED / ACTIVE
-**Fecha:** 01/09/2026
-**Decisiones:** #043 / #044
-**Cambios:** #069 / #070
+**Fecha:** 03/09/2026
+**Decisiones:** #043 / #044 / #045
+**Cambios:** #069 / #070 / #071
 
 ---
 
@@ -35,6 +35,11 @@ Mantener nombres claros, ubicación predecible y responsabilidades separadas en 
 src/robert/
 ├── app.py
 ├── config.py
+├── governance/
+│   ├── inputs.py
+│   ├── policy.py
+│   ├── checks.py
+│   └── engine.py
 ├── audit/
 │   ├── catalog.py
 │   ├── outcome_builder.py
@@ -61,10 +66,15 @@ src/robert/
 schemas/contracts/<owner>/<contract_name>.schema.json
 tests/contracts/
 tests/audit/
+tests/governance/
+tests/documentation/
 scripts/export_contract_schemas.py
 ```
 
 Stage 2 extiende este estándar mediante DECISIÓN #044 y CAMBIO #070 sin cambiar sus reglas.
+
+Stage 3 añade Governance Core y pruebas de consistencia mediante DECISIÓN #045 / CAMBIO #071.
+Las estructuras internas de adaptación no deben registrarse como contratos canónicos paralelos.
 
 ---
 

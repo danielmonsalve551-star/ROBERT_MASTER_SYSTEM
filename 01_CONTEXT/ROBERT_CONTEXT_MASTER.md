@@ -1,8 +1,8 @@
 ROBERT_CONTEXT_MASTER
 
-Versión: 0.8
-Estado: Fase 10 cerrada; Stage 0 autorizado, implementado y verificado mediante DECISIÓN #042 / CAMBIO #068
-Última actualización: 01/09/2026
+Versión: 0.9
+Estado: Fase 10 cerrada; Stages 0–3 implementados y verificados; DECISIÓN #045 / CAMBIO #071; Stage 4 no autorizado
+Última actualización: 03/09/2026
 
 Uso principal:  
 Servir como contexto base para ChatGPT, Claude, Obsidian, la bóveda documental de Robert y futuras herramientas de IA, manteniendo clara la identidad, propósito, estructura, documentos, comandos, reglas, fases, decisiones, autonomía controlada y estado actual del proyecto.
@@ -781,9 +781,9 @@ TOOL_ARCHITECTURE = CLOSED
 IMPLEMENTATION_CONTRACTS = APPROVED
 PHASE_10_EXIT_CRITERIA = APPROVED
 BUILD_ORDER = APPROVED
-TECHNICAL_IMPLEMENTATION = STAGE 0 COMPLETE
-AUTHORIZED_BUILD_BOUNDARY = STAGE 0 ONLY
-STAGE_1 = NOT AUTHORIZED
+TECHNICAL_IMPLEMENTATION = STAGES 0–3 COMPLETE
+AUTHORIZED_BUILD_BOUNDARY = STAGE 3
+STAGE_4 = NOT AUTHORIZED
 ---
 
 ## MVP técnico
@@ -1320,9 +1320,9 @@ Los contratos y Build Order ya están definidos arquitectónicamente.
 
 Se mantiene:
 
-TECHNICAL_IMPLEMENTATION = STAGE 0 COMPLETE
-AUTHORIZED_BUILD_BOUNDARY = STAGE 0 ONLY
-STAGE_1 = NOT AUTHORIZED
+TECHNICAL_IMPLEMENTATION = STAGES 0–3 COMPLETE
+AUTHORIZED_BUILD_BOUNDARY = STAGE 3
+STAGE_4 = NOT AUTHORIZED
 
 AUTONOMY_LEVEL = 0
 EXECUTION_AUTHORITY = NONE
@@ -1375,7 +1375,7 @@ Orden de remediación completado:
 Siguiente paso vigente después del cierre:
 
 ```text
-SEPARATE STAGE 1 AUTHORIZATION DECISION
+SEPARATE STAGE 4 AUTHORIZATION DECISION
 ```
 
 Regla:
@@ -1495,45 +1495,14 @@ Phase 10 Exit Criteria
 CAMBIO #065
 Build Order
 
-## Pendiente actual
+## Pendiente actual — 03/09/2026
 
-La arquitectura requerida para comenzar preparación de implementación
-ya está cerrada.
+La remediación de Fase 10 quedó completada; el audit final fue PASS y el cierre se registró en
+DECISIÓN #041. Stages 0–3 están implementados. La revisión general y Governance Core se registran
+mediante DECISIÓN #045 / CAMBIO #071. No hay que repetir la remediación histórica.
 
-Actualmente:
-
-CORE_ARCHITECTURE = CLOSED
-TOOL_ARCHITECTURE = CLOSED
-IMPLEMENTATION_CONTRACTS = APPROVED
-PHASE_10_EXIT_CRITERIA = APPROVED
-BUILD_ORDER = APPROVED
-
-Sin embargo:
-
-PHASE_10_EXIT_AUDIT = FAIL
-
-por inconsistencias documentales heredadas todavía pendientes.
-
-Pendientes restantes:
-
-ROBERT_SYSTEM_ARCHITECTURE
-→ cerrar referencias antiguas donde Tool Architecture todavía aparece como gap.
-
-ROBERT_MODULES
-→ reconciliar taxonomía con Canonical Model.
-
-ROBERT_TECHNICAL_DATA_MODEL_SPEC
-→ añadir integración con Canonical Model e Implementation Contracts.
-
-ROBERT_TECHNICAL_AUDIT_TRAIL_SPEC
-→ añadir integración con arquitectura vigente.
-
-ROBERT_TECHNICAL_INTERACTION_FLOW_SPEC
-→ confirmar subordinación al Orchestrator.
-
-Después:
-
-RUN PHASE 10 EXIT AUDIT AGAIN
+El siguiente paso es una autorización separada de Stage 4 — Validation Core.
+No existen nuevas conexiones externas, autonomía ni autoridad de ejecución.
 
 20. USO POR CHATGPT
     
@@ -2491,7 +2460,7 @@ Robert debe convertir información dispersa en estructura útil, manteniendo con
 
 ---
 
-# ACTUALIZACIÓN CORRECTIVA — 30/06/2026
+# ESTADO VIGENTE — 03/09/2026
 
 DOCUMENT: ROBERT_CONTEXT_MASTER
 
@@ -2501,8 +2470,8 @@ PHASE: 10
 
 LATEST_ARCHITECTURAL_DECISION: #040
 LATEST_GOVERNANCE_DECISION: #041
-LATEST_IMPLEMENTATION_DECISION: #044
-LATEST_CHANGE: #070
+LATEST_IMPLEMENTATION_DECISION: #045
+LATEST_CHANGE: #071
 
 CORE_ARCHITECTURE: CLOSED
 TOOL_ARCHITECTURE: CLOSED
@@ -2510,9 +2479,9 @@ IMPLEMENTATION_CONTRACTS: APPROVED
 PHASE_10_EXIT_CRITERIA: APPROVED
 BUILD_ORDER: APPROVED
 
-TECHNICAL_IMPLEMENTATION: STAGES 0–2 COMPLETE
-AUTHORIZED_BUILD_BOUNDARY: STAGE 2
-STAGE_3: NOT AUTHORIZED
+TECHNICAL_IMPLEMENTATION: STAGES 0–3 COMPLETE
+AUTHORIZED_BUILD_BOUNDARY: STAGE 3
+STAGE_4: NOT AUTHORIZED
 
 PHASE_10_EXIT_AUDIT: PASS
 
@@ -2521,7 +2490,7 @@ DOCUMENT_NORMALIZATION_BLOCKERS: 0
 
 PHASE_10_CLOSED: YES — DECISIÓN #041
 READY_FOR_IMPLEMENTATION_AUTHORIZATION: YES
-IMPLEMENTATION_AUTHORIZATION: GRANTED — STAGES 0–2 ONLY
+IMPLEMENTATION_AUTHORIZATION: GRANTED — STAGES 0–3 ONLY
 PHASE_11: NOT STARTED
 
 AUTONOMY_LEVEL: 0

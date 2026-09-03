@@ -29,14 +29,14 @@ BUILD_ORDER: APPROVED
 
 LATEST_ARCHITECTURAL_DECISION: #040
 LATEST_GOVERNANCE_DECISION: #041
-LATEST_IMPLEMENTATION_DECISION: #044
-LATEST_CHANGE: #070
+LATEST_IMPLEMENTATION_DECISION: #045
+LATEST_CHANGE: #071
 
 KNOWN_ARCHITECTURAL_BLOCKERS: 0
 
-TECHNICAL_IMPLEMENTATION: STAGES 0–2 COMPLETE
-AUTHORIZED_BUILD_BOUNDARY: STAGE 2
-STAGE_3: NOT AUTHORIZED
+TECHNICAL_IMPLEMENTATION: STAGES 0–3 COMPLETE
+AUTHORIZED_BUILD_BOUNDARY: STAGE 3
+STAGE_4: NOT AUTHORIZED
 
 PHASE_10_EXIT_AUDIT: PASS
 
@@ -46,7 +46,7 @@ READY_FOR_IMPLEMENTATION_AUTHORIZATION:
 YES
 
 IMPLEMENTATION_AUTHORIZATION:
-GRANTED — STAGES 0–2 ONLY
+GRANTED — STAGES 0–3 ONLY
 
 AUTONOMY_LEVEL: 0
 EXECUTION_AUTHORITY: NONE
@@ -114,7 +114,7 @@ La implementación incluye:
 * 29 contratos canónicos Pydantic v2 organizados por dominio;
 * un registro único de contratos y propietarios de esquema;
 * 29 JSON Schemas generados en `schemas/contracts/`;
-* validación estricta, modelos inmutables, versión contractual obligatoria y fechas UTC;
+* rechazo de campos desconocidos, bloqueo de reasignación de campos, versión contractual obligatoria y fechas UTC;
 * pruebas de registro, validación y compatibilidad especializada.
 
 Rutas principales:
@@ -149,6 +149,20 @@ La base incluye la taxonomía aprobada de 20 eventos, constructores canónicos d
 `AuditEvent`, redacción de secretos y persistencia local append-only en JSON Lines.
 
 Audit Writer registra; no decide, autoriza, enruta ni ejecuta.
+
+---
+
+# GOVERNANCE CORE — STAGE 3
+
+Autorizado mediante DECISIÓN #045 y verificado mediante CAMBIO #071, tras un chequeo general.
+
+`src/robert/governance/` evalúa Permission, Scope, Risk, Security, Approval y Execution Authority.
+Cada bloqueo queda auditado; sin auditoría confirmada no se devuelve un resultado permitido.
+Ningún resultado ejecuta acciones. Las conexiones externas permanecen deshabilitadas.
+
+Documentación: `09_ARCHITECTURE/ROBERT_GOVERNANCE_CORE_IMPLEMENTATION.md`.
+Chequeo: `09_ARCHITECTURE/ROBERT_STAGE_3_PREIMPLEMENTATION_AUDIT.md`.
+Pruebas: `uv run pytest tests/governance -W error`.
 
 ---
 
@@ -1108,18 +1122,18 @@ PRODUCTION EXECUTION
 
 ```text
 TECHNICAL_IMPLEMENTATION:
-STAGES 0–2 COMPLETE
+STAGES 0–3 COMPLETE
 
 INITIAL_BUILD_ORDER:
 APPROVED
 
 IMPLEMENTATION_AUTHORIZATION:
-GRANTED — STAGES 0–2 ONLY
+GRANTED — STAGES 0–3 ONLY
 
 AUTHORIZED_BUILD_BOUNDARY:
-STAGE 2
+STAGE 3
 
-STAGE_3:
+STAGE_4:
 NOT AUTHORIZED
 
 REAL_TOOL_EXECUTION:
@@ -1187,12 +1201,12 @@ READY_FOR_IMPLEMENTATION_AUTHORIZATION:
 YES
 
 IMPLEMENTATION_AUTHORIZATION:
-GRANTED — STAGES 0–2 ONLY
+GRANTED — STAGES 0–3 ONLY
 
-STAGES_0_1_2:
+STAGES_0_1_2_3:
 COMPLETE
 
-STAGE_3:
+STAGE_4:
 NOT AUTHORIZED
 ```
 
@@ -1331,10 +1345,10 @@ LATEST_GOVERNANCE_DECISION:
 #041
 
 LATEST_IMPLEMENTATION_DECISION:
-#044
+#045
 
 LATEST_CHANGE:
-#070
+#071
 
 CORE_ARCHITECTURE:
 CLOSED
@@ -1355,7 +1369,7 @@ KNOWN_ARCHITECTURAL_BLOCKERS:
 0
 
 TECHNICAL_IMPLEMENTATION:
-STAGES 0–2 COMPLETE
+STAGES 0–3 COMPLETE
 
 PHASE_10_EXIT_AUDIT:
 PASS
@@ -1367,12 +1381,12 @@ READY_FOR_IMPLEMENTATION_AUTHORIZATION:
 YES
 
 IMPLEMENTATION_AUTHORIZATION:
-GRANTED — STAGES 0–2 ONLY
+GRANTED — STAGES 0–3 ONLY
 
 AUTHORIZED_BUILD_BOUNDARY:
-STAGE 2
+STAGE 3
 
-STAGE_3:
+STAGE_4:
 NOT AUTHORIZED
 
 REAL_TOOL_EXECUTION:
@@ -1399,20 +1413,20 @@ NONE
 
 El proyecto completó la verificación física de Fase 10 con resultado `PASS`.
 
-El cierre quedó autorizado mediante DECISIÓN #041 y Stages 0–2 mediante DECISIONES #042–#044. La siguiente transición requiere otra decisión humana explícita y separada:
+El cierre quedó autorizado mediante DECISIÓN #041 y Stages 0–3 mediante DECISIONES #042–#045. La siguiente transición requiere otra decisión humana explícita y separada:
 
 ```text
-AUTHORIZE STAGE 3
+AUTHORIZE STAGE 4
 =
 SEPARATE HUMAN DECISION REQUIRED
 ```
 
-Hasta una decisión separada para Stage 3:
+Hasta una decisión separada para Stage 4:
 
 ```text
 NO AUTOMATIC PHASE TRANSITION
 
-NO AUTHORIZATION BEYOND STAGE 2
+NO AUTHORIZATION BEYOND STAGE 3
 
 NO REAL TOOL EXECUTION
 
