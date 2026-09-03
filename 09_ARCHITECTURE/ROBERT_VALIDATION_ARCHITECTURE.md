@@ -1,5 +1,9 @@
 # ROBERT_VALIDATION_ARCHITECTURE
 
+> Implementación vigente (03/09/2026): Stage 4 — Validation Core implementado mediante
+> DECISIÓN #046 / CAMBIO #072. Ver `ROBERT_VALIDATION_CORE_IMPLEMENTATION` para cobertura,
+> limitaciones y mapeo de los campos conceptuales al contrato técnico aprobado.
+
 **Versión:** 0.1
 **Estado:** APROBADA — integrada arquitectónicamente
 **Tipo:** Especificación arquitectónica de Validation

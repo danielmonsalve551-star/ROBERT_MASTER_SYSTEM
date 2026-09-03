@@ -11558,3 +11558,53 @@ AUTONOMY_LEVEL: 0
 EXECUTION_AUTHORITY: NONE
 REAL_TOOL_EXECUTION: DISABLED
 ```
+
+# CAMBIO #072 — Stage 4 Validation Core determinista
+
+**Fecha:** 03/09/2026
+**Estado:** IMPLEMENTADO Y VERIFICADO
+**Decisión relacionada:** #046
+**Build Stage:** 4 — VALIDATION CORE
+
+## Cambios
+
+- Módulos de validación separados por responsabilidad en `src/robert/validation/`.
+- Ocho dimensiones iniciales, reglas declarativas y contratos registrados sin coerción permisiva.
+- Fallos e incertidumbre obligatorios bloqueantes; advertencias opcionales y conflictos explícitos.
+- Reutilización de permisos, alcance, riesgo y seguridad de Stage 3 con entradas vinculadas.
+- Auditoría antes del resultado, sin copiar payloads ni valores de criterios al registro.
+- Copia profunda y revalidación de entradas; rechazo de números no finitos.
+- Guía de uso, documento de implementación y estados maestros sincronizados con Stage 4.
+
+## Evidencia
+
+La comprobación previa confirmó main en `3e58802c48f86b66fdbbfe67408726729bfb8ad6`, árbol idéntico
+a la base local y 199 pruebas previas correctas. La revisión de salida comprende:
+
+```text
+BASELINE_TESTS: 199 PASSED
+CANONICAL_CONTRACTS: 29 UNCHANGED
+GENERATED_SCHEMAS: 29 UNCHANGED
+STAGE_4_VALIDATION_TESTS: 142 PASSED
+LOCAL_FULL_SUITE: 342 PASSED (WARNINGS AS ERRORS)
+UNAVAILABLE_REQUIRED_CHECKS: INCONCLUSIVE / BLOCKING
+PASS_IS_NOT_APPROVAL_OR_AUTHORITY: VERIFIED
+AUDIT_WRITE_FAILURE_FAILS_CLOSED: PASS
+UV_LOCK_CHECK: PASS
+RUFF_CHECK: PASS
+RUFF_FORMAT_CHECK: PASS
+SCHEMA_FULL_COMPARISON: PASS
+GIT_DIFF_CHECK: PASS
+```
+
+Detalles y límites: `ROBERT_VALIDATION_CORE_IMPLEMENTATION`. Esta verificación no certifica
+producción, autenticidad de fuentes ni ausencia de vulnerabilidades en dependencias externas.
+
+```text
+TECHNICAL_IMPLEMENTATION: STAGES 0–4 COMPLETE
+AUTHORIZED_BUILD_BOUNDARY: STAGE 4
+STAGE_5: NOT AUTHORIZED
+AUTONOMY_LEVEL: 0
+EXECUTION_AUTHORITY: NONE
+REAL_TOOL_EXECUTION: DISABLED
+```

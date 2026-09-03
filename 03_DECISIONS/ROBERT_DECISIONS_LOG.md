@@ -6369,3 +6369,42 @@ PHASE_11: NOT STARTED
 ```
 
 Se mantiene Fase 10 cerrada. Stage 4 — Validation Core requiere una decisión separada.
+
+# DECISIÓN #046 — Autorización de Stage 4 Validation Core
+
+**Fecha:** 03/09/2026
+**Estado:** APROBADA
+**Tipo:** Implementación técnica limitada
+**Cambio relacionado:** CAMBIO #072
+
+## Autorización y alcance
+
+El usuario responde «autorizo sigue» a la continuación de Stage 4. Se conserva el requisito de nombres
+claros y organización predecible, y el flujo autorizado de publicación en main. Se autoriza Validation
+Core, sus pruebas, documentación y registros, partiendo de Stage 3 verificado.
+
+Implementar Validation Request Handler, Rule Validator, Structure Validator, Contract Validator y
+Validation Result. Priorizar RULE, CANONICAL, STRUCTURE, COMPLETENESS, CONSISTENCY, SECURITY, SCOPE
+y PERMISSION. Reutilizar los 29 contratos, Governance Core y AuditWriter sin contratos paralelos.
+
+## Decisiones técnicas
+
+Vocabulario declarativo cerrado. Los requisitos obligatorios desconocidos o no implementados generan
+INCONCLUSIVE bloqueante. Restricciones, seguridad, permisos y alcance no pueden convertirse en
+advertencias opcionales. Los contextos de confianza se suministran mediante adaptadores internos.
+La presencia de referencias no verifica su contenido. No se inventa una confianza calibrada.
+
+PASS no equivale a APPROVAL ni a EXECUTION AUTHORITY. Cada resultado requiere auditoría y conserva
+sus límites. No se ejecutan código del payload, modelos, agentes ni herramientas externas.
+
+```text
+TECHNICAL_IMPLEMENTATION: STAGES 0–4 COMPLETE
+AUTHORIZED_BUILD_BOUNDARY: STAGE 4
+STAGE_5: NOT AUTHORIZED
+AUTONOMY_LEVEL: 0
+EXECUTION_AUTHORITY: NONE
+REAL_TOOL_EXECUTION: DISABLED
+PHASE_11: NOT STARTED
+```
+
+Stage 5 — Context / Memory Interfaces requiere una decisión separada.
