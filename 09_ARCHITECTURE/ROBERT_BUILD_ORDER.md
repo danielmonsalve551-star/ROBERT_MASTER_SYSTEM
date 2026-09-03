@@ -5,7 +5,7 @@
 **Tipo:** Especificación de orden de construcción / Implementation Readiness
 **Ubicación propuesta:** `09_ARCHITECTURE/ROBERT_BUILD_ORDER.md`
 **Fase relacionada:** Fase 10 — Implementation Readiness
-**Implementación:** STAGES 0–4 COMPLETE / STAGE 5 NOT AUTHORIZED
+**Implementación:** STAGES 0–5 COMPLETE / STAGE 6 NOT AUTHORIZED
 **Autonomy Level:** 0
 **Execution Authority:** NONE
 
@@ -2415,13 +2415,13 @@ PHASE: 10
 
 BUILD_ORDER: APPROVED
 
-IMPLEMENTATION: STAGES 0–4 COMPLETE
+IMPLEMENTATION: STAGES 0–5 COMPLETE
 
-IMPLEMENTATION_AUTHORIZATION: GRANTED — STAGES 0–4 ONLY
+IMPLEMENTATION_AUTHORIZATION: GRANTED — STAGES 0–5 ONLY
 
-AUTHORIZED_BUILD_BOUNDARY: STAGE 4
+AUTHORIZED_BUILD_BOUNDARY: STAGE 5
 
-STAGE_5: NOT AUTHORIZED
+STAGE_6: NOT AUTHORIZED
 
 REAL_TOOL_EXECUTION: DISABLED
 
@@ -2446,7 +2446,8 @@ STAGE_1 = COMPLETE
 STAGE_2 = COMPLETE
 STAGE_3 = COMPLETE
 STAGE_4 = COMPLETE
-STAGE_5 = NOT AUTHORIZED
+STAGE_5 = COMPLETE
+STAGE_6 = NOT AUTHORIZED
 ```
 
 Stage 1 fue autorizado e implementado mediante:
@@ -2467,10 +2468,13 @@ Stage 3 y el chequeo previo quedaron autorizados mediante DECISIÓN #045 y verif
 
 Stage 4 — Validation Core quedó autorizado mediante DECISIÓN #046 y verificado mediante CAMBIO #072.
 
+Stage 5 — Context / Memory Interfaces quedó autorizado mediante DECISIÓN #047 y verificado
+localmente mediante CAMBIO #073. No se habilitan escrituras automáticas ni proveedores externos.
+
 La siguiente transición permitida es una decisión humana separada sobre:
 
 ```text
-AUTHORIZE STAGE 5 — CONTEXT / MEMORY INTERFACES?
+AUTHORIZE STAGE 6 — MODEL INTERFACE?
 ```
 
-Hasta entonces, el límite obligatorio es `STAGE 4`.
+Hasta entonces, el límite obligatorio es `STAGE 5`.

@@ -11608,3 +11608,59 @@ AUTONOMY_LEVEL: 0
 EXECUTION_AUTHORITY: NONE
 REAL_TOOL_EXECUTION: DISABLED
 ```
+
+# CAMBIO #073 — Stage 5 Context / Memory Interfaces
+
+**Fecha:** 03/09/2026
+**Estado:** IMPLEMENTADO Y VERIFICADO LOCALMENTE
+**Decisión relacionada:** #047
+**Build Stage:** 5 — CONTEXT / MEMORY INTERFACES
+
+## Cambios
+
+- ContextAssembler genera RequestContext canónico con fragmentos explícitos y memoria separada.
+- MemoryCandidateService crea propuestas auditadas y las valida sin promoción ni persistencia.
+- Puerto MemoryRepository y adaptador de semilla manual de solo lectura, sin API de escritura.
+- MemoryRetriever comprueba permisos antes de acceso y caducidad tras la lectura; filtra por registro.
+- Límites de consulta, metadatos cerrados, ranking léxico estable y minimización de duplicados exactos.
+- Exclusión de datos sensibles conocidos, registros vencidos, no verificados o de otro alcance/lector.
+- Conflictos declarados se reportan sin resolución automática; contexto incompleto/conflictivo bloquea.
+- Guías de paquetes, implementación y documentos maestros sincronizados.
+
+## Evidencia local
+
+```text
+BASELINE_TESTS: 342 PASSED
+STAGE_5_MEMORY_CONTEXT_TESTS: 127 PASSED
+LOCAL_FULL_SUITE: 470 PASSED (WARNINGS AS ERRORS)
+CANONICAL_CONTRACTS: 29 UNCHANGED
+GENERATED_SCHEMAS: 29 UNCHANGED
+AUTOMATIC_MEMORY_WRITE: ABSENT
+CANDIDATE_PROMOTION: ABSENT
+DENIED_REQUEST_REPOSITORY_ACCESS: BLOCKED
+SCOPE_READER_SENSITIVITY_RETENTION_FRESHNESS_CONFIDENCE: VERIFIED
+EXPIRED_DURING_READ: BLOCKED
+AUDIT_FAILURE: FAILS CLOSED
+UV_LOCK_CHECK: PASS
+RUFF_CHECK: PASS
+RUFF_FORMAT_CHECK: PASS
+SCHEMA_FULL_COMPARISON: PASS
+GIT_DIFF_CHECK: PASS
+```
+
+La base coincide con main en `8fd54df77d9f58e946ea524bc95d321ad1b21515`. No se modifican contratos,
+dependencias, workflows ni capacidades externas. La publicación en main y el CI remoto de Stage 5
+quedan pendientes de autorización explícita de publicación; no forman parte de la evidencia local.
+
+Límites completos: `ROBERT_CONTEXT_AND_MEMORY_INTERFACES_IMPLEMENTATION`. No constituye certificación
+de producción, validación externa de fuentes ni análisis de vulnerabilidades de dependencias.
+
+```text
+TECHNICAL_IMPLEMENTATION: STAGES 0–5 COMPLETE
+AUTHORIZED_BUILD_BOUNDARY: STAGE 5
+STAGE_6: NOT AUTHORIZED
+AUTONOMY_LEVEL: 0
+EXECUTION_AUTHORITY: NONE
+AUTOMATIC_MEMORY_WRITE: DISABLED
+REAL_TOOL_EXECUTION: DISABLED
+```

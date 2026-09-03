@@ -1,10 +1,10 @@
 # ROBERT_CODEBASE_NAMING_AND_ORGANIZATION_STANDARD
 
-**Versión:** 0.4
+**Versión:** 0.5
 **Estado:** APPROVED / ACTIVE
 **Fecha:** 03/09/2026
-**Decisiones:** #043 / #044 / #045 / #046
-**Cambios:** #069 / #070 / #071 / #072
+**Decisiones:** #043 / #044 / #045 / #046 / #047
+**Cambios:** #069 / #070 / #071 / #072 / #073
 
 ---
 
@@ -35,6 +35,14 @@ Mantener nombres claros, ubicación predecible y responsabilidades separadas en 
 src/robert/
 ├── app.py
 ├── config.py
+├── context/
+│   ├── inputs.py
+│   └── assembly.py
+├── memory/
+│   ├── inputs.py
+│   ├── candidates.py
+│   ├── repository.py
+│   └── retrieval.py
 ├── validation/
 │   ├── inputs.py
 │   ├── findings.py
@@ -76,6 +84,8 @@ tests/contracts/
 tests/audit/
 tests/governance/
 tests/validation/
+tests/memory/
+tests/context/
 tests/documentation/
 scripts/export_contract_schemas.py
 ```
@@ -91,6 +101,9 @@ y una guía de vocabulario y límites en `src/robert/validation/README.md`.
 ---
 
 # 4. Criterio de aceptación
+
+Stage 5 incorpora Context / Memory Interfaces mediante DECISIÓN #047 / CAMBIO #073.
+Cada paquete conserva su README de uso y límites. Los contratos siguen únicamente en `contracts/`.
 
 Todo cambio futuro debe permitir que una persona identifique rápidamente:
 

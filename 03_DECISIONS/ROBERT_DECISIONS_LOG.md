@@ -6408,3 +6408,43 @@ PHASE_11: NOT STARTED
 ```
 
 Stage 5 — Context / Memory Interfaces requiere una decisión separada.
+
+# DECISIÓN #047 — Autorización de Stage 5 Context / Memory Interfaces
+
+**Fecha:** 03/09/2026
+**Estado:** APROBADA
+**Cambio relacionado:** CAMBIO #073
+
+## Autorización recibida
+
+El usuario indica explícitamente «autorizo stage 5», tras cerrar Stage 4. Se autoriza implementar
+Context Assembly, Memory Repository Interface, Memory Retrieval Interface y creación/validación de
+MemoryCandidate. Se conservan nombres claros y organización por responsabilidad.
+
+## Alcance técnico
+
+Reutilizar contratos, auditoría, Governance y Validation existentes. Admitir registros manuales
+controlados mediante un adaptador de solo lectura en memoria del proceso. Aplicar permisos, alcance,
+tipo, retención, vigencia, confianza y sensibilidad antes de devolver registros.
+
+Se adopta el vocabulario conservador de `ROBERT_CONTEXT_AND_MEMORY_INTERFACES_IMPLEMENTATION` y las
+guías de paquetes, sin crear nuevas taxonomías canónicas. READ_DOCUMENT se aplica a los documentos
+MemoryRecord del repositorio y al contexto seleccionado de la Task; PREPARE_DRAFT a validar candidatos.
+Estos permisos no autorizan persistencia ni ejecución externa.
+
+## Límites
+
+Esta autorización no activa escritura automática, promoción candidato→registro, base vectorial,
+consolidación/borrado automático, Models, Agents, nuevas conexiones ni Stage 6. Validar no concede
+autoridad y recuperar no determina verdad. Publicar esta nueva etapa en main requiere confirmar
+explícitamente esa publicación; no se reutiliza la autorización de publicación del commit de Stage 4.
+
+```text
+AUTHORIZED_BUILD_BOUNDARY: STAGE 5
+STAGE_6: NOT AUTHORIZED
+AUTOMATIC_MEMORY_WRITE: DISABLED
+AUTONOMY_LEVEL: 0
+EXECUTION_AUTHORITY: NONE
+REAL_TOOL_EXECUTION: DISABLED
+PHASE_11: NOT STARTED
+```

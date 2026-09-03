@@ -29,14 +29,14 @@ BUILD_ORDER: APPROVED
 
 LATEST_ARCHITECTURAL_DECISION: #040
 LATEST_GOVERNANCE_DECISION: #041
-LATEST_IMPLEMENTATION_DECISION: #046
-LATEST_CHANGE: #072
+LATEST_IMPLEMENTATION_DECISION: #047
+LATEST_CHANGE: #073
 
 KNOWN_ARCHITECTURAL_BLOCKERS: 0
 
-TECHNICAL_IMPLEMENTATION: STAGES 0–4 COMPLETE
-AUTHORIZED_BUILD_BOUNDARY: STAGE 4
-STAGE_5: NOT AUTHORIZED
+TECHNICAL_IMPLEMENTATION: STAGES 0–5 COMPLETE
+AUTHORIZED_BUILD_BOUNDARY: STAGE 5
+STAGE_6: NOT AUTHORIZED
 
 PHASE_10_EXIT_AUDIT: PASS
 
@@ -46,7 +46,7 @@ READY_FOR_IMPLEMENTATION_AUTHORIZATION:
 YES
 
 IMPLEMENTATION_AUTHORIZATION:
-GRANTED — STAGES 0–4 ONLY
+GRANTED — STAGES 0–5 ONLY
 
 AUTONOMY_LEVEL: 0
 EXECUTION_AUTHORITY: NONE
@@ -176,6 +176,21 @@ PASS no es aprobación ni autoridad de ejecución. No invoca modelos ni herramie
 Pruebas: `tests/validation/`. Guía: `src/robert/validation/README.md`.
 Especificación implementada: `09_ARCHITECTURE/ROBERT_VALIDATION_CORE_IMPLEMENTATION.md`.
 Ejecución de pruebas: `uv run pytest tests/validation -W error`.
+
+# CONTEXT / MEMORY INTERFACES — STAGE 5
+
+Autorizado mediante DECISIÓN #047 y verificado localmente mediante CAMBIO #073.
+
+`src/robert/memory/` crea y valida candidatos, expone un repositorio de solo lectura con carga manual
+y recupera registros autorizados. Filtra por requester, alcance, tipo, retención, vigencia, confianza
+y sensibilidad; los conflictos no se resuelven automáticamente.
+
+`src/robert/context/` ensambla RequestContext con fuentes seleccionadas y memoria recuperada mediante
+permisos vigentes. Nunca convierte contexto o candidatos en memoria persistente.
+
+Guías: `src/robert/memory/README.md` y `src/robert/context/README.md`.
+Implementación: `09_ARCHITECTURE/ROBERT_CONTEXT_AND_MEMORY_INTERFACES_IMPLEMENTATION.md`.
+Pruebas: `uv run pytest tests/memory tests/context -W error`.
 
 ---
 
@@ -1135,18 +1150,18 @@ PRODUCTION EXECUTION
 
 ```text
 TECHNICAL_IMPLEMENTATION:
-STAGES 0–4 COMPLETE
+STAGES 0–5 COMPLETE
 
 INITIAL_BUILD_ORDER:
 APPROVED
 
 IMPLEMENTATION_AUTHORIZATION:
-GRANTED — STAGES 0–4 ONLY
+GRANTED — STAGES 0–5 ONLY
 
 AUTHORIZED_BUILD_BOUNDARY:
-STAGE 4
+STAGE 5
 
-STAGE_5:
+STAGE_6:
 NOT AUTHORIZED
 
 REAL_TOOL_EXECUTION:
@@ -1214,12 +1229,12 @@ READY_FOR_IMPLEMENTATION_AUTHORIZATION:
 YES
 
 IMPLEMENTATION_AUTHORIZATION:
-GRANTED — STAGES 0–4 ONLY
+GRANTED — STAGES 0–5 ONLY
 
-STAGES_0_1_2_3_4:
+STAGES_0_1_2_3_4_5:
 COMPLETE
 
-STAGE_5:
+STAGE_6:
 NOT AUTHORIZED
 ```
 
@@ -1281,8 +1296,8 @@ Pendiente inmediato:
 6. EXPLICIT HUMAN DECISION ON PHASE 10 CLOSURE — COMPLETED
 7. SEPARATE INITIAL IMPLEMENTATION AUTHORIZATION DECISION — COMPLETED / #042
 8. STAGE 0 TECHNICAL FOUNDATION — COMPLETED / #068
-9. STAGES 1–4 — COMPLETED / #069–#072
-10. SEPARATE STAGE 5 AUTHORIZATION DECISION — CURRENT
+9. STAGES 1–5 — COMPLETED / #069–#073
+10. SEPARATE STAGE 6 AUTHORIZATION DECISION — CURRENT
 ```
 
 No se conoce actualmente ningún gap nuevo de Core Architecture.
@@ -1359,10 +1374,10 @@ LATEST_GOVERNANCE_DECISION:
 #041
 
 LATEST_IMPLEMENTATION_DECISION:
-#046
+#047
 
 LATEST_CHANGE:
-#072
+#073
 
 CORE_ARCHITECTURE:
 CLOSED
@@ -1383,7 +1398,7 @@ KNOWN_ARCHITECTURAL_BLOCKERS:
 0
 
 TECHNICAL_IMPLEMENTATION:
-STAGES 0–4 COMPLETE
+STAGES 0–5 COMPLETE
 
 PHASE_10_EXIT_AUDIT:
 PASS
@@ -1395,12 +1410,12 @@ READY_FOR_IMPLEMENTATION_AUTHORIZATION:
 YES
 
 IMPLEMENTATION_AUTHORIZATION:
-GRANTED — STAGES 0–4 ONLY
+GRANTED — STAGES 0–5 ONLY
 
 AUTHORIZED_BUILD_BOUNDARY:
-STAGE 4
+STAGE 5
 
-STAGE_5:
+STAGE_6:
 NOT AUTHORIZED
 
 REAL_TOOL_EXECUTION:
@@ -1427,20 +1442,20 @@ NONE
 
 El proyecto completó la verificación física de Fase 10 con resultado `PASS`.
 
-El cierre quedó autorizado mediante DECISIÓN #041 y Stages 0–4 mediante DECISIONES #042–#046. La siguiente transición requiere otra decisión humana explícita y separada:
+El cierre quedó autorizado mediante DECISIÓN #041 y Stages 0–5 mediante DECISIONES #042–#047. La siguiente transición requiere otra decisión humana explícita y separada:
 
 ```text
-AUTHORIZE STAGE 5
+AUTHORIZE STAGE 6
 =
 SEPARATE HUMAN DECISION REQUIRED
 ```
 
-Hasta una decisión separada para Stage 5:
+Hasta una decisión separada para Stage 6:
 
 ```text
 NO AUTOMATIC PHASE TRANSITION
 
-NO AUTHORIZATION BEYOND STAGE 4
+NO AUTHORIZATION BEYOND STAGE 5
 
 NO REAL TOOL EXECUTION
 
