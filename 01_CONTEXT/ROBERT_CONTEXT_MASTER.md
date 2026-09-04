@@ -1,8 +1,8 @@
 ROBERT_CONTEXT_MASTER
 
-Versión: 0.11
-Estado: Fase 10 cerrada; Stages 0–5 implementados y verificados; DECISIÓN #047 / CAMBIO #073; Stage 6 no autorizado
-Última actualización: 03/09/2026
+Versión: 0.12
+Estado: Fase 10 cerrada; Stages 0–6 implementados y verificados; DECISIÓN #048 / CAMBIO #074; Stage 7 no autorizado
+Última actualización: 04/09/2026
 
 Uso principal:  
 Servir como contexto base para ChatGPT, Claude, Obsidian, la bóveda documental de Robert y futuras herramientas de IA, manteniendo clara la identidad, propósito, estructura, documentos, comandos, reglas, fases, decisiones, autonomía controlada y estado actual del proyecto.
@@ -781,11 +781,12 @@ TOOL_ARCHITECTURE = CLOSED
 IMPLEMENTATION_CONTRACTS = APPROVED
 PHASE_10_EXIT_CRITERIA = APPROVED
 BUILD_ORDER = APPROVED
-TECHNICAL_IMPLEMENTATION = STAGES 0–5 COMPLETE
-AUTHORIZED_BUILD_BOUNDARY = STAGE 5
+TECHNICAL_IMPLEMENTATION = STAGES 0–6 COMPLETE
+AUTHORIZED_BUILD_BOUNDARY = STAGE 6
 STAGE_4 = COMPLETE
 STAGE_5 = COMPLETE
-STAGE_6 = NOT AUTHORIZED
+STAGE_6 = COMPLETE
+STAGE_7 = NOT AUTHORIZED
 ---
 
 ## MVP técnico
@@ -1322,11 +1323,12 @@ Los contratos y Build Order ya están definidos arquitectónicamente.
 
 Se mantiene:
 
-TECHNICAL_IMPLEMENTATION = STAGES 0–5 COMPLETE
-AUTHORIZED_BUILD_BOUNDARY = STAGE 5
+TECHNICAL_IMPLEMENTATION = STAGES 0–6 COMPLETE
+AUTHORIZED_BUILD_BOUNDARY = STAGE 6
 STAGE_4 = COMPLETE
 STAGE_5 = COMPLETE
-STAGE_6 = NOT AUTHORIZED
+STAGE_6 = COMPLETE
+STAGE_7 = NOT AUTHORIZED
 
 AUTONOMY_LEVEL = 0
 EXECUTION_AUTHORITY = NONE
@@ -1502,12 +1504,13 @@ Build Order
 ## Pendiente actual — 03/09/2026
 
 La remediación de Fase 10 quedó completada; el audit final fue PASS y el cierre se registró en
-DECISIÓN #041. Stages 0–5 están implementados. La revisión general y Governance Core se registran
+DECISIÓN #041. Stages 0–6 están implementados. La revisión general y Governance Core se registran
 mediante DECISIÓN #045 / CAMBIO #071. No hay que repetir la remediación histórica.
 
 Validation Core se registra mediante DECISIÓN #046 / CAMBIO #072.
-Context / Memory Interfaces se registra mediante DECISIÓN #047 / CAMBIO #073.
-El siguiente paso es una autorización separada de Stage 6 — Model Interface.
+Context / Memory Interfaces se registra mediante DECISIÓN #047 / CAMBIO #073. Model Interface se
+registra mediante DECISIÓN #048 / CAMBIO #074.
+El siguiente paso es una autorización separada de Stage 7 — Skill Layer.
 No existen nuevas conexiones externas, autonomía ni autoridad de ejecución.
 
 20. USO POR CHATGPT
@@ -2476,8 +2479,8 @@ PHASE: 10
 
 LATEST_ARCHITECTURAL_DECISION: #040
 LATEST_GOVERNANCE_DECISION: #041
-LATEST_IMPLEMENTATION_DECISION: #047
-LATEST_CHANGE: #073
+LATEST_IMPLEMENTATION_DECISION: #048
+LATEST_CHANGE: #074
 
 CORE_ARCHITECTURE: CLOSED
 TOOL_ARCHITECTURE: CLOSED
@@ -2485,9 +2488,10 @@ IMPLEMENTATION_CONTRACTS: APPROVED
 PHASE_10_EXIT_CRITERIA: APPROVED
 BUILD_ORDER: APPROVED
 
-TECHNICAL_IMPLEMENTATION: STAGES 0–5 COMPLETE
-AUTHORIZED_BUILD_BOUNDARY: STAGE 5
-STAGE_6: NOT AUTHORIZED
+TECHNICAL_IMPLEMENTATION: STAGES 0–6 COMPLETE
+AUTHORIZED_BUILD_BOUNDARY: STAGE 6
+STAGE_6: COMPLETE
+STAGE_7: NOT AUTHORIZED
 
 PHASE_10_EXIT_AUDIT: PASS
 
@@ -2496,7 +2500,7 @@ DOCUMENT_NORMALIZATION_BLOCKERS: 0
 
 PHASE_10_CLOSED: YES — DECISIÓN #041
 READY_FOR_IMPLEMENTATION_AUTHORIZATION: YES
-IMPLEMENTATION_AUTHORIZATION: GRANTED — STAGES 0–5 ONLY
+IMPLEMENTATION_AUTHORIZATION: GRANTED — STAGES 0–6 ONLY
 PHASE_11: NOT STARTED
 
 AUTONOMY_LEVEL: 0

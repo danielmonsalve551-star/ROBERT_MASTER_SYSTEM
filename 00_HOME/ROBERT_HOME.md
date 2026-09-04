@@ -1,16 +1,16 @@
 # ROBERT_HOME
 
-**Versión:** 0.20
+**Versión:** 0.21
 **Estado:** APROBADO E INTEGRADO / CANÓNICAMENTE SINCRONIZADO
-**Fecha:** 03/09/2026
+**Fecha:** 04/09/2026
 **Ubicación:** `00_HOME`
 **Función:** Punto central de navegación, estado y referencia rápida del sistema Robert
 **Fase actual:** Fase 10 — CLOSED
 **Última decisión arquitectónica registrada:** DECISIÓN #040
 **Última decisión de Governance registrada:** DECISIÓN #041
-**Última decisión de implementación registrada:** DECISIÓN #047
-**Último cambio registrado:** CAMBIO #073
-**Estado operativo:** Stages 0–5 implementados; ejecución externa deshabilitada
+**Última decisión de implementación registrada:** DECISIÓN #048
+**Último cambio registrado:** CAMBIO #074
+**Estado operativo:** Stages 0–6 implementados; conexiones externas deshabilitadas
 **Autonomía operativa:** 0
 **Execution Authority:** NONE
 
@@ -82,21 +82,24 @@ LATEST_GOVERNANCE_DECISION:
 #041
 
 LATEST_IMPLEMENTATION_DECISION:
-#047
+#048
 
 LATEST_CHANGE:
-#073
+#074
 
 KNOWN_ARCHITECTURAL_BLOCKERS:
 0
 
 TECHNICAL_IMPLEMENTATION:
-STAGES 0–5 COMPLETE
+STAGES 0–6 COMPLETE
 
 AUTHORIZED_BUILD_BOUNDARY:
-STAGE 5
+STAGE 6
 
 STAGE_6:
+COMPLETE
+
+STAGE_7:
 NOT AUTHORIZED
 
 REAL_TOOL_EXECUTION:
@@ -136,10 +139,10 @@ READY_FOR_IMPLEMENTATION_AUTHORIZATION:
 YES
 
 IMPLEMENTATION_AUTHORIZATION:
-GRANTED — STAGES 0–5 ONLY
+GRANTED — STAGES 0–6 ONLY
 ```
 
-Las DECISIONES #042–#047 autorizan únicamente Stages 0–5, ya completados. Stage 6 y cualquier alcance adicional requieren otra decisión humana.
+Las DECISIONES #042–#048 autorizan únicamente Stages 0–6, ya completados. Stage 7 y cualquier alcance adicional requieren otra decisión humana.
 
 ---
 
@@ -1274,7 +1277,7 @@ AUTONOMOUS_AGENTS = DISABLED
 
 ```text
 TECHNICAL_IMPLEMENTATION:
-STAGES 0–5 COMPLETE
+STAGES 0–6 COMPLETE
 
 ORCHESTRATOR_RUNTIME:
 NOT IMPLEMENTED
@@ -1285,7 +1288,10 @@ NOT IMPLEMENTED
 SKILL_RUNNER:
 NOT IMPLEMENTED
 
-MODEL_RUNTIME_INTEGRATION:
+MODEL_INTERFACE:
+STAGE 6 IMPLEMENTED / SANDBOX PROVIDER PORT ONLY
+
+REAL_MODEL_PROVIDER_CONNECTIONS:
 NOT IMPLEMENTED
 
 TOOL_ADAPTERS:
@@ -1562,7 +1568,7 @@ DOCUMENT:
 ROBERT_HOME
 
 VERSION:
-0.20
+0.21
 
 STATUS:
 APPROVED / INTEGRATED / CANONICALLY SYNCHRONIZED
@@ -1577,10 +1583,10 @@ LATEST_GOVERNANCE_DECISION:
 #041
 
 LATEST_IMPLEMENTATION_DECISION:
-#047
+#048
 
 LATEST_CHANGE:
-#073
+#074
 
 CORE_ARCHITECTURE:
 CLOSED
@@ -1601,7 +1607,7 @@ KNOWN_ARCHITECTURAL_BLOCKERS:
 0
 
 TECHNICAL_IMPLEMENTATION:
-STAGES 0–5 COMPLETE
+STAGES 0–6 COMPLETE
 
 PHASE_10_EXIT_AUDIT:
 PASS
@@ -1613,12 +1619,15 @@ READY_FOR_IMPLEMENTATION_AUTHORIZATION:
 YES
 
 IMPLEMENTATION_AUTHORIZATION:
-GRANTED — STAGES 0–5 ONLY
+GRANTED — STAGES 0–6 ONLY
 
 AUTHORIZED_BUILD_BOUNDARY:
-STAGE 5
+STAGE 6
 
 STAGE_6:
+COMPLETE
+
+STAGE_7:
 NOT AUTHORIZED
 
 REAL_TOOL_EXECUTION:
@@ -1641,11 +1650,11 @@ NONE
 
 # CIERRE
 
-`ROBERT_HOME v0.20` representa el estado vigente de Robert después del cierre formal de Fase 10 y la implementación verificada de Stages 0–5.
+`ROBERT_HOME v0.21` representa el estado vigente de Robert después del cierre formal de Fase 10 y la implementación verificada de Stages 0–6.
 
 La arquitectura principal está cerrada.
 
-La implementación técnica comenzó y Stages 0–5 quedaron completados. No existe autorización para Stage 6 ni para capacidades externas.
+La implementación técnica comenzó y Stages 0–6 quedaron completados. No existe autorización para Stage 7 ni para capacidades externas reales.
 
 La auditoría y la decisión de cierre quedaron completadas:
 
@@ -1655,12 +1664,12 @@ PHASE_10_CLOSURE_DECISION = #041
 PHASE_10_CLOSED = YES
 ```
 
-La próxima transición depende de una decisión humana separada para autorizar Stage 6. Hasta entonces:
+La próxima transición depende de una decisión humana separada para autorizar Stage 7. Hasta entonces:
 
 ```text
 NO AUTOMATIC PHASE TRANSITION
 
-NO AUTHORIZATION BEYOND STAGE 5
+NO AUTHORIZATION BEYOND STAGE 6
 
 NO REAL TOOL EXECUTION
 

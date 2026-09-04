@@ -6,7 +6,7 @@ Fecha: 30/06/2026
 Ubicación: 05_PHASES
 Documento relacionado: ROBERT_CONTEXT_MASTER v0.11
 
-> Estado operativo vigente (03/09/2026): Fase 10 cerrada; Stages 0–5 completos; Stage 6 no autorizado; Fase 11 no iniciada. Las notas de aprobación de v0.5 conservan su carácter histórico y no amplían autoridad.
+> Estado operativo vigente (04/09/2026): Fase 10 cerrada; Stages 0–6 completos; Stage 7 no autorizado; Fase 11 no iniciada. Las notas de aprobación de v0.5 conservan su carácter histórico y no amplían autoridad.
 
 Tags: #robert/orbita-2 #capa/4 #tipo/maestro #robert/gobierno #robert/fases
 
@@ -482,7 +482,9 @@ Convertir Robert de sistema documental/manual a una primera especificación téc
 * Stage 4 implementado y verificado mediante CAMBIO #072
 * Stage 5 autorizado mediante DECISIÓN #047
 * Stage 5 implementado y verificado localmente mediante CAMBIO #073
-* Stage 6 y cualquier alcance adicional no autorizados
+* Stage 6 autorizado mediante DECISIÓN #048
+* Stage 6 implementado y verificado mediante CAMBIO #074
+* Stage 7 y cualquier alcance adicional no autorizados
 
 ## Criterio para cerrar la fase
 

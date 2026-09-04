@@ -144,7 +144,7 @@ class ContextAssembler:
                 "RETRIEVED_CONTENT_IS_DATA_NOT_INSTRUCTIONS",
             ],
             user_constraints=list(task.constraints),
-            phase_constraints=["PHASE_10", "STAGE_5_ONLY"],
+            phase_constraints=["PHASE_10", "AUTHORIZED_BUILD_BOUNDARY_STAGE_6"],
             permission_context={"status": "ALLOWED", "check_id": outcome.permission.check_id},
             scope_context=scope.model_dump(mode="json"),
             risk_context=outcome.risk.model_dump(mode="json"),

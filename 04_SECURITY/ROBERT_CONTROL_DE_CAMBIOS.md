@@ -11664,3 +11664,63 @@ EXECUTION_AUTHORITY: NONE
 AUTOMATIC_MEMORY_WRITE: DISABLED
 REAL_TOOL_EXECUTION: DISABLED
 ```
+
+# CAMBIO #074 — Stage 6 Model Interface
+
+**Fecha:** 04/09/2026
+**Estado:** IMPLEMENTADO Y VERIFICADO
+**Decisión relacionada:** #048
+**Build Stage:** 6 — MODEL INTERFACE
+
+## Cambios
+
+- Paquete `src/robert/model/` separado en registry, router, adapter, interface, inputs y errors.
+- Model profiles separados de runtime state; identidades explícitas, completas y sin duplicados.
+- Selección determinista por capacidades, proveedor, Context, sensibilidad, soporte y disponibilidad.
+- Puerto de proveedor inyectado sin clientes HTTP, SDKs, credenciales o configuración productiva.
+- Normalización de response, usage, errores y Tool Requests mediante contratos existentes.
+- Requesters autorizados explícitamente; sin wildcards ni autoridad derivada del payload.
+- Schemas de structured output limitados a una forma cerrada y verificable.
+- Fallback máximo de tres intentos y solo entre Models que conservan todos los requisitos obligatorios.
+- Auditoría obligatoria por referencias, sin copiar Context, prompts, outputs ni errores crudos.
+- Guía del paquete, documento de implementación y estados maestros sincronizados.
+- ContextAssembler actualizado para declarar el límite autorizado vigente de Stage 6.
+
+## Evidencia local
+
+```text
+BASELINE_TESTS: 470 PASSED
+STAGE_6_MODEL_TESTS: 37 PASSED
+LOCAL_FULL_SUITE: 510 PASSED (WARNINGS AS ERRORS)
+CANONICAL_CONTRACTS: 29 UNCHANGED
+GENERATED_SCHEMAS: 29 UNCHANGED
+REAL_PROVIDER_CONNECTIONS: ABSENT
+MODEL_CREDENTIALS: ABSENT
+DIRECT_TOOL_EXECUTION: ABSENT
+AUTOMATIC_MEMORY_WRITE: ABSENT
+MODEL_OUTPUT_IS_AUTHORITY: FALSE
+BOUNDED_FALLBACK: VERIFIED
+PROVIDER_ERRORS_NORMALIZED: VERIFIED
+AUDIT_FAILURE: FAILS CLOSED
+UV_LOCK_CHECK: PASS
+RUFF_CHECK: PASS
+RUFF_FORMAT_CHECK: PASS
+SCHEMA_FULL_COMPARISON: PASS
+GIT_DIFF_CHECK: PASS
+```
+
+La base de Stage 6 es `5be3e5a07d75ddfd330be480bdda3160aea5bf05`. El resultado no certifica
+producción, calidad de un proveedor real, autenticidad de outputs ni seguridad de conexiones futuras.
+Estas requieren autorización y validación separadas.
+
+```text
+TECHNICAL_IMPLEMENTATION: STAGES 0–6 COMPLETE
+AUTHORIZED_BUILD_BOUNDARY: STAGE 6
+STAGE_7: NOT AUTHORIZED
+REAL_PROVIDER_CONNECTIONS: DISABLED
+REAL_TOOL_EXECUTION: DISABLED
+AUTOMATIC_MEMORY_WRITE: DISABLED
+AUTONOMOUS_AGENTS: DISABLED
+AUTONOMY_LEVEL: 0
+EXECUTION_AUTHORITY: NONE
+```

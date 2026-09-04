@@ -6448,3 +6448,46 @@ EXECUTION_AUTHORITY: NONE
 REAL_TOOL_EXECUTION: DISABLED
 PHASE_11: NOT STARTED
 ```
+
+# DECISIÓN #048 — Autorización de Stage 6 Model Interface
+
+**Fecha:** 04/09/2026
+**Estado:** APROBADA
+**Tipo:** Implementación técnica limitada
+**Cambio relacionado:** CAMBIO #074
+
+## Autorización recibida
+
+El usuario solicita conectarse al repositorio y continuar el avance después de haber indicado
+explícitamente «autorizo» para Stage 6. Se autoriza implementar Model Interface conforme al Build
+Order, conservar nombres claros y organización predecible, validar el resultado y publicarlo.
+
+## Alcance técnico
+
+Implementar Model Registry, Runtime State, Model Router, Model Provider Interface, Model Adapter,
+Model Response validation, auditoría y manejo normalizado de errores. Se permite un puerto de proveedor
+inyectado y un proveedor determinista en pruebas para demostrar el flujo completo sin acoplar el Core.
+
+El ranking debe filtrar primero requisitos obligatorios y después aplicar preferencias. Fallback y
+reintentos deben ser limitados y nunca usar un modelo incompatible. La identidad del proveedor/modelo
+la fija el Adapter. El output debe volver como datos estructurados y no puede modificar estado.
+
+## Límites
+
+No se autorizan clientes de red o SDKs reales, credenciales, conexiones productivas, Tool execution,
+Memory writes automáticos, Agents, Skills ni Stage 7. `tool_request_allowed=true` permite únicamente
+crear y devolver un `ToolRequest` estructurado sujeto a Governance posterior. Todo resultado requiere
+auditoría y no constituye verdad, decisión, Approval ni Execution Authority.
+
+```text
+TECHNICAL_IMPLEMENTATION: STAGES 0–6 COMPLETE
+AUTHORIZED_BUILD_BOUNDARY: STAGE 6
+STAGE_7: NOT AUTHORIZED
+REAL_PROVIDER_CONNECTIONS: DISABLED
+REAL_TOOL_EXECUTION: DISABLED
+AUTOMATIC_MEMORY_WRITE: DISABLED
+AUTONOMOUS_AGENTS: DISABLED
+AUTONOMY_LEVEL: 0
+EXECUTION_AUTHORITY: NONE
+PHASE_11: NOT STARTED
+```

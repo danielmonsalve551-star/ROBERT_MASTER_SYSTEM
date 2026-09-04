@@ -105,6 +105,17 @@ y una guía de vocabulario y límites en `src/robert/validation/README.md`.
 Stage 5 incorpora Context / Memory Interfaces mediante DECISIÓN #047 / CAMBIO #073.
 Cada paquete conserva su README de uso y límites. Los contratos siguen únicamente en `contracts/`.
 
+Stage 6 incorpora Model Interface mediante DECISIÓN #048 / CAMBIO #074:
+
+```text
+src/robert/model/<single_responsibility_module>.py
+tests/model/test_<behavior>.py
+09_ARCHITECTURE/ROBERT_MODEL_INTERFACE_IMPLEMENTATION.md
+```
+
+`model/inputs.py` contiene vocabulario runtime cerrado y no duplica contratos wire. Adapters traducen;
+Router selecciona; Interface valida y audita. Ninguno concede autorización o ejecuta Tools.
+
 Todo cambio futuro debe permitir que una persona identifique rápidamente:
 
 ```text
