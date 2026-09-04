@@ -11724,3 +11724,62 @@ AUTONOMOUS_AGENTS: DISABLED
 AUTONOMY_LEVEL: 0
 EXECUTION_AUTHORITY: NONE
 ```
+
+# CAMBIO #075 — Stage 7 Skill Layer
+
+**Fecha:** 04/09/2026
+**Estado:** IMPLEMENTADO Y VERIFICADO LOCALMENTE
+**Decisión relacionada:** #049
+**Build Stage:** 7 — SKILL LAYER
+
+## Cambios
+
+- Paquete `src/robert/skill/` separado en manifest, registry, procedure, runner, catalog e inputs.
+- Manifest inmutable con identidad, capacidades, requisitos, límites, output y requesters explícitos.
+- Registry descriptivo con consulta exacta; sin ranking, alias, wildcard ni Routing Authority.
+- Runner de procedimientos internos registrados, sin clientes de Tool, Model, Memory, Agent o red.
+- Reutilización de `SkillInvocation` y `SkillResult` canónicos, sin contratos públicos paralelos.
+- Validación cerrada de requester, versión, entradas, contexto, restricciones y output declarado.
+- Rechazo de datos sensibles conocidos y referencias de Tool, Model o Memory no autorizadas.
+- Auditoría obligatoria previa al resultado, sin copiar inputs u outputs completos al evento.
+- Primera habilidad determinista de detección de contradicciones, sin decidir verdad ni causar efectos.
+- Guía de paquete, documento de implementación y estados maestros sincronizados con Stage 7.
+- ContextAssembler actualizado para declarar el límite autorizado vigente de Stage 7.
+
+## Evidencia local
+
+```text
+BASELINE_TESTS: 510 PASSED
+STAGE_7_SKILL_TESTS: 32 PASSED
+LOCAL_FULL_SUITE: 545 PASSED (WARNINGS AS ERRORS)
+CANONICAL_CONTRACTS: 29 UNCHANGED
+GENERATED_SCHEMAS: 29 UNCHANGED
+ONE_SIMPLE_SKILL: VERIFIED
+EXTERNAL_EFFECTS: ABSENT
+SKILL_REGISTRY_ROUTING: ABSENT
+DIRECT_TOOL_EXECUTION: ABSENT
+MODEL_EXECUTION: ABSENT
+AUTOMATIC_MEMORY_WRITE: ABSENT
+AUTONOMOUS_AGENT_EXECUTION: ABSENT
+AUDIT_FAILURE: FAILS CLOSED
+RUFF_CHECK: PASS
+RUFF_FORMAT_CHECK: PASS
+SCHEMA_FULL_COMPARISON: PASS
+GIT_DIFF_CHECK: PASS
+```
+
+El resultado no certifica producción, verdad de las afirmaciones analizadas, seguridad de futuras
+integraciones ni autorización para conectar recursos externos. Esas capacidades requieren decisiones
+y verificaciones separadas.
+
+```text
+TECHNICAL_IMPLEMENTATION: STAGES 0–7 COMPLETE
+AUTHORIZED_BUILD_BOUNDARY: STAGE 7
+STAGE_8: NOT AUTHORIZED
+EXTERNAL_EFFECTS: DISABLED
+REAL_TOOL_EXECUTION: DISABLED
+AUTOMATIC_MEMORY_WRITE: DISABLED
+AUTONOMOUS_AGENTS: DISABLED
+AUTONOMY_LEVEL: 0
+EXECUTION_AUTHORITY: NONE
+```

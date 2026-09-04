@@ -6491,3 +6491,46 @@ AUTONOMY_LEVEL: 0
 EXECUTION_AUTHORITY: NONE
 PHASE_11: NOT STARTED
 ```
+
+# DECISIÓN #049 — Autorización de Stage 7 Skill Layer
+
+**Fecha:** 04/09/2026
+**Estado:** APROBADA
+**Tipo:** Implementación técnica limitada
+**Cambio relacionado:** CAMBIO #075
+
+## Autorización recibida
+
+El usuario autoriza explícitamente continuar con Stage 7 después de sincronizar el repositorio en
+Stage 6. Se autoriza implementar Skill Layer conforme al Build Order, conservar nombres claros y
+organización predecible, validar el resultado y preparar su publicación.
+
+## Alcance técnico
+
+Implementar Skill Manifest, Skill Registry, Skill Invocation, Skill Runner y Skill Result reutilizando
+los contratos canónicos existentes. Incorporar al menos una habilidad simple, determinista, auditable
+y sin efectos externos que reciba entradas válidas, procese y devuelva un resultado estructurado.
+
+El Registry solo describe y localiza una identidad exacta de Skill; no selecciona rutas ni concede
+autoridad. El Runner ejecuta únicamente procedimientos internos registrados, valida manifest, versión,
+requester, entradas, límites y output, y debe fallar cerrado cuando la auditoría no pueda persistirse.
+
+## Límites
+
+No se autorizan Agents, routing autónomo, Tool execution, Model execution, Memory writes, clientes de
+red, credenciales, efectos externos ni Stage 8. Una Skill no constituye Approval, Routing Authority,
+Execution Authority ni verdad. Los requisitos de Tools, Models y Memory solo pueden declararse o
+devolverse como referencias sujetas a etapas y controles posteriores.
+
+```text
+TECHNICAL_IMPLEMENTATION: STAGES 0–7 COMPLETE
+AUTHORIZED_BUILD_BOUNDARY: STAGE 7
+STAGE_8: NOT AUTHORIZED
+EXTERNAL_EFFECTS: DISABLED
+REAL_TOOL_EXECUTION: DISABLED
+AUTOMATIC_MEMORY_WRITE: DISABLED
+AUTONOMOUS_AGENTS: DISABLED
+AUTONOMY_LEVEL: 0
+EXECUTION_AUTHORITY: NONE
+PHASE_11: NOT STARTED
+```

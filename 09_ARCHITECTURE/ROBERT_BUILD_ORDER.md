@@ -5,7 +5,7 @@
 **Tipo:** Especificación de orden de construcción / Implementation Readiness
 **Ubicación propuesta:** `09_ARCHITECTURE/ROBERT_BUILD_ORDER.md`
 **Fase relacionada:** Fase 10 — Implementation Readiness
-**Implementación:** STAGES 0–6 COMPLETE / STAGE 7 NOT AUTHORIZED
+**Implementación:** STAGES 0–7 COMPLETE / STAGE 8 NOT AUTHORIZED
 **Autonomy Level:** 0
 **Execution Authority:** NONE
 
@@ -2415,15 +2415,15 @@ PHASE: 10
 
 BUILD_ORDER: APPROVED
 
-IMPLEMENTATION: STAGES 0–6 COMPLETE
+IMPLEMENTATION: STAGES 0–7 COMPLETE
 
-IMPLEMENTATION_AUTHORIZATION: GRANTED — STAGES 0–6 ONLY
+IMPLEMENTATION_AUTHORIZATION: GRANTED — STAGES 0–7 ONLY
 
-AUTHORIZED_BUILD_BOUNDARY: STAGE 6
+AUTHORIZED_BUILD_BOUNDARY: STAGE 7
 
-STAGE_6: COMPLETE
+STAGE_7: COMPLETE
 
-STAGE_7: NOT AUTHORIZED
+STAGE_8: NOT AUTHORIZED
 
 REAL_TOOL_EXECUTION: DISABLED
 
@@ -2450,7 +2450,8 @@ STAGE_3 = COMPLETE
 STAGE_4 = COMPLETE
 STAGE_5 = COMPLETE
 STAGE_6 = COMPLETE
-STAGE_7 = NOT AUTHORIZED
+STAGE_7 = COMPLETE
+STAGE_8 = NOT AUTHORIZED
 ```
 
 Stage 1 fue autorizado e implementado mediante:
@@ -2478,10 +2479,14 @@ Stage 6 — Model Interface quedó autorizado mediante DECISIÓN #048 y verifica
 La implementación usa un puerto de proveedor inyectado y pruebas locales; no habilita conexiones
 reales, Tool execution, escritura automática de Memory ni Agents.
 
+Stage 7 — Skill Layer quedó autorizado mediante DECISIÓN #049 y verificado mediante CAMBIO #075.
+La implementación incorpora un Registry descriptivo, un Runner de procedimientos internos y una
+habilidad determinista sin efectos externos; no habilita routing, Agents, Tools ni proveedores reales.
+
 La siguiente transición permitida es una decisión humana separada sobre:
 
 ```text
-AUTHORIZE STAGE 7 — SKILL LAYER?
+AUTHORIZE STAGE 8 — AGENT LAYER?
 ```
 
-Hasta entonces, el límite obligatorio es `STAGE 6`.
+Hasta entonces, el límite obligatorio es `STAGE 7`.

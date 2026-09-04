@@ -16,29 +16,29 @@ ROOT = Path(__file__).resolve().parents[2]
 )
 def test_master_documents_agree_on_current_stage(path):
     content = (ROOT / path).read_text(encoding="utf-8")
-    assert "STAGES 0–6 COMPLETE" in content
+    assert "STAGES 0–7 COMPLETE" in content
     assert "AUTHORIZED_BUILD_BOUNDARY:" in content
-    assert "STAGE_6:" in content
     assert "STAGE_7:" in content
-    assert "STAGE_7: NOT AUTHORIZED" in content or "STAGE_7:\nNOT AUTHORIZED" in content
-    assert "STAGE_6: NOT AUTHORIZED" not in content
-    assert "STAGE_6:\nNOT AUTHORIZED" not in content
+    assert "STAGE_8:" in content
+    assert "STAGE_8: NOT AUTHORIZED" in content or "STAGE_8:\nNOT AUTHORIZED" in content
+    assert "STAGE_7: NOT AUTHORIZED" not in content
+    assert "STAGE_7:\nNOT AUTHORIZED" not in content
     assert "STAGES 0–4 COMPLETE" not in content
 
 
 def test_home_header_matches_current_status_footer():
     content = (ROOT / "00_HOME/ROBERT_HOME.md").read_text(encoding="utf-8")
     header = content.split("# OBJETIVO")[0]
-    assert "**Versión:** 0.21" in header
-    assert "DECISIÓN #048" in header
-    assert "CAMBIO #074" in header
-    assert "VERSION:\n0.21" in content
+    assert "**Versión:** 0.22" in header
+    assert "DECISIÓN #049" in header
+    assert "CAMBIO #075" in header
+    assert "VERSION:\n0.22" in content
 
 
 def test_context_header_no_longer_claims_stage_zero_only():
     content = (ROOT / "01_CONTEXT/ROBERT_CONTEXT_MASTER.md").read_text(encoding="utf-8")
     header = content.split("Uso principal:")[0]
-    assert "Stages 0–6 implementados" in header
+    assert "Stages 0–7 implementados" in header
     assert "Stage 0 autorizado" not in content
     assert "TECHNICAL_IMPLEMENTATION = STAGE 0 COMPLETE" not in content
     assert "RUN PHASE 10 EXIT AUDIT AGAIN" not in content
@@ -51,6 +51,8 @@ def test_context_header_no_longer_claims_stage_zero_only():
         ("04_SECURITY/ROBERT_CONTROL_DE_CAMBIOS.md", "# CAMBIO #073 —"),
         ("03_DECISIONS/ROBERT_DECISIONS_LOG.md", "# DECISIÓN #048 —"),
         ("04_SECURITY/ROBERT_CONTROL_DE_CAMBIOS.md", "# CAMBIO #074 —"),
+        ("03_DECISIONS/ROBERT_DECISIONS_LOG.md", "# DECISIÓN #049 —"),
+        ("04_SECURITY/ROBERT_CONTROL_DE_CAMBIOS.md", "# CAMBIO #075 —"),
     ],
 )
 def test_new_governance_records_exist_exactly_once(path, heading):
@@ -93,3 +95,13 @@ def test_model_interface_implementation_records_current_boundary():
     assert "STAGES 0–6 COMPLETE" in content
     assert "STAGE_7: NOT AUTHORIZED" in content
     assert "REAL_PROVIDER_CONNECTIONS: DISABLED" in content
+
+
+def test_skill_layer_implementation_records_current_boundary():
+    content = (ROOT / "09_ARCHITECTURE/ROBERT_SKILL_LAYER_IMPLEMENTATION.md").read_text(
+        encoding="utf-8"
+    )
+    assert "#049" in content and "#075" in content
+    assert "STAGES 0–7 COMPLETE" in content
+    assert "STAGE_8: NOT AUTHORIZED" in content
+    assert "EXTERNAL_EFFECTS: DISABLED" in content

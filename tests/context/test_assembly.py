@@ -226,7 +226,7 @@ def test_data_cannot_override_governance(
         memory_grant=memory_grant,
     )
     assert "EXECUTION_AUTHORITY_NONE" in context.system_constraints
-    assert context.phase_constraints == ["PHASE_10", "AUTHORIZED_BUILD_BOUNDARY_STAGE_6"]
+    assert context.phase_constraints == ["PHASE_10", "AUTHORIZED_BUILD_BOUNDARY_STAGE_7"]
     assert context.memory_context["records"][0]["content"]["approval"] == "APPROVED"
 
 
